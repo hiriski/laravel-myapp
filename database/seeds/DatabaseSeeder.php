@@ -11,6 +11,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        $this->call(UsersTableSeeder::class);
+
+        /** sentence */
+        $this->call(LearnLangSentenceLevelsTableSeeder::class);
+        $this->call(LearnLangSentenceCategoriesTableSeeder::class);
+        $this->call(LearnLangSentenceTagsTableSeeder::class);
+        $this->call(LearnLangSentencesTableSeeder::class);
+        $this->call(LearnLangSentenceLearnLangSentenceTagTableSeeder::class);
     }
 }
