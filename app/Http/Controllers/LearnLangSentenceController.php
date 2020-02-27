@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\LearnLangSentence;
+use App\LearnLangSentenceCategory;
+use App\LearnLangSentenceLevel;
 
 class LearnLangSentenceController extends Controller {
     /**
@@ -23,7 +25,20 @@ class LearnLangSentenceController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        //
+
+        $class = 'form-control';
+
+        $categories = LearnLangSentenceCategory::orderBy('name', 'ASC')
+            ->get()
+            ->pluck('name','id');
+
+        $levels = LearnLangSentenceLevel::orderBy('id', 'ASC')
+            ->get()
+            ->pluck('name','id');
+
+        return view('learn.lang.sentence.create', compact(
+            'categories', 'levels', 'class'
+        ));
     }
 
     /**
