@@ -13,7 +13,8 @@ class LearnLangSentenceController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        //
+        $sentence = LearnLangSentence::paginate(20);
+        return view('learn.lang.sentence.index', array('sentence' => $sentence));
     }
 
     /**
