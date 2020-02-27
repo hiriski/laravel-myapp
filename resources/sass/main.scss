@@ -1,0 +1,27 @@
+/** Entry file untuk semua file sass */
+
+@import 'base/colors';
+
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/extends';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'components/button';
+@import 'components/input';
+
+@import 'layouts/navigation';
+@import 'layouts/grid';
+@import 'layouts/header';
+@import 'layouts/sidebar';
+@import 'layouts/footer';
+@import 'layouts/forms';
+
+@import 'pages/contact_page';
+@import 'pages/static_page';
+
+@import 'themes/default';
+@import 'themes/dark';
