@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Auth;
 use App\LearnLangSentence;
 use App\LearnLangSentenceCategory;
 use App\LearnLangSentenceLevel;
+
+// use Illuminate\Support\Str;
 
 class LearnLangSentenceController extends Controller {
     /**
@@ -48,7 +51,13 @@ class LearnLangSentenceController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        //
+        $sentence = new LearnLangSentence;
+
+        $data = $request->all();
+        $data['user_id'] = Auth::user()->id;
+        dd($data);
+        $sentence->save();
+        return redirect()->route('sentence.index');
     }
 
     /**
