@@ -19,5 +19,8 @@ class DatabaseSeeder extends Seeder
         $this->call(LearnLangSentenceTagsTableSeeder::class);
         $this->call(LearnLangSentencesTableSeeder::class);
         $this->call(LearnLangSentenceLearnLangSentenceTagTableSeeder::class);
+
+        /** post */
+        $this->call(PostCategoriesTableSeeder::class);
     }
 }
