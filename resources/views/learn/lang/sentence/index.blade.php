@@ -2,8 +2,11 @@
 @section('content')
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 my-5">
+        <div class="col-12 my-3">
             <h3 class="text-center">Sentence</h3>
+        </div>
+        <div class="col-12 text-center mb-3">
+            <a href="{{ route('sentence.create') }}" class="btn btn-primary">Create Sentence</a>
         </div>
         @foreach ($sentence as $item)
         <div class="col-12 col-md-6 col-lg-4 mb-3">
