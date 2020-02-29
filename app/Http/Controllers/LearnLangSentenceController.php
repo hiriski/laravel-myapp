@@ -9,7 +9,7 @@ use App\LearnLangSentence;
 use App\LearnLangSentenceCategory;
 use App\LearnLangSentenceLevel;
 
-// use Illuminate\Support\Str;
+use Illuminate\Support\Str;
 
 class LearnLangSentenceController extends Controller {
     /**
@@ -51,13 +51,33 @@ class LearnLangSentenceController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        $sentence = new LearnLangSentence;
+
+        $this->validate($request, array(
+            'indonesia'     => 'required|min:5',
+            'category_id'   => 'required|integer',
+            'level_id'      => 'required|integer'
+        ));
 
         $data = $request->all();
-        $data['user_id'] = Auth::user()->id;
-        dd($data);
-        $sentence->save();
-        return redirect()->route('sentence.index');
+
+        $slug = Str::slug($request->english, '-');
+        /* cegah slug kembar */
+        if( LearnLangSentence::where('slug', $slug)->first() != NULL ) {
+            $data['slug'] = Str::slug($request->id . '-' . $request->english, '-');
+        }
+        else {
+            $data['slug'] = $slug;
+        }
+
+        $data['user_id']        = Auth::user()->id;
+
+        $data['category_id']    = (int)$request->category_id;
+        $data['level_id']       = (int)$request->level_id;
+
+        LearnLangSentence::create($data);
+
+        return redirect()->route('sentence.index')
+            ->with('success', 'Sentence has been created!');
     }
 
     /**

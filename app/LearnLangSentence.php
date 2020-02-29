@@ -12,6 +12,7 @@ class LearnLangSentence extends Model {
     protected $dates = ['deleted_at'];
 
     protected $fillable = array(
+        'slug',
         'indonesia',
         'english',
         'vietnamese',

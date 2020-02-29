@@ -2,6 +2,15 @@
 @section('content')
 <div class="container">
     <div class="row">
+
+        @if( count($errors) > 0)
+        <ul>
+            @foreach($errors->all() as $err)
+            <li class="alert alert-danger">{{ $err }}</li>
+            @endforeach
+        </ul>
+        @endif
+
         <div class="col-12 col-lg-4 mx-auto">
             {!! Form::open(['url' => route('sentence.store')]) !!}
             <div class="form-group">
@@ -26,14 +35,14 @@
                 {{ Form::textarea('reference', null, ['class' => $class]) }}
             </div>
             <div class="form-group">
-                <label for="level">Level</label>
-                {{ Form::select('level', $levels, null,
-                ['class' => $class, 'placeholder' => 'Select Level', 'id' => 'level', 'required']) }}
+                <label for="level_id">Level</label>
+                {{ Form::select('level_id', $levels, null,
+                ['class' => $class, 'placeholder' => 'Select Level', 'id' => 'level_id', 'required']) }}
             </div>
             <div class="form-group">
-                <label for="category">Category</label>
-                {{ Form::select('category', $categories, null,
-                ['class' => $class, 'placeholder' => 'Select Category', 'id' => 'category', 'required']) }}
+                <label for="category_id">Category</label>
+                {{ Form::select('category_id', $categories, null,
+                ['class' => $class, 'placeholder' => 'Select Category', 'id' => 'category_id', 'required']) }}
             </div>
             <div class="form-group text-center">
                 {{ Form::submit('Submit', ['class' => 'btn btn-primary btn-submit'])}}
