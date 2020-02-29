@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class LearnLangSentencesTableSeeder extends Seeder {
 
@@ -18,6 +19,7 @@ class LearnLangSentencesTableSeeder extends Seeder {
                 'user_id'       => 1,
                 'category_id'   => 2,
                 'level_id'      => 1,
+                'slug'          => Str::slug('Hidup tidak bisa di CTRL + Z'),
                 'indonesia'     => 'Hidup tidak bisa di CTRL + Z',
                 'english'       => 'Life has no CTRL + Z',
                 'notes'         => 'Maksudnya hidup itu gak bisa di undo',
@@ -27,6 +29,7 @@ class LearnLangSentencesTableSeeder extends Seeder {
                 'user_id'       => 1,
                 'category_id'   => 2,
                 'level_id'      => 1,
+                'slug'          => Str::slug('Tetap Lapar Tetap Bodoh!'),
                 'indonesia'     => 'Tetap Lapar Tetap Bodoh!',
                 'english'       => 'Stay Hungry Stay Foolish!',
                 'notes'         => 'Maksudnya tetaplah lapar dan tetap bodoh agar terus belajar',

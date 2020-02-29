@@ -15,7 +15,7 @@ class CreateLearnLangSentencesTable extends Migration
     {
         Schema::create('learn_lang_sentences', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->text('indonesia');
             $table->text('english')->nullable();
             $table->text('vietnam')->nullable();
