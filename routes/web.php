@@ -19,3 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/learn/lang/sentence', 'LearnLangSentenceController');
+Route::resource('/blog/category', 'PostCategoryController');
+Route::resource('/blog', 'PostController');
