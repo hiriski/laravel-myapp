@@ -18,6 +18,19 @@
   word-wrap: normal;
   direction: ltr;
   -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle; }
+
+#sidebar {
+  position: fixed;
+  left: 0;
+  width: 275px;
+  min-height: 100vh;
+  background-color: #fff; }
+  #sidebar .sidebar-inner {
+    padding-top: 100px; }
+
+main#main {
+  padding-left: 275px; }
 
 /*# sourceMappingURL=custom.css.map */
