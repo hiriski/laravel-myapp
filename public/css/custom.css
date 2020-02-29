@@ -24,14 +24,13 @@
 #sidebar {
   position: fixed;
   left: 0;
-  width: 275px;
-  min-height: 100vh;
-  background-color: #fff; }
+  width: 230px;
+  min-height: 100vh; }
   #sidebar .sidebar-inner {
     padding-top: 100px; }
 
 main#main {
-  padding-left: 275px; }
+  padding-left: 230px; }
 
 /* Sentence */
 .sentence p.item {
