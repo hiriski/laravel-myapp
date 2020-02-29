@@ -18,8 +18,20 @@ class CreatePostsTable extends Migration {
             $table->text('description')->nullable();
             $table->text('keywords')->nullable();
             $table->text('content');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedInteger('category_id');
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('restrict');
+
+            $table->foreign('category_id')
+                ->references('id')
+                ->on('post_categories')
+                ->onDelete('restrict');
         });
     }
 
