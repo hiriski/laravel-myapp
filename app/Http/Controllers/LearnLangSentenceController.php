@@ -12,6 +12,10 @@ use App\LearnLangSentenceLevel;
 use Illuminate\Support\Str;
 
 class LearnLangSentenceController extends Controller {
+
+    public function __construct() {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -32,11 +36,9 @@ class LearnLangSentenceController extends Controller {
         $class = 'form-control';
 
         $categories = LearnLangSentenceCategory::orderBy('name', 'ASC')
-            ->get()
             ->pluck('name','id');
 
         $levels = LearnLangSentenceLevel::orderBy('id', 'ASC')
-            ->get()
             ->pluck('name','id');
 
         return view('learn.lang.sentence.create', compact(
@@ -57,20 +59,17 @@ class LearnLangSentenceController extends Controller {
             'category_id'   => 'required|integer',
             'level_id'      => 'required|integer'
         ));
+        
+        $slug = Str::slug($request->english, '-');
+        
+        /* cegah slug kembar */
+        if( LearnLangSentence::where('slug', $slug)->first() != NULL )
+        $data['slug'] = $slug . '-' . Str::random(5);
+        else
+        $data['slug'] = $slug;
 
         $data = $request->all();
-
-        $slug = Str::slug($request->english, '-');
-        /* cegah slug kembar */
-        if( LearnLangSentence::where('slug', $slug)->first() != NULL ) {
-            $data['slug'] = Str::slug($request->id . '-' . $request->english, '-');
-        }
-        else {
-            $data['slug'] = $slug;
-        }
-
         $data['user_id']        = Auth::user()->id;
-
         $data['category_id']    = (int)$request->category_id;
         $data['level_id']       = (int)$request->level_id;
 
