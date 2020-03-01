@@ -7,6 +7,13 @@
                 <h3 class="text-center">List blog</h3>
             </div>
         </div>
+
+        @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }} 
+        </div>
+        @endif
+
         <div class="row">
             @foreach($posts as $item)
             <div class="col-sm-12 col-md-6 col-lg-4">
