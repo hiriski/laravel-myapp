@@ -19,7 +19,8 @@ class PostController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        return view('posts.index');
+        $posts = Post::paginate(10);
+        return view('posts.index', array('posts' => $posts));
     }
 
     /**
