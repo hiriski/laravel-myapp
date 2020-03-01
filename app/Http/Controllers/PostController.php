@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
+use Auth;
 use App\Post;
 use App\PostCategory;
 
@@ -25,7 +28,11 @@ class PostController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        //
+        $class = 'form-control';
+        $categories = PostCategory::orderBy('name', 'ASC')->pluck('name', 'id');
+        return view('posts.create', compact(
+            'categories', 'class'
+        ));
     }
 
     /**
@@ -35,7 +42,16 @@ class PostController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        //
+        $slug = Str::slug($request->title);
+        
+        $data = $request->all();
+
+        $data['category_id'] = (int)$request->category_id;
+        $data['slug'] = $slug;
+        $data['user_id'] = Auth::user()->id;
+
+        Post::create($data);
+        return redirect()->route('blog.index')->with('success', 'Artikel berhasil di submit');
     }
 
     /**
