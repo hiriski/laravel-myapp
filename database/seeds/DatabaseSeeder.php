@@ -22,5 +22,10 @@ class DatabaseSeeder extends Seeder
 
         /** post */
         $this->call(PostCategoriesTableSeeder::class);
+        
+        
+        /** phrase */
+        $this->call(LearnLangPhraseCategoriesTableSeeder::class);
+        $this->call(LearnLangPhrasesTableSeeder::class);
     }
 }
