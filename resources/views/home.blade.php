@@ -14,6 +14,8 @@
                         </div>
                     @endif
                     @lang('app.welcome')
+
+                    <h2>@lang('app.hello') {{ Auth::user()->profile->first_name }} 👋</h2>
                 </div>
             </div>
         </div>
