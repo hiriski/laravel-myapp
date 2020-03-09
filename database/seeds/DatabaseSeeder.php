@@ -2,16 +2,17 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
-{
+class DatabaseSeeder extends Seeder {
     /**
      * Seed the application's database.
      *
      * @return void
      */
-    public function run()
-    {
+    public function run() {
+        
+        /** user and profile */
         $this->call(UsersTableSeeder::class);
+        $this->call(ProfilesTableSeeder::class);
 
         /** sentence */
         $this->call(LearnLangSentenceLevelsTableSeeder::class);
