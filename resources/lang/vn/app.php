@@ -3,5 +3,6 @@
 return array(
     'dashboard' => 'Dashboard',
     'welcome'   => 'You are logged in!',
-    'hello'     => 'Xin Chao,',
+    // 'hello'     => 'xin chào,',
+    'hello'     => 'Chào,',
 );
