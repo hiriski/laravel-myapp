@@ -11,13 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/{locale}/home', 'HomeController@index')->name('home');
+Route::get('/{locale}', 'HomeController@index')->name('home');
 Route::resource('/learn/lang/sentence', 'LearnLangSentenceController');
 Route::resource('/learn/lang/phrase', 'LearnLangPhraseController');
 Route::resource('/blog/category', 'PostCategoryController');
