@@ -1,0 +1,13 @@
+input {
+    &::placeholder {
+        color: $gray;
+    }
+}
+.card {
+    background: $white;
+}
+.form-control:focus {
+    border-color: $primary-color;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(73, 27, 255, 0.25);
+}

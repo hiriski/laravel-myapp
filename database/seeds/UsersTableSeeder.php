@@ -14,9 +14,17 @@ class UsersTableSeeder extends Seeder {
     public function run() {
         DB::table($this->tableName)->delete();
         $users = array(
-            'name'      => 'Riski',
-            'email'     => 'hi@riski.web.id',
-            'password'  => bcrypt('secret'),
+            array(
+                'name'      => 'Riski',
+                'email'     => 'an@riski.web.id',
+                'password'  => bcrypt('secret'),
+            ),
+            array(
+                // 'name'      => 'Nguyễn Thị Bích Ngọc',
+                'name'      => 'Ngọc',
+                'email'     => 'em@riski.web.id',
+                'password'  => bcrypt('secret'),
+            ),
         );
         DB::table($this->tableName)->insert($users);
     }
