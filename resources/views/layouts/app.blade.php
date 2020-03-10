@@ -79,7 +79,7 @@
                 @yield('content')
             </div>
         </main>
+        @include('layouts.lang')
     </div>
-@include('layouts.lang')
 </body>
 </html>

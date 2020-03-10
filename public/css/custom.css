@@ -95,10 +95,32 @@ downloaded from : https://fontlibrary.org/en/font/hk-grotesk
       font-size: 19px;
       font-weight: 700; }
 
-#lang ul {
-  margin: 0; }
-  #lang ul li {
-    list-style: none; }
+#lang {
+  position: fixed;
+  bottom: .55rem; }
+  #lang .lang-inner {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px -2px 30px 0 rgba(0, 0, 0, 0.1);
+    padding-left: 2rem;
+    padding-right: 2rem; }
+    #lang .lang-inner .select-lang h5 {
+      font-size: 16px;
+      margin-bottom: .55rem; }
+  #lang ul {
+    margin: 0;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    padding-left: 0; }
+    #lang ul li {
+      list-style: none; }
+      #lang ul li .lang-item img {
+        width: 28px;
+        height: 28px; }
+        #lang ul li .lang-item img:first-child {
+          margin-left: 0.6rem; }
+        #lang ul li .lang-item img:last-child {
+          margin-right: 0.6rem; }
 
 #auth main#main {
   padding-left: 0;

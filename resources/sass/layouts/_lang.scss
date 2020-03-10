@@ -1,8 +1,44 @@
 #lang {
+    $flag-size : 28px;
+    $flat-space: .6rem;
+    position: fixed;
+    bottom: .55rem;
+    .lang-inner {
+        background-color: $white;
+        border-radius: 10px;
+        box-shadow: 0px -2px 30px 0 rgba(black, 0.1);
+        padding : {
+            left: 2rem;
+            right: 2rem;
+        }
+        .select-lang {
+            h5 {
+                font-size: 16px;
+                margin-bottom: .55rem;
+            }
+        }
+    }
     ul {
         margin: 0;
+        padding: {
+            top: .75rem;
+            bottom: .75rem;
+            left: 0;
+        }
         li {
             list-style: none;
+            .lang-item {
+                img {
+                    width: $flag-size;
+                    height: $flag-size;
+                    &:first-child {
+                        margin-left: $flat-space;
+                    }
+                    &:last-child {
+                        margin-right: $flat-space;
+                    }
+                }
+            }
         }
     }
 }
