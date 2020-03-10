@@ -17,6 +17,8 @@ class CreateProfilesTable extends Migration {
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('image_url')->nullable();
+            $table->string('image_mid_url')->nullable();
+            $table->string('image_sm_url')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')
