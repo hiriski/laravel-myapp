@@ -22,4 +22,16 @@ class LearnLangSentence extends Model {
         'category_id',
         'level_id',
     );
+    
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
+    
+    public function updator() {
+        return $this->belongsTo(User::class, 'updated_by'); // parameter kedua adalah foreign key
+    }
+
+    public function category() {
+        return $this->belongsTo(LearnLangSentenceCategory::class);
+    }
 }
