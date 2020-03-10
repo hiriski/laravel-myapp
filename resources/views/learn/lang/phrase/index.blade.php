@@ -17,12 +17,18 @@
                             <span class="id"></span>
                         </div>
                         <p class="item">{{ $item->indonesia }}</p>
+                        <div class="edit-btn">
+                            <a href="" class="btn btn-sm btn-outline-primary"><i class="material-icons">edit</i>Edit</a>
+                        </div>
                     </li>
                     <li class="list-group-item">
                         <div class="flag">
                             <span class="en"></span>
                         </div>
                         <p class="item">{{ $item->english }}</p>
+                        <div class="edit-btn">
+                            <a href="" class="btn btn-sm btn-outline-primary"><i class="material-icons">edit</i>Edit</a>
+                        </div>
                     </li>
                     <li class="list-group-item">
                     @if(!empty($item->vietnam))
@@ -30,11 +36,14 @@
                             <span class="vn"></span>
                         </div>
                         <p class="item">{{ $item->vietnam }}</p>
+                        <div class="edit-btn">
+                            <a href="" class="btn btn-sm btn-outline-primary"><i class="material-icons">edit</i>Edit</a>
+                        </div>
                     @else
                         <div class="flag">
                             <span class="vn"></span>
                         </div>
-                        <p class="item">nothing..</p>
+                        <p class="item">...</p>
                     @endif
                     </li>
                 </ul>

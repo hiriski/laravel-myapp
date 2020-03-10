@@ -1,6 +1,27 @@
 body {
     background-color: $bg;
     font-family: 'HK Grotesk', Roboto, Ubuntu, Arial, sans-serif !important;
+    font-weight: 500;
+}
+
+/* resize padding */
+.container-fluid,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm,
+.container,
+div[class^="col"] {
+    padding: {
+        left: 7px;
+        right: 7px;
+    }
+}
+.row {
+    margin: {
+        left: -7px;
+        right: -7px;
+    }
 }
 
 main {
@@ -10,7 +31,6 @@ main {
 }
 
 .card {
-    margin-bottom: 24px;
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
     -moz-box-shadow: 0 1px 1px rgba(0,0,0,.05);
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
@@ -19,6 +39,17 @@ main {
 
 .list-group-item {
     border: none !important;
+    .edit-btn {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        a.btn {
+            line-height: 1;
+            .material-icons {
+                font-size: 16px;
+            }
+        }
+    }
 }
 
 .btn-primary {
@@ -39,6 +70,7 @@ main {
             display: inline-block;
             width: 18px;
             height: 18px;
+            top: 14px;
             &.id {
                 background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxjaXJjbGUgc3R5bGU9ImZpbGw6I0YwRjBGMDsiIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjI1NiIvPg0KPHBhdGggc3R5bGU9ImZpbGw6I0Q4MDAyNzsiIGQ9Ik01MTIsMjU2YzAsMTQxLjM4NC0xMTQuNjE2LDI1Ni0yNTYsMjU2UzAsMzk3LjM4NCwwLDI1NiIvPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=");
             }
