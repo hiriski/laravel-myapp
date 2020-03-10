@@ -82,11 +82,10 @@ private $tableName = "learn_lang_phrases";
                array(
                     'indonesia' => 'Apa kabar ?',
                     'english' => 'How are you ?',
-                    'vietnam' => 'bạn có khỏe không?',
+                    'vietnam' => 'bạn có khỏe không? Khỏe chứ?( informal )',
                     'user_id' => 1,
                     'category_id' => 1,
                     'created_at'  => Carbon::now(),
-                    'notes'       => 'Khỏe chứ?( informal )'
                     ),
                array(
                     'indonesia' => 'Baik, terima kasih',
