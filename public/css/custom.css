@@ -77,13 +77,25 @@ downloaded from : https://fontlibrary.org/en/font/hk-grotesk
   font-weight: 700;
   font-style: italic; }
 #sidebar {
-  background-color: #fbfbfb;
+  background-color: #fff;
   position: fixed;
   left: 0;
   width: 230px;
   min-height: 100vh; }
   #sidebar .sidebar-inner {
-    padding-top: 100px; }
+    padding-top: 54px; }
+  #sidebar .sidebar-header .profile-pic {
+    margin: auto;
+    width: 100px;
+    height: 100px; }
+    #sidebar .sidebar-header .profile-pic img {
+      border-radius: 50%; }
+  #sidebar .sidebar-header .profile-name {
+    text-align: center;
+    margin-top: .5rem; }
+    #sidebar .sidebar-header .profile-name h3 {
+      font-size: 19px;
+      font-weight: 700; }
 
 #auth main#main {
   padding-left: 0;
