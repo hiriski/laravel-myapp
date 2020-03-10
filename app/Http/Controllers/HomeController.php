@@ -21,9 +21,7 @@ class HomeController extends Controller {
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index($locale) {
-        App::setLocale($locale);
-        session()->put('locale', $locale);
+    public function index() {
         return view('home');
     }
 }
