@@ -152,12 +152,6 @@ body {
   font-weight: 500; }
 
 /* resize padding */
-.container-fluid,
-.container-xl,
-.container-lg,
-.container-md,
-.container-sm,
-.container,
 div[class^="col"] {
   padding-left: 7px;
   padding-right: 7px; }
