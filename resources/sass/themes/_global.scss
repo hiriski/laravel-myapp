@@ -11,6 +11,11 @@ main {
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }
 
+.btn-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+}
+
 
 /* Sentence */
 .sentence {
