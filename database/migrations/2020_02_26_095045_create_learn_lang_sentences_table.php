@@ -27,6 +27,7 @@ class CreateLearnLangSentencesTable extends Migration
             $table->unsignedInteger('category_id');
             $table->unsignedTinyInteger('level_id');
             
+            $table->unsignedBigInteger('updated_by')->nullable();
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
 
