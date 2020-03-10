@@ -13,9 +13,9 @@
                     @endguest                
                     </div>
                     <div class="profile-name">
-                        <span>@greeting 👋</span>
+                        <span>@greeting</span>
                         <h3>
-                            {{ Auth::user()->profile->first_name }}  {{ Auth::user()->profile->last_name }}
+                            {{ Auth::user()->profile->first_name }}  {{ Auth::user()->profile->last_name }} 👋
                         </h3>
                         <div class="logout-btn">
                             <a class="btn btn-sm btn-danger" href="{{ route('logout') }}"
