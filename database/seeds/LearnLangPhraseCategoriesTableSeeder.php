@@ -15,6 +15,7 @@ private $tableName = "learn_lang_phrase_categories";
         DB::table($this->tableName)->delete();
         
         $categories = array(
+            array('name' => 'Uncategory'),
             array('name' => 'Greetings'),
             array('name' => 'Romance'),
             array('name' => 'Emergency'),

@@ -24,7 +24,7 @@ class ProfilesTableSeeder extends Seeder {
                 'user_id'       => 2,
                 'first_name'    => 'Em',
                 'last_name'     => 'Xinh Đẹp',
-                'image_url'     => 'images/profiles/em.png',
+                'image_url'     => 'images/profiles/em.jpg',
             )
         );
         DB::table($this->tableName)->insert($users_profile);
