@@ -17,13 +17,23 @@
                         <h3>
                             {{ Auth::user()->profile->first_name }}  {{ Auth::user()->profile->last_name }}
                         </h3>
+                        <div class="logout-btn">
+                            <a class="btn btn-sm btn-danger" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                @lang('Logout') <i class="material-icons material-icon-sm">exit_to_app</i>
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="sidebar-menu">
-            <h6 class="sidebar-header">Learning :)</h6>
-            <a class="sidebar-menu-item" href="{{ route('sentence.index') }}">Sentence</a>
-            <a class="sidebar-menu-item" href="">Phrases</a>
+                <h6 class="sidebar-header">Learning</h6>
+                <a class="sidebar-menu-item" href="{{ route('sentence.index') }}">Sentence</a>
+                <a class="sidebar-menu-item" href="">Phrases</a>
             </div>
         </div>
     </div>

@@ -21,6 +21,9 @@
   -webkit-font-smoothing: antialiased;
   vertical-align: middle; }
 
+.material-icon-sm {
+  font-size: 17px; }
+
 /*  
 HK Grotesk Font Free by Hanken Design Co.
 License : OFL (SIL Open Font License)
