@@ -26,7 +26,10 @@ div[class^="col"] {
 
 main {
     &#main {
-        padding-left: $sidebar-width;
+        padding: {
+            left: $sidebar-width;
+            bottom : 100px; //space for select lang
+        }
     }
 }
 
