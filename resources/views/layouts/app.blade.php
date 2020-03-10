@@ -28,5 +28,6 @@
         </main>
         @include('layouts.lang')
     </div>
+<script src="{{ asset('js/custom.js') }}"></script>
 </body>
 </html>
