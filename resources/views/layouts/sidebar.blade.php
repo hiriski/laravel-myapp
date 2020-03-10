@@ -9,7 +9,7 @@
                     @else
                         <img src="{{ url('') }}/{{ Auth::user()->profile->image_url }}"
                                 alt="{{ Auth::user()->profile->first_name }}"
-                                class="img-fluid">
+                                class="img-fluid rounded-circle">
                     @endguest                
                     </div>
                     <div class="profile-name">

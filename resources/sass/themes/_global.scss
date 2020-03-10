@@ -37,16 +37,30 @@ main {
     border: none !important;
 }
 
-.list-group-item {
-    border: none !important;
-    .edit-btn {
-        position: absolute;
-        right: 15px;
-        top: 10px;
-        a.btn {
-            line-height: 1;
-            .material-icons {
-                font-size: 16px;
+.list-group {
+    .list-group-item {
+        border: none !important;
+        .edit-btn {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            a.btn {
+                line-height: 1;
+                .material-icons {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .author {
+        .creator,
+        .updator {
+            img {
+                &::last {
+                    margin-right: 10px;
+                }
+                width: 30px;
+                height: 30px;
             }
         }
     }

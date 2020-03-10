@@ -46,6 +46,14 @@
                         <p class="item">...</p>
                     @endif
                     </li>
+                    <div class="author text-center">
+                        <div class="creator d-inline">
+                            <img src="{{ url('') }}/images/profiles/anh-sm.png" alt="" class="rounded-circle">
+                        </div>
+                        <div class="updator d-inline">
+                            <img src="{{ url('') }}/images/profiles/em-sm.jpg" alt=""class="rounded-circle">
+                        </div>
+                    </div>
                 </ul>
             </div>
         </div>
