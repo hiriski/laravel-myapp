@@ -53,14 +53,16 @@ main {
         }
     }
     .author {
+        margin-bottom: .75rem;
         .creator,
         .updator {
             img {
-                &::last {
-                    margin-right: 10px;
+                &:last-child {
+                    margin-right: .35rem;
                 }
-                width: 30px;
-                height: 30px;
+                $author-image-size: 26px;
+                width:  $author-image-size;
+                height: $author-image-size;
             }
         }
     }

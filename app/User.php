@@ -41,4 +41,8 @@ class User extends Authenticatable {
         return $this->hasOne(Profile::class);
     }
 
+    public function phrases() {
+        return $this->hasMany(LearnLangPhrase::class);
+    }
+
 }

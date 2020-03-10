@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 my-3">
-            <h3 class="text-center">Phrase</h3>
+            <h3 class="text-center">@lang('app.phrase')</h3>
         </div>
         <div class="col-12 text-center mb-3">
             <a href="{{ route('sentence.create') }}" class="btn btn-primary">Create Phrase</a>
@@ -47,12 +47,26 @@
                     @endif
                     </li>
                     <div class="author text-center">
+                        @if($item->user_id === $item->updated_by)
                         <div class="creator d-inline">
-                            <img src="{{ url('') }}/images/profiles/anh-sm.png" alt="" class="rounded-circle">
+                            <a href="">
+                                <img src="{{ url('') }}/{{ $item->user->profile->image_sm_url }}" alt="" class="rounded-circle">
+                            </a>
                         </div>
-                        <div class="updator d-inline">
-                            <img src="{{ url('') }}/images/profiles/em-sm.jpg" alt=""class="rounded-circle">
+                        @else
+                        <div class="creator d-inline">
+                            <a href="">
+                                <img src="{{ url('') }}/{{ $item->user->profile->image_sm_url }}" alt="" class="rounded-circle">
+                            </a>
                         </div>
+                            @if(!empty($item->updated_by))
+                            <div class="updator d-inline">
+                                <a href="">
+                                    <img src="{{ url('') }}/{{ $item->updator->profile->image_sm_url }}" alt="" class="rounded-circle">
+                                </a>
+                            </div>
+                            @endif
+                        @endif
                     </div>
                 </ul>
             </div>

@@ -80,7 +80,7 @@ downloaded from : https://fontlibrary.org/en/font/hk-grotesk
   background-color: #fff;
   position: fixed;
   left: 0;
-  width: 230px;
+  width: 290px;
   min-height: 100vh; }
   #sidebar .sidebar-inner {
     padding-top: 54px; }
@@ -94,6 +94,11 @@ downloaded from : https://fontlibrary.org/en/font/hk-grotesk
     #sidebar .sidebar-header .profile-name h3 {
       font-size: 19px;
       font-weight: 700; }
+
+#lang ul {
+  margin: 0; }
+  #lang ul li {
+    list-style: none; }
 
 #auth main#main {
   padding-left: 0;
@@ -137,7 +142,7 @@ div[class^="col"] {
   margin-right: -7px; }
 
 main#main {
-  padding-left: 230px; }
+  padding-left: 290px; }
 
 .card {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -155,10 +160,15 @@ main#main {
       line-height: 1; }
       .list-group .list-group-item .edit-btn a.btn .material-icons {
         font-size: 16px; }
-.list-group .author .creator img,
-.list-group .author .updator img {
-  width: 40px;
-  height: 40px; }
+.list-group .author {
+  margin-bottom: .75rem; }
+  .list-group .author .creator img,
+  .list-group .author .updator img {
+    width: 26px;
+    height: 26px; }
+    .list-group .author .creator img:last-child,
+    .list-group .author .updator img:last-child {
+      margin-right: .35rem; }
 
 .btn-primary {
   background-color: #5072ef;
