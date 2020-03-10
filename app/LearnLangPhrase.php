@@ -11,13 +11,13 @@ class LearnLangPhrase extends Model {
     protected $dates = array('deleted_at');
 
     protected $fillable = array(
-    'indonesia',
-    'english',
-    'vietnam',
-    'notes',
-    'user_id',
-    'category_id',
-    'updated_by',
+        'indonesia',
+        'english',
+        'vietnam',
+        'notes',
+        'user_id',
+        'category_id',
+        'updated_by',
     );
 
     public function user() {
