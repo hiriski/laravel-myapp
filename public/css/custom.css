@@ -172,23 +172,30 @@ main#main {
 
 .list-group .list-group-item {
   border: none !important; }
-  .list-group .list-group-item .edit-btn {
+.list-group .list-group-footer {
+  width: 100%;
+  text-align: center;
+  margin-bottom: .75rem;
+  justify-content: flex-end;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem; }
+  .list-group .list-group-footer .edit-btn {
     position: absolute;
-    right: 15px;
-    top: 10px; }
-    .list-group .list-group-item .edit-btn a.btn {
-      line-height: 1; }
-      .list-group .list-group-item .edit-btn a.btn .material-icons {
-        font-size: 16px; }
-.list-group .author {
-  margin-bottom: .75rem; }
-  .list-group .author .creator img,
-  .list-group .author .updator img {
-    width: 26px;
-    height: 26px; }
-    .list-group .author .creator img:last-child,
-    .list-group .author .updator img:last-child {
-      margin-right: .35rem; }
+    left: 1.25rem; }
+    .list-group .list-group-footer .edit-btn a.btn {
+      line-height: 1;
+      margin-bottom: -5px; }
+  .list-group .list-group-footer .creator img,
+  .list-group .list-group-footer .updator img {
+    width: 33px;
+    height: 33px;
+    border: 3px solid #fff; }
+    .list-group .list-group-footer .creator img:first-child,
+    .list-group .list-group-footer .updator img:first-child {
+      margin-left: -8px; }
+    .list-group .list-group-footer .creator img:last-child,
+    .list-group .list-group-footer .updator img:last-child {
+      margin-right: -8px; }
 
 .btn-primary {
   background-color: #5072ef;

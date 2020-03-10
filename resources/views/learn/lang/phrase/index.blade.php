@@ -17,18 +17,12 @@
                             <span class="id"></span>
                         </div>
                         <p class="item">{{ $item->indonesia }}</p>
-                        <div class="edit-btn">
-                            <a href="" class="btn btn-sm btn-outline-primary"><i class="material-icons">edit</i>Edit</a>
-                        </div>
                     </li>
                     <li class="list-group-item">
                         <div class="flag">
                             <span class="en"></span>
                         </div>
                         <p class="item">{{ $item->english }}</p>
-                        <div class="edit-btn">
-                            <a href="" class="btn btn-sm btn-outline-primary"><i class="material-icons">edit</i>Edit</a>
-                        </div>
                     </li>
                     <li class="list-group-item">
                     @if(!empty($item->vietnam))
@@ -36,9 +30,6 @@
                             <span class="vn"></span>
                         </div>
                         <p class="item">{{ $item->vietnam }}</p>
-                        <div class="edit-btn">
-                            <a href="" class="btn btn-sm btn-outline-primary"><i class="material-icons">edit</i>Edit</a>
-                        </div>
                     @else
                         <div class="flag">
                             <span class="vn"></span>
@@ -46,27 +37,33 @@
                         <p class="item">...</p>
                     @endif
                     </li>
-                    <div class="author text-center">
-                        @if($item->user_id === $item->updated_by)
-                        <div class="creator d-inline">
-                            <a href="">
-                                <img src="{{ url('') }}/{{ $item->user->profile->image_sm_url }}" alt="" class="rounded-circle">
-                            </a>
+                    <div class="list-group-footer d-flex">
+                        <div class="edit-btn">
+                            <a href="" class="btn btn-sm btn-primary"><i class="material-icons material-icon-sm">edit</i> Edit</a>
                         </div>
-                        @else
-                        <div class="creator d-inline">
-                            <a href="">
-                                <img src="{{ url('') }}/{{ $item->user->profile->image_sm_url }}" alt="" class="rounded-circle">
-                            </a>
-                        </div>
-                            @if(!empty($item->updated_by))
-                            <div class="updator d-inline">
+                        <div class="author">
+                            @if($item->user_id === $item->updated_by)
+                            <div class="creator d-inline">
                                 <a href="">
-                                    <img src="{{ url('') }}/{{ $item->updator->profile->image_sm_url }}" alt="" class="rounded-circle">
+                                    <img src="{{ url('') }}/{{ $item->user->profile->image_sm_url }}" alt="" class="rounded-circle">
                                 </a>
                             </div>
+                            @else
+                            <div class="creator d-inline">
+                                <a href="">
+                                    <img src="{{ url('') }}/{{ $item->user->profile->image_sm_url }}" alt="" class="rounded-circle">
+                                </a>
+                            </div>
+                                @if(!empty($item->updated_by))
+                                <div class="updator d-inline">
+                                    <a href="">
+                                        <img src="{{ url('') }}/{{ $item->updator->profile->image_sm_url }}" alt="" class="rounded-circle">
+                                    </a>
+                                </div>
+                                @endif
                             @endif
-                        @endif
+                        </div>
+                        
                     </div>
                 </ul>
             </div>
