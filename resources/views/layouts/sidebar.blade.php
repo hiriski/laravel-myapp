@@ -13,7 +13,7 @@
                     @endguest                
                     </div>
                     <div class="profile-name">
-                        <span>@lang('app.hello') 👋</span>
+                        <span>@greeting 👋</span>
                         <h3>
                             {{ Auth::user()->profile->first_name }}  {{ Auth::user()->profile->last_name }}
                         </h3>
