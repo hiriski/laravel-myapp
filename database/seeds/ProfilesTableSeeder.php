@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Str;
 class ProfilesTableSeeder extends Seeder {
 
     private $tableName = 'profiles';
@@ -16,6 +16,7 @@ class ProfilesTableSeeder extends Seeder {
         $users_profile = array(
             array(
                 'user_id'       => 1,
+                'slug'          => Str::slug('anh'),
                 'first_name'    => 'Riski',
                 'last_name'     => 'Web ID',
                 'image_url'     => 'images/profiles/anh.png',
@@ -24,6 +25,7 @@ class ProfilesTableSeeder extends Seeder {
             ),
             array(
                 'user_id'       => 2,
+                'slug'          => Str::slug('em'),
                 'first_name'    => 'Em',
                 'last_name'     => 'Xinh Đẹp',
                 'image_url'     => 'images/profiles/em.jpg',
