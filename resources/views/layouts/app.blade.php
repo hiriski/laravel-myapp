@@ -80,5 +80,6 @@
             </div>
         </main>
     </div>
+@include('layouts.lang')
 </body>
 </html>
