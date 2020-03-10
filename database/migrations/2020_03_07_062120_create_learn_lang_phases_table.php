@@ -17,7 +17,9 @@ class CreateLearnLangPhasesTable extends Migration {
             $table->string('english')->nullable();
             $table->string('vietnam')->nullable();
             $table->unsignedInteger('category_id');
+            $table->text('notes')->nullable();
             $table->unsignedBigInteger('updated_by')->nullable();
+            $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
             
             $table->foreign('category_id')
