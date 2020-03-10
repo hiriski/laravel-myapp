@@ -30,11 +30,18 @@
                     </div>
                 </div>
             </div>
-            <div class="sidebar-menu">
+            <ul class="sidebar-menu">
                 <h6 class="sidebar-header">Learning</h6>
-                <a class="sidebar-menu-item" href="{{ route('sentence.index') }}">Sentence</a>
-                <a class="sidebar-menu-item" href="">Phrases</a>
-            </div>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-link" href="{{ route('phrase.index') }}">@lang('app.phrase')</a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-link" href="{{ route('sentence.index') }}">@lang('app.sentence')</a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-link" href="{{ route('sentence.index') }}">@lang('app.pubg')</a>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
