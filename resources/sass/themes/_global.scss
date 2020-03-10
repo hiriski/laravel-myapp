@@ -1,3 +1,8 @@
+body {
+    background-color: $bg;
+    font-family: 'HK Grotesk', Roboto, Ubuntu, Arial, sans-serif !important;
+}
+
 main {
     &#main {
         padding-left: $sidebar-width;
@@ -9,6 +14,11 @@ main {
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
     -moz-box-shadow: 0 1px 1px rgba(0,0,0,.05);
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    border: none !important;
+}
+
+.list-group-item {
+    border: none !important;
 }
 
 .btn-primary {
