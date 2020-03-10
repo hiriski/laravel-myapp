@@ -19,6 +19,7 @@ class CreateProfilesTable extends Migration {
             $table->string('image_url')->nullable();
             $table->string('image_mid_url')->nullable();
             $table->string('image_sm_url')->nullable();
+            $table->string('language')->default('en');
             $table->timestamps();
 
             $table->foreign('user_id')

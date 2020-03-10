@@ -20,6 +20,7 @@ class ProfilesTableSeeder extends Seeder {
                 'last_name'     => 'Web ID',
                 'image_url'     => 'images/profiles/anh.png',
                 'image_sm_url'  => 'images/profiles/anh-sm.png',
+                'language'      => 'en'
             ),
             array(
                 'user_id'       => 2,
@@ -27,6 +28,7 @@ class ProfilesTableSeeder extends Seeder {
                 'last_name'     => 'Xinh Đẹp',
                 'image_url'     => 'images/profiles/em.jpg',
                 'image_sm_url'  => 'images/profiles/em-sm.jpg',
+                'language'      => 'vn'
             )
         );
         DB::table($this->tableName)->insert($users_profile);
