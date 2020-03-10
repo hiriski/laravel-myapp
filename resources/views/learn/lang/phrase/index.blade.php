@@ -39,7 +39,7 @@
                     </li>
                     <div class="list-group-footer d-flex">
                         <div class="edit-btn">
-                            <a href="" class="btn btn-sm btn-primary"><i class="material-icons material-icon-sm">edit</i> Edit</a>
+                            <a href="{{ route('phrase.edit', $item->id) }}" class="btn btn-sm btn-primary"><i class="material-icons material-icon-sm">edit</i> Edit</a>
                         </div>
                         <div class="author">
                             @if($item->user_id === $item->updated_by)
