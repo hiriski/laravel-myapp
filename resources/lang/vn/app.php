@@ -11,7 +11,7 @@ return array(
     'good_night'        => 'Chúc ngủ ngon',
 
     'phrase'            => 'Giai đoạn',
-    'sentence'          => 'Kết án',
+    'sentence'          => 'Câu',
     'learn'             => 'Học hỏi',
 
     'edit_my_profile'   => 'Edit my profile',

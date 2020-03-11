@@ -44,19 +44,19 @@
                         <div class="author">
                             @if($item->user_id === $item->updated_by)
                             <div class="creator d-inline">
-                                <a href="">
+                                <a href="{{ route('profile.show', $item->user->profile->slug ) }}">
                                     <img src="{{ url('') }}/{{ $item->user->profile->image_sm_url }}" alt="" class="rounded-circle">
                                 </a>
                             </div>
                             @else
                             <div class="creator d-inline">
-                                <a href="">
+                                <a href="{{ route('profile.show', $item->user->profile->slug ) }}">
                                     <img src="{{ url('') }}/{{ $item->user->profile->image_sm_url }}" alt="" class="rounded-circle">
                                 </a>
                             </div>
                                 @if(!empty($item->updated_by))
                                 <div class="updator d-inline">
-                                    <a href="">
+                                    <a href="{{ route('profile.show', $item->updator->profile->slug ) }}">
                                         <img src="{{ url('') }}/{{ $item->updator->profile->image_sm_url }}" alt="" class="rounded-circle">
                                     </a>
                                 </div>
