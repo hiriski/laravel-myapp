@@ -18,3 +18,4 @@ Route::resource('/learn/lang/sentence', 'LearnLangSentenceController');
 Route::resource('/learn/lang/phrase', 'LearnLangPhraseController');
 Route::resource('/blog/category', 'PostCategoryController');
 Route::resource('/blog', 'PostController');
+Route::resource('/profile', 'ProfileController');

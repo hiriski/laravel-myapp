@@ -4,11 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Profile;
+use Auth;
+use App;
+
 class ProfileController extends Controller {
-    
+
     public function __construct() {
         return $this->middleware('auth');
     }
+
 
     public function getUserLang() {
         /** check bahasa di profile user */
@@ -19,5 +24,41 @@ class ProfileController extends Controller {
             default : App::setLocale("en"); break;
         }
         return $user_lang;
+    }
+
+
+    public function index() {
+        $this->getUserLang();
+        return view('profile.index');
+    }
+
+
+    public function create() {
+        $this->getUserLang();
+    }
+
+
+    public function store(Request $request) {
+
+    }
+
+
+    public function show($id) {
+        $this->getUserLang();
+    }
+
+
+    public function edit($id) {
+        $this->getUserLang();
+    }
+
+
+    public function update(Request $request, $id) {
+        
+    }
+    
+
+    public function destroy($id) {
+        
     }
 }
