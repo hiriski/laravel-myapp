@@ -85,6 +85,9 @@ downloaded from : https://fontlibrary.org/en/font/hk-grotesk
   left: 0;
   width: 290px;
   min-height: 100vh; }
+  @media (max-width: 480px) {
+    #sidebar {
+      display: none !important; } }
   #sidebar .sidebar-inner {
     padding-top: 54px; }
   #sidebar .sidebar-header .profile-pic {
@@ -193,6 +196,9 @@ body {
 
 .content {
   padding-top: 100px; }
+  @media (max-width: 480px) {
+    .content {
+      padding-top: 20px; } }
 
 /* resize padding */
 div[class^="col"] {
@@ -206,6 +212,9 @@ div[class^="col"] {
 main#main {
   padding-left: 290px;
   padding-bottom: 100px; }
+  @media (max-width: 480px) {
+    main#main {
+      padding-left: 0; } }
 
 .card {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);

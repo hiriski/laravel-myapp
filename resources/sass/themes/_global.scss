@@ -6,6 +6,9 @@ body {
 
 .content {
     padding-top: 100px;
+    @media (max-width: $mobile) {
+        padding-top: 20px;
+    }
 }
 
 /* resize padding */
@@ -27,6 +30,9 @@ main {
         padding: {
             left: $sidebar-width;
             bottom : 100px; //space for select lang
+        }
+        @media (max-width: $mobile) {
+            padding-left: 0;
         }
     }
 }

@@ -1,4 +1,7 @@
 #sidebar {
+    @media (max-width: $mobile) {
+        display: none!important;
+    }
     background-color: $white;
     position: fixed;
     left: 0;
