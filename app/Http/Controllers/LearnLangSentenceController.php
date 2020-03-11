@@ -59,7 +59,6 @@ class LearnLangSentenceController extends Controller {
         $this->getUserLang();
 
         $this->validate($request, array(
-            'indonesia'     => 'required|min:5',
             'category_id'   => 'required|integer',
             'level_id'      => 'required|integer'
         ));
