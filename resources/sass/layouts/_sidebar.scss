@@ -22,4 +22,28 @@
             }
         }
     }
+    .sidebar-menu {
+        padding: {
+            left: 1.35rem;
+            right: 1.35rem;
+            top: 2.5rem;
+        }
+        margin-bottom: 0;
+        .sidebar-menu-item {
+            list-style: none;
+            .sidebar-menu-link {
+                padding: {
+                    top: .5rem;
+                    bottom: .5rem;
+                }
+                display: block;
+                text-decoration: none;
+                color: $primary-color;
+                .material-icons {
+                    font-size: 20px;
+                    margin-right: .75rem;
+                }
+            }
+        }
+    }
 }

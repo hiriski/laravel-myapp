@@ -33,13 +33,24 @@
             <ul class="sidebar-menu">
                 <h6 class="sidebar-header">Learning</h6>
                 <li class="sidebar-menu-item">
-                    <a class="sidebar-menu-link" href="{{ route('phrase.index') }}">@lang('app.phrase')</a>
+                    <a class="sidebar-menu-link" href="{{ route('phrase.index') }}">
+                        <span class="sidebar-menu-icon">
+                            <i class="material-icons">subject</i>
+                        </span>
+                        <span class="sidebar-menu-text">
+                            @lang('app.phrase')
+                        </span>
+                    </a>
                 </li>
                 <li class="sidebar-menu-item">
-                    <a class="sidebar-menu-link" href="{{ route('sentence.index') }}">@lang('app.sentence')</a>
-                </li>
-                <li class="sidebar-menu-item">
-                    <a class="sidebar-menu-link" href="{{ route('sentence.index') }}">@lang('app.pubg')</a>
+                    <a class="sidebar-menu-link" href="{{ route('sentence.index') }}">
+                        <span class="sidebar-menu-icon">
+                            <i class="material-icons">bookmarks</i>
+                        </span>
+                        <span class="sidebar-menu-text">
+                            @lang('app.sentence')
+                        </span>
+                    </a>
                 </li>
             </ul>
         </div>

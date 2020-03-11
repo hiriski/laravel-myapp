@@ -97,6 +97,22 @@ downloaded from : https://fontlibrary.org/en/font/hk-grotesk
     #sidebar .sidebar-header .profile-name h3 {
       font-size: 19px;
       font-weight: 700; }
+  #sidebar .sidebar-menu {
+    padding-left: 1.35rem;
+    padding-right: 1.35rem;
+    padding-top: 2.5rem;
+    margin-bottom: 0; }
+    #sidebar .sidebar-menu .sidebar-menu-item {
+      list-style: none; }
+      #sidebar .sidebar-menu .sidebar-menu-item .sidebar-menu-link {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        display: block;
+        text-decoration: none;
+        color: #5072ef; }
+        #sidebar .sidebar-menu .sidebar-menu-item .sidebar-menu-link .material-icons {
+          font-size: 20px;
+          margin-right: .75rem; }
 
 #lang {
   position: fixed;
