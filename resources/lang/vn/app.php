@@ -10,7 +10,7 @@ return array(
     'good_evening'      => 'Chào Buổi tối',
     'good_night'        => 'Chúc ngủ ngon',
 
-    'phrase'            => 'Giai đoạn',
+    'phrase'            => 'Cụm từ',
     'sentence'          => 'Câu',
     'learn'             => 'Học hỏi',
 
