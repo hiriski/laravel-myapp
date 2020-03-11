@@ -13,5 +13,7 @@ return array(
     'sentence'          => 'Sentence',
     'learn'             => 'Learning',
 
+    'create_new_phrase' => 'Create New Phrase',
+
     'edit_my_profile'   => 'Edit my profile',
 );

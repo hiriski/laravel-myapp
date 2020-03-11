@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class LearnLangPhaseCategory extends Model {
+class LearnLangPhraseCategory extends Model {
     
     protected $table = 'learn_lang_phrase_categories';
 

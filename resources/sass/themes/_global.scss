@@ -4,6 +4,10 @@ body {
     font-weight: 500;
 }
 
+.content {
+    padding-top: 100px;
+}
+
 /* resize padding */
 div[class^="col"] {
     padding: {
@@ -78,6 +82,43 @@ main {
     border-color: $primary-color;
 }
 
+
+.form-app {
+    padding: 30px 100px;
+    @media (max-width: $mobile) {
+        padding: 20px;
+    }
+    label {
+        .flag-label {
+            img {
+                vertical-align: middle;
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &.main-heading {
+        font-size: 22px;
+    }
+}
+.main-heading {
+    &h1,
+    &h2,
+    &h3,
+    &h4,
+    &h5,
+    &h6 {
+        font-size: 22px;
+    } 
+}
 
 /* Learn */
 .learn {

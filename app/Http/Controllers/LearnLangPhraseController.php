@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\LearnLangPhraseCategory;
 use Illuminate\Http\Request;
 use App\LearnLangPhrase;
 use Auth;
@@ -35,13 +36,27 @@ class LearnLangPhraseController extends Controller {
 
     public function create() {
         $this->getUserLang();
-        //
+        
+        $class      = 'form-control';
+        $categories = LearnLangPhraseCategory::orderBy('name', 'ASC')
+                                        ->pluck('name', 'id');
+        
+        return view('learn.lang.phrase.create', compact(
+            'class', 'categories'
+            ));
     }
 
 
     public function store(Request $request) {
         $this->getUserLang();
-        //
+
+        $data = $request->all();
+        $data['user_id']        = Auth::user()->id;
+        $data['category_id']    = (int)$request->category_id;
+        LearnLangPhrase::create($data);
+
+        return redirect()->route('phrase.index')
+            ->with(['success' => 'The Phrase has been created!']);
     }
 
 

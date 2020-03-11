@@ -65,13 +65,15 @@ class LearnLangSentenceController extends Controller {
         
         $slug = Str::slug($request->english, '-');
         
-        /* cegah slug kembar */
-        if( LearnLangSentence::where('slug', $slug)->first() != NULL )
-        $data['slug'] = $slug . '-' . Str::random(5);
-        else
-        $data['slug'] = $slug;
-
         $data = $request->all();
+
+        /* cegah slug kembar */
+        if( LearnLangSentence::where('slug', $slug)->first() != NULL ) {
+            $data['slug'] = $slug . '-' . Str::random(5);
+        }
+        else {
+            $data['slug'] = $slug;
+        }
         $data['user_id']        = Auth::user()->id;
         $data['category_id']    = (int)$request->category_id;
         $data['level_id']       = (int)$request->level_id;
@@ -79,7 +81,7 @@ class LearnLangSentenceController extends Controller {
         LearnLangSentence::create($data);
 
         return redirect()->route('sentence.index')
-            ->with('success', 'Sentence has been created!');
+            ->with(['success' => 'The Sentence has been created!']);
     }
 
 

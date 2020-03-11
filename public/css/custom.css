@@ -160,7 +160,7 @@ downloaded from : https://fontlibrary.org/en/font/hk-grotesk
     #profile-page .social-link .social-link-item {
       display: inline-block; }
       #profile-page .social-link .social-link-item a {
-        margin: 0 .4rem; }
+        margin: 0 .25rem; }
         #profile-page .social-link .social-link-item a .icon img {
           width: 20px;
           height: 20px; }
@@ -190,6 +190,9 @@ body {
   background-color: #f1f1f1;
   font-family: 'HK Grotesk', Roboto, Ubuntu, Arial, sans-serif !important;
   font-weight: 500; }
+
+.content {
+  padding-top: 100px; }
 
 /* resize padding */
 div[class^="col"] {
@@ -240,6 +243,27 @@ main#main {
 .btn-primary {
   background-color: #5072ef;
   border-color: #5072ef; }
+
+.form-app {
+  padding: 30px 100px; }
+  @media (max-width: 480px) {
+    .form-app {
+      padding: 20px; } }
+  .form-app label .flag-label img {
+    vertical-align: middle;
+    width: 16px;
+    height: 16px; }
+
+h1.main-heading,
+h2.main-heading,
+h3.main-heading,
+h4.main-heading,
+h5.main-heading,
+h6.main-heading {
+  font-size: 22px; }
+
+.main-headingh1, .main-headingh2, .main-headingh3, .main-headingh4, .main-headingh5, .main-headingh6 {
+  font-size: 22px; }
 
 /* Learn */
 .learn .list-group-item {
