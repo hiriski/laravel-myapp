@@ -16,13 +16,15 @@
                             </h3>
 
                             @include('profile.social_link')
-
+                            
+                            @if($profile->user_id === Auth::user()->id )
                             <div class="btn-edit-profile">
                                 <a href="{{ route('profile.edit', $profile->id) }}" class="btn btn-primary">
                                     @lang('app.edit_my_profile')
                                     <i class="material-icons material-icon-sm">edit</i>
                                 </a>
                             </div>
+                            @endif
                         </div>
                     </div>
                 </div>
