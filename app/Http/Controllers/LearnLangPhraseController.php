@@ -4,79 +4,73 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\LearnLangPhrase;
+use Auth;
+use App;
 
 class LearnLangPhraseController extends Controller {
 
     public function __construct() {
         $this->middleware('auth');
     }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+
+    public function getUserLang() {
+        /** check bahasa di profile user */
+        $user_lang = Auth::user()->profile->language;
+        switch ($user_lang) {
+            case "vn":
+                App::setLocale($user_lang);
+                break;
+            case "id":
+                App::setLocale($user_lang);
+                break;
+            default :
+                App::setLocale("en");
+                break;
+        }
+        return $user_lang;
+    }
+
+
     public function index() {
+        $this->getUserLang();
         $phrases = LearnLangPhrase::paginate(20);
         return view('learn.lang.phrase.index', array( "phrases" => $phrases));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create() {
+        $this->getUserLang();
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request) {
+        $this->getUserLang();
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id) {
+        $this->getUserLang();
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id) {
+        $this->getUserLang();
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id) {
+        $this->getUserLang();
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id) {
+        $this->getUserLang();
         //
     }
 }
