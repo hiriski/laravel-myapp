@@ -9,7 +9,7 @@ return array(
     'good_evening'      => 'Selamat Malam',
     'good_night'        => 'Selamat Tidur',
 
-    'phrase'            => 'Giai đoạn',
-    'sentence'          => 'Kết án',
-    'learn'             => 'Học hỏi',
+    'phrase'            => 'Prasa',
+    'sentence'          => 'Kalimat',
+    'learn'             => 'Belajar',
 );
