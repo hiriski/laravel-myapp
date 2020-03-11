@@ -79,8 +79,14 @@ main {
 }
 
 
-/* Sentence */
-.sentence {
+/* Learn */
+.learn {
+    .list-group-item {
+        border-bottom: 1px solid #ececec !important;
+        &:nth-child(3) {
+            border-bottom: none !important;
+        }
+    }
     p.item {
         padding-left: 25px;
         margin-bottom: 0;

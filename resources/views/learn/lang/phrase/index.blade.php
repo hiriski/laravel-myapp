@@ -10,7 +10,7 @@
         </div>
         @foreach ($phrases as $item)
         <div class="col-12 col-md-6 col-lg-4 mb-3">
-            <div class="card sentence">
+            <div class="card learn phrase">
                 <ul class="list-group">
                     <li class="list-group-item">
                         <div class="flag">
