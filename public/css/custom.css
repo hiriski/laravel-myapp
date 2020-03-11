@@ -141,6 +141,20 @@ downloaded from : https://fontlibrary.org/en/font/hk-grotesk
         #lang ul li .lang-item img:last-child {
           margin-right: 0.6rem; }
 
+#profile-page {
+  padding-top: 100px; }
+  #profile-page .card {
+    padding-top: 42px;
+    padding-bottom: 42px; }
+    #profile-page .card .profile-image {
+      width: 300px;
+      margin: auto; }
+      #profile-page .card .profile-image img {
+        border-radius: .75rem; }
+    #profile-page .card .profile-name {
+      margin-top: 1rem;
+      font-weight: bold; }
+
 #auth main#main {
   padding-left: 0;
   display: flex;

@@ -13,4 +13,6 @@ return array(
     'phrase'            => 'Giai đoạn',
     'sentence'          => 'Kết án',
     'learn'             => 'Học hỏi',
+
+    'edit_my_profile'   => 'Edit my profile',
 );

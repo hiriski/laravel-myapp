@@ -12,4 +12,6 @@ return array(
     'phrase'            => 'Prasa',
     'sentence'          => 'Kalimat',
     'learn'             => 'Belajar',
+
+    'edit_my_profile'   => 'Edit profile saya',
 );

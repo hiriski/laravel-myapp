@@ -12,4 +12,6 @@ return array(
     'phrase'            => 'Phrase',
     'sentence'          => 'Sentence',
     'learn'             => 'Learning',
+
+    'edit_my_profile'   => 'Edit my profile',
 );

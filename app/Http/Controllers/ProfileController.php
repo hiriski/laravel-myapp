@@ -29,7 +29,8 @@ class ProfileController extends Controller {
 
     public function index() {
         $this->getUserLang();
-        return view('profile.index');
+        $current_user = Profile::findOrFail(Auth::user()->id);
+        return view('profile.index', array('profile' => $current_user));
     }
 
 

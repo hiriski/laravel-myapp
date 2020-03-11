@@ -1,0 +1,20 @@
+#profile-page {
+    padding-top: 100px;
+    .card {
+        padding: {
+            top: 42px;
+            bottom: 42px;
+        }
+        .profile-image {
+            width: 300px;
+            margin: auto;
+            img {
+                border-radius: .75rem;
+            }
+        }
+        .profile-name {
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+    }
+}
