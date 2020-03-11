@@ -21,8 +21,8 @@
         @include('layouts.sidebar')
         <main id="main">
             @yield('content')
-        </main>
-        @include('layouts.lang')
+        </main> 
+        {{-- @include('layouts.lang') --}}
     </div>
 <script src="{{ asset('js/custom.js') }}"></script>
 </body>
