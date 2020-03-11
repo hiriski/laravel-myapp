@@ -154,6 +154,16 @@ downloaded from : https://fontlibrary.org/en/font/hk-grotesk
     #profile-page .card .profile-name {
       margin-top: 1rem;
       font-weight: bold; }
+  #profile-page .social-link {
+    padding-left: 0;
+    list-style: none; }
+    #profile-page .social-link .social-link-item {
+      display: inline-block; }
+      #profile-page .social-link .social-link-item a {
+        margin: 0 .4rem; }
+        #profile-page .social-link .social-link-item a .icon img {
+          width: 20px;
+          height: 20px; }
 
 #auth main#main {
   padding-left: 0;

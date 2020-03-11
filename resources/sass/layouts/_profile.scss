@@ -17,4 +17,20 @@
             font-weight: bold;
         }
     }
+    .social-link {
+        padding-left: 0;
+        list-style: none;
+        .social-link-item {
+            display: inline-block;
+            a {
+                margin: 0 .25rem;
+            .icon {
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            }
+        }
+    }
 }

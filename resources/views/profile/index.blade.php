@@ -14,6 +14,9 @@
                             <h3 class="card-title profile-name">
                                 {{ $profile->first_name }} {{ $profile->last_name }}
                             </h3>
+
+                            @include('profile.social_link')
+
                             <div class="btn-edit-profile">
                                 <a href="{{ route('profile.edit', $profile->id) }}" class="btn btn-primary">
                                     @lang('app.edit_my_profile')
