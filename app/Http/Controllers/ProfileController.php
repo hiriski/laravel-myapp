@@ -46,6 +46,8 @@ class ProfileController extends Controller {
 
     public function show($id) {
         $this->getUserLang();
+        $profile = Profile::where('slug', '=', $id)->first();
+        return view('profile.show', array('profile' => $profile));
     }
 
 
