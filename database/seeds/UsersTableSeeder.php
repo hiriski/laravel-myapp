@@ -28,6 +28,13 @@ class UsersTableSeeder extends Seeder {
                 'password'  => bcrypt('secret'),
                 'created_at'  => Carbon::now(),
             ),
+            array(
+                // 'name'      => 'Nguyễn Thị Bích Ngọc',
+                'name'      => 'User',
+                'email'     => 'user@riski.web.id',
+                'password'  => bcrypt('secret'),
+                'created_at'  => Carbon::now(),
+            ),
         );
         DB::table($this->tableName)->insert($users);
     }
