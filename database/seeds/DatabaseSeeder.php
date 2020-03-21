@@ -10,6 +10,8 @@ class DatabaseSeeder extends Seeder {
      */
     public function run() {
         
+        $this->call(LanguagesTableSeeder::class);
+        
         /** user and profile */
         $this->call(UsersTableSeeder::class);
         $this->call(ProfilesTableSeeder::class);
@@ -23,7 +25,6 @@ class DatabaseSeeder extends Seeder {
 
         /** post */
         $this->call(PostCategoriesTableSeeder::class);
-        
         
         /** phrase */
         $this->call(LearnLangPhraseCategoriesTableSeeder::class);

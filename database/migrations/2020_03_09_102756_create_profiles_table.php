@@ -20,7 +20,7 @@ class CreateProfilesTable extends Migration {
             $table->string('image_md')->nullable();
             $table->string('image')->nullable();
             $table->string('background_image')->nullable();
-            $table->string('language')->default('en');
+            $table->unsignedTinyInteger('language_id');
             $table->text('facebook_url')->nullable();
             $table->text('instagram_url')->nullable();
             $table->text('twitter_url')->nullable();
@@ -43,8 +43,7 @@ class CreateProfilesTable extends Migration {
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::dropIfExists('profiles');
     }
 }
