@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 use Carbon\Carbon;
 
 class UsersTableSeeder extends Seeder {
@@ -16,24 +17,25 @@ class UsersTableSeeder extends Seeder {
         DB::table($this->tableName)->delete();
         $users = array(
             array(
-                'name'      => 'Riski',
-                'email'     => 'anh@riski.web.id',
-                'password'  => bcrypt('secret'),
-                'created_at'  => Carbon::now(),
+                'name'          => 'Riski',
+                'slug'          => Str::slug('Anh', ''),
+                'email'         => 'anh@riski.web.id',
+                'password'      => bcrypt('secret'),
+                'created_at'    => Carbon::now(),
             ),
             array(
-                // 'name'      => 'Nguyễn Thị Bích Ngọc',
-                'name'      => 'Ngọc',
-                'email'     => 'em@riski.web.id',
-                'password'  => bcrypt('secret'),
-                'created_at'  => Carbon::now(),
+                'name'          => 'Ngọc',
+                'slug'          => Str::slug('Em', ''),
+                'email'         => 'em@riski.web.id',
+                'password'      => bcrypt('secret'),
+                'created_at'    => Carbon::now(),
             ),
             array(
-                // 'name'      => 'Nguyễn Thị Bích Ngọc',
-                'name'      => 'User',
-                'email'     => 'user@riski.web.id',
-                'password'  => bcrypt('secret'),
-                'created_at'  => Carbon::now(),
+                'name'          => 'User',
+                'slug'          => Str::slug('User', ''),
+                'email'         => 'user@riski.web.id',
+                'password'      => bcrypt('secret'),
+                'created_at'    => Carbon::now(),
             ),
         );
         DB::table($this->tableName)->insert($users);
