@@ -19,5 +19,11 @@ input {
 			border-color: #5072ef;
 			@include box-shadow(0, 5px, 6px, -6px, $primary-color);
 		}
+
+		&.is-invalid {
+			&:focus {
+				box-shadow: none;
+			}
+		}
 	}
 }
