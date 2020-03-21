@@ -13,9 +13,9 @@ class LearnLangSentenceLevelsTableSeeder extends Seeder {
     public function run() {
         DB::table($this->tableName)->delete();
         $levels = array(
-            array('name' => 'easy'),
-            array('name' => 'medium'),
-            array('name' => 'hard')
+            array('name' => 'Easy'),
+            array('name' => 'Normal'),
+            array('name' => 'Hard')
         );
         DB::table($this->tableName)->insert($levels);
     }

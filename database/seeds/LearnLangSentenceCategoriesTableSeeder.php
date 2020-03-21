@@ -14,9 +14,11 @@ class LearnLangSentenceCategoriesTableSeeder extends Seeder {
     public function run() {
         DB::table($this->tableName)->delete();
         $categories = array(
-            array('name' => 'teknologi'),
-            array('name' => 'motivasi'),
-            array('name' => 'cinta'),
+            array('name' => 'Uncategory'),
+            array('name' => 'Technology'),
+            array('name' => 'Motivation'),
+            array('name' => 'Love'),
+            array('name' => 'Game')
         );
         DB::table($this->tableName)->insert($categories);
     }

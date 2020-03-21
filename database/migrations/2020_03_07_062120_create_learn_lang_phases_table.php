@@ -16,14 +16,16 @@ class CreateLearnLangPhasesTable extends Migration {
             $table->string('indonesia')->nullable();
             $table->string('english')->nullable();
             $table->string('vietnam')->nullable();
-            $table->unsignedBigInteger('user_id');
             $table->unsignedInteger('category_id');
             $table->text('notes')->nullable();
+
+            $table->unsignedBigInteger('created_by');
             $table->unsignedBigInteger('updated_by')->nullable();
-            $table->timestamp('deleted_at')->nullable();
+            $table->unsignedBigInteger('deleted_by')->nullable();
+            $table->softDeletes();
             $table->timestamps();
             
-            $table->foreign('user_id')
+            $table->foreign('created_by')
                 ->references('id')
                 ->on('users')
                 ->onDelete('restrict');

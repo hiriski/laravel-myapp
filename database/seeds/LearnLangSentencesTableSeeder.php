@@ -17,10 +17,10 @@ class LearnLangSentencesTableSeeder extends Seeder {
         DB::table($this->tableName)->delete();
         $sentences = array(
             array(
-                'user_id'       => 1,
-                'category_id'   => 2,
+                'created_by'    => 1,
+                'category_id'   => 3,
                 'level_id'      => 1,
-                'slug'          => Str::slug('Hidup tidak bisa di CTRL + Z'),
+                'slug'          => Str::slug('Life has no CTRL + Z'),
                 'indonesia'     => 'Hidup tidak bisa di CTRL + Z',
                 'english'       => 'Life has no CTRL + Z',
                 'notes'         => 'Maksudnya hidup itu gak bisa di undo',
@@ -28,10 +28,10 @@ class LearnLangSentencesTableSeeder extends Seeder {
                 'created_at'    => Carbon::now(),
             ),
             array(
-                'user_id'       => 1,
-                'category_id'   => 2,
+                'created_by'    => 1,
+                'category_id'   => 3,
                 'level_id'      => 1,
-                'slug'          => Str::slug('Tetap Lapar Tetap Bodoh!'),
+                'slug'          => Str::slug('Stay Hungry Stay Foolish!'),
                 'indonesia'     => 'Tetap Lapar Tetap Bodoh!',
                 'english'       => 'Stay Hungry Stay Foolish!',
                 'notes'         => 'Maksudnya tetaplah lapar dan tetap bodoh agar terus belajar',
