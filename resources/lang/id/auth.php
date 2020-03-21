@@ -1,12 +1,14 @@
 <?php
 
 return array(
-    'password'  => 'Kata Sandi',
-    'email'     => 'Email',
-    'name'      => 'Nama',
-    'input_email'   => 'Masukan email',
-    'input_password'   => 'Masukan password',
-    'submit'    => 'Submit',
-    'failed'    => 'Credentials tidak ditemukan',
-    'throttle'  => 'Too many login attempts. Please try again in :seconds seconds.',
+    'password'  		=> 'Kata sandi',
+    'email'     		=> 'Email',
+    'email_address'     => 'Alamat Email',
+    'input_email'   	=> 'Masukan Email',
+    'input_password'   	=> 'Masukan Kata Sandi',
+    'submit'    		=> 'Submit',
+    'name'      		=> 'Name',
+    'failed'    		=> 'These credentials do not match our records.',
+    'throttle'  		=> 'Too many login attempts. Please try again in :seconds seconds.',
+    'remember'			=> 'Remember me',
 );
