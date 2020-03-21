@@ -5,7 +5,7 @@
 <h4 class="main-heading sm mb-5">Login</h4>
 
 <div class="form-group mb-3">
-    <input id="email" type="email" class="form-control rux-input @error('email') is-invalid @enderror" name="email" placeholder="@lang('app.email')" value="{{ old('email') }}" autocomplete="email" autofocus>
+    <input id="email" type="email" class="form-control rux-input @error('email') is-invalid @enderror" name="email" placeholder="@lang('auth.email_address')" value="{{ old('email') }}" autocomplete="email" autofocus>
     @error('email')
     <span class="invalid-feedback" role="alert">
         <strong>{{ $message }}</strong>
@@ -14,7 +14,7 @@
 </div>
 
 <div class="form-group mb-3">
-    <input id="password" type="password" class="form-control rux-input @error('password') is-invalid @enderror" name="password" placeholder="@lang('app.password')" autocomplete="current-password">
+    <input id="password" type="password" class="form-control rux-input @error('password') is-invalid @enderror" name="password" placeholder="@lang('auth.password')" autocomplete="current-password">
     @error('password')
     <span class="invalid-feedback" role="alert">
         <strong>{{ $message }}</strong>
@@ -27,12 +27,12 @@
     <input type="checkbox" name="remember" id="remember"
             class="custom-control-input"
             {{ old('remember') ? 'checked' : '' }} >
-    <label class="custom-control-label" for="remember">Remember me</label>
+    <label class="custom-control-label" for="remember">@lang('auth.remember')</label>
   </div>
 </div>
 
 <div class="form-group">
-    <button type="submit" class="submit-btn btn btn-primary rux-btn">Submit <i class="material-icons">arrow_forward</i></button>
+    <button type="submit" class="submit-btn btn btn-primary rux-btn">@lang('auth.submit') <i class="material-icons">arrow_forward</i></button>
 </div>
 
 <div class="text-center d-none">
