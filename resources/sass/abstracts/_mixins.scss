@@ -27,3 +27,20 @@
 	-moz-box-shadow: $hOffset $vOffset $blur $spread $color;
 	-webkit-box-shadow: $hOffset $vOffset $blur $spread $color;
 }
+
+
+//transform origin
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+	     -o-transform-origin: $origin;
+	    -ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
+@mixin transition ($property : all .3s ease) {
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    -ms-transition: $property;
+    -o-transition: $property;
+    transition: $property;
+}
