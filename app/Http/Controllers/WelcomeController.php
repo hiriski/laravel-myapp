@@ -12,19 +12,9 @@ class WelcomeController extends Controller {
 		return $this->middleware('auth');
 	}
 
-    /**
-     * Set bahasa untuk
-     * @param String
-     * @return String
-     */
-    public function getUserLang() {
-        $userLang = Auth::user()->profile->language;
-        return App::setLocale($userLang);
-    }
-
-
     public function index() {
-        Self::getUserLang();
+        App::setLocale(getLangUserCode(Auth::user()->id));
     	return view('welcome');
     }
+
 }

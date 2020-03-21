@@ -15,7 +15,14 @@ class AppServiceProvider extends ServiceProvider {
      * @return void
      */
     public function register() {
-        //
+
+        /**
+         * Register custom helper
+         */
+        foreach (glob(app_path('Helpers/*.php')) as $filename) {
+            require_once $filename;
+        }
+        
     }
 
     /**
