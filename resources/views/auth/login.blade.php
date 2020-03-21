@@ -1,26 +1,11 @@
 @extends('layouts.auth')
 @section('content')
-{{ Form::open( array('url' => route('login'))) }}
-<h3 class="main-heading sm text-center">Login</h3>
+<form method="POST" action="{{ route('login') }}">
+@csrf
+<h4 class="main-heading sm mb-5">Login</h4>
 
-{{-- <label for="email">Email</label>
-<div class="input-group mb-4">
-    {{ Form::text('email', null, array('id' => 'login-form', 'class' => 'form-control form-control-lg'
-        ))}}
-    <div class="input-group-append">
-        <span class="input-group-text">@riski.web.id</span>
-    </div>
-    @error('email')
-    <span class="invalid-feedback" role="alert">
-        <strong>{{ $message }}</strong>
-    </span>
-    @enderror
-</div> --}}
-
-<label for="email">Email</label>
-<div class="form-group">
-    {{ Form::text('email', null, array('id' => 'login-form', 'class' => 'form-control form-control-lg'
-        ))}}
+<div class="form-group mb-3">
+    <input id="email" type="email" class="form-control rux-input @error('email') is-invalid @enderror" name="email" placeholder="@lang('app.email')" value="{{ old('email') }}" autocomplete="email" autofocus>
     @error('email')
     <span class="invalid-feedback" role="alert">
         <strong>{{ $message }}</strong>
@@ -28,25 +13,34 @@
     @enderror
 </div>
 
-<label for="password">Password</label>
-<div class="form-group mb-4">
-    {{ Form::password('password', array('class' => 'form-control form-control-lg')) }}
+<div class="form-group mb-3">
+    <input id="password" type="password" class="form-control rux-input @error('password') is-invalid @enderror" name="password" placeholder="@lang('app.password')" autocomplete="current-password">
     @error('password')
     <span class="invalid-feedback" role="alert">
         <strong>{{ $message }}</strong>
     </span>
     @enderror
 </div>
-<div class="form-group">
-    {{ Form::submit('Submit', array('id' => 'submit-btn', 'class' => 'btn btn-block btn-lg btn-primary submit-btn')) }}
+
+<div class="form-group mb-3">
+  <div class="custom-control custom-checkbox mr-sm-2">
+    <input type="checkbox" name="remember" id="remember"
+            class="custom-control-input"
+            {{ old('remember') ? 'checked' : '' }} >
+    <label class="custom-control-label" for="remember">Remember me</label>
+  </div>
 </div>
 
-{{-- @if (Route::has('password.request'))
-    <a class="btn btn-link" href="{{ route('password.request') }}">
-        {{ __('Forgot Your Password?') }}
-    </a>
-@endif --}}
+<div class="form-group">
+    <button type="submit" class="submit-btn btn btn-primary rux-btn">Submit <i class="material-icons">arrow_forward</i></button>
+</div>
 
-
-{{ Form::close() }}
+<div class="text-center d-none">
+    @if (Route::has('password.request'))
+        <a class="small text-muted btn btn-link" href="{{ route('password.request') }}">
+            {{ __('Forgot Your Password?') }}
+        </a>
+    @endif
+</div>
+</form>
 @endsection

@@ -1,4 +1,5 @@
 #auth {
+    background-color: $light;
     $login-box-width: 400px;
     main#main {
         padding:  {
@@ -11,10 +12,16 @@
         .login-register {
             width: $login-box-width;
             .card {
+                background-color: $light;
+                border: none;
+                box-shadow: none;
                 margin-bottom: 0;
                 padding: 30px 48px;
                 @media (max-width: $mobile) {
                     padding: 20px 20px !important;
+                }
+                .form-control {
+                    background-color: $light;
                 }
             }
             .input-group {
