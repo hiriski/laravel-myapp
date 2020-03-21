@@ -1,0 +1,23 @@
+input {
+	&.rux-input {
+		border: {
+			top: 0;
+			right: 0;
+			bottom: 1px solid #cacaca;
+			left: 0;
+		}
+		padding: {
+			left: 0;
+			right: 0;
+		}
+		border-radius: 0;
+		&:hover {
+			border-color: $gray;
+		}
+		&:focus {
+			box-shadow: none;
+			border-color: #5072ef;
+			@include box-shadow(0, 5px, 6px, -6px, $primary-color);
+		}
+	}
+}

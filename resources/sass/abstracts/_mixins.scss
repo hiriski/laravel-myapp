@@ -1,0 +1,29 @@
+
+/** Mixin to prefix a property
+  * @author Hugo Giraudel
+  * @param {String} $property - Property name
+  * @param {*} $value - Property value
+  * @param {List} $prefixes (()) - List of prefixes to print
+  */
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+
+/** Mixin box-shadow
+  * Sytnax : box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;
+  * @author Riski Web ID
+  * @param {*} $hOffset 	- Property horizontal offset
+  * @param {*} $vOffset 	- Property vertical offset
+  * @param {*} $blur 		- Property blur value
+  * @param {*} $color 		- Property color value
+  */
+@mixin box-shadow($hOffset, $vOffset, $blur, $spread, $color) {
+	box-shadow: $hOffset $vOffset $blur $spread $color;
+	-moz-box-shadow: $hOffset $vOffset $blur $spread $color;
+	-webkit-box-shadow: $hOffset $vOffset $blur $spread $color;
+}
