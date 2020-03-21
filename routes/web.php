@@ -13,7 +13,8 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'IndexController@index');
+Route::get('/welcome','WelcomeController@index')->name('welcome');
 Route::resource('/learn/lang/sentence', 'LearnLangSentenceController');
 Route::resource('/learn/lang/phrase', 'LearnLangPhraseController');
 Route::resource('/blog/category', 'PostCategoryController');

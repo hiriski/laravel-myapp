@@ -1,51 +1,43 @@
 @extends('layouts.auth')
+
 @section('content')
-{{ Form::open( array('url' => route('register'))) }}
-<h3 class="main-heading sm text-center">Register</h3>
+<form method="POST" action="{{ route('register') }}">
+@csrf
+    <h4 class="main-heading heading-sm mb-5 text-primary">@lang('auth.register')</h4>
+    <div class="form-group mb-4">
+        <input id="name" type="text" class="form-control rux-input @error('name') is-invalid @enderror" name="name" placeholder="@lang('auth.name')" value="{{ old('name') }}" autocomplete="name" autofocus>
+        @error('name')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
+    </div>
 
+    <div class="form-group mb-4">
+        <input id="email" type="email" class="form-control rux-input @error('email') is-invalid @enderror" name="email" placeholder="@lang('auth.email_address')" value="{{ old('email') }}" autocomplete="email" autofocus>
+        @error('email')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
+    </div>
 
-<div class="form-group">
-    <label for="name">{{ __('Name') }}</label>
-    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+    <div class="form-group mb-4">
+        <input id="password" type="password" class="form-control rux-input @error('password') is-invalid @enderror" name="password" placeholder="@lang('auth.password')" required autocomplete="new-password">
+        @error('password')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
+    </div>
 
-    @error('name')
-        <span class="invalid-feedback" role="alert">
-            <strong>{{ $message }}</strong>
-        </span>
-    @enderror
-</div>
+    <div class="form-group mb-4">
+        <input id="password-confirm" type="password" class="form-control rux-input" name="password_confirmation" placeholder="@lang('auth.confirm_password')" required autocomplete="new-password">
+    </div>
 
-<div class="form-group">
-    <label for="email">{{ __('E-Mail Address') }}</label>
-    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+    <div class="form-group">
+        <button type="submit" class="submit-btn btn btn-primary rux-btn">@lang('auth.register') <i class="material-icons">arrow_forward</i></button>
+    </div>
 
-    @error('email')
-        <span class="invalid-feedback" role="alert">
-            <strong>{{ $message }}</strong>
-        </span>
-    @enderror
-</div>
-
-<div class="form-group">
-    <label for="password">{{ __('Password') }}</label>
-    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-    @error('password')
-        <span class="invalid-feedback" role="alert">
-            <strong>{{ $message }}</strong>
-        </span>
-    @enderror
-</div>
-
-<div class="form-group">
-    <label for="password-confirm">{{ __('Confirm Password') }}</label>
-        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-</div>
-
-<div class="form-group">
-    <button type="submit" class="btn btn-block btn-primary">
-        {{ __('Register') }}
-    </button>
-</div>
-{{ Form::close() }}
+</form>
 @endsection

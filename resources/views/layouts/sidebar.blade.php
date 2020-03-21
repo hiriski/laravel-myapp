@@ -7,15 +7,19 @@
                     @guest
                         <img src="Nothing" alt="">
                     @else
-                        <img src="{{ url('') }}/{{ Auth::user()->profile->image_url }}"
-                                alt="{{ Auth::user()->profile->first_name }}"
+                        <img src="{{ url('') }}/{{ Auth::user()->image_md }}"
+                                alt="{{ Auth::user()->name }}"
                                 class="img-fluid rounded-circle">
                     @endguest                
                     </div>
                     <div class="profile-name">
                         <span>@greeting</span>
                         <h3>
-                            {{ Auth::user()->profile->first_name }}  {{ Auth::user()->profile->last_name }} 👋
+                            @if(!empty(Auth::user()->profile->first_name))
+                                {{ Auth::user()->profile->first_name }}  {{ Auth::user()->profile->last_name }} 👋
+                            @else
+                                {{ Auth::user()->name }}
+                            @endif
                         </h3>
                         <div class="logout-btn">
                             <a class="btn btn-sm btn-danger" href="{{ route('logout') }}"
