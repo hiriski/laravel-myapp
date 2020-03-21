@@ -112,7 +112,11 @@ h4,
 h5,
 h6 {
     &.main-heading {
-        font-size: 22px;
+        font-size: 28px;
+        font-weight: bold;
+        &.heading-sm {
+            font-size: 20px;
+        }
     }
 }
 .main-heading {
@@ -156,4 +160,10 @@ h6 {
             }
         }
     }
+}
+
+
+/** Re-declaration bootstrap text color */
+.text-primary {
+    color: $primary-color;
 }

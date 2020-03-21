@@ -2,7 +2,7 @@
 @section('content')
 <form method="POST" action="{{ route('login') }}">
 @csrf
-<h4 class="main-heading sm mb-5">Login</h4>
+<h4 class="main-heading heading-sm mb-4 text-primary">Login</h4>
 
 <div class="form-group mb-3">
     <input id="email" type="email" class="form-control rux-input @error('email') is-invalid @enderror" name="email" placeholder="@lang('auth.email_address')" value="{{ old('email') }}" autocomplete="email" autofocus>
