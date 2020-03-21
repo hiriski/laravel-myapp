@@ -1,5 +1,21 @@
 /** Entry file untuk semua file sass */
 
+/** Mixin to prefix a property
+  * @author Hugo Giraudel
+  * @param {String} $property - Property name
+  * @param {*} $value - Property value
+  * @param {List} $prefixes (()) - List of prefixes to print
+  */
+
+/** Mixin box-shadow
+  * Sytnax : box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;
+  * @author Riski Web ID
+  * @param {*} $hOffset 	- Property horizontal offset
+  * @param {*} $vOffset 	- Property vertical offset
+  * @param {*} $blur 		- Property blur value
+  * @param {*} $color 		- Property color value
+  */
+
 /* fallback */
 
 @font-face {
@@ -104,6 +120,67 @@ downloaded from : https://fontlibrary.org/en/font/hk-grotesk
   src: url(/fonts/hkgrotesk-bolditalic-webfont.woff2?4a88012ce91a8f1620c70b370523ca8d) format("woff2"), url(/fonts/hkgrotesk-bolditalic-webfont.woff?42203e2d27cd5d2b901a62bea1b5484b) format("woff");
   font-weight: 700;
   font-style: italic;
+}
+
+.btn.rux-btn {
+  transition: all 0.3s ease;
+  background-color: transparent;
+  font-weight: bold;
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+  /** reset */
+}
+
+.btn.rux-btn:focus {
+  box-shadow: none !important;
+}
+
+.btn.rux-btn:active {
+  background-color: transparent !important;
+  border: none !important;
+  color: #5072ef !important;
+}
+
+.btn.rux-btn.btn-primary {
+  color: #5072ef;
+}
+
+.btn.rux-btn .material-icons,
+.btn.rux-btn i {
+  transition: all 0.3s ease;
+  font-size: 20px;
+  vertical-align: text-bottom;
+}
+
+.btn.rux-btn:hover i {
+  padding-left: 0.5rem;
+}
+
+input.rux-input {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #cacaca;
+  border-left: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+}
+
+input.rux-input:hover {
+  border-color: #bdbdbd;
+}
+
+input.rux-input:focus {
+  box-shadow: none;
+  border-color: #5072ef;
+  box-shadow: 0 5px 6px -6px #5072ef;
+  -moz-box-shadow: 0 5px 6px -6px #5072ef;
+  -webkit-box-shadow: 0 5px 6px -6px #5072ef;
+}
+
+input.rux-input.is-invalid:focus {
+  box-shadow: none;
 }
 
 #sidebar {
@@ -247,6 +324,10 @@ downloaded from : https://fontlibrary.org/en/font/hk-grotesk
   height: 20px;
 }
 
+#auth {
+  background-color: #fbfbfb;
+}
+
 #auth main#main {
   padding-left: 0;
   display: flex;
@@ -259,6 +340,9 @@ downloaded from : https://fontlibrary.org/en/font/hk-grotesk
 }
 
 #auth main#main .login-register .card {
+  background-color: #fbfbfb;
+  border: none;
+  box-shadow: none;
   margin-bottom: 0;
   padding: 30px 48px;
 }
@@ -267,6 +351,10 @@ downloaded from : https://fontlibrary.org/en/font/hk-grotesk
   #auth main#main .login-register .card {
     padding: 20px 20px !important;
   }
+}
+
+#auth main#main .login-register .card .form-control {
+  background-color: #fbfbfb;
 }
 
 #auth main#main .login-register .input-group .input-group-append .input-group-text,
