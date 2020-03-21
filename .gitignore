@@ -15,5 +15,5 @@ yarn-error.log
 # Ruby Sass
 /resources/sass/.sass-cache
 
-# Asset compiled by laravel mix
-/public/app.js
+# Javascript compiled by laravel mix
+/public/js/app.js
