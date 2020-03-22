@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
+use Carbon\Carbon;
+
 class ProfilesTableSeeder extends Seeder {
 
     private $tableName = 'profiles';
@@ -18,8 +20,9 @@ class ProfilesTableSeeder extends Seeder {
                 'user_id'       => 1,
                 'first_name'    => 'Riski',
                 'last_name'     => 'Web ID',
-                'image_md'      => 'images/profiles/anh.png',
-                'image_sm'      => 'images/profiles/anh-sm.png',
+                'image_sm'      =>  Str::slug("Riski Web ID", "_") . '_' . Str::slug(Carbon::now(), '_') . '_' . 'sm.png',
+                'image_md'      =>  Str::slug("Riski Web ID", "_") . '_' . Str::slug(Carbon::now(), '_') . '_' . 'md.png',
+                'image'         =>  Str::slug("Riski Web ID", "_") . '_' . Str::slug(Carbon::now(), '_') .         '.png',
                 'language_id'   => 1,
                 'facebook_url'  => 'https://facebook.com/hi.riski',
                 'instagram_url' => 'https://www.instagram.com/riskiwebid/',
@@ -31,8 +34,9 @@ class ProfilesTableSeeder extends Seeder {
                 'user_id'       => 2,
                 'first_name'    => 'Em',
                 'last_name'     => 'Xinh Đẹp',
-                'image_md'      => 'images/profiles/em.jpg',
-                'image_sm'      => 'images/profiles/em-sm.jpg',
+                'image_sm'      =>  Str::slug("Em Xinh Đẹp", "_") . '_' . Str::slug(Carbon::now(), '_') . '_' . 'sm.jpg',
+                'image_md'      =>  Str::slug("Em Xinh Đẹp", "_") . '_' . Str::slug(Carbon::now(), '_') . '_' . 'md.jpg',
+                'image'         =>  Str::slug("Em Xinh Đẹp", "_") . '_' . Str::slug(Carbon::now(), '_') .         '.jpg',
                 'language_id'   => 3,
                 'facebook_url'  => 'https://facebook.com/profile.php?id=100005481379207',
                 'instagram_url' => 'https://www.instagram.com/',
@@ -44,8 +48,9 @@ class ProfilesTableSeeder extends Seeder {
                 'user_id'       => 3,
                 'first_name'    => 'User',
                 'last_name'     => '',
-                'image_md'      => 'images/profiles/user.png',
-                'image_sm'      => 'images/profiles/user-sm.png',
+                'image_sm'      =>  Str::slug("User", "_") . '_' . Str::slug(Carbon::now(), '_') . '_' . 'sm.png',
+                'image_md'      =>  Str::slug("User", "_") . '_' . Str::slug(Carbon::now(), '_') . '_' . 'md.png',
+                'image'         =>  Str::slug("User", "_") . '_' . Str::slug(Carbon::now(), '_') .         '.png',
                 'language_id'   => 2,
                 'facebook_url'  => 'https://web.facebook.com/',
                 'instagram_url' => 'https://www.instagram.com/',
