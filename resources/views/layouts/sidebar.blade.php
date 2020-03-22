@@ -7,7 +7,7 @@
                     @guest
                         <img src="Nothing" alt="">
                     @else
-                        <img src="{{ url('') }}/{{ Auth::user()->image_md }}"
+                        <img src="{{ getUserPic(Auth::user()->id, 'md') }}"
                                 alt="{{ Auth::user()->name }}"
                                 class="img-fluid rounded-circle">
                     @endguest                

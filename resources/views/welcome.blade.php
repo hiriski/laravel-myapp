@@ -14,7 +14,7 @@
                     @lang('app.welcome')
                     <div class="col-sm-8 col-md-5 mx-auto">
                         <div class="img">
-                            <img src="{{ url('') }}/{{ Auth::user()->image_md }}" alt="" class="img-fluid img-rounded">
+                            <img src="{{ getUserPic($user->id, 'sm') }}" alt="" class="img-fluid img-rounded">
                         </div>
                     </div>
                     <h2>@lang('app.hello') {{ Auth::user()->first_name }} 👋</h2>
