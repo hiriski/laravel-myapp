@@ -5,32 +5,43 @@
                 <div class="sidebar-header-inner">
                     <div class="profile-pic">
                     @guest
-                        <img src="Nothing" alt="">
+                        <div class="profile-name">
+                            <span>@greeting</span>
+                            <h3>
+                                Hello.
+                            </h3>
+                            <div class="logout-btn">
+                                <a class="btn btn-sm btn-primary" href="{{ route('login') }}">
+                                    @lang('Login') <i class="material-icons material-icon-sm">exit_to_app</i>
+                                </a>
+                            </div>
+                        </div>
                     @else
                         <img src="{{ getUserPic(Auth::user()->id, 'md') }}"
                                 alt="{{ Auth::user()->name }}"
                                 class="img-fluid rounded-circle">
-                    @endguest                
-                    </div>
-                    <div class="profile-name">
-                        <span>@greeting</span>
-                        <h3>
-                            @if(!empty(Auth::user()->profile->first_name))
-                                {{ Auth::user()->profile->first_name }}  {{ Auth::user()->profile->last_name }} 👋
-                            @else
-                                {{ Auth::user()->name }}
-                            @endif
-                        </h3>
-                        <div class="logout-btn">
-                            <a class="btn btn-sm btn-danger" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                @lang('Logout') <i class="material-icons material-icon-sm">exit_to_app</i>
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
+
+                        <div class="profile-name">
+                            <span>@greeting</span>
+                            <h3>
+                                @if(!empty(Auth::user()->profile->first_name))
+                                    {{ Auth::user()->profile->first_name }}  {{ Auth::user()->profile->last_name }} 👋
+                                @else
+                                    {{ Auth::user()->name }}
+                                @endif
+                            </h3>
+                            <div class="logout-btn">
+                                <a class="btn btn-sm btn-danger" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    @lang('Logout') <i class="material-icons material-icon-sm">exit_to_app</i>
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
                         </div>
+                    @endguest
                     </div>
                 </div>
             </div>
