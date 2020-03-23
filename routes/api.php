@@ -30,27 +30,21 @@ Route::name('api.')->group(function() {
 			Route::prefix('learn')->group(function() {
 				/** Route : learn/lang/  */
 				Route::prefix('lang')->group(function() {
+
 					/** Route : api/learn/lang/sentence */
-					Route::resource('/sentence', 'Api\Learn\Lang\SentenceController', array(
-						'except' => array('create', 'edit', 'show')
-					));
+					Route::apiResource('/sentence', 'Api\Learn\Lang\SentenceController');
+
 					/** Route : api/learn/lang/phrase */
-					Route::resource('/phrase', 'Api\Learn\Lang\PhraseController', array(
-						'except' => array('create', 'edit', 'show')
-					));
+					Route::apiResource('/phrase', 'Api\Learn\Lang\PhraseController');
 				});
 			});
 		});
 	});
 
 	/** Route : api/profile */
-	Route::resource('/profile', 'Api\ProfileController', array(
-		'except' => array('create', 'edit', 'show')
-	));
+	Route::apiResource('/user', 'Api\UserController');
 
-	/** Route : api/user */
-	Route::resource('/user', 'Api\UserController', array(
-		'except' => array('create', 'edit', 'show')
-	));
+	/** Route : api/profile */
+	Route::apiResource('/profile', 'Api\ProfileController');
 	
 });
