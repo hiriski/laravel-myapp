@@ -1,11 +1,11 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class PostCategory extends Model {
     public function posts() {
-        return $this->hasMany(Post::class);
+        return $this->hasMany(\App\Models\Post::class);
     }
 }

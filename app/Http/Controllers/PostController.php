@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 use Auth;
-use App\Post;
-use App\PostCategory;
+use App\Models\Post;
+use App\Models\PostCategory;
 
 class PostController extends Controller {
     public function __construct() {

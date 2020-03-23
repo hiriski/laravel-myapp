@@ -10,10 +10,8 @@ class Phrase extends Model {
 
     protected $guarded = ['id'];
 
-    /**
-     * Many to one to User
-     */
+    /** Many to one : Phrases to User */
     public function user() {
-    	return $this->belongsTo(\App\User::class, 'created_by');
+    	return $this->belongsTo(\App\Models\User::class, 'created_by');
     }
 }
