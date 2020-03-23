@@ -48,7 +48,7 @@
             <ul class="sidebar-menu">
                 <h6 class="sidebar-header">Learning</h6>
                 <li class="sidebar-menu-item">
-                    <a class="sidebar-menu-link" href="{{ route('phrase.index') }}">
+                    <a class="sidebar-menu-link" href="{{ route('api.learn.lang.phrase.index') }}">
                         <span class="sidebar-menu-icon">
                             <i class="material-icons">subject</i>
                         </span>
@@ -58,7 +58,7 @@
                     </a>
                 </li>
                 <li class="sidebar-menu-item">
-                    <a class="sidebar-menu-link" href="{{ route('sentence.index') }}">
+                    <a class="sidebar-menu-link" href="{{ route('api.learn.lang.sentence.index') }}">
                         <span class="sidebar-menu-icon">
                             <i class="material-icons">bookmarks</i>
                         </span>
