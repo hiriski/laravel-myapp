@@ -8,16 +8,20 @@ use App\Models\Learn\Lang\Phrase;
 use Illuminate\Support\Facades\Response;
 
 class PhraseController extends Controller {
+    
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $phrase = Phrase::with(['user' => function($query) {
-            $query->orderBy('name', 'DESC');
-        }])->get();
-        return Response::json(['data' => $phrase]);
+        $phrases  = Phrase::with(['user' => function($query) {
+            $query->with(['profile' => function($query) {
+                $query->get();
+            }])->get();
+        }])->paginate(12);
+
+        return Response::json($phrases);
     }
 
     /**
@@ -26,8 +30,7 @@ class PhraseController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         //
     }
 
@@ -37,8 +40,7 @@ class PhraseController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         //
     }
 
@@ -49,8 +51,7 @@ class PhraseController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         //
     }
 
@@ -60,8 +61,7 @@ class PhraseController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         //
     }
 }

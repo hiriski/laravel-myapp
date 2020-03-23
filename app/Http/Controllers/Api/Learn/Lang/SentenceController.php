@@ -8,16 +8,20 @@ use App\Models\Learn\Lang\Sentence;
 use Illuminate\Support\Facades\Response;
 
 class SentenceController extends Controller {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $sentences = Sentence::with(['user' => function($query) {
-            $query->orderBy('name', 'DESC');
-        }])->get();
-        return Response::json(['data' => $sentences]);
+        $sentences  = Sentence::with(['user' => function($query) {
+            $query->with(['profile' => function($query) {
+                $query->get();
+            }])->get();
+        }])->paginate(12);
+
+        return Response::json($sentences);
     }
 
     /**
