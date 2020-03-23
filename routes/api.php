@@ -24,7 +24,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::name('api.')->group(function() {
 	/** Name : api.learn. */
 	Route::name('learn.')->group(function() {
-		/** Name : api.learn.name. */
+		/** Name : api.learn.lang. */
 		Route::name('lang.')->group(function() {
 			/** Route : learn/  */
 			Route::prefix('learn')->group(function() {
