@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model\Learn\Lang;
+namespace App\Models\Learn\Lang;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;

@@ -1,23 +1,23 @@
 <?php
 
-namespace App\Http\Controllers\Api\Learn\Lang;
+namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Learn\Lang\Phrase;
 use Illuminate\Support\Facades\Response;
+use App\Models\User;
 
-class PhraseController extends Controller {
+class UserController extends Controller {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $phrase = Phrase::with(['user' => function($query) {
-            $query->orderBy('name', 'DESC');
+        $users = User::with(['profile' => function($query) {
+            $query->orderBy('id', 'ASC');
         }])->get();
-        return Response::json(['data' => $phrase]);
+        return Response::json(['users' => $users]);
     }
 
     /**
@@ -26,8 +26,7 @@ class PhraseController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         //
     }
 
@@ -37,8 +36,7 @@ class PhraseController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         //
     }
 
@@ -49,8 +47,7 @@ class PhraseController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         //
     }
 
@@ -60,8 +57,7 @@ class PhraseController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         //
     }
 }

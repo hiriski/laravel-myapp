@@ -47,5 +47,10 @@ Route::name('api.')->group(function() {
 	Route::resource('/profile', 'Api\ProfileController', array(
 		'except' => array('create', 'edit', 'show')
 	));
+
+	/** Route : api/user */
+	Route::resource('/user', 'Api\UserController', array(
+		'except' => array('create', 'edit', 'show')
+	));
 	
 });

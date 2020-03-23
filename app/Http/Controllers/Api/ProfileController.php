@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Http\Request;
-use App\Profile;
+use App\Models\Profile;
 
 class ProfileController extends Controller {
     /**
@@ -14,7 +14,9 @@ class ProfileController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $profiles = Profile::all();
+        $profiles = Profile::with(['user' => function($query) {
+            $query->orderBy('name', 'DESC');
+        }])->get();
         return Response::json(['data' => $profiles]);
     }
 

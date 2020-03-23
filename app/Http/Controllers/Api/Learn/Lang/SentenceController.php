@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api\Learn\Lang;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Model\Learn\Lang\Sentence;
+use App\Models\Learn\Lang\Sentence;
 use Illuminate\Support\Facades\Response;
 
 class SentenceController extends Controller {
