@@ -15,8 +15,18 @@ Auth::routes();
 
 Route::get('/', 'IndexController@index');
 Route::get('/welcome','WelcomeController@index')->name('welcome');
-Route::resource('/learn/lang/sentence', 'LearnLangSentenceController');
-Route::resource('/learn/lang/phrase', 'LearnLangPhraseController');
-Route::resource('/blog/category', 'PostCategoryController');
-Route::resource('/blog', 'PostController');
-Route::resource('/profile', 'ProfileController');
+
+/** Route : blog/ */
+Route::resource('/blog', 'PostController', array(
+	'only' => array('index', 'show')
+));
+
+/** Name : blog. */
+Route::name('blog.')->group(function() {
+	/** Route : blog/ */
+	Route::prefix('/blog')->group(function() {
+		Route::resource('/category', 'PostCategoryController', array(
+			'only' => array('index', 'show')
+		));
+	});
+});

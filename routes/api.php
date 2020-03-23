@@ -26,9 +26,9 @@ Route::name('api.')->group(function() {
 	Route::name('learn.')->group(function() {
 		/** Name : api.learn.lang. */
 		Route::name('lang.')->group(function() {
-			/** Route : learn/  */
+			/** Route : api/learn/  */
 			Route::prefix('learn')->group(function() {
-				/** Route : learn/lang/  */
+				/** Route : api/learn/lang/  */
 				Route::prefix('lang')->group(function() {
 
 					/** Route : api/learn/lang/sentence */
@@ -36,15 +36,21 @@ Route::name('api.')->group(function() {
 
 					/** Route : api/learn/lang/phrase */
 					Route::apiResource('/phrase', 'Api\Learn\Lang\PhraseController');
+
 				});
 			});
 		});
 	});
 
-	/** Route : api/profile */
+	/** Route : api/user */
 	Route::apiResource('/user', 'Api\UserController');
 
 	/** Route : api/profile */
 	Route::apiResource('/profile', 'Api\ProfileController');
+
+	/** Route : api/blog/ */
+	Route::resource('/blog', 'Api\BlogController', array(
+		'except' => array('index', 'show')
+	));
 	
 });
