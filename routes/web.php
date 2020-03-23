@@ -30,3 +30,38 @@ Route::name('blog.')->group(function() {
 		));
 	});
 });
+
+/** Route : blog/ */
+Route::prefix('/blog')->group(function() {
+	/** Name : blog. */
+	Route::name('blog.')->group(function() {
+		/** Route /blog/category */
+		Route::resource('/category', 'PostCategoryController', array(
+			'only' => array('index', 'show')
+		));
+	});
+});
+
+
+/** Name : learn. */
+Route::name('learn.')->group(function() {
+	/** Name : learn.lang */
+	Route::name('lang.')->group(function() {
+		/** Route : /learn */
+		Route::prefix('/learn')->group(function() {
+			/** Route : /learn/lang */
+			Route::prefix('/lang')->group(function() {
+
+				/** Route : /learn/lang/sentence */
+				Route::get('sentence', 'Learn\Lang\SentenceController@index')
+					->name('sentence');
+
+				/** Route : /learn/lang/phrase */
+				Route::get('phrase', 'Learn\Lang\PhraseController@index')
+					->name('phrase');
+
+			});
+		});
+	});
+});
+
