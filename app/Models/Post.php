@@ -21,4 +21,9 @@ class Post extends Model {
     public function likes() {
         return $this->morphMany(\App\Models\Like::class, 'likeable');
     }
+
+    /** Polymorhphic Many to Many Tags */
+    public function tags() {
+        return $this->morphToMany(\App\Models\Tag::class, 'tagable');
+    }
 }
