@@ -14,6 +14,12 @@ class Sentence extends Model {
 
     /** Many to one : Sentence to User */
     public function user() {
-    	return $this->belongsTo(\App\Models\User::class, 'created_by');
+        return $this->belongsTo(\App\Models\User::class, 'created_by');
     }
+
+    /** Polymorphic One To Many */
+    public function likes() {
+        return $this->morphMany(\App\Models\Like::class, 'likeable');
+    }
+
 }

@@ -16,4 +16,9 @@ class Post extends Model {
     public function category() {
         return $this->belongsTo(\App\Models\PostCategory::class);
     }
+
+    /** Polymorphic One To Many */
+    public function likes() {
+        return $this->morphMany(\App\Models\Like::class, 'likeable');
+    }
 }

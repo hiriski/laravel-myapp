@@ -12,6 +12,12 @@ class Phrase extends Model {
 
     /** Many to one : Phrases to User */
     public function user() {
-    	return $this->belongsTo(\App\Models\User::class, 'created_by');
+        return $this->belongsTo(\App\Models\User::class, 'created_by');
     }
+
+    /** Polymorphic One To Many */
+    public function likes() {
+        return $this->morphMany(\App\Models\Like::class, 'likeable');
+    }
+    
 }
