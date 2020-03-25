@@ -19,10 +19,8 @@ class DatabaseSeeder extends Seeder {
         /** sentence */
         $this->call(LearnLangSentenceLevelsTableSeeder::class);
         $this->call(LearnLangSentenceCategoriesTableSeeder::class);
-        $this->call(LearnLangSentenceTagsTableSeeder::class);
         $this->call(LearnLangSentencesTableSeeder::class);
-        $this->call(LearnLangSentenceLearnLangSentenceTagTableSeeder::class);
-
+        
         /** post */
         $this->call(PostCategoriesTableSeeder::class);
         
