@@ -48,7 +48,7 @@
             <ul class="sidebar-menu">
                 <h6 class="sidebar-header">Learning</h6>
                 <li class="sidebar-menu-item">
-                    <a class="sidebar-menu-link" href="{{ route('api.learn.lang.phrase.index') }}">
+                    <a class="sidebar-menu-link" href="{{ route('learn.lang.phrase') }}">
                         <span class="sidebar-menu-icon">
                             <i class="material-icons">subject</i>
                         </span>
@@ -58,7 +58,7 @@
                     </a>
                 </li>
                 <li class="sidebar-menu-item">
-                    <a class="sidebar-menu-link" href="{{ route('api.learn.lang.sentence.index') }}">
+                    <a class="sidebar-menu-link" href="{{ route('learn.lang.sentence') }}">
                         <span class="sidebar-menu-icon">
                             <i class="material-icons">input</i>
                         </span>
@@ -68,7 +68,7 @@
                     </a>
                 </li>
                 <li class="sidebar-menu-item">
-                    <a class="sidebar-menu-link active" href="{{ route('api.learn.lang.sentence.index') }}">
+                    <a class="sidebar-menu-link active" href="{{ route('learn.lang.sentence') }}">
                         <span class="sidebar-menu-icon">
                             <i class="material-icons">get_app</i>
                         </span>
@@ -78,7 +78,7 @@
                     </a>
                 </li>
                 <li class="sidebar-menu-item">
-                    <a class="sidebar-menu-link" href="{{ route('api.learn.lang.sentence.index') }}">
+                    <a class="sidebar-menu-link" href="{{ route('learn.lang.sentence') }}">
                         <span class="sidebar-menu-icon">
                             <i class="material-icons">favorite</i>
                         </span>
@@ -88,7 +88,7 @@
                     </a>
                 </li>
                 <li class="sidebar-menu-item">
-                    <a class="sidebar-menu-link" href="{{ route('api.learn.lang.sentence.index') }}">
+                    <a class="sidebar-menu-link" href="{{ route('learn.lang.sentence') }}">
                         <span class="sidebar-menu-icon">
                             <i class="material-icons">build</i>
                         </span>

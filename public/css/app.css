@@ -245,7 +245,7 @@ input.rux-input.is-invalid:focus {
 }
 
 #sidebar .sidebar-menu .sidebar-menu-item .sidebar-menu-link.active {
-  background-color: #edf4ff;
+  background-color: #f1f1f1;
   border-radius: 22px 0 0 22px;
 }
 
