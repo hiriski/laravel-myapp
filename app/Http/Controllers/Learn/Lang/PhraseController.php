@@ -8,6 +8,6 @@ use App\Models\Learn\Lang\Phrase;
 
 class PhraseController extends Controller {
 	public function index() {
-    	return view('learn.lang.phrase');
+		return view('learn.lang.phrase');
     }   
 }
