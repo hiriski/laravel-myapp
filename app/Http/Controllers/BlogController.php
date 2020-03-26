@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\PostCategory;
+use Illuminate\Support\Str;
 
-class PostCategoryController extends Controller {
+use Auth;
+use App\Models\Blog;
+use App\Models\BlogCategory;
+
+class BlogController extends Controller {
     public function __construct() {
-        return $this->middleware('auth')->only('create', 'update', 'detele');
+        return $this->middleware('auth')->only('create', 'update', 'delete');
     }
     /**
      * Display a listing of the resource.
@@ -15,8 +19,8 @@ class PostCategoryController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $categories = PostCategory::all();
-        return view('posts.categories.index', array('categories' => $categories));
+        $posts = Blog::with(['category'])->paginate(9);
+        return view('blog.index', array('posts' => $posts));
     }
 
     /**
@@ -25,7 +29,11 @@ class PostCategoryController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        //
+        $class = 'form-control';
+        $categories = BlogCategory::orderBy('name', 'ASC')->pluck('name', 'id');
+        return view('blog.create', compact(
+            'categories', 'class'
+        ));
     }
 
     /**
@@ -35,7 +43,16 @@ class PostCategoryController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        //
+        $slug = Str::slug($request->title);
+        
+        $data = $request->all();
+
+        $data['category_id'] = (int)$request->category_id;
+        $data['slug'] = $slug;
+        $data['user_id'] = Auth::user()->id;
+
+        Post::create($data);
+        return redirect()->route('blog.index')->with('success', 'Artikel berhasil di submit');
     }
 
     /**
@@ -44,8 +61,14 @@ class PostCategoryController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id) {
-        //
+    public function show($slug) {
+        $post = Blog::where('slug', $slug)->first();
+        if($post !== NULL) {
+            return view('blog.show', compact('post'));
+        }
+        else {
+            return '404';
+        }
     }
 
     /**

@@ -3,15 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+use App\Models\BlogCategory;
 
-use Auth;
-use App\Models\Post;
-use App\Models\PostCategory;
-
-class PostController extends Controller {
+class BlogCategoryController extends Controller {
     public function __construct() {
-        return $this->middleware('auth')->only('create', 'update', 'delete');
+        return $this->middleware('auth')->only('create', 'update', 'detele');
     }
     /**
      * Display a listing of the resource.
@@ -19,8 +15,8 @@ class PostController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $posts = Post::paginate(10);
-        return view('posts.index', array('posts' => $posts));
+        $categories = BlogCategory::all();
+        return view('blog.categories.index', array('categories' => $categories));
     }
 
     /**
@@ -29,11 +25,7 @@ class PostController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        $class = 'form-control';
-        $categories = PostCategory::orderBy('name', 'ASC')->pluck('name', 'id');
-        return view('posts.create', compact(
-            'categories', 'class'
-        ));
+        //
     }
 
     /**
@@ -43,16 +35,7 @@ class PostController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        $slug = Str::slug($request->title);
-        
-        $data = $request->all();
-
-        $data['category_id'] = (int)$request->category_id;
-        $data['slug'] = $slug;
-        $data['user_id'] = Auth::user()->id;
-
-        Post::create($data);
-        return redirect()->route('blog.index')->with('success', 'Artikel berhasil di submit');
+        //
     }
 
     /**

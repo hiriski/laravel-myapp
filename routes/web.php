@@ -21,22 +21,17 @@ Route::resource('/blog', 'PostController', array(
 	'only' => array('index', 'show')
 ));
 
-/** Name : blog. */
-Route::name('blog.')->group(function() {
-	/** Route : blog/ */
-	Route::prefix('/blog')->group(function() {
-		Route::resource('/category', 'PostCategoryController', array(
-			'only' => array('index', 'show')
-		));
-	});
-});
+/** /blog */
+Route::resource('/blog', 'BlogController', array(
+	'only' => array('index', 'show')
+));
 
 /** Route : blog/ */
 Route::prefix('/blog')->group(function() {
 	/** Name : blog. */
 	Route::name('blog.')->group(function() {
 		/** Route /blog/category */
-		Route::resource('/category', 'PostCategoryController', array(
+		Route::resource('/category', 'BlogCategoryController', array(
 			'only' => array('index', 'show')
 		));
 	});

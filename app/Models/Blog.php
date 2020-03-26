@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Blog extends Model {
-    public function categories() {
-        return $this->hasMany(\App\Models\BlogCategory::class);
+    use SoftDeletes;
+    
+    public function category() {
+        return $this->belongsTo(\App\Models\BlogCategory::class);
     }
 }
