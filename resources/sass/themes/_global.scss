@@ -1,3 +1,7 @@
+* {
+    outline: none !important;
+}
+
 body {
     background-color: $bg;
     font-family: 'HK Grotesk', Roboto, Ubuntu, Arial, sans-serif !important;
@@ -27,9 +31,11 @@ div[class^="col"] {
 
 main {
     &#main {
+        min-height: 100vh;
         padding: {
             left: $sidebar-width;
-            bottom : 100px; //space for select lang
+            top: 68px;
+            // bottom : 100px; //space for select lang
         }
         @media (max-width: $mobile) {
             padding-left: 0;

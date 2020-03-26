@@ -5,6 +5,7 @@
     background-color: $white;
     position: fixed;
     left: 0;
+    top: 0;
     width: $sidebar-width;
     min-height: 100vh;
     .sidebar-inner {
@@ -27,14 +28,24 @@
     }
     .sidebar-menu {
         padding: {
-            left: 1.35rem;
-            right: 1.35rem;
+            left: 30px;
+            right: 0;
             top: 2.5rem;
+            bottom: 0;
         }
         margin-bottom: 0;
         .sidebar-menu-item {
             list-style: none;
+            margin-bottom: .2rem;
             .sidebar-menu-link {
+                margin-left: 36px;
+                .sidebar-menu-icon {
+                    margin-left: -36px;
+                }
+                &.active {
+                    background-color: $primary-color-light;
+                    border-radius: 22px 0 0 22px;
+                }
                 padding: {
                     top: .5rem;
                     bottom: .5rem;
@@ -44,7 +55,7 @@
                 color: $primary-color;
                 .material-icons {
                     font-size: 20px;
-                    margin-right: .75rem;
+                    margin-right: 30px;
                 }
             }
         }

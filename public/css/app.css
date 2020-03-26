@@ -187,7 +187,8 @@ input.rux-input.is-invalid:focus {
   background-color: #fff;
   position: fixed;
   left: 0;
-  width: 290px;
+  top: 0;
+  width: 300px;
   min-height: 100vh;
 }
 
@@ -218,17 +219,20 @@ input.rux-input.is-invalid:focus {
 }
 
 #sidebar .sidebar-menu {
-  padding-left: 1.35rem;
-  padding-right: 1.35rem;
+  padding-left: 30px;
+  padding-right: 0;
   padding-top: 2.5rem;
+  padding-bottom: 0;
   margin-bottom: 0;
 }
 
 #sidebar .sidebar-menu .sidebar-menu-item {
   list-style: none;
+  margin-bottom: 0.2rem;
 }
 
 #sidebar .sidebar-menu .sidebar-menu-item .sidebar-menu-link {
+  margin-left: 36px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   display: block;
@@ -236,9 +240,18 @@ input.rux-input.is-invalid:focus {
   color: #5072ef;
 }
 
+#sidebar .sidebar-menu .sidebar-menu-item .sidebar-menu-link .sidebar-menu-icon {
+  margin-left: -36px;
+}
+
+#sidebar .sidebar-menu .sidebar-menu-item .sidebar-menu-link.active {
+  background-color: #edf4ff;
+  border-radius: 22px 0 0 22px;
+}
+
 #sidebar .sidebar-menu .sidebar-menu-item .sidebar-menu-link .material-icons {
   font-size: 20px;
-  margin-right: 0.75rem;
+  margin-right: 30px;
 }
 
 #lang {
@@ -366,6 +379,10 @@ input.rux-input.is-invalid:focus {
   border: 1px solid #c0d7ef;
 }
 
+* {
+  outline: none !important;
+}
+
 body {
   background-color: #f1f1f1;
   font-family: "HK Grotesk", Roboto, Ubuntu, Arial, sans-serif !important;
@@ -395,8 +412,9 @@ div[class^=col] {
 }
 
 main#main {
-  padding-left: 290px;
-  padding-bottom: 100px;
+  min-height: 100vh;
+  padding-left: 300px;
+  padding-top: 68px;
 }
 
 @media (max-width: 480px) {

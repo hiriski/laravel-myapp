@@ -8,7 +8,7 @@
                         <div class="profile-name">
                             <span>@greeting</span>
                             <h3>
-                                Hello.
+                                Guest
                             </h3>
                             <div class="logout-btn">
                                 <a class="btn btn-sm btn-primary" href="{{ route('login') }}">
@@ -60,10 +60,40 @@
                 <li class="sidebar-menu-item">
                     <a class="sidebar-menu-link" href="{{ route('api.learn.lang.sentence.index') }}">
                         <span class="sidebar-menu-icon">
-                            <i class="material-icons">bookmarks</i>
+                            <i class="material-icons">input</i>
                         </span>
                         <span class="sidebar-menu-text">
                             @lang('app.sentence')
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-link active" href="{{ route('api.learn.lang.sentence.index') }}">
+                        <span class="sidebar-menu-icon">
+                            <i class="material-icons">get_app</i>
+                        </span>
+                        <span class="sidebar-menu-text">
+                            @lang('app.sentence')
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-link" href="{{ route('api.learn.lang.sentence.index') }}">
+                        <span class="sidebar-menu-icon">
+                            <i class="material-icons">favorite</i>
+                        </span>
+                        <span class="sidebar-menu-text">
+                            Update Profile
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-link" href="{{ route('api.learn.lang.sentence.index') }}">
+                        <span class="sidebar-menu-icon">
+                            <i class="material-icons">build</i>
+                        </span>
+                        <span class="sidebar-menu-text">
+                            Setting
                         </span>
                     </a>
                 </li>
