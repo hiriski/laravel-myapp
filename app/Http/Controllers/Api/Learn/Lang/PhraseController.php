@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Api\Learn\Lang;
 
+/** phrase resource */
+use App\Http\Resources\Phrase as PhraseResource;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Learn\Lang\Phrase;
-use Illuminate\Support\Facades\Response;
 
 class PhraseController extends Controller {
     
@@ -15,13 +17,7 @@ class PhraseController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $phrases  = Phrase::with(['user' => function($query) {
-            $query->with(['profile' => function($query) {
-                $query->get();
-            }])->get();
-        }])->paginate(12);
-
-        return Response::json($phrases);
+        return PhraseResource::collection(Phrase::paginate(5));
     }
 
     /**
@@ -31,7 +27,8 @@ class PhraseController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        //
+        $create = Phrase::create($request->all());
+        return response()->json($create);
     }
 
     /**
@@ -52,7 +49,8 @@ class PhraseController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id) {
-        //
+        $edit = Phrase::find($id)->update($request->all());
+        return response()->json($edit);
     }
 
     /**
@@ -62,6 +60,7 @@ class PhraseController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function destroy($id) {
-        //
+        Phrase::where('id', $id)->delete();
+        return response()->json(['Phrase has been delete succesful']);
     }
 }

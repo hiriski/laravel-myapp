@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Api\Learn\Lang;
 
+/** Sentence Resource */
+use App\Http\Resources\Sentence as SentenceResource;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Learn\Lang\Sentence;
-use Illuminate\Support\Facades\Response;
 
 class SentenceController extends Controller {
 
@@ -15,13 +17,16 @@ class SentenceController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $sentences  = Sentence::with(['user' => function($query) {
-            $query->with(['profile' => function($query) {
-                $query->get();
-            }])->get();
-        }])->paginate(12);
+        // $sentences  = Sentence::with(['user' => function($query) {
+        //     $query->with(['profile' => function($query) {
+        //         $query->get();
+        //     }])->get();
+        // }])->paginate(10);
 
-        return Response::json($sentences);
+        // return response()->json([
+        //     'sentences'    => $sentences,
+        // ], 200);
+        return SentenceResource::collection(Sentence::paginate(1));
     }
 
     /**

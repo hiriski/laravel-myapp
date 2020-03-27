@@ -10,9 +10,14 @@ class Phrase extends Model {
 
     protected $guarded = ['id'];
 
-    /** Many to one : Phrases to User */
+    /** Many to one : Phrases to User (creatd_by) */
     public function user() {
         return $this->belongsTo(\App\Models\User::class, 'created_by');
+    }
+
+    /** Many to one : Phrases to User (updated_by) */
+    public function updator() {
+        return $this->belongsTo(\App\Models\User::class, 'updated_by');
     }
 
     /** Polymorphic One To Many */
