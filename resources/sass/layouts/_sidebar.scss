@@ -1,17 +1,29 @@
 #sidebar {
+
+    $sidebar-box-space : 20px;
+
     @media (max-width: $mobile) {
         display: none!important;
     }
-    background-color: $white;
     position: fixed;
     left: 0;
     top: 0;
     width: $sidebar-width;
     min-height: 100vh;
     .sidebar-inner {
-        padding-top: 54px;
+        box-sizing: border-box;
+        padding: $sidebar-box-space;
+    }
+    .sidebar-box {
+        height: calc(100vh - #{$sidebar-box-space * 2});
+        background-color: $white;
+        border-radius: 10px;
+        padding-bottom: 2rem;
     }
     .sidebar-header {
+        .sidebar-header-inner {
+            padding-top: 28px;
+        }
         .profile-pic {
             margin: auto;
             width: 100px;
