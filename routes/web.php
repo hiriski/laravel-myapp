@@ -16,6 +16,12 @@ Auth::routes();
 Route::get('/', 'IndexController@index');
 Route::get('/welcome','WelcomeController@index')->name('welcome');
 
+
+/** Admin */
+Route::prefix('/admin')->group(function() {
+	Route::get('/', 'AdminController@index')->name('admin.index');
+});
+
 /** Route : blog/ */
 Route::resource('/blog', 'PostController', array(
 	'only' => array('index', 'show')
