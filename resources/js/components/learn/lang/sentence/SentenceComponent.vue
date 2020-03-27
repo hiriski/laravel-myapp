@@ -1,29 +1,8 @@
 <template>
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div v-for="item in items" :key="item.id" 
+        <div v-for="post in posts" :key="post.id" 
             class="col-12 col-md-6 col-lg-4 mb-3">
-            <div class="card learn phrase">
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <div class="flag">
-                            <span class="en"></span>
-                        </div>
-                        <p class="item"></p>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="flag">
-                            <span class="vn"></span>
-                        </div>
-                        <p class="item"></p>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="flag">
-                            <span class="id"></span>
-                        </div>
-                        <p class="item"></p>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
@@ -33,27 +12,26 @@
 <script>
 export default {
 
-    data : function() {
+    data(){
         return {
-            items : []
+            posts: [],
         }
     },
 
-    methods: {
-        loadSentence: function() {
-            axios.get('/api/learn/lang/sentence')
-                .then((response)=> {
-                    this.items = response.data
-                })
-        },
+    mounted() {
+        this.loadData();
+    },
 
-        loadData: function() {
+    methods: {
+        loadData() {
             var _this = this;
-            axios.get('/api/learn/lang/sentence').then((response)=> {
-                console.log(response.data);
-                _this.items = response.data;
-                console.log(_this.items);
-            })
+            axios.get('/api/learn/lang/sentence').then(res => {
+                _this.posts = res.data;
+                console.log(res.data);
+                console.log(_this.posts);
+            }).catch((error) => {
+                console.log(error);
+            });
         },
 
         create: () => {
@@ -73,13 +51,5 @@ export default {
 
         }
     },
-
-    created() {
-        this.loadSentence();
-    },
-
-    mounted() {
-        console.log("Sentence component mounted");
-    }
 }
 </script>

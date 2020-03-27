@@ -60,3 +60,5 @@ Route::name('learn.')->group(function() {
 	});
 });
 
+Route::get('/mytask', 'TaskController@mytask')->name('mytask');
+Route::apiResource('/task', 'TaskController');
