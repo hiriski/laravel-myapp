@@ -34,9 +34,6 @@ class DatabaseSeeder extends Seeder {
         ]);
 
         /** Blog Faker */
-        Blog::unguard();
-        Blog::truncate();
         factory(Blog::class, 50)->create();
-        Blog::reguard();
     }
 }
