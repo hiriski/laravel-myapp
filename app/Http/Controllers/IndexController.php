@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\FeaturePost;
 
 class IndexController extends Controller {
 	
@@ -10,6 +11,7 @@ class IndexController extends Controller {
 	}
 
 	public function index() {
-		return view('index');
+		$feature_posts = FeaturePost::all();
+		return view('index', compact('feature_posts'));
 	}
 }

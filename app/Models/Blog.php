@@ -11,4 +11,9 @@ class Blog extends Model {
     public function category() {
         return $this->belongsTo(\App\Models\BlogCategory::class);
     }
+
+    /** One to One - Feature Post */
+    public function featured_post() {
+        return $this->hasOne(\App\Models\FeaturePost::class);
+    }
 }
