@@ -14,9 +14,9 @@ class WelcomeController extends Controller {
 	}
 
     public function index() {
-    	$user 	= Auth::user();
-        App::setLocale(getLangUserCode(Auth::user()->id));
-    	return view('welcome', compact('user'));
+		$user 	= Auth::user();
+		App::setLocale(getLangUserCode(Auth::user()->id));
+		return view('welcome', compact('user'));
     }
 
 }

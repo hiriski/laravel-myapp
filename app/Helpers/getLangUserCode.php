@@ -1,7 +1,6 @@
 <?php
 
-use App\User;
-use Illuminate\Support\Facades\DB;
+use App\Models\User;
 
 if (!function_exists('getLangUserCode')) {
 

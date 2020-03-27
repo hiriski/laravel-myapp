@@ -20,7 +20,6 @@ class CreateProfilesTable extends Migration {
             $table->string('image_md')->nullable();
             $table->string('image')->nullable();
             $table->string('background_image')->nullable();
-            $table->unsignedTinyInteger('language_id');
             $table->text('facebook_url')->nullable();
             $table->text('instagram_url')->nullable();
             $table->text('twitter_url')->nullable();
@@ -28,7 +27,8 @@ class CreateProfilesTable extends Migration {
             $table->text('github_url')->nullable();
             $table->text('codepen_url')->nullable();
             $table->text('whatsapp')->nullable();
-
+            
+            $table->unsignedTinyInteger('language_id');
             $table->timestamps();
 
             $table->foreign('user_id')

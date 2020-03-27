@@ -10,5 +10,9 @@ class Profile extends Model {
     public function user() {
         return $this->belongsTo(\App\Models\User::class);
     }
+
+    public function language() {
+        return $this->belongsTo(\App\Models\Language::class);
+    }
     
 }
