@@ -675,6 +675,68 @@ h6.main-heading.heading-sm {
 
 /** etc */
 
+/** Vue Transitions */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+@-webkit-keyframes bounce-in {
+  0% {
+    transition: scale(0);
+  }
+
+  25% {
+    transition: scale(0.8);
+  }
+
+  50% {
+    transition: scale(1.5);
+  }
+
+  100% {
+    transition: scale(1);
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    transition: scale(0);
+  }
+
+  25% {
+    transition: scale(0.8);
+  }
+
+  50% {
+    transition: scale(1.5);
+  }
+
+  100% {
+    transition: scale(1);
+  }
+}
+
+.bounce-enter-active {
+  -webkit-animation: bounce-in 0.3s;
+          animation: bounce-in 0.3s;
+}
+
+.bounce-leave-active {
+  animation: bounce-in 0.3 reverse;
+}
+
+.bounce-enter-to,
+.bounce-leave-to {
+  animation: bounce-in 0.3 reverse;
+}
+
 input::-webkit-input-placeholder {
   color: #bdbdbd;
 }

@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@tinymce/tinymce-vue": "^3.2.0",
         "laravel-vue-pagination": "^2.3.1",
         "sweetalert2": "^9.10.6",
         "tinymce": "^5.2.1"
