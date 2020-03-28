@@ -1,5 +1,14 @@
-input {
+input,
+textarea,
+select {
 	&.rux-input {
+		&::placeholder {
+			color: $gray;
+		}
+		&:disabled, &[read-only] {
+			background-color: transparent;
+			opacity: 0.75;
+		}
 		border: {
 			top: 0;
 			right: 0;
@@ -25,5 +34,11 @@ input {
 				box-shadow: none;
 			}
 		}
+	}
+}
+
+textarea {
+	&.rux-input {
+		height: 120px;
 	}
 }

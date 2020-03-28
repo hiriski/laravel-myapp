@@ -5,7 +5,8 @@
  */
 
 require('./bootstrap');
-
+// import Swall from 'sweetalert2';
+const Swall = require('sweetalert2');
 window.Vue = require('vue');
 
 /**

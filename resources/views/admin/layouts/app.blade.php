@@ -9,27 +9,17 @@
     
     <title>{{ config('app.name', 'Laravel') }}</title>
     
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- Admin Script -->
+    <script src="{{ asset('js/admin/app.js') }}" defer></script>
     
     <!-- Styles -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-    {{-- Libraries --}}
-    <script src="{{ asset('libs/tinymce/jquery.tinymce.min.js') }}"></script>
-    <script src="{{ asset('libs/tinymce/tinymce.min.js') }}"></script>
-    <script>
-    tinymce.init({
-        selector:'textarea',
-        plugins: 'table, media, image, fullscreen'
-    });
-    </script>
 </head>
-<body>
-    <div id="app">
-        @include('admin.layouts.sidebar')
+<body class="admin-area">
+    <div id="admin-area">
         <main id="main">
+        @include('admin.layouts.sidebar')
             @yield('content')
         </main> 
         {{-- @include('layouts.lang') --}}

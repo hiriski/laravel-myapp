@@ -42,15 +42,22 @@ Route::name('api.')->group(function() {
 		});
 	});
 
-	/** Route : api/user */
-	Route::apiResource('/user', 'Api\UserController');
+	/** Name : api.admin. */
+	Route::name('admin.')->group(function(){
+		/** /api/admin/ */
+		Route::prefix('/admin')->group(function(){
+			/** Route : api/user */
+			Route::apiResource('/user', 'Api\UserController');
+		
+			/** Route : api/profile */
+			Route::apiResource('/profile', 'Api\ProfileController');
+		
+			/** Route : api/blog/ */
+			Route::resource('/blog', 'Api\BlogController', array(
+				'except' => array('create', 'edit')
+			));
+		});
+	});
 
-	/** Route : api/profile */
-	Route::apiResource('/profile', 'Api\ProfileController');
-
-	/** Route : api/blog/ */
-	Route::resource('/blog', 'Api\BlogController', array(
-		'except' => array('index', 'show')
-	));
 	
 });

@@ -3,21 +3,24 @@
 <div class="container">
     <div class="row justify-content-center">
 
-        {{-- @if( count($errors) > 0)
+        @if( count($errors) > 0)
         <ul>
             @foreach($errors->all() as $err)
             <li class="alert alert-danger">{{ $err }}</li>
             @endforeach
         </ul>
-        @endif --}}
+        @endif
         
-        <div class="col-sm-12 col-md-10">
+        <div class="col-sm-12 col-md-11">
             <div class="card">
                 <div class="card-body block-padding-lg">
+                    <div class="card-title mb-5">
+                        <h3>Create new blog</h3>
+                    </div>
                     {{ Form::open(['url' => route('admin.blog.store')]) }}
                         <div class="form-group">
                             <label for="title">Title</label>
-                            <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" placeholder="Title" value="{{ old('title') }}" autofocus>
+                            <input id="title" type="text" class="form-control rux-input  @error('title') is-invalid @enderror" name="title" placeholder="Title" value="{{ old('title') }}" autofocus>
                             @error('title')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -26,7 +29,7 @@
                         </div>
                         <div class="form-group">
                             <label for="title">Slug</label>
-                            <input id="slug" type="text" class="form-control @error('slug') is-invalid @enderror" name="slug" placeholder="Slug" value="">
+                            <input id="slug" type="text" class="form-control rux-input @error('slug') is-invalid @enderror" name="slug" placeholder="Slug" value="{{ old('slug') }}">
                             @error('slug')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -34,9 +37,9 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="title">Categrory</label>
+                            <label for="category_id">Categrory</label>
                             {{ Form::select('category_id', $categories, 1, 
-                                array('class' =>'form-control', 'placeholder' => 'Select category', 'id' => 'category_id')) }}
+                                array('class' =>'form-control rux-input', 'placeholder' => 'Select category', 'id' => 'category_id')) }}
                             @error('category_id')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -45,7 +48,7 @@
                         </div>
                         <div class="form-group">
                             <label for="description">Description</label>
-                            {{ Form::textarea('description', null, array('class' =>'form-control' )) }}
+                            {{ Form::textarea('description', null, array('class' =>'form-control rux-input default' )) }}
                             @error('description')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -53,25 +56,27 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="keywords">Keyword</label>
-                            {{ Form::textarea('keywords', null, array('class' =>'form-control' )) }}
+                            <label for="keywords">Keywords</label>
+                            {{ Form::textarea('keywords', null, array('class' =>'form-control rux-input default' )) }}
                             @error('keyword')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                             @enderror
                         </div>
+
                         <div class="form-group">
-                            <label for="keywords">Content</label>
-                            <textarea name="content" id="blogContent" clsas="@error('content') is-invalid @enderror"></textarea>
+                            <label for="description">Content</label>
+                            {{ Form::textarea('content', null, array('class' =>'form-control' )) }}
                             @error('content')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                        <div class="form-group text-center">
-                            {{ Form::submit('Submit', array('class' => 'btn btn-primary' )) }}
+
+                        <div class="form-group mt-4">
+                            <button type="submit" class="submit-btn btn btn-lg btn-primary rux-btn">@lang('auth.submit') <i class="material-icons">arrow_forward</i></button>
                         </div>
                         
                     {{ Form::close() }}

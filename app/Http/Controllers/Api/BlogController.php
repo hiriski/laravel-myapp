@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Blog;
+
+use App\Http\Resources\Blog as BlogResource;
 
 class BlogController extends Controller {
     /**
@@ -12,7 +15,7 @@ class BlogController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        //
+        return BlogResource::collection(Blog::paginate(6));
     }
 
     /**

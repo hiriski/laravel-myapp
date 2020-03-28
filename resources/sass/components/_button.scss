@@ -33,5 +33,14 @@
 				padding-left: .5rem;
 			}
 		}
+
+		/** keep icon position on hover */
+		&.btn-keep {
+			&:hover {
+				i {
+					padding-left: 0;
+				}
+			}
+		}
 	}
 }

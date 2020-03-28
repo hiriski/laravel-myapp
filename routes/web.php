@@ -28,9 +28,9 @@ Route::name('admin.')->group(function() {
 			/** Name : blog. */
 			Route::name('blog.')->group(function() {
 				/** Route /blog/category */
-				Route::resource('/category', 'Admin\BlogCategoryController', array(
-					'except' => array('show')
-				));
+				// Route::resource('/category', 'Admin\BlogCategoryController', array(
+				// 	'except' => array('show')
+				// ));
 			});
 		});
 	

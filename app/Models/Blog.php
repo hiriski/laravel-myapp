@@ -22,4 +22,10 @@ class Blog extends Model {
     public function featured_post() {
         return $this->hasOne(\App\Models\FeaturePost::class);
     }
+
+    /** Many to One - User */
+    public function user() {
+        return $this->belongsTo(\App\Models\User::class);
+    }
+    
 }
