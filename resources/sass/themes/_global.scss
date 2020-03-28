@@ -16,12 +16,14 @@ body {
 }
 
 /* resize padding */
+.container,
 div[class^="col"] {
     padding: {
         left: 7px;
         right: 7px;
     }
 }
+
 .row {
     margin: {
         left: -7px;
@@ -43,11 +45,24 @@ main {
     }
 }
 
+/** Tiny MCE */
+.tox-tinymce,
+#tinymce {
+    font-family: 'HK Grotesk', Roboto, Ubuntu, Arial, sans-serif !important;
+}
+
 .card {
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
     -moz-box-shadow: 0 1px 1px rgba(0,0,0,.05);
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
     border: none !important;
+}
+
+.block-padding-lg {
+    padding: 40px 100px;
+}
+.block-padding-md {
+    padding: 30px 50px;
 }
 
 .list-group {

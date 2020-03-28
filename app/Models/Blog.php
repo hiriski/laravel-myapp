@@ -8,6 +8,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Blog extends Model {
     use SoftDeletes;
     
+    // protected $fillable = array(
+    //     'title', 'description', 'keywords', 'body', 'slug'
+    // );
+
+    protected $guarded = [];
+
     public function category() {
         return $this->belongsTo(\App\Models\BlogCategory::class);
     }

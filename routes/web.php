@@ -17,15 +17,29 @@ Route::get('/', 'IndexController@index');
 Route::get('/welcome','WelcomeController@index')->name('welcome');
 
 
-/** Admin */
-Route::prefix('/admin')->group(function() {
-	Route::get('/', 'AdminController@index')->name('admin.index');
+/** Admin Routes */
+Route::name('admin.')->group(function() {
+	/** admin/ */
+	Route::prefix('/admin')->group(function() {
+		Route::get('/', 'AdminController@index')->name('index');
+	
+		/** admin/blog/ */
+		Route::prefix('/blog')->group(function() {
+			/** Name : blog. */
+			Route::name('blog.')->group(function() {
+				/** Route /blog/category */
+				Route::resource('/category', 'Admin\BlogCategoryController', array(
+					'except' => array('show')
+				));
+			});
+		});
+	
+		/** /admin/blog */
+		Route::resource('/blog', 'Admin\BlogController', array(
+			'except' => array('show')
+		));
+	});
 });
-
-/** Route : blog/ */
-Route::resource('/blog', 'PostController', array(
-	'only' => array('index', 'show')
-));
 
 /** /blog */
 Route::resource('/blog', 'BlogController', array(
