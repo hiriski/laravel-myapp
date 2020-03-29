@@ -16,4 +16,6 @@ yarn-error.log
 /resources/sass/.sass-cache
 
 # Javascript compiled by laravel mix
-#/public/js/app.js
+/public/js/app.js
+/public/js/admin.js
+/public/js/app-vue.js

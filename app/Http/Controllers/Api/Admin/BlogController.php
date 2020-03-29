@@ -1,11 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+/** 
+ * Blog Controller for Api Admin
+ * */
+
+namespace App\Http\Controllers\Api\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Blog;
 
+use App\Models\Blog;
 use App\Http\Resources\Blog as BlogResource;
 
 class BlogController extends Controller {

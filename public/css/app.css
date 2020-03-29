@@ -252,6 +252,51 @@ textarea.rux-input {
   height: 120px;
 }
 
+.card {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border: none !important;
+}
+
+h2.card-title {
+  font-size: 1.5rem;
+}
+
+.card-footer {
+  background-color: #fff;
+}
+
+.blog-index .category {
+  top: 1rem;
+  left: 1rem;
+}
+
+.blog-index .edit {
+  top: 1rem;
+  right: 1rem;
+}
+
+.blog-index .post-title {
+  margin-bottom: 0.4rem;
+  height: 50px;
+  overflow: hidden;
+}
+
+.blog-index .post-title h2,
+.blog-index .post-title h2.card-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.blog-index .post-img {
+  height: 182px;
+  overflow: hidden;
+}
+
+.blog-index .post-summary {
+  height: 76px;
+  overflow: hidden;
+}
+
 #sidebar {
   position: fixed;
   left: 0;
@@ -340,14 +385,6 @@ textarea.rux-input {
 }
 
 /** Sidebar for admin area */
-
-.admin-area #sidebar .sidebar-box {
-  background-color: #f1f1f1;
-}
-
-.admin-area #sidebar .sidebar-menu .sidebar-menu-item .sidebar-menu-link.active {
-  background-color: #fff;
-}
 
 #lang {
   position: fixed;
@@ -484,10 +521,6 @@ body {
   font-weight: 500;
 }
 
-body.admin-area {
-  background-color: #fff;
-}
-
 .content {
   padding-top: 100px;
 }
@@ -528,11 +561,6 @@ main#main {
 .tox-tinymce,
 #tinymce {
   font-family: "HK Grotesk", Roboto, Ubuntu, Arial, sans-serif !important;
-}
-
-.card {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  border: none !important;
 }
 
 .block-padding-lg {
@@ -765,5 +793,9 @@ input::placeholder {
   border-color: #5072ef;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(73, 27, 255, 0.25);
+}
+
+#theme-dark p {
+  color: #f1f1f1;
 }
 

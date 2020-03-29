@@ -25,10 +25,9 @@ class BlogController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        // $posts = Blog::with(['category'])->paginate(12);
-        // return view('admin.blog.index', array('posts' => $posts));
-        
-        return view('admin.blog.index');
+        $pageTitle = 'Blog';
+        $posts = Blog::with(['category'])->paginate(12);
+        return view('admin.blog.index', compact('pageTitle', 'posts'));
     }
 
     /**

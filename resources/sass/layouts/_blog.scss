@@ -1,0 +1,28 @@
+
+.blog-index {
+    .category {
+        top: 1rem;
+        left: 1rem;
+    }
+    .edit {
+        top: 1rem;
+        right: 1rem;
+    }
+    .post-title {
+        margin-bottom: .4rem;
+        height: 50px;
+        overflow: hidden;
+        h2, h2.card-title {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+    .post-img {
+        height: 182px;
+        overflow: hidden;
+    }
+    .post-summary {
+        height: 76px;
+        overflow: hidden;
+    }
+}

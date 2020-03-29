@@ -9,8 +9,8 @@
     
     <title>{{ config('app.name', 'Laravel') }}</title>
     
-    <!-- Admin Script (for blade version) -->
-    <script src="{{ asset('js/admin.js') }}" defer></script>
+    <!-- Global script for vue version -->
+    <script src="{{ asset('js/app-vue.js') }}" defer></script>
     
     <!-- Styles -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
@@ -19,8 +19,9 @@
 <body class="admin-area">
     <div id="admin-area">
         <main id="main">
-            @include('admin.layouts.sidebar')
-            @include('partials/to-vue')
+            @include('admin.vue.layouts.sidebar')
+            @include('partials/vue-icon')
+            @include('partials/to-blade')
             @yield('content')
         </main> 
         {{-- @include('layouts.lang') --}}

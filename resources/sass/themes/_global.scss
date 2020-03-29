@@ -6,9 +6,9 @@ body {
     background-color: $bg;
     font-family: 'HK Grotesk', Roboto, Ubuntu, Arial, sans-serif !important;
     font-weight: 500;
-    &.admin-area {
-        background-color: $white;
-    }
+    // &.admin-area {
+    //     background-color: $white;
+    // }
 }
 
 .content {
@@ -52,13 +52,6 @@ main {
 .tox-tinymce,
 #tinymce {
     font-family: 'HK Grotesk', Roboto, Ubuntu, Arial, sans-serif !important;
-}
-
-.card {
-    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    -moz-box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    border: none !important;
 }
 
 .block-padding-lg {

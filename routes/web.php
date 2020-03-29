@@ -22,6 +22,9 @@ Route::name('admin.')->group(function() {
 	/** admin/ */
 	Route::prefix('/admin')->group(function() {
 		Route::get('/', 'AdminController@index')->name('index');
+
+		/** admin/vue (admin with vuejs) */
+		Route::get('/vue', 'Admin\VueAdminController@vue')->name("vue");
 	
 		/** admin/blog/ */
 		Route::prefix('/blog')->group(function() {
@@ -38,6 +41,9 @@ Route::name('admin.')->group(function() {
 		Route::resource('/blog', 'Admin\BlogController', array(
 			'except' => array('show')
 		));
+
+		/** /admin/blog (for vue js) */
+		Route::get('/blog/vue', 'Admin\VueBlogController@vue')->name("blog.vue");
 	});
 });
 

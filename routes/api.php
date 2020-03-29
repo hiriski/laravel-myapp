@@ -53,7 +53,7 @@ Route::name('api.')->group(function() {
 			Route::apiResource('/profile', 'Api\ProfileController');
 		
 			/** Route : api/blog/ */
-			Route::resource('/blog', 'Api\BlogController', array(
+			Route::resource('/blog', 'Api\Admin\BlogController', array(
 				'except' => array('create', 'edit')
 			));
 		});
