@@ -19,6 +19,21 @@
             <div class="card">
                 <div class="card-body block-padding-lg">
                     {{ Form::open(['url' => route('admin.blog.store'), 'files' => true]) }}
+
+
+
+                    <div class="alert alert-warning">Texting File Manager</div>
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                            <i class="fa fa-picture-o"></i> Choose
+                            </a>
+                        </span>
+                        <input id="thumbnail" class="form-control" type="text" name="filepath">
+                        </div>
+                    <img id="holder" style="margin-top:15px;max-height:100px;">
+
+
                         <div class="form-group">
                             <label for="title">Title</label>
                             <input id="title" type="text" class="form-control rux-input  @error('title') is-invalid @enderror" name="title" placeholder="Title" value="{{ old('title') }}" autofocus>
@@ -110,5 +125,8 @@
     }
 </script>
 @endpush
+<script>
+$('#lfm').filemanager('file');
+</script>
 
 @endsection
