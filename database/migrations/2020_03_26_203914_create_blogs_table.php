@@ -24,7 +24,7 @@ class CreateBlogsTable extends Migration {
             $table->string('image_sm')->nullable();
             $table->string('image_md')->nullable();
             $table->string('featured_image')->nullable();
-            $table->string('image')->nullable();
+            $table->string('image')->nullable()->comment('Original image');
 
             /** Foreign Key */
             $table->unsignedBigInteger('user_id');

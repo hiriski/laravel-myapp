@@ -34,6 +34,6 @@ class DatabaseSeeder extends Seeder {
         ]);
 
         /** Blog Faker */
-        factory(Blog::class, 50)->create();
+        factory(Blog::class, 20)->create();
     }
 }
