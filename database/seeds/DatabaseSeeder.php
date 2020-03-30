@@ -14,6 +14,9 @@ class DatabaseSeeder extends Seeder {
         /** Mass Assignment Calling Seeder */
         $this->call([
             LanguagesTableSeeder::class,
+            BlogStylesTableSeeder::class,
+            SettingsTableSeeder::class,
+            VisualSettingsTableSeeder::class,
             
             /** user and profile */
             UsersTableSeeder::class,

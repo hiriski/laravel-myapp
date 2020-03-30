@@ -6,7 +6,7 @@ use Carbon\Carbon;
 
 class UsersTableSeeder extends Seeder {
 
-    protected $tableName = 'users';
+    private $tableName = 'users';
 
     /**
      * Run the database seeds.
@@ -17,6 +17,7 @@ class UsersTableSeeder extends Seeder {
         DB::table($this->tableName)->delete();
         $users = array(
             array(
+                'id'            => 1,
                 'name'          => 'Riski',
                 'slug'          => Str::slug('Anh', ''),
                 'email'         => 'anh@riski.web.id',
@@ -24,6 +25,7 @@ class UsersTableSeeder extends Seeder {
                 'created_at'    => Carbon::now(),
             ),
             array(
+                'id'            => 2,
                 'name'          => 'Ngọc',
                 'slug'          => Str::slug('Em', ''),
                 'email'         => 'em@riski.web.id',
@@ -31,6 +33,7 @@ class UsersTableSeeder extends Seeder {
                 'created_at'    => Carbon::now(),
             ),
             array(
+                'id'            => 3,
                 'name'          => 'User',
                 'slug'          => Str::slug('User', ''),
                 'email'         => 'user@riski.web.id',

@@ -13,9 +13,9 @@ class LanguagesTableSeeder extends Seeder {
     public function run() {
         DB::table($this->tableName)->delete();
         $languages = array(
-        	array('code' => 'en', 'name' => 'English'),
-        	array('code' => 'id', 'name' => 'Bahasa Indonesia'),
-        	array('code' => 'vi', 'name' => 'Tiếng Việt')
+            array('id' => 1, 'code' => 'en', 'name' => 'English'),
+            array('id' => 2, 'code' => 'id', 'name' => 'Bahasa Indonesia'),
+            array('id' => 3, 'code' => 'vi', 'name' => 'Tiếng Việt')
         );
         DB::table($this->tableName)->insert($languages);
 	}
