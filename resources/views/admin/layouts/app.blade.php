@@ -9,12 +9,24 @@
     
     <title>{{ config('app.name', 'Laravel') }}</title>
     
+    <!-- JQuery -->
+    <script src="{{ asset('libs/jquery/jquery.min.js') }}"></script>
+    
+    <!-- buat siapa aja yang membutuhkan -->
+    @stack('swal')
+    @stack('swal-script')
+
+    <!-- Tinymce -->
+    <script src="{{ asset('libs/tinymce/tinymce.min.js') }}"></script>
+
     <!-- Admin Script (for blade version) -->
     <script src="{{ asset('js/admin.js') }}" defer></script>
     
     <!-- Styles -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
 </head>
 <body class="admin-area">
     <div id="admin-area">

@@ -1,46 +1,15 @@
 require('./bootstrap');
-// const Swal = require('sweetalert2');
-window.Swal = require('sweetalert2');
-
-// const btnForceChangeSlug = document.getElementById('btn-force-change-slug').addEventListener('click', forceChangeSlug);
-
-function forceChangeSlug(event) {
-    event.preventDefault();
-    let inputSlug = document.querySelector('input[name="slug"]');
-    inputSlug.removeAttribute('disabled');
-    console.log(inputSlug);
-    confirmEditSlug();
-}
-// if(btnForceChangeSlug) {
-//     console.log(btnForceChangeSlug);
-//     btnForceChangeSlug.addEventListener("click", function() {
-//         console.log("Called")
-//     });
-// }
-
-function confirmEditSlug() {
-    Swal.fire({
-        title: 'Are you sure ?',
-        text: 'Keep becareful oke :)',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonText: 'Yes sure!',
-    }).then((result) => {
-        if(result.value) {
-            Swal.fire(
-                'Oke',
-                'Now slug can edit',
-                'success'
-            );
-        }
-    });
-}
 
 
-function showSwall(title, description, type) {
-    Swal.fire({
-        title,
-        description,
-        type
-    });
-}
+/** initial tinymce */
+tinymce.init({
+    selector:'textarea:not(".default")',
+    plugins: ['paste', 'link', 'image', 'imagetools', 'preview', 'autoresize', 'code', 'wordcount', 'emoticons'],
+    tollbar: 'code',
+    autoresize_bottom_margin: 50,
+    // height: 620,
+    max_height: 1000, 
+});
+
+import './admin/blog';
+import './admin/actions';

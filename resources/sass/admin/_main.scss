@@ -1,0 +1,28 @@
+@import 'sidebar';
+@import 'blog';
+@import 'page-header';
+@import 'breadcrumb';
+
+body {
+    &.admin-area {
+        background-color: $white;
+    }
+}
+
+
+#admin-area {
+    #main {
+        @extend %transition-cubic-bezier;
+        padding-right: 20px;
+        &.full-width {
+            padding-left: 0;
+        }
+    }
+}
+
+
+/** Tiny MCE */
+.tox-tinymce,
+#tinymce {
+    font-family: 'HK Grotesk', Roboto, Ubuntu, Arial, sans-serif !important;
+}

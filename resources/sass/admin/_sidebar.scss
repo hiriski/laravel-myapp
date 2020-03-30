@@ -1,0 +1,31 @@
+/** Sidebar for admin area */
+.admin-area {
+    #sidebar {
+        @extend %transition-cubic-bezier;
+        .sidebar-label {
+            display: inline-block;
+            @extend %absolute;
+            @extend %top-left;
+            background-color: $primary-color;
+            color: $white;
+            border-bottom-right-radius: 10px;
+        }
+        .sidebar-box {
+            background-color: $bg;
+        }
+        .sidebar-menu {
+            .sidebar-menu-item {
+                .sidebar-menu-link {
+                    &.active {
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+
+        /** hideme */
+        &.hideme {
+            left: -$sidebar-width;
+        }
+    }
+}

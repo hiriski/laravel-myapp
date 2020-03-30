@@ -13,20 +13,22 @@ use App\Models\BlogCategory as Category;
 
 use App\Http\Requests\StoreBlog;
 
+/** Image */
+use Image;
+use File;
+
 class BlogController extends Controller {
 
     public function __construct() {
+        $this->destinationPath = public_path() . '/uploads/blog/';
+        $this->dimentions      = ['240', '360', '640', null];
+
         return $this->middleware('auth');
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index() {
         $pageTitle = 'Blog';
-        $posts = Blog::with(['category'])->paginate(12);
+        $posts = Blog::orderby('created_at', 'DESC')->with(['category'])->paginate(6);
         return view('admin.blog.index', compact('pageTitle', 'posts'));
     }
 
@@ -40,32 +42,64 @@ class BlogController extends Controller {
         return view('admin.blog.create', compact('categories'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(StoreBlog $request) {
         $validated  = $request->validated();
+
         $data = $request->all();
-        $data['slug']       = Str::slug($data['title'], '-');
         $data['user_id']    = getUserId();
+        $data['slug']       = Str::slug($request->slug);
+
+        /** get */
+        $title = $data['title'];
+
+        // Jika foldernya belum ada, maka buat folder tersebut
+        if (!File::isDirectory($this->destinationPath)) {
+            File::makeDirectory($this->destinationPath);
+        }
+
+        /** image */
+        if($file = $request->file('image')) {
+
+            /** give a file name for image */
+            $fileName          = Str::slug($title) . '_' . Str::random(5) . '.' . $file->getClientOriginalExtension();
+
+            /** looping dimention */
+            foreach($this->dimentions as $dimentions) {
+                /** membuat canvas image sebesar dimensi yang ada di dalam array */
+                $canvas = Image::canvas($row, $row);
+
+                /** resize image dan mempertahankan ratio */
+                $resizeImage = Image::make($file)->resize($row, $row, function($constraint){
+                    $constraint->aspectRatio();
+                });
+
+                /** Masukan image yang telah di resize ke dalam canvas */
+                $canvas->insert($resizeImage, 'center');
+
+                /** Simpan image */
+                // $canvas->save($this->destinationPath . '/' . $fileName);
+                $canvas->save($this->destinationPath . '/' . $row . '___' . $fileName);
+            }
+
+            /** Add to data */
+            $data['image'] = $fileName;
+
+            // $fileName          = Str::slug($title) . '_' . Str::random(5) . '.' . $image->getClientOriginalExtension();
+            // $image->move($destinationPath, $fileName);
+
+        }
 
         Blog::create($data);
         return redirect()->route('admin.blog.index')
             ->with([
+                'blog_create_success' => '',
                 'status'    => 'success',
                 'message'   => 'Post berhasil dibuat!' 
             ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id) {
         /** untuk form model */
         $blog       = Blog::where('id', $id)->first();
@@ -74,23 +108,11 @@ class BlogController extends Controller {
         return view('admin.blog.edit', compact('blog', 'categories'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id) {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id) {
         //
     }

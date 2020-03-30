@@ -1,22 +1,23 @@
 @extends('admin.layouts.app')
 @section('content')
-<div class="container">
+@include('admin.layouts.page-header.blog')
+
+@push('swal')
+<script src="{{ asset('libs/sweetalert2@9.js') }}"></script>
+@endpush
+
+<div class="container-fluid">
     <div class="row justify-content-center">
 
         @if( count($errors) > 0)
-        <ul>
-            @foreach($errors->all() as $err)
-            <li class="alert alert-danger">{{ $err }}</li>
-            @endforeach
-        </ul>
+        <script>
+        showSwal('Ada kesalahan!', 'Mohon diperiksa lagi ya', 'error');
+        </script>
         @endif
         
         <div class="col-sm-12 col-md-11">
             <div class="card">
                 <div class="card-body block-padding-lg">
-                    <div class="card-title mb-5">
-                        <h3>Edit blog</h3>
-                    </div>
                     {{ Form::model($blog, ['url' => route('admin.blog.store')]) }}
                         <div class="form-group">
                             <label for="title">Title</label>
@@ -29,14 +30,14 @@
                         </div>
                         <div class="form-group">
                             <label for="title">Slug</label>
-                            <div class="position-relative">
-                                <input id="slug" type="text" class="form-control rux-input @error('slug') is-invalid @enderror" name="slug" placeholder="Slug" value="{{ $blog->slug }}" disabled>
-                                <button onclick="forceChangeSlug(event)" id="btn-force-change-slug" class="btn-keep btn btn-sm btn-primary rux-btn"><i class="material-icons">edit</i> Force Change</button>
-                            </div>
+                            <input id="slug" type="text" class="form-control rux-input @error('slug') is-invalid @enderror" name="slug" placeholder="Slug" value="{{ $blog->slug }}">
                             @error('slug')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
+                            <script>
+                            showSwal('{{ $message }}', 'Kamu harus membuat slug yang unik', 'error');
+                            </script>
                             @enderror
                         </div>
                         <div class="form-group">
@@ -88,4 +89,17 @@
         </div>
     </div>
 </div>
+
+@push('swal-script')
+<script>
+    function showSwal(titleArg, textArg, iconArg = 'success') {
+        Swal.fire({
+            title: titleArg,
+            text: textArg,
+            icon: iconArg,
+        });
+    }
+</script>
+@endpush
+
 @endsection

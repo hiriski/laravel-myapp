@@ -1,0 +1,56 @@
+
+/** Dalam mode full-width geser tombol toggle sidebar */
+#main {
+    &.full-width {
+        #page-header {
+            padding-left: 72px; // jarak untuk tombol
+            #btnToggleSidebar {
+                left: 10px
+            }
+        }
+    }
+}
+
+#page-header {
+    position: relative;
+    $btn-toggle-size : 42px;
+
+    a.navbar-brand {
+        font-size: 24px;
+        margin-right: 2.25rem;
+        font-weight: bold;
+    }
+
+    li.nav-item {
+        &.active {
+            a {
+                color: #5072ef;
+                font-weight: bold;
+                position: relative;
+                padding-left: 28px;
+                &:before {
+                    position: absolute;
+                    content: "";
+                    background-color: #5072ef;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 10px;
+                    top: 13px;
+                    left: 12px;
+                }
+            }
+        }
+    }
+
+    #btnToggleSidebar {
+        position: absolute;
+        top: 10px;
+        left: -58px;
+        background-color: $primary-color;
+        color: $white;
+        border-radius: 50%;
+        height: $btn-toggle-size;
+        width: $btn-toggle-size;
+        padding: 0;
+    }
+}

@@ -6,9 +6,6 @@ body {
     background-color: $bg;
     font-family: 'HK Grotesk', Roboto, Ubuntu, Arial, sans-serif !important;
     font-weight: 500;
-    // &.admin-area {
-    //     background-color: $white;
-    // }
 }
 
 .content {
@@ -39,7 +36,7 @@ main {
         min-height: 100vh;
         padding: {
             left: $sidebar-width;
-            top: 68px;
+            top: 42px;
             // bottom : 100px; //space for select lang
         }
         @media (max-width: $mobile) {
@@ -48,11 +45,7 @@ main {
     }
 }
 
-/** Tiny MCE */
-.tox-tinymce,
-#tinymce {
-    font-family: 'HK Grotesk', Roboto, Ubuntu, Arial, sans-serif !important;
-}
+
 
 .block-padding-lg {
     padding: 40px 100px;

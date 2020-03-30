@@ -1,14 +1,17 @@
 @extends('admin.layouts.app')
 @section('content')
+@include('admin.layouts.page-header.blog')
+
+@push('swal')
+<script src="{{ asset('libs/sweetalert2@9.js') }}"></script>
+@endpush
 <div class="container-fluid">
 
-    <div class="row">
-        <div class="col-12">
-            <div class="pageTitle mb-4">
-                <h4>{{ $pageTitle }}</h4>
-            </div>
-        </div>
-    </div>
+    @if ($message = Session::has('blog_create_success'))
+    <script>
+        showSwal('Yey!', 'Blog berhasil dibuat');
+    </script>
+    @endif
 
     {{-- Blog Card --}}
     <div class="row">
@@ -21,9 +24,15 @@
                 <div class="edit position-absolute">
                     <a href="{{ route('admin.blog.edit', $item->id) }}" class="btn btn-sm btn-success"><i class="material-icons">edit</i> Edit</a>
                 </div>
+                @if(!empty($item->image))
+                <div class="post-img">
+                    <img src="{{ asset('uploads/blog/' . $item->image) }}" alt="Sample Image" class="card-img-top">
+                </div>
+                @else
                 <div class="post-img">
                     <img src="{{ asset('images/sm.jpg') }}" alt="Sample Image" class="card-img-top">
                 </div>
+                @endif
                 <div class="card-body">
 
                     <div class="post-title">
@@ -54,6 +63,18 @@
     </div>
 
 </div>
+
+@push('swal-script')
+<script>
+    function showSwal(titleArg, textArg, iconArg = 'success') {
+        Swal.fire({
+            title: titleArg,
+            text: textArg,
+            icon: iconArg,
+        });
+    }
+</script>
+@endpush
 
 @include('partials/to-vue')
 @endsection

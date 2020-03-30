@@ -1,3 +1,14 @@
+/** Animations */
+%transition {
+    @include transition();
+    // @include transition(all .2s ease);
+}
+
+%transition-cubic-bezier {
+    @include transition(all 0.5s cubic-bezier(0.25, 0.1, 0, 0.99));
+}
+
+
 %relative-hidden {
     overflow: hidden;
     position: relative;

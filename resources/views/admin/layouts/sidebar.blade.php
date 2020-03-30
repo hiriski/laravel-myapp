@@ -1,11 +1,12 @@
 <div id="sidebar" class="left">
     <div class="sidebar-inner">
         <div class="sidebar-box">
-            <div class="sidebar-label w-100 text-center">
+            <div class="sidebar-label text-center">
                 <h6 class="mb-0 p-2">Admin Area</h6>
             </div>
             <div class="sidebar_menu">
                 <div class="sidebar-header">
+
                     <div class="sidebar-header-inner">
                         <div class="profile-pic">
                         <img src="{{ getUserPic(Auth::user()->id, 'md') }}"

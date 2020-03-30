@@ -16,17 +16,24 @@
   * @param {*} $color 		- Property color value
   */
 
+/** Animations */
+
+#admin-area #main,
+.admin-area #sidebar {
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0, 0.99);
+}
+
 #sidebar .sidebar-box {
   overflow: hidden;
   position: relative;
 }
 
-#btn-force-change-slug,
-#sidebar .sidebar-box .sidebar-label {
+.admin-area #sidebar .sidebar-label,
+#btn-force-change-slug {
   position: absolute;
 }
 
-#sidebar .sidebar-box .sidebar-label {
+.admin-area #sidebar .sidebar-label {
   top: 0;
   left: 0;
 }
@@ -288,7 +295,7 @@ h2.card-title {
 }
 
 .blog-index .post-img {
-  height: 182px;
+  height: 164px;
   overflow: hidden;
 }
 
@@ -321,11 +328,6 @@ h2.card-title {
   background-color: #fff;
   border-radius: 10px;
   padding-bottom: 2rem;
-}
-
-#sidebar .sidebar-box .sidebar-label {
-  background-color: #5072ef;
-  color: #fff;
 }
 
 #sidebar .sidebar-header .sidebar-header-inner {
@@ -383,8 +385,6 @@ h2.card-title {
   font-size: 20px;
   margin-right: 30px;
 }
-
-/** Sidebar for admin area */
 
 #lang {
   position: fixed;
@@ -547,20 +547,13 @@ div[class^=col] {
 main#main {
   min-height: 100vh;
   padding-left: 330px;
-  padding-top: 68px;
+  padding-top: 42px;
 }
 
 @media (max-width: 480px) {
   main#main {
     padding-left: 0;
   }
-}
-
-/** Tiny MCE */
-
-.tox-tinymce,
-#tinymce {
-  font-family: "HK Grotesk", Roboto, Ubuntu, Arial, sans-serif !important;
 }
 
 .block-padding-lg {
@@ -797,5 +790,110 @@ input::placeholder {
 
 #theme-dark p {
   color: #f1f1f1;
+}
+
+/** admin */
+
+/** Sidebar for admin area */
+
+.admin-area #sidebar {
+  /** hideme */
+}
+
+.admin-area #sidebar .sidebar-label {
+  display: inline-block;
+  background-color: #5072ef;
+  color: #fff;
+  border-bottom-right-radius: 10px;
+}
+
+.admin-area #sidebar .sidebar-box {
+  background-color: #f1f1f1;
+}
+
+.admin-area #sidebar .sidebar-menu .sidebar-menu-item .sidebar-menu-link.active {
+  background-color: #fff;
+}
+
+.admin-area #sidebar.hideme {
+  left: -330px;
+}
+
+.card.blog-index {
+  border: 1px solid rgba(0, 0, 0, 0.125) !important;
+}
+
+/** Dalam mode full-width geser tombol toggle sidebar */
+
+#main.full-width #page-header {
+  padding-left: 72px;
+}
+
+#main.full-width #page-header #btnToggleSidebar {
+  left: 10px;
+}
+
+#page-header {
+  position: relative;
+}
+
+#page-header a.navbar-brand {
+  font-size: 24px;
+  margin-right: 2.25rem;
+  font-weight: bold;
+}
+
+#page-header li.nav-item.active a {
+  color: #5072ef;
+  font-weight: bold;
+  position: relative;
+  padding-left: 28px;
+}
+
+#page-header li.nav-item.active a:before {
+  position: absolute;
+  content: "";
+  background-color: #5072ef;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  top: 13px;
+  left: 12px;
+}
+
+#page-header #btnToggleSidebar {
+  position: absolute;
+  top: 10px;
+  left: -58px;
+  background-color: #5072ef;
+  color: #fff;
+  border-radius: 50%;
+  height: 42px;
+  width: 42px;
+  padding: 0;
+}
+
+.breadcrumb {
+  background-color: #fff;
+  padding: 0.3rem 0;
+}
+
+body.admin-area {
+  background-color: #fff;
+}
+
+#admin-area #main {
+  padding-right: 20px;
+}
+
+#admin-area #main.full-width {
+  padding-left: 0;
+}
+
+/** Tiny MCE */
+
+.tox-tinymce,
+#tinymce {
+  font-family: "HK Grotesk", Roboto, Ubuntu, Arial, sans-serif !important;
 }
 

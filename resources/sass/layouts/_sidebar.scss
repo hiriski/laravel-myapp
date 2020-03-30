@@ -15,12 +15,6 @@
         padding: $sidebar-box-space;
     }
     .sidebar-box {
-        .sidebar-label {
-            @extend %absolute;
-            @extend %top-left;
-            background-color: $primary-color;
-            color: $white;
-        }
         @extend %relative-hidden;
         height: calc(100vh - #{$sidebar-box-space * 2});
         background-color: $white;
@@ -80,23 +74,3 @@
         }
     }
 }
-
-
-
-/** Sidebar for admin area */
-// .admin-area {
-//     #sidebar {
-//         .sidebar-box {
-//             background-color: $bg;
-//         }
-//         .sidebar-menu {
-//             .sidebar-menu-item {
-//                 .sidebar-menu-link {
-//                     &.active {
-//                         background-color: $white;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }

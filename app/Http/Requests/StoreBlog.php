@@ -23,8 +23,9 @@ class StoreBlog extends FormRequest {
         return [
             'title'         => 'required|max:255',
             'category_id'   => 'required|integer',
-            'slug'          => 'required|string',
-            'content'       => 'required'
+            'slug'          => 'required|string|unique:blogs,slug',
+            'content'       => 'required',
+            'image'         => 'image|mimes:jpg,png,jpeg,gif|max:2048'
         ];
     }
 }
