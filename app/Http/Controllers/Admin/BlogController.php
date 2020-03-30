@@ -19,10 +19,7 @@ use File;
 
 class BlogController extends Controller {
 
-    public function __construct() {
-        $this->destinationPath = public_path() . '/uploads/blog/';
-        $this->dimentions      = ['240', '360', '640', null];
-
+    public function __construct() {    
         return $this->middleware('auth');
     }
 
@@ -50,47 +47,63 @@ class BlogController extends Controller {
         $data['user_id']    = getUserId();
         $data['slug']       = Str::slug($request->slug);
 
-        /** get */
-        $title = $data['title'];
+        /** get title */
+        $title = $request->title;
 
-        // Jika foldernya belum ada, maka buat folder tersebut
-        if (!File::isDirectory($this->destinationPath)) {
-            File::makeDirectory($this->destinationPath);
+        /** define destination path and dimentions for images */
+        $destinationPath  = public_path() . '/uploads/blog/';
+        $dimentions       = [
+            'image_xs'          => 82,
+            'image_sm'          => 240,
+            'image_md'          => 520,
+            'featured_image'    => 780,
+        ];
+
+        /** if directory doesn't exists, create directory  */
+        if (!File::isDirectory($destinationPath)) {
+            File::makeDirectory($destinationPath);
         }
+        
 
-        /** image */
+        /** if request has a file */
         if($file = $request->file('image')) {
 
             /** give a file name for image */
-            $fileName          = Str::slug($title) . '_' . Str::random(5) . '.' . $file->getClientOriginalExtension();
+            $fileName       = Str::slug($title) . '_' . Str::random(5);
 
-            /** looping dimention */
-            foreach($this->dimentions as $dimentions) {
-                /** membuat canvas image sebesar dimensi yang ada di dalam array */
-                $canvas = Image::canvas($row, $row);
+            /** get extension file. example : .jpg, .png  */
+            $fileExtension  = '.' . $file->getClientOriginalExtension();
 
-                /** resize image dan mempertahankan ratio */
-                $resizeImage = Image::make($file)->resize($row, $row, function($constraint){
+            /** loop dimentions */
+            foreach($dimentions as $row => $dimention) {
+
+                /** resize image by (width) and keep aspect ratio */
+                $img = Image::make($file);
+                $img->resize($dimention, null, function($constraint) {
                     $constraint->aspectRatio();
                 });
 
-                /** Masukan image yang telah di resize ke dalam canvas */
-                $canvas->insert($resizeImage, 'center');
+                /** Image. example hello_XHrSc_240.jpg, example hello_XHrSc_780.jpg  */
+                $imageFile = $fileName . '_' . $dimention . $fileExtension;
 
-                /** Simpan image */
-                // $canvas->save($this->destinationPath . '/' . $fileName);
-                $canvas->save($this->destinationPath . '/' . $row . '___' . $fileName);
+                /** Save image */
+                $img->save($destinationPath . '/' . $imageFile);
+
+                /** add to request with dimention */
+                $data[$row]  = $imageFile;
+
             }
 
-            /** Add to data */
-            $data['image'] = $fileName;
+            $originalImageSize = Image::make($file)->save($destinationPath . '/' . $fileName . $fileExtension);
 
-            // $fileName          = Str::slug($title) . '_' . Str::random(5) . '.' . $image->getClientOriginalExtension();
-            // $image->move($destinationPath, $fileName);
+            /** add to request original image size */
+            $data['image']      = $fileName . $fileExtension;
 
         }
 
+        /** insert to the database */
         Blog::create($data);
+
         return redirect()->route('admin.blog.index')
             ->with([
                 'blog_create_success' => '',
@@ -103,7 +116,6 @@ class BlogController extends Controller {
     public function edit($id) {
         /** untuk form model */
         $blog       = Blog::where('id', $id)->first();
-
         $categories = Category::orderBy('name', 'ASC')->pluck('name', 'id');
         return view('admin.blog.edit', compact('blog', 'categories'));
     }

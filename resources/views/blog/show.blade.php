@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <p>{{ $post->description }} </p>
                     <span class="badge badge-primary">{{ $post->category->name }}</span>
-                    <div>{{ $post->content }}</div>
+                    <div>{!! $post->content !!}</div>
                 </div>
                 <div class="card-footer">
                     <p>Created At  : {{ $post->created_at }}</p>

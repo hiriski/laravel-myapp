@@ -95,6 +95,7 @@
                         <div class="form-group">
                             <label for="title">Slug</label>
                             <input id="slug" type="text" class="form-control rux-input @error('slug') is-invalid @enderror" name="slug" placeholder="Slug" value="{{ old('slug') }}">
+                            <small class="slug-helper font-weight-bold text-success"></small>
                             @error('slug')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
