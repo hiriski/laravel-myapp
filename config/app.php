@@ -178,6 +178,9 @@ return [
         /* Debugbar */
         // Barryvdh\Debugbar\ServiceProvider::class,
 
+        /** Laravel File Manager */
+        UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
+
         /** Image Handling and Manipulation */
         Intervention\Image\ImageServiceProvider::class,
 
