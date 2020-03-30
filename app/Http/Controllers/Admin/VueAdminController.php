@@ -11,6 +11,6 @@ class VueAdminController extends Controller {
     }
     
     public function vue() {
-        return view('admin.vue.index');
+        return view('back-vue.admin.index');
     }
 }

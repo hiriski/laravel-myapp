@@ -19,8 +19,8 @@ class BlogController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $posts = Blog::with(['category'])->paginate(9);
-        return view('blog.index', array('posts' => $posts));
+        $posts = Blog::with(['category'])->paginate(6);
+        return view('front.blog.index', array('posts' => $posts));
     }
 
     /**
@@ -31,7 +31,7 @@ class BlogController extends Controller {
     public function create() {
         $class = 'form-control';
         $categories = BlogCategory::orderBy('name', 'ASC')->pluck('name', 'id');
-        return view('blog.create', compact(
+        return view('front.blog.create', compact(
             'categories', 'class'
         ));
     }
@@ -64,7 +64,7 @@ class BlogController extends Controller {
     public function show($slug) {
         $post = Blog::where('slug', $slug)->first();
         if($post !== NULL) {
-            return view('blog.show', compact('post'));
+            return view('front.blog.show', compact('post'));
         }
         else {
             return '404';

@@ -16,7 +16,7 @@ class BlogCategoryController extends Controller {
      */
     public function index() {
         $categories = BlogCategory::all();
-        return view('blog.categories.index', array('categories' => $categories));
+        return view('front.blog.categories.index', array('categories' => $categories));
     }
 
     /**

@@ -26,7 +26,7 @@ class BlogController extends Controller {
     public function index() {
         $pageTitle = 'Blog';
         $posts = Blog::orderby('created_at', 'DESC')->with(['category'])->paginate(6);
-        return view('admin.blog.index', compact('pageTitle', 'posts'));
+        return view('back.admin.blog.index', compact('pageTitle', 'posts'));
     }
 
     /**
@@ -36,7 +36,7 @@ class BlogController extends Controller {
      */
     public function create() {
         $categories = Category::orderBy('name', 'ASC')->pluck('name', 'id');
-        return view('admin.blog.create', compact('categories'));
+        return view('back.admin.blog.create', compact('categories'));
     }
 
 
@@ -104,7 +104,7 @@ class BlogController extends Controller {
         /** insert to the database */
         Blog::create($data);
 
-        return redirect()->route('admin.blog.index')
+        return redirect()->route('back.admin.blog.index')
             ->with([
                 'blog_create_success' => '',
                 'status'    => 'success',
@@ -117,7 +117,7 @@ class BlogController extends Controller {
         /** untuk form model */
         $blog       = Blog::where('id', $id)->first();
         $categories = Category::orderBy('name', 'ASC')->pluck('name', 'id');
-        return view('admin.blog.edit', compact('blog', 'categories'));
+        return view('back.admin.blog.edit', compact('blog', 'categories'));
     }
 
     public function update(Request $request, $id) {

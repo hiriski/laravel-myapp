@@ -12,6 +12,6 @@ class IndexController extends Controller {
 
 	public function index() {
 		$feature_posts = FeaturePost::all();
-		return view('index', compact('feature_posts'));
+		return view('front.index', compact('feature_posts'));
 	}
 }

@@ -12,8 +12,11 @@ const mix = require('laravel-mix');
  */
 
 
-/** Global css */
-mix.sass('resources/sass/app.scss', 'public/css');
+/** Back css */
+mix.sass('resources/sass/back/app.scss', 'public/css/back');
+
+/** Front css */
+mix.sass('resources/sass/front/app.scss', 'public/css');
 
 /** Front Js */
 mix.js('resources/js/app.js', 'public/js');

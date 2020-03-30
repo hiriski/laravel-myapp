@@ -11,7 +11,7 @@ class VueBlogController extends Controller {
     }
     
     public function vue() {
-        return view('admin.vue.blog.index');
+        return view('back-vue.admin.blog.index');
     }
 
 }

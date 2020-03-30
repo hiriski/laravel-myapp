@@ -109,10 +109,21 @@ console.log('App js for front');
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
+/***/ "./resources/sass/back/app.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/back/app.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/front/app.scss":
+/*!***************************************!*\
+  !*** ./resources/sass/front/app.scss ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -121,14 +132,15 @@ console.log('App js for front');
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!**************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/back/app.scss ./resources/sass/front/app.scss ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /opt/lampp/htdocs/myapp/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/myapp/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /opt/lampp/htdocs/myapp/resources/sass/back/app.scss */"./resources/sass/back/app.scss");
+module.exports = __webpack_require__(/*! /opt/lampp/htdocs/myapp/resources/sass/front/app.scss */"./resources/sass/front/app.scss");
 
 
 /***/ })

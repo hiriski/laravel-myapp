@@ -1,4 +1,4 @@
-@extends('layouts.auth')
+@extends('auth.layouts.app')
 
 @section('content')
 <form method="POST" action="{{ route('register') }}">
