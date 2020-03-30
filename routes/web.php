@@ -13,7 +13,7 @@
 
 Auth::routes();
 
-Route::get('/', 'IndexController@index');
+Route::get('/', 'IndexController@index')->name('index');
 Route::get('/welcome','WelcomeController@index')->name('welcome');
 
 
