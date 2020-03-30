@@ -823,6 +823,57 @@ input::placeholder {
   border: 1px solid rgba(0, 0, 0, 0.125) !important;
 }
 
+.form-image-upload input[type=file] {
+  display: none;
+}
+
+.form-image-upload label#dragImageHere {
+  border-radius: 0.5rem;
+  width: 100%;
+  min-height: 220px;
+  border: 2px solid #ececec;
+  flex-direction: column;
+}
+
+.form-image-upload label#dragImageHere:hover {
+  border: 2px solid #5072ef;
+}
+
+.form-image-upload .imageResult {
+  width: 500px;
+  height: auto;
+}
+
+.form-image-upload .imageResult img {
+  width: 100%;
+  margin-top: 24px;
+  height: auto;
+  border-radius: 0.3rem;
+}
+
+.form-image-upload .meta {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.form-image-upload .meta p {
+  margin-bottom: 0;
+}
+
+.form-image-upload .meta.show {
+  display: block !important;
+}
+
+.form-image-upload #start .text {
+  font-size: 22px;
+  color: #bebebe;
+}
+
+.form-image-upload #start i {
+  font-size: 68px;
+  color: #889cff;
+}
+
 /** Dalam mode full-width geser tombol toggle sidebar */
 
 #main.full-width #page-header {

@@ -3,3 +3,49 @@
         border: 1px solid rgba(0,0,0,.125) !important;
     }
 }
+
+.form-image-upload {
+    input[type=file] {
+        display: none;
+    }
+    label#dragImageHere {
+        border-radius: .5rem;
+        width: 100%;
+        min-height: 220px;
+        border: 2px solid #ececec;
+        flex-direction: column;
+        &:hover {
+            border: 2px solid $primary-color;
+        }
+    }
+    .imageResult {
+        width: 500px;
+        height: auto;
+        img {
+            width: 100%;
+            margin-top: 24px;
+            height: auto;
+            border-radius: .3rem;
+        }
+    }
+    .meta {
+        color: #777;
+        margin-bottom: 20px;
+        p {
+            margin-bottom: 0;
+        }
+        &.show {
+            display: block !important;
+        }
+    }
+    #start {
+        .text {
+            font-size: 22px;
+            color: #bebebe;
+        }
+        i {
+            font-size: 68px;
+            color: #889cff;
+        }
+    }
+}

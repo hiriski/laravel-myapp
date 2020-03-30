@@ -22,16 +22,16 @@
 
 
 
-                    <div class="alert alert-warning">Texting File Manager</div>
-                    <div class="input-group">
-                        <span class="input-group-btn">
-                            <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-                            <i class="fa fa-picture-o"></i> Choose
-                            </a>
-                        </span>
-                        <input id="thumbnail" class="form-control" type="text" name="filepath">
-                        </div>
-                    <img id="holder" style="margin-top:15px;max-height:100px;">
+                        {{-- <div class="alert alert-warning">Texting File Manager</div>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                                <i class="fa fa-picture-o"></i> Choose
+                                </a>
+                            </span>
+                            <input id="thumbnail" class="form-control" type="text" name="filepath">
+                            </div>
+                        <img id="holder" style="margin-top:15px;max-height:100px;"> --}}
 
 
                         <div class="form-group">
@@ -43,15 +43,55 @@
                             </span>
                             @enderror
                         </div>
-                        <div class="form-group">
-                            <label for="title">Image</label>
-                            {{ Form::file('image', ['id' => 'blogImage', 'accept' => 'image/*'])}}
+                        <div class="form-group form-image-upload">
+                            {{ Form::file('image', ['id' => 'blogImage', 'accept' => 'image/*', 'onchange' => 'readImage(this)'])}}
                             @error('image')
-                            <span class="invalid-feedback" role="alert">
+                            <span id="errorImageUpload" class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                             @enderror
+                            <label class="d-flex justify-content-center align-items-center" for="blogImage" id="dragImageHere">
+
+                                <div class="imageResult">
+                                    <img src="#" alt="preview" id="imagePreview" class="d-none">
+                                </div>
+
+                                <div class="meta w-100 text-center mt-3 d-none">
+                                    <p id="previewFileName"></p>
+                                    <p id="previewFileSize"></p>
+                                </div>
+
+                                <div id="start" class="text-center">
+                                    <i class="material-icons">cloud_upload</i>
+                                    <div class="text my-2">Select or Drag Image Here</div>
+                                    <span role="button" class="btn btn-primary btn-upload-image" id="uploadImageBtn">Choose Image</span>
+                                </div>
+                            </label>
                         </div>
+
+                        <script>
+                        function readImage(input) {
+                            var tagImg = document.getElementById('imagePreview')
+                            var tagFileName = document.getElementById('previewFileName');
+                            var tagFileSize = document.getElementById('previewFileSize');
+                            var tagStart = document.getElementById('start');
+                            var tagErr = document.getElementById('errorImageUpload');
+                            var tagClassMeta = document.querySelector('.form-image-upload label .meta');
+
+                            if (input.files && input.files[0]) {
+                                var reader = new FileReader();
+                                reader.onload = function (event) {
+                                    tagImg.setAttribute('src', event.target.result);
+                                    tagFileName.textContent = input.files[0].name;
+                                    tagFileSize.textContent = 'File size : ' + input.files[0].size;
+                                };
+                                reader.readAsDataURL(input.files[0]);
+                                tagImg.className = 'preview-active';
+                                tagStart.className = 'd-none';
+                                tagClassMeta.classList += ' show';
+                            }
+                        }
+                        </script>
                         <div class="form-group">
                             <label for="title">Slug</label>
                             <input id="slug" type="text" class="form-control rux-input @error('slug') is-invalid @enderror" name="slug" placeholder="Slug" value="{{ old('slug') }}">
