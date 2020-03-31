@@ -31,8 +31,13 @@ class CreateBlogsTable extends Migration {
             $table->unsignedInteger('category_id');
 
             /** options */
-            $table->boolean('status')->default(false);
-            $table->boolean('private')->default(false);
+            $table->unsignedTinyInteger('status_id');
+            $table->boolean('show_sidebar')->default(false);
+            $table->boolean('show_hit')->default(true);
+
+            /** etc */
+            $table->unsignedBigInteger('hit')->nullable();
+            $table->unsignedBigInteger('share_count')->nullable();
 
             $table->softDeletes();
             $table->timestamps();

@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder {
 
             /** Blog */
             BlogCategoriesTableSeeder::class,
+            BlogStatusTableSeeder::class,
 
         ]);
 
