@@ -1,3 +1,4 @@
+{{-- inactive when development ->>> @include('front.hi') --}}
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -6,11 +7,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Front</title>
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('fonts/hk-grotesk/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('fonts/material-icons/material-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
-<body>
-<div id="app">
-    @include('front.layouts.sidebar')
+<body data-theme="default">
+<div id="AnhOi">
+    @include('front.layouts.hero')
     <main id="main">
         @yield('content')
     </main> 

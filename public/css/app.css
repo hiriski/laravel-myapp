@@ -1,11 +1,4 @@
-/*
-|--------------------------------------------------------- 
-| Theme Name    : RiskiWebID
-| Author        : Riski
-| Author        : https://riski.web.id
-| Version       : 1.0
-|---------------------------------------------------------
-*/
+@charset "UTF-8";
 
 :root {
   --primary-color: #1f77ff;
@@ -15,131 +8,158 @@
   --primary-color-hover: #055de0;
 }
 
-#xc .pageTitle,
-._s_ ul span {
-  display: none;
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++|                                                                |++++++++
+++++++++|  Theme Name  : AnhOi                                           |++++++++
+++++++++|  Author      : Riski                                           |++++++++
+++++++++|  Author URI  : https://riski.web.id                            |++++++++
+++++++++|  Version     : 1.2                                             |++++++++
+++++++++|                                                                |++++++++
+++++++++|  Made with Sass & ❤ | Bandung/Hà Nội                           |++++++++
+++++++++|                                                                |++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++ Don't forget to close the comment tag 👉*/
+
+/** Mixin to prefix a property
+  * @author Hugo Giraudel
+  * @param {String} $property - Property name
+  * @param {*} $value - Property value
+  * @param {List} $prefixes (()) - List of prefixes to print
+  */
+
+/** Mixin box-shadow
+* Sytnax : box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;
+* @author Riski Web ID
+* @param {*} $hOffset 	- Property horizontal offset
+* @param {*} $vOffset 	- Property vertical offset
+* @param {*} $blur 		- Property blur value
+* @param {*} $color 		- Property color value
+*/
+
+#hero .me ._o p,
+#hero .me ._i h2 + span {
+  color: #707070;
 }
 
-#xc ._h_ {
-  display: inline-block;
-  width: 100%;
+#hero .me ._i h2 {
+  line-height: 1;
 }
 
-._s_ ul span {
-  position: relative;
-  padding-right: 34px;
-  margin-right: 8px;
+#hero .me .pic ._h {
+  overflow: hidden;
 }
 
-._s_ ul span:before {
-  top: 50%;
-  right: 0;
-  width: 26px;
-  height: 1px;
-  content: "";
-  background: #686868;
-  position: absolute;
-}
-
-._f label,
+main#main,
+#hero_nav ._ ._a ul li a i,
 #_x0 > div {
   position: absolute;
 }
 
+#hero > #xGyoHDpi,
+#hero {
+  position: fixed;
+}
+
+#hero,
 #_x0 > div {
   top: 0;
   left: 0;
 }
 
-#start.aboutMePage,
-._f {
+#hero_nav ._ ._a ul li a {
   position: relative;
 }
 
-.aboutPage #riski,
-._f label,
+#hero .me .pic ._h img,
+#hero_nav ._ ._a ul li a span {
+  transition: all 0.3s ease;
+}
+
 #_x0 {
   transition: all 0.3s ease;
 }
 
-.aboutPage #xleft > div {
-  transition: all 0.5s ease;
-}
-
-#pageNotFound,
-#SuccessMsg,
+#hero > #xGyoHDpi,
+#hero,
 #_x0 > div,
 #_x0 {
   height: 100vh;
   width: 100%;
 }
 
-.aboutPage header #right,
-._f input,
-._f textarea,
-#xc,
-.contactPage #xleft {
-  width: 100%;
+#hero ._z ._q {
+  height: 100%;
 }
 
-#pageNotFound,
-#SuccessMsg {
+#hero ._y,
+#hero_nav ._ {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  #hero ._y,
+  #hero_nav ._ {
+    width: 100% !important;
+  }
+}
+
+/** flex family */
+
+#hero .me .pic,
+#hero .me,
+#hero ._z ._q {
   display: flex;
   display: -webkit-flex;
+}
+
+#hero ._z ._q {
+  justify-content: center;
+}
+
+#hero .me .pic,
+#hero ._z ._q {
   align-items: center;
 }
 
-#xc {
-  display: flex;
-  display: -webkit-flex;
-  justify-content: center;
+#hero ._z ._q {
+  flex-direction: column;
 }
 
-#pageNotFound,
-#SuccessMsg {
-  justify-content: center;
+body {
+  background-color: #fbfbfb;
 }
 
-#RiskidotWebdotID.aboutPage {
-  background-color: #f5f8ff;
-}
-
-._f input,
-._f textarea {
-  box-shadow: 0 15px 32px rgba(0, 0, 0, 0.1);
-}
-
-._f input:focus,
-._f textarea:focus {
-  box-shadow: 0 10px 22px -7px rgba(0, 0, 0, 0.11);
-}
-
-._f input,
-._f textarea,
-.contactPage header ._k > * {
-  border-radius: 0.2rem;
-}
-
-.aboutPage #xleft.floating > div {
+#hero .me .pic ._h {
   border-radius: 50%;
 }
 
-#SuccessMsg ._ h3 span {
+ol,
+ul,
+#hero .me ._o p {
+  margin: 0;
+  padding: 0;
+}
+
+#hero_nav ._ ._a ul,
+#hero_social_links ._s ul {
+  list-style: none;
+}
+
+#hero_nav ._ ._a ul li,
+#hero_social_links ._s ul li a,
+#hero_social_links ._s ul li {
+  display: inline-block;
+}
+
+#hero_nav ._ ._a ul li a i {
   color: #1f77ff;
-}
-
-._s_ ul li a svg {
-  vertical-align: middle;
-}
-
-.aboutPage #f,
-.contactPage header ._k > *,
-#RiskidotWebdotID.contactPage #start {
-  background: #fff;
-}
-
-#SuccessMsg ._ {
-  text-align: center;
 }
 
 @-webkit-keyframes xRotate {
@@ -248,142 +268,89 @@
   }
 }
 
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* NORMALIZE */
 
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 
 html {
-  line-height: 1.15;
-  /* 1 */
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  /* 2 */
+  -webkit-tap-highlight-color: transparent;
 }
-
-/* Sections
-   ========================================================================== */
-
-/**
- * Remove the margin in all browsers.
- */
 
 body {
   margin: 0;
 }
 
-/**
- * Render the `main` element consistently in IE.
- */
-
-main {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
   display: block;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+a {
+  background: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
 
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-/* Grouping content
-   ========================================================================== */
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-
-hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+mark {
+  background: #ff0;
+  color: #000;
 }
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
-}
-
-/* Text-level semantics
-   ========================================================================== */
-
-/**
- * Remove the gray background on active links in IE 10.
- */
-
-a {
-  background-color: transparent;
-}
-
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-
-abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  /* 2 */
-}
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
-}
-
-/**
- * Add the correct font size in all browsers.
- */
 
 small {
   font-size: 80%;
 }
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
 
 sub,
 sup {
@@ -393,240 +360,143 @@ sup {
   vertical-align: baseline;
 }
 
-sub {
-  bottom: -0.25em;
-}
-
 sup {
   top: -0.5em;
 }
 
-/* Embedded content
-   ========================================================================== */
-
-/**
- * Remove the border on images inside links in IE 10.
- */
-
-img {
-  border-style: none;
+sub {
+  bottom: -0.25em;
 }
 
-/* Forms
-   ========================================================================== */
+img {
+  border: 0;
+}
 
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
 
 button,
 input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
+  color: inherit;
+  font: inherit;
   margin: 0;
-  /* 2 */
 }
 
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-
-button,
-input {
-  /* 1 */
+button {
   overflow: visible;
 }
 
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-
 button,
 select {
-  /* 1 */
   text-transform: none;
 }
 
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+html input[type=button],
+input[type=reset],
+input[type=submit] {
   -webkit-appearance: button;
+  cursor: pointer;
 }
 
-/**
- * Remove the inner border and padding in Firefox.
- */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
 
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
-  border-style: none;
+input::-moz-focus-inner {
+  border: 0;
   padding: 0;
 }
 
-/**
- * Restore the focus styles unset by the previous rule.
- */
-
-button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+input {
+  line-height: normal;
 }
 
-/**
- * Correct the padding in Firefox.
- */
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
 
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
 }
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
 
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
+  border: 0;
   padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
 }
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
-progress {
-  vertical-align: baseline;
-}
-
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
 
 textarea {
   overflow: auto;
 }
 
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
+optgroup {
+  font-weight: bold;
+}
 
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box;
-  /* 1 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
   padding: 0;
-  /* 2 */
 }
 
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-
-[type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
-[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-}
-
-/* Interactive
-   ========================================================================== */
-
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-
-details {
-  display: block;
-}
-
-/*
- * Add the correct display in all browsers.
- */
-
-summary {
-  display: list-item;
-}
-
-/* Misc
-   ========================================================================== */
-
-/**
- * Add the correct display in IE 10+.
- */
-
-template {
-  display: none;
-}
-
-/**
- * Add the correct display in IE 10.
- */
-
-[hidden] {
-  display: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
 }
 
 /* Input */
@@ -812,26 +682,57 @@ textarea::placeholder {
   animation: xRotate 1s cubic-bezier(0.3, 1.06, 0.71, 0.62) infinite 0.1s;
 }
 
-._s_ ul span {
-  font-size: 14px;
+#hero_social_links {
+  margin-top: 1.2rem;
 }
 
-._s_ ul li {
-  display: inline-block;
+#hero_social_links ._s ul li a {
+  margin-right: 0.5rem;
 }
 
-header ._s_ ul li a {
-  margin-right: 0;
-  margin-left: 1rem;
+#hero_social_links ._s ul li a svg {
+  width: 20px;
+  height: 20px;
 }
 
-._s_ ul li a {
-  margin-right: 1rem;
+#hero_nav {
+  order: -1;
+  margin-top: -212px;
+  margin-bottom: 150px;
 }
 
-._s_ ul li a svg {
-  height: 18px;
-  width: 18px;
+#hero_nav ._ ._a ul li a {
+  color: #444444;
+  text-decoration: none;
+  padding: 0.3rem 1rem;
+  margin-right: 10px;
+  /*
+  &:before {
+      @extend %top-left;
+      @extend %absolute;
+      content: "";
+      background-color: $primary-color;
+      height: 10px;
+      width: 10px;
+      border-radius: 10px;
+  }
+  */
+}
+
+#hero_nav ._ ._a ul li a:hover i {
+  visibility: visible;
+  left: 3px;
+}
+
+#hero_nav ._ ._a ul li a:hover span {
+  margin-left: 10px;
+}
+
+#hero_nav ._ ._a ul li a i {
+  font-size: 15px;
+  top: 6px;
+  left: 0px;
+  visibility: hidden;
 }
 
 .toastify {
@@ -909,337 +810,72 @@ header ._s_ ul li a {
   }
 }
 
-/* Contact page */
-
-#RiskidotWebdotID.contactPage #start {
-  float: right;
-  width: 60%;
-}
-
-#RiskidotWebdotID.contactPage #riski {
-  padding-top: 0;
-}
-
-#RiskidotWebdotID.contactPage #f {
-  background: none;
-}
-
-.contactPage[show-left=true] #left {
-  width: 40%;
-  left: 0;
-  background: rgba(0, 0, 0, 0.56);
-}
-
-.contactPage header {
-  width: 40%;
-}
-
-@media screen and (max-width: 768px) {
-  .contactPage header {
-    width: 100%;
-  }
-}
-
-.contactPage header ._k > * {
-  padding: 0.75rem;
-}
-
-.contactPage #xleft {
-  background-position: bottom left;
+#hero > #xGyoHDpi {
+  background-position: top left;
+  background-size: cover;
   z-index: -1;
 }
 
-.contactPage #left {
-  z-index: 1;
-  left: -100%;
+#hero ._z {
+  height: 100%;
 }
 
-.contactPage #left nav ul li a {
-  color: #fbfbfb;
+#hero .me .pic ._h {
+  width: 174px;
+  height: 174px;
 }
 
-.contactPage #left #about h4 {
-  color: #fbfbfb !important;
+#hero .me .pic ._h img {
+  width: 174px;
+  height: 174px;
+  transform: scale(1.1);
 }
 
-#xc ._h_ {
-  margin-bottom: 3rem;
+#hero .me .pic ._h img:hover {
+  transform: scale(1);
 }
 
-#xc ._f:last-child {
-  text-align: center;
+#hero .me ._r {
+  margin-left: 2rem;
+  padding-right: 182px;
 }
 
-#xc form {
-  margin: auto;
+#hero .me ._i h2 {
+  font-size: 28px;
+  margin-bottom: 0;
 }
 
-#xc .v {
-  padding-top: 4rem;
-  width: 420px;
+#hero .me ._o {
+  margin-top: 0.7rem;
 }
 
-#sayHello {
-  font-size: 2.35rem;
-  font-weight: 400;
-  line-height: 1.2;
-  max-height: 94px;
-  display: block;
-  overflow: hidden;
+* {
+  box-sizing: border-box;
+  outline: none;
 }
 
-@media screen and (max-width: 767px) {
-  #sayHello {
-    font-size: 2.2rem;
-  }
+body {
+  font-family: "HK Grotesk", Roboto, Ubuntu, sans-serif;
+  font-size: 16px;
+  color: #444444;
+  font-weight: 500;
+  line-height: 1.45;
 }
 
-#sayHello b {
-  color: #1f77ff;
-}
-
-.f h3 {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-@media screen and (max-width: 767px) {
-  .f h3 {
-    font-size: 1.25rem;
-  }
-}
-
-._f {
-  margin-bottom: 1.5rem;
-}
-
-._f input,
-._f textarea {
-  border: 2px solid #fff;
-}
-
-._f button i {
-  margin-left: 10px;
-}
-
-._f label {
-  left: 1rem;
-  top: 12px;
-  color: #a3a3a3;
-}
-
-._f label span {
-  margin-left: 0.3rem;
-}
-
-._f label i {
-  font-size: 20px;
-}
-
-._f[has-value=true] input,
-._f[has-value=true] textarea {
-  padding: 30px 15px 8px 15px;
-}
-
-._f[has-value=true] label {
-  font-size: 12px;
-  top: 6px;
-}
-
-._f[has-value=true] label i {
-  font-size: 17px;
-}
-
-._f[data-input-email=wrong] label {
-  color: red;
-}
-
-._f[data-input-email=wrong] input {
-  border-color: red !important;
-}
-
-._f textarea {
-  height: 175px;
-}
-
-#SuccessMsg ._ h3 {
-  font-size: 3.2rem;
-  font-weight: 400;
-  line-height: 1.25;
-}
-
-#SuccessMsg ._ h3 span {
-  font-weight: bold;
-}
-
-@media screen and (max-width: 767px) {
-  #SuccessMsg ._ h3 {
-    font-size: 2rem;
-  }
-}
-
-#SuccessMsg ._s_ {
-  margin-top: 3.5rem;
-  margin-bottom: 1.3rem;
-}
-
-#RiskidotWebdotID.aboutPage {
-  overflow: hidden;
-}
-
-#RiskidotWebdotID.aboutPage[show-left=true] #left {
-  left: 0 !important;
-}
-
-@media screen and (max-width: 767px) {
-  #RiskidotWebdotID.aboutPage[show-left=true] #left {
-    z-index: 3;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #RiskidotWebdotID.aboutPage[show-left=true] #riski {
-    margin-top: 100vh;
-    opacity: 0;
-  }
-}
-
-#RiskidotWebdotID.aboutPage .main-heading {
-  margin-bottom: 2rem;
-}
-
-.aboutPage header {
-  width: 40%;
-}
-
-.aboutPage header #logo {
-  width: 30px;
-}
-
-@media screen and (max-width: 767px) {
-  .aboutPage header {
-    width: 100%;
-  }
-}
-
-.aboutPage #xleft.aboutMePage {
-  overflow: hidden;
-}
-
-.aboutPage #xleft.floating > div {
-  left: calc(50% - 50px);
-}
-
-.aboutPage #xleft > div {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.aboutPage #xleft > div img {
-  height: 100vh;
-  width: auto;
-}
-
-.aboutPage #xleft > div.push {
-  margin-left: 10rem;
-}
-
-@media screen and (max-width: 767px) {
-  .aboutPage #xleft > div.push {
-    margin-left: 7.5rem;
-  }
-}
-
-.aboutPage #left {
-  left: -40% !important;
-  background: none;
-}
-
-@media screen and (max-width: 767px) {
-  .aboutPage #left {
-    width: -100%;
-  }
-}
-
-.aboutPage #left {
-  width: 40%;
-}
-
-#start.aboutMePage .aboutText {
-  margin-top: 2rem;
-}
-
-#xleft.aboutMePage {
-  width: 40%;
-}
-
-@media screen and (max-width: 768px) {
-  #xleft.aboutMePage {
-    width: 100%;
-  }
-}
-
-#xleft.aboutMePage .toggleMenu {
-  padding: 24px;
-}
-
-#start.aboutMePage {
-  width: 60%;
-  padding-top: 0;
-}
-
-#start.aboutMePage #riski {
+img {
   width: 100%;
-  background: #fff;
-  padding: 100px 135px;
-  min-height: 100vh;
+  height: auto;
 }
 
-@media screen and (max-width: 1000px) {
-  #start.aboutMePage #riski {
-    padding: 50px 80px;
-  }
+main#main {
+  top: 100vh;
 }
 
-@media screen and (max-width: 768px) {
-  #start.aboutMePage #riski {
-    padding: 1rem;
-  }
-}
-
-header.aboutMePage {
-  padding: 0 60px;
-}
-
-header.aboutMePage ._k {
-  width: 100%;
-  margin: auto;
-}
-
-#pageNotFound .svg {
-  display: inline;
-}
-
-#pageNotFound .svg svg {
-  height: 60px;
-  width: 60px;
+.material-icons {
   vertical-align: middle;
 }
 
-.upss {
-  text-align: center;
-  width: 500px;
-}
-
-.upss h1 {
-  font-size: 18px;
-  margin-bottom: 50px;
-}
-
-.upss span {
-  font-size: 72px;
-  margin-bottom: 12px;
-  font-weight: 300;
+[data-theme=dark] #AnhOi {
+  background-color: #222222;
 }
 
