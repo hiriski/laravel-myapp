@@ -184,6 +184,10 @@ return [
         /** Image Handling and Manipulation */
         Intervention\Image\ImageServiceProvider::class,
 
+
+        /** User Permission */
+        Spatie\Permission\PermissionServiceProvider::class,
+
     ],
 
     /*
