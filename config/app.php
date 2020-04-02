@@ -176,7 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         /* Debugbar */
-        // Barryvdh\Debugbar\ServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
         /** Laravel File Manager */
         UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
@@ -236,7 +236,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         /* Debugbar */
-        // 'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
         /** Image Handling and Manipulation */
         'Image' => Intervention\Image\Facades\Image::class,

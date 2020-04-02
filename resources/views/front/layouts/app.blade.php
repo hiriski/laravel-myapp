@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ asset('fonts/material-icons/material-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
-<body data-theme="default">
+<body data-theme="light">
 <div id="AnhOi">
     @include('front.layouts.hero')
     <main id="main">

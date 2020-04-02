@@ -7,7 +7,7 @@
                     <div class="me">
                         <div class="pic">
                             <div class="_h">
-                                <img src="{{ asset('images/me.png') }}" alt="Riski" class="_s">
+                                <img src="{{ asset('images/md.jpg') }}" alt="Riski" class="_s">
                             </div>
                         </div>
                         <div class="_r">
