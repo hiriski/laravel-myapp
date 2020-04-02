@@ -14,8 +14,14 @@ class Blog extends Model {
 
     protected $guarded = [];
 
+    /** Many to one blog category */
     public function category() {
         return $this->belongsTo(\App\Models\BlogCategory::class);
+    }
+
+    /** Many to one blog status */
+    public function status() {
+        return $this->belongsTo(\App\Models\BlogStatus::class);
     }
 
     /** One to One - Feature Post */

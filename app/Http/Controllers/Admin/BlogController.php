@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 use Auth;
 use App\Models\Blog;
 use App\Models\BlogCategory as Category;
+use App\Models\BlogStatus as Status;
 
 use App\Http\Requests\StoreBlog;
 
@@ -19,7 +20,17 @@ use File;
 
 class BlogController extends Controller {
 
-    public function __construct() {    
+    public function __construct() {
+
+        /** define destination path and dimentions for images upload */
+        $this->destinationPath  = public_path() . '/uploads/blog/';
+        $this->dimentions       = [
+            'image_xs'          => 82,
+            'image_sm'          => 240,
+            'image_md'          => 520,
+            'featured_image'    => 780,
+        ];
+
         return $this->middleware('auth');
     }
 
@@ -36,7 +47,8 @@ class BlogController extends Controller {
      */
     public function create() {
         $categories = Category::orderBy('name', 'ASC')->pluck('name', 'id');
-        return view('back.admin.blog.create', compact('categories'));
+        $status = Status::orderBy('name', 'ASC')->pluck('name', 'id');
+        return view('back.admin.blog.create', compact('categories', 'status'));
     }
 
 
@@ -47,21 +59,17 @@ class BlogController extends Controller {
         $data['user_id']    = getUserId();
         $data['slug']       = Str::slug($request->slug);
 
+        /** result checkbox dari blade ternyata hasilnya "On" jika ti check (dalam string) */
+        if(!empty($request->show_sidebar)) {
+            $data['show_sidebar'] = 1;
+        }
+
         /** get title */
         $title = $request->title;
 
-        /** define destination path and dimentions for images */
-        $destinationPath  = public_path() . '/uploads/blog/';
-        $dimentions       = [
-            'image_xs'          => 82,
-            'image_sm'          => 240,
-            'image_md'          => 520,
-            'featured_image'    => 780,
-        ];
-
         /** if directory doesn't exists, create directory  */
-        if (!File::isDirectory($destinationPath)) {
-            File::makeDirectory($destinationPath);
+        if (!File::isDirectory($this->$destinationPath)) {
+            File::makeDirectory($this->$destinationPath);
         }
         
 
@@ -75,7 +83,7 @@ class BlogController extends Controller {
             $fileExtension  = '.' . $file->getClientOriginalExtension();
 
             /** loop dimentions */
-            foreach($dimentions as $row => $dimention) {
+            foreach($this->$dimentions as $row => $dimention) {
 
                 /** resize image by (width) and keep aspect ratio */
                 $img = Image::make($file);
@@ -87,14 +95,14 @@ class BlogController extends Controller {
                 $imageFile = $fileName . '_' . $dimention . $fileExtension;
 
                 /** Save image */
-                $img->save($destinationPath . '/' . $imageFile);
+                $img->save($this->$destinationPath . '/' . $imageFile);
 
                 /** add to request with dimention */
                 $data[$row]  = $imageFile;
 
             }
 
-            $originalImageSize = Image::make($file)->save($destinationPath . '/' . $fileName . $fileExtension);
+            $originalImageSize = Image::make($file)->save($this->$destinationPath . '/' . $fileName . $fileExtension);
 
             /** add to request original image size */
             $data['image']      = $fileName . $fileExtension;
@@ -104,7 +112,7 @@ class BlogController extends Controller {
         /** insert to the database */
         Blog::create($data);
 
-        return redirect()->route('back.admin.blog.index')
+        return redirect()->route('admin.blog.index')
             ->with([
                 'blog_create_success' => '',
                 'status'    => 'success',
@@ -116,12 +124,61 @@ class BlogController extends Controller {
     public function edit($id) {
         /** untuk form model */
         $blog       = Blog::where('id', $id)->first();
+        $status = Status::orderBy('name', 'ASC')->pluck('name', 'id');
         $categories = Category::orderBy('name', 'ASC')->pluck('name', 'id');
-        return view('back.admin.blog.edit', compact('blog', 'categories'));
+        return view('back.admin.blog.edit', compact('blog', 'categories', 'status'));
     }
 
     public function update(Request $request, $id) {
-        //
+        // $validated  = $request->validated();
+        $blog = Blog::find($id)->first();
+        $data = $request->all();
+
+
+        /** if request has a file */
+        if($file = $request->file('image')) {
+
+            /** give a file name for image */
+            $fileName       = Str::slug($title) . '_' . Str::random(5);
+
+            /** get extension file. example : .jpg, .png  */
+            $fileExtension  = '.' . $file->getClientOriginalExtension();
+
+            /** loop dimentions */
+            foreach($this->$dimentions as $row => $dimention) {
+
+                /** resize image by (width) and keep aspect ratio */
+                $img = Image::make($file);
+                $img->resize($dimention, null, function($constraint) {
+                    $constraint->aspectRatio();
+                });
+
+                /** Image. example hello_XHrSc_240.jpg, example hello_XHrSc_780.jpg  */
+                $imageFile = $fileName . '_' . $dimention . $fileExtension;
+
+                /** Save image */
+                $img->save($this->$destinationPath . '/' . $imageFile);
+
+                /** add to request with dimention */
+                $data[$row]  = $imageFile;
+
+            }
+
+            $originalImageSize = Image::make($file)->save($this->$destinationPath . '/' . $fileName . $fileExtension);
+
+            /** add to request original image size */
+            $data['image']      = $fileName . $fileExtension;
+
+        }
+
+        $blog->update($data);
+
+        return redirect()->route('admin.blog.index')
+            ->with([
+                'blog_update_success' => '',
+                'status'    => 'success',
+                'message'   => 'Posr berhasil diupdate!' 
+            ]);
     }
 
 

@@ -116,6 +116,32 @@
                             @enderror
                         </div>
                         <div class="form-group">
+                            {{ Form::select('status_id', $status, 1, ['class' => 'form-control rux-input', 'id' => 'status_id']) }}
+                            @error('status_id')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" name="show_sidebar" id="show_sidebar"
+                                    class="custom-control-input"
+                                    {{ old('show_sidebar') ? 'checked' : '' }} >
+                                <label class="custom-control-label" for="show_sidebar">Show Sidebar ?</label>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <div id="result_show_sidebar">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label for="description">Description</label>
                             {{ Form::textarea('description', null, array('class' =>'form-control rux-input default' )) }}
                             @error('description')

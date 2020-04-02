@@ -9,7 +9,13 @@
 
     @if ($message = Session::has('blog_create_success'))
     <script>
-        showSwal('Yey!', 'Blog berhasil dibuat');
+        showSwal('Yey!', 'Blog berhasil dibuat!');
+    </script>
+    @endif
+
+    @if ($message = Session::has('blog_update_success'))
+    <script>
+        showSwal('Yey!', 'Blog berhasil diupdate!');
     </script>
     @endif
 

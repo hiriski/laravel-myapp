@@ -18,7 +18,8 @@
         <div class="col-sm-12 col-md-11">
             <div class="card">
                 <div class="card-body block-padding-lg">
-                    {{ Form::model($blog, ['url' => route('admin.blog.store')]) }}
+                    {{ Form::model($blog, ['url' => route('admin.blog.update', $blog->id)]) }}
+                        @method('PUT')
                         <div class="form-group">
                             <label for="title">Title</label>
                             <input id="title" type="text" class="form-control rux-input  @error('title') is-invalid @enderror" name="title" placeholder="Title" value="{{ $blog->title }}" autofocus>
@@ -28,6 +29,57 @@
                             </span>
                             @enderror
                         </div>
+
+                        <div class="form-group form-image-upload">
+                            {{ Form::file('image', ['id' => 'blogImage', 'accept' => 'image/*', 'onchange' => 'readImage(this)'])}}
+                            @error('image')
+                            <span id="errorImageUpload" class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                            <label class="d-flex justify-content-center align-items-center" for="blogImage" id="dragImageHere">
+
+                                <div class="imageResult">
+                                    <img src="#" alt="preview" id="imagePreview" class="d-none">
+                                </div>
+
+                                <div class="meta w-100 text-center mt-3 d-none">
+                                    <p id="previewFileName"></p>
+                                    <p id="previewFileSize"></p>
+                                </div>
+
+                                <div id="start" class="text-center">
+                                    <i class="material-icons">cloud_upload</i>
+                                    <div class="text my-2">Select or Drag Image Here</div>
+                                    <span role="button" class="btn btn-primary btn-upload-image" id="uploadImageBtn">Choose Image</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <script>
+                        function readImage(input) {
+                            var tagImg = document.getElementById('imagePreview')
+                            var tagFileName = document.getElementById('previewFileName');
+                            var tagFileSize = document.getElementById('previewFileSize');
+                            var tagStart = document.getElementById('start');
+                            var tagErr = document.getElementById('errorImageUpload');
+                            var tagClassMeta = document.querySelector('.form-image-upload label .meta');
+
+                            if (input.files && input.files[0]) {
+                                var reader = new FileReader();
+                                reader.onload = function (event) {
+                                    tagImg.setAttribute('src', event.target.result);
+                                    tagFileName.textContent = input.files[0].name;
+                                    tagFileSize.textContent = 'File size : ' + input.files[0].size;
+                                };
+                                reader.readAsDataURL(input.files[0]);
+                                tagImg.className = 'preview-active';
+                                tagStart.className = 'd-none';
+                                tagClassMeta.classList += ' show';
+                            }
+                        }
+                        </script>
+
                         <div class="form-group">
                             <label for="title">Slug</label>
                             <input id="slug" type="text" class="form-control rux-input @error('slug') is-invalid @enderror" name="slug" placeholder="Slug" value="{{ $blog->slug }}">
@@ -50,6 +102,32 @@
                             </span>
                             @enderror
                         </div>
+                        <div class="form-group">
+                            {{ Form::select('status_id', $status, 1, ['class' => 'form-control rux-input', 'id' => 'status_id']) }}
+                            @error('status_id')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" name="show_sidebar" id="show_sidebar"
+                                    class="custom-control-input"
+                                    {{ old('show_sidebar') ? 'checked' : '' }} >
+                                <label class="custom-control-label" for="show_sidebar">Show Sidebar ?</label>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <div id="result_show_sidebar">
+
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <label for="description">Description</label>
                             {{ Form::textarea('description', null, array('class' =>'form-control rux-input default' )) }}
