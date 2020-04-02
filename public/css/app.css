@@ -3,7 +3,7 @@
 :root {
   --primary-color: #1f77ff;
   --secondary-color: #ff0b39;
-  --primary-color-light: #eff0ff;
+  --primary-color-light: #dddfff;
   --primary-color-dark: #131133;
   --primary-color-hover: #055de0;
 }
@@ -42,13 +42,16 @@
 * @param {*} $color 		- Property color value
 */
 
+[data-blog=single] ._io_ ._m_ > ._ad_ > ._a > ._d,
 #BlogIndex > .__q__ > ._cn_ .__quote__ > blockquote,
 #hero .me ._o p,
 #hero .me ._i h2 + span,
+#_bt_ ul li a,
 #Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child + *:not(div) {
   color: #707070;
 }
 
+[data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
 #hero .me ._i h2,
 #BlogIndex > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
 #Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child + *:not(div) {
@@ -85,6 +88,7 @@ main#main,
   left: 0;
 }
 
+[data-page=single-blog] main#main,
 #BlogIndex .__i__ ._img_,
 #Ftr_P .__i__ ._img_,
 main#main .Anh,
@@ -95,6 +99,7 @@ main#main .Anh,
 }
 
 #BlogIndex .__i__ .c_ > ._xo,
+#BlogIndex .__i__ .c_,
 #hero .me .pic ._h img,
 #hero_nav ._ ._a ul li a span {
   transition: all 0.3s ease;
@@ -137,8 +142,23 @@ main#main .Anh > .__o__ > .__,
   }
 }
 
+[data-blog=single] ._io_ ._ps_ {
+  width: 720px;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  [data-blog=single] ._io_ ._ps_ {
+    width: 100% !important;
+  }
+}
+
 /** flex family */
 
+[data-blog=single] ._io_ ._m_ > .__c,
+[data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
+[data-blog=single] ._io_ ._m_ > ._ad_,
+[data-blog=single] ._io_ ._m_,
 #BlogIndex .__i__ .c_ ._m_ .__c,
 #BlogIndex .__i__ .c_ ._m_,
 #BlogIndex > .__q__ > ._cn_ .__quote__,
@@ -154,6 +174,8 @@ main#main .Anh > .__o__,
   display: -webkit-flex;
 }
 
+[data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
+[data-blog=single] ._io_ ._m_,
 #BlogIndex > .__q__ > ._cn_ .__quote__,
 #hero ._z ._q,
 #__pg__ > .__ .pagination,
@@ -161,11 +183,13 @@ main#main .Anh > .__o__,
   justify-content: center;
 }
 
+[data-blog=single] ._io_ ._m_ > .__c,
 #hero .me .pic,
 #hero ._z ._q {
   align-items: center;
 }
 
+[data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
 #hero ._z ._q {
   flex-direction: column;
 }
@@ -188,11 +212,17 @@ main#main .Anh > .__o__,
   -webkit-box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
 }
 
-#BlogIndex .__i__ .c_ > ._xo,
-#BlogIndex .__i__ ._img_ {
+#_bt_ ul li a {
   border-radius: 0.2rem;
 }
 
+[data-blog=single] ._io_ ._xo > .__ img,
+#BlogIndex .__i__ .c_ > ._xo,
+#BlogIndex .__i__ ._img_ {
+  border-radius: 0.4rem;
+}
+
+[data-blog=single] ._io_ ._m_ > ._ad_ img,
 #hero .me .pic ._h {
   border-radius: 50%;
 }
@@ -218,12 +248,20 @@ ul,
   display: block;
 }
 
+#_bt_ ul li,
 #hero_nav ._ ._a ul li,
 #hero_social_links ._s ul li a,
 #hero_social_links ._s ul li {
   display: inline-block;
 }
 
+#BlogIndex .__i__ .c_ ._m_ .d_,
+#BlogIndex .__i__ .c_ > ._xo ._t_ + .__ {
+  color: #686868;
+}
+
+[data-blog=single] ._io_ ._m_ > .__c,
+[data-blog=single] ._io_ ._t > *,
 #BlogIndex .__i__ .c_ ._m_ .__c,
 #BlogIndex .__i__ .c_ > ._xo ._t_ a {
   color: #444444;
@@ -236,6 +274,11 @@ ul,
   color: #1f77ff;
 }
 
+.material-icons,
+[data-blog=single] ._io_ ._m_ > .__c ._ic svg {
+  vertical-align: middle;
+}
+
 [data-theme=light] {
   background: #f7f7f7;
 }
@@ -245,8 +288,33 @@ main#main .Anh {
   background: #fff;
 }
 
+#_bt_ ul li a {
+  background: #dddfff;
+}
+
+#_bt_ ul li a {
+  font-family: "HK Grotesk", Roboto, Ubuntu, sans-serif;
+}
+
+[data-blog=single] ._io_ ._ps_ ul,
+[data-blog=single] ._io_ ._ps_ ol,
+._ps_ h1,
+._ps_ h2,
+._ps_ h3,
+._ps_ h4,
+._ps_ h5,
+._ps_ h6,
+._ps_ p {
+  font-family: "Lora", serif;
+}
+
+[data-blog=single] ._io_ ._t,
 #BlogIndex > .__q__ > ._cn_ .__quote__ > blockquote {
   text-align: center;
+}
+
+[data-blog=single] ._io_ ._m_ > ._ad_ > ._a > *:first-child {
+  font-weight: 700;
 }
 
 /** Global Main Heading with icon beside */
@@ -634,13 +702,60 @@ p {
   margin-top: 0;
 }
 
+/** post content single */
+
+._ps_ h1,
+._ps_ h2,
+._ps_ h3,
+._ps_ h4,
+._ps_ h5,
+._ps_ h6,
+._ps_ p {
+  font-weight: normal;
+}
+
+._ps_ h1,
+._ps_ h2,
+._ps_ h3,
+._ps_ h4,
+._ps_ h5,
+._ps_ h6 {
+  margin-top: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+._ps_ h2 {
+  font-size: 40px;
+}
+
+._ps_ h3 {
+  font-size: 36px;
+}
+
+._ps_ h4 {
+  font-size: 30px;
+}
+
+._ps_ h5 {
+  font-size: 27px;
+}
+
+._ps_ h6 {
+  font-size: 23px;
+}
+
+._ps_ p {
+  font-size: 18px;
+  line-height: 1.65;
+}
+
 /* Input */
 
 input,
 textarea {
   padding: 14px 15px;
   outline: none;
-  border-radius: 0.2rem;
+  border-radius: 0.4rem;
 }
 
 input.with-box-shadow,
@@ -940,6 +1055,17 @@ textarea::placeholder {
 
 /** Blog pager */
 
+#_bt_ ul {
+  padding-left: 0;
+}
+
+#_bt_ ul li a {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  text-decoration: none;
+}
+
 #hero > #xGyoHDpi {
   background-position: top left;
   background-size: cover;
@@ -1048,10 +1174,6 @@ main#main .Anh {
   /** content of post include post title summary not post meta*/
 }
 
-#BlogIndex .__i__:hover .c_ > ._xo {
-  transform: translateY(-8px);
-}
-
 #BlogIndex .__i__ .in_ {
   padding: 12px;
 }
@@ -1060,11 +1182,20 @@ main#main .Anh {
   height: 192px;
 }
 
+#BlogIndex .__i__ ._img_:hover + .c_ > ._xo {
+  transform: translateY(18px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 #BlogIndex .__i__ .c_ {
-  transform: translate(0, -42px);
+  transform: translate(0, -56px);
   padding: 12px;
   /** post content inner */
   /** post meta */
+}
+
+#BlogIndex .__i__ .c_:hover > ._xo {
+  transform: translateY(-12px);
 }
 
 #BlogIndex .__i__ .c_ > ._xo {
@@ -1074,8 +1205,8 @@ main#main .Anh {
 }
 
 #BlogIndex .__i__ .c_ > ._xo ._t_ {
-  height: 52px;
-  margin-bottom: 14px;
+  height: 62px;
+  margin-bottom: 12px;
   /** post summary */
 }
 
@@ -1084,7 +1215,7 @@ main#main .Anh {
 }
 
 #BlogIndex .__i__ .c_ > ._xo ._t_ h2 {
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1.3;
 }
 
@@ -1106,6 +1237,86 @@ main#main .Anh {
   height: 22px;
 }
 
+[data-page=single-blog] main#main {
+  top: 0;
+}
+
+[data-blog=single] ._io_ {
+  /** Post Meta (include post author, date and category) */
+  /** post content */
+}
+
+[data-blog=single] ._io_ ._t {
+  margin: 0 72px;
+}
+
+[data-blog=single] ._io_ ._t > * {
+  text-decoration: none;
+}
+
+[data-blog=single] ._io_ ._t > * h2 {
+  font-size: 40px;
+  line-height: 1.3;
+}
+
+[data-blog=single] ._io_ ._m_ > ._ad_ ._pic {
+  width: 38px;
+  height: 38px;
+  margin-right: 0.5rem;
+}
+
+[data-blog=single] ._io_ ._m_ > ._ad_ > ._a {
+  /** profile name */
+}
+
+[data-blog=single] ._io_ ._m_ > ._ad_ > ._a > *:first-child {
+  margin-bottom: 0.2rem;
+  font-size: 18px;
+}
+
+[data-blog=single] ._io_ ._m_ > ._ad_ > ._a > ._d {
+  font-size: 13px;
+}
+
+[data-blog=single] ._io_ ._m_ > .__c {
+  text-decoration: none;
+  margin-left: 3.5rem;
+}
+
+[data-blog=single] ._io_ ._m_ > .__c ._ic {
+  margin-right: 0.4rem;
+}
+
+[data-blog=single] ._io_ ._m_ > .__c ._ic svg {
+  width: 22px;
+  height: 22px;
+}
+
+[data-blog=single] ._io_ ._xo {
+  /** Post Image */
+}
+
+[data-blog=single] ._io_ ._xo > .__ {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+[data-blog=single] ._io_ ._ps_ ul,
+[data-blog=single] ._io_ ._ps_ ol {
+  font-size: 18px;
+  padding-left: 26px;
+  margin-bottom: 1rem;
+  line-height: 1.75rem;
+  font-weight: normal;
+}
+
+[data-blog=single] ._io_ ._ps_ blockquote,
+[data-blog=single] ._io_ ._ps_ blockquote > p {
+  font-size: 22px;
+  line-height: 1.75;
+  font-style: italic;
+}
+
 * {
   box-sizing: border-box;
   outline: none;
@@ -1121,10 +1332,6 @@ body {
 img {
   width: 100%;
   height: auto;
-}
-
-.material-icons {
-  vertical-align: middle;
 }
 
 body {

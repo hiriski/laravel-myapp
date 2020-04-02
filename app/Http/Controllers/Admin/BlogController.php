@@ -68,8 +68,8 @@ class BlogController extends Controller {
         $title = $request->title;
 
         /** if directory doesn't exists, create directory  */
-        if (!File::isDirectory($this->$destinationPath)) {
-            File::makeDirectory($this->$destinationPath);
+        if (!File::isDirectory($this->destinationPath)) {
+            File::makeDirectory($this->destinationPath);
         }
         
 
@@ -83,7 +83,7 @@ class BlogController extends Controller {
             $fileExtension  = '.' . $file->getClientOriginalExtension();
 
             /** loop dimentions */
-            foreach($this->$dimentions as $row => $dimention) {
+            foreach($this->dimentions as $row => $dimention) {
 
                 /** resize image by (width) and keep aspect ratio */
                 $img = Image::make($file);
@@ -95,14 +95,14 @@ class BlogController extends Controller {
                 $imageFile = $fileName . '_' . $dimention . $fileExtension;
 
                 /** Save image */
-                $img->save($this->$destinationPath . '/' . $imageFile);
+                $img->save($this->destinationPath . '/' . $imageFile);
 
                 /** add to request with dimention */
                 $data[$row]  = $imageFile;
 
             }
 
-            $originalImageSize = Image::make($file)->save($this->$destinationPath . '/' . $fileName . $fileExtension);
+            $originalImageSize = Image::make($file)->save($this->destinationPath . '/' . $fileName . $fileExtension);
 
             /** add to request original image size */
             $data['image']      = $fileName . $fileExtension;
@@ -123,10 +123,10 @@ class BlogController extends Controller {
 
     public function edit($id) {
         /** untuk form model */
-        $blog       = Blog::where('id', $id)->first();
-        $status = Status::orderBy('name', 'ASC')->pluck('name', 'id');
+        $post       = Blog::where('id', $id)->first();
+        $status = Status::pluck('name', 'id');
         $categories = Category::orderBy('name', 'ASC')->pluck('name', 'id');
-        return view('back.admin.blog.edit', compact('blog', 'categories', 'status'));
+        return view('back.admin.blog.edit', compact('post', 'categories', 'status'));
     }
 
     public function update(Request $request, $id) {
@@ -145,7 +145,7 @@ class BlogController extends Controller {
             $fileExtension  = '.' . $file->getClientOriginalExtension();
 
             /** loop dimentions */
-            foreach($this->$dimentions as $row => $dimention) {
+            foreach($this->dimentions as $row => $dimention) {
 
                 /** resize image by (width) and keep aspect ratio */
                 $img = Image::make($file);
@@ -157,21 +157,22 @@ class BlogController extends Controller {
                 $imageFile = $fileName . '_' . $dimention . $fileExtension;
 
                 /** Save image */
-                $img->save($this->$destinationPath . '/' . $imageFile);
+                $img->save($this->destinationPath . '/' . $imageFile);
 
                 /** add to request with dimention */
                 $data[$row]  = $imageFile;
 
             }
 
-            $originalImageSize = Image::make($file)->save($this->$destinationPath . '/' . $fileName . $fileExtension);
+            $originalImageSize = Image::make($file)->save($this->destinationPath . '/' . $fileName . $fileExtension);
 
             /** add to request original image size */
             $data['image']      = $fileName . $fileExtension;
 
         }
 
-        $blog->update($data);
+        dd($data);
+        $blog->save($data);
 
         return redirect()->route('admin.blog.index')
             ->with([

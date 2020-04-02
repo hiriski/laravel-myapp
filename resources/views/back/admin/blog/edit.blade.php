@@ -18,11 +18,11 @@
         <div class="col-sm-12 col-md-11">
             <div class="card">
                 <div class="card-body block-padding-lg">
-                    {{ Form::model($blog, ['url' => route('admin.blog.update', $blog->id)]) }}
+                    {{ Form::model($post, ['url' => route('admin.blog.update', $post->id)]) }}
                         @method('PUT')
                         <div class="form-group">
                             <label for="title">Title</label>
-                            <input id="title" type="text" class="form-control rux-input  @error('title') is-invalid @enderror" name="title" placeholder="Title" value="{{ $blog->title }}" autofocus>
+                            <input id="title" type="text" class="form-control rux-input  @error('title') is-invalid @enderror" name="title" placeholder="Title" value="{{ $post->title }}" autofocus>
                             @error('title')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -40,7 +40,9 @@
                             <label class="d-flex justify-content-center align-items-center" for="blogImage" id="dragImageHere">
 
                                 <div class="imageResult">
-                                    <img src="#" alt="preview" id="imagePreview" class="d-none">
+                                    @if(!empty($post->image))
+                                    <img src="{{ asset('uploads/blog/' . $post->image_md) }}" alt="preview" id="imagePreview">
+                                    @endif
                                 </div>
 
                                 <div class="meta w-100 text-center mt-3 d-none">
@@ -82,7 +84,7 @@
 
                         <div class="form-group">
                             <label for="title">Slug</label>
-                            <input id="slug" type="text" class="form-control rux-input @error('slug') is-invalid @enderror" name="slug" placeholder="Slug" value="{{ $blog->slug }}">
+                            <input id="slug" type="text" class="form-control rux-input @error('slug') is-invalid @enderror" name="slug" placeholder="Slug" value="{{ $post->slug }}">
                             @error('slug')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -94,7 +96,7 @@
                         </div>
                         <div class="form-group">
                             <label for="category_id">Categrory</label>
-                            {{ Form::select('category_id', $categories, 1, 
+                            {{ Form::select('category_id', $categories, null, 
                                 array('class' =>'form-control rux-input', 'placeholder' => 'Select category', 'id' => 'category_id')) }}
                             @error('category_id')
                             <span class="invalid-feedback" role="alert">
@@ -103,7 +105,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            {{ Form::select('status_id', $status, 1, ['class' => 'form-control rux-input', 'id' => 'status_id']) }}
+                            {{ Form::select('status_id', $status, null, ['class' => 'form-control rux-input', 'id' => 'status_id']) }}
                             @error('status_id')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>

@@ -19,7 +19,8 @@ class BlogController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $posts = Blog::with(['category'])->paginate(6);
+        $posts = Blog::with(['category'])->where('status_id', 1)
+            ->orderBy('created_at', 'DESC')->paginate(6);
         return view('front.blog.index', array('posts' => $posts));
     }
 
@@ -67,7 +68,7 @@ class BlogController extends Controller {
             return view('front.blog.show', compact('post'));
         }
         else {
-            return '404';
+            return abort(404);
         }
     }
 

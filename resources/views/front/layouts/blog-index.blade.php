@@ -31,7 +31,7 @@
                         {{-- Post Image --}}
                         <div class="_img_">
                         @if(!empty($item->image))
-                            <img src="{{ asset('images/uploads/blog/' . $item->image_md )}}" alt="{{ $item->title }}">
+                            <img src="{{ asset('uploads/blog/' . $item->image_md )}}" alt="{{ $item->title }}">
                         @else
                             <img src="{{ asset('images/md.jpg') }}" alt="No image">
                         @endif
