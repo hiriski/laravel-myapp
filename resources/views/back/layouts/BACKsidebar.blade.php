@@ -36,8 +36,7 @@
                     </div>
                 </div>
                 <ul class="sidebar-menu">
-
-                    <span class="sidebar-header text-muted">Navigation</span>
+                    {{-- <h6 class="sidebar-header">Navigation</h6> --}}
                     <li class="sidebar-menu-item">
                         <a class="sidebar-menu-link" href="{{ route('admin.index') }}">
                             <span class="sidebar-menu-icon">
@@ -48,9 +47,6 @@
                             </span>
                         </a>
                     </li>
-                    
-                {{-- Show menu for admin --}}
-                @role('admin')
                     <li class="sidebar-menu-item">
                         <a class="sidebar-menu-link" href="{{ route('admin.blog.index') }}">
                             <span class="sidebar-menu-icon">
@@ -62,37 +58,37 @@
                         </a>
                     </li>
                     <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-link" href="{{ route('admin.user.index') }}">
+                        <a class="sidebar-menu-link" href="{{ route('learn.lang.phrase') }}">
                             <span class="sidebar-menu-icon">
-                                <i class="material-icons">person</i>
+                                <i class="material-icons">input</i>
                             </span>
                             <span class="sidebar-menu-text">
-                                Users
+                                @lang('app.phrase')
                             </span>
                         </a>
                     </li>
                     <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-link active" href="{{ route('admin.role.index') }}">
+                        <a class="sidebar-menu-link active" href="{{ route('learn.lang.sentence') }}">
                             <span class="sidebar-menu-icon">
                                 <i class="material-icons">get_app</i>
                             </span>
                             <span class="sidebar-menu-text">
-                                Roles
+                                @lang('app.sentence')
                             </span>
                         </a>
                     </li>
                     <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-link" href="{{ route('admin.user.roles_permission') }}">
+                        <a class="sidebar-menu-link" href="{{ route('learn.lang.sentence') }}">
                             <span class="sidebar-menu-icon">
                                 <i class="material-icons">favorite</i>
                             </span>
                             <span class="sidebar-menu-text">
-                                Role Permissions
+                                Update Profile
                             </span>
                         </a>
                     </li>
                     <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-link" href="">
+                        <a class="sidebar-menu-link" href="{{ route('learn.lang.sentence') }}">
                             <span class="sidebar-menu-icon">
                                 <i class="material-icons">build</i>
                             </span>
@@ -101,31 +97,6 @@
                             </span>
                         </a>
                     </li>
-                @endrole
-                
-                {{-- Show menu for user --}}
-                @role('user')
-                    <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-link" href="{{ route('api.learn.lang.phrase.index') }}">
-                            <span class="sidebar-menu-icon">
-                                <i class="material-icons">bookmarks</i>
-                            </span>
-                            <span class="sidebar-menu-text">
-                                Learn Phrase
-                            </span>
-                        </a>
-                    </li>
-                    <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-link" href="{{ route('api.learn.lang.sentence.index') }}">
-                            <span class="sidebar-menu-icon">
-                                <i class="material-icons">description</i>
-                            </span>
-                            <span class="sidebar-menu-text">
-                                Learn Sentence
-                            </span>
-                        </a>
-                    </li>
-                @endrole
                 </ul>
             </div>
         </div>
