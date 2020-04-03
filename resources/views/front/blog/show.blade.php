@@ -1,4 +1,4 @@
-@extends('front.layouts.base-single-blog')
+@extends('front.layouts.app')
 @section('content')
 <div class="Anh">
     <div class="__o__">

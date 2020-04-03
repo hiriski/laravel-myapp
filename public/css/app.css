@@ -69,6 +69,10 @@
 
 main#main,
 #hero_nav ._ ._a ul li a i,
+._x0 ._a,
+._x0 ._b,
+#_x0 ._x0,
+#_x0 > div > ._a,
 #_x0 > div,
 #BlogIndex > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
 #Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child {
@@ -76,7 +80,8 @@ main#main,
 }
 
 #hero > #xGyoHDpi,
-#hero {
+#hero,
+#_x0 {
   position: fixed;
 }
 
@@ -88,7 +93,7 @@ main#main,
   left: 0;
 }
 
-[data-page=single-blog] main#main,
+[data-page=blog-single] main#main,
 #BlogIndex .__i__ ._img_,
 #Ftr_P .__i__ ._img_,
 main#main .Anh,
@@ -101,10 +106,7 @@ main#main .Anh,
 #BlogIndex .__i__ .c_ > ._xo,
 #BlogIndex .__i__ .c_,
 #hero .me .pic ._h img,
-#hero_nav ._ ._a ul li a span {
-  transition: all 0.3s ease;
-}
-
+#hero_nav ._ ._a ul li a span,
 #_x0 {
   transition: all 0.3s ease;
 }
@@ -875,7 +877,6 @@ textarea::placeholder {
 
 #_x0 {
   display: block;
-  position: fixed;
   z-index: 100;
 }
 
@@ -884,9 +885,23 @@ textarea::placeholder {
 #_x0 ._x0 ._b,
 ._x0 #_x0 ._b,
 #_x0 ._x0 {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
+}
+
+#_x0 > div {
+  background: rgba(247, 247, 247, 0.95);
+}
+
+#_x0 > div > ._a {
+  left: calc(50% - 10px);
+  top: calc(50% - 10px);
+}
+
+#_x0 > div > ._a svg {
+  width: 30px;
+  height: 30px;
 }
 
 #_x0.removed {
@@ -894,42 +909,25 @@ textarea::placeholder {
   opacity: 0;
 }
 
-#_x0.removed > div {
+#_x0.removed div {
   box-shadow: 0 0 0 0px #fff;
 }
 
-#_x0 > div {
-  background: rgba(247, 247, 247, 0.9);
-}
-
-#_x0 > div > ._a {
-  left: calc(50% - 13px);
-  top: calc(50% - 13px);
-  position: absolute;
-}
-
-#_x0 > div > ._a img {
-  width: 30px;
-  height: 30px;
-}
-
-._x0 {
+#_x0 ._x0 {
   left: calc(50% - 30px);
   top: calc(50% - 30px);
-  position: absolute;
 }
 
 ._x0 ._a,
 ._x0 ._b {
-  position: absolute;
-  border-right: 3px solid transparent;
+  border-right: 4px solid transparent;
 }
 
 ._x0 ._b {
-  border-left: 3px solid #1f77ff;
-  border-top: 3px solid #1f77ff;
-  -webkit-animation: xRotate 1s cubic-bezier(0.3, 1.06, 0.71, 0.62) infinite 0.1s;
-  animation: xRotate 1s cubic-bezier(0.3, 1.06, 0.71, 0.62) infinite 0.1s;
+  border-left: 4px solid #1f77ff;
+  border-top: 4px solid #1f77ff;
+  -webkit-animation: xRotate 0.6s cubic-bezier(0.3, 1.06, 0.71, 0.62) infinite 0.1s;
+  animation: xRotate 0.6s cubic-bezier(0.3, 1.06, 0.71, 0.62) infinite 0.1s;
 }
 
 #hero_social_links {
@@ -1237,7 +1235,7 @@ main#main .Anh {
   height: 22px;
 }
 
-[data-page=single-blog] main#main {
+[data-page=blog-single] main#main {
   top: 0;
 }
 

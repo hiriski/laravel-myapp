@@ -4,5 +4,13 @@ const changeTitle = () => {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    changeTitle();
+    removePreload();
+    // changeTitle();
 })
+
+const removePreload = () => {
+    setTimeout(() => {
+        document.getElementById("_x0").className = 'removed';
+        console.log("Preload Removed!");
+    }, 500);
+}

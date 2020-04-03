@@ -99,8 +99,15 @@ var changeTitle = function changeTitle() {
 };
 
 window.addEventListener('DOMContentLoaded', function () {
-  changeTitle();
+  removePreload(); // changeTitle();
 });
+
+var removePreload = function removePreload() {
+  setTimeout(function () {
+    document.getElementById("_x0").className = 'removed';
+    console.log("Preload Removed!");
+  }, 500);
+};
 
 /***/ }),
 
