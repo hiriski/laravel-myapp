@@ -35,6 +35,12 @@ class DatabaseSeeder extends Seeder {
             BlogCategoriesTableSeeder::class,
             BlogStatusTableSeeder::class,
 
+            /** Roles & Permission */
+            RolesTableSeeder::class,
+            PermissionsTableSeeder::class,
+            RoleHasPermissionsTableSeeder::class,
+            ModelHasRolesTableSeeder::class,
+
         ]);
 
         /** Blog Faker */
