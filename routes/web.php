@@ -15,11 +15,6 @@ Auth::routes();
 
 Route::get('/', 'IndexController@index')->name('index');
 
-/** /blog */
-Route::resource('/blog', 'BlogController', array(
-	'only' => array('index', 'show')
-));
-
 /** Route : blog/ */
 Route::prefix('/blog')->group(function() {
 	/** Name : blog. */
@@ -30,6 +25,11 @@ Route::prefix('/blog')->group(function() {
 		));
 	});
 });
+
+/** /blog */
+Route::resource('/blog', 'BlogController', array(
+	'only' => array('index', 'show')
+));
 
 
 
@@ -79,7 +79,11 @@ Route::group(['middleware' => 'auth'], function() {
 				/** /admin/blog (for vue js) */
 				Route::get('/blog/vue', 'Admin\VueBlogController@vue')->name("blog.vue");
 				
-			});
+				Route::get('material-icons', function() {
+					return view('back.material-icons');
+				});
+
+			}); /** end of middleware role:admin */
 
 	
 			/** admin/vue (admin with vuejs) */
