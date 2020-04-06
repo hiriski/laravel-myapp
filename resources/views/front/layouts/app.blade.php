@@ -13,7 +13,7 @@
     <meta name="author" content="Riski, hi@riski.web.id"/>
     <meta name="copyright" content="Riski Web ID"/>
     <meta name="designer" content="Riski "/>
-    <meta name="robots" content="max-snippet:100"/>
+    <meta name="robots" content="max-snippet:120"/>
     <meta name="msapplication-TileColor" content="#f7f7f7"/>
     <meta name="theme-color" content="#f7f7f7"/>
 

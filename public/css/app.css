@@ -45,15 +45,15 @@
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
 footer#main .c__ > p:first-child > span {
   position: relative;
-  padding-right: 34px;
-  margin-right: 8px;
+  padding-right: 41px;
+  margin-right: 10px;
 }
 
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > :first-child:before,
 footer#main .c__ > p:first-child > span:before {
   top: 50%;
   right: 0;
-  width: 26px;
+  width: 32px;
   height: 1px;
   content: "";
   background: #686868;
@@ -1277,7 +1277,7 @@ pre[class*=language] .line-number span {
   padding-right: 10px;
   color: #797979;
   font-size: 15px;
-  line-height: 24px !important;
+  line-height: 26px !important;
 }
 
 @media screen and (max-width: 575px) {
@@ -1291,15 +1291,17 @@ pre[class*=language] code {
   font-size: 15px;
   white-space: pre;
   padding: 0 !important;
-  line-height: 24px !important;
+  line-height: 26px !important;
 }
 
 pre[class*=language] span.code-filename {
   top: 12px;
   right: 16px;
-  padding: 0.1rem 0.6rem;
-  border-radius: 23px;
-  background: #131925;
+  padding: 0.32rem 0.85rem;
+  border-radius: 25px;
+  background: #c1cbde;
+  color: #3c405c;
+  font-weight: bold;
 }
 
 pre[class*=language][data-color=monokai-pro] {
@@ -1307,12 +1309,20 @@ pre[class*=language][data-color=monokai-pro] {
   color: #dadada;
 }
 
+pre[class*=language][data-color=monokai-pro] ::-moz-selection {
+  background-color: #0f0f0f;
+}
+
+pre[class*=language][data-color=monokai-pro] ::selection {
+  background-color: #0f0f0f;
+}
+
 pre[class*=language][data-color=monokai-pro] .line-number span {
   background-color: #273136;
 }
 
 pre[class*=language][data-color=monokai-pro] .token.keyword {
-  color: #ff6763;
+  color: #ff7e7a;
 }
 
 pre[class*=language][data-color=monokai-pro] .token.package {
@@ -1333,6 +1343,63 @@ pre[class*=language][data-color=monokai-pro] .token.comment {
 
 pre[class*=language][data-color=monokai-pro] .token.number {
   color: #d58cff;
+}
+
+pre[class*=language][data-color=monokai-pro][class*=-php] .token.class-name {
+  color: #36b2ff;
+}
+
+pre[class*=language][data-color=monokai-pro][class*=-css] .token.selector {
+  color: #98da69;
+}
+
+pre[class*=language][data-color=monokai-pro][class*=-css] .token.rule {
+  color: #ff7e7a;
+}
+
+pre[class*=language][data-color=monokai-pro][class*=-css] .token.atrule {
+  color: #ffca2b;
+}
+
+pre[class*=language][data-color=monokai-pro][class*=-css] .token.property {
+  color: #91a8ff;
+}
+
+pre[class*=language][data-color=monokai-pro][class*=-css] .token.important {
+  color: #b790ff;
+  font-weight: normal !important;
+}
+
+pre[class*=language][data-color=monokai-pro][class*=-css] .token.punctuation {
+  color: #dadada;
+}
+
+pre[class*=language][data-color=monokai-pro][class*=-css] .token.function {
+  color: #fb8d60;
+}
+
+pre[class*=language][data-color=monokai-pro][class*=-scss] .token.property {
+  color: #71d3ff;
+}
+
+pre[class*=language][data-color=monokai-pro][class*=-javascript] {
+  color: #b5d5ff;
+}
+
+pre[class*=language][data-color=monokai-pro][class*=-javascript] .token.keyword {
+  color: #20baff;
+}
+
+pre[class*=language][data-color=monokai-pro][class*=-javascript] .token.operator {
+  color: #ff689e;
+}
+
+pre[class*=language][data-color=monokai-pro][class*=-javascript] .token.regex {
+  color: #fd8a23;
+}
+
+pre[class*=language][data-color=monokai-pro][class*=-javascript] .token.number {
+  color: #ff9063;
 }
 
 #hero > #xGyoHDpi {

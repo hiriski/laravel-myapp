@@ -42,13 +42,3 @@ if(blogCode) {
         blogCode[i].appendChild(newElem);
     }
 }
-
-
-// (function() {
-//     var tagPre = document.querySelector('pre[class*="language-"]');
-//     dataFileName = tagPre.dataset.filename;
-//     createElemSpan = document.createElement('span');
-//     createElemSpan.textContent = tagPre.dataset.filename;
-//     createElemSpan.className = 'file-name';
-//     tagPre.appendChild(createElemSpan);
-// })();

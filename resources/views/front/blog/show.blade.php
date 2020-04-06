@@ -2,7 +2,8 @@
 @isset($post)
     @section('title', "$post->title")
     @section('description', "$post->description")
-    @section('keywords', "$post->keyword")
+    @section('keywords', "$post->keywords")
+    @section('og-image', "$post->image")
 @endisset
 @section('content')
 <div class="Anh">
