@@ -30,9 +30,9 @@
                 <div class="edit position-absolute">
                     <a href="{{ route('admin.blog.edit', $item->id) }}" class="btn btn-sm btn-success"><i class="material-icons">edit</i> Edit</a>
                 </div>
-                @if(!empty($item->image))
+                @if(!empty($item->image) || !empty($item->image_md))
                 <div class="post-img">
-                    <img src="{{ asset('storage/uploads/images/blog/' . $item->image) }}" alt="Sample Image" class="card-img-top">
+                    <img src="{{ getBlogImage($item->image_md) }}" alt="Sample Image" class="card-img-top">
                 </div>
                 @else
                 <div class="post-img">

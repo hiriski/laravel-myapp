@@ -41,7 +41,7 @@
                         <div class="__">
                             <div class="_img_">
                             @if(!empty($post->image))
-                                <img src="{{ asset('uploads/blog/' . $post->image )}}" alt="{{ $post->title }}">
+                                <img src="{{ getBlogImage($post->image) }}" alt="{{ $post->title }}">
                             @endif
                             </div>
                         </div>

@@ -19,8 +19,8 @@
 
                         {{-- Post Image --}}
                         <div class="_img_">
-                            @if(!empty($item->post->image))
-                            <img src="{{ asset('images/uploads/blog/' . $item->post->image_md )}}" alt="{{ $item->post->title }}">
+                            @if(!empty($item->post->image) || !empty($item->post->featured_image))
+                            <img src="{{ getBlogImage($item->post->featured_image) }}" alt="{{ $item->post->title }}">
                             @else
                             <img src="{{ asset('images/md.jpg') }}" alt="No image">
                             @endif

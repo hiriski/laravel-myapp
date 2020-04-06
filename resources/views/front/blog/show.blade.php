@@ -3,7 +3,7 @@
     @section('title', "$post->title")
     @section('description', "$post->description")
     @section('keywords', "$post->keywords")
-    @section('og-image', "$post->image")
+    @section('og-image', getBlogImage($post->featured_image))
 @endisset
 @section('content')
 <div class="Anh">

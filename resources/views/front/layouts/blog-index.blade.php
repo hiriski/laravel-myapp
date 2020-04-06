@@ -30,8 +30,8 @@
     
                         {{-- Post Image --}}
                         <div class="_img_">
-                        @if(!empty($item->image))
-                            <img src="{{ asset('storage/uploads/images/blog/' . $item->image_md )}}" alt="{{ $item->title }}">
+                        @if(!empty($item->image) || !empty($item->image_md))
+                            <img src="{{ getBlogImage($item->image_md) }}" alt="{{ $item->title }}">
                         @else
                             <img src="{{ asset('images/md.jpg') }}" alt="No image">
                         @endif

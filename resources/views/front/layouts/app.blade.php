@@ -25,7 +25,7 @@
 
 
     @if(Route::currentRouteName() === "blog.show")
-        <meta name="og:image" content="@section('og-image')"/>
+        <meta name="og:image" content="@yield('og-image')"/>
     @else
         {{-- <meta name="og:image" content="default-image-here"/> --}}
     @endif
