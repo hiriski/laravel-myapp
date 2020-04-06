@@ -51,7 +51,7 @@
                     
                 {{-- Show menu for admin --}}
                 @role('admin')
-                    <li class="sidebar-menu-item">
+                    <li class="sidebar-menu-item {{ Route::getCurrentRoute()->uri === "admin/blog" ? 'active' : '' }}">
                         <a class="sidebar-menu-link" href="{{ route('admin.blog.index') }}">
                             <span class="sidebar-menu-icon">
                                 <i class="material-icons">subject</i>
@@ -61,7 +61,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="sidebar-menu-item">
+                    <li class="sidebar-menu-item {{ Route::getCurrentRoute()->uri === "admin/user" ? 'active' : '' }}">
                         <a class="sidebar-menu-link" href="{{ route('admin.user.index') }}">
                             <span class="sidebar-menu-icon">
                                 <i class="material-icons">person</i>
@@ -71,8 +71,8 @@
                             </span>
                         </a>
                     </li>
-                    <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-link active" href="{{ route('admin.role.index') }}">
+                    <li class="sidebar-menu-item {{ Route::getCurrentRoute()->uri === "admin/role" ? 'active' : '' }}">
+                        <a class="sidebar-menu-link" href="{{ route('admin.role.index') }}">
                             <span class="sidebar-menu-icon">
                                 <i class="material-icons">get_app</i>
                             </span>
@@ -81,23 +81,23 @@
                             </span>
                         </a>
                     </li>
-                    <li class="sidebar-menu-item">
+                    <li class="sidebar-menu-item {{ Route::getCurrentRoute()->uri === "admin/user/role-permission" ? 'active' : '' }}">
                         <a class="sidebar-menu-link" href="{{ route('admin.user.roles_permission') }}">
                             <span class="sidebar-menu-icon">
-                                <i class="material-icons">favorite</i>
+                                <i class="material-icons">supervisor_account</i>
                             </span>
                             <span class="sidebar-menu-text">
                                 Role Permissions
                             </span>
                         </a>
                     </li>
-                    <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-link" href="">
+                    <li class="sidebar-menu-item {{ Route::getCurrentRoute()->uri === "admin/settings" ? 'active' : '' }}">
+                        <a class="sidebar-menu-link" href="{{ route('admin.settings') }}">
                             <span class="sidebar-menu-icon">
                                 <i class="material-icons">build</i>
                             </span>
                             <span class="sidebar-menu-text">
-                                Setting
+                                Settings
                             </span>
                         </a>
                     </li>

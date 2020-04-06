@@ -32,7 +32,7 @@
                 </div>
                 @if(!empty($item->image))
                 <div class="post-img">
-                    <img src="{{ asset('uploads/blog/' . $item->image) }}" alt="Sample Image" class="card-img-top">
+                    <img src="{{ asset('storage/uploads/images/blog/' . $item->image) }}" alt="Sample Image" class="card-img-top">
                 </div>
                 @else
                 <div class="post-img">

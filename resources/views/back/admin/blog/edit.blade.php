@@ -40,9 +40,7 @@
                             <label class="d-flex justify-content-center align-items-center" for="blogImage" id="dragImageHere">
 
                                 <div class="imageResult">
-                                    @if(!empty($post->image))
-                                    <img src="{{ asset('uploads/blog/' . $post->image_md) }}" alt="preview" id="imagePreview">
-                                    @endif
+                                    <img src="{{ asset('storage/uploads/images/blog/' . $post->image_md) }}" alt="preview" id="imagePreview" class="">
                                 </div>
 
                                 <div class="meta w-100 text-center mt-3 d-none">

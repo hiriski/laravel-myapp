@@ -50,14 +50,16 @@
         .sidebar-menu-item {
             list-style: none;
             margin-bottom: .2rem;
+            &.active {
+                .sidebar-menu-link {
+                    background-color: $white;
+                    border-radius: 22px 0 0 22px;
+                }
+            }
             .sidebar-menu-link {
                 margin-left: 36px;
                 .sidebar-menu-icon {
                     margin-left: -36px;
-                }
-                &.active {
-                    background-color: $bg;
-                    border-radius: 22px 0 0 22px;
                 }
                 padding: {
                     top: .5rem;

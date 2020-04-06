@@ -5,35 +5,43 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    {{-- HTML Meta Tags --}}
+    <title>@yield('title') | Riski Web ID</title>
+    <meta name="description" content="@yield('description')"/>
+    <meta name="keywords" content="@yield('keywords')"/>
+    <meta name="author" content="Riski, hi@riski.web.id"/>
+    <meta name="copyright" content="Riski Web ID"/>
+    <meta name="designer" content="Riski "/>
+    <meta name="robots" content="max-snippet:100"/>
+    <meta name="msapplication-TileColor" content="#f7f7f7"/>
+    <meta name="theme-color" content="#f7f7f7"/>
+
+    {{-- Meta Tags OpenGraph --}}
+    <meta property="og:title" content="@yield('title')"/>
+    <meta property="og:description" content="@yield('description')"/>
+    <meta property="og:site_name" content="Riski Web ID"/>
+    <meta property="og:type" content="Website"/>
+
+
+    @if(Route::currentRouteName() === "blog.show")
+        <meta name="og:image" content="@section('og-image')"/>
+    @else
+        {{-- <meta name="og:image" content="default-image-here"/> --}}
+    @endif
+
+    @if(Route::currentRouteName() === "blog.show")
+        <meta name="og:type" content="blog.article"/>
+    @else
+        <meta name="og:type" content="website"/>
+    @endif
+
+    <meta name="og:title" content="@yield('title')"/>
+    <meta name="og:url" content="{{ url()->current() }}"/>
+    <meta name="og:site_name" content="Riski Web ID"/>
+    <meta name="og:description" content="@yield('description')"/>
     
-    @isset($title)
-        <title>Front</title>
-    @endisset
-
-    @isset($description)
-        <meta name="description" content="{{ $description }}">
-    @endisset
-
-    @isset($keywords)
-        <meta name="keywords" content="{{ $keywords }}">
-    @endisset
-
-    <meta name="author" content="Riski">
-
-    <meta property="og:site_name" content="Riski Web ID">
-    <meta property="og:type" content="Website">
-
-    @isset($title)
-        <meta property="og:title" content="{{ $title }}"/>
-    @endisset
-
-    @isset($description)
-        <meta property="og:description" content="{{ $description }}"/>
-    @endisset
-
-    <meta name="msapplication-TileColor" content="#f7f7f7">
-    <meta name="theme-color" content="#f7f7f7">
-
+    {{-- Styles --}}
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="stylesheet" href="{{ asset('fonts/hk-grotesk/style.css') }}">
     <link rel="stylesheet" href="{{ asset('fonts/material-icons/material-icons.css') }}">
@@ -48,20 +56,17 @@
 <body data-theme="light">
 @endif
 
-@include('front.components.preload')
-
-@if(Route::getCurrentRoute()->uri === "/")
-    @include('front.layouts.hero')
-@endif
-
-@if(Route::getCurrentRoute()->uri === "blog")
-    @include('front.layouts.hero')
-@endif
-
-    <div id="AnhOi">
+    <div id="AnhOi" data-version="one" data-version-name="anhoi-mot">
+        @include('front.components.preload')
+        @if( Route::getCurrentRoute()->uri === "/" || Route::getCurrentRoute()->uri === "blog")
+            @include('front.layouts.hero')
+        @endif
         <main id="main">
             @yield('content')
-        </main> 
+        </main>
+        @include('front.layouts.footer')
     </div>
+
+@stack('script')
 </body>
 </html>

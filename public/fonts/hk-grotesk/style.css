@@ -4,21 +4,21 @@
 	downloaded from : https://fontlibrary.org/en/hk-grotesk 
 */
 
-@font-face {
+/* @font-face {
     font-family: 'HK Grotesk';
     src: url('hkgrotesk-light-webfont.woff2') format('woff2'),
          url('hkgrotesk-light-webfont.woff') format('woff');
     font-weight: 300;
     font-style: normal;
-}
+} */
 
-@font-face {
+/* @font-face {
     font-family: 'HK Grotesk';
     src: url('hkgrotesk-lightitalic-webfont.woff2') format('woff2'),
          url('hkgrotesk-lightitalic-webfont.woff') format('woff');
     font-weight: 300;
     font-style: italic;
-}
+} */
 
 @font-face {
     font-family: 'HK Grotesk';

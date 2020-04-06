@@ -363,6 +363,11 @@ h2.card-title {
   margin-bottom: 0.2rem;
 }
 
+#sidebar .sidebar-menu .sidebar-menu-item.active .sidebar-menu-link {
+  background-color: #fff;
+  border-radius: 22px 0 0 22px;
+}
+
 #sidebar .sidebar-menu .sidebar-menu-item .sidebar-menu-link {
   margin-left: 36px;
   padding-top: 0.5rem;
@@ -374,11 +379,6 @@ h2.card-title {
 
 #sidebar .sidebar-menu .sidebar-menu-item .sidebar-menu-link .sidebar-menu-icon {
   margin-left: -36px;
-}
-
-#sidebar .sidebar-menu .sidebar-menu-item .sidebar-menu-link.active {
-  background-color: #f1f1f1;
-  border-radius: 22px 0 0 22px;
 }
 
 #sidebar .sidebar-menu .sidebar-menu-item .sidebar-menu-link .material-icons {
