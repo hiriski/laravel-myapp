@@ -12,11 +12,11 @@
                         </div>
                         <div class="_r">
                             <div class="_i">
-                                <h2>Riski</h2>
+                                <h2>Hi 👋, I am Riski</h2>
                                 <span>@riskiwebid</span>
                             </div>
                             <div class="_o">
-                                <p>Hi,👋 I'm a web developer and graphic designer living in Bandung, Indonesia.</p>
+                                <p>I'm a web developer and graphic designer living in Bandung, Indonesia.</p>
                                 <p>I spend my days in many different areas of design and development from prototype, front end to back end engineering.</p>
                             </div>
                             @include('front.components.social-links')

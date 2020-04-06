@@ -1,9 +1,10 @@
 @extends('front.layouts.app')
 @isset($post)
-    @section('title', "$post->title")
-    @section('description', "$post->description")
-    @section('keywords', "$post->keywords")
-    @section('og-image', getBlogImage($post->featured_image))
+    @section('headline', $post->title)
+    @section('uri', route('blog.show', $post->slug))
+    @section('image', $post->image)
+    @section('datePublished', date('Y-m-d', strtotime($post->created_at)))
+    @section('dateModified', date('Y-m-d', strtotime($post->created_at)))
 @endisset
 @section('content')
 <div class="Anh">
