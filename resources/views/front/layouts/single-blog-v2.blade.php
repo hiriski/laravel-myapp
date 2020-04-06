@@ -1,4 +1,4 @@
-<div id="single" data-blog="single">
+<div id="single" data-blog="single" data-version="two">
     <div class="__q__">
         <div class="_cn_">
             @isset($post)
@@ -9,9 +9,14 @@
                     
                     {{-- Post Content Inner --}}
                     <div class="_xo">
-                        {{-- Post Title --}}
-                        <div class="_t">
-                            <a href="{{ route('blog.show', $post->slug) }}"><h2>{{ $post->title }}</h2></a>
+
+                        {{-- Post Image --}}
+                        <div class="__">
+                            <div class="_img_">
+                            @if(!empty($post->image))
+                                <img src="{{ asset('storage/uploads/images/blog/' . $post->image )}}" alt="{{ $post->title }}">
+                            @endif
+                            </div>
                         </div>
 
                         {{-- Post Meta --}}
@@ -21,7 +26,7 @@
                                     <img src="{{ asset('images/profiles/' . $post->user->profile->image_sm) }}" alt="">
                                 </div>
                                 <div class="_a">
-                                    <span>{{ $post->user->profile->first_name }}</span>
+                                    <a href="{{ route('index') }}"><span>{{ $post->user->profile->first_name }}</span></a>
                                     <span class="_d">{{ \Carbon\Carbon::parse($post->created_at)->isoFormat('MMMM Do, YYYY') }}</span>
                                 </div>
                             </div>
@@ -37,13 +42,9 @@
                             </a>
                         </div>
 
-                        {{-- Post Image --}}
-                        <div class="__">
-                            <div class="_img_">
-                            @if(!empty($post->image))
-                                <img src="{{ asset('uploads/blog/' . $post->image )}}" alt="{{ $post->title }}">
-                            @endif
-                            </div>
+                        {{-- Post Title --}}
+                        <div class="_t">
+                            <a href="{{ route('blog.show', $post->slug) }}"><h2>{{ $post->title }}</h2></a>
                         </div>
 
                         {{-- Main for content --}}
