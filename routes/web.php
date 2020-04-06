@@ -45,6 +45,10 @@ Route::group(['middleware' => 'auth'], function() {
 	
 			/**  Only user with role "admin" can access it */
 			Route::group(['middleware' => ['role:admin']], function () {
+
+				/** admin/setting */
+				Route::get('/settings', 'Admin\SettingController@index')->name('settings');
+				
 				/** admin/role */
 				Route::resource('/role', 'Admin\RoleController')
 				->except(['create', 'show', 'edit', 'update']);
