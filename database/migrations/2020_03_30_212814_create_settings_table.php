@@ -29,6 +29,9 @@ class CreateSettingsTable extends Migration {
             $table->string('youtube_url')->nullable();
 
             $table->string('copyright')->nullable();
+
+            $table->boolean('show_featured_post')->default(false);
+            $table->boolean('show_blog_homepage')->default(false);
         });
     }
 
