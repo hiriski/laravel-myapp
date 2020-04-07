@@ -31,6 +31,25 @@
     text-decoration: none;
 }
 
+
+/** Success, Info, Warning and Danger */
+%success {
+    background-color: $success-color;
+    color: $success-text-color;
+}
+%info {
+    background-color: $info-color;
+    color: $info-text-color;
+}
+%warning {
+    background-color: $warning-color;
+    color: $warning-text-color;
+}
+%danger {
+    background-color: $danger-color;
+    color: $danger-text-color;
+}
+
 %link-hover {
     color: $main-color;
     &:hover {
@@ -516,13 +535,13 @@
 
 // Font Family
 %primary-font {
-    font-family: $primary-font;
+    font-family: $primary-font !important;
 }
 %reading-font {
-    font-family: $reading-font;
+    font-family: $reading-font !important;
 }
 %code-font {
-    font-family: $code-font;
+    font-family: $code-font !important;
 }
 
 

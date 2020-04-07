@@ -5,6 +5,16 @@ $primary-color-light    : #dddfff;
 $primary-color-dark     : #131133;
 $primary-color-hover    : #055de0;
 
+$success-color          : #c3ffc0;
+$info-color             : #d2d8ff;
+$warning-color          : #fff2b3;
+$danger-color           : #ffcdc8;
+
+$success-text-color     : #448446;
+$info-text-color        : #5f619c;
+$warning-text-color     : #755f43;
+$danger-text-color      : #92574a;
+
 $link-color             : #0c00b9;
 $link-color-hover       : #02007e;
 
@@ -94,11 +104,25 @@ $yahoo: #4101AF;
 $youtube: #FE0000;
 
 
-//  Variables color
-:root {
+#AnhOi {
   --primary-color       : #{$primary-color};
   --secondary-color     : #{$secondary-color};
   --primary-color-light : #{$primary-color-light};
   --primary-color-dark  : #{$primary-color-dark};
   --primary-color-hover : #{$primary-color-hover};
+
+  --link                : #{$link-color};
+  --link-hover          : #{$link-color-hover};
+  --main-text-color       : #{$main-color};
+
+  --success             : #{$success-color};
+  --info                : #{$info-color};
+  --warning             : #{$warning-color};
+  --danger              : #{$danger-color};
+  
+  --success-text        : #{$success-text-color};
+  --info-text           : #{$info-text-color};
+  --warning-text        : #{$warning-text-color};
+  --danger-text         : #{$danger-text-color};
+
 }

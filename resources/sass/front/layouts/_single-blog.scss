@@ -125,6 +125,57 @@
 
         /** post content */
         ._ps_ {
+            code:not([class*="language"]) {
+                @extend %code-font;
+                @extend %border-thin-radius;
+                background: #eaeaea;
+                color: #5e596f;
+                font-size: 15px;
+                padding: .2rem .3rem;
+            }
+            /** Block custom */
+            .block {
+                @extend %border-thin-radius;
+                padding: 20px 28px;
+                p {
+                    @extend %margin-bottom-sm;
+                }
+                p,
+                span {
+                    @extend %primary-font;
+                    font-size: 17px;
+                    
+                }
+                p:last-child {
+                    @extend %reset;
+                }
+
+                &.success {
+                    @extend %success;
+                    code {
+                        background-color: #7afd74;
+                    }
+                }
+                &.info {
+                    @extend %info;
+                    code {
+                        background-color: #92bdff;
+                    }
+                }
+                &.warning {
+                    @extend %warning;
+                    code {
+                        background-color: #ffd086;
+                    }
+                }
+                &.danger {
+                    @extend %danger;
+                    code {
+                        background-color: #ffa5a5;
+                    }
+                }
+            }
+
             @extend %lite-width;
             ul, ol {
                 font-size: $reading-font-size;

@@ -7,7 +7,7 @@ pre[class*=language] {
 
     &[data-line-numbers=false] {
         padding: 14px 20px;
-        border-radius: .25rem;
+        @extend %border-thin-radius;
     }
 
     @extend %relative;
@@ -62,16 +62,29 @@ pre[class*=language] {
     }
     /** File name */
     span.code-filename {
+        @extend %border-thin-radius;
         @extend %absolute;
         @extend %small;
         top: 12px;
         right: 16px;
         padding: 0.32rem 0.85rem;
-        border-radius: 25px;
-        background: #c1cbde;
-        color: #3c405c;
-        font-weight: bold;
     }
+
+    &[data-color="monokai-pro"],
+    &[data-color*="dark"] {
+        span.code-filename {
+            background: #425571;
+            color: #b2b2b7;
+        }
+    }
+
+    &[data-color*="light"] {
+        span.code-filename {
+            background: #dadcf9;
+            color: #525288;
+        }
+    }
+
 
     /** Color schema "Monokai Pro' (Visual Studio Code) */
     &[data-color="monokai-pro"] {
@@ -196,6 +209,11 @@ pre[class*=language] {
         @extend %set-background-light;
         @include box-shadow(0, 2px, 4px, 1px, rgba($main-color, 0.1));
         color: #3d78c3;
+        .line-number {
+            span {
+                color: #bbbbbb;
+            }
+        }
         .token {
             &.comment {
                 color: #a5a5a5;
@@ -213,7 +231,7 @@ pre[class*=language] {
                 color: #f17c00;
             }
             &.punctuation {
-                color: #656565;
+                color: #949494;
             }
         }
 
