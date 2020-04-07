@@ -1,5 +1,5 @@
 /* PrismJS 1.20.0
-https://prismjs.com/download.html#themes=prism-dark&languages=markup+css+clike+javascript+git+js-templates+json+markup-templating+php+pug+jsx+tsx+regex+sass+scss+typescript */
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+json+less+markup-templating+php+pug+python+jsx+tsx+regex+sass+scss+typescript */
 var _self = (typeof window !== 'undefined')
 	? window   // if in browser
 	: (
@@ -1017,422 +1017,6 @@ if (Prism.languages.markup) {
 
 Prism.languages.js = Prism.languages.javascript;
 
-Prism.languages.git = {
-	/*
-	 * A simple one line comment like in a git status command
-	 * For instance:
-	 * $ git status
-	 * # On branch infinite-scroll
-	 * # Your branch and 'origin/sharedBranches/frontendTeam/infinite-scroll' have diverged,
-	 * # and have 1 and 2 different commits each, respectively.
-	 * nothing to commit (working directory clean)
-	 */
-	'comment': /^#.*/m,
-
-	/*
-	 * Regexp to match the changed lines in a git diff output. Check the example below.
-	 */
-	'deleted': /^[-–].*/m,
-	'inserted': /^\+.*/m,
-
-	/*
-	 * a string (double and simple quote)
-	 */
-	'string': /("|')(?:\\.|(?!\1)[^\\\r\n])*\1/m,
-
-	/*
-	 * a git command. It starts with a random prompt finishing by a $, then "git" then some other parameters
-	 * For instance:
-	 * $ git add file.txt
-	 */
-	'command': {
-		pattern: /^.*\$ git .*$/m,
-		inside: {
-			/*
-			 * A git command can contain a parameter starting by a single or a double dash followed by a string
-			 * For instance:
-			 * $ git diff --cached
-			 * $ git log -p
-			 */
-			'parameter': /\s--?\w+/m
-		}
-	},
-
-	/*
-	 * Coordinates displayed in a git diff command
-	 * For instance:
-	 * $ git diff
-	 * diff --git file.txt file.txt
-	 * index 6214953..1d54a52 100644
-	 * --- file.txt
-	 * +++ file.txt
-	 * @@ -1 +1,2 @@
-	 * -Here's my tetx file
-	 * +Here's my text file
-	 * +And this is the second line
-	 */
-	'coord': /^@@.*@@$/m,
-
-	/*
-	 * Match a "commit [SHA1]" line in a git log output.
-	 * For instance:
-	 * $ git log
-	 * commit a11a14ef7e26f2ca62d4b35eac455ce636d0dc09
-	 * Author: lgiraudel
-	 * Date:   Mon Feb 17 11:18:34 2014 +0100
-	 *
-	 *     Add of a new line
-	 */
-	'commit_sha1': /^commit \w{40}$/m
-};
-
-(function (Prism) {
-
-	var templateString = Prism.languages.javascript['template-string'];
-
-	// see the pattern in prism-javascript.js
-	var templateLiteralPattern = templateString.pattern.source;
-	var interpolationObject = templateString.inside['interpolation'];
-	var interpolationPunctuationObject = interpolationObject.inside['interpolation-punctuation'];
-	var interpolationPattern = interpolationObject.pattern.source;
-
-
-	/**
-	 * Creates a new pattern to match a template string with a special tag.
-	 *
-	 * This will return `undefined` if there is no grammar with the given language id.
-	 *
-	 * @param {string} language The language id of the embedded language. E.g. `markdown`.
-	 * @param {string} tag The regex pattern to match the tag.
-	 * @returns {object | undefined}
-	 * @example
-	 * createTemplate('css', /\bcss/.source);
-	 */
-	function createTemplate(language, tag) {
-		if (!Prism.languages[language]) {
-			return undefined;
-		}
-
-		return {
-			pattern: RegExp('((?:' + tag + ')\\s*)' + templateLiteralPattern),
-			lookbehind: true,
-			greedy: true,
-			inside: {
-				'template-punctuation': {
-					pattern: /^`|`$/,
-					alias: 'string'
-				},
-				'embedded-code': {
-					pattern: /[\s\S]+/,
-					alias: language
-				}
-			}
-		};
-	}
-
-
-	Prism.languages.javascript['template-string'] = [
-		// styled-jsx:
-		//   css`a { color: #25F; }`
-		// styled-components:
-		//   styled.h1`color: red;`
-		createTemplate('css', /\b(?:styled(?:\([^)]*\))?(?:\s*\.\s*\w+(?:\([^)]*\))*)*|css(?:\s*\.\s*(?:global|resolve))?|createGlobalStyle|keyframes)/.source),
-
-		// html`<p></p>`
-		// div.innerHTML = `<p></p>`
-		createTemplate('html', /\bhtml|\.\s*(?:inner|outer)HTML\s*\+?=/.source),
-
-		// svg`<path fill="#fff" d="M55.37 ..."/>`
-		createTemplate('svg', /\bsvg/.source),
-
-		// md`# h1`, markdown`## h2`
-		createTemplate('markdown', /\b(?:md|markdown)/.source),
-
-		// gql`...`, graphql`...`, graphql.experimental`...`
-		createTemplate('graphql', /\b(?:gql|graphql(?:\s*\.\s*experimental)?)/.source),
-
-		// vanilla template string
-		templateString
-	].filter(Boolean);
-
-
-	/**
-	 * Returns a specific placeholder literal for the given language.
-	 *
-	 * @param {number} counter
-	 * @param {string} language
-	 * @returns {string}
-	 */
-	function getPlaceholder(counter, language) {
-		return '___' + language.toUpperCase() + '_' + counter + '___';
-	}
-
-	/**
-	 * Returns the tokens of `Prism.tokenize` but also runs the `before-tokenize` and `after-tokenize` hooks.
-	 *
-	 * @param {string} code
-	 * @param {any} grammar
-	 * @param {string} language
-	 * @returns {(string|Token)[]}
-	 */
-	function tokenizeWithHooks(code, grammar, language) {
-		var env = {
-			code: code,
-			grammar: grammar,
-			language: language
-		};
-		Prism.hooks.run('before-tokenize', env);
-		env.tokens = Prism.tokenize(env.code, env.grammar);
-		Prism.hooks.run('after-tokenize', env);
-		return env.tokens;
-	}
-
-	/**
-	 * Returns the token of the given JavaScript interpolation expression.
-	 *
-	 * @param {string} expression The code of the expression. E.g. `"${42}"`
-	 * @returns {Token}
-	 */
-	function tokenizeInterpolationExpression(expression) {
-		var tempGrammar = {};
-		tempGrammar['interpolation-punctuation'] = interpolationPunctuationObject;
-
-		/** @type {Array} */
-		var tokens = Prism.tokenize(expression, tempGrammar);
-		if (tokens.length === 3) {
-			/**
-			 * The token array will look like this
-			 * [
-			 *     ["interpolation-punctuation", "${"]
-			 *     "..." // JavaScript expression of the interpolation
-			 *     ["interpolation-punctuation", "}"]
-			 * ]
-			 */
-
-			var args = [1, 1];
-			args.push.apply(args, tokenizeWithHooks(tokens[1], Prism.languages.javascript, 'javascript'));
-
-			tokens.splice.apply(tokens, args);
-		}
-
-		return new Prism.Token('interpolation', tokens, interpolationObject.alias, expression);
-	}
-
-	/**
-	 * Tokenizes the given code with support for JavaScript interpolation expressions mixed in.
-	 *
-	 * This function has 3 phases:
-	 *
-	 * 1. Replace all JavaScript interpolation expression with a placeholder.
-	 *    The placeholder will have the syntax of a identify of the target language.
-	 * 2. Tokenize the code with placeholders.
-	 * 3. Tokenize the interpolation expressions and re-insert them into the tokenize code.
-	 *    The insertion only works if a placeholder hasn't been "ripped apart" meaning that the placeholder has been
-	 *    tokenized as two tokens by the grammar of the embedded language.
-	 *
-	 * @param {string} code
-	 * @param {object} grammar
-	 * @param {string} language
-	 * @returns {Token}
-	 */
-	function tokenizeEmbedded(code, grammar, language) {
-		// 1. First filter out all interpolations
-
-		// because they might be escaped, we need a lookbehind, so we use Prism
-		/** @type {(Token|string)[]} */
-		var _tokens = Prism.tokenize(code, {
-			'interpolation': {
-				pattern: RegExp(interpolationPattern),
-				lookbehind: true
-			}
-		});
-
-		// replace all interpolations with a placeholder which is not in the code already
-		var placeholderCounter = 0;
-		/** @type {Object<string, string>} */
-		var placeholderMap = {};
-		var embeddedCode = _tokens.map(function (token) {
-			if (typeof token === 'string') {
-				return token;
-			} else {
-				var interpolationExpression = token.content;
-
-				var placeholder;
-				while (code.indexOf(placeholder = getPlaceholder(placeholderCounter++, language)) !== -1) { }
-				placeholderMap[placeholder] = interpolationExpression;
-				return placeholder;
-			}
-		}).join('');
-
-
-		// 2. Tokenize the embedded code
-
-		var embeddedTokens = tokenizeWithHooks(embeddedCode, grammar, language);
-
-
-		// 3. Re-insert the interpolation
-
-		var placeholders = Object.keys(placeholderMap);
-		placeholderCounter = 0;
-
-		/**
-		 *
-		 * @param {(Token|string)[]} tokens
-		 * @returns {void}
-		 */
-		function walkTokens(tokens) {
-			for (var i = 0; i < tokens.length; i++) {
-				if (placeholderCounter >= placeholders.length) {
-					return;
-				}
-
-				var token = tokens[i];
-
-				if (typeof token === 'string' || typeof token.content === 'string') {
-					var placeholder = placeholders[placeholderCounter];
-					var s = typeof token === 'string' ? token : /** @type {string} */ (token.content);
-
-					var index = s.indexOf(placeholder);
-					if (index !== -1) {
-						++placeholderCounter;
-
-						var before = s.substring(0, index);
-						var middle = tokenizeInterpolationExpression(placeholderMap[placeholder]);
-						var after = s.substring(index + placeholder.length);
-
-						var replacement = [];
-						if (before) {
-							replacement.push(before);
-						}
-						replacement.push(middle);
-						if (after) {
-							var afterTokens = [after];
-							walkTokens(afterTokens);
-							replacement.push.apply(replacement, afterTokens);
-						}
-
-						if (typeof token === 'string') {
-							tokens.splice.apply(tokens, [i, 1].concat(replacement));
-							i += replacement.length - 1;
-						} else {
-							token.content = replacement;
-						}
-					}
-				} else {
-					var content = token.content;
-					if (Array.isArray(content)) {
-						walkTokens(content);
-					} else {
-						walkTokens([content]);
-					}
-				}
-			}
-		}
-		walkTokens(embeddedTokens);
-
-		return new Prism.Token(language, embeddedTokens, 'language-' + language, code);
-	}
-
-	/**
-	 * The languages for which JS templating will handle tagged template literals.
-	 *
-	 * JS templating isn't active for only JavaScript but also related languages like TypeScript, JSX, and TSX.
-	 */
-	var supportedLanguages = {
-		'javascript': true,
-		'js': true,
-		'typescript': true,
-		'ts': true,
-		'jsx': true,
-		'tsx': true,
-	};
-	Prism.hooks.add('after-tokenize', function (env) {
-		if (!(env.language in supportedLanguages)) {
-			return;
-		}
-
-		/**
-		 * Finds and tokenizes all template strings with an embedded languages.
-		 *
-		 * @param {(Token | string)[]} tokens
-		 * @returns {void}
-		 */
-		function findTemplateStrings(tokens) {
-			for (var i = 0, l = tokens.length; i < l; i++) {
-				var token = tokens[i];
-
-				if (typeof token === 'string') {
-					continue;
-				}
-
-				var content = token.content;
-				if (!Array.isArray(content)) {
-					if (typeof content !== 'string') {
-						findTemplateStrings([content]);
-					}
-					continue;
-				}
-
-				if (token.type === 'template-string') {
-					/**
-					 * A JavaScript template-string token will look like this:
-					 *
-					 * ["template-string", [
-					 *     ["template-punctuation", "`"],
-					 *     (
-					 *         An array of "string" and "interpolation" tokens. This is the simple string case.
-					 *         or
-					 *         ["embedded-code", "..."] This is the token containing the embedded code.
-					 *                                  It also has an alias which is the language of the embedded code.
-					 *     ),
-					 *     ["template-punctuation", "`"]
-					 * ]]
-					 */
-
-					var embedded = content[1];
-					if (content.length === 3 && typeof embedded !== 'string' && embedded.type === 'embedded-code') {
-						// get string content
-						var code = stringContent(embedded);
-
-						var alias = embedded.alias;
-						var language = Array.isArray(alias) ? alias[0] : alias;
-
-						var grammar = Prism.languages[language];
-						if (!grammar) {
-							// the embedded language isn't registered.
-							continue;
-						}
-
-						content[1] = tokenizeEmbedded(code, grammar, language);
-					}
-				} else {
-					findTemplateStrings(content);
-				}
-			}
-		}
-
-		findTemplateStrings(env.tokens);
-	});
-
-
-	/**
-	 * Returns the string content of a token or token stream.
-	 *
-	 * @param {string | Token | (string | Token)[]} value
-	 * @returns {string}
-	 */
-	function stringContent(value) {
-		if (typeof value === 'string') {
-			return value;
-		} else if (Array.isArray(value)) {
-			return value.map(stringContent).join('');
-		} else {
-			return stringContent(value.content);
-		}
-	}
-
-}(Prism));
-
 Prism.languages.json = {
 	'property': {
 		pattern: /"(?:\\.|[^\\"\r\n])*"(?=\s*:)/,
@@ -1452,6 +1036,61 @@ Prism.languages.json = {
 		alias: 'keyword'
 	}
 };
+
+/* FIXME :
+ :extend() is not handled specifically : its highlighting is buggy.
+ Mixin usage must be inside a ruleset to be highlighted.
+ At-rules (e.g. import) containing interpolations are buggy.
+ Detached rulesets are highlighted as at-rules.
+ A comment before a mixin usage prevents the latter to be properly highlighted.
+ */
+
+Prism.languages.less = Prism.languages.extend('css', {
+	'comment': [
+		/\/\*[\s\S]*?\*\//,
+		{
+			pattern: /(^|[^\\])\/\/.*/,
+			lookbehind: true
+		}
+	],
+	'atrule': {
+		pattern: /@[\w-]+?(?:\((?:[^(){}]|\([^(){}]*\))*\)|[^(){};])*?(?=\s*\{)/,
+		inside: {
+			'punctuation': /[:()]/
+		}
+	},
+	// selectors and mixins are considered the same
+	'selector': {
+		pattern: /(?:@\{[\w-]+\}|[^{};\s@])(?:@\{[\w-]+\}|\((?:[^(){}]|\([^(){}]*\))*\)|[^(){};@])*?(?=\s*\{)/,
+		inside: {
+			// mixin parameters
+			'variable': /@+[\w-]+/
+		}
+	},
+
+	'property': /(?:@\{[\w-]+\}|[\w-])+(?:\+_?)?(?=\s*:)/i,
+	'operator': /[+\-*\/]/
+});
+
+Prism.languages.insertBefore('less', 'property', {
+	'variable': [
+		// Variable declaration (the colon must be consumed!)
+		{
+			pattern: /@[\w-]+\s*:/,
+			inside: {
+				"punctuation": /:/
+			}
+		},
+
+		// Variable usage
+		/@@?[\w-]+/
+	],
+	'mixin-usage': {
+		pattern: /([{;]\s*)[.#](?!\d)[\w-]+.*?(?=[(;])/,
+		lookbehind: true,
+		alias: 'function'
+	}
+});
 
 (function (Prism) {
 
@@ -1890,6 +1529,71 @@ Prism.languages.json = {
 
 }(Prism));
 
+Prism.languages.python = {
+	'comment': {
+		pattern: /(^|[^\\])#.*/,
+		lookbehind: true
+	},
+	'string-interpolation': {
+		pattern: /(?:f|rf|fr)(?:("""|''')[\s\S]+?\1|("|')(?:\\.|(?!\2)[^\\\r\n])*\2)/i,
+		greedy: true,
+		inside: {
+			'interpolation': {
+				// "{" <expression> <optional "!s", "!r", or "!a"> <optional ":" format specifier> "}"
+				pattern: /((?:^|[^{])(?:{{)*){(?!{)(?:[^{}]|{(?!{)(?:[^{}]|{(?!{)(?:[^{}])+})+})+}/,
+				lookbehind: true,
+				inside: {
+					'format-spec': {
+						pattern: /(:)[^:(){}]+(?=}$)/,
+						lookbehind: true
+					},
+					'conversion-option': {
+						pattern: /![sra](?=[:}]$)/,
+						alias: 'punctuation'
+					},
+					rest: null
+				}
+			},
+			'string': /[\s\S]+/
+		}
+	},
+	'triple-quoted-string': {
+		pattern: /(?:[rub]|rb|br)?("""|''')[\s\S]+?\1/i,
+		greedy: true,
+		alias: 'string'
+	},
+	'string': {
+		pattern: /(?:[rub]|rb|br)?("|')(?:\\.|(?!\1)[^\\\r\n])*\1/i,
+		greedy: true
+	},
+	'function': {
+		pattern: /((?:^|\s)def[ \t]+)[a-zA-Z_]\w*(?=\s*\()/g,
+		lookbehind: true
+	},
+	'class-name': {
+		pattern: /(\bclass\s+)\w+/i,
+		lookbehind: true
+	},
+	'decorator': {
+		pattern: /(^\s*)@\w+(?:\.\w+)*/im,
+		lookbehind: true,
+		alias: ['annotation', 'punctuation'],
+		inside: {
+			'punctuation': /\./
+		}
+	},
+	'keyword': /\b(?:and|as|assert|async|await|break|class|continue|def|del|elif|else|except|exec|finally|for|from|global|if|import|in|is|lambda|nonlocal|not|or|pass|print|raise|return|try|while|with|yield)\b/,
+	'builtin': /\b(?:__import__|abs|all|any|apply|ascii|basestring|bin|bool|buffer|bytearray|bytes|callable|chr|classmethod|cmp|coerce|compile|complex|delattr|dict|dir|divmod|enumerate|eval|execfile|file|filter|float|format|frozenset|getattr|globals|hasattr|hash|help|hex|id|input|int|intern|isinstance|issubclass|iter|len|list|locals|long|map|max|memoryview|min|next|object|oct|open|ord|pow|property|range|raw_input|reduce|reload|repr|reversed|round|set|setattr|slice|sorted|staticmethod|str|sum|super|tuple|type|unichr|unicode|vars|xrange|zip)\b/,
+	'boolean': /\b(?:True|False|None)\b/,
+	'number': /(?:\b(?=\d)|\B(?=\.))(?:0[bo])?(?:(?:\d|0x[\da-f])[\da-f]*\.?\d*|\.\d+)(?:e[+-]?\d+)?j?\b/i,
+	'operator': /[-+%=]=?|!=|\*\*?=?|\/\/?=?|<[<=>]?|>[=>]?|[&|^~]/,
+	'punctuation': /[{}[\];(),.:]/
+};
+
+Prism.languages.python['string-interpolation'].inside['interpolation'].inside.rest = Prism.languages.python;
+
+Prism.languages.py = Prism.languages.python;
+
 (function(Prism) {
 
 var javascript = Prism.util.clone(Prism.languages.javascript);
@@ -2274,4 +1978,3 @@ Prism.languages.insertBefore('scss', 'function', {
 });
 
 Prism.languages.scss['atrule'].inside.rest = Prism.languages.scss;
-
