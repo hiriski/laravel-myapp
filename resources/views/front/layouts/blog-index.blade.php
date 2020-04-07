@@ -32,7 +32,9 @@
                         <div class="_img_">
                         <a href="{{ route('blog.show', $item->slug) }}">
                         @if(!empty($item->image) || !empty($item->image_md))
-                            <img src="{{ getBlogImage($item->image_md) }}" alt="{{ $item->title }}">
+                            <img class="blurry-load"
+                                src="{{ getBlogImage($item->image_xs) }}"
+                                data-large="{{ getBlogImage($item->image_md) }}" alt="{{ $item->title }}">
                         @else
                             <img src="{{ asset('images/md.jpg') }}" alt="No image">
                         @endif

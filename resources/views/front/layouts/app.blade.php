@@ -120,7 +120,7 @@
 @endif
 
     <div id="AnhOi" data-version="one" data-version-name="anhoi-mot">
-        @include('front.components.preload')
+        {{-- @include('front.components.preload') --}}
         @if( Route::getCurrentRoute()->uri === "/" || Route::getCurrentRoute()->uri === "blog")
             @include('front.layouts.hero')
         @endif

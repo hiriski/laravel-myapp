@@ -41,7 +41,9 @@
                         <div class="__">
                             <div class="_img_">
                             @if(!empty($post->image))
-                                <img src="{{ getBlogImage($post->image) }}" alt="{{ $post->title }}">
+                                <img class="blurry-load"
+                                    src="{{ getBlogImage($post->image_xs) }}"
+                                    data-large="{{ getBlogImage($post->image) }}" alt="{{ $post->title }}">
                             @endif
                             </div>
                         </div>

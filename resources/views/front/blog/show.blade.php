@@ -18,5 +18,13 @@
 @endsection
 
 @push('script')
+<script src="{{ asset('js/lazyload.min.js') }}"></script>
+<script>
+var lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lz_"
+    // ... more custom settings?
+});
+</script>
+<script src="{{ asset('js/blurry-load.min.js') }}"></script>
 <script src="{{ asset('js/prism.js') }}"></script>
 @endpush
