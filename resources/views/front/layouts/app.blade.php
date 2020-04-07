@@ -115,6 +115,8 @@
 <body data-theme="light" data-page="blog-index">
 @elseif(Route::currentRouteName() === "blog.show")
 <body data-theme="light" data-page="blog-single">
+@elseif(Route::currentRouteName() === "index")
+<body data-theme="light" data-page="home">
 @else
 <body data-theme="light">
 @endif
