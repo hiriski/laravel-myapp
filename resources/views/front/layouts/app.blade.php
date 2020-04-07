@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="csrf-token" content="{{ csrf_token() }}">
+<link rel="icon" href="{{ asset('favicon.ico') }}"/>
 
 <!-- Auto Generate for SEO -->
 {!! SEOMeta::generate() !!}
@@ -103,63 +104,11 @@
     }
 </script>
 @endif
-@if(Route::currentRouteName() === "product.show")
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": "Executive Anvil",
-    "image": [
-        "https://example.com/photos/1x1/photo.jpg",
-        "https://example.com/photos/4x3/photo.jpg",
-        "https://example.com/photos/16x9/photo.jpg"
-        ],
-    "description": "Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the business traveler looking for something to drop from a height.",
-    "sku": "0446310786",
-    "mpn": "925872",
-    "brand": {
-        "@type": "Brand",
-        "name": "ACME"
-    },
-    "review": {
-        "@type": "Review",
-        "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "4",
-            "bestRating": "5"
-        },
-        "author": {
-            "@type": "Person",
-            "name": "Fred Benson"
-        }
-    },
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.4",
-        "reviewCount": "89"
-    },
-    "offers": {
-        "@type": "Offer",
-        "url": "https://example.com/anvil",
-        "priceCurrency": "USD",
-        "price": "119.99",
-        "priceValidUntil": "2020-11-20",
-        "itemCondition": "https://schema.org/UsedCondition",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-            "@type": "Organization",
-            "name": "Executive Objects"
-        }
-    }
-}
-</script>
-@endif
 {{-- Styles --}}
 <script src="{{ asset('js/app.js') }}" defer></script>
 <link rel="stylesheet" href="{{ asset('fonts/hk-grotesk/style.css') }}">
 <link rel="stylesheet" href="{{ asset('fonts/material-icons/material-icons.css') }}">
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
 </head>
 
 @if(Route::currentRouteName() === "blog.index")
@@ -177,8 +126,8 @@
         @endif
         <main id="main">
             @yield('content')
+            @include('front.layouts.footer')
         </main>
-        @include('front.layouts.footer')
     </div>
 
 @stack('script')

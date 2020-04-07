@@ -4,28 +4,27 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Error</title>
-        <meta name="description" content="Eror"/>
-        <meta name="keywords" content="Error"/>
+        <title>@yield('title')</title>
+        <link rel="icon" href="{{ asset('favicon.ico') }}"/>
         <style>
             body {
                 margin: 0;
                 padding: 0;
-                font-family: "Segoe UI", Roboto, Helvetica Neue, Arial, sans-serif;
+                font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 background-color: #f7f7f7;
                 color: #555;
             }
-            #ERR_404 {  
+            #ERR {  
                 height: 100vh;
                 width: 100%;
             }
-            #ERR_404 {
+            #ERR {
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
-            #ERR_404:before,
-            #ERR_404:after {
+            #ERR:before,
+            #ERR:after {
                 transform-origin: left bottom;
                 height: 100vh;
                 position: absolute;
@@ -36,19 +35,19 @@
                 display: block;
                 right: 0;
             }
-            .err_404 {
+            .err {
                 text-align: center;
             }
             .svg {
                 display: block;
             }
             svg {
-                height: 90px;
-                width: 90px;
+                height: 125px;
+                width: 125px;
             }
             h1 {
                 margin: 0px 0 1rem 0;
-                font-size: 2.5rem
+                font-size: 4.5rem
             }
             span {
                 font-size: 1.35rem;
@@ -72,7 +71,7 @@
                 vertical-align: middle;
             }
             @media screen and (max-width:480px) {
-                .err_404 {
+                .err {
                     padding: 1rem;
                 }
                 .svg svg {
