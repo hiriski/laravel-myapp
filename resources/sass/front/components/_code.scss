@@ -35,7 +35,7 @@ pre[class*=language] {
             width: 48px;
             padding-right: 10px;
             color: #797979;
-            font-size: 15px;
+            font-size: 14px;
             line-height: $code-line-height !important;
             @media #{$mobile-md-width} {
                 font-size: 14px;
@@ -156,8 +156,134 @@ pre[class*=language] {
                 }
             }
         }
+
+        &[class$="-markup"] {
+            color: #ffb951;
+            .token {
+                &.tag {
+                    color: #ff759a;
+                }
+                &.attr-name {
+                    color: #29bdff;
+                }
+                &.attr-value {
+                    color: #6abf6d;
+                }
+                &.punctuation {
+                    color: #b3b3b3;
+                }
+            }
+        }
         
     }
+
+
+    /** light theme */
+    &[data-color*="light"] {
+        @extend %set-background-light;
+        @include box-shadow(0, 2px, 4px, 1px, rgba($main-color, 0.1));
+        color: #3d78c3;
+        .token {
+            &.comment {
+                color: #a5a5a5;
+            }
+            &.function {
+                color: #6e4fab;
+            }
+            &.keyword {
+                color: #e4427c;
+            }
+            &.string {
+                color: #6d6d6d;
+            }
+            &.opeator {
+                color: #ff7410;
+            }
+            &.punctuation {
+                color: #0f0b0b;
+            }
+        }
+
+
+        &[class$="-css"] {
+            .token {
+                &.atrule {
+                    color: #e4427c;
+                }
+                &.selector {
+                    color: #3d78c3;
+                }
+                &.url {
+                    color: #378a3a;
+                }
+                &.property {
+                    color: #ff8135;
+                }
+                &.function {
+                    color: #e4427c;
+                }
+                &.important {
+                    color: #6e4fab;
+                }
+            }
+            
+        }
+
+        &[class$="-scss"] {
+            color: #3d78c3;
+            .token {
+                &.selector {
+                    color: #FF5722;
+                }
+                &.variable {
+                    color: #41ad45;
+                }
+                &.property {
+                    color: #ff6d15;
+                }
+            }
+            
+        }
+
+
+        &[class$="-javascript"] {
+            .token {
+                &.operator {
+                    color: #ff8135;
+                }
+                &.string {
+                    color: #378a3a;
+                }
+                &.number {
+                    color: #FF5722;
+                }
+                &.operator {
+                    color: #e831af;
+                }
+            }
+        }
+
+        &[class$="-markup"] {
+            color: #E91E63;
+            .token {
+                &.tag {
+                    color: #1c8621;
+                }
+                &.attr-name {
+                    color: #673ab7;
+                }
+                &.attr-value {
+                    color: #405886;
+                }
+                &.punctuation {
+                    color: #5d5d5d;
+                }
+            }
+        }
+
+    }
+
+
 
 
 }

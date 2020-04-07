@@ -4,7 +4,7 @@ const changeTitle = () => {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    removePreload();
+    // removePreload();
     // changeTitle();
 })
 

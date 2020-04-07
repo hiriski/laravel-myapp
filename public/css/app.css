@@ -452,7 +452,8 @@ a.anhoi-btn,
   vertical-align: middle;
 }
 
-[data-theme=light] {
+[data-theme=light],
+pre[class*=language][data-color*=light] {
   background: #f7f7f7;
 }
 
@@ -979,8 +980,8 @@ textarea::placeholder {
 }
 
 .blurry-load {
-  -webkit-filter: blur(20px);
-  filter: blur(20px);
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
 }
 
 @-webkit-keyframes blurOut {
@@ -1018,8 +1019,8 @@ textarea::placeholder {
 }
 
 .blur-out {
-  -webkit-animation: blurOut 0.65s ease-out;
-  animation: blurOut 0.65s ease-out;
+  -webkit-animation: blurOut 0.5s ease-out;
+  animation: blurOut 0.5s ease-out;
 }
 
 @-webkit-keyframes shimmer {
@@ -1043,8 +1044,8 @@ textarea::placeholder {
 }
 
 .no-blur {
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-iteration-count: infinite;
@@ -1341,6 +1342,7 @@ pre[class*=language] {
   /** Line Numbers */
   /** File name */
   /** Color schema "Monokai Pro' (Visual Studio Code) */
+  /** light theme */
 }
 
 @media screen and (max-width: 575px) {
@@ -1370,7 +1372,7 @@ pre[class*=language] .line-number span {
   width: 48px;
   padding-right: 10px;
   color: #797979;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 26px !important;
 }
 
@@ -1494,6 +1496,133 @@ pre[class*=language][data-color=monokai-pro][class*=-javascript] .token.regex {
 
 pre[class*=language][data-color=monokai-pro][class*=-javascript] .token.number {
   color: #ff9063;
+}
+
+pre[class*=language][data-color=monokai-pro][class$=-markup] {
+  color: #ffb951;
+}
+
+pre[class*=language][data-color=monokai-pro][class$=-markup] .token.tag {
+  color: #ff759a;
+}
+
+pre[class*=language][data-color=monokai-pro][class$=-markup] .token.attr-name {
+  color: #29bdff;
+}
+
+pre[class*=language][data-color=monokai-pro][class$=-markup] .token.attr-value {
+  color: #6abf6d;
+}
+
+pre[class*=language][data-color=monokai-pro][class$=-markup] .token.punctuation {
+  color: #b3b3b3;
+}
+
+pre[class*=language][data-color*=light] {
+  box-shadow: 0 2px 4px 1px rgba(68, 68, 68, 0.1);
+  -moz-box-shadow: 0 2px 4px 1px rgba(68, 68, 68, 0.1);
+  -webkit-box-shadow: 0 2px 4px 1px rgba(68, 68, 68, 0.1);
+  color: #3d78c3;
+}
+
+pre[class*=language][data-color*=light] .token.comment {
+  color: #a5a5a5;
+}
+
+pre[class*=language][data-color*=light] .token.function {
+  color: #6e4fab;
+}
+
+pre[class*=language][data-color*=light] .token.keyword {
+  color: #e4427c;
+}
+
+pre[class*=language][data-color*=light] .token.string {
+  color: #6d6d6d;
+}
+
+pre[class*=language][data-color*=light] .token.opeator {
+  color: #ff7410;
+}
+
+pre[class*=language][data-color*=light] .token.punctuation {
+  color: #0f0b0b;
+}
+
+pre[class*=language][data-color*=light][class$=-css] .token.atrule {
+  color: #e4427c;
+}
+
+pre[class*=language][data-color*=light][class$=-css] .token.selector {
+  color: #3d78c3;
+}
+
+pre[class*=language][data-color*=light][class$=-css] .token.url {
+  color: #378a3a;
+}
+
+pre[class*=language][data-color*=light][class$=-css] .token.property {
+  color: #ff8135;
+}
+
+pre[class*=language][data-color*=light][class$=-css] .token.function {
+  color: #e4427c;
+}
+
+pre[class*=language][data-color*=light][class$=-css] .token.important {
+  color: #6e4fab;
+}
+
+pre[class*=language][data-color*=light][class$=-scss] {
+  color: #3d78c3;
+}
+
+pre[class*=language][data-color*=light][class$=-scss] .token.selector {
+  color: #FF5722;
+}
+
+pre[class*=language][data-color*=light][class$=-scss] .token.variable {
+  color: #41ad45;
+}
+
+pre[class*=language][data-color*=light][class$=-scss] .token.property {
+  color: #ff6d15;
+}
+
+pre[class*=language][data-color*=light][class$=-javascript] .token.operator {
+  color: #ff8135;
+}
+
+pre[class*=language][data-color*=light][class$=-javascript] .token.string {
+  color: #378a3a;
+}
+
+pre[class*=language][data-color*=light][class$=-javascript] .token.number {
+  color: #FF5722;
+}
+
+pre[class*=language][data-color*=light][class$=-javascript] .token.operator {
+  color: #e831af;
+}
+
+pre[class*=language][data-color*=light][class$=-markup] {
+  color: #E91E63;
+}
+
+pre[class*=language][data-color*=light][class$=-markup] .token.tag {
+  color: #1c8621;
+}
+
+pre[class*=language][data-color*=light][class$=-markup] .token.attr-name {
+  color: #673ab7;
+}
+
+pre[class*=language][data-color*=light][class$=-markup] .token.attr-value {
+  color: #405886;
+}
+
+pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
+  color: #5d5d5d;
 }
 
 ::-webkit-scrollbar {
