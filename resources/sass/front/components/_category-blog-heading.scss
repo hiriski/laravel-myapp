@@ -6,6 +6,7 @@
         ._x0 {
             @extend %flex;
             @extend %align-items-center;
+            @extend %margin-bottom-sm;
             > [class$=svg] {
                 @extend %margin-right-sm;
                 svg {

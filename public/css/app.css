@@ -125,6 +125,7 @@ a.anhoi-btn {
 }
 
 [data-page=home] main#main,
+.__aw__,
 pre[class*=language] span.code-filename,
 #hero_nav ._ ._a ul li a i,
 ._x0 ._a,
@@ -147,6 +148,7 @@ pre[class*=language] span.code-filename,
 
 #hero .-_-_-,
 #hero,
+.__aw__,
 #_x0 > div,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
 #_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
@@ -191,6 +193,7 @@ pre[class*=language],
 }
 
 #_Bx .__i__ .c_ > ._xo ._t_,
+#_H_Cb ._ ._x0,
 ._ps_ div,
 ._ps_ h1,
 ._ps_ h2,
@@ -270,7 +273,8 @@ pre[class*=language],
 }
 
 [data-page=home] main#main,
-#hero .-_-_- {
+#hero .-_-_-,
+.__aw__ {
   width: 100%;
 }
 
@@ -1673,6 +1677,10 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 #_H_Cb ._ ._x0 > [class$=svg] svg {
   width: 42px;
   height: 42px;
+}
+
+.__aw__ {
+  height: auto;
 }
 
 #hero > #xGyoHDpi {
