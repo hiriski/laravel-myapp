@@ -1363,7 +1363,7 @@ pre[class*=language-] {
 }
 
 pre[class*=language] {
-  margin: 1rem -100px;
+  /** Data size */
   padding: 32px 24px 28px 60px;
   overflow: auto;
   font-weight: 500;
@@ -1374,6 +1374,15 @@ pre[class*=language] {
   /** File name */
   /** Color schema "Monokai Pro' (Visual Studio Code) */
   /** light theme */
+}
+
+pre[class*=language][data-size=wide] {
+  margin: 1rem -100px;
+}
+
+pre[class*=language][data-line-numbers=false] {
+  padding: 14px 20px;
+  border-radius: 0.25rem;
 }
 
 @media screen and (max-width: 575px) {
@@ -1470,6 +1479,10 @@ pre[class*=language][data-color=monokai-pro] .token.comment {
 
 pre[class*=language][data-color=monokai-pro] .token.number {
   color: #d58cff;
+}
+
+pre[class*=language][data-color=monokai-pro] .token.operator {
+  color: #ff5f95;
 }
 
 pre[class*=language][data-color=monokai-pro][class*=-php] .token.class-name {
@@ -1569,15 +1582,15 @@ pre[class*=language][data-color*=light] .token.keyword {
 }
 
 pre[class*=language][data-color*=light] .token.string {
-  color: #6d6d6d;
+  color: #1a841e;
 }
 
-pre[class*=language][data-color*=light] .token.opeator {
-  color: #ff7410;
+pre[class*=language][data-color*=light] .token.operator {
+  color: #f17c00;
 }
 
 pre[class*=language][data-color*=light] .token.punctuation {
-  color: #0f0b0b;
+  color: #656565;
 }
 
 pre[class*=language][data-color*=light][class$=-css] .token.atrule {
@@ -1613,7 +1626,7 @@ pre[class*=language][data-color*=light][class$=-scss] .token.selector {
 }
 
 pre[class*=language][data-color*=light][class$=-scss] .token.variable {
-  color: #41ad45;
+  color: #2e6bb9;
 }
 
 pre[class*=language][data-color*=light][class$=-scss] .token.property {

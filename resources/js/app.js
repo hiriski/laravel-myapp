@@ -18,7 +18,7 @@ const removePreload = () => {
 
 /** Line Number for pre tag */
 (function () {
-    for (var tagPre = document.querySelectorAll("pre"),
+    for (var tagPre = document.querySelectorAll('pre[class*="language-"]:not([data-line-numbers="false"]'),
             preLength = tagPre.length,
             a = 0; preLength > a; a++) {
         tagPre[a].innerHTML = '<span class="line-number"></span>' + tagPre[a].innerHTML;
@@ -31,7 +31,7 @@ const removePreload = () => {
 
 
 /** Code Data File Name */
-const blogCode = document.querySelectorAll('pre[class*="language-"]');
+const blogCode = document.querySelectorAll('pre[class*="language-"][data-filename]');
 if(blogCode) {
     for(var i = 0; i < blogCode.length; i++) {
         const codeFileName = blogCode[i].dataset.filename;

@@ -1,5 +1,15 @@
 pre[class*=language] {
-    margin: 1rem -100px;
+    
+    /** Data size */
+    &[data-size=wide] {
+        margin: 1rem -100px;
+    }
+
+    &[data-line-numbers=false] {
+        padding: 14px 20px;
+        border-radius: .25rem;
+    }
+
     @extend %relative;
     @extend %border-radius;
     padding: 32px 24px 28px 60px;
@@ -93,6 +103,9 @@ pre[class*=language] {
             }
             &.number {
                 color: #d58cff;
+            }
+            &.operator {
+                color: #ff5f95;
             }
         }
 
@@ -194,13 +207,13 @@ pre[class*=language] {
                 color: #e4427c;
             }
             &.string {
-                color: #6d6d6d;
+                color: #1a841e;
             }
-            &.opeator {
-                color: #ff7410;
+            &.operator {
+                color: #f17c00;
             }
             &.punctuation {
-                color: #0f0b0b;
+                color: #656565;
             }
         }
 
@@ -236,7 +249,7 @@ pre[class*=language] {
                     color: #FF5722;
                 }
                 &.variable {
-                    color: #41ad45;
+                    color: #2e6bb9;
                 }
                 &.property {
                     color: #ff6d15;

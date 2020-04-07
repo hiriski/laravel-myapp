@@ -112,7 +112,7 @@ var removePreload = function removePreload() {
 
 
 (function () {
-  for (var tagPre = document.querySelectorAll("pre"), preLength = tagPre.length, a = 0; preLength > a; a++) {
+  for (var tagPre = document.querySelectorAll('pre[class*="language-"]:not([data-line-numbers="false"]'), preLength = tagPre.length, a = 0; preLength > a; a++) {
     tagPre[a].innerHTML = '<span class="line-number"></span>' + tagPre[a].innerHTML;
 
     for (var s = tagPre[a].innerHTML.split(/\n/).length, r = 0; s > r; r++) {
@@ -124,7 +124,7 @@ var removePreload = function removePreload() {
 /** Code Data File Name */
 
 
-var blogCode = document.querySelectorAll('pre[class*="language-"]');
+var blogCode = document.querySelectorAll('pre[class*="language-"][data-filename]');
 
 if (blogCode) {
   for (var i = 0; i < blogCode.length; i++) {
