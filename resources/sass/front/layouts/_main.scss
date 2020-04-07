@@ -1,11 +1,21 @@
 main#main {
-    @extend %absolute;
-    @extend %full-width;
-    min-height: 100%;
-    top: 100vh;
+    @at-root {
+        [data-page=home] {
+            main#main {
+                @extend %absolute;
+                @extend %full-width;
+                min-height: 100%;
+                top: 100vh;
+            }
+        }
+        [data-theme=light] {
+            main#main {
+                @extend %set-background-white;
+            }
+        }
+    }
     .Anh {
         @extend %relative;
-        @extend %set-background-white;
         padding: 80px 0;
         > .__o__ {
             @extend %flex;

@@ -11,6 +11,9 @@
             /** Main heading */
             ._g_ {
                 @extend %main-heading-center;
+                ._ {
+                    @extend %give-standard-padding;
+                }
             }
             .__quote__ {
                 @extend %flex;

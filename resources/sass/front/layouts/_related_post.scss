@@ -5,8 +5,7 @@
     > .__q__ {
         @extend %lite-width;
         > ._cn_ {
-            margin-left: -12px;
-            margin-right: -12px;
+            @extend %give-standard-margin;
             > .__sa {
                 @extend %flex;
                 @extend %flex-wrap-wrap;

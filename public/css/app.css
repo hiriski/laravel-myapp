@@ -67,6 +67,7 @@ footer#main .c__ > p:first-child > span:before {
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
 #hero .me ._o p,
 #hero .me ._i h2 + span,
+#_H_Cb ._ > p,
 #Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child + *:not(div) {
   color: #707070;
 }
@@ -89,6 +90,10 @@ pre[class*=language] span.code-filename {
 
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:last-child {
   font-size: 16px;
+}
+
+#_H_Cb ._ > p {
+  font-size: 20px;
 }
 
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
@@ -119,7 +124,7 @@ a.anhoi-btn {
   overflow: hidden;
 }
 
-main#main,
+[data-page=home] main#main,
 pre[class*=language] span.code-filename,
 #hero_nav ._ ._a ul li a i,
 ._x0 ._a,
@@ -197,6 +202,7 @@ pre[class*=language],
 }
 
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic,
+#_H_Cb ._ ._x0 > [class$=svg],
 #hero_social_links ._s ul li a {
   margin-right: 0.85rem;
 }
@@ -225,12 +231,30 @@ pre[class*=language],
 }
 
 [data-blog=single][data-version=two] ._io_ ._m_,
-#_Bx > .__q__ > ._cn_ .__quote__ {
+#_Bx > .__q__ > ._cn_ .__quote__,
+#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] {
   margin-bottom: 2rem;
 }
 
 #RP {
   margin-top: 3rem;
+}
+
+#_H_Cb {
+  margin-bottom: 3rem;
+}
+
+/** Give Standar Padding/Margin for Block */
+
+#_Bx > .__q__ > ._cn_ ._g_ ._,
+#_H_Cb ._ {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+#RP > .__q__ > ._cn_ {
+  margin-left: -12px;
+  margin-right: -12px;
 }
 
 #hero > #xGyoHDpi,
@@ -245,7 +269,7 @@ pre[class*=language],
   height: 100%;
 }
 
-main#main,
+[data-page=home] main#main,
 #hero .-_-_- {
   width: 100%;
 }
@@ -304,6 +328,7 @@ main#main .Anh > .__o__,
 #hero .me .pic,
 #hero .me,
 #hero ._z ._q,
+#_H_Cb ._ ._x0,
 #__pg__ > .__ .pagination,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_],
 #_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] {
@@ -331,7 +356,8 @@ main#main .Anh > .__o__,
 #_Bx .__i__ .c_ ._m_ ._ic,
 #_Bx .__i__ .c_ ._m_,
 #hero .me .pic,
-#hero ._z ._q {
+#hero ._z ._q,
+#_H_Cb ._ ._x0 {
   align-items: center;
 }
 
@@ -395,6 +421,11 @@ ul,
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
 footer#main .c__ > p,
 #hero .me ._o p,
+#_H_Cb ._ ._x0 * h1,
+#_H_Cb ._ ._x0 * h2,
+#_H_Cb ._ ._x0 * h3,
+#_H_Cb ._ ._x0 * h4,
+#_H_Cb ._ ._x0 * h5 * h6,
 #__pg__ > .__ .pagination,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
 #_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
@@ -460,7 +491,7 @@ pre[class*=language][data-color*=light] {
 #RP .__i__ .c_ > ._xo,
 #_Bx .__i__ .c_ > ._xo,
 footer#main,
-main#main .Anh {
+[data-theme=light] main#main {
   background: #fff;
 }
 
@@ -505,10 +536,6 @@ footer#main > div[class*=_] > div {
 
 #Ftr_P > .__f__ > .__ ._mh_ {
   /** child pertama harus memiliki class disertai _ (underscore) */
-}
-
-#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] {
-  margin-bottom: 1.5rem;
 }
 
 #Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child + *:not(div) {
@@ -1643,6 +1670,11 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
   background: rgba(31, 119, 255, 0.1);
 }
 
+#_H_Cb ._ ._x0 > [class$=svg] svg {
+  width: 42px;
+  height: 42px;
+}
+
 #hero > #xGyoHDpi {
   background-position: top left;
   background-size: cover;
@@ -1682,7 +1714,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
   font-size: 18px;
 }
 
-main#main {
+[data-page=home] main#main {
   min-height: 100%;
   top: 100vh;
 }
@@ -1931,8 +1963,6 @@ footer#main .c__ > p i {
 }
 
 #RP > .__q__ > ._cn_ {
-  margin-left: -12px;
-  margin-right: -12px;
   /** Main heading */
 }
 
