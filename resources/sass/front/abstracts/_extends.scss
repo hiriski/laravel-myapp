@@ -75,6 +75,10 @@
     text-decoration: none;
 }
 
+%line-height-zero {
+    line-height: 0;
+}
+
 %reset-line-height {
     line-height: 1;
 }
@@ -141,6 +145,36 @@
 }
 
 /** Margin */
+%margin-top-xs {
+    margin-top: .5rem;
+}
+
+%margin-x-xs {
+    margin: {
+        left: .5rem;
+        right: .5rem; 
+    }
+}
+
+%margin-y-xs {
+    margin: {
+        top: .5rem;
+        bottom: .5rem; 
+    }
+}
+
+%margin-bottom-xs {
+    margin-bottom: .5rem;
+}
+
+%margin-right-xs {
+    margin-right: .5rem;
+}
+
+%margin-left-xs {
+    margin-left: .5rem;
+}
+
 %margin-top-sm {
     margin-top: .85rem;
 }

@@ -1,7 +1,7 @@
 $icon_social_link_size : 20px;
 
 #hero_social_links {
-    margin-top: 1.2rem;
+    @extend %margin-top;
     ._s {
         ul {
             @extend %remove-bullet-list;

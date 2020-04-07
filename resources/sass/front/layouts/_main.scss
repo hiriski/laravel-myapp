@@ -16,8 +16,9 @@ main#main {
     }
     .Anh {
         @extend %relative;
-        padding: 80px 0;
-        > .__o__ {
+        padding: 40px 0;
+        > .__o__ {  
+            padding-top: 50px;
             @extend %flex;
             > {
                 .__ {

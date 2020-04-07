@@ -8,6 +8,7 @@
 @endisset
 @section('content')
 <div class="Anh">
+    @include('front.components.navigation')
     <div class="__o__">
         <div class="__">
             @include('front.layouts.single-blog-v2')

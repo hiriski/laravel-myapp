@@ -121,16 +121,16 @@
 <body data-theme="light">
 @endif
 
-    <div id="AnhOi" data-version="one" data-version-name="anhoi-mot">
-        {{-- @include('front.components.preload') --}}
-        @if( Route::currentRouteName() === "index")
-            @include('front.layouts.hero')
-        @endif
-        <main id="main">
-            @yield('content')
-            @include('front.layouts.footer')
-        </main>
-    </div>
+<div id="AnhOi" data-version="one" data-version-name="anhoi-mot">
+    {{-- @include('front.components.preload') --}}
+    @if( Route::currentRouteName() === "index")
+        @include('front.layouts.hero')
+    @endif
+    <main id="main">
+        @yield('content')
+        @include('front.layouts.footer')
+    </main>
+</div>
 
 @stack('script')
 </body>

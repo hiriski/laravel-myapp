@@ -29,7 +29,7 @@
 ++++++++|  Author URI  : https://riski.web.id                            |++++++++
 ++++++++|  Version     : 1.2                                             |++++++++
 ++++++++|                                                                |++++++++
-++++++++|  Made with Sass & ❤ | Bandung/Indonesia                        |++++++++
+++++++++|  Made with Sass, RaxCore Sass & ❤ | Bandung/Indonesia          |++++++++
 ++++++++|                                                                |++++++++
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -72,7 +72,6 @@ footer#main .c__ > p:first-child > span:before {
 }
 
 #RP .__i__ .c_ ._m_ .d_,
-#RP > .__q__ > ._cn_ .__quote__ > blockquote,
 [data-blog=single] ._io_ ._m_ > ._ad_ > ._a > ._d,
 #_Bx .__i__ .c_ ._m_ .d_,
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
@@ -135,6 +134,10 @@ a.anhoi-btn {
   text-decoration: none;
 }
 
+#_n_ #_r_ ._z {
+  line-height: 0;
+}
+
 [data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
 [data-blog=single][data-version=two] ._io_ ._xo > .__,
 #hero .me ._i h2,
@@ -160,6 +163,7 @@ a.anhoi-btn {
 [data-page=home] main#main,
 .__aw__,
 pre[class*=language] span.code-filename,
+#_n_ ._ ._a ul li a i,
 #hero_nav ._ ._a ul li a i,
 ._x0 ._a,
 ._x0 ._b,
@@ -196,6 +200,7 @@ pre[class*=language] span.code-filename,
 #Ftr_P .__i__ ._img_,
 main#main .Anh,
 pre[class*=language],
+#_n_ ._ ._a ul li a,
 #hero_nav ._ ._a ul li a,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_] > *,
 #_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > *,
@@ -208,6 +213,7 @@ pre[class*=language],
 #_Bx .__i__ .c_ > ._xo,
 #_Bx .__i__ .c_,
 #hero .me .pic ._h img,
+#_n_ ._ ._a ul li a span,
 #hero_nav ._ ._a ul li a span,
 #_x0 {
   transition: all 0.3s ease;
@@ -220,11 +226,22 @@ pre[class*=language],
 
 /** Margin */
 
+#RP .__i__ .c_ ._m_ ._ic,
+#_n_ #_r_ ._z {
+  margin-right: 0.5rem;
+}
+
+#_n_ ._ ._a ul li a:hover span,
+#hero_nav ._ ._a ul li a:hover span {
+  margin-left: 0.5rem;
+}
+
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote cite,
 #hero .me ._o {
   margin-top: 0.85rem;
 }
 
+#RP .__i__ .c_ > ._xo ._t_,
 [data-blog=single] ._io_ ._ps_ .block p,
 #_Bx .__i__ .c_ > ._xo ._t_,
 #_H_Cb ._ ._x0,
@@ -240,12 +257,15 @@ pre[class*=language],
 
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic,
 #_H_Cb ._ ._x0 > [class$=svg],
+#_n_ ._ ._a ul li a,
+#hero_nav ._ ._a ul li a,
 #hero_social_links ._s ul li a {
   margin-right: 0.85rem;
 }
 
 [data-blog=single] ._io_ ._xo > .__,
-#_bt_ {
+#_bt_,
+#hero_social_links {
   margin-top: 1.25rem;
 }
 
@@ -284,7 +304,8 @@ pre[class*=language],
 /** Give Standar Padding/Margin for Block */
 
 #_Bx > .__q__ > ._cn_ ._g_ ._,
-#_H_Cb ._ {
+#_H_Cb ._,
+#_n_ ._ ._s {
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -315,6 +336,7 @@ pre[class*=language],
 main#main .Anh > .__o__ > .__,
 #hero ._y,
 #__pg__ > .__,
+#_n_ ._,
 #hero_nav ._ {
   width: 1000px;
   margin: 0 auto;
@@ -324,6 +346,7 @@ main#main .Anh > .__o__ > .__,
   main#main .Anh > .__o__ > .__,
   #hero ._y,
   #__pg__ > .__,
+  #_n_ ._,
   #hero_nav ._ {
     width: 100% !important;
   }
@@ -348,7 +371,6 @@ main#main .Anh > .__o__ > .__,
 #RP .__i__ .c_ ._m_ ._ic,
 #RP .__i__ .c_ ._m_ .__c,
 #RP .__i__ .c_ ._m_,
-#RP > .__q__ > ._cn_ .__quote__,
 #RP > .__q__ > ._cn_ > .__sa,
 [data-blog=single] ._io_ ._m_ > .__c,
 [data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
@@ -368,6 +390,8 @@ main#main .Anh > .__o__,
 #hero ._z ._q,
 #_H_Cb ._ ._x0,
 #__pg__ > .__ .pagination,
+#_n_ ._ ._a,
+#_n_ #_r_,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_],
 #_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] {
   display: flex;
@@ -375,7 +399,6 @@ main#main .Anh > .__o__,
 }
 
 #RP .__l_m,
-#RP > .__q__ > ._cn_ .__quote__,
 [data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
 [data-blog=single] ._io_ ._m_,
 #_Bx .__l_m,
@@ -395,7 +418,9 @@ main#main .Anh > .__o__,
 #_Bx .__i__ .c_ ._m_,
 #hero .me .pic,
 #hero ._z ._q,
-#_H_Cb ._ ._x0 {
+#_H_Cb ._ ._x0,
+#_n_ ._ ._a,
+#_n_ #_r_ {
   align-items: center;
 }
 
@@ -415,7 +440,8 @@ main#main .Anh > .__o__,
 }
 
 #RP .__i__ .c_ ._m_,
-#_Bx .__i__ .c_ ._m_ {
+#_Bx .__i__ .c_ ._m_,
+#_n_ ._ ._a {
   justify-content: space-between;
 }
 
@@ -458,7 +484,6 @@ pre[class*=language] {
 
 ol,
 ul,
-#RP > .__q__ > ._cn_ .__quote__ > blockquote,
 [data-blog=single] ._io_ ._ps_ .block p:last-child,
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *,
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
@@ -478,17 +503,18 @@ footer#main .c__ > p,
 }
 
 #__pg__ > .__ .pagination,
+#_n_ ._ ._a ul,
 #hero_nav ._ ._a ul,
 #hero_social_links ._s ul {
   list-style: none;
 }
 
-#RP > .__q__ > ._cn_ .__quote__ > blockquote cite,
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote cite {
   display: block;
 }
 
 #_bt_ ul li,
+#_n_ ._ ._a ul li,
 #hero_nav ._ ._a ul li,
 #hero_social_links ._s ul li a,
 #hero_social_links ._s ul li {
@@ -511,6 +537,8 @@ footer#main .c__ > p {
 }
 
 #_bt_ ul li a,
+#_n_ ._ ._a ul li a i,
+#_n_ ._ ._a ul .you_are_with_me a,
 #hero_nav ._ ._a ul li a i,
 #hero_nav ._ ._a ul .you_are_with_me a,
 btn.anhoi-btn,
@@ -567,7 +595,6 @@ pre[class*=language] .line-number {
   font-family: "Fira Code Retina", monospace !important;
 }
 
-#RP > .__q__ > ._cn_ .__quote__ > blockquote,
 [data-blog=single] ._io_ ._t,
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
 footer#main > div[class*=_] > div {
@@ -1187,10 +1214,6 @@ textarea::placeholder {
   animation: xRotate 0.6s cubic-bezier(0.3, 1.06, 0.71, 0.62) infinite 0.1s;
 }
 
-#hero_social_links {
-  margin-top: 1.2rem;
-}
-
 #hero_social_links ._s ul li a svg {
   width: 20px;
   height: 20px;
@@ -1210,7 +1233,6 @@ textarea::placeholder {
   color: #444444;
   text-decoration: none;
   padding: 0.3rem 1rem;
-  margin-right: 10px;
 }
 
 #hero_nav ._ ._a ul li a:hover i {
@@ -1218,11 +1240,39 @@ textarea::placeholder {
   left: 3px;
 }
 
-#hero_nav ._ ._a ul li a:hover span {
-  margin-left: 10px;
+#hero_nav ._ ._a ul li a i {
+  font-size: 15px;
+  top: 6px;
+  left: 0px;
+  visibility: hidden;
 }
 
-#hero_nav ._ ._a ul li a i {
+#_n_ #_r_ ._z img {
+  width: 32px;
+  height: 32px;
+}
+
+#_n_ #_r_ ._z + * {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#_n_ ._ ._a ul {
+  /** class active */
+}
+
+#_n_ ._ ._a ul li a {
+  color: #444444;
+  text-decoration: none;
+  padding: 0.3rem 1rem;
+}
+
+#_n_ ._ ._a ul li a:hover i {
+  visibility: visible;
+  left: 3px;
+}
+
+#_n_ ._ ._a ul li a i {
   font-size: 15px;
   top: 6px;
   left: 0px;
@@ -1793,7 +1843,11 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 }
 
 main#main .Anh {
-  padding: 80px 0;
+  padding: 40px 0;
+}
+
+main#main .Anh > .__o__ {
+  padding-top: 50px;
 }
 
 #Ftr_P {
@@ -2075,17 +2129,6 @@ footer#main .c__ > p i {
   /** Main heading */
 }
 
-#RP > .__q__ > ._cn_ .__quote__ > blockquote {
-  width: 500px;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-#RP > .__q__ > ._cn_ .__quote__ > blockquote cite {
-  font-size: 14px;
-  margin-top: 0.75rem;
-}
-
 #RP .__i__ {
   width: 50%;
   /** item inner (firt child of post items)  */
@@ -2119,7 +2162,6 @@ footer#main .c__ > p i {
 
 #RP .__i__ .c_ > ._xo ._t_ {
   height: 54px;
-  margin-bottom: 12px;
 }
 
 #RP .__i__ .c_ > ._xo ._t_ a {
@@ -2137,10 +2179,6 @@ footer#main .c__ > p i {
 
 #RP .__i__ .c_ ._m_ .d_ i {
   font-size: 18px;
-}
-
-#RP .__i__ .c_ ._m_ ._ic {
-  margin-right: 0.4rem;
 }
 
 #RP .__i__ .c_ ._m_ ._ic svg {

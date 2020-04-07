@@ -3,6 +3,7 @@
 {{-- Blog Category Background Color --}}
 @include('front.components.blog-category-top')
 <div class="Anh">
+    @include('front.components.navigation')
     <div class="__o__">
         <div class="__">
         @include('front.layouts.category-blog')

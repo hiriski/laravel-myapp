@@ -1,10 +1,32 @@
-#hero_nav {
-    order: -1; // i am first
-    margin-top: -212px;
-    margin-bottom: 150px;
+#_n_ {
+
+    $logo-size: 32px;
+    #_r_ {
+        @extend %flex;
+        @extend %align-items-center;
+        ._z {
+            @extend %line-height-zero;
+            @extend %margin-right-xs;
+            img {
+                width: $logo-size;
+                height: $logo-size;
+            }
+            + * {
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+    }
+    
     ._ {
         @extend %one-k-width;
+        ._s {
+            @extend %give-standard-padding;
+        }
         ._a {
+            @extend %flex;
+            @extend %align-items-center;
+            @extend %justify-content-space-between;
             ul {
                 @extend %remove-bullet-list;
                 /** class active */

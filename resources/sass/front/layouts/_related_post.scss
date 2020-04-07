@@ -14,23 +14,6 @@
             ._g_ {
                 @extend %main-heading-center;
             }
-            .__quote__ {
-                @extend %flex;
-                @extend %justify-content-center;
-                > blockquote {
-                    @extend %text-center;
-                    @extend %reset;
-                    @extend %muted;
-                    width: 500px;
-                    font-size: 20px;
-                    font-weight: 700;
-                    cite {
-                        @extend %block;
-                        font-size: 14px;
-                        margin-top: .75rem;
-                    }
-                }
-            }
         }
     }
 
@@ -70,7 +53,7 @@
                 ._t_ {
                     @extend %overflow-hidden;
                     height: 54px;
-                    margin-bottom: 12px;
+                    @extend %margin-bottom-sm;
                     a {
                         @extend %main-color;
                         text-decoration: none;
@@ -99,7 +82,7 @@
                     }
                 }
                 ._ic {
-                    margin-right: .4rem;
+                    @extend %margin-right-xs;
                     @extend %flex;
                     @extend %align-items-center;
                     svg {
