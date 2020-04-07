@@ -1,0 +1,104 @@
+//  Colors
+$primary-color          : #1f77ff;
+$secondary-color        : #ff0b39;
+$primary-color-light    : #dddfff;
+$primary-color-dark     : #131133;
+$primary-color-hover    : #055de0;
+
+$link-color             : #0c00b9;
+$link-color-hover       : #02007e;
+
+$blue-light-background  : #f5f8ff;
+$light                  : #f7f7f7;
+$white                  : #fff;
+$main-color             : #444444;
+$secondary-text         : #686868;
+$text-muted             : #707070;
+$gray                   : #a3a3a3;
+
+$facebook-color         : #3b5998;
+$twitter-color          : #1da1f2;
+$instagram-color        : #fd1d1d;
+$linkedin-color         : #0e3995;
+$whatsapp-color         : #25d366;
+$pinterest-color        : #eb1000;
+$background-code        : #f3f3f7;
+$background-code-dark   : #1b2b34;
+
+
+// Custom colors
+$green                  : #27ae60;
+$purple                 : #8e44ad;
+$red                    : #e74c3c;
+$orange                 : #f9690e;
+$yellow                 : #f0ff00;
+$blue                   : blue;
+
+// Social Color
+$android: #7AC157;
+$apple: #B8B8B8;
+$behance: #1869FF;
+$codepen: #333;
+$dribbble: #EA4C8A;
+$dropbox: #007EE5;
+$evernote: #78D525;
+$facebook: #4867AA;
+$github: #313131;
+$google-drive: #1DA462;
+$google-earth: #4285F4;
+$google-glass: #EA4335;
+$google-maps: #5083C3;
+$google-play: #01B9FD;
+$google-plus: #DD5144;
+$google: #4285F4;
+$instagram: #B23A94;
+$css3: #0277BD;
+$html5: #E44D26;
+$javascript: #F9DC3D;
+$python: #0C9DBF;
+$lastfm: #E31B23;
+$linkedin: #007BB6;
+$paypal: #002F86;
+$pinterest: #BD081B;
+$pocket: #EF3E56;
+$polymer: #F87292;
+$rss: #F99C3A;
+$share: #2C9CFF;
+$stackoverflow: #F38024;
+$steam: #15497B;
+$twitter: #1DA1F2;
+$vk: #5181B8;
+$wikipedia: #E9E9E9;
+$windows: #0078D6;
+$s500px:#333;
+$s8tracks: #122D4B;
+$amazon: #F79B34;
+$blogger: #F06A35;
+$delicious: #0000FE;
+$disqus: #2E9EFE;
+$flattr: #7AB831;
+$flickr: #FE0084;
+$odnoklassniki: #F58220;
+$outlook: #0072C6;
+$playstation: #07418E;
+$reddit: #FF4500;
+$skype: #00A9F0;
+$slideshare: #0077B5;
+$soundcloud: #FE4900;
+$tumblr: #36465D;
+$twitch: #6441A4;
+$vimeo: #1AB7EA;
+$whatsapp: rgb(86, 189, 79);
+$xbox: #107C0F;
+$yahoo: #4101AF;
+$youtube: #FE0000;
+
+
+//  Variables color
+:root {
+  --primary-color       : #{$primary-color};
+  --secondary-color     : #{$secondary-color};
+  --primary-color-light : #{$primary-color-light};
+  --primary-color-dark  : #{$primary-color-dark};
+  --primary-color-hover : #{$primary-color-hover};
+}

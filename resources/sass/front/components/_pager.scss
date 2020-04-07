@@ -1,0 +1,13 @@
+
+/** Blog pager */
+#__pg__ {
+    > .__ {
+        @extend %one-k-width;
+        .pagination {
+            @extend %flex;
+            @extend %justify-content-center;
+            @extend %reset;
+            @extend %remove-bullet-list;
+        }
+    }
+}

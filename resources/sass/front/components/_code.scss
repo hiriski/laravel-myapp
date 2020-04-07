@@ -1,0 +1,163 @@
+pre[class*=language] {
+    margin: 1rem -100px;
+    @extend %relative;
+    @extend %border-radius;
+    padding: 32px 24px 28px 60px;
+    overflow: auto;
+    font-weight:500;
+    line-height: 1;
+    /** Support for line numbers (pre tags) */
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+    
+    @media #{$mobile-md-width} {
+        font-size: 13px;
+        margin: 1rem -1rem;
+    }
+
+    /** Line Numbers */
+    .line-number {
+        @extend %code-font;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        display: inline-block;
+        float: left;
+        text-align: right;
+        position: fixed;
+        margin-left: -60px;
+        z-index: 1;
+        top: 0;
+        padding-top: 33px;
+        span {
+            display: block;
+            width: 48px;
+            padding-right: 10px;
+            color: #797979;
+            font-size: 15px;
+            line-height: $code-line-height !important;
+            @media #{$mobile-md-width} {
+                font-size: 14px;
+                width: 36px;
+            }
+        }
+    }
+    code {
+        @extend %code-font;
+        font-size: $code-font-size;
+        white-space: pre;
+        padding:0 !important;
+        line-height: $code-line-height !important;
+    }
+    /** File name */
+    span.code-filename {
+        @extend %absolute;
+        @extend %small;
+        top: 12px;
+        right: 16px;
+        padding: 0.32rem 0.85rem;
+        border-radius: 25px;
+        background: #c1cbde;
+        color: #3c405c;
+        font-weight: bold;
+    }
+
+    /** Color schema "Monokai Pro' (Visual Studio Code) */
+    &[data-color="monokai-pro"] {
+        $monokai-pro-background-color: #273136;
+        background-color: $monokai-pro-background-color;
+        color: #dadada;
+        ::selection {
+            background-color: rgb(15, 15, 15);
+        }
+        .line-number span {
+            background-color: $monokai-pro-background-color;
+        }
+        .token {
+            &.keyword {
+                color: #ff7e7a;
+            }
+            &.package {
+                color: #7cd5f1;
+            }
+            &.string {
+                color: #ffed66;
+            }
+            &.function {
+                color: #a2e57b;
+            }
+            &.comment {
+
+                color: #757575;
+            }
+            &.number {
+                color: #d58cff;
+            }
+        }
+
+        &[class*="-php"] {
+            .token {
+                &.class-name {
+                    color: #36b2ff;
+                }
+            }
+        }
+
+        &[class*="-css"] {
+            .token {
+                &.selector {
+                    color: #98da69;
+                }
+                &.rule {
+                    color: #ff7e7a;
+                }
+                &.atrule {
+                    color: #ffca2b;
+                }
+                &.property {
+                    color: #91a8ff;
+                }
+                &.important {
+                    color: #b790ff;
+                    font-weight: normal !important;
+                }
+                &.punctuation {
+                    color: #dadada;
+                }
+                &.function {
+                    color: #fb8d60;
+                }
+            }
+        }
+
+        &[class*="-scss"] {
+            .token {
+                &.property {
+                    color: #71d3ff;
+                }
+            }
+        }
+
+        &[class*="-javascript"] {
+            color: #b5d5ff;
+            .token {
+                &.keyword {
+                    color: #20baff;
+                }
+                &.operator {
+                    color: #ff689e;
+                }
+                &.regex {
+                    color: #fd8a23;
+                }
+                &.number {
+                    color: #ff9063;
+                }
+            }
+        }
+        
+    }
+
+
+}

@@ -1,0 +1,80 @@
+$hero_pic_size : 174px;
+
+
+#hero {
+    @extend %fixed;
+    @extend %top-left;
+    @extend %full;
+    > #xGyoHDpi {
+        @extend %full;
+        @extend %fixed;
+        background-position: top left;
+        background-size: cover;
+        z-index: -1;
+    }
+    .-_-_- {
+        @extend %fixed;
+        @extend %top-left;
+        @extend %full-width;
+    }
+    ._z {
+        height: 100%;
+        ._q {
+            @extend %flex;
+            @extend %align-items-center;
+            @extend %justify-content-center;
+            @extend %full-height-percen;
+            @extend %flex-direction-column;
+        }
+    }
+    ._y {
+        @extend %one-k-width;
+    }
+
+    .me {
+        @extend %flex;
+        .pic {
+            @extend %flex;
+            @extend %align-items-center;
+            ._h {
+                width: $hero_pic_size;
+                height: $hero_pic_size;
+                @extend %overflow-hidden;
+                @extend %round;
+                img {
+                    width: $hero_pic_size;
+                    height: $hero_pic_size;
+                    @include scale(1.1);
+                    @extend %transition;
+                    &:hover {
+                        @include scale(1);
+                    }
+                }
+            }
+        }
+        ._r {
+            margin-left: 2.5rem;
+            padding-right: 150px;
+        }
+        ._i {
+            h2 {
+                @extend %reset-line-height;
+                font-size: 28px;
+                margin-bottom: 0;
+                + span {
+                    @extend %muted;
+                }
+            }
+        }
+        ._o {
+            @extend %margin-top-sm;
+            font-size: 18px;
+            p {
+                @extend %muted;
+                @extend %reset;
+            }
+        }
+    }
+
+
+}

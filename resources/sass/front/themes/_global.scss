@@ -1,0 +1,22 @@
+* {
+    @include box-sizing;
+    outline: none;
+}
+body {
+    font-family: $primary-font;
+    font-size: $main-font-size;
+    font-weight: 500; 
+    line-height: 1.45;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+
+ol, ul {
+    @extend %reset;
+}
+
+.material-icons {
+    @extend %vertical-align-middle;
+}

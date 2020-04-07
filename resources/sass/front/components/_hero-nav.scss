@@ -1,0 +1,49 @@
+#hero_nav {
+    order: -1; // i am first
+    margin-top: -212px;
+    margin-bottom: 150px;
+    ._ {
+        @extend %one-k-width;
+        ._a {
+            ul {
+                @extend %remove-bullet-list;
+                /** class active */
+                .you_are_with_me {
+                    a {
+                        @extend %primary-color;
+                    }
+                }
+                li {
+                    @extend %inline-block;
+                    a {
+                        @extend %relative;
+                        color: $main-color;
+                        text-decoration: none;
+                        padding: .3rem 1rem;
+                        margin-right: 10px;
+                        &:hover {
+                            i {
+                                visibility: visible;
+                                left: 3px;
+                            }
+                            span {
+                                margin-left: 10px;
+                            }
+                        }
+                        i {
+                            @extend %absolute;
+                            @extend %primary-color;
+                            font-size: 15px;
+                            top: 6px;
+                            left: 0px;
+                            visibility: hidden;
+                        }
+                        span {
+                            @extend %transition;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

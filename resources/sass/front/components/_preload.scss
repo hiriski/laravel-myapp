@@ -1,0 +1,56 @@
+#_x0 {
+    @extend %transition;
+    @extend %full;
+    @extend %fixed;
+
+    $loading-size : 70px;
+    %loading-size {
+        width: $loading-size;
+        height: $loading-size;
+        border-radius: 50%;
+    }
+
+    display: block;
+    z-index: 100;
+    > div {
+        @extend %full;
+        @extend %absolute;
+        @extend %top-left;
+        background: rgba($light, 0.95);
+        > ._a {
+            left: calc(50% - 10px);
+            top: calc(50% - 10px);
+            @extend %absolute;
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    &.removed {
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+        div {
+            box-shadow: 0 0 0 0px #fff;
+        }
+    }
+    ._x0 {
+        left: calc(50% - 30px);
+        top: calc(50% - 30px);
+        @extend %loading-size;
+        @extend %absolute;
+    }
+}
+._x0 ._a, ._x0 ._b {
+    @extend %absolute;
+      border-right: 4px solid transparent;
+      @extend %loading-size;
+  }
+._x0 ._b {
+    border-left: 4px solid $primary-color;
+    border-top: 4px solid $primary-color;
+    -webkit-animation: xRotate .6s cubic-bezier(0.3, 1.06, 0.71, 0.62) infinite 0.1s;
+    animation: xRotate .6s cubic-bezier(0.3, 1.06, 0.71, 0.62) infinite 0.1s;
+}

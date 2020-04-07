@@ -1,0 +1,16 @@
+$scrollBarSize : 8px;
+
+::-webkit-scrollbar {
+    width: $scrollBarSize;
+    height: $scrollBarSize;
+}
+::-webkit-scrollbar-button {
+    display: none;
+}
+::-webkit-scrollbar-thumb {
+    background: $primary-color;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgba($primary-color, 0.1);
+}

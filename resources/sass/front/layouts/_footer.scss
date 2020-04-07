@@ -1,0 +1,29 @@
+footer#main {
+    @extend %set-background-white;
+    > div[class*="_"] {
+        padding: 40px 0;
+        > div {
+            @extend %text-center;
+        }
+    }
+    .c__ {
+        > p {
+            @extend %reset;
+            @extend %small;
+            @extend %secondary-text;
+            font-weight: 600;
+            i {
+                color: rgb(255, 44, 79);
+                font-size: 18px;
+            }
+            &:first-child {
+                > span {
+                    @extend %line;
+                }
+            }
+        }
+        a {
+            @extend %link-hover;
+        }
+    }
+}

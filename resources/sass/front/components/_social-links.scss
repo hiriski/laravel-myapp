@@ -1,0 +1,23 @@
+$icon_social_link_size : 20px;
+
+#hero_social_links {
+    margin-top: 1.2rem;
+    ._s {
+        ul {
+            @extend %remove-bullet-list;
+            li {
+                @extend %inline-block;
+                @extend %reset-line-height;
+                a {
+                    @extend %reset-line-height;
+                    @extend %inline-block;
+                    @extend %margin-right-sm;
+                    svg {
+                        width: $icon_social_link_size;
+                        height: $icon_social_link_size;
+                    }
+                }
+            }
+        }
+    }
+}

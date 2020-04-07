@@ -1,0 +1,632 @@
+%none {
+    display: none;
+}
+
+%inline-block-100 {
+    display: inline-block;
+    width: 100%;
+}
+
+%line {
+    position: relative;
+    padding-right: 41px;
+    margin-right: 10px;
+    &:before {
+        top: 50%;
+        right: 0;
+        width: 32px;
+        height: 1px;
+        content: '';
+        background: $secondary-text;
+        position: absolute;
+    }
+}
+
+%muted {
+    color: $text-muted;
+}
+
+%link {
+    color: $primary-color;
+    text-decoration: none;
+}
+
+%link-hover {
+    color: $main-color;
+    &:hover {
+        color: $primary-color;
+    }
+    text-decoration: none;
+}
+
+
+%small {
+    font-size: $xsmall;
+}
+
+%default-font-size {
+    font-size:  $main-font-size;
+}
+
+%text-decoration-none {
+    text-decoration: none;
+}
+
+%reset-line-height {
+    line-height: 1;
+}
+
+%line-height {
+    line-height: 1.3;
+}
+
+%relative-hidden {
+    overflow: hidden;
+    position: relative;
+}
+
+%overflow-hidden {
+    overflow: hidden;
+}
+
+%absolute {
+    position: absolute;
+}
+
+%fixed {
+    position: fixed;
+}
+%top-left {
+    top: 0;
+    left: 0;
+}
+%top-right {
+    top: 0;
+    right: 0;
+}
+%bottom-left {
+    bottom: 0;
+    left: 0;
+}
+%bottom-right {
+    bottom: 0;
+    right: 0;
+}
+
+%relative {
+    position: relative;
+}
+
+%visibilty-hidden {
+    visibility: hidden;
+}
+
+%transition {
+    @include transition(all 0.3s ease);
+}
+
+%animation {
+    @include transition(all 0.3s ease);
+}
+
+%animation2x {
+    @include transition(all 0.5s ease);
+}
+
+%animation-slow {
+    @include transition(all 2s ease);
+}
+
+/** Margin */
+%margin-top-sm {
+    margin-top: .85rem;
+}
+
+%margin-x-sm {
+    margin: {
+        left: .85rem;
+        right: .85rem; 
+    }
+}
+
+%margin-y-sm {
+    margin: {
+        top: .85rem;
+        bottom: .85rem; 
+    }
+}
+
+%margin-bottom-sm {
+    margin-bottom: .85rem;
+}
+
+%margin-right-sm {
+    margin-right: .85rem;
+}
+
+%margin-left-sm {
+    margin-left: .85rem;
+}
+
+%margin-top {
+    margin-top: 1.25rem;
+}
+
+%margin-x {
+    margin: {
+        left: 1.25rem;
+        right: 1.25rem;
+    }
+}
+
+%margin-y {
+    margin: {
+        top: 1.25rem;
+        bottom: 1.25rem;
+    }
+}
+
+%margin-left {
+    margin-left: 1.25rem;
+}
+
+%margin-right {
+    margin-right: 1.25rem;
+}
+
+%margin-bottom {
+    margin-bottom: 1.25rem;
+}
+
+%margin-top-lg {
+    margin-top: 2rem;
+}
+
+%margin-x-lg {
+    margin: {
+        left: 2rem;
+        right: 2rem;
+    }
+}
+
+%margin-y-lg {
+    margin: {
+        top: 2rem;
+        bottom: 2rem;
+    }
+}
+
+%margin-left-lg {
+    margin-left: 2rem;
+}
+
+%margin-right-lg {
+    margin-right: 2rem;
+}
+
+%margin-bottom-lg {
+    margin-bottom: 2rem;
+}
+
+%margin-top-xl {
+    margin-top: 3rem;
+}
+
+%margin-y-xl {
+    margin: {
+        top: 3rem;
+        bottom: 3rem;
+    }
+}
+
+%margin-x-xl {
+    margin: {
+        left: 3rem;
+        right: 3rem;
+    }
+}
+
+
+%margin-bottom-xl {
+    margin-bottom: 3rem;
+}
+
+%margin-left-xl {
+    margin-left: 3rem;
+}
+
+%margin-right-xl {
+    margin-right: 3rem;
+}
+
+%full {
+    height: 100vh;
+    width: 100%;
+}
+%full-percen {
+    height: 100%;
+    width: 100%;
+}
+%full-height {
+    height: 100vh;
+}
+
+%full-height-percen {
+    height: 100%;
+}
+
+%full-width {
+    width: 100%;
+}
+
+%main-width {
+    width: $main-width;
+    margin: auto;
+    @media #{$tablet-width} {
+        width: 100% !important;
+    }
+}
+
+%one-k-width {
+    width: $one-k-width;
+    margin: 0 auto;
+    @media #{$tablet-width} {
+        width: 100% !important;
+    }
+}
+
+%lite-width {
+    width: $lite-width;
+    margin: auto;
+    @media #{$tablet-width} {
+        width: 100% !important;
+    }
+}
+
+%post-width {
+    width: $post-width;
+    margin: auto; // make element center
+    @media #{$tablet-width} {
+        width: 100% !important;
+    }
+}
+
+%full-height-persen {
+    height: 100%;
+}
+
+
+/** flex family */
+%flex {
+    @include flex;
+}
+
+%justify-content-center {
+    justify-content: center;
+}
+
+%align-items-center {
+    align-items: center;
+}
+
+%align-items-flex-end {
+    align-items: flex-end;
+}
+
+
+%flex-direction-column {
+    flex-direction: column;
+}
+
+%flex-direction-row {
+    flex-direction: row;
+}
+
+%flex-wrap-wrap {
+    flex-wrap: wrap;
+}
+
+%flex-wrap-nowrap {
+    flex-wrap: nowrap;
+}
+
+%justify-content-space-between {
+    justify-content: space-between;
+}
+
+
+
+%heading-post {
+    font-family: $primary-font;
+    font-weight: 700;
+    margin-top: 1.95rem;
+    @extend %reset-line-height;
+}
+
+%overlay {
+    @extend %absolute;
+    @extend %top-left;
+    @extend %full-percen;
+}
+
+%box {
+    background-color: $light;
+    border-radius: .3rem;
+    @extend %relative-hidden;
+}
+%small-title {
+    font-size: $small;
+    font-family: $primary-font;
+    text-transform: uppercase;
+}
+%label-small {
+    font-size: $xsmall;
+    padding: 0.43rem 1rem;
+    border-radius: $border-radius;
+    font-family: $primary-font;
+    font-weight: bold;
+}
+
+
+/** Box Shadow */
+%box-shadow {
+    @include box-shadow(0, 15px, 32px, 0, rgba(0,0,0,0.06));
+}
+
+
+%box-shadow-primary-color {
+    box-shadow: 0 3px 10px 0 rgba($primary-color, 0.2);
+}
+
+%blue-light-bg {
+    background-color: $blue-light-background;
+}
+
+%xbox-shadow {
+    -webkit-box-shadow: 0 15px 32px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 15px 32px rgba(0,0,0,.05);
+    box-shadow: 0 15px 32px rgba(0,0,0,.05);
+}
+
+%image-box-shadow {
+    -webkit-box-shadow: 0 15px 32px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 15px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 32px rgba(0, 0, 0, 0.1);
+}
+
+%remove-box-shadow {
+    box-shadow: none !important;
+}
+
+%remove-margin {
+    margin: 0;
+}
+
+%border-thin-radius {
+    border-radius: .2rem;
+}
+
+%border-radius {
+    border-radius: $border-radius;
+}
+
+%border-radius2x {
+    border-radius: $border-radius * 2;
+}
+
+%round {
+    border-radius: 50%;
+}
+
+%reset {
+    margin: 0;
+    padding: 0;
+}
+
+%remove-bullet-list {
+    list-style: none;
+}
+
+%block {
+    display: block;
+}
+
+%inline-block {
+    display: inline-block;
+}
+
+// Background Primary color & color light
+%background-primary-color-light {
+    background: $primary-color;
+    color: $light;
+}
+%background-secondary-color-light {
+    background: $secondary-color;
+    color: $light;
+}
+%background-primary-light {
+    background: $primary-color-light;
+}
+%secondary-text {
+    color: $secondary-text;
+}
+
+%main-color {
+    color: $main-color;
+}
+
+%primary-color {
+    color: $primary-color;
+}
+%secondary-color {
+    color: $secondary-color;
+}
+
+// Background light color primary color
+%bg-light-color-primary {
+    background: $light;
+    color: $primary-color;
+}
+
+%border-default {
+    border: 2px solid $primary-color;
+}
+
+// vertical align
+%vertical-align-middle {
+    vertical-align: middle;
+}
+%vertical-align-text-bottom {
+    vertical-align: text-bottom;
+}
+
+%set-background-light {
+    background: $light;
+}
+
+%set-background-white {
+    background: $white;
+}
+
+%set-background-primary-light {
+    background: $primary-color-light;
+}
+
+// Font Family
+%primary-font {
+    font-family: $primary-font;
+}
+%reading-font {
+    font-family: $reading-font;
+}
+%code-font {
+    font-family: $code-font;
+}
+
+
+%input-border {
+    @extend %border-default;
+}
+
+%small-icon {
+    height: 16px;
+    width: 16px;
+}
+
+%text-center {
+    text-align: center;
+}
+
+%round-effect {
+    position: absolute;
+    border-radius: 50%;
+}
+
+%btn-hover-effect {
+    &:hover {
+        box-shadow: 0 0 0 12px (rgba($primary-color, 0.2));
+        @extend %animation;
+    }
+}
+
+%btn-ondark-hover-effect {
+    &:hover {
+        box-shadow: 0 0 0 12px (rgba($light, 0.2));
+        @extend %animation;
+    }
+}
+%font-weight-bold {
+    font-weight: 700;
+}
+%font-weight-800 {
+    font-weight: 800;
+}
+%font-weight-900 {
+    font-weight: 900;
+}
+
+%simple-wave {
+    width: 100%;
+    fill: $light;
+    position: absolute;
+    bottom: -2px;
+}
+
+%primary-line {
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    background: $primary-color;
+    @extend %box-shadow-primary-color;
+}
+
+%z-index-1 {
+    z-index: -1;
+}
+
+%z-index1 {
+    z-index: 1;
+}
+
+
+
+
+/** Global Main Heading with icon beside */
+%main-heading {
+    /** child pertama harus memiliki class disertai _ (underscore) */
+    > div[class*="_"] {
+        @extend %relative;
+        margin-bottom: 1.5rem;
+        > *:first-child {
+            @extend %absolute;
+            @extend %top-left;
+            @extend %primary-color;
+            + {
+                *:not(div) {
+                    @extend %reset-line-height;
+                    @extend %muted;
+                    @extend %reset;
+                    padding-left: 30px;
+                    font-size: 24px;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+    @media #{$mobile-lg-width} {
+        font-size: 24px;
+    }
+}
+
+
+/** Global Main Heading Center with icon beside */
+%main-heading-center {
+    /** child pertama harus memiliki class disertai _ (underscore) */
+    > div[class*="_"] {
+        @extend %flex;
+        @extend %justify-content-center;
+        margin-bottom: 1.5rem;
+        > * {
+            @extend %relative;
+            display: inline-flex;
+            > *:first-child {
+                @extend %absolute;
+                @extend %top-left;
+                @extend %primary-color;
+                + {
+                    *:not(div) {
+                        @extend %reset-line-height;
+                        @extend %reset;
+                        padding-left: 30px;
+                        font-size: 24px;
+                        font-weight: 800;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$mobile-lg-width} {
+        font-size: 24px;
+    }
+}

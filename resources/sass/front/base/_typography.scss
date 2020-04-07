@@ -1,0 +1,33 @@
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+}
+
+/** post content single */
+._ps_ {
+    div, h1, h2, h3, h4, h5, h6, p {
+        @extend %reading-font;
+    }
+    div, h1, h2, h3, h4, h5, h6 {
+        @extend %margin-top-lg;
+        @extend %margin-bottom-sm;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    h3 {
+        font-size: 32px;
+    }
+    h4 {
+        font-size: 30px;
+    }
+    h5 {
+        font-size: 27px;
+    }
+    h6 {
+        font-size: 22px;
+    }
+    div, p {
+        font-size: $reading-font-size;
+        line-height: 1.65;
+    }
+}
