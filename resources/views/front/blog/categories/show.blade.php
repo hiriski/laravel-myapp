@@ -4,6 +4,7 @@
     <div class="__o__">
         <div class="__">
         @include('front.layouts.category-blog')
+        @include('front.components.category-blog-pager')
         </div>
     </div>
 </div>

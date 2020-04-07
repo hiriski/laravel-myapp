@@ -48,6 +48,10 @@
     font-size:  $main-font-size;
 }
 
+%font-large {
+    font-size: 20px;
+}
+
 %text-decoration-none {
     text-decoration: none;
 }
@@ -238,6 +242,24 @@
 %margin-right-xl {
     margin-right: 3rem;
 }
+
+
+/** Give Standar Padding/Margin for Block */
+
+%give-standard-padding {
+    padding: {
+        left: 12px;
+        right: 12px;
+    }
+}
+
+%give-standard-margin {
+    margin: {
+        left: -12px;
+        right: -12px;
+    }
+}
+
 
 %full {
     height: 100vh;
@@ -577,7 +599,7 @@
     /** child pertama harus memiliki class disertai _ (underscore) */
     > div[class*="_"] {
         @extend %relative;
-        margin-bottom: 1.5rem;
+        @extend %margin-bottom-lg;
         > *:first-child {
             @extend %absolute;
             @extend %top-left;

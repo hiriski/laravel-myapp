@@ -2,16 +2,10 @@
     <div class="__q__">
         @isset($category)
         <div class="_cn_">
-            {{-- Main Heading Large with Icon --}}
-            <div class="_g_">
-                <div class="_">
-                    <div class="_io">
-                        <span class="_icon"><i class="material-icons">notes</i></span>
-                        <h1>{{ $category->name }}</h1>
-                    </div>
-                </div>
-            </div>
 
+        {{-- Import category blog heading --}}
+        @include('front.components.category-blog-heading')
+        
             <div class="__sa">
                 @foreach($category->blogs as $item)
                 <div class="__i__">

@@ -1,0 +1,30 @@
+#_H_Cb {
+    $svg-size: 42px;
+    @extend %margin-bottom-xl;
+    ._ {
+        @extend %give-standard-padding;
+        ._x0 {
+            @extend %flex;
+            @extend %align-items-center;
+            > [class$=svg] {
+                @extend %margin-right-sm;
+                svg {
+                    width: $svg-size;
+                    height: $svg-size;
+                }
+            }
+            * h1,
+            * h2,
+            * h3,
+            * h4,
+            * h5
+            * h6 {
+                @extend %reset;
+            }
+        }
+        > p {
+            @extend %muted;
+            @extend %font-large;
+        }
+    }
+}

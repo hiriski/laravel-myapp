@@ -123,7 +123,7 @@
 
     <div id="AnhOi" data-version="one" data-version-name="anhoi-mot">
         {{-- @include('front.components.preload') --}}
-        @if( Route::getCurrentRoute()->uri === "/" || Route::getCurrentRoute()->uri === "blog")
+        @if( Route::currentRouteName() === "index")
             @include('front.layouts.hero')
         @endif
         <main id="main">
