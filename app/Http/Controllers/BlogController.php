@@ -53,6 +53,9 @@ class BlogController extends Controller {
      */
     public function show($slug) {
         $post = Blog::where('slug', $slug)->firstOrFail();
+        
+        $related_post = Blog::where('category_id', $post->category_id)
+                            ->orderBy('created_at', 'DESC')->take(4)->get();
 
         /** SEO META     */
         SEOMeta::setTitle($post->title)
@@ -77,7 +80,7 @@ class BlogController extends Controller {
                 ->addProperty('locale', 'id-ID')
                 ->addProperty('locale:alternate', ['id-ID', 'en-US']);
 
-        return view('front.blog.show', compact('post'));
+        return view('front.blog.show', compact('post', 'related_post'));
     }
 
 }
