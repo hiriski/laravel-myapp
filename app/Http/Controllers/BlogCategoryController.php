@@ -9,7 +9,17 @@ use App\Models\BlogCategory as Category;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
 
+/** Global Settings */
+use App\Models\Setting;
+
 class BlogCategoryController extends Controller {
+
+
+    public function __construct() {
+        /** Setting */
+        $this->setting  = Setting::findOrFail(1);
+        $this->blog_perpage = $this->setting->blog_perpage;
+    }
 
     /**
      * Display a listing of the resource.
@@ -47,8 +57,9 @@ class BlogCategoryController extends Controller {
      */
     public function show($slug) {
         $category = Category::with(['blogs' => function($query) {
-            $query->orderBy('created_at', 'DESC')->paginate(6);
+            $query->orderBy('created_at', 'DESC')->paginate($this->blog_perpage);
         }])->where('slug', $slug)->firstOrFail();
+
 
         /** SEO META     */
         SEOMeta::setTitle($category->name)

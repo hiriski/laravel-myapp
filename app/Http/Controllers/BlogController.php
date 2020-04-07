@@ -9,10 +9,16 @@ use App\Models\Blog;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
 
+
+/** Global Settings */
+use App\Models\Setting;
+
 class BlogController extends Controller {
 
     public function __construct() {
-        return $this->middleware('auth')->only('create', 'update', 'delete');
+        /** Setting */
+        $this->setting  = Setting::findOrFail(1);
+        $this->blog_perpage = $this->setting->blog_perpage;
     }
 
     /**
@@ -21,8 +27,10 @@ class BlogController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
+        $setting  = Setting::findOrFail(1);
+
         $posts = Blog::with(['category'])->where('status_id', 1)
-            ->orderBy('created_at', 'DESC')->paginate(6);
+            ->orderBy('created_at', 'DESC')->paginate($this->blog_perpage);
 
         /** SEO META     */
         SEOMeta::setTitle('Blog index')
