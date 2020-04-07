@@ -15,7 +15,10 @@ class CreateBlogCategoriesTable extends Migration {
             $table->Increments('id');
             $table->string('name', 75);
             $table->string('slug')->unique();
+            $table->string('description')->nullable();
+            $table->string('keywords')->nullable();
             $table->text('icon')->nullable()->comment('maybe image format base64');
+            $table->string('color')->nullable();
             $table->timestamps();
         });
     }
