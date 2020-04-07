@@ -1,4 +1,4 @@
-<div id="BlogIndex">
+<div id="_Bx">
     <div class="__q__">
         <div class="_cn_">
 
@@ -30,11 +30,13 @@
     
                         {{-- Post Image --}}
                         <div class="_img_">
+                        <a href="{{ route('blog.show', $item->slug) }}">
                         @if(!empty($item->image) || !empty($item->image_md))
                             <img src="{{ getBlogImage($item->image_md) }}" alt="{{ $item->title }}">
                         @else
                             <img src="{{ asset('images/md.jpg') }}" alt="No image">
                         @endif
+                        </a>
                         </div>
     
                         
@@ -78,4 +80,12 @@
             </div>
         </div>
     </div>
+
+    {{-- Jika ini di load oleh index --}}
+    @if(Route::currentRouteName() === "index")
+    <div class="__l_m">
+        <a href="{{ route('blog.index') }}?page=2"  class="anhoi-btn" data-size="lg"><span>Show more</span> <i class="material-icons">loop</i></a>
+    </div>
+    @endif
+
 </div>

@@ -1,7 +1,8 @@
 @extends('errors.layouts.app')
+@section('title', '404 not found ☹️')
 @section('content')
-<div id="ERR_404">
-    <div class="err_404">
+<div id="ERR">
+    <div class="err">
         <div class="svg">
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -36,10 +37,10 @@
 
         </div>
         <h1>404</h1>
-        <span class="">Kamu nyasar. Halaman ini tidak ditemukan</span>
+        <span class="">We can't seem to find the page you're looking for.</span>
         <div class="btn">
         <a href="{{ route('index') }}"><span>
-        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <svg version="1.1" id="Capa_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 31.494 31.494" style="enable-background:new 0 0 31.494 31.494;" xml:space="preserve">
         <path style="fill:#fbfbfb;" d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554
             c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587
@@ -47,7 +48,7 @@
         <g>
         </g>
         </svg>
-        </span>Kembali Yuk!</a>
+        </span>Back to homepage!</a>
         </div>
     </div>
 </div>

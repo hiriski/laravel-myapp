@@ -1,6 +1,5 @@
 @extends('front.layouts.app')
 @section('content')
-@section('title', 'Blog categories')
 <div class="Anh">
     <div class="__o__">
         <div class="__">

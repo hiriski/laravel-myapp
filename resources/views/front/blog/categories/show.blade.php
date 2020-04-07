@@ -1,7 +1,4 @@
 @extends('front.layouts.app')
-@section('title', '{{ $category->name }}')
-@section('description', '{{ $category->name }}')
-@section('keywords', '{{ $category->name }}')
 @section('content')
 <div class="Anh">
     <div class="__o__">
@@ -29,8 +26,8 @@
                 
                                     {{-- Post Image --}}
                                     <div class="_img_">
-                                    @if(!empty($item->image))
-                                        <img src="{{ asset('uploads/blog/' . $item->image_md )}}" alt="{{ $item->title }}">
+                                    @if(!empty($item->image) || !empty($item->image_md))
+                                        <img src="{{ getBlogImage($item->image_md) }}" alt="{{ $item->title }}">
                                     @else
                                         <img src="{{ asset('images/md.jpg') }}" alt="No image">
                                     @endif
@@ -54,14 +51,18 @@
                                             {{-- Post Meta --}}
                                             <div class="_m_">
                                                 <a href="" class="__c">
-                                                    {{-- Sample icon  --}}
+                                                    {{-- Dinamis Icon  --}}
                                                     <div class="_ic">
-                                                        @include('front.components.laravel-svg')
+                                                        @if($item->category->name === "Uncategory")
+                                                        @else
+                                                        @include(getsvg($item->category->name))
+                                                        @endif
                                                     </div>
                                                     <span>{{ $item->category->name }}</span>
                                                 </a>
                                                 <div class="d_">
-                                                    <span>{{ date('M d, Y', strtotime($item->created_at)) }}</span>
+                                                    <i class="material-icons">access_time</i>
+                                                    <span>{{ \Carbon\Carbon::parse($item->created_at)->isoFormat('MMMM Do, YYYY') }}</span>
                                                 </div>
                                             </div>
                                         </div>
