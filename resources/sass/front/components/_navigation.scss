@@ -1,6 +1,79 @@
 #_n_ {
-
     $logo-size: 32px;
+    @extend %fixed;
+    @extend %full-width;
+    * {
+        @extend %transition;
+    }
+    /** When position left */
+    &[data-position=left] {
+        $nav-size: 62px;
+        $logo-size: 26px;
+        @extend %top-left;
+        @extend %box-shadow;
+        @extend %full-height;
+        // @extend %set-background-white;
+        // @extend %box-shadow;
+        width: unset;
+        ._ {
+            width: $nav-size;
+            margin: unset;
+            padding: unset;
+            padding-top: 1.75rem;
+            ._s {
+                padding: 0;
+                @extend %text-center;
+                ._a {
+                    @extend %justify-content-flex-start;
+                    @extend %flex-direction-column;
+                    ul {
+                        @extend %margin-top-lg;
+                        @extend %flex;
+                        @extend %flex-direction-column;
+                        li {
+                            @extend %full-width;
+                            a {
+                                margin-right: 0;
+                                @extend %inline-block;
+                                padding: {
+                                    top: 1rem;
+                                    bottom: 1rem;
+                                    left: 0;
+                                    right: 0;
+                                }
+                                &:hover {
+                                    i {
+                                        left: 0;
+                                    }
+                                }
+                                i {
+                                    @extend %visibility-visible;
+                                    @extend %relative;
+                                    font-size: 18px;
+                                }
+                                > span {
+                                    @extend %display-none;
+                                }
+                            }
+                        }
+                    }
+                }
+                #_r_ {
+                    > span {
+                        @extend %display-none;
+                    }
+                    ._z {
+                        margin-right: unset;
+                        img {
+                            width: $logo-size;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     #_r_ {
         @extend %flex;
         @extend %align-items-center;
@@ -19,7 +92,7 @@
     }
     
     ._ {
-        @extend %one-k-width;
+        padding: 0 30px;
         ._s {
             @extend %give-standard-padding;
         }

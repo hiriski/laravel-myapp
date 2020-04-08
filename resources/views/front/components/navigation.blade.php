@@ -4,7 +4,9 @@
             <div class="_a">
                 <div id="_r_">
                     <div class="_z">
-                        <img src="{{ asset('old-logo.svg') }}" alt="Riski Web ID">
+                        <a href="{{ route('index') }}">
+                            <img src="{{ asset('old-logo.svg') }}" alt="Riski Web ID">
+                        </a>
                     </div>
                     <span>Riski Web ID</span>
                 </div>

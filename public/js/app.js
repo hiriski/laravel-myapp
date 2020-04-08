@@ -135,6 +135,23 @@ if (blogCode) {
     blogCode[i].appendChild(newElem);
   }
 }
+/** Scroll */
+
+
+window.addEventListener('scroll', function () {
+  var userScrollTo = window.scrollY;
+
+  if (userScrollTo > 100) {
+    moveNavigation('left');
+  } else {
+    moveNavigation('top');
+  }
+});
+
+var moveNavigation = function moveNavigation(position) {
+  var nav = document.getElementById('_n_');
+  nav.setAttribute('data-position', position);
+};
 
 /***/ }),
 

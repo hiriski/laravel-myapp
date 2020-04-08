@@ -42,3 +42,20 @@ if(blogCode) {
         blogCode[i].appendChild(newElem);
     }
 }
+
+
+/** Scroll */
+window.addEventListener('scroll', () => {
+    let userScrollTo = window.scrollY;
+    if(userScrollTo > 100) {
+        moveNavigation('left');
+    }
+    else {
+        moveNavigation('top');
+    }
+});
+
+const moveNavigation = (position) => {
+    let nav = document.getElementById('_n_');
+    nav.setAttribute('data-position', position);
+}

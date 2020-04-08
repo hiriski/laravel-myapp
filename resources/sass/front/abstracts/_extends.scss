@@ -1,5 +1,13 @@
-%none {
+%display-none {
     display: none;
+}
+
+%visibility-hidden {
+    visibility: hidden;
+}
+
+%visibility-visible {
+    visibility: visible;
 }
 
 %inline-block-100 {
@@ -408,7 +416,9 @@
 %justify-content-space-between {
     justify-content: space-between;
 }
-
+%justify-content-flex-start {
+    justify-content: flex-start;
+}
 
 
 %heading-post {

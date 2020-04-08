@@ -53,6 +53,15 @@
 * @param {*} $color 		- Property color value
 */
 
+#_n_[data-position=left] ._ ._s #_r_ > span,
+#_n_[data-position=left] ._ ._s ._a ul li a > span {
+  display: none;
+}
+
+#_n_[data-position=left] ._ ._s ._a ul li a i {
+  visibility: visible;
+}
+
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
 footer#main .c__ > p:first-child > span {
   position: relative;
@@ -179,6 +188,7 @@ pre[class*=language] span.code-filename,
 #hero .-_-_-,
 #hero > #xGyoHDpi,
 #hero,
+#_n_,
 #_x0 {
   position: fixed;
 }
@@ -186,6 +196,7 @@ pre[class*=language] span.code-filename,
 #hero .-_-_-,
 #hero,
 .__aw__,
+#_n_[data-position=left],
 #_x0 > div,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
 #_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
@@ -201,6 +212,7 @@ pre[class*=language] span.code-filename,
 main#main .Anh,
 pre[class*=language],
 #_n_ ._ ._a ul li a,
+#_n_[data-position=left] ._ ._s ._a ul li a i,
 #hero_nav ._ ._a ul li a,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_] > *,
 #_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > *,
@@ -214,6 +226,7 @@ pre[class*=language],
 #_Bx .__i__ .c_,
 #hero .me .pic ._h img,
 #_n_ ._ ._a ul li a span,
+#_n_ *,
 #hero_nav ._ ._a ul li a span,
 #_x0 {
   transition: all 0.3s ease;
@@ -277,6 +290,7 @@ pre[class*=language],
 #RP .__l_m,
 [data-blog=single][data-version=two] ._io_ ._m_,
 #_Bx .__l_m,
+#_n_[data-position=left] ._ ._s ._a ul,
 ._ps_ div,
 ._ps_ h1,
 ._ps_ h2,
@@ -323,20 +337,25 @@ pre[class*=language],
   width: 100%;
 }
 
+#_n_[data-position=left] {
+  height: 100vh;
+}
+
 #hero ._z ._q {
   height: 100%;
 }
 
 [data-page=home] main#main,
 #hero .-_-_-,
-.__aw__ {
+.__aw__,
+#_n_[data-position=left] ._ ._s ._a ul li,
+#_n_ {
   width: 100%;
 }
 
 main#main .Anh > .__o__ > .__,
 #hero ._y,
 #__pg__ > .__,
-#_n_ ._,
 #hero_nav ._ {
   width: 1000px;
   margin: 0 auto;
@@ -346,7 +365,6 @@ main#main .Anh > .__o__ > .__,
   main#main .Anh > .__o__ > .__,
   #hero ._y,
   #__pg__ > .__,
-  #_n_ ._,
   #hero_nav ._ {
     width: 100% !important;
   }
@@ -392,6 +410,7 @@ main#main .Anh > .__o__,
 #__pg__ > .__ .pagination,
 #_n_ ._ ._a,
 #_n_ #_r_,
+#_n_[data-position=left] ._ ._s ._a ul,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_],
 #_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] {
   display: flex;
@@ -425,7 +444,9 @@ main#main .Anh > .__o__,
 }
 
 [data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
-#hero ._z ._q {
+#hero ._z ._q,
+#_n_[data-position=left] ._ ._s ._a ul,
+#_n_[data-position=left] ._ ._s ._a {
   flex-direction: column;
 }
 
@@ -445,12 +466,17 @@ main#main .Anh > .__o__,
   justify-content: space-between;
 }
 
+#_n_[data-position=left] ._ ._s ._a {
+  justify-content: flex-start;
+}
+
 /** Box Shadow */
 
 #RP .__i__ .c_ > ._xo,
 #RP .__i__ ._img_,
 #_Bx .__i__ .c_ > ._xo,
-#_Bx .__i__ ._img_ {
+#_Bx .__i__ ._img_,
+#_n_[data-position=left] {
   box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
   -webkit-box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
@@ -515,6 +541,7 @@ footer#main .c__ > p,
 
 #_bt_ ul li,
 #_n_ ._ ._a ul li,
+#_n_[data-position=left] ._ ._s ._a ul li a,
 #hero_nav ._ ._a ul li,
 #hero_social_links ._s ul li a,
 #hero_social_links ._s ul li {
@@ -597,7 +624,8 @@ pre[class*=language] .line-number {
 
 [data-blog=single] ._io_ ._t,
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
-footer#main > div[class*=_] > div {
+footer#main > div[class*=_] > div,
+#_n_[data-position=left] ._ ._s {
   text-align: center;
 }
 
@@ -1247,14 +1275,62 @@ textarea::placeholder {
   visibility: hidden;
 }
 
+#_n_ {
+  /** When position left */
+}
+
+#_n_[data-position=left] {
+  width: unset;
+}
+
+#_n_[data-position=left] ._ {
+  width: 62px;
+  margin: unset;
+  padding: unset;
+  padding-top: 1.75rem;
+}
+
+#_n_[data-position=left] ._ ._s {
+  padding: 0;
+}
+
+#_n_[data-position=left] ._ ._s ._a ul li a {
+  margin-right: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#_n_[data-position=left] ._ ._s ._a ul li a:hover i {
+  left: 0;
+}
+
+#_n_[data-position=left] ._ ._s ._a ul li a i {
+  font-size: 18px;
+}
+
+#_n_[data-position=left] ._ ._s #_r_ ._z {
+  margin-right: unset;
+}
+
+#_n_[data-position=left] ._ ._s #_r_ ._z img {
+  width: 26px;
+  height: auto;
+}
+
 #_n_ #_r_ ._z img {
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 26px;
 }
 
 #_n_ #_r_ ._z + * {
   font-weight: bold;
   font-size: 20px;
+}
+
+#_n_ ._ {
+  padding: 0 30px;
 }
 
 #_n_ ._ ._a ul {
