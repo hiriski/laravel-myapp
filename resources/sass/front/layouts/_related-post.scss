@@ -1,5 +1,6 @@
 #RP {
     @extend %margin-top-xl;
+    @extend %margin-bottom-xl;
     $post-thumbnail-height: 142px;
 
     > .__q__ {
@@ -38,7 +39,7 @@
             padding: 12px;
             &:hover {
                 > ._xo {
-                    @include translateY(-12px);
+                    @include translateY(-10px);
                 }
             }
             /** post content inner */
@@ -48,18 +49,18 @@
                 @extend %box-shadow;
                 @extend %transition;
                 padding: 22px 20px 16px 22px;
-                margin-bottom: -60px;
+                margin-bottom: -68px;
                 /** post title */
                 ._t_ {
                     @extend %overflow-hidden;
-                    height: 54px;
+                    height: 48px;
                     @extend %margin-bottom-sm;
                     a {
                         @extend %main-color;
                         text-decoration: none;
                     }
                     h4 {
-                        font-size: 20px;
+                        font-size: 18px;
                         line-height: 1.3;
                     }
                 }
