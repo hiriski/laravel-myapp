@@ -163,9 +163,7 @@
     -moz-user-select: none;
 }
 
-%padding-unset {
-    padding: unset;
-}
+
 
 /** Margin */
 %margin-top-xs {
@@ -306,7 +304,6 @@
     }
 }
 
-
 %margin-bottom-xl {
     margin-bottom: 3rem;
 }
@@ -319,6 +316,182 @@
     margin-right: 3rem;
 }
 
+
+
+/** padding */
+%padding-xs {
+    padding: .5rem;
+}
+
+%padding-top-xs {
+    padding-top: .5rem;
+}
+
+%padding-x-xs {
+    padding: {
+        left: .5rem;
+        right: .5rem; 
+    }
+}
+
+%padding-y-xs {
+    padding: {
+        top: .5rem;
+        bottom: .5rem; 
+    }
+}
+
+%padding-bottom-xs {
+    padding-bottom: .5rem;
+}
+
+%padding-right-xs {
+    padding-right: .5rem;
+}
+
+%padding-left-xs {
+    padding-left: .5rem;
+}
+
+%padding-sm {
+    padding: .85rem;
+}
+
+%padding-top-sm {
+    padding-top: .85rem;
+}
+
+%padding-x-sm {
+    padding: {
+        left: .85rem;
+        right: .85rem; 
+    }
+}
+
+%padding-y-sm {
+    padding: {
+        top: .85rem;
+        bottom: .85rem; 
+    }
+}
+
+%padding-bottom-sm {
+    padding-bottom: .85rem;
+}
+
+%padding-right-sm {
+    padding-right: .85rem;
+}
+
+%padding-left-sm {
+    padding-left: .85rem;
+}
+
+%padding {
+    padding: 1.25rem;
+}
+
+%padding-top {
+    padding-top: 1.25rem;
+}
+
+%padding-x {
+    padding: {
+        left: 1.25rem;
+        right: 1.25rem;
+    }
+}
+
+%padding-y {
+    padding: {
+        top: 1.25rem;
+        bottom: 1.25rem;
+    }
+}
+
+%padding-left {
+    padding-left: 1.25rem;
+}
+
+%padding-right {
+    padding-right: 1.25rem;
+}
+
+%padding-bottom {
+    padding-bottom: 1.25rem;
+}
+
+%padding-lg {
+    padding: 2rem;
+}
+
+%padding-top-lg {
+    padding-top: 2rem;
+}
+
+%padding-x-lg {
+    padding: {
+        left: 2rem;
+        right: 2rem;
+    }
+}
+
+%padding-y-lg {
+    padding: {
+        top: 2rem;
+        bottom: 2rem;
+    }
+}
+
+%padding-left-lg {
+    padding-left: 2rem;
+}
+
+%padding-right-lg {
+    padding-right: 2rem;
+}
+
+%padding-bottom-lg {
+    padding-bottom: 2rem;
+}
+
+%padding-xl {
+    padding: 3rem;
+}
+
+%padding-top-xl {
+    padding-top: 3rem;
+}
+
+%padding-y-xl {
+    padding: {
+        top: 3rem;
+        bottom: 3rem;
+    }
+}
+
+%padding-x-xl {
+    padding: {
+        left: 3rem;
+        right: 3rem;
+    }
+}
+
+%padding-bottom-xl {
+    padding-bottom: 3rem;
+}
+
+%padding-left-xl {
+    padding-left: 3rem;
+}
+
+%padding-right-xl {
+    padding-right: 3rem;
+}
+
+%padding-unset {
+    padding: unset;
+}
 
 /** Give Standar Padding/Margin for Block */
 
@@ -393,6 +566,10 @@
     height: 100%;
 }
 
+%half {
+    width: 50%;
+}
+
 
 /** flex family */
 %flex {
@@ -438,7 +615,9 @@
 %justify-content-flex-start {
     justify-content: flex-start;
 }
-
+%justify-content-flex-end {
+    justify-content: flex-end;
+}
 
 %heading-post {
     font-family: $primary-font;
@@ -576,9 +755,22 @@
     color: $primary-color;
 }
 
-%border-default {
+
+
+%border-default-primary {
     border: 2px solid $primary-color;
 }
+
+%border-default-transparent {
+    border: 2px solid transparent;
+}
+%border-thin-transparent {
+    border: 1px solid transparent;
+}
+%border-thin-primary {
+    border: 1px solid $primary-color;
+}
+
 
 // vertical align
 %vertical-align-middle {
@@ -613,7 +805,7 @@
 
 
 %input-border {
-    @extend %border-default;
+    @extend %border-default-primary;
 }
 
 %small-icon {
@@ -624,6 +816,11 @@
 %text-center {
     text-align: center;
 }
+
+%text-right {
+    text-align: right;
+}
+
 
 %round-effect {
     position: absolute;

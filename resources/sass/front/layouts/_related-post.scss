@@ -20,7 +20,7 @@
 
     /** items of post */
     .__i__ {
-        width: 50%; // rata bagi 2
+        @extend %half; // rata bagi 2
         /** item inner (firt child of post items)  */
         .in_ {
             padding: 12px;

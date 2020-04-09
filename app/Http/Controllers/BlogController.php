@@ -60,35 +60,49 @@ class BlogController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show($slug) {
-        $post = Blog::where('slug', $slug)->firstOrFail();
-        
-        $related_post = Blog::where('category_id', $post->category_id)
-                            ->orderBy('created_at', 'DESC')->take(4)->get();
+        $post = Blog::where('slug', $slug)->where('status_id', 1)->firstOrFail();
 
+        /** Related Posts */
+        $related_post = Blog::where('category_id', $post->category_id)
+            ->orderBy('created_at', 'DESC')->take(4)->get();
+
+        /** Next and Previous Post */
+        $next_post_id   = Blog::where('id', '>', $post->id)->min('id');
+        $prev_post_id   = Blog::where('id', '<', $post->id)->max('id');
+        $blog_pager     = array(
+            'next'      => Blog::where('id', $next_post_id)->first(),
+            'previous'  => Blog::where('id', $prev_post_id)->first()
+        );
+        
         /** SEO META     */
         SEOMeta::setTitle($post->title)
-                ->setDescription($post->description)
-                ->setKeywords($post->keywords)
-                ->addMeta('article:published_time', $post->created_at->toW3CString(), 'property')
-                ->addMeta('article:section', $post->category->name, 'property')
-                ->addMeta('author', $post->user->name . ', hi@riski.web.id', 'name')
-                ->addMeta('copyright', 'Riski Web ID', 'name')
-                ->addMeta('designer', 'Riski', 'name')
-                ->setCanonical(route('blog.show', $post->slug))
-                ->setPrev(route('blog.show', $post->slug))
-                ->setNext(route('blog.show', $post->slug));
+            ->setDescription($post->description)
+            ->setKeywords($post->keywords)
+            ->addMeta('article:published_time', $post->created_at->toW3CString(), 'property')
+            ->addMeta('article:section', $post->category->name, 'property')
+            ->addMeta('author', $post->user->name . ', hi@riski.web.id', 'name')
+            ->addMeta('copyright', 'Riski Web ID', 'name')
+            ->addMeta('designer', 'Riski', 'name')
+            ->setCanonical(route('blog.show', $post->slug));
+        if($blog_pager['previous']) {
+            SEOMeta::setPrev(route('blog.show', $blog_pager['previous']->slug));
+        }
+        if($blog_pager['next']) {
+            SEOMeta::setNext(route('blog.show', $blog_pager['next']->slug));
+        }
+        
 
         /** OpenGraph */
         OpenGraph::setTitle($post->title)
-                ->setDescription($post->description)
-                ->setUrl(route('blog.show', $post->slug))
-                ->setSiteName('Riski Web ID')
-                ->addImage(getBlogImage($post->featured_image))
-                ->addProperty('type', 'article')
-                ->addProperty('locale', 'id-ID')
-                ->addProperty('locale:alternate', ['id-ID', 'en-US']);
+            ->setDescription($post->description)
+            ->setUrl(route('blog.show', $post->slug))
+            ->setSiteName('Riski Web ID')
+            ->addImage(getBlogImage($post->featured_image))
+            ->addProperty('type', 'article')
+            ->addProperty('locale', 'id-ID')
+            ->addProperty('locale:alternate', ['id-ID', 'en-US']);
 
-        return view('front.blog.show', compact('post', 'related_post'));
+        return view('front.blog.show', compact('post', 'related_post', 'blog_pager'));
     }
 
 }

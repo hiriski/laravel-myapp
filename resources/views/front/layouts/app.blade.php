@@ -7,7 +7,7 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="icon" href="{{ asset('favicon.ico') }}"/>
 
-<!-- Auto Generate for SEO -->
+<!-- Auto Generate Meta Tag -->
 {!! SEOMeta::generate() !!}
 <meta name="msapplication-TileColor" content="#f7f7f7"/>
 <meta name="theme-color" content="#f7f7f7"/>

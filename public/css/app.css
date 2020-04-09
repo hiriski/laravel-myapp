@@ -89,6 +89,7 @@ footer#main .c__ > p:first-child > span:before {
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
 #hero[data-version=two] .u ._o p,
 #hero[data-version=two] .u ._i h2 + span,
+#_bsp > div[class*=_] > * .q > div a p,
 #_H_Cb ._ > p,
 #Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child + *:not(div) {
   color: #707070;
@@ -129,6 +130,7 @@ footer#main .c__ a:hover {
 #RP .__i__ .c_ ._m_ .d_,
 #_Bx .__i__ .c_ ._m_ .d_,
 footer#main .c__ > p,
+#_bsp > div[class*=_] > * .q > div a p,
 pre[class*=language] span.code-filename {
   font-size: 14px;
 }
@@ -142,6 +144,7 @@ pre[class*=language] span.code-filename {
 }
 
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
+#_bsp > div[class*=_] > * .q > div a,
 #_psh ul li a,
 btn.anhoi-btn,
 a.anhoi-btn {
@@ -172,12 +175,19 @@ a.anhoi-btn {
 #_Bx .__i__ ._img_,
 #Ftr_P .__i__ .c_ ._t_,
 #Ftr_P .__i__ ._img_,
-#hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_] {
+#hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_],
+#_bsp > div[class*=_] > * .q h3,
+#_bsp > div[class*=_] > * .q h4,
+#_bsp > div[class*=_] > * .q h5,
+#_bsp > div[class*=_] > * .q h6,
+#_bsp > div[class*=_] > * .q > div {
   overflow: hidden;
 }
 
 [data-page=index] main#main,
 #hero[data-version=two] .anh_,
+#_bsp > div[class*=_] > *:first-of-type > .q .ic,
+#_bsp > div[class*=_] > * .q .ic,
 .__aw__,
 pre[class*=language] span.code-filename,
 #_n_ ._ ._a ul li a i,
@@ -224,6 +234,7 @@ pre[class*=language] span.code-filename,
 #Ftr_P .__i__ ._img_,
 main#main .Anh,
 #hero[data-version=two] ._y ._x,
+#_bsp > div[class*=_] > * .q > div,
 pre[class*=language],
 #_n_ ._ ._a ul li a,
 #_n_[data-position=left] ._ ._s ._a ul li a i,
@@ -265,10 +276,6 @@ main#main .Anh,
 #_psh div[class^=s] > .a {
   -webkit-user-select: none;
   -moz-user-select: none;
-}
-
-#hero[data-version=two][data-position=left] ._y ._x {
-  padding: unset;
 }
 
 /** Margin */
@@ -354,6 +361,40 @@ main#main .Anh,
   margin-bottom: 3rem;
 }
 
+/** padding */
+
+#_bsp > div[class*=_] > *:first-of-type > .q {
+  padding-right: 0.5rem;
+}
+
+#_bsp > div[class*=_] > *:last-of-type .q {
+  padding-left: 0.5rem;
+}
+
+#_bsp > div[class*=_] > * .q > div {
+  padding: 0.85rem;
+}
+
+#_bsp {
+  padding-top: 2rem;
+}
+
+#_bsp {
+  padding-bottom: 2rem;
+}
+
+#_bsp > div[class*=_] > *:first-of-type > .q > * {
+  padding-left: 3rem;
+}
+
+#_bsp > div[class*=_] > *:last-of-type .q > * {
+  padding-right: 3rem;
+}
+
+#hero[data-version=two][data-position=left] ._y ._x {
+  padding: unset;
+}
+
 /** Give Standar Padding/Margin for Block */
 
 #_Bx > .__q__ > ._cn_ ._g_ ._,
@@ -389,6 +430,7 @@ main#main .Anh,
 
 [data-page=index][data-layout-style=left] main#main .Anh,
 [data-page=index] main#main,
+#_bsp > div[class*=_] > * .q > div a,
 #_psh,
 .__aw__,
 #_n_[data-position=left] ._ ._s ._a ul li,
@@ -416,16 +458,24 @@ main#main .Anh > div[class*=__] > .__,
 }
 
 #RP > .__q__,
-[data-blog=single] ._io_ ._ps_ {
+[data-blog=single] ._io_ ._ps_,
+#_bsp {
   width: 700px;
   margin: auto;
 }
 
 @media screen and (max-width: 768px) {
   #RP > .__q__,
-  [data-blog=single] ._io_ ._ps_ {
+  [data-blog=single] ._io_ ._ps_,
+  #_bsp {
     width: 100% !important;
   }
+}
+
+#RP .__i__,
+#_Bx .__i__,
+#_bsp > div[class*=_] > * {
+  width: 50%;
 }
 
 /** flex family */
@@ -451,6 +501,8 @@ main#main .Anh > div[class*=__],
 #hero[data-version=two] .u,
 #hero[data-version=two] ._y ._x,
 #hero[data-version=two] ._z ._q,
+#_bsp > div[class*=_] > * .q > div,
+#_bsp > div[class*=_],
 #_psh ul li a,
 #_H_Cb ._ ._x0,
 #__pg__ > .__ .pagination,
@@ -511,14 +563,24 @@ main#main .Anh > div[class*=__],
   flex-wrap: wrap;
 }
 
+#_bsp > div[class*=_] {
+  flex-wrap: nowrap;
+}
+
 #RP .__i__ .c_ ._m_,
 #_Bx .__i__ .c_ ._m_,
+#_bsp > div[class*=_],
 #_n_ ._ ._a {
   justify-content: space-between;
 }
 
+#_bsp > div[class*=_] > *:first-of-type > .q,
 #_n_[data-position=left] ._ ._s ._a {
   justify-content: flex-start;
+}
+
+#_bsp > div[class*=_] > *:last-of-type .q {
+  justify-content: flex-end;
 }
 
 /** Box Shadow */
@@ -527,6 +589,7 @@ main#main .Anh > div[class*=__],
 #RP .__i__ ._img_,
 #_Bx .__i__ .c_ > ._xo,
 #_Bx .__i__ ._img_,
+#_bsp > div[class*=_] > * .q > div,
 #_psh div[class^=s] > .a,
 #_psh.ready div[class^=s],
 #_n_[data-position=left] {
@@ -547,6 +610,7 @@ main#main .Anh > div[class*=__],
 [data-blog=single] ._io_ ._ps_ .block,
 [data-blog=single] ._io_ ._ps_ code:not([class*=language]),
 main#main .Anh > div[class*=__],
+#_bsp > div[class*=_] > * .q > div,
 #_psh div[class^=s],
 pre[class*=language] span.code-filename,
 pre[class*=language][data-line-numbers=false],
@@ -574,6 +638,7 @@ ul,
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
 footer#main .c__ > p,
 #hero[data-version=two] .u ._o p,
+#_bsp > div[class*=_] > * .q > div a *,
 #_H_Cb ._ ._x0 * h1,
 #_H_Cb ._ ._x0 * h2,
 #_H_Cb ._ ._x0 * h3,
@@ -617,6 +682,7 @@ footer#main .c__ > p,
 
 #_Bx .__i__ .c_ > ._xo ._t_ + .__,
 footer#main .c__ > p,
+#_bsp > div[class*=_] > * .q > div a,
 #_psh ul li a {
   color: #686868;
 }
@@ -631,6 +697,11 @@ footer#main .c__ > p,
   color: #313131;
 }
 
+#_bsp > div[class*=_] > * .q > div:hover .ic,
+#_bsp > div[class*=_] > * .q > div:hover h3,
+#_bsp > div[class*=_] > * .q > div:hover h4,
+#_bsp > div[class*=_] > * .q > div:hover h5,
+#_bsp > div[class*=_] > * .q > div:hover h6,
 #_bt_ ul li a,
 #_n_ ._ ._a ul li a i,
 #_n_ ._ ._a ul .you_are_with_me a,
@@ -642,6 +713,14 @@ a.anhoi-btn,
 #_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
 #Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child {
   color: #1f77ff;
+}
+
+#_bsp > div[class*=_] > * .q > div {
+  border: 1px solid transparent;
+}
+
+#_bsp > div[class*=_] > * .q > div:hover {
+  border: 1px solid #1f77ff;
 }
 
 .material-icons,
@@ -697,6 +776,10 @@ footer#main > div[class*=_] > div,
 #_psh,
 #_n_[data-position=left] ._ ._s {
   text-align: center;
+}
+
+#_bsp > div[class*=_] > *:first-of-type > .q > * {
+  text-align: right;
 }
 
 [data-blog=single] ._io_ ._m_ > ._ad_ > ._a > *:first-child {
@@ -2011,6 +2094,49 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
   background-color: rgba(0, 0, 0, 0.36);
 }
 
+#_bsp {
+  --blog-page-height: 70px;
+}
+
+#_bsp > div[class*=_] {
+  /** next and previous */
+}
+
+#_bsp > div[class*=_] > * {
+  /** previous */
+  /** next */
+}
+
+#_bsp > div[class*=_] > * .q {
+  /** apapun headingnya akan jadi warna primary */
+}
+
+#_bsp > div[class*=_] > * .q > div {
+  height: var(--blog-page-height);
+}
+
+#_bsp > div[class*=_] > * .q h3,
+#_bsp > div[class*=_] > * .q h4,
+#_bsp > div[class*=_] > * .q h5,
+#_bsp > div[class*=_] > * .q h6 {
+  font-size: 18px;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#_bsp > div[class*=_] > * .q .ic {
+  top: 22px;
+}
+
+#_bsp > div[class*=_] > *:first-of-type > .q .ic {
+  left: 15px;
+}
+
+#_bsp > div[class*=_] > *:last-of-type .q .ic {
+  right: 15px;
+}
+
 #hero[data-version=two] {
   background-color: #f4f4f4;
   /** Picture Area */
@@ -2169,7 +2295,6 @@ footer#main .c__ > p i {
 }
 
 #_Bx .__i__ {
-  width: 50%;
   /** item inner (firt child of post items)  */
   /** content of post include post title summary not post meta*/
 }
@@ -2381,7 +2506,6 @@ footer#main .c__ > p i {
 }
 
 #RP .__i__ {
-  width: 50%;
   /** item inner (firt child of post items)  */
   /** content of post include post title summary not post meta*/
 }
