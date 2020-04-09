@@ -95,6 +95,10 @@
     line-height: 1.3;
 }
 
+%line-height-default {
+    line-height: 1.65;
+}
+
 %relative-hidden {
     overflow: hidden;
     position: relative;
@@ -770,7 +774,12 @@
 %border-thin-primary {
     border: 1px solid $primary-color;
 }
-
+%border-thin-gray {
+    border: 1px solid $gray;
+}
+%border-thin-info {
+    border: 1px solid $info-color;
+}
 
 // vertical align
 %vertical-align-middle {

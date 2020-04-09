@@ -34,6 +34,7 @@ class CreateBlogsTable extends Migration {
             $table->unsignedTinyInteger('status_id');
             $table->boolean('show_sidebar')->default(false);
             $table->boolean('show_hit')->default(true);
+            $table->boolean('show_author')->default(false);
 
             /** etc */
             $table->unsignedBigInteger('hit')->nullable();

@@ -14,6 +14,9 @@
             @include('front.layouts.single-blog-v2')
             @include('front.components.blog-single-pager')
             @include('front.components.share-button')
+            @if($post->show_author)
+                @include('front.components.post-author')
+            @endif
             @include('front.layouts.related-post')
         </div>
     </div>
