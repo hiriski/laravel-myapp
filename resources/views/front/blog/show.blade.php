@@ -12,6 +12,7 @@
     <div class="__o__">
         <div class="__">
             @include('front.layouts.single-blog-v2')
+            @include('front.components.share-button')
             @include('front.layouts.related-post')
         </div>
     </div>

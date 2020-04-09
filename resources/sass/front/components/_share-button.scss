@@ -1,0 +1,106 @@
+#_psh {
+    $social-icon-size: 22px;
+
+    &[data-show=false] {
+        bottom: -100px;
+    }
+
+    @extend %fixed;
+    @extend %bottom-left;
+    @extend %text-center;
+    @extend %full-width;
+    z-index: 1001;
+    @extend %transition;
+
+    * {
+        @extend %transition;
+    }
+
+
+    /** 
+     * Event ketika floating share terbuka */
+    &.ready {
+        bottom: 1.5rem;
+        div[class^=s] {
+            @extend %set-background-white;
+            @extend %box-shadow;
+            .a {
+                @extend %danger;
+                padding: 0.65rem .65rem;
+                transition: none;
+                i {
+                    color: #dc0202;
+                }
+                &:hover {
+                    i {
+                        margin-right: 0;
+                    }
+                }
+                span:not([class*=i]) {
+                    @extend %display-none;
+                }
+            }
+        }
+        ul {
+            display: block;
+        }
+    }
+    
+
+    div[class$=s] {
+        @extend %transition;
+    }
+    
+    div[class^=s] {
+        @extend %border-thin-radius;
+        @extend %margin-auto;
+        padding: 1.5rem;
+        width: 400px;
+        > .a {
+            @extend %background-primary-color-light;
+            @extend %reset-line-height;
+            @extend %user-select-none;
+            @extend %cursor-pointer;
+            @extend %inline-block;
+            @extend %box-shadow;
+            border-radius: 20px;
+            padding: .65rem 1rem;
+            &:hover {
+                i {
+                    @extend %margin-right-xs;
+                }
+            }
+            i {
+                font-size: 18px;
+            }
+            span {
+                font-size: 14px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    ul {
+        @extend %margin-top-lg;
+        @extend %remove-bullet-list;
+        @extend %display-none;
+        li {
+            @extend %inline-block;
+            a {
+                @extend %flex;
+                @extend %justify-content-center;
+                @extend %text-decoration-none;
+                @extend %secondary-text;
+                padding: 0 14px;
+                span {
+                    font-size: 15px;
+                }
+            }
+            svg {
+                width: $social-icon-size;
+                height: auto;
+                @extend %margin-right-xs;
+            }
+        }
+    }
+}

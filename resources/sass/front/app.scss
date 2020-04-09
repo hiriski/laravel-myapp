@@ -25,8 +25,11 @@
 @import 'components/scrollbar';
 @import 'components/category-blog-heading';
 @import 'components/_category-blog-top';
+@import 'components/share-button';
+@import 'components/overlay';
 
-@import 'layouts/hero';
+// @import 'layouts/hero';
+@import 'layouts/hero-v2';
 @import 'layouts/main';
 @import 'layouts/navigation';
 @import 'layouts/grid';

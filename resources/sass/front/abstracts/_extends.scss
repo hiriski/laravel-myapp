@@ -152,6 +152,21 @@
     @include transition(all 2s ease);
 }
 
+
+/** cursor */
+%cursor-pointer {
+    cursor: pointer;
+}
+
+%user-select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+%padding-unset {
+    padding: unset;
+}
+
 /** Margin */
 %margin-top-xs {
     margin-top: .5rem;
@@ -392,6 +407,10 @@
     align-items: center;
 }
 
+%align-items-flex-start {
+    align-items: flex-start;
+}
+
 %align-items-flex-end {
     align-items: flex-end;
 }
@@ -485,6 +504,10 @@
 
 %remove-margin {
     margin: 0;
+}
+
+%margin-auto {
+    margin: auto;
 }
 
 %border-thin-radius {

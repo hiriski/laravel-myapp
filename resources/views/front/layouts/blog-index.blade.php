@@ -14,7 +14,7 @@
             </div>
 
             {{-- Perlu di uji jika di halaman pertama tampilkan quute ini --}}
-            @if(Route::getCurrentRoute()->uri === "blog")
+            @if(Route::currentRouteName() === "blog.index" || Route::currentRouteName() === "index")
             <div class="__quote__">
                 <blockquote>"Aku belajar dan membaca agar umur orang lain berguna bagiku, dan aku menulis agar orang lain mengambil manfaat atas umurku"
                     <cite>Ust. Felix Siauw</cite>

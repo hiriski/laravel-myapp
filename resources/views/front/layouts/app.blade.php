@@ -104,7 +104,9 @@
     }
 </script>
 @endif
-{{-- Styles --}}
+<script>
+var currentRouteName = "{{ Route::currentRouteName() }}";
+</script>
 <script src="{{ asset('js/app.js') }}" defer></script>
 <link rel="stylesheet" href="{{ asset('fonts/hk-grotesk/style.css') }}">
 <link rel="stylesheet" href="{{ asset('fonts/material-icons/material-icons.css') }}">
@@ -112,19 +114,21 @@
 </head>
 
 @if(Route::currentRouteName() === "blog.index")
-<body data-theme="light" data-page="blog-index">
+<body data-theme="light">
 @elseif(Route::currentRouteName() === "blog.show")
-<body data-theme="light" data-page="blog-single">
+<body data-theme="light">
 @elseif(Route::currentRouteName() === "index")
-<body data-theme="light" data-page="home">
+<body data-theme="light">
 @else
 <body data-theme="light">
 @endif
 
-<div id="AnhOi" data-version="one" data-version-name="anhoi-mot">
+<div id="AnhOi" data-version="one" data-version-name="anhoi-mot"
+    {{-- Value data page akan dinamis berdasarkan route masing2 --}}
+    data-page="{{ str_replace('.', '-', Route::currentRouteName()) }}">
     {{-- @include('front.components.preload') --}}
     @if( Route::currentRouteName() === "index")
-        @include('front.layouts.hero')
+        @include('front.layouts.hero-v2')
     @endif
     <main id="main">
         @yield('content')

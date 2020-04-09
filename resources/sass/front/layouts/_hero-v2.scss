@@ -1,0 +1,122 @@
+$hero_pic_size : 174px;
+$follow-background-image : #f4f4f4;
+
+#hero {
+    @extend %transition;
+    * {
+        @extend %transition;
+    }
+    &[data-version=two] {
+        background-color: $follow-background-image;
+        @extend %fixed;
+        @extend %top-left;
+        @extend %full;
+        ._z {
+            ._q {
+                @extend %flex;
+                @extend %align-items-center;
+                @extend %justify-content-center;
+                @extend %full-height-percen;
+                @extend %flex-direction-column;
+            }
+        }
+        ._y {
+            @extend %one-k-width;
+            ._x {
+                @extend %flex;
+                @extend %relative;
+                @extend %give-standard-padding;
+                height: $hero-height;
+            }
+        }
+
+        /** Picture Area */
+        .anh_ {
+            @extend %absolute;
+            z-index: -1;
+            bottom: 0;
+            right: 0;
+            [class*="_"] {
+                @extend %line-height-zero;
+                img {
+                    height: $hero-height;
+                    width: auto;    
+                }
+            }
+        }
+    
+        .u {
+            @extend %flex;
+            @extend %align-items-center;
+            padding-right: 50%;
+            ._i {
+                h2 {
+                    @extend %reset-line-height;
+                    font-size: 34px;
+                    margin-bottom: .6rem;
+                    + span {
+                        @extend %muted;
+                    }
+                }
+            }
+            ._o {
+                @extend %margin-top-sm;
+                font-size: 18px;
+                p {
+                    @extend %muted;
+                    @extend %reset;
+                }
+            }
+        }
+
+        /** Style for position hero to left */
+        &[data-position=left] {
+            z-index: 10;
+            width: $left-width;
+            ._y {
+                width: $left-width;
+                ._x {
+                    @extend %full-height;
+                    @extend %padding-unset;
+                    .u {
+                        @extend %align-items-flex-start;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                        [class*=r] {
+                            padding-top: 120px;
+                        } 
+                        [class$=i] {
+                            h2 {
+                                @extend %margin-top;
+                                font-size: 24px;
+                                span {
+                                    @extend %display-none;
+                                }
+                            }
+                        }
+                    }
+                    > [class$=_] {
+                        $image-size : 100px;
+
+                        right: unset;
+                        bottom: unset;
+                        top: 26px;
+                        left: 30px;
+                        > [class^=_] {
+                            width: $image-size;
+                            height: $image-size;
+                            @extend %overflow-hidden;
+                            @extend %image-box-shadow;
+                            img {
+                                width: 125px;
+                                height: auto;
+                                margin-left: -9px;
+                            }
+                        }
+                    }
+                }
+            }  
+        }
+
+    }
+}

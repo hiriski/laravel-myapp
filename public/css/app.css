@@ -8,7 +8,7 @@
   --primary-color-hover: #055de0;
   --link: #0c00b9;
   --link-hover: #02007e;
-  --main-text-color: #444444;
+  --main-text-color: #313131;
   --success: #c3ffc0;
   --info: #d2d8ff;
   --warning: #fff2b3;
@@ -53,6 +53,9 @@
 * @param {*} $color 		- Property color value
 */
 
+#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span,
+#_psh ul,
+#_psh.ready div[class^=s] .a span:not([class*=i]),
 #_n_[data-position=left] ._ ._s #_r_ > span,
 #_n_[data-position=left] ._ ._s ._a ul li a > span {
   display: none;
@@ -84,8 +87,8 @@ footer#main .c__ > p:first-child > span:before {
 [data-blog=single] ._io_ ._m_ > ._ad_ > ._a > ._d,
 #_Bx .__i__ .c_ ._m_ .d_,
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
-#hero .me ._o p,
-#hero .me ._i h2 + span,
+#hero[data-version=two] .u ._o p,
+#hero[data-version=two] .u ._i h2 + span,
 #_H_Cb ._ > p,
 #Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child + *:not(div) {
   color: #707070;
@@ -108,13 +111,14 @@ footer#main .c__ > p:first-child > span:before {
   color: #755f43;
 }
 
-[data-blog=single] ._io_ ._ps_ .block.danger {
+[data-blog=single] ._io_ ._ps_ .block.danger,
+#_psh.ready div[class^=s] .a {
   background-color: #ffcdc8;
   color: #92574a;
 }
 
 footer#main .c__ a {
-  color: #444444;
+  color: #313131;
   text-decoration: none;
 }
 
@@ -138,18 +142,21 @@ pre[class*=language] span.code-filename {
 }
 
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
+#_psh ul li a,
 btn.anhoi-btn,
 a.anhoi-btn {
   text-decoration: none;
 }
 
+#hero[data-version=two] .anh_ [class*=_],
 #_n_ #_r_ ._z {
   line-height: 0;
 }
 
 [data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
 [data-blog=single][data-version=two] ._io_ ._xo > .__,
-#hero .me ._i h2,
+#hero[data-version=two] .u ._i h2,
+#_psh div[class^=s] > .a,
 #hero_social_links ._s ul li a,
 #hero_social_links ._s ul li,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
@@ -165,11 +172,12 @@ a.anhoi-btn {
 #_Bx .__i__ ._img_,
 #Ftr_P .__i__ .c_ ._t_,
 #Ftr_P .__i__ ._img_,
-#hero .me .pic ._h {
+#hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_] {
   overflow: hidden;
 }
 
-[data-page=home] main#main,
+[data-page=index] main#main,
+#hero[data-version=two] .anh_,
 .__aw__,
 pre[class*=language] span.code-filename,
 #_n_ ._ ._a ul li a i,
@@ -185,16 +193,16 @@ pre[class*=language] span.code-filename,
   position: absolute;
 }
 
-#hero .-_-_-,
-#hero > #xGyoHDpi,
-#hero,
+#hero[data-version=two],
+.___g--dark___,
+#_psh,
 #_n_,
 #_x0 {
   position: fixed;
 }
 
-#hero .-_-_-,
-#hero,
+#hero[data-version=two],
+.___g--dark___,
 .__aw__,
 #_n_[data-position=left],
 #_x0 > div,
@@ -205,11 +213,17 @@ pre[class*=language] span.code-filename,
   left: 0;
 }
 
+#_psh {
+  bottom: 0;
+  left: 0;
+}
+
 #RP .__i__ ._img_,
 [data-page=blog-single] main#main,
 #_Bx .__i__ ._img_,
 #Ftr_P .__i__ ._img_,
 main#main .Anh,
+#hero[data-version=two] ._y ._x,
 pre[class*=language],
 #_n_ ._ ._a ul li a,
 #_n_[data-position=left] ._ ._s ._a ul li a i,
@@ -224,7 +238,12 @@ pre[class*=language],
 #RP .__i__ .c_,
 #_Bx .__i__ .c_ > ._xo,
 #_Bx .__i__ .c_,
-#hero .me .pic ._h img,
+main#main .Anh,
+#hero *,
+#hero,
+#_psh div[class$=s],
+#_psh *,
+#_psh,
 #_n_ ._ ._a ul li a span,
 #_n_ *,
 #hero_nav ._ ._a ul li a span,
@@ -237,9 +256,26 @@ pre[class*=language],
   transition: all 2s ease;
 }
 
+/** cursor */
+
+#_psh div[class^=s] > .a {
+  cursor: pointer;
+}
+
+#_psh div[class^=s] > .a {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+#hero[data-version=two][data-position=left] ._y ._x {
+  padding: unset;
+}
+
 /** Margin */
 
 #RP .__i__ .c_ ._m_ ._ic,
+#_psh ul li svg,
+#_psh div[class^=s] > .a:hover i,
 #_n_ #_r_ ._z {
   margin-right: 0.5rem;
 }
@@ -250,7 +286,7 @@ pre[class*=language],
 }
 
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote cite,
-#hero .me ._o {
+#hero[data-version=two] .u ._o {
   margin-top: 0.85rem;
 }
 
@@ -277,8 +313,8 @@ pre[class*=language],
 }
 
 [data-blog=single] ._io_ ._xo > .__,
-#_bt_,
-#hero_social_links {
+#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2,
+#_bt_ {
   margin-top: 1.25rem;
 }
 
@@ -290,6 +326,7 @@ pre[class*=language],
 #RP .__l_m,
 [data-blog=single][data-version=two] ._io_ ._m_,
 #_Bx .__l_m,
+#_psh ul,
 #_n_[data-position=left] ._ ._s ._a ul,
 ._ps_ div,
 ._ps_ h1,
@@ -307,7 +344,8 @@ pre[class*=language],
   margin-bottom: 2rem;
 }
 
-#RP {
+#RP,
+#hero_social_links {
   margin-top: 3rem;
 }
 
@@ -318,6 +356,8 @@ pre[class*=language],
 /** Give Standar Padding/Margin for Block */
 
 #_Bx > .__q__ > ._cn_ ._g_ ._,
+[data-page=index] main#main .Anh,
+#hero[data-version=two] ._y ._x,
 #_H_Cb ._,
 #_n_ ._ ._s {
   padding-left: 12px;
@@ -329,32 +369,35 @@ pre[class*=language],
   margin-right: -12px;
 }
 
-#hero > #xGyoHDpi,
-#hero,
+#hero[data-version=two],
+.___g--dark___,
 #_x0 > div,
 #_x0 {
   height: 100vh;
   width: 100%;
 }
 
+#hero[data-version=two][data-position=left] ._y ._x,
 #_n_[data-position=left] {
   height: 100vh;
 }
 
-#hero ._z ._q {
+#hero[data-version=two] ._z ._q {
   height: 100%;
 }
 
-[data-page=home] main#main,
-#hero .-_-_-,
+[data-page=index][data-layout-style=left] main#main .Anh,
+[data-page=index] main#main,
+#_psh,
 .__aw__,
 #_n_[data-position=left] ._ ._s ._a ul li,
 #_n_ {
   width: 100%;
 }
 
-main#main .Anh > .__o__ > .__,
-#hero ._y,
+main#main .Anh > div[class*=__] > .__,
+[data-page=index] main#main .Anh,
+#hero[data-version=two] ._y,
 #__pg__ > .__,
 #hero_nav ._ {
   width: 1000px;
@@ -362,8 +405,9 @@ main#main .Anh > .__o__ > .__,
 }
 
 @media screen and (max-width: 768px) {
-  main#main .Anh > .__o__ > .__,
-  #hero ._y,
+  main#main .Anh > div[class*=__] > .__,
+  [data-page=index] main#main .Anh,
+  #hero[data-version=two] ._y,
   #__pg__ > .__,
   #hero_nav ._ {
     width: 100% !important;
@@ -402,10 +446,11 @@ main#main .Anh > .__o__ > .__,
 #_Bx > .__q__ > ._cn_ .__quote__,
 #_Bx > .__q__ > ._cn_ > .__sa,
 #Ftr_P > .__f__ > .__ > ._p_,
-main#main .Anh > .__o__,
-#hero .me .pic,
-#hero .me,
-#hero ._z ._q,
+main#main .Anh > div[class*=__],
+#hero[data-version=two] .u,
+#hero[data-version=two] ._y ._x,
+#hero[data-version=two] ._z ._q,
+#_psh ul li a,
 #_H_Cb ._ ._x0,
 #__pg__ > .__ .pagination,
 #_n_ ._ ._a,
@@ -422,7 +467,8 @@ main#main .Anh > .__o__,
 [data-blog=single] ._io_ ._m_,
 #_Bx .__l_m,
 #_Bx > .__q__ > ._cn_ .__quote__,
-#hero ._z ._q,
+#hero[data-version=two] ._z ._q,
+#_psh ul li a,
 #__pg__ > .__ .pagination,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_],
 #_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] {
@@ -435,16 +481,20 @@ main#main .Anh > .__o__,
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_],
 #_Bx .__i__ .c_ ._m_ ._ic,
 #_Bx .__i__ .c_ ._m_,
-#hero .me .pic,
-#hero ._z ._q,
+#hero[data-version=two] .u,
+#hero[data-version=two] ._z ._q,
 #_H_Cb ._ ._x0,
 #_n_ ._ ._a,
 #_n_ #_r_ {
   align-items: center;
 }
 
+#hero[data-version=two][data-position=left] ._y ._x .u {
+  align-items: flex-start;
+}
+
 [data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
-#hero ._z ._q,
+#hero[data-version=two] ._z ._q,
 #_n_[data-position=left] ._ ._s ._a ul,
 #_n_[data-position=left] ._ ._s ._a {
   flex-direction: column;
@@ -476,18 +526,27 @@ main#main .Anh > .__o__,
 #RP .__i__ ._img_,
 #_Bx .__i__ .c_ > ._xo,
 #_Bx .__i__ ._img_,
+#_psh div[class^=s] > .a,
+#_psh.ready div[class^=s],
 #_n_[data-position=left] {
   box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
   -webkit-box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
 }
 
-[data-blog=single] ._io_ ._xo > .__ img {
+[data-blog=single] ._io_ ._xo > .__ img,
+#hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_] {
   box-shadow: 0 15px 32px rgba(0, 0, 0, 0.1);
+}
+
+#_psh div[class^=s] {
+  margin: auto;
 }
 
 [data-blog=single] ._io_ ._ps_ .block,
 [data-blog=single] ._io_ ._ps_ code:not([class*=language]),
+main#main .Anh > div[class*=__],
+#_psh div[class^=s],
 pre[class*=language] span.code-filename,
 pre[class*=language][data-line-numbers=false],
 #_bt_ ul li a {
@@ -503,8 +562,7 @@ pre[class*=language] {
   border-radius: 0.4rem;
 }
 
-[data-blog=single] ._io_ ._m_ > ._ad_ img,
-#hero .me .pic ._h {
+[data-blog=single] ._io_ ._m_ > ._ad_ img {
   border-radius: 50%;
 }
 
@@ -514,7 +572,7 @@ ul,
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *,
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
 footer#main .c__ > p,
-#hero .me ._o p,
+#hero[data-version=two] .u ._o p,
 #_H_Cb ._ ._x0 * h1,
 #_H_Cb ._ ._x0 * h2,
 #_H_Cb ._ ._x0 * h3,
@@ -528,6 +586,7 @@ footer#main .c__ > p,
   padding: 0;
 }
 
+#_psh ul,
 #__pg__ > .__ .pagination,
 #_n_ ._ ._a ul,
 #hero_nav ._ ._a ul,
@@ -539,6 +598,8 @@ footer#main .c__ > p,
   display: block;
 }
 
+#_psh ul li,
+#_psh div[class^=s] > .a,
 #_bt_ ul li,
 #_n_ ._ ._a ul li,
 #_n_[data-position=left] ._ ._s ._a ul li a,
@@ -548,8 +609,14 @@ footer#main .c__ > p,
   display: inline-block;
 }
 
+#_psh div[class^=s] > .a {
+  background: #1f77ff;
+  color: #f7f7f7;
+}
+
 #_Bx .__i__ .c_ > ._xo ._t_ + .__,
-footer#main .c__ > p {
+footer#main .c__ > p,
+#_psh ul li a {
   color: #686868;
 }
 
@@ -560,7 +627,7 @@ footer#main .c__ > p {
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
 #_Bx .__i__ .c_ ._m_ .__c,
 #_Bx .__i__ .c_ > ._xo ._t_ a {
-  color: #444444;
+  color: #313131;
 }
 
 #_bt_ ul li a,
@@ -589,7 +656,8 @@ pre[class*=language][data-color*=light] {
 #RP .__i__ .c_ > ._xo,
 #_Bx .__i__ .c_ > ._xo,
 footer#main,
-[data-theme=light] main#main {
+[data-theme=light] main#main .Anh > div[class*=__],
+#_psh.ready div[class^=s] {
   background: #fff;
 }
 
@@ -625,6 +693,7 @@ pre[class*=language] .line-number {
 [data-blog=single] ._io_ ._t,
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
 footer#main > div[class*=_] > div,
+#_psh,
 #_n_[data-position=left] ._ ._s {
   text-align: center;
 }
@@ -1258,7 +1327,7 @@ textarea::placeholder {
 }
 
 #hero_nav ._ ._a ul li a {
-  color: #444444;
+  color: #313131;
   text-decoration: none;
   padding: 0.3rem 1rem;
 }
@@ -1338,7 +1407,7 @@ textarea::placeholder {
 }
 
 #_n_ ._ ._a ul li a {
-  color: #444444;
+  color: #313131;
   text-decoration: none;
   padding: 0.3rem 1rem;
 }
@@ -1737,9 +1806,9 @@ pre[class*=language][data-color=monokai-pro][class$=-markup] .token.punctuation 
 }
 
 pre[class*=language][data-color*=light] {
-  box-shadow: 0 2px 4px 1px rgba(68, 68, 68, 0.1);
-  -moz-box-shadow: 0 2px 4px 1px rgba(68, 68, 68, 0.1);
-  -webkit-box-shadow: 0 2px 4px 1px rgba(68, 68, 68, 0.1);
+  box-shadow: 0 2px 4px 1px rgba(49, 49, 49, 0.1);
+  -moz-box-shadow: 0 2px 4px 1px rgba(49, 49, 49, 0.1);
+  -webkit-box-shadow: 0 2px 4px 1px rgba(49, 49, 49, 0.1);
   color: #3d78c3;
 }
 
@@ -1874,55 +1943,160 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
   height: auto;
 }
 
-#hero > #xGyoHDpi {
-  background-position: top left;
-  background-size: cover;
-  z-index: -1;
+#_psh {
+  z-index: 1001;
+  /** 
+   * Event ketika floating share terbuka */
 }
 
-#hero ._z {
-  height: 100%;
+#_psh[data-show=false] {
+  bottom: -100px;
 }
 
-#hero .me .pic ._h {
-  width: 174px;
-  height: 174px;
+#_psh.ready {
+  bottom: 1.5rem;
 }
 
-#hero .me .pic ._h img {
-  width: 174px;
-  height: 174px;
-  transform: scale(1.1);
+#_psh.ready div[class^=s] .a {
+  padding: 0.65rem 0.65rem;
+  transition: none;
 }
 
-#hero .me .pic ._h img:hover {
-  transform: scale(1);
+#_psh.ready div[class^=s] .a i {
+  color: #dc0202;
 }
 
-#hero .me ._r {
-  margin-left: 2.5rem;
-  padding-right: 150px;
+#_psh.ready div[class^=s] .a:hover i {
+  margin-right: 0;
 }
 
-#hero .me ._i h2 {
-  font-size: 28px;
-  margin-bottom: 0;
+#_psh.ready ul {
+  display: block;
 }
 
-#hero .me ._o {
+#_psh div[class^=s] {
+  padding: 1.5rem;
+  width: 400px;
+}
+
+#_psh div[class^=s] > .a {
+  border-radius: 20px;
+  padding: 0.65rem 1rem;
+}
+
+#_psh div[class^=s] > .a i {
   font-size: 18px;
 }
 
-[data-page=home] main#main {
+#_psh div[class^=s] > .a span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#_psh ul li a {
+  padding: 0 14px;
+}
+
+#_psh ul li a span {
+  font-size: 15px;
+}
+
+#_psh ul li svg {
+  width: 22px;
+  height: auto;
+}
+
+.___g--dark___ {
+  background-color: rgba(0, 0, 0, 0.36);
+}
+
+#hero[data-version=two] {
+  background-color: #f4f4f4;
+  /** Picture Area */
+  /** Style for position hero to left */
+}
+
+#hero[data-version=two] ._y ._x {
+  height: 80vh;
+}
+
+#hero[data-version=two] .anh_ {
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+}
+
+#hero[data-version=two] .anh_ [class*=_] img {
+  height: 80vh;
+  width: auto;
+}
+
+#hero[data-version=two] .u {
+  padding-right: 50%;
+}
+
+#hero[data-version=two] .u ._i h2 {
+  font-size: 34px;
+  margin-bottom: 0.6rem;
+}
+
+#hero[data-version=two] .u ._o {
+  font-size: 18px;
+}
+
+#hero[data-version=two][data-position=left] {
+  z-index: 10;
+  width: 320px;
+}
+
+#hero[data-version=two][data-position=left] ._y {
+  width: 320px;
+}
+
+#hero[data-version=two][data-position=left] ._y ._x .u {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#hero[data-version=two][data-position=left] ._y ._x .u [class*=r] {
+  padding-top: 120px;
+}
+
+#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 {
+  font-size: 24px;
+}
+
+#hero[data-version=two][data-position=left] ._y ._x > [class$=_] {
+  right: unset;
+  bottom: unset;
+  top: 26px;
+  left: 30px;
+}
+
+#hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_] {
+  width: 100px;
+  height: 100px;
+}
+
+#hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_] img {
+  width: 125px;
+  height: auto;
+  margin-left: -9px;
+}
+
+/** Style for layout left */
+
+[data-page=index] main#main {
   min-height: 100%;
-  top: 100vh;
+  top: 80vh;
 }
 
-main#main .Anh {
-  padding: 40px 0;
+[data-page=index][data-layout-style=left] main#main .Anh {
+  padding-left: 320px;
+  padding-right: 0;
 }
 
-main#main .Anh > .__o__ {
+main#main .Anh > div[class*=__] {
   padding-top: 50px;
 }
 
@@ -2284,7 +2458,7 @@ img {
 }
 
 body {
-  color: #444444;
+  color: #313131;
 }
 
 [data-theme=dark] #AnhOi {

@@ -1,25 +1,44 @@
-main#main {
-    @at-root {
-        [data-page=home] {
-            main#main {
-                @extend %absolute;
+/** Style for layout left */
+[data-page=index] {
+    main#main {
+        @extend %absolute;
+        @extend %full-width;
+        min-height: 100%;
+        top: $hero-height;
+        .Anh {
+            @extend %give-standard-padding;
+            @extend %one-k-width;
+        }
+    }
+    &[data-layout-style=left] {
+        main#main {
+            .Anh {
                 @extend %full-width;
-                min-height: 100%;
-                top: 100vh;
+                padding-left: $left-width;
+                padding-right: 0;
             }
         }
-        [data-theme=light] {
-            main#main {
+    }
+}
+
+[data-theme=light] {
+    main#main {
+        .Anh {
+            > div[class*=__] {
                 @extend %set-background-white;
             }
         }
     }
+}
+
+main#main {
     .Anh {
+        @extend %transition;
         @extend %relative;
-        padding: 40px 0;
-        > .__o__ {  
-            padding-top: 50px;
+        > div[class*=__]  {  
+            @extend %border-thin-radius;
             @extend %flex;
+            padding-top: 50px;
             > {
                 .__ {
                     @extend %one-k-width;

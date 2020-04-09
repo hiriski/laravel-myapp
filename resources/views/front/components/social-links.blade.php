@@ -1,5 +1,8 @@
 <div id="hero_social_links">
     <div class="_s">
+        <div class="sp">
+            <span>find me on </span>
+        </div>
         <ul>
             <li>
                 <a class="fb" target="_blank" href="">
