@@ -113,19 +113,10 @@ var currentRouteName = "{{ Route::currentRouteName() }}";
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
-@if(Route::currentRouteName() === "blog.index")
-<body data-theme="light">
-@elseif(Route::currentRouteName() === "blog.show")
-<body data-theme="light">
-@elseif(Route::currentRouteName() === "index")
-<body data-theme="light">
-@else
-<body data-theme="light">
-@endif
+{{-- Value data page akan dinamis berdasarkan route masing2 --}}
+<body data-theme="light" data-page="{{ str_replace('.', '-', Route::currentRouteName()) }}">
 
-<div id="AnhOi" data-version="one" data-version-name="anhoi-mot"
-    {{-- Value data page akan dinamis berdasarkan route masing2 --}}
-    data-page="{{ str_replace('.', '-', Route::currentRouteName()) }}">
+<div id="AnhOi" data-version="one" data-version-name="anhoi-mot">
     {{-- @include('front.components.preload') --}}
     @if( Route::currentRouteName() === "index")
         @include('front.layouts.hero-v2')

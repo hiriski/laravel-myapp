@@ -71,6 +71,14 @@
     font-size: $xsmall;
 }
 
+%normal {
+    font-size: $main-font-size;
+}
+
+%bold {
+    font-weight: bold;
+}
+
 %default-font-size {
     font-size:  $main-font-size;
 }
@@ -142,6 +150,10 @@
 
 %transition {
     @include transition(all 0.3s ease);
+}
+
+%transition-cubic-bezier {
+    @include transition(all 0.45s cubic-bezier(0.23, 0.1, 0, 1.02));
 }
 
 %animation {
@@ -673,6 +685,12 @@
     -webkit-box-shadow: 0 15px 32px rgba(0,0,0,.05);
     -moz-box-shadow: 0 15px 32px rgba(0,0,0,.05);
     box-shadow: 0 15px 32px rgba(0,0,0,.05);
+}
+
+%box-shadow-lg {
+    -webkit-box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.11);
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.11);
 }
 
 %image-box-shadow {

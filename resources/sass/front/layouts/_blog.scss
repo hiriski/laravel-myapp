@@ -3,6 +3,7 @@
     $post-thumbnail-height: 192px;
 
     > .__q__ {
+        padding: 0 85px;
         > ._cn_ {
             > .__sa {
                 @extend %flex;
@@ -20,15 +21,16 @@
                 @extend %justify-content-center;
                 @extend %margin-bottom-lg;
                 > blockquote {
+                    @extend %reading-font;
                     @extend %text-center;
-                    @extend %reset;
                     @extend %muted;
-                    width: 500px;
+                    @extend %reset;
+                    font-weight: 600;
                     font-size: 20px;
-                    font-weight: 700;
+                    width: 500px;
                     cite {
                         @extend %block;
-                        font-size: 14px;
+                        @extend %normal;
                         @extend %margin-top-sm;
                     }
                 }
@@ -49,14 +51,6 @@
             @extend %border-radius;
             @extend %overflow-hidden;
             height: $post-thumbnail-height;
-            &:hover {
-                + .c_ {
-                    > ._xo {
-                        @include translateY(18px);
-                        background-color: rgba($white, 0.5);
-                    }
-                }
-            }
         }
         /** content of post include post title summary not post meta*/
         .c_ {

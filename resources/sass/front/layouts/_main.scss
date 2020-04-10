@@ -1,5 +1,8 @@
 /** Style for layout left */
 [data-page=index] {
+    /** follow background image */
+    background-color: #f4f4f4;
+
     main#main {
         @extend %absolute;
         @extend %full-width;
@@ -10,7 +13,7 @@
             @extend %one-k-width;
         }
     }
-    &[data-layout-style=left] {
+    [data-layout-style=left] {
         main#main {
             .Anh {
                 @extend %full-width;
@@ -26,6 +29,7 @@
         .Anh {
             > div[class*=__] {
                 @extend %set-background-white;
+                @extend %box-shadow-lg;
             }
         }
     }
@@ -33,9 +37,10 @@
 
 main#main {
     .Anh {
-        @extend %transition;
+        @extend %transition-cubic-bezier;
         @extend %relative;
         > div[class*=__]  {  
+            @extend %transition-cubic-bezier;
             @extend %border-thin-radius;
             @extend %flex;
             padding-top: 50px;

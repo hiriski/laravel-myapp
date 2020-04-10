@@ -2,10 +2,7 @@ $hero_pic_size : 174px;
 $follow-background-image : #f4f4f4;
 
 #hero {
-    @extend %transition;
-    * {
-        @extend %transition;
-    }
+    @extend %transition-cubic-bezier;
     &[data-version=two] {
         background-color: $follow-background-image;
         @extend %fixed;
@@ -13,6 +10,7 @@ $follow-background-image : #f4f4f4;
         @extend %full;
         ._z {
             ._q {
+                @extend %transition-cubic-bezier;
                 @extend %flex;
                 @extend %align-items-center;
                 @extend %justify-content-center;
@@ -46,16 +44,22 @@ $follow-background-image : #f4f4f4;
         }
     
         .u {
+            @extend %transition-cubic-bezier;
             @extend %flex;
             @extend %align-items-center;
-            padding-right: 50%;
+            padding-right: 40%;
+            > [class$=r] {
+                @extend %margin-top-xl;
+                @extend %padding-left-xl;
+            }
             ._i {
                 h2 {
                     @extend %reset-line-height;
-                    font-size: 34px;
-                    margin-bottom: .6rem;
+                    @extend %margin-bottom-xs;
+                    font-size: 40px;
+                    font-weight: 300;
                     + span {
-                        @extend %muted;
+
                     }
                 }
             }
@@ -63,7 +67,7 @@ $follow-background-image : #f4f4f4;
                 @extend %margin-top-sm;
                 font-size: 18px;
                 p {
-                    @extend %muted;
+                    
                     @extend %reset;
                 }
             }
@@ -80,15 +84,19 @@ $follow-background-image : #f4f4f4;
                     @extend %padding-unset;
                     .u {
                         @extend %align-items-flex-start;
-                        padding-left: 30px;
-                        padding-right: 30px;
-                        [class*=r] {
+                        padding-right: unset;
+                        padding: 0 36px;
+                        > [class$=r] {
                             padding-top: 120px;
-                        } 
+                            padding-left: unset;
+                            margin-top: unset;
+                        }
                         [class$=i] {
                             h2 {
-                                @extend %margin-top;
-                                font-size: 24px;
+                                @extend %margin-top-sm;
+                                margin-bottom: 0;
+                                font-size: 22px;
+                                @extend %bold;
                                 span {
                                     @extend %display-none;
                                 }
@@ -96,27 +104,56 @@ $follow-background-image : #f4f4f4;
                         }
                     }
                     > [class$=_] {
-                        $image-size : 100px;
+                        $image-size : 82px;
 
                         right: unset;
                         bottom: unset;
-                        top: 26px;
-                        left: 30px;
+                        top: 36px;
+                        left: 36px;
                         > [class^=_] {
                             width: $image-size;
                             height: $image-size;
+                            border-radius: 10px;
                             @extend %overflow-hidden;
                             @extend %image-box-shadow;
+                            border: 4px solid #fff;
                             img {
-                                width: 125px;
+                                width: 100px;
                                 height: auto;
-                                margin-left: -9px;
+                                margin-left: -11px;
+                                margin-top: -3px;
                             }
                         }
                     }
                 }
-            }  
+            }
+            /** Social links for layout hero left */
+            #__h_sl {
+                ul {
+                    li {
+                        @extend %full-width;
+                        a {
+                            @extend %text-decoration-none;
+                            @extend %full-width;
+                            @extend %flex;
+                            margin-right: unset;
+                            @extend %flex-direction-row;
+                            @extend %align-items-center;
+                            @extend %main-color;
+                            @extend %margin-bottom-sm;
+                            .ic {
+                                @extend %inline-block;
+                                @extend %margin-right-sm;
+                            }
+                            span {
+                                @extend %inline-block;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
     }
+
 }
