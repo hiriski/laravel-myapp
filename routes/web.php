@@ -14,6 +14,7 @@
 Auth::routes();
 
 Route::get('/', 'IndexController@index')->name('index');
+Route::get('/about', 'AboutController@index')->name('about');
 
 /** Route : blog/ */
 Route::prefix('/blog')->group(function() {

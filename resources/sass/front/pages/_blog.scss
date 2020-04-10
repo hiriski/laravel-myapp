@@ -1,0 +1,49 @@
+$background-image-width : 540px;
+
+
+/** Redefined style for about page */
+[data-page="about"] {
+    #AnhOi {
+        main {
+            .Anh {
+                .__o__ {
+                    @extend %remove-box-shadow;
+                    padding-top: unset;
+                    [class*=__] {
+                        @extend %full-width;
+                    }
+                }
+            }
+        }
+    }
+    footer#main {
+        padding-left: $background-image-width;
+    }
+}
+
+
+#about {
+    ._r {
+        ._a {
+            
+            /** background image area */
+            ._x {
+                @extend %fixed;
+                @extend %bottom-left;
+                @extend %line-height-zero;
+                width: $background-image-width;
+            }
+            
+            /** content area */
+            .c {
+                @extend %full-width;
+                padding-left: $background-image-width;
+                ._ {
+                    padding: 80px 120px;
+                    font-size: 17px;
+                    line-height: 1.65;
+                }
+            }
+        }
+    }
+}

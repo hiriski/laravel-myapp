@@ -383,6 +383,7 @@ a.anhoi-btn {
   text-decoration: none;
 }
 
+#about ._r ._a ._x,
 #hero[data-version=two] .anh_ [class*=_],
 #_pa [class*=pa],
 #_n_ #_r_ ._z,
@@ -440,6 +441,7 @@ pre[class*=language] span.code-filename,
   position: absolute;
 }
 
+#about ._r ._a ._x,
 #hero[data-version=two],
 .___g--dark___,
 #_psh,
@@ -460,6 +462,7 @@ pre[class*=language] span.code-filename,
   left: 0;
 }
 
+#about ._r ._a ._x,
 #_pa [class*=pa] ._oh_waves_[data-position=bottom],
 #_psh {
   bottom: 0;
@@ -706,6 +709,8 @@ main#main .Anh,
   height: 100%;
 }
 
+#about ._r ._a .c,
+[data-page=about] #AnhOi main .Anh .__o__ [class*=__],
 [data-page=index] [data-layout-style=left] main#main .Anh,
 [data-page=index] main#main,
 #hero[data-version=two][data-position=left] #__h_sl ul li a,
@@ -897,6 +902,10 @@ main#main .Anh > div[class*=__],
 #hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_],
 #_pa [class*=pa] ._ .a img {
   box-shadow: 0 15px 32px rgba(0, 0, 0, 0.1);
+}
+
+[data-page=about] #AnhOi main .Anh .__o__ {
+  box-shadow: none !important;
 }
 
 #_psh div[class^=s] {
@@ -2687,6 +2696,35 @@ footer#main .c__ > p i {
 
 #RP .__l_m > a:hover i {
   transform: rotate(360deg);
+}
+
+/** Redefined style for about page */
+
+[data-page=about] #AnhOi main .Anh .__o__ {
+  padding-top: unset;
+}
+
+[data-page=about] footer#main {
+  padding-left: 540px;
+}
+
+#about ._r ._a {
+  /** background image area */
+  /** content area */
+}
+
+#about ._r ._a ._x {
+  width: 540px;
+}
+
+#about ._r ._a .c {
+  padding-left: 540px;
+}
+
+#about ._r ._a .c ._ {
+  padding: 80px 120px;
+  font-size: 17px;
+  line-height: 1.65;
 }
 
 * {
