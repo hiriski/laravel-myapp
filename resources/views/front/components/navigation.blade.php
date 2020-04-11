@@ -1,14 +1,14 @@
-<div id="_n_">
+<div id="_n_" data-has-set-width="false" data-position="top">
     <div class="_">
         <div class="_s">
             <div class="_a">
                 <div id="_r_">
-                    <div class="_z">
-                        <a href="{{ route('index') }}">
+                    <a href="{{ route('index') }}">
+                        <div class="_z">
                             <img src="{{ asset('old-logo.svg') }}" alt="Riski Web ID">
-                        </a>
-                    </div>
-                    <span>Riski Web ID</span>
+                        </div>
+                        <span>Riski Web ID</span>
+                    </a>
                 </div>
                 <ul>
                     <li data-route-target="index">

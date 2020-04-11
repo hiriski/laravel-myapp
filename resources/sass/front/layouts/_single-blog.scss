@@ -1,12 +1,14 @@
-[data-page=blog-single] {
+/** Redefined Parent Style */
+[data-page=blog-show] {
     main#main {
-        @extend %relative;
-        top: 0;
+        .Anh > .__o__ {
+            padding-top: 92px;
+        }
     }
 }
 
-[data-blog=single] {
 
+[data-blog=single] {
     /** data-version="two" */
     &[data-version="two"] {
         ._io_ {

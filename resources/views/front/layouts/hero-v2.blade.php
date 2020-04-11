@@ -6,11 +6,13 @@
                     <div class="u">
                         <div class="_r">
                             <div class="_i">
-                                <h2><span>Hi 👋, I am</span> Riski</h2>
+                                {{-- <h2><span>Hi, I am</span> Riski</h2> --}}
+                                <h2><span class="name">Riski</span><span id="typed"></span></h2>
                                 <span>@riskiwebid</span>
                             </div>
                             <div class="_o">
-                                <p>I'm a web developer and graphic designer living in Bandung, Indonesia.</p>
+                                {{-- <p>I'm a web developer and graphic designer living in Bandung, Indonesia.</p> --}}
+                                <p>Seorang backend developer yang lebih menyukai front end 😕</p>
                             </div>
                             @include('front.components.social-links')
                         </div>

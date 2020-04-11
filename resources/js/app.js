@@ -32,6 +32,24 @@ function isIndex() {
     }
 }
 
+
+/** Typed */
+if(isIndex()) {
+    var typed3 = new Typed('#typed', {
+        // strings: ['My strings are: <i>strings</i> with', 'My strings are: <strong>HTML</strong>', 'My strings are: Chars &times; &copy;'],
+        strings: [
+            'Hi, i am <strong>Riski</strong>',
+            'Hi, i am <strong>Backend Engineer</strong>',
+            'Hi, i am <strong class="laravel-color">Laravel Addict :-)</strong>'],
+        typeSpeed: 70,
+        startDelay: 500,
+        backSpeed: 30,
+        smartBackspace: true, // this is a default
+        loop: true
+    });
+}
+
+
 const changeTitle = () => {
     let title = document.querySelector('title');
     title.textContent = String.fromCodePoint(0x211B, 0x1D4BE, 0x1D4C8, 0x1D4C0, 0x1D4BE);
@@ -103,12 +121,56 @@ window.addEventListener('scroll', () => {
     }
 });
 
+
+/** Navigation */
+window.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        showNavigation();
+    }, 500);
+});
+
+
+/** Dapatkan ukuran lebar halaman */
+const getPageWrapWidth = () => {
+    let pageWrap = document.querySelector('main#main .Anh > div[class*=__] > .__');
+    if(pageWrap) {
+        let wrapWidth = pageWrap.clientWidth;
+        return wrapWidth;
+    }
+}
+
+const setNavigationWidth = (callback) => {
+    let nav     = document.querySelector('#_n_[data-position="top"]');
+    /** jika element nav-nya ada */
+    if(nav) {
+        /** ambil lebar navigasi saat ini (berdasarkan lebar browser user */
+        navWidth    = nav.clientWidth;
+
+        /** Kurang lebar navigasi dengan lebar page wrap (dapat dari function getPageWrapWidth) kemudian bagi dua hasil baginya. Ahhhh lieur :-D */
+        let paddingSize         = (navWidth - getPageWrapWidth()) / 2;
+        nav.style.paddingLeft   = paddingSize + 'px';
+        nav.style.paddingRight  = paddingSize + 'px';
+
+        /** jika callback itu function */
+        if(typeof callback == 'function') {
+            /** kirimkan variable nav ke callback */
+            callback(nav);
+        }
+    }
+}
+
+const showNavigation = () => {
+    setNavigationWidth(function(nav) {
+        /** terima variable dari param callback */
+        nav.dataset.hasSetWidth = true;
+    });
+}
+
+
 const moveNavigation = (position) => {
     let nav = document.getElementById('_n_');
     if(nav) {
         nav.setAttribute('data-position', position);
-    } else {
-        console.log('Navigation not found!');
     }
 }
 

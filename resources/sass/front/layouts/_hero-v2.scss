@@ -58,8 +58,12 @@ $follow-background-image : #f4f4f4;
                     @extend %margin-bottom-xs;
                     font-size: 40px;
                     font-weight: 300;
-                    + span {
-
+                    color: #755ade;
+                    .laravel-color {
+                        color: $laravel-color;
+                    }
+                    span.name {
+                        @extend %display-none;
                     }
                 }
             }
@@ -97,8 +101,11 @@ $follow-background-image : #f4f4f4;
                                 margin-bottom: 0;
                                 font-size: 22px;
                                 @extend %bold;
-                                span {
+                                span:not(.name) {
                                     @extend %display-none;
+                                }
+                                span.name {
+                                    @extend %block;
                                 }
                             }
                         }

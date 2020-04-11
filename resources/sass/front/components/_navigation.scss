@@ -1,10 +1,28 @@
 #_n_ {
+    $navigation-space-top: 20px;
+    --nativation-space-top: #{$navigation-space-top};
+    --reset-top-space: 0;
+    --reset-padding-left: unset;
+    --reset-padding-right: unset;
+    
     $logo-size: 32px;
-    @extend %fixed;
+
+    @extend %transition-cubic-bezier;
     @extend %full-width;
-    * {
-        @extend %transition;
+    @extend %fixed;
+    top: 0;
+
+    /** when data not was set */
+    &[data-has-set-width=false] {
+        top: -125px;
     }
+
+    /** when has set width by javascript */
+    &[data-has-set-width=true] {
+        top: var(--nativation-space-top);
+    }
+
+
     /** When position left */
     &[data-position=left] {
         $nav-size: 62px;
@@ -15,14 +33,24 @@
         // @extend %set-background-white;
         // @extend %box-shadow;
         width: unset;
+        
+        /** reset padding */
+        padding-left    : var(--reset-padding-left) !important;
+        padding-right   : var(--reset-padding-right) !important;
+        top             : var(--reset-top-space) !important;
+        &[data-has-set-width=false] {
+            top         : var(--reset-top-space) !important;
+        }
         ._ {
             width: $nav-size;
             margin: unset;
             padding: unset;
-            padding-top: 1.75rem;
+            padding-top: 1rem;
+            border-bottom: unset;
             ._s {
                 padding: 0;
                 @extend %text-center;
+                box-shadow: none !important;
                 ._a {
                     @extend %justify-content-flex-start;
                     @extend %flex-direction-column;
@@ -68,6 +96,9 @@
                             width: $logo-size;
                             height: auto;
                         }
+                        + span {
+                            @extend %display-none;
+                        }
                     }
                 }
             }
@@ -75,8 +106,11 @@
     }
 
     #_r_ {
-        @extend %flex;
-        @extend %align-items-center;
+        a {
+            @extend %flex;
+            @extend %align-items-center;
+            @extend %text-decoration-none;
+        }
         ._z {
             @extend %line-height-zero;
             @extend %margin-right-xs;
@@ -85,21 +119,26 @@
                 height: $logo-size;
             }
             + * {
-                font-weight: bold;
-                font-size: 20px;
+                @extend %main-color;
+                font-size: 18px;
             }
         }
     }
     
     ._ {
-        padding: 0 30px;
+        @extend %transition-cubic-bezier;
         ._s {
             @extend %give-standard-padding;
+            @extend %set-background-white;
+            @extend %border-thin-radius;
+            @extend %box-shadow;
         }
         ._a {
             @extend %flex;
             @extend %align-items-center;
             @extend %justify-content-space-between;
+            @extend %padding-top-sm;
+            @extend %padding-bottom-sm;
             ul {
                 @extend %remove-bullet-list;
                 /** class active */
@@ -115,7 +154,6 @@
                         color: $main-color;
                         text-decoration: none;
                         padding: .3rem 1rem;
-                        @extend %margin-right-sm;
                         &:hover {
                             i {
                                 visibility: visible;
@@ -132,9 +170,6 @@
                             top: 6px;
                             left: 0px;
                             visibility: hidden;
-                        }
-                        span {
-                            @extend %transition;
                         }
                     }
                 }

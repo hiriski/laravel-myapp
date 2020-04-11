@@ -120,6 +120,21 @@ function isIndex() {
     return true;
   }
 }
+/** Typed */
+
+
+if (isIndex()) {
+  var typed3 = new Typed('#typed', {
+    // strings: ['My strings are: <i>strings</i> with', 'My strings are: <strong>HTML</strong>', 'My strings are: Chars &times; &copy;'],
+    strings: ['Hi, i am <strong>Riski</strong>', 'Hi, i am <strong>Backend Engineer</strong>', 'Hi, i am <strong class="laravel-color">Laravel Addict :-)</strong>'],
+    typeSpeed: 70,
+    startDelay: 500,
+    backSpeed: 30,
+    smartBackspace: true,
+    // this is a default
+    loop: true
+  });
+}
 
 var changeTitle = function changeTitle() {
   var title = document.querySelector('title');
@@ -191,14 +206,57 @@ window.addEventListener('scroll', function () {
     }
   }
 });
+/** Navigation */
+
+window.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+    showNavigation();
+  }, 500);
+});
+/** Dapatkan ukuran lebar halaman */
+
+var getPageWrapWidth = function getPageWrapWidth() {
+  var pageWrap = document.querySelector('main#main .Anh > div[class*=__] > .__');
+
+  if (pageWrap) {
+    var wrapWidth = pageWrap.clientWidth;
+    return wrapWidth;
+  }
+};
+
+var setNavigationWidth = function setNavigationWidth(callback) {
+  var nav = document.querySelector('#_n_[data-position="top"]');
+  /** jika element nav-nya ada */
+
+  if (nav) {
+    /** ambil lebar navigasi saat ini (berdasarkan lebar browser user */
+    navWidth = nav.clientWidth;
+    /** Kurang lebar navigasi dengan lebar page wrap (dapat dari function getPageWrapWidth) kemudian bagi dua hasil baginya. Ahhhh lieur :-D */
+
+    var paddingSize = (navWidth - getPageWrapWidth()) / 2;
+    nav.style.paddingLeft = paddingSize + 'px';
+    nav.style.paddingRight = paddingSize + 'px';
+    /** jika callback itu function */
+
+    if (typeof callback == 'function') {
+      /** kirimkan variable nav ke callback */
+      callback(nav);
+    }
+  }
+};
+
+var showNavigation = function showNavigation() {
+  setNavigationWidth(function (nav) {
+    /** terima variable dari param callback */
+    nav.dataset.hasSetWidth = true;
+  });
+};
 
 var moveNavigation = function moveNavigation(position) {
   var nav = document.getElementById('_n_');
 
   if (nav) {
     nav.setAttribute('data-position', position);
-  } else {
-    console.log('Navigation not found!');
   }
 };
 /** Global Overlay */

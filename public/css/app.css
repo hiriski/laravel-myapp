@@ -274,9 +274,11 @@ th {
 * @param {*} $color 		- Property color value
 */
 
-#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span,
+#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span:not(.name),
+#hero[data-version=two] .u ._i h2 span.name,
 #_psh ul,
 #_psh.ready div[class^=s] .a span:not([class*=i]),
+#_n_[data-position=left] ._ ._s #_r_ ._z + span,
 #_n_[data-position=left] ._ ._s #_r_ > span,
 #_n_[data-position=left] ._ ._s ._a ul li a > span,
 #__h_sl ._s ul li a .ic + span {
@@ -378,6 +380,7 @@ pre[class*=language] span.code-filename,
 #hero[data-version=two][data-position=left] #__h_sl ul li a,
 #_bsp > div[class*=_] > * .q > div a,
 #_psh ul li a,
+#_n_ #_r_ a,
 btn.anhoi-btn,
 a.anhoi-btn {
   text-decoration: none;
@@ -470,7 +473,6 @@ pre[class*=language] span.code-filename,
 }
 
 #RP .__i__ ._img_,
-[data-page=blog-single] main#main,
 #_Bx .__i__ ._img_,
 #Ftr_P .__i__ ._img_,
 main#main .Anh,
@@ -494,8 +496,6 @@ pre[class*=language],
 #_psh div[class$=s],
 #_psh *,
 #_psh,
-#_n_ ._ ._a ul li a span,
-#_n_ *,
 #hero_nav ._ ._a ul li a span,
 #_x0 {
   transition: all 0.3s ease;
@@ -505,7 +505,9 @@ main#main .Anh > div[class*=__],
 main#main .Anh,
 #hero[data-version=two] .u,
 #hero[data-version=two] ._z ._q,
-#hero {
+#hero,
+#_n_ ._,
+#_n_ {
   transition: all 0.45s cubic-bezier(0.23, 0.1, 0, 1.02);
 }
 
@@ -573,7 +575,6 @@ main#main .Anh,
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic,
 #hero[data-version=two][data-position=left] #__h_sl ul li a .ic,
 #_H_Cb ._ ._x0 > [class$=svg],
-#_n_ ._ ._a ul li a,
 #hero_nav ._ ._a ul li a,
 #__h_sl ._s ul li a {
   margin-right: 0.85rem;
@@ -633,6 +634,14 @@ main#main .Anh,
 
 #_bsp > div[class*=_] > * .q > div {
   padding: 0.85rem;
+}
+
+#_n_ ._ ._a {
+  padding-top: 0.85rem;
+}
+
+#_n_ ._ ._a {
+  padding-bottom: 0.85rem;
 }
 
 #_pa {
@@ -724,8 +733,18 @@ main#main .Anh,
   width: 100%;
 }
 
+[data-page=index] main#main .Anh {
+  width: 1120px;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  [data-page=index] main#main .Anh {
+    width: 100% !important;
+  }
+}
+
 main#main .Anh > div[class*=__] > .__,
-[data-page=index] main#main .Anh,
 #hero[data-version=two] ._y,
 #__pg__ > .__,
 #hero_nav ._ {
@@ -735,7 +754,6 @@ main#main .Anh > div[class*=__] > .__,
 
 @media screen and (max-width: 768px) {
   main#main .Anh > div[class*=__] > .__,
-  [data-page=index] main#main .Anh,
   #hero[data-version=two] ._y,
   #__pg__ > .__,
   #hero_nav ._ {
@@ -797,7 +815,7 @@ main#main .Anh > div[class*=__],
 #_H_Cb ._ ._x0,
 #__pg__ > .__ .pagination,
 #_n_ ._ ._a,
-#_n_ #_r_,
+#_n_ #_r_ a,
 #_n_[data-position=left] ._ ._s ._a ul,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_],
 #_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] {
@@ -831,7 +849,7 @@ main#main .Anh > div[class*=__],
 #_pa [class*=pa] ._,
 #_H_Cb ._ ._x0,
 #_n_ ._ ._a,
-#_n_ #_r_ {
+#_n_ #_r_ a {
   align-items: center;
 }
 
@@ -888,6 +906,7 @@ main#main .Anh > div[class*=__],
 #_bsp > div[class*=_] > * .q > div,
 #_psh div[class^=s] > .a,
 #_psh.ready div[class^=s],
+#_n_ ._ ._s,
 #_n_[data-position=left] {
   box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
@@ -904,7 +923,8 @@ main#main .Anh > div[class*=__],
   box-shadow: 0 15px 32px rgba(0, 0, 0, 0.1);
 }
 
-[data-page=about] #AnhOi main .Anh .__o__ {
+[data-page=about] #AnhOi main .Anh .__o__,
+[data-page=index] [data-layout-style=left] main#main .Anh > div[class*=__] {
   box-shadow: none !important;
 }
 
@@ -920,7 +940,8 @@ main#main .Anh > div[class*=__],
 #_psh div[class^=s],
 pre[class*=language] span.code-filename,
 pre[class*=language][data-line-numbers=false],
-#_bt_ ul li a {
+#_bt_ ul li a,
+#_n_ ._ ._s {
   border-radius: 0.2rem;
 }
 
@@ -968,7 +989,8 @@ footer#main .c__ > p,
   list-style: none;
 }
 
-#_Bx > .__q__ > ._cn_ .__quote__ > blockquote cite {
+#_Bx > .__q__ > ._cn_ .__quote__ > blockquote cite,
+#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span.name {
   display: block;
 }
 
@@ -1004,7 +1026,8 @@ footer#main .c__ > p,
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
 #_Bx .__i__ .c_ ._m_ .__c,
 #_Bx .__i__ .c_ > ._xo ._t_ a,
-#hero[data-version=two][data-position=left] #__h_sl ul li a {
+#hero[data-version=two][data-position=left] #__h_sl ul li a,
+#_n_ #_r_ ._z + * {
   color: #313131;
 }
 
@@ -1052,7 +1075,8 @@ pre[class*=language][data-color*=light] {
 #_Bx .__i__ .c_ > ._xo,
 footer#main,
 [data-theme=light] main#main .Anh > div[class*=__],
-#_psh.ready div[class^=s] {
+#_psh.ready div[class^=s],
+#_n_ ._ ._s {
   background: #fff;
 }
 
@@ -1083,7 +1107,7 @@ footer#main,
 [data-blog=single] ._io_ ._ps_ code:not([class*=language]),
 pre[class*=language] code,
 pre[class*=language] .line-number {
-  font-family: "Fira Code Retina", monospace !important;
+  font-family: "Source Code Pro", monospace !important;
 }
 
 [data-blog=single] ._io_ ._t,
@@ -1525,22 +1549,47 @@ textarea::placeholder {
 }
 
 #_n_ {
+  --nativation-space-top: 20px;
+  --reset-top-space: 0;
+  --reset-padding-left: unset;
+  --reset-padding-right: unset;
+  top: 0;
+  /** when data not was set */
+  /** when has set width by javascript */
   /** When position left */
+}
+
+#_n_[data-has-set-width=false] {
+  top: -125px;
+}
+
+#_n_[data-has-set-width=true] {
+  top: var(--nativation-space-top);
 }
 
 #_n_[data-position=left] {
   width: unset;
+  /** reset padding */
+  padding-left: var(--reset-padding-left) !important;
+  padding-right: var(--reset-padding-right) !important;
+  top: var(--reset-top-space) !important;
+}
+
+#_n_[data-position=left][data-has-set-width=false] {
+  top: var(--reset-top-space) !important;
 }
 
 #_n_[data-position=left] ._ {
   width: 62px;
   margin: unset;
   padding: unset;
-  padding-top: 1.75rem;
+  padding-top: 1rem;
+  border-bottom: unset;
 }
 
 #_n_[data-position=left] ._ ._s {
   padding: 0;
+  box-shadow: none !important;
 }
 
 #_n_[data-position=left] ._ ._s ._a ul li a {
@@ -1574,12 +1623,7 @@ textarea::placeholder {
 }
 
 #_n_ #_r_ ._z + * {
-  font-weight: bold;
-  font-size: 20px;
-}
-
-#_n_ ._ {
-  padding: 0 30px;
+  font-size: 18px;
 }
 
 #_n_ ._ ._a ul {
@@ -2287,6 +2331,11 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 #hero[data-version=two] .u ._i h2 {
   font-size: 40px;
   font-weight: 300;
+  color: #755ade;
+}
+
+#hero[data-version=two] .u ._i h2 .laravel-color {
+  color: #FF2D20;
 }
 
 #hero[data-version=two] .u ._o {
@@ -2419,7 +2468,7 @@ footer#main .c__ > p i {
 }
 
 #_Bx > .__q__ {
-  padding: 0 85px;
+  padding: 0 65px;
 }
 
 #_Bx > .__q__ > ._cn_ {
@@ -2501,8 +2550,10 @@ footer#main .c__ > p i {
   transform: rotate(360deg);
 }
 
-[data-page=blog-single] main#main {
-  top: 0;
+/** Redefined Parent Style */
+
+[data-page=blog-show] main#main .Anh > .__o__ {
+  padding-top: 92px;
 }
 
 [data-blog=single] {

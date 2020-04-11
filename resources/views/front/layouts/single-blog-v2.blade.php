@@ -1,4 +1,4 @@
-<div id="single" data-blog="single" data-version="two">
+<div id="bs__" data-blog="single" data-version="two">
     <div class="__q__">
         <div class="_cn_">
             @isset($post)

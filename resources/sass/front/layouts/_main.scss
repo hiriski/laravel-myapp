@@ -10,7 +10,7 @@
         top: $hero-height;
         .Anh {
             @extend %give-standard-padding;
-            @extend %one-k-width;
+            @extend %main-width;
         }
     }
     [data-layout-style=left] {
@@ -19,6 +19,10 @@
                 @extend %full-width;
                 padding-left: $left-width;
                 padding-right: 0;
+                > div[class*=__] {
+                    @extend %remove-box-shadow;
+                }
+                
             }
         }
     }

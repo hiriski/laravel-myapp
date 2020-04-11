@@ -15,4 +15,5 @@
 @endsection
 @push('script')
 <script src="{{ asset('js/blurry-load.min.js') }}"></script>
+<script src="{{ asset('js/typed.min.js') }}"></script>
 @endpush
