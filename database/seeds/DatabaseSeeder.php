@@ -34,6 +34,8 @@ class DatabaseSeeder extends Seeder {
             /** Blog */
             BlogCategoriesTableSeeder::class,
             BlogStatusTableSeeder::class,
+            BlogTagsTableSeeder::class,
+            BlogTagBlogTableSeeder::class,
 
             /** Roles & Permission */
             RolesTableSeeder::class,

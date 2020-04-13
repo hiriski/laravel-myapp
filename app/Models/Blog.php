@@ -19,6 +19,11 @@ class Blog extends Model {
         return $this->belongsTo(\App\Models\BlogCategory::class);
     }
 
+    /** Many to Many to Tags */
+    public function tags() {
+        return $this->belongsToMany(\App\Models\BlogTag::class, 'blog_tag_blog', 'blog_id', 'tag_id');
+    }
+
     /** Many to one blog status */
     public function status() {
         return $this->belongsTo(\App\Models\BlogStatus::class);

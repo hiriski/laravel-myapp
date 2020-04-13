@@ -24,6 +24,10 @@ Route::prefix('/blog')->group(function() {
 		Route::resource('/category', 'BlogCategoryController', array(
 			'only' => array('index', 'show')
 		));
+		/** Route /blog/tag */
+		Route::resource('/tag', 'BlogTagController', array(
+			'only'	=> array('index', 'show')
+		));
 	});
 });
 

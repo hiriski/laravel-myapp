@@ -1,9 +1,9 @@
 <div id="_bt_">
     <ul>
-        <li><a href="">Laravel 6</a></li>
-        <li><a href="">Lorem</a></li>
-        <li><a href="">Relationships</a></li>
-        <li><a href="">Polymorphic</a></li>
-        <li><a href="">Ipsum</a></li>
+    @foreach($post->tags as $tag)
+        <li>
+            <a href="{{ route('blog.tag.show', $tag->slug) }}">{{ $tag->name }}</a>
+        </li>
+    @endforeach
     </ul>
 </div>
