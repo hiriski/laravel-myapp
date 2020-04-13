@@ -23,7 +23,7 @@
                 > blockquote {
                     @extend %reading-font;
                     @extend %text-center;
-                    @extend %muted;
+                    @extend %secondary-text;
                     @extend %reset;
                     font-weight: 600;
                     font-size: 20px;

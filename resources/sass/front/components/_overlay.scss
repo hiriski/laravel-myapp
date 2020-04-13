@@ -1,6 +1,9 @@
 .___g--dark___ {
-    @extend %fixed;
-    @extend %top-left;
-    @extend %full;
-    background-color: rgba(black, 0.36);
+    &[data-show=true] {
+        @extend %fixed;
+        @extend %top-left;
+        @extend %full;
+        background-color: rgba(black, 0.36);
+        z-index: 100;
+    }
 }

@@ -1,5 +1,5 @@
 #_psh {
-    $social-icon-size: 22px;
+    $social-icon-size: 20px;
 
     &[data-show=false] {
         bottom: -100px;
@@ -19,7 +19,7 @@
 
     /** 
      * Event ketika floating share terbuka */
-    &.ready {
+    &.show {
         bottom: 1.5rem;
         div[class^=s] {
             @extend %set-background-white;
@@ -54,8 +54,9 @@
     div[class^=s] {
         @extend %border-thin-radius;
         @extend %margin-auto;
-        padding: 1.5rem;
-        width: 400px;
+        width: 840px;
+        @extend %padding-top-lg;
+        @extend %padding-bottom-lg;
         > .a {
             @extend %background-primary-color-light;
             @extend %reset-line-height;
@@ -90,16 +91,39 @@
                 @extend %flex;
                 @extend %justify-content-center;
                 @extend %text-decoration-none;
-                @extend %secondary-text;
-                padding: 0 14px;
+                @extend %main-color;
+                @extend %padding-left-sm;
+                @extend %padding-right-sm;
+                @extend %border-thin-radius;
+                padding: {
+                    top: .4rem;
+                    bottom: .4rem;
+                }
+                &:hover {
+                    &[data-target=whatsapp] {
+                        background-color: rgba($whatsapp-color, 0.2);
+                    }
+                    &[data-target=facebook] {
+                        background-color: rgba($facebook-color, 0.2);
+                    }
+                    &[data-target=twitter] {
+                        background-color: rgba($twitter-color, 0.2);
+                    }
+                    &[data-target=linkedin] {
+                        background-color: rgba($linkedin-color, 0.2);
+                    }
+                }
+                .ic {
+                    @extend %line-height-zero;
+                }
                 span {
                     font-size: 15px;
                 }
             }
             svg {
-                width: $social-icon-size;
-                height: auto;
                 @extend %margin-right-xs;
+                height: $social-icon-size;
+                width: auto;
             }
         }
     }

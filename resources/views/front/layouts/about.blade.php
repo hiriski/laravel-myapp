@@ -4,8 +4,11 @@
             @isset($about)
             {{-- Background image area --}}
             <div class="_x">
+                <div id="back">
+                    <a href=""><i class="material-icons">arrow_back</i><span>Back</span></a>
+                </div>
                 <div class="img">
-                    <img src="{{ $about->background_image }}" alt="Riski">
+                    <img data-has-center="false" src="{{ $about->background_image }}" alt="Riski">
                 </div>
             </div>
     

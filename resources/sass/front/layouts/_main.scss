@@ -1,3 +1,7 @@
+::selection {
+    @extend %background-primary-color-light;
+}
+
 /** Style for layout left */
 [data-page=index] {
     /** follow background image */

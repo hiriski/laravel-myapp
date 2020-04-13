@@ -208,6 +208,9 @@ pre[class*=language] {
     &[data-color*="light"] {
         @extend %set-background-light;
         @include box-shadow(0, 2px, 4px, 1px, rgba($main-color, 0.1));
+        ::selection {
+            background-color: rgb(219, 219, 219);
+        }
         color: #3d78c3;
         .line-number {
             span {

@@ -1,4 +1,4 @@
-<div id="_n_" data-has-set-width="false" data-position="top">
+<div id="_n_" data-has-set-width="false">
     <div class="_">
         <div class="_s">
             <div class="_a">
@@ -36,7 +36,7 @@
                         </a>
                     </li>
                     <li data-route-target="about">
-                        <a href="">
+                        <a href="{{ route('about') }}">
                             <i class="material-icons">person</i>
                             <span>About me</span>
                         </a>

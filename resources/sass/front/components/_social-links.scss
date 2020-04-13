@@ -21,6 +21,9 @@ $icon_social_link_size : 20px;
                         height: $icon_social_link_size;
                     }
                     .ic {
+                        svg {
+                            fill: #2a2a2a;
+                        }
                         + span {
                             @extend %display-none;
                         }

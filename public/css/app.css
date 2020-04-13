@@ -277,7 +277,7 @@ th {
 #hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span:not(.name),
 #hero[data-version=two] .u ._i h2 span.name,
 #_psh ul,
-#_psh.ready div[class^=s] .a span:not([class*=i]),
+#_psh.show div[class^=s] .a span:not([class*=i]),
 #_n_[data-position=left] ._ ._s #_r_ ._z + span,
 #_n_[data-position=left] ._ ._s #_r_ > span,
 #_n_[data-position=left] ._ ._s ._a ul li a > span,
@@ -310,7 +310,7 @@ footer#main .c__ > p:first-child > span:before {
 #RP .__i__ .c_ ._m_ .d_,
 [data-blog=single] ._io_ ._m_ > ._ad_ > ._a > ._d,
 #_Bx .__i__ .c_ ._m_ .d_,
-#_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
+#hero[data-version=two] .u ._i h2 .typed-cursor,
 #_pa [class*=pa] ._ .n p,
 #_bsp > div[class*=_] > * .q > div a p,
 #_H_Cb ._ > p,
@@ -337,7 +337,7 @@ footer#main .c__ > p:first-child > span:before {
 }
 
 [data-blog=single] ._io_ ._ps_ .block.danger,
-#_psh.ready div[class^=s] .a {
+#_psh.show div[class^=s] .a {
   background-color: #ffcdc8;
   color: #92574a;
 }
@@ -376,6 +376,7 @@ pre[class*=language] span.code-filename,
   font-size: 20px;
 }
 
+#about ._r ._a ._x #back a,
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
 #hero[data-version=two][data-position=left] #__h_sl ul li a,
 #_bsp > div[class*=_] > * .q > div a,
@@ -386,9 +387,12 @@ a.anhoi-btn {
   text-decoration: none;
 }
 
+#about ._r ._a ._x > [class*=img],
 #about ._r ._a ._x,
+#hero[data-version=two] .u ._i h2 #typed .laravelicon,
 #hero[data-version=two] .anh_ [class*=_],
 #_pa [class*=pa],
+#_psh ul li a .ic,
 #_n_ #_r_ ._z,
 #__h_sl ._s ul li a {
   line-height: 0;
@@ -424,7 +428,10 @@ a.anhoi-btn {
   overflow: hidden;
 }
 
+#about ._r ._a ._x img,
+#about ._r ._a ._x #back,
 [data-page=index] main#main,
+#hero[data-version=two] .u ._i h2 .typed-cursor:before,
 #hero[data-version=two] .anh_,
 #_pa [class*=pa] ._oh_waves_,
 #_bsp > div[class*=_] > *:first-of-type > .q .ic,
@@ -444,9 +451,10 @@ pre[class*=language] span.code-filename,
   position: absolute;
 }
 
+#about ._r ._a ._x > [class*=img],
 #about ._r ._a ._x,
 #hero[data-version=two],
-.___g--dark___,
+.___g--dark___[data-show=true],
 #_psh,
 #_n_,
 #_x0 {
@@ -454,7 +462,7 @@ pre[class*=language] span.code-filename,
 }
 
 #hero[data-version=two],
-.___g--dark___,
+.___g--dark___[data-show=true],
 .__aw__,
 #_n_[data-position=left],
 #_x0 > div,
@@ -465,6 +473,7 @@ pre[class*=language] span.code-filename,
   left: 0;
 }
 
+#about ._r ._a ._x > [class*=img],
 #about ._r ._a ._x,
 #_pa [class*=pa] ._oh_waves_[data-position=bottom],
 #_psh {
@@ -476,6 +485,7 @@ pre[class*=language] span.code-filename,
 #_Bx .__i__ ._img_,
 #Ftr_P .__i__ ._img_,
 main#main .Anh,
+#hero[data-version=two] .u ._i h2 .typed-cursor,
 #hero[data-version=two] ._y ._x,
 #_pa [class*=pa],
 #_bsp > div[class*=_] > * .q > div,
@@ -493,6 +503,8 @@ pre[class*=language],
 #RP .__i__ .c_,
 #_Bx .__i__ .c_ > ._xo,
 #_Bx .__i__ .c_,
+#hero[data-version=two][data-position=left] ._y ._x .u > [class$=r],
+#hero *,
 #_psh div[class$=s],
 #_psh *,
 #_psh,
@@ -501,9 +513,9 @@ pre[class*=language],
   transition: all 0.3s ease;
 }
 
+#about ._r ._a ._x img,
 main#main .Anh > div[class*=__],
 main#main .Anh,
-#hero[data-version=two] .u,
 #hero[data-version=two] ._z ._q,
 #hero,
 #_n_ ._,
@@ -572,6 +584,7 @@ main#main .Anh,
   margin-bottom: 0.85rem;
 }
 
+#about ._r ._a ._x #back a i,
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic,
 #hero[data-version=two][data-position=left] #__h_sl ul li a .ic,
 #_H_Cb ._ ._x0 > [class$=svg],
@@ -644,6 +657,14 @@ main#main .Anh,
   padding-bottom: 0.85rem;
 }
 
+#_psh ul li a {
+  padding-right: 0.85rem;
+}
+
+#_psh ul li a {
+  padding-left: 0.85rem;
+}
+
 #_pa {
   padding-top: 1.25rem;
 }
@@ -656,7 +677,8 @@ main#main .Anh,
   padding: 2rem;
 }
 
-#_bsp {
+#_bsp,
+#_psh div[class^=s] {
   padding-top: 2rem;
 }
 
@@ -668,7 +690,8 @@ main#main .Anh,
   padding-right: 2rem;
 }
 
-#_bsp {
+#_bsp,
+#_psh div[class^=s] {
   padding-bottom: 2rem;
 }
 
@@ -702,13 +725,14 @@ main#main .Anh,
 }
 
 #hero[data-version=two],
-.___g--dark___,
+.___g--dark___[data-show=true],
 #_x0 > div,
 #_x0 {
   height: 100vh;
   width: 100%;
 }
 
+#about ._r ._a ._x > [class*=img],
 #hero[data-version=two][data-position=left] ._y ._x,
 #_n_[data-position=left] {
   height: 100vh;
@@ -905,7 +929,7 @@ main#main .Anh > div[class*=__],
 #_pa [class*=pa],
 #_bsp > div[class*=_] > * .q > div,
 #_psh div[class^=s] > .a,
-#_psh.ready div[class^=s],
+#_psh.show div[class^=s],
 #_n_ ._ ._s,
 #_n_[data-position=left] {
   box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
@@ -937,6 +961,7 @@ main#main .Anh > div[class*=__],
 main#main .Anh > div[class*=__],
 #_pa [class*=pa],
 #_bsp > div[class*=_] > * .q > div,
+#_psh ul li a,
 #_psh div[class^=s],
 pre[class*=language] span.code-filename,
 pre[class*=language][data-line-numbers=false],
@@ -996,6 +1021,7 @@ footer#main .c__ > p,
 
 #hero[data-version=two][data-position=left] #__h_sl ul li a span,
 #hero[data-version=two][data-position=left] #__h_sl ul li a .ic,
+#hero[data-version=two] .u ._i h2 #typed .laravelicon svg,
 #_psh ul li,
 #_psh div[class^=s] > .a,
 #_bt_ ul li,
@@ -1007,15 +1033,21 @@ footer#main .c__ > p,
   display: inline-block;
 }
 
+::-moz-selection {
+  background: #1f77ff;
+  color: #f7f7f7;
+}
+
+::selection,
 #_psh div[class^=s] > .a {
   background: #1f77ff;
   color: #f7f7f7;
 }
 
 #_Bx .__i__ .c_ > ._xo ._t_ + .__,
+#_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
 footer#main .c__ > p,
-#_bsp > div[class*=_] > * .q > div a,
-#_psh ul li a {
+#_bsp > div[class*=_] > * .q > div a {
   color: #686868;
 }
 
@@ -1027,10 +1059,12 @@ footer#main .c__ > p,
 #_Bx .__i__ .c_ ._m_ .__c,
 #_Bx .__i__ .c_ > ._xo ._t_ a,
 #hero[data-version=two][data-position=left] #__h_sl ul li a,
+#_psh ul li a,
 #_n_ #_r_ ._z + * {
   color: #313131;
 }
 
+#about ._r ._a ._x #back a,
 #_bsp > div[class*=_] > * .q > div:hover .ic,
 #_bsp > div[class*=_] > * .q > div:hover h3,
 #_bsp > div[class*=_] > * .q > div:hover h4,
@@ -1075,7 +1109,7 @@ pre[class*=language][data-color*=light] {
 #_Bx .__i__ .c_ > ._xo,
 footer#main,
 [data-theme=light] main#main .Anh > div[class*=__],
-#_psh.ready div[class^=s],
+#_psh.show div[class^=s],
 #_n_ ._ ._s {
   background: #fff;
 }
@@ -1520,6 +1554,10 @@ textarea::placeholder {
   height: 20px;
 }
 
+#__h_sl ._s ul li a .ic svg {
+  fill: #2a2a2a;
+}
+
 #hero_nav {
   order: -1;
   margin-top: -212px;
@@ -1553,6 +1591,7 @@ textarea::placeholder {
   --reset-top-space: 0;
   --reset-padding-left: unset;
   --reset-padding-right: unset;
+  z-index: 10;
   top: 0;
   /** when data not was set */
   /** when has set width by javascript */
@@ -2036,6 +2075,14 @@ pre[class*=language][data-color*=light] {
   color: #3d78c3;
 }
 
+pre[class*=language][data-color*=light] ::-moz-selection {
+  background-color: #dbdbdb;
+}
+
+pre[class*=language][data-color*=light] ::selection {
+  background-color: #dbdbdb;
+}
+
 pre[class*=language][data-color*=light] .line-number span {
   color: #bbbbbb;
 }
@@ -2177,30 +2224,29 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
   bottom: -100px;
 }
 
-#_psh.ready {
+#_psh.show {
   bottom: 1.5rem;
 }
 
-#_psh.ready div[class^=s] .a {
+#_psh.show div[class^=s] .a {
   padding: 0.65rem 0.65rem;
   transition: none;
 }
 
-#_psh.ready div[class^=s] .a i {
+#_psh.show div[class^=s] .a i {
   color: #dc0202;
 }
 
-#_psh.ready div[class^=s] .a:hover i {
+#_psh.show div[class^=s] .a:hover i {
   margin-right: 0;
 }
 
-#_psh.ready ul {
+#_psh.show ul {
   display: block;
 }
 
 #_psh div[class^=s] {
-  padding: 1.5rem;
-  width: 400px;
+  width: 840px;
 }
 
 #_psh div[class^=s] > .a {
@@ -2218,7 +2264,24 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 }
 
 #_psh ul li a {
-  padding: 0 14px;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+#_psh ul li a:hover[data-target=whatsapp] {
+  background-color: rgba(37, 211, 102, 0.2);
+}
+
+#_psh ul li a:hover[data-target=facebook] {
+  background-color: rgba(59, 89, 152, 0.2);
+}
+
+#_psh ul li a:hover[data-target=twitter] {
+  background-color: rgba(29, 161, 242, 0.2);
+}
+
+#_psh ul li a:hover[data-target=linkedin] {
+  background-color: rgba(14, 57, 149, 0.2);
 }
 
 #_psh ul li a span {
@@ -2226,12 +2289,13 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 }
 
 #_psh ul li svg {
-  width: 22px;
-  height: auto;
+  height: 20px;
+  width: auto;
 }
 
-.___g--dark___ {
+.___g--dark___[data-show=true] {
   background-color: rgba(0, 0, 0, 0.36);
+  z-index: 100;
 }
 
 #_bsp {
@@ -2306,6 +2370,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 #hero[data-version=two] {
   background-color: #f4f4f4;
   /** Picture Area */
+  /** Menetralkan kembali z index hero */
   /** Style for position hero to left */
 }
 
@@ -2315,8 +2380,11 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 
 #hero[data-version=two] .anh_ {
   z-index: -1;
-  bottom: 0;
   right: 0;
+}
+
+#hero[data-version=two] .anh_ [class*=_] {
+  transition: none;
 }
 
 #hero[data-version=two] .anh_ [class*=_] img {
@@ -2334,6 +2402,27 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
   color: #755ade;
 }
 
+#hero[data-version=two] .u ._i h2 #typed .laravelicon svg {
+  vertical-align: middle;
+  width: 34px;
+  height: auto;
+}
+
+#hero[data-version=two] .u ._i h2 .typed-cursor {
+  font-size: 52px;
+  font-weight: 300;
+  color: #f4f4f4;
+}
+
+#hero[data-version=two] .u ._i h2 .typed-cursor:before {
+  content: "";
+  height: 56px;
+  width: 2px;
+  left: 4px;
+  top: 5px;
+  background-color: #1f77ff;
+}
+
 #hero[data-version=two] .u ._i h2 .laravel-color {
   color: #FF2D20;
 }
@@ -2342,8 +2431,11 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
   font-size: 18px;
 }
 
+#hero[data-version=two][data-position=center] {
+  z-index: 0 !important;
+}
+
 #hero[data-version=two][data-position=left] {
-  z-index: 10;
   width: 320px;
   /** Social links for layout hero left */
 }
@@ -2766,6 +2858,34 @@ footer#main .c__ > p i {
 
 #about ._r ._a ._x {
   width: 540px;
+  height: 100%;
+  /** Back button */
+}
+
+#about ._r ._a ._x #back {
+  top: 2rem;
+  left: 2rem;
+  z-index: 1;
+}
+
+#about ._r ._a ._x #back a i {
+  font-size: 22px;
+}
+
+#about ._r ._a ._x > [class*=img] {
+  width: 540px;
+  background-color: #f4f4f4;
+}
+
+#about ._r ._a ._x img {
+  width: auto;
+  height: 100%;
+  bottom: 0;
+  left: -540px;
+}
+
+#about ._r ._a ._x img[data-has-center=true] {
+  left: 0;
 }
 
 #about ._r ._a .c {
@@ -2773,7 +2893,7 @@ footer#main .c__ > p i {
 }
 
 #about ._r ._a .c ._ {
-  padding: 80px 120px;
+  padding: 70px 100px;
   font-size: 17px;
   line-height: 1.65;
 }

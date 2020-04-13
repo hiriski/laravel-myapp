@@ -3,6 +3,9 @@ $follow-background-image : #f4f4f4;
 
 #hero {
     @extend %transition-cubic-bezier;
+    * {
+        @extend %transition;
+    }
     &[data-version=two] {
         background-color: $follow-background-image;
         @extend %fixed;
@@ -32,10 +35,10 @@ $follow-background-image : #f4f4f4;
         .anh_ {
             @extend %absolute;
             z-index: -1;
-            bottom: 0;
             right: 0;
             [class*="_"] {
                 @extend %line-height-zero;
+                transition: none;;
                 img {
                     height: $hero-height;
                     width: auto;    
@@ -44,7 +47,6 @@ $follow-background-image : #f4f4f4;
         }
     
         .u {
-            @extend %transition-cubic-bezier;
             @extend %flex;
             @extend %align-items-center;
             padding-right: 40%;
@@ -59,6 +61,33 @@ $follow-background-image : #f4f4f4;
                     font-size: 40px;
                     font-weight: 300;
                     color: #755ade;
+                    #typed {
+                        .laravelicon {
+                            @extend %line-height-zero;
+                            svg {
+                                vertical-align: middle;
+                                @extend %inline-block;
+                                width: 34px;
+                                height: auto;
+                            }
+                        }
+                    }
+                    .typed-cursor {
+                        @extend %muted;
+                        @extend %relative;
+                        font-size: 52px;
+                        font-weight: 300;
+                        color: #f4f4f4; // sama dengan warna background
+                        &:before {
+                            content: "";
+                            height: 56px;
+                            width: 2px;
+                            @extend %absolute;
+                            left: 4px;
+                            top: 5px;
+                            background-color: $primary-color;
+                        }
+                    }
                     .laravel-color {
                         color: $laravel-color;
                     }
@@ -77,9 +106,15 @@ $follow-background-image : #f4f4f4;
             }
         }
 
+        /** Menetralkan kembali z index hero */
+        &[data-position=center] {
+            z-index: 0 !important;
+        }
+
+
         /** Style for position hero to left */
         &[data-position=left] {
-            z-index: 10;
+            // z-index: 10; sudah di handle sama javascript
             width: $left-width;
             ._y {
                 width: $left-width;
@@ -91,6 +126,7 @@ $follow-background-image : #f4f4f4;
                         padding-right: unset;
                         padding: 0 36px;
                         > [class$=r] {
+                            @extend %transition;
                             padding-top: 120px;
                             padding-left: unset;
                             margin-top: unset;

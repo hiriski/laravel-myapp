@@ -6,6 +6,7 @@
     --reset-padding-right: unset;
     
     $logo-size: 32px;
+    z-index: 10;
 
     @extend %transition-cubic-bezier;
     @extend %full-width;
@@ -38,6 +39,7 @@
         padding-left    : var(--reset-padding-left) !important;
         padding-right   : var(--reset-padding-right) !important;
         top             : var(--reset-top-space) !important;
+        
         &[data-has-set-width=false] {
             top         : var(--reset-top-space) !important;
         }

@@ -125,6 +125,7 @@ var currentRouteName = "{{ Route::currentRouteName() }}";
         @yield('content')
         @include('front.layouts.footer')
     </main>
+    <div class="___g--dark___" data-show="false"></div>
 </div>
 
 @stack('script')

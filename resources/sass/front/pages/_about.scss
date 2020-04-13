@@ -1,0 +1,86 @@
+$background-image-width : 540px;
+$left-section-background-color: #f4f4f4;
+
+
+/** Redefined style for about page */
+[data-page="about"] {
+    #AnhOi {
+        main {
+            .Anh {
+                .__o__ {
+                    @extend %remove-box-shadow;
+                    padding-top: unset;
+                    [class*=__] {
+                        @extend %full-width;
+                    }
+                }
+            }
+        }
+    }
+    footer#main {
+        padding-left: $background-image-width;
+    }
+}
+
+
+#about {
+    ._r {
+        ._a {
+            
+            /** background image area */
+            ._x {
+                @extend %fixed;
+                @extend %bottom-left;
+                @extend %line-height-zero;
+                width: $background-image-width;
+                height: 100%;
+                
+                /** Back button */
+                #back {
+                    @extend %absolute;
+                    top: 2rem;
+                    left: 2rem;
+                    z-index: 1;
+                    a {
+                        i {
+                            font-size: 22px;
+                            @extend %margin-right-sm;
+                        }
+                        @extend %primary-color;
+                        @extend %text-decoration-none;
+                    }
+                }
+                > [class*=img] {
+                    width: $background-image-width;
+                    background-color: $left-section-background-color;
+                    @extend %fixed;
+                    @extend %bottom-left;
+                    @extend %line-height-zero;
+                    @extend %full-height;
+                }
+                img {
+                    width: auto;
+                    height: 100%;
+                    @extend %transition-cubic-bezier;
+                    @extend %absolute;
+                    bottom: 0;
+                    left: -$background-image-width;
+                    &[data-has-center=true] {
+                        left: 0;
+                    }
+                }
+            }
+            
+            /** content area */
+            .c {
+                @extend %full-width;
+                padding-left: $background-image-width;
+                ._ {
+                    padding: 70px 100px;
+                    font-size: 17px;
+                    line-height: 1.65;
+                }
+            }
+        }
+    }
+}
