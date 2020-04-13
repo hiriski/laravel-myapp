@@ -186,6 +186,25 @@
                 margin-bottom: 1rem;
                 line-height: 1.75rem;
                 font-weight: normal;
+                li {
+                    @extend %margin-bottom-sm;
+                }
+            }
+            ul {
+                @extend %remove-bullet-list;
+                li {
+                    @extend %relative;
+                    &:before {
+                        background: $primary-color;
+                        @extend %absolute;
+                        content: "";
+                        left: -20px;
+                        top: 10px;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 10px;
+                    }
+                }
             }
             blockquote, blockquote > p {
                 font-size: 22px;

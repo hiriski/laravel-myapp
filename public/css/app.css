@@ -430,6 +430,7 @@ a.anhoi-btn {
 
 #about ._r ._a ._x img,
 #about ._r ._a ._x #back,
+[data-blog=single] ._io_ ._ps_ ul li:before,
 [data-page=index] main#main,
 #hero[data-version=two] .u ._i h2 .typed-cursor:before,
 #hero[data-version=two] .anh_,
@@ -482,6 +483,7 @@ pre[class*=language] span.code-filename,
 }
 
 #RP .__i__ ._img_,
+[data-blog=single] ._io_ ._ps_ ul li,
 #_Bx .__i__ ._img_,
 #Ftr_P .__i__ ._img_,
 main#main .Anh,
@@ -568,6 +570,8 @@ main#main .Anh,
 }
 
 #RP .__i__ .c_ > ._xo ._t_,
+[data-blog=single] ._io_ ._ps_ ul li,
+[data-blog=single] ._io_ ._ps_ ol li,
 [data-blog=single] ._io_ ._ps_ .block p,
 #_Bx .__i__ .c_ > ._xo ._t_,
 #hero[data-version=two][data-position=left] #__h_sl ul li a,
@@ -1006,6 +1010,7 @@ footer#main .c__ > p,
   padding: 0;
 }
 
+[data-blog=single] ._io_ ._ps_ ul,
 #_psh ul,
 #__pg__ > .__ .pagination,
 #_n_ ._ ._a ul,
@@ -1866,7 +1871,7 @@ pre[class*=language] {
   /** Data size */
   padding: 32px 24px 28px 60px;
   overflow: auto;
-  font-weight: 500;
+  font-weight: normal;
   line-height: 1;
   /** Support for line numbers (pre tags) */
   transform: translateY(0);
@@ -2212,6 +2217,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 
 .__aw__ {
   height: auto;
+  z-index: 1;
 }
 
 #_psh {
@@ -2506,6 +2512,16 @@ main#main .Anh > div[class*=__] {
   padding-top: 50px;
 }
 
+/** Page Blog Category Show */
+
+[data-page=blog-category-show] main#main .Anh > div[class*=__] {
+  padding-top: 125px;
+}
+
+[data-page=blog-category-show] #_Bx > .__q__ {
+  padding: unset;
+}
+
 #Ftr_P {
   /** items of featured post */
 }
@@ -2552,6 +2568,10 @@ footer#main .c__ > p {
 footer#main .c__ > p i {
   color: #ff2c4f;
   font-size: 18px;
+}
+
+[data-page=index] footer#main {
+  padding-left: 320px;
 }
 
 #_Bx {
@@ -2763,6 +2783,16 @@ footer#main .c__ > p i {
   margin-bottom: 1rem;
   line-height: 1.75rem;
   font-weight: normal;
+}
+
+[data-blog=single] ._io_ ._ps_ ul li:before {
+  background: #1f77ff;
+  content: "";
+  left: -20px;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
 }
 
 [data-blog=single] ._io_ ._ps_ blockquote,

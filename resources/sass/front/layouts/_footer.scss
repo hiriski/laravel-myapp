@@ -27,3 +27,10 @@ footer#main {
         }
     }
 }
+
+
+[data-page=index] {
+    footer#main {
+        padding-left: $left-width;
+    }
+}

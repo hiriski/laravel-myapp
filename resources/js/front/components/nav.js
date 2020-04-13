@@ -6,6 +6,16 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 50) {
+        moveNavigation('left')
+    }
+    else {
+        moveNavigation('center');
+    }
+});
+
+
 /** Dapatkan ukuran lebar halaman */
 const getPageWrapWidth = () => {
     let pageWrap = document.querySelector('main#main .Anh > div[class*=__] > .__');
