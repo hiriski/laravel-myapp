@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder {
             BlogCategoriesTableSeeder::class,
             BlogStatusTableSeeder::class,
             BlogTagsTableSeeder::class,
-            BlogTagBlogTableSeeder::class,
+            // BlogTagBlogTableSeeder::class,
 
             /** Roles & Permission */
             RolesTableSeeder::class,
@@ -46,6 +46,6 @@ class DatabaseSeeder extends Seeder {
         ]);
 
         /** Blog Faker */
-        factory(Blog::class, 20)->create();
+        // factory(Blog::class, 20)->create();
     }
 }
