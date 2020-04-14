@@ -274,6 +274,7 @@ th {
 * @param {*} $color 		- Property color value
 */
 
+#about #s ._s ul li a .ic + span,
 #hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span:not(.name),
 #hero[data-version=two] .u ._i h2 span.name,
 #_psh ul,
@@ -387,6 +388,7 @@ a.anhoi-btn {
   text-decoration: none;
 }
 
+#about #s ._s ul li a,
 #about ._r ._a ._x > [class*=img],
 #about ._r ._a ._x,
 #hero[data-version=two] .u ._i h2 #typed .laravelicon,
@@ -412,6 +414,9 @@ a.anhoi-btn {
   line-height: 1.65;
 }
 
+#about ._r ._a .c .top,
+#about ._r ._a .c .bottom,
+#about ._r ._a .c,
 #RP .__i__ .c_ > ._xo ._t_,
 #RP .__i__ ._img_,
 #_Bx .__i__ .c_ > ._xo ._t_ + .__,
@@ -428,6 +433,7 @@ a.anhoi-btn {
   overflow: hidden;
 }
 
+#about #s,
 #about ._r ._a ._x img,
 #about ._r ._a ._x #back,
 [data-blog=single] ._io_ ._ps_ ul li:before,
@@ -452,6 +458,9 @@ pre[class*=language] span.code-filename,
   position: absolute;
 }
 
+#about ._r ._a .c .top,
+#about ._r ._a .c .bottom,
+#about ._r ._a .c,
 #about ._r ._a ._x > [class*=img],
 #about ._r ._a ._x,
 #hero[data-version=two],
@@ -482,6 +491,7 @@ pre[class*=language] span.code-filename,
   left: 0;
 }
 
+#about ._r ._a .c ._,
 #RP .__i__ ._img_,
 [data-blog=single] ._io_ ._ps_ ul li,
 #_Bx .__i__ ._img_,
@@ -515,7 +525,7 @@ pre[class*=language],
   transition: all 0.3s ease;
 }
 
-#about ._r ._a ._x img,
+#about #s,
 main#main .Anh > div[class*=__],
 main#main .Anh,
 #hero[data-version=two] ._z ._q,
@@ -649,14 +659,17 @@ main#main .Anh,
   padding-left: 0.5rem;
 }
 
+#about #s ._s ul li a,
 #_bsp > div[class*=_] > * .q > div {
   padding: 0.85rem;
 }
 
+#about #s ._s [class*=y_],
 #_n_ ._ ._a {
   padding-top: 0.85rem;
 }
 
+#about #s ._s [class*=y_],
 #_n_ ._ ._a {
   padding-bottom: 0.85rem;
 }
@@ -699,11 +712,13 @@ main#main .Anh,
   padding-bottom: 2rem;
 }
 
+#about #s ._s [class*=y_],
 #hero[data-version=two] .u > [class$=r],
 #_bsp > div[class*=_] > *:first-of-type > .q > * {
   padding-left: 3rem;
 }
 
+#about #s ._s [class*=y_],
 #_bsp > div[class*=_] > *:last-of-type .q > * {
   padding-right: 3rem;
 }
@@ -728,6 +743,7 @@ main#main .Anh,
   margin-right: -12px;
 }
 
+[data-page=about] #AnhOi main,
 #hero[data-version=two],
 .___g--dark___[data-show=true],
 #_x0 > div,
@@ -746,7 +762,7 @@ main#main .Anh,
   height: 100%;
 }
 
-#about ._r ._a .c,
+#about #s,
 [data-page=about] #AnhOi main .Anh .__o__ [class*=__],
 [data-page=index] [data-layout-style=left] main#main .Anh,
 [data-page=index] main#main,
@@ -814,6 +830,7 @@ main#main .Anh > div[class*=__] > .__,
 
 /** flex family */
 
+#about #s ._s,
 #RP .__l_m,
 #RP .__i__ .c_ ._m_ ._ic,
 #RP .__i__ .c_ ._m_ .__c,
@@ -851,6 +868,7 @@ main#main .Anh > div[class*=__],
   display: -webkit-flex;
 }
 
+#about #s ._s,
 #RP .__l_m,
 [data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
 [data-blog=single] ._io_ ._m_,
@@ -865,6 +883,7 @@ main#main .Anh > div[class*=__],
   justify-content: center;
 }
 
+#about #s ._s,
 #RP .__i__ .c_ ._m_ ._ic,
 #RP .__i__ .c_ ._m_,
 [data-blog=single] ._io_ ._m_ > .__c,
@@ -926,6 +945,7 @@ main#main .Anh > div[class*=__],
 
 /** Box Shadow */
 
+#about ._r ._a .c,
 #RP .__i__ .c_ > ._xo,
 #RP .__i__ ._img_,
 #_Bx .__i__ .c_ > ._xo,
@@ -945,6 +965,7 @@ main#main .Anh > div[class*=__],
   box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.11);
 }
 
+#about #s ._s [class*=y_],
 [data-blog=single] ._io_ ._xo > .__ img,
 #hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_],
 #_pa [class*=pa] ._ .a img {
@@ -974,6 +995,8 @@ pre[class*=language][data-line-numbers=false],
   border-radius: 0.2rem;
 }
 
+#about #s ._s ul li a,
+#about #s ._s [class*=y_],
 #RP .__i__ .c_ > ._xo,
 #RP .__i__ ._img_,
 [data-blog=single] ._io_ ._xo > .__ img,
@@ -1010,6 +1033,7 @@ footer#main .c__ > p,
   padding: 0;
 }
 
+#about #s ._s ul,
 [data-blog=single] ._io_ ._ps_ ul,
 #_psh ul,
 #__pg__ > .__ .pagination,
@@ -1024,6 +1048,8 @@ footer#main .c__ > p,
   display: block;
 }
 
+#about #s ._s ul li a,
+#about #s ._s ul li,
 #hero[data-version=two][data-position=left] #__h_sl ul li a span,
 #hero[data-version=two][data-position=left] #__h_sl ul li a .ic,
 #hero[data-version=two] .u ._i h2 #typed .laravelicon svg,
@@ -1110,6 +1136,9 @@ pre[class*=language][data-color*=light] {
   background: #f7f7f7;
 }
 
+#about #s ._s [class*=y_],
+#about ._r ._a .c ._ > .rx,
+#about ._r ._a .c::-webkit-scrollbar-track,
 #RP .__i__ .c_ > ._xo,
 #_Bx .__i__ .c_ > ._xo,
 footer#main,
@@ -2873,12 +2902,24 @@ footer#main .c__ > p i {
 
 /** Redefined style for about page */
 
+[data-page=about] footer {
+  display: none;
+}
+
+[data-page=about] #AnhOi main {
+  background-color: #f4f4f4;
+}
+
 [data-page=about] #AnhOi main .Anh .__o__ {
   padding-top: unset;
 }
 
 [data-page=about] footer#main {
-  padding-left: 540px;
+  padding-left: 40%;
+}
+
+#about {
+  /** Social Links*/
 }
 
 #about ._r ._a {
@@ -2887,7 +2928,7 @@ footer#main .c__ > p i {
 }
 
 #about ._r ._a ._x {
-  width: 540px;
+  width: 40%;
   height: 100%;
   /** Back button */
 }
@@ -2903,15 +2944,16 @@ footer#main .c__ > p i {
 }
 
 #about ._r ._a ._x > [class*=img] {
-  width: 540px;
+  width: 40%;
   background-color: #f4f4f4;
 }
 
 #about ._r ._a ._x img {
   width: auto;
   height: 100%;
+  transition: all 1s;
   bottom: 0;
-  left: -540px;
+  left: -80%;
 }
 
 #about ._r ._a ._x img[data-has-center=true] {
@@ -2919,13 +2961,74 @@ footer#main .c__ > p i {
 }
 
 #about ._r ._a .c {
-  padding-left: 540px;
+  left: 40%;
+  top: 4%;
+  height: 92%;
+  width: 58%;
+  display: inline-block;
+  border-radius: 1rem;
+  overflow-y: auto;
 }
 
-#about ._r ._a .c ._ {
-  padding: 70px 100px;
+#about ._r ._a .c::-webkit-scrollbar-button {
+  display: inline-block;
+}
+
+#about ._r ._a .c .top,
+#about ._r ._a .c .bottom {
+  z-index: 1;
+  width: 58%;
+  height: 80px;
+  padding-right: 30px;
+}
+
+#about ._r ._a .c .top {
+  left: 40%;
+  background: linear-gradient(180deg, #ffffff, rgba(255, 255, 255, 0.99), transparent);
+  top: 4%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+#about ._r ._a .c .bottom {
+  left: 40%;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.99), #ffffff);
+  bottom: 4%;
+  border-radius: 0 0 1rem 1rem;
+}
+
+#about ._r ._a .c ._ > .rx {
   font-size: 17px;
   line-height: 1.65;
+  padding: 52px 80px;
+}
+
+#about #s.bottom {
+  bottom: -100px;
+}
+
+#about #s.top {
+  bottom: 3rem;
+}
+
+#about #s ._s {
+  height: 80px;
+}
+
+#about #s ._s ul li a:hover {
+  background-color: rgba(31, 119, 255, 0.1);
+}
+
+#about #s ._s ul li a:hover svg {
+  fill: #1f77ff !important;
+}
+
+#about #s ._s ul li a svg {
+  width: 18px;
+  height: 18px;
+}
+
+#about #s ._s ul li a .ic svg {
+  fill: #2a2a2a;
 }
 
 * {

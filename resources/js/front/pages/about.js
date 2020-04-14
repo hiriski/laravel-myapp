@@ -6,6 +6,7 @@ if(isAbout()) {
         setTimeout(() => {
             showAboutImage();
             backButton();
+            showSocialLinks();
         }, 1000);
     });
 
@@ -51,5 +52,16 @@ if(isAbout()) {
         getInfoParentImage((parent, width) => {
             setImagePosition(parent, width);
         });
+    }
+
+
+    /** Show Social Icons (animation) */
+    const showSocialLinks = () => {
+        let socialLinkElem = document.querySelector('#about #s');
+        if(socialLinkElem) {
+            setTimeout(() => {
+                socialLinkElem.className = "top";
+            }, 1200);
+        }
     }
 }

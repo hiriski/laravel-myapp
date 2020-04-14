@@ -267,6 +267,7 @@ if (Object(_routes_function__WEBPACK_IMPORTED_MODULE_0__["isAbout"])()) {
     setTimeout(function () {
       showAboutImage();
       backButton();
+      showSocialLinks();
     }, 1000);
   });
   /** Back button */
@@ -319,6 +320,18 @@ if (Object(_routes_function__WEBPACK_IMPORTED_MODULE_0__["isAbout"])()) {
     getInfoParentImage(function (parent, width) {
       setImagePosition(parent, width);
     });
+  };
+  /** Show Social Icons (animation) */
+
+
+  var showSocialLinks = function showSocialLinks() {
+    var socialLinkElem = document.querySelector('#about #s');
+
+    if (socialLinkElem) {
+      setTimeout(function () {
+        socialLinkElem.className = "top";
+      }, 1200);
+    }
   };
 }
 
@@ -569,9 +582,9 @@ function isSingleBlog() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /opt/lampp/htdocs/myapp/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /opt/lampp/htdocs/myapp/resources/sass/back/app.scss */"./resources/sass/back/app.scss");
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/myapp/resources/sass/front/app.scss */"./resources/sass/front/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\myapp\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\xampp\htdocs\myapp\resources\sass\back\app.scss */"./resources/sass/back/app.scss");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\myapp\resources\sass\front\app.scss */"./resources/sass/front/app.scss");
 
 
 /***/ })
