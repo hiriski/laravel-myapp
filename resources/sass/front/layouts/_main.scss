@@ -52,6 +52,7 @@ main#main {
             @extend %border-thin-radius;
             @extend %flex;
             padding-top: 50px;
+            padding-bottom: 50px;
             > {
                 .__ {
                     @extend %one-k-width;

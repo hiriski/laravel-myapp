@@ -1,4 +1,4 @@
-$icon_social_link_size : 20px;
+$icon_social_link_size : 18px;
 
 #__h_sl {
     @extend %margin-top;
@@ -22,7 +22,7 @@ $icon_social_link_size : 20px;
                     }
                     .ic {
                         svg {
-                            fill: #2a2a2a;
+                            fill: $text-muted;
                         }
                         + span {
                             @extend %display-none;

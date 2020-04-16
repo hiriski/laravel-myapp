@@ -79,15 +79,22 @@
                 </div>
                 @endforeach
                 @endisset
+                @empty($posts)
+                <div class="nothing">
+                    <span>Nothing to see here..</span>
+                </div>
+                @endempty
             </div>
         </div>
     </div>
 
-    {{-- Jika ini di load oleh index --}}
-    @if(Route::currentRouteName() === "index")
-    <div class="__l_m">
-        <a href="{{ route('blog.index') }}?page=2"  class="anhoi-btn" data-size="lg"><span>Show more</span> <i class="material-icons">loop</i></a>
-    </div>
+    {{-- Jika ini di load oleh index dan jika jumlah postnya lebih dari 6 --}}
+    @if(count($posts) > 6)
+        @if(Route::currentRouteName() === "index")
+        <div class="__l_m">
+            <a href="{{ route('blog.index') }}?page=2"  class="anhoi-btn" data-size="lg"><span>Show more</span> <i class="material-icons">loop</i></a>
+        </div>
+        @endif
     @endif
 
 </div>

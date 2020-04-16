@@ -14,6 +14,7 @@ $left-section-background-color: #f4f4f4;
             .Anh {
                 .__o__ {
                     @extend %remove-box-shadow;
+                    background-color: transparent !important;
                     padding-top: unset;
                     [class*=__] {
                         @extend %full-width;
@@ -74,7 +75,7 @@ $left-section-background-color: #f4f4f4;
                 img {
                     width: auto;
                     height: 100%;
-                    @include transition(all 1s);
+                    @include transition(all .8s);
                     @extend %absolute;
                     bottom: 0;
                     left: - $background-image-width * 2;

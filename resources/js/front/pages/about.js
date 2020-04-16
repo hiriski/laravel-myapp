@@ -61,7 +61,7 @@ if(isAbout()) {
         if(socialLinkElem) {
             setTimeout(() => {
                 socialLinkElem.className = "top";
-            }, 1200);
+            }, 1000);
         }
     }
 }

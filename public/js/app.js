@@ -330,7 +330,7 @@ if (Object(_routes_function__WEBPACK_IMPORTED_MODULE_0__["isAbout"])()) {
     if (socialLinkElem) {
       setTimeout(function () {
         socialLinkElem.className = "top";
-      }, 1200);
+      }, 1000);
     }
   };
 }

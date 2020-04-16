@@ -98,7 +98,8 @@ $follow-background-image : #f4f4f4;
             }
             ._o {
                 @extend %margin-top-sm;
-                font-size: 18px;
+                font-size: 19px;
+                @extend %muted;
                 p {
                     
                     @extend %reset;

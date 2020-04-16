@@ -32,7 +32,7 @@
                 </div>
                 @if(!empty($item->image) || !empty($item->image_md))
                 <div class="post-img">
-                    <img src="{{ getBlogImage($item->image_md) }}" alt="Sample Image" class="card-img-top">
+                    <img class="card-img-top" src="{{ getBlogImage($item->image_md) }}" alt="{{ $item->title }}">
                 </div>
                 @else
                 <div class="post-img">

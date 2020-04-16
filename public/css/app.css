@@ -304,13 +304,14 @@ footer#main .c__ > p:first-child > span:before {
   width: 32px;
   height: 1px;
   content: "";
-  background: #686868;
+  background: #1f77ff;
   position: absolute;
 }
 
 #RP .__i__ .c_ ._m_ .d_,
 [data-blog=single] ._io_ ._m_ > ._ad_ > ._a > ._d,
 #_Bx .__i__ .c_ ._m_ .d_,
+#hero[data-version=two] .u ._o,
 #hero[data-version=two] .u ._i h2 .typed-cursor,
 #_pa [class*=pa] ._ .n p,
 #_bsp > div[class*=_] > * .q > div a p,
@@ -343,19 +344,10 @@ footer#main .c__ > p:first-child > span:before {
   color: #92574a;
 }
 
-footer#main .c__ a {
-  color: #313131;
-  text-decoration: none;
-}
-
-footer#main .c__ a:hover {
-  color: #1f77ff;
-}
-
 #RP .__i__ .c_ ._m_ .d_,
 #_Bx .__i__ .c_ ._m_ .d_,
-footer#main .c__ > p,
 #_bsp > div[class*=_] > * .q > div a p,
+#_psh div[class^=s] > .a span,
 pre[class*=language] span.code-filename,
 #__h_sl ._s .sp span {
   font-size: 14px;
@@ -379,6 +371,7 @@ pre[class*=language] span.code-filename,
 
 #about ._r ._a ._x #back a,
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
+footer#main .c__ a,
 #hero[data-version=two][data-position=left] #__h_sl ul li a,
 #_bsp > div[class*=_] > * .q > div a,
 #_psh ul li a,
@@ -402,6 +395,7 @@ a.anhoi-btn {
 
 [data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
 [data-blog=single][data-version=two] ._io_ ._xo > .__,
+footer#main .c__ > p .laravel,
 #hero[data-version=two] .u ._i h2,
 #_psh div[class^=s] > .a,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
@@ -515,6 +509,7 @@ pre[class*=language],
 #RP .__i__ .c_,
 #_Bx .__i__ .c_ > ._xo,
 #_Bx .__i__ .c_,
+footer#main,
 #hero[data-version=two][data-position=left] ._y ._x .u > [class$=r],
 #hero *,
 #_psh div[class$=s],
@@ -557,6 +552,7 @@ main#main .Anh,
   margin-top: 0.5rem;
 }
 
+footer#main .c__ > p,
 #hero[data-version=two] .u ._i h2 {
   margin-bottom: 0.5rem;
 }
@@ -1016,7 +1012,6 @@ ul,
 [data-blog=single] ._io_ ._ps_ .block p:last-child,
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *,
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
-footer#main .c__ > p,
 #hero[data-version=two] .u ._o p,
 #_pa [class*=pa] ._ .n h6,
 #_bsp > div[class*=_] > * .q > div a *,
@@ -1077,6 +1072,7 @@ footer#main .c__ > p,
 
 #_Bx .__i__ .c_ > ._xo ._t_ + .__,
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
+footer#main .c__ a,
 footer#main .c__ > p,
 #_bsp > div[class*=_] > * .q > div a {
   color: #686868;
@@ -1127,7 +1123,8 @@ a.anhoi-btn,
 }
 
 .material-icons,
-[data-blog=single] ._io_ ._m_ > .__c ._ic svg {
+[data-blog=single] ._io_ ._m_ > .__c ._ic svg,
+footer#main .c__ > p .laravel {
   vertical-align: middle;
 }
 
@@ -1141,7 +1138,6 @@ pre[class*=language][data-color*=light] {
 #about ._r ._a .c::-webkit-scrollbar-track,
 #RP .__i__ .c_ > ._xo,
 #_Bx .__i__ .c_ > ._xo,
-footer#main,
 [data-theme=light] main#main .Anh > div[class*=__],
 #_psh.show div[class^=s],
 #_n_ ._ ._s {
@@ -1175,7 +1171,7 @@ footer#main,
 [data-blog=single] ._io_ ._ps_ code:not([class*=language]),
 pre[class*=language] code,
 pre[class*=language] .line-number {
-  font-family: "Source Code Pro", monospace !important;
+  font-family: "Courier Prime", monospace !important;
 }
 
 [data-blog=single] ._io_ ._t,
@@ -1584,12 +1580,12 @@ textarea::placeholder {
 }
 
 #__h_sl ._s ul li a svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 #__h_sl ._s ul li a .ic svg {
-  fill: #2a2a2a;
+  fill: #707070;
 }
 
 #hero_nav {
@@ -2293,11 +2289,6 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
   font-size: 18px;
 }
 
-#_psh div[class^=s] > .a span {
-  font-size: 14px;
-  font-weight: bold;
-}
-
 #_psh ul li a {
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
@@ -2463,7 +2454,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 }
 
 #hero[data-version=two] .u ._o {
-  font-size: 18px;
+  font-size: 19px;
 }
 
 #hero[data-version=two][data-position=center] {
@@ -2539,6 +2530,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 
 main#main .Anh > div[class*=__] {
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 /** Page Blog Category Show */
@@ -2590,16 +2582,17 @@ footer#main > div[class*=_] {
   padding: 40px 0;
 }
 
-footer#main .c__ > p {
-  font-weight: 600;
+footer#main .c__ > p .laravel svg {
+  width: 20px;
+  height: 20px;
 }
 
 footer#main .c__ > p i {
   color: #ff2c4f;
-  font-size: 18px;
+  font-size: 20px;
 }
 
-[data-page=index] footer#main {
+[data-page=index] [data-layout-style=left] footer#main {
   padding-left: 320px;
 }
 
@@ -2911,6 +2904,7 @@ footer#main .c__ > p i {
 }
 
 [data-page=about] #AnhOi main .Anh .__o__ {
+  background-color: transparent !important;
   padding-top: unset;
 }
 
@@ -2951,7 +2945,7 @@ footer#main .c__ > p i {
 #about ._r ._a ._x img {
   width: auto;
   height: 100%;
-  transition: all 1s;
+  transition: all 0.8s;
   bottom: 0;
   left: -80%;
 }

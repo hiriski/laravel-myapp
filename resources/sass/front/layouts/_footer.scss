@@ -1,5 +1,5 @@
 footer#main {
-    @extend %set-background-white;
+    @extend %transition;
     > div[class*="_"] {
         padding: 40px 0;
         > div {
@@ -8,13 +8,19 @@ footer#main {
     }
     .c__ {
         > p {
-            @extend %reset;
-            @extend %small;
             @extend %secondary-text;
-            font-weight: 600;
+            @extend %margin-bottom-xs;
+            .laravel {
+                @extend %reset-line-height;
+                @extend %vertical-align-middle;
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
             i {
                 color: rgb(255, 44, 79);
-                font-size: 18px;
+                font-size: 20px;
             }
             &:first-child {
                 > span {
@@ -23,14 +29,17 @@ footer#main {
             }
         }
         a {
-            @extend %link-hover;
+            @extend %secondary-text;
+            @extend %text-decoration-none;
         }
     }
 }
 
-
 [data-page=index] {
-    footer#main {
-        padding-left: $left-width;
+    [data-layout-style=left] {
+        footer#main {
+            // @extend %set-background-white;
+            padding-left: $left-width;
+        }
     }
 }

@@ -43,6 +43,11 @@ class DatabaseSeeder extends Seeder {
             RoleHasPermissionsTableSeeder::class,
             ModelHasRolesTableSeeder::class,
 
+            /** Themes */
+            ThemeCategoriesTableSeeder::class,
+            ThemeStatusTableSeeder::class,
+            ThemeTagsTableSeeder::class,
+
         ]);
 
         /** Blog Faker */
