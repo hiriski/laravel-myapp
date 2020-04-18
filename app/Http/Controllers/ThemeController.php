@@ -46,7 +46,11 @@ class ThemeController extends Controller {
                 ->addProperty('locale', 'id-ID')
                 ->addProperty('locale:alternate', ['id-ID', 'en-US']);
 
-        return view('front.themes.index', compact('themes'));
+        /** return view if record not empty */
+        if(count($themes) !== 0) {
+            return view('front.themes.index', compact('themes'));
+        }
+        return abort(404);
     }
 
     /** Show Theme */
