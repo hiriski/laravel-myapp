@@ -14,6 +14,11 @@ class CreateTestimonialsTable extends Migration {
         Schema::create('testimonials', function (Blueprint $table) {
             $table->unsignedBigInteger('id');
             $table->string('name');
+            $table->string('username')->nullable();
+            $table->string('website')->nullable();
+            $table->string('professional')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone_number')->nullable();
             $table->string('avatar');
             $table->text('content');
             $table->string('from')->nullable()->comment('testi dari mana ? misal: fb, twitter etc..');
