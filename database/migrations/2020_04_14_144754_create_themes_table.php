@@ -17,13 +17,16 @@ class CreateThemesTable extends Migration {
             $table->string('slug')->unique();
             $table->text('description')->nullable();
             $table->text('keywords')->nullable();
-            $table->text('content');
             $table->string('image_xs')->nullable();
             $table->string('image_sm')->nullable();
             $table->string('image_md')->nullable();
             $table->string('featured_image')->nullable();
             $table->string('image')->nullable()->comment('Original image size');
-
+            $table->string('latest_version')->nullable();
+            $table->text('download_link')->unique();
+            $table->boolean('premium')->default(false)->comment('false : theme is free');
+            $table->unsignedInteger('price')->nullable();
+            
             /** Foreign Key */
             $table->unsignedBigInteger('user_id');
             $table->unsignedInteger('category_id');
