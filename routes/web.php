@@ -30,9 +30,28 @@ Route::prefix('/blog')->group(function() {
 		));
 	});
 });
-
 /** /blog */
 Route::resource('/blog', 'BlogController', array(
+	'only' => array('index', 'show')
+));
+
+
+/** Route prefix : theme/ */
+Route::prefix('/theme')->group(function() {
+	/** Name : theme. */
+	Route::name('theme.')->group(function() {
+		/** Route /theme/category */
+		Route::resource('/category', 'ThemeCategoryController', array(
+			'only' => array('index', 'show')
+		));
+		/** Route /theme/tag */
+		Route::resource('/tag', 'ThemeTagController', array(
+			'only'	=> array('index', 'show')
+		));
+	});
+});
+/** /theme */
+Route::resource('/theme', 'ThemeController', array(
 	'only' => array('index', 'show')
 ));
 
@@ -68,7 +87,6 @@ Route::group(['middleware' => 'auth'], function() {
 				Route::get('/user/role-permission', 'Admin\UserController@rolePermission')->name('user.roles_permission');
 				Route::put('/user/permission/{role}', 'Admin\UserController@setRolePermission')->name('user.setRolePermission');
 
-
 				/** admin/blog/ */
 				Route::prefix('/blog')->group(function() {
 					/** Name : blog. */
@@ -79,9 +97,21 @@ Route::group(['middleware' => 'auth'], function() {
 						// ));
 					});
 				});
-
 				/** /admin/blog */
 				Route::resource('/blog', 'Admin\BlogController', array(
+					'except' => array('show')
+				));
+
+				/** admin/theme/ */
+				Route::prefix('/theme')->group(function() {
+					/** Name : theme. */
+					Route::name('theme.')->group(function() {
+						/** Route /theme/category */
+						Route::resource('/category', 'Admin\ThemeCategoryController');
+					});
+				});
+				/** /admin/theme */
+				Route::resource('/theme', 'Admin\ThemeController', array(
 					'except' => array('show')
 				));
 		

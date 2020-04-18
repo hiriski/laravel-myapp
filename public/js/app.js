@@ -101,6 +101,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _front_pages_home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./front/pages/home */ "./resources/js/front/pages/home.js");
 /* harmony import */ var _front_pages_about__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./front/pages/about */ "./resources/js/front/pages/about.js");
 /* harmony import */ var _front_pages_blog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./front/pages/blog */ "./resources/js/front/pages/blog.js");
+/* harmony import */ var _front_pages_template_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./front/pages/template-page */ "./resources/js/front/pages/template-page.js");
+
 
 
 
@@ -519,11 +521,37 @@ var setLayout = function setLayout(position) {
 
 /***/ }),
 
+/***/ "./resources/js/front/pages/template-page.js":
+/*!***************************************************!*\
+  !*** ./resources/js/front/pages/template-page.js ***!
+  \***************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _routes_function__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../routes_function */ "./resources/js/front/routes_function.js");
+
+
+if (_routes_function__WEBPACK_IMPORTED_MODULE_0__["isTemplate"]) {
+  var extendFaq = function extendFaq() {
+    var faq = document.querySelector("#faqContent > div");
+  };
+
+  for (var i = 0, faq = document.querySelectorAll("#faqContent > div"), faqLength = faq.length; i < faq.length; i++) {
+    faq[i].addEventListener("click", function () {
+      this.setAttribute("data-faq", "expand");
+    });
+  }
+}
+
+/***/ }),
+
 /***/ "./resources/js/front/routes_function.js":
 /*!***********************************************!*\
   !*** ./resources/js/front/routes_function.js ***!
   \***********************************************/
-/*! exports provided: isIndex, isAbout, isSingleBlog */
+/*! exports provided: isIndex, isAbout, isSingleBlog, isTemplate */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -531,6 +559,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isIndex", function() { return isIndex; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isAbout", function() { return isAbout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isSingleBlog", function() { return isSingleBlog; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isTemplate", function() { return isTemplate; });
 function isIndex() {
   if (currentRouteName === "index") {
     return true;
@@ -545,6 +574,12 @@ function isAbout() {
 
 function isSingleBlog() {
   if (currentRouteName === "blog.show") {
+    return true;
+  }
+}
+
+function isTemplate() {
+  if (currentRouteName === "theme.show") {
     return true;
   }
 }

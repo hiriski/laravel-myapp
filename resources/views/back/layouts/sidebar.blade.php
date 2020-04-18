@@ -61,6 +61,16 @@
                             </span>
                         </a>
                     </li>
+                    <li class="sidebar-menu-item {{ Route::getCurrentRoute()->uri === "admin/theme" ? 'active' : '' }}">
+                        <a class="sidebar-menu-link" href="{{ route('admin.theme.index') }}">
+                            <span class="sidebar-menu-icon">
+                                <i class="material-icons">layers</i>
+                            </span>
+                            <span class="sidebar-menu-text">
+                                Themes
+                            </span>
+                        </a>
+                    </li>
                     <li class="sidebar-menu-item {{ Route::getCurrentRoute()->uri === "admin/user" ? 'active' : '' }}">
                         <a class="sidebar-menu-link" href="{{ route('admin.user.index') }}">
                             <span class="sidebar-menu-icon">

@@ -20,3 +20,12 @@ ol, ul {
 .material-icons {
     @extend %vertical-align-middle;
 }
+
+
+/** no comments */
+[data-background-color=light] {
+    @extend %set-background-light;
+}
+[data-background-color=white] {
+    @extend %set-background-white;
+}

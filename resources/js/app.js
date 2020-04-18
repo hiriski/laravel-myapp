@@ -3,6 +3,7 @@ import './front/components/nav';
 import './front/pages/home';
 import './front/pages/about';
 import './front/pages/blog';
+import './front/pages/template-page';
 
 // const removePreload = () => {
 //     setTimeout(() => {

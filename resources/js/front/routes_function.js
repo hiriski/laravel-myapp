@@ -16,4 +16,11 @@ function isSingleBlog() {
     }
 }
 
-export {isIndex, isAbout, isSingleBlog};
+
+function isTemplate() {
+    if(currentRouteName === "theme.show") {
+        return true;
+    }
+}
+
+export {isIndex, isAbout, isSingleBlog, isTemplate};
