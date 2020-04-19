@@ -66,7 +66,7 @@
         }
         /** Post Meta (include post author, date and category) */
         ._m_ {
-            $pic_size : 38px;
+            $pic_size : 34px;
             @extend %flex;
             @extend %justify-content-center;
             > ._ad_ {
@@ -78,6 +78,8 @@
                 }
                 img {
                     @extend %round;
+                    border: 2px solid $white;
+                    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
                 }
                 > ._a {
                     @extend %flex;
@@ -132,7 +134,7 @@
                 @extend %border-thin-radius;
                 background: #eaeaea;
                 color: #5e596f;
-                font-size: 15px;
+                font-size: 16px;
                 padding: .2rem .3rem;
             }
             /** Block custom */
@@ -210,6 +212,29 @@
                 font-size: 22px;
                 line-height: 1.75;
                 font-style: italic;
+            }
+            
+            /** Hyper links */
+            a {
+                @extend %text-decoration-none;
+                @extend %border-thin-radius;
+                @extend %primary-color;
+                border-bottom: 1px solid #d7e0fc;
+                background-color: #f5f2ff;
+                padding: 0 .3rem;
+                &:hover {
+                    border-bottom: 1px solid $primary-color;
+                    background-color: #ece6ff;
+                }
+                &[class*=__] {
+                    @extend %relative;
+                    &:after {
+                        @extend %vertical-align-middle;
+                        font-family: "Material Icons";
+                        content: "open_in_new";
+                        font-size: 18px;
+                    }
+                }
             }
         }
     }

@@ -20,8 +20,8 @@
     
             {{-- Content from database --}}
             <div class="c">
-                <div class="top"></div>
-                <div class="bottom"></div>
+                <div class="__xt"></div>
+                <div class="__xb"></div>
                 <div class="_">
                     <div class="rx">
                         <div class="_t">

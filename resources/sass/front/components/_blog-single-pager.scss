@@ -17,12 +17,11 @@
                 > div {
                     @extend %flex;
                     @extend %relative;
-                    @extend %box-shadow;
                     @extend %padding-sm;
                     @extend %overflow-hidden;
                     @extend %border-thin-radius;
                     height: var(--blog-page-height);
-                    @extend %border-thin-transparent;
+                    border: 1px solid #dbdbfe;
                     &:hover {
                         @extend %border-thin-primary;
                         .ic, h3, h4, h5, h6 {
@@ -42,10 +41,10 @@
                         }
                     }
                 }
-                /** apapun headingnya akan jadi warna primary */
+                /** apapun headingnya  */
                 h3, h4, h5, h6 {
                     @extend %overflow-hidden;
-                    font-size: 18px;
+                    font-size: 17px;
                     line-height: 1.5;
                     white-space: nowrap;
                     text-overflow: ellipsis;
@@ -53,6 +52,9 @@
                 .ic {
                     @extend %absolute;
                     top: 22px;
+                    i {
+                        font-size: 20px;
+                    }
                 }
             }
             @extend %half;

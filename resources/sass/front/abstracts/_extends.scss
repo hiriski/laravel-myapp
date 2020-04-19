@@ -43,11 +43,30 @@
         position: absolute;
     }
 }
-
 %muted {
     color: $text-muted;
 }
-
+%gray {
+    color: $gray;
+}
+%black {
+    color: $black;
+}
+%white {
+    color: $white;
+}
+%secondary-text {
+    color: $secondary-text;
+}
+%primary-color {
+    color: $primary-color;
+}
+%secondary-color {
+    color: $secondary-color;
+}
+%main-color {
+    color: $main-color;
+}
 %link {
     color: $primary-color;
     text-decoration: none;
@@ -103,6 +122,10 @@
 
 %text-decoration-none {
     text-decoration: none;
+}
+
+%text-transform-uppercase {
+    text-transform: uppercase;
 }
 
 %line-height-zero {
@@ -164,6 +187,10 @@
 
 %transition {
     @include transition(all 0.3s ease);
+}
+
+%remove-transition {
+    transition: none !important;
 }
 
 %transition-cubic-bezier {
@@ -688,7 +715,7 @@
 
 
 %box-shadow-primary-color {
-    box-shadow: 0 3px 10px 0 rgba($primary-color, 0.2);
+    box-shadow: 0 12px 35px 0 rgba(31, 119, 255, 0.2);
 }
 
 %blue-light-bg {
@@ -702,9 +729,9 @@
 }
 
 %box-shadow-lg {
-    -webkit-box-shadow: 0 25px 55px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0 25px 55px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 25px 55px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 25px 55px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.1);
 }
 
 %image-box-shadow {
@@ -771,20 +798,6 @@
 %background-primary-light {
     background: $primary-color-light;
 }
-%secondary-text {
-    color: $secondary-text;
-}
-
-%main-color {
-    color: $main-color;
-}
-
-%primary-color {
-    color: $primary-color;
-}
-%secondary-color {
-    color: $secondary-color;
-}
 
 // Background light color primary color
 %bg-light-color-primary {
@@ -832,6 +845,10 @@
 
 %set-background-primary-light {
     background: $primary-color-light;
+}
+
+%set-background-primary {
+    background: $primary-color;
 }
 
 // Font Family

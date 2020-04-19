@@ -3,11 +3,22 @@ window.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         showNavigation();
     }, 500);
+
+    /** option for navigation */
+    if(window.scrollY > 200) {
+        navigationNotFresh();
+    }
 });
+
+const navigationNotFresh = () => {
+    let nav     = document.querySelector('#_n_');
+    nav.dataset.windowHasScroll = "true";
+}
+
 
 
 window.addEventListener("scroll", () => {
-    if(window.scrollY > 50) {
+    if(window.scrollY > 200) {
         moveNavigation('left')
     }
     else {

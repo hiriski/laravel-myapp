@@ -153,9 +153,20 @@ window.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
     showNavigation();
   }, 500);
+  /** option for navigation */
+
+  if (window.scrollY > 200) {
+    navigationNotFresh();
+  }
 });
+
+var navigationNotFresh = function navigationNotFresh() {
+  var nav = document.querySelector('#_n_');
+  nav.dataset.windowHasScroll = "true";
+};
+
 window.addEventListener("scroll", function () {
-  if (window.scrollY > 50) {
+  if (window.scrollY > 200) {
     moveNavigation('left');
   } else {
     moveNavigation('center');
@@ -477,16 +488,25 @@ if (Object(_routes_function__WEBPACK_IMPORTED_MODULE_0__["isIndex"])()) {
 
 
 if (Object(_routes_function__WEBPACK_IMPORTED_MODULE_0__["isIndex"])()) {
-  window.addEventListener('DOMContentLoaded', function () {
-    homeAction();
-  });
+  window.addEventListener('DOMContentLoaded', homeStyling);
   window.addEventListener('scroll', function () {
-    homeAction();
+    homeStyling();
   });
 
-  var homeAction = function homeAction() {
-    if (window.scrollY > 200) {
+  var homeStyling = function homeStyling() {
+    var userScroll = window.scrollY;
+    /** Patokan saat nanti scroll */
+
+    var heroHeight = document.querySelector('#hero[data-version=two] ._z ._q');
+
+    if (userScroll >= 200) {
       setLayout('left');
+
+      if (userScroll > 440) {
+        showHeroNav('slided');
+      } else {
+        showHeroNav('none');
+      }
     } else {
       setLayout('center');
     }
@@ -517,6 +537,14 @@ var setLayoutAnhOi = function setLayoutAnhOi(style) {
 var setLayout = function setLayout(position) {
   setLayoutAnhOi(position);
   moveHero(position);
+};
+
+var showHeroNav = function showHeroNav(classname) {
+  var heroNavElem = document.getElementById("hero_nav");
+
+  if (heroNavElem) {
+    heroNavElem.className = classname;
+  }
 };
 
 /***/ }),

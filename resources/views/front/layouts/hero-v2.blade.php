@@ -15,6 +15,10 @@
                                 <p>Seorang backend developer yang lebih menyukai front end 😕</p>
                             </div>
                             @include('front.components.social-links')
+
+                            <div class="_h_c_">
+                                <a href="#"><i class="material-icons">send</i> <span>Send me message</span></a>
+                            </div>
                         </div>
                     </div>
                     <div class="anh_">
@@ -26,4 +30,7 @@
             </div>
         </div>
     </div>
+
+    {{-- Hero Nav --}}
+    @include('front.components.hero-nav')
 </div>

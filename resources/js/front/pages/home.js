@@ -20,20 +20,29 @@ if(isIndex()) {
 
 /** Hero Style for Homepage */
 if(isIndex()) {
-    window.addEventListener('DOMContentLoaded', () => {
-        homeAction();
-    });
+    window.addEventListener('DOMContentLoaded', homeStyling);
     window.addEventListener('scroll', () => {
-        homeAction();
+        homeStyling();
     });
 
-    const homeAction = () => {
-        if(window.scrollY > 200) {
+    const homeStyling = () => {
+        let userScroll = window.scrollY;
+        /** Patokan saat nanti scroll */
+        let heroHeight = document.querySelector('#hero[data-version=two] ._z ._q');
+        if(userScroll >= 200) {
             setLayout('left');
-        } else {
+            if(userScroll > 440) {
+                showHeroNav('slided');
+            }
+            else {
+                showHeroNav('none');
+            }
+        }
+        else {
             setLayout('center');
         }
     }
+
 }
 
 /** Layout Style */
@@ -61,4 +70,12 @@ const setLayoutAnhOi = (style) => {
 const setLayout = (position) => {
     setLayoutAnhOi(position);
     moveHero(position);
+}
+
+
+const showHeroNav = (classname) => {
+    let heroNavElem = document.getElementById("hero_nav");
+    if(heroNavElem) {
+        heroNavElem.className = classname;
+    }
 }

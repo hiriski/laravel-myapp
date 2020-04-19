@@ -65,7 +65,7 @@
             @extend %inline-block;
             @extend %box-shadow;
             border-radius: 20px;
-            padding: .65rem 1rem;
+            padding: .75rem 1.5rem;
             &:hover {
                 i {
                     @extend %margin-right-xs;
@@ -76,6 +76,7 @@
             }
             span {
                 @extend %small;
+                @extend %margin-left-xs;
             }
         }
     }

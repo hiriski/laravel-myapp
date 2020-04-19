@@ -29,11 +29,10 @@
         $nav-size: 62px;
         $logo-size: 26px;
         @extend %top-left;
-        @extend %box-shadow;
         @extend %full-height;
-        // @extend %set-background-white;
-        // @extend %box-shadow;
         width: unset;
+
+        border-right: 1px solid #e6e6e9;
         
         /** reset padding */
         padding-left    : var(--reset-padding-left) !important;
@@ -52,7 +51,7 @@
             ._s {
                 padding: 0;
                 @extend %text-center;
-                box-shadow: none !important;
+                border: none;
                 ._a {
                     @extend %justify-content-flex-start;
                     @extend %flex-direction-column;
@@ -77,9 +76,9 @@
                                     }
                                 }
                                 i {
-                                    @extend %visibility-visible;
                                     @extend %relative;
                                     font-size: 18px;
+                                    @extend %inline-block;
                                 }
                                 > span {
                                     @extend %display-none;
@@ -130,10 +129,11 @@
     ._ {
         @extend %transition-cubic-bezier;
         ._s {
-            @extend %give-standard-padding;
+            @extend %padding-left;
+            @extend %padding-right;
             @extend %set-background-white;
             @extend %border-thin-radius;
-            @extend %box-shadow;
+            border: 1px solid #e6e6e9;
         }
         ._a {
             @extend %flex;
@@ -156,22 +156,14 @@
                         color: $main-color;
                         text-decoration: none;
                         padding: .3rem 1rem;
-                        &:hover {
-                            i {
-                                visibility: visible;
-                                left: 3px;
+                        span {
+                                font-size: 14px;
+                                @extend %text-transform-uppercase;  
                             }
-                            span {
-                                @extend %margin-left-xs;
-                            }
-                        }
                         i {
-                            @extend %absolute;
                             @extend %primary-color;
-                            font-size: 15px;
-                            top: 6px;
-                            left: 0px;
-                            visibility: hidden;
+                            @extend %transition-cubic-bezier;
+                            display: none;
                         }
                     }
                 }

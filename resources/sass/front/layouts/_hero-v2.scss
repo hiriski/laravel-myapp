@@ -61,6 +61,7 @@ $follow-background-image : #f4f4f4;
                     font-size: 40px;
                     font-weight: 300;
                     color: #755ade;
+                    @extend %remove-transition;
                     #typed {
                         .laravelicon {
                             @extend %line-height-zero;
@@ -80,11 +81,11 @@ $follow-background-image : #f4f4f4;
                         color: #f4f4f4; // sama dengan warna background
                         &:before {
                             content: "";
-                            height: 56px;
-                            width: 2px;
+                            height: 62px;
+                            width: 1.75px;
                             @extend %absolute;
                             left: 4px;
-                            top: 5px;
+                            top: 2px;
                             background-color: $primary-color;
                         }
                     }
@@ -125,17 +126,24 @@ $follow-background-image : #f4f4f4;
                     .u {
                         @extend %align-items-flex-start;
                         padding-right: unset;
-                        padding: 0 36px;
+                        padding: 0 60px;
                         > [class$=r] {
                             @extend %transition;
-                            padding-top: 120px;
+                            padding-top: 140px;
                             padding-left: unset;
                             margin-top: unset;
+                            h2, .name {
+                                @extend %main-color;
+                            }
+                            /** hide text bio */
+                            ._o {
+                                @extend %display-none;
+                            }
                         }
                         [class$=i] {
                             h2 {
-                                @extend %margin-top-sm;
-                                margin-bottom: 0;
+                                @extend %margin-top;
+                                margin-bottom: .3rem;
                                 font-size: 22px;
                                 @extend %bold;
                                 span:not(.name) {
@@ -148,31 +156,37 @@ $follow-background-image : #f4f4f4;
                         }
                     }
                     > [class$=_] {
-                        $image-size : 82px;
+                        $image-size : 72px;
 
                         right: unset;
                         bottom: unset;
-                        top: 36px;
-                        left: 36px;
+                        top: 72px;
+                        left: 60px;
                         > [class^=_] {
                             width: $image-size;
                             height: $image-size;
-                            border-radius: 10px;
+                            @extend %round;
                             @extend %overflow-hidden;
                             @extend %image-box-shadow;
-                            border: 4px solid #fff;
+                            border: 3px solid #fff;
                             img {
-                                width: 100px;
+                                width: 82px;
                                 height: auto;
-                                margin-left: -11px;
-                                margin-top: -3px;
+                                margin-left: -7px;
+                                margin-top: -2px;
                             }
                         }
                     }
                 }
             }
             /** Social links for layout hero left */
+            #__h_sl ._s ul li a .ic svg {
+                /** mengantisipasi agar icon tidak gede saat window ke loaf 
+                 * (bug ini ketemu hanya di chrome window) */
+                @extend %remove-transition;
+            }
             #__h_sl {
+                @extend %margin-top-lg;
                 ul {
                     li {
                         @extend %full-width;
@@ -184,20 +198,49 @@ $follow-background-image : #f4f4f4;
                             @extend %flex-direction-row;
                             @extend %align-items-center;
                             @extend %main-color;
-                            @extend %margin-bottom-sm;
+                            height: 40px;
                             .ic {
                                 @extend %inline-block;
                                 @extend %margin-right-sm;
                             }
                             span {
                                 @extend %inline-block;
+                                @extend %black;
                             }
                         }
                     }
                 }
             }
+
+            /** Show contact button */
+            ._h_c_ {
+                @extend %block;
+                @extend %padding-top-lg;
+            }
         }
 
+    }
+
+    /** contact button */
+    ._h_c_ {
+        @extend %transition;
+        @extend %display-none;
+        a {
+                @extend %background-primary-color-light;
+                @extend %box-shadow-primary-color;
+                @extend %text-decoration-none;
+                @extend %border-thin-radius;
+                @extend %inline-block;
+                @extend %text-center;
+                @extend %full-width;
+                @extend %small;
+                padding-top: 0;
+                padding: .65rem;
+                i {
+                    font-size: 20px;
+                    @extend %margin-right-sm;
+                }
+        }
     }
 
 }

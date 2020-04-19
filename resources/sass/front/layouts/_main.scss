@@ -30,6 +30,18 @@
             }
         }
     }
+
+    /** set box shadow only on homepage */
+    [data-theme=light] {
+        main#main {
+            .Anh {
+                > div[class*=__] {
+                    @extend %box-shadow-lg;
+                }
+            }
+        }
+    }
+
 }
 
 [data-theme=light] {
@@ -37,7 +49,6 @@
         .Anh {
             > div[class*=__] {
                 @extend %set-background-white;
-                @extend %box-shadow-lg;
             }
         }
     }

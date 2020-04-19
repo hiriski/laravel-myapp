@@ -297,19 +297,20 @@ th {
 }
 
 #about #s ._s ul li a .ic + span,
+#hero ._h_c_,
 #hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span:not(.name),
+#hero[data-version=two][data-position=left] ._y ._x .u > [class$=r] ._o,
 #hero[data-version=two] .u ._i h2 span.name,
 #_psh ul,
 #_psh.show div[class^=s] .a span:not([class*=i]),
 #_n_[data-position=left] ._ ._s #_r_ ._z + span,
 #_n_[data-position=left] ._ ._s #_r_ > span,
 #_n_[data-position=left] ._ ._s ._a ul li a > span,
+#hero_nav ul li[data-stand-alone]:before,
+#hero_nav,
+#hero_nav_toggler,
 #__h_sl ._s ul li a .ic + span {
   display: none;
-}
-
-#_n_[data-position=left] ._ ._s ._a ul li a i {
-  visibility: visible;
 }
 
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
@@ -347,6 +348,68 @@ footer#main .c__ > p:first-child > span:before {
   color: #707070;
 }
 
+#hero_nav ul li a i {
+  color: #a3a3a3;
+}
+
+#hero[data-version=two][data-position=left] #__h_sl ul li a span,
+#hero_nav ul li a {
+  color: #0a0a0a;
+}
+
+#hero_nav ul li[data-stand-alone]:hover i,
+#hero_nav ul li[data-stand-alone] a i {
+  color: #fff;
+}
+
+#__l__ ._ti ._d,
+#_Bx .__i__ .c_ > ._xo ._t_ + .__,
+#_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
+footer#main .c__ a,
+footer#main .c__ > p,
+#_bsp > div[class*=_] > * .q > div a {
+  color: #686868;
+}
+
+#about ._r ._a ._x #back a,
+#__l__ ._ti ._a a,
+#__l__ ._ti ._a- a:last-child,
+#__l__ ._ti ._a- a:first-child:hover,
+[data-blog=single] ._io_ ._ps_ a,
+#_bsp > div[class*=_] > * .q > div:hover .ic,
+#_bsp > div[class*=_] > * .q > div:hover h3,
+#_bsp > div[class*=_] > * .q > div:hover h4,
+#_bsp > div[class*=_] > * .q > div:hover h5,
+#_bsp > div[class*=_] > * .q > div:hover h6,
+#_bt_ ul li a,
+#_n_ ._ ._a ul li a i,
+#_n_ ._ ._a ul .you_are_with_me a,
+#hero_nav ul li:hover a i,
+#hero_nav ul .you_are_with_me a,
+#hero_nav ul .you_are_with_me a i,
+btn.anhoi-btn,
+a.anhoi-btn,
+#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
+#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
+#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child {
+  color: #1f77ff;
+}
+
+#RP .__i__ .c_ ._m_ .__c,
+#RP .__i__ .c_ > ._xo ._t_ a,
+[data-blog=single] ._io_ ._m_ > .__c,
+[data-blog=single] ._io_ ._t > *,
+[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
+#_Bx .__i__ .c_ ._m_ .__c,
+#_Bx .__i__ .c_ > ._xo ._t_ a,
+#hero[data-version=two][data-position=left] #__h_sl ul li a,
+#hero[data-version=two][data-position=left] ._y ._x .u > [class$=r] h2,
+#hero[data-version=two][data-position=left] ._y ._x .u > [class$=r] .name,
+#_psh ul li a,
+#_n_ #_r_ ._z + * {
+  color: #313131;
+}
+
 /** Success, Info, Warning and Danger */
 
 [data-blog=single] ._io_ ._ps_ .block.success {
@@ -372,6 +435,7 @@ footer#main .c__ > p:first-child > span:before {
 
 #RP .__i__ .c_ ._m_ .d_,
 #_Bx .__i__ .c_ ._m_ .d_,
+#hero ._h_c_ a,
 #_bsp > div[class*=_] > * .q > div a p,
 #_psh div[class^=s] > .a span,
 pre[class*=language] span.code-filename,
@@ -399,8 +463,10 @@ pre[class*=language] span.code-filename,
 #about ._r ._a ._x #back a,
 #changelog .log .t a,
 #__l__ ._ti ._a- a,
+[data-blog=single] ._io_ ._ps_ a,
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
 footer#main .c__ a,
+#hero ._h_c_ a,
 #hero[data-version=two][data-position=left] #__h_sl ul li a,
 #_bsp > div[class*=_] > * .q > div a,
 #_psh ul li a,
@@ -408,6 +474,10 @@ footer#main .c__ a,
 btn.anhoi-btn,
 a.anhoi-btn {
   text-decoration: none;
+}
+
+#_n_ ._ ._a ul li a span {
+  text-transform: uppercase;
 }
 
 #about #s ._s ul li a,
@@ -455,8 +525,8 @@ footer#main .c__ > p .laravel,
   line-height: 1.65;
 }
 
-#about ._r ._a .c .top,
-#about ._r ._a .c .bottom,
+#about ._r ._a .c .__xt,
+#about ._r ._a .c .__xb,
 #about ._r ._a .c,
 #RP .__i__ .c_ > ._xo ._t_,
 #RP .__i__ ._img_,
@@ -493,8 +563,7 @@ footer#main .c__ > p .laravel,
 #_bsp > div[class*=_] > * .q .ic,
 .__aw__,
 pre[class*=language] span.code-filename,
-#_n_ ._ ._a ul li a i,
-#hero_nav ._ ._a ul li a i,
+#hero_nav ul li:before,
 ._x0 ._a,
 ._x0 ._b,
 #_x0 ._x0,
@@ -506,8 +575,8 @@ pre[class*=language] span.code-filename,
   position: absolute;
 }
 
-#about ._r ._a .c .top,
-#about ._r ._a .c .bottom,
+#about ._r ._a .c .__xt,
+#about ._r ._a .c .__xb,
 #about ._r ._a .c,
 #about ._r ._a ._x > [class*=img],
 #about ._r ._a ._x,
@@ -515,6 +584,7 @@ pre[class*=language] span.code-filename,
 .___g--dark___[data-show=true],
 #_psh,
 #_n_,
+#hero_nav,
 #_x0 {
   position: fixed;
 }
@@ -524,6 +594,8 @@ pre[class*=language] span.code-filename,
 .___g--dark___[data-show=true],
 .__aw__,
 #_n_[data-position=left],
+#hero_nav ul li:before,
+#hero_nav,
 #_x0 > div,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
 #_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
@@ -555,6 +627,7 @@ pre[class*=language] span.code-filename,
 #changelog ul li,
 .featureTheme .featureImg > div,
 .demo ._ ._t,
+[data-blog=single] ._io_ ._ps_ a[class*=__],
 [data-blog=single] ._io_ ._ps_ ul li,
 #_Bx .__i__ ._img_,
 #Ftr_P .__i__ ._img_,
@@ -566,7 +639,8 @@ main#main .Anh,
 pre[class*=language],
 #_n_ ._ ._a ul li a,
 #_n_[data-position=left] ._ ._s ._a ul li a i,
-#hero_nav ._ ._a ul li a,
+#hero_nav ul li a,
+#hero_nav ul li,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_] > *,
 #_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > *,
 #Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] {
@@ -581,14 +655,22 @@ pre[class*=language],
 #_Bx .__i__ .c_ > ._xo,
 #_Bx .__i__ .c_,
 footer#main,
+#hero ._h_c_,
 #hero[data-version=two][data-position=left] ._y ._x .u > [class$=r],
 #hero *,
 #_psh div[class$=s],
 #_psh *,
 #_psh,
-#hero_nav ._ ._a ul li a span,
+#hero_nav ul li a span,
+#hero_nav ul li:before,
+#hero_nav,
 #_x0 {
   transition: all 0.3s ease;
+}
+
+#hero[data-version=two][data-position=left] #__h_sl ._s ul li a .ic svg,
+#hero[data-version=two] .u ._i h2 {
+  transition: none !important;
 }
 
 #about #s,
@@ -596,6 +678,7 @@ main#main .Anh > div[class*=__],
 main#main .Anh,
 #hero[data-version=two] ._z ._q,
 #hero,
+#_n_ ._ ._a ul li a i,
 #_n_ ._,
 #_n_ {
   transition: all 0.45s cubic-bezier(0.23, 0.1, 0, 1.02);
@@ -642,13 +725,11 @@ footer#main .c__ > p,
 }
 
 #__l__ ._ti ._a- a:last-child,
-#_n_ ._ ._a ul li a:hover span,
-#hero_nav ._ ._a ul li a:hover span {
+#_psh div[class^=s] > .a span {
   margin-left: 0.5rem;
 }
 
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote cite,
-#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2,
 #hero[data-version=two] .u ._o {
   margin-top: 0.85rem;
 }
@@ -662,7 +743,6 @@ footer#main .c__ > p,
 [data-blog=single] ._io_ ._ps_ ol li,
 [data-blog=single] ._io_ ._ps_ .block p,
 #_Bx .__i__ .c_ > ._xo ._t_,
-#hero[data-version=two][data-position=left] #__h_sl ul li a,
 #_pa [class*=pa] ._ .n h6,
 #_pa [class*=pa] ._ .a,
 #_H_Cb ._ ._x0,
@@ -678,9 +758,9 @@ footer#main .c__ > p,
 
 #about ._r ._a ._x #back a i,
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic,
+#hero ._h_c_ a i,
 #hero[data-version=two][data-position=left] #__h_sl ul li a .ic,
 #_H_Cb ._ ._x0 > [class$=svg],
-#hero_nav ._ ._a ul li a,
 #__h_sl ._s ul li a {
   margin-right: 0.85rem;
 }
@@ -688,9 +768,14 @@ footer#main .c__ > p,
 #tm_ ._i .text,
 #tm_ ._i > img,
 [data-blog=single] ._io_ ._xo > .__,
+#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2,
 #_bt_,
 #__h_sl {
   margin-top: 1.25rem;
+}
+
+#hero_nav ul li a span {
+  margin-left: 1.25rem;
 }
 
 #changelog .log .t p,
@@ -701,7 +786,8 @@ footer#main .c__ > p,
 #__l__ ._ti ._t h1,
 #__l__ ._ti ._t h2,
 [data-blog=single] ._io_ ._xo > .__,
-#_Bx .__i__ .c_ > ._xo ._t_ + .__ {
+#_Bx .__i__ .c_ > ._xo ._t_ + .__,
+#hero_nav ul li {
   margin-bottom: 1.25rem;
 }
 
@@ -711,6 +797,7 @@ footer#main .c__ > p,
 #__l__ ._ti ._t h2,
 [data-blog=single][data-version=two] ._io_ ._m_,
 #_Bx .__l_m,
+#hero[data-version=two][data-position=left] #__h_sl,
 #_psh ul,
 #_n_[data-position=left] ._ ._s ._a ul,
 ._ps_ div,
@@ -738,7 +825,8 @@ footer#main .c__ > p,
 
 #RP,
 #changelog .log .t,
-#_H_Cb {
+#_H_Cb,
+#hero_nav ul li[data-stand-alone] {
   margin-bottom: 3rem;
 }
 
@@ -780,6 +868,14 @@ footer#main .c__ > p,
   padding-top: 1.25rem;
 }
 
+#_n_ ._ ._s {
+  padding-left: 1.25rem;
+}
+
+#_n_ ._ ._s {
+  padding-right: 1.25rem;
+}
+
 #_pa {
   padding-bottom: 1.25rem;
 }
@@ -788,6 +884,7 @@ footer#main .c__ > p,
   padding: 2rem;
 }
 
+#hero[data-version=two][data-position=left] ._h_c_,
 #_bsp,
 #_psh div[class^=s] {
   padding-top: 2rem;
@@ -835,8 +932,7 @@ footer#main .c__ > p,
 #_Bx > .__q__ > ._cn_ ._g_ ._,
 [data-page=index] main#main .Anh,
 #hero[data-version=two] ._y ._x,
-#_H_Cb ._,
-#_n_ ._ ._s {
+#_H_Cb ._ {
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -857,11 +953,13 @@ footer#main .c__ > p,
 
 #about ._r ._a ._x > [class*=img],
 #hero[data-version=two][data-position=left] ._y ._x,
-#_n_[data-position=left] {
+#_n_[data-position=left],
+#hero_nav {
   height: 100vh;
 }
 
-#hero[data-version=two] ._z ._q {
+#hero[data-version=two] ._z ._q,
+#hero_nav ul li:before {
   height: 100%;
 }
 
@@ -873,6 +971,7 @@ footer#main .c__ > p,
 .demo .x_,
 [data-page=index] [data-layout-style=left] main#main .Anh,
 [data-page=index] main#main,
+#hero ._h_c_ a,
 #hero[data-version=two][data-position=left] #__h_sl ul li a,
 #hero[data-version=two][data-position=left] #__h_sl ul li,
 #_pa [class*=pa] ._oh_waves_,
@@ -880,7 +979,8 @@ footer#main .c__ > p,
 #_psh,
 .__aw__,
 #_n_[data-position=left] ._ ._s ._a ul li,
-#_n_ {
+#_n_,
+#hero_nav ul li[data-stand-alone] a {
   width: 100%;
 }
 
@@ -898,8 +998,7 @@ footer#main .c__ > p,
 #intro,
 main#main .Anh > div[class*=__] > .__,
 #hero[data-version=two] ._y,
-#__pg__ > .__,
-#hero_nav ._ {
+#__pg__ > .__ {
   width: 1000px;
   margin: 0 auto;
 }
@@ -908,8 +1007,7 @@ main#main .Anh > div[class*=__] > .__,
   #intro,
   main#main .Anh > div[class*=__] > .__,
   #hero[data-version=two] ._y,
-  #__pg__ > .__,
-  #hero_nav ._ {
+  #__pg__ > .__ {
     width: 100% !important;
   }
 }
@@ -977,6 +1075,7 @@ main#main .Anh > div[class*=__],
 #_n_ ._ ._a,
 #_n_ #_r_ a,
 #_n_[data-position=left] ._ ._s ._a ul,
+#hero_nav ul,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_],
 #_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] {
   display: flex;
@@ -1031,7 +1130,8 @@ main#main .Anh > div[class*=__],
 #hero[data-version=two] ._z ._q,
 #_pa [class*=pa] ._,
 #_n_[data-position=left] ._ ._s ._a ul,
-#_n_[data-position=left] ._ ._s ._a {
+#_n_[data-position=left] ._ ._s ._a,
+#hero_nav ul {
   flex-direction: column;
 }
 
@@ -1069,7 +1169,6 @@ main#main .Anh > div[class*=__],
 
 /** Box Shadow */
 
-#about ._r ._a .c,
 #RP .__i__ .c_ > ._xo,
 #RP .__i__ ._img_,
 #faq #faqContent .i,
@@ -1081,19 +1180,21 @@ main#main .Anh > div[class*=__],
 #_Bx .__i__ .c_ > ._xo,
 #_Bx .__i__ ._img_,
 #_pa [class*=pa],
-#_bsp > div[class*=_] > * .q > div,
 #_psh div[class^=s] > .a,
-#_psh.show div[class^=s],
-#_n_ ._ ._s,
-#_n_[data-position=left] {
+#_psh.show div[class^=s] {
   box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
   -webkit-box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
 }
 
+#hero ._h_c_ a,
+#hero_nav ul li[data-stand-alone] a {
+  box-shadow: 0 12px 35px 0 rgba(31, 119, 255, 0.2);
+}
+
 #__l__ ._ti ._a a,
-[data-theme=light] main#main .Anh > div[class*=__] {
-  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.15);
+[data-page=index] [data-theme=light] main#main .Anh > div[class*=__] {
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.1);
 }
 
 #about #s ._s [class*=y_],
@@ -1121,9 +1222,11 @@ main#main .Anh > div[class*=__],
 #tm_ ._i,
 #changelog ul li[data-changelog^=_]:before,
 #changelog .log .t a,
+[data-blog=single] ._io_ ._ps_ a,
 [data-blog=single] ._io_ ._ps_ .block,
 [data-blog=single] ._io_ ._ps_ code:not([class*=language]),
 main#main .Anh > div[class*=__],
+#hero ._h_c_ a,
 #_pa [class*=pa],
 #_bsp > div[class*=_] > * .q > div,
 #_psh ul li a,
@@ -1131,7 +1234,9 @@ main#main .Anh > div[class*=__],
 pre[class*=language] span.code-filename,
 pre[class*=language][data-line-numbers=false],
 #_bt_ ul li a,
-#_n_ ._ ._s {
+#_n_ ._ ._s,
+#hero_nav ul li:before,
+#hero_nav ul li[data-stand-alone] a {
   border-radius: 0.2rem;
 }
 
@@ -1153,12 +1258,13 @@ pre[class*=language][data-line-numbers=false],
 #_Bx .__i__ .c_ > ._xo,
 #_Bx .__i__ ._img_,
 pre[class*=language] {
-  border-radius: 0.4rem;
+  border-radius: 0.35rem;
 }
 
 #tm_ ._i > img,
 #__l__ ._ti ._a a,
 [data-blog=single] ._io_ ._m_ > ._ad_ img,
+#hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_],
 #_pa [class*=pa] ._ .a img {
   border-radius: 50%;
 }
@@ -1195,13 +1301,18 @@ ul,
 #_psh ul,
 #__pg__ > .__ .pagination,
 #_n_ ._ ._a ul,
-#hero_nav ._ ._a ul,
+#hero_nav ul,
 #__h_sl ._s ul {
   list-style: none;
 }
 
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote cite,
-#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span.name {
+#hero[data-version=two][data-position=left] ._h_c_,
+#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span.name,
+#hero_nav ul li a,
+#hero[data-position=left] #hero_nav.slided,
+#hero[data-position=left] #hero_nav,
+#hero[data-position=left] #hero_nav_toggler {
   display: block;
 }
 
@@ -1213,6 +1324,7 @@ ul,
 #changelog .log .t a,
 .featureTheme .single .featureText > div,
 #__l__ ._ti ._a a,
+#hero ._h_c_ a,
 #hero[data-version=two][data-position=left] #__h_sl ul li a span,
 #hero[data-version=two][data-position=left] #__h_sl ul li a .ic,
 #hero[data-version=two] .u ._i h2 #typed .laravelicon svg,
@@ -1220,8 +1332,9 @@ ul,
 #_psh div[class^=s] > .a,
 #_bt_ ul li,
 #_n_ ._ ._a ul li,
+#_n_[data-position=left] ._ ._s ._a ul li a i,
 #_n_[data-position=left] ._ ._s ._a ul li a,
-#hero_nav ._ ._a ul li,
+#hero_nav ul li[data-stand-alone] a,
 #__h_sl ._s ul li a,
 #__h_sl ._s ul li {
   display: inline-block;
@@ -1240,7 +1353,9 @@ ul,
 #__l__ ._ti ._a- a:last-child:hover,
 #__l__ ._ti ._a- a:first-child,
 ::selection,
-#_psh div[class^=s] > .a {
+#hero ._h_c_ a,
+#_psh div[class^=s] > .a,
+#hero_nav ul li[data-stand-alone] a {
   background: #1f77ff;
   color: #f7f7f7;
 }
@@ -1250,58 +1365,10 @@ ul,
   color: #f7f7f7;
 }
 
-#__l__ ._ti ._d,
-#_Bx .__i__ .c_ > ._xo ._t_ + .__,
-#_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
-footer#main .c__ a,
-footer#main .c__ > p,
-#_bsp > div[class*=_] > * .q > div a {
-  color: #686868;
-}
-
-#RP .__i__ .c_ ._m_ .__c,
-#RP .__i__ .c_ > ._xo ._t_ a,
-[data-blog=single] ._io_ ._m_ > .__c,
-[data-blog=single] ._io_ ._t > *,
-[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
-#_Bx .__i__ .c_ ._m_ .__c,
-#_Bx .__i__ .c_ > ._xo ._t_ a,
-#hero[data-version=two][data-position=left] #__h_sl ul li a,
-#_psh ul li a,
-#_n_ #_r_ ._z + * {
-  color: #313131;
-}
-
-#about ._r ._a ._x #back a,
-#__l__ ._ti ._a a,
-#__l__ ._ti ._a- a:last-child,
-#__l__ ._ti ._a- a:first-child:hover,
-#_bsp > div[class*=_] > * .q > div:hover .ic,
-#_bsp > div[class*=_] > * .q > div:hover h3,
-#_bsp > div[class*=_] > * .q > div:hover h4,
-#_bsp > div[class*=_] > * .q > div:hover h5,
-#_bsp > div[class*=_] > * .q > div:hover h6,
-#_bt_ ul li a,
-#_n_ ._ ._a ul li a i,
-#_n_ ._ ._a ul .you_are_with_me a,
-#hero_nav ._ ._a ul li a i,
-#hero_nav ._ ._a ul .you_are_with_me a,
-btn.anhoi-btn,
-a.anhoi-btn,
-#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
-#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
-#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child {
-  color: #1f77ff;
-}
-
 #faq #faqContent .i[data-faq=expand],
 #__l__ ._ti ._a- a:last-child,
 #__l__ ._ti ._a- a:first-child {
   border: 2px solid #1f77ff;
-}
-
-#_bsp > div[class*=_] > * .q > div {
-  border: 1px solid transparent;
 }
 
 #_bsp > div[class*=_] > * .q > div:hover {
@@ -1315,6 +1382,7 @@ a.anhoi-btn,
 .material-icons,
 #tm_ ._i .n svg,
 #__l__ ._ti ._a- a i,
+[data-blog=single] ._io_ ._ps_ a[class*=__]:after,
 [data-blog=single] ._io_ ._m_ > .__c ._ic svg,
 footer#main .c__ > p .laravel {
   vertical-align: middle;
@@ -1338,12 +1406,17 @@ pre[class*=language][data-color*=light] {
 #_Bx .__i__ .c_ > ._xo,
 [data-theme=light] main#main .Anh > div[class*=__],
 #_psh.show div[class^=s],
-#_n_ ._ ._s {
+#_n_ ._ ._s,
+#hero_nav {
   background: #fff;
 }
 
 #_bt_ ul li a {
   background: #dddfff;
+}
+
+#hero_nav ul li:before {
+  background: #1f77ff;
 }
 
 [data-blog=single] ._io_ ._ps_ .block p,
@@ -1390,9 +1463,11 @@ Why #why,
 [data-blog=single] ._io_ ._t,
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
 footer#main > div[class*=_] > div,
+#hero ._h_c_ a,
 #_pa [class*=pa] ._ .n,
 #_psh,
-#_n_[data-position=left] ._ ._s {
+#_n_[data-position=left] ._ ._s,
+#hero_nav ul li[data-stand-alone] {
   text-align: center;
 }
 
@@ -1601,7 +1676,7 @@ p {
 ._ps_ div,
 ._ps_ p {
   font-size: 18px;
-  line-height: 1.65;
+  line-height: 1.75;
 }
 
 btn.anhoi-btn i,
@@ -1626,7 +1701,7 @@ input,
 textarea {
   padding: 14px 15px;
   outline: none;
-  border-radius: 0.4rem;
+  border-radius: 0.35rem;
 }
 
 input.with-box-shadow,
@@ -1808,32 +1883,56 @@ textarea::placeholder {
   fill: #707070;
 }
 
-#hero_nav {
-  order: -1;
-  margin-top: -212px;
-  margin-bottom: 150px;
+#hero[data-position=left] #hero_nav.slided {
+  margin-left: unset;
 }
 
-#hero_nav ._ ._a ul {
+#hero_nav {
+  width: 320px;
+  margin-left: -320px;
+}
+
+#hero_nav ._ {
+  padding-right: 60px;
+}
+
+#hero_nav ._ ._a {
+  padding-top: 85px;
+}
+
+#hero_nav ul {
   /** class active */
 }
 
-#hero_nav ._ ._a ul li a {
-  color: #313131;
+#hero_nav ul .you_are_with_me:before {
+  left: 0 !important;
+}
+
+#hero_nav ul li[data-stand-alone] a {
+  padding: 0.2rem;
+}
+
+#hero_nav ul li {
+  padding-left: 60px;
+}
+
+#hero_nav ul li:before {
+  content: "";
+  width: 4px;
+  left: -6px;
+}
+
+#hero_nav ul li:hover:before {
+  left: 0 !important;
+}
+
+#hero_nav ul li a {
   text-decoration: none;
-  padding: 0.3rem 1rem;
+  line-height: 40px;
 }
 
-#hero_nav ._ ._a ul li a:hover i {
-  visibility: visible;
-  left: 3px;
-}
-
-#hero_nav ._ ._a ul li a i {
-  font-size: 15px;
-  top: 6px;
-  left: 0px;
-  visibility: hidden;
+#hero_nav ul li a i {
+  font-size: 20px;
 }
 
 #_n_ {
@@ -1858,6 +1957,7 @@ textarea::placeholder {
 
 #_n_[data-position=left] {
   width: unset;
+  border-right: 1px solid #e6e6e9;
   /** reset padding */
   padding-left: var(--reset-padding-left) !important;
   padding-right: var(--reset-padding-right) !important;
@@ -1878,7 +1978,7 @@ textarea::placeholder {
 
 #_n_[data-position=left] ._ ._s {
   padding: 0;
-  box-shadow: none !important;
+  border: none;
 }
 
 #_n_[data-position=left] ._ ._s ._a ul li a {
@@ -1915,6 +2015,10 @@ textarea::placeholder {
   font-size: 18px;
 }
 
+#_n_ ._ ._s {
+  border: 1px solid #e6e6e9;
+}
+
 #_n_ ._ ._a ul {
   /** class active */
 }
@@ -1925,16 +2029,12 @@ textarea::placeholder {
   padding: 0.3rem 1rem;
 }
 
-#_n_ ._ ._a ul li a:hover i {
-  visibility: visible;
-  left: 3px;
+#_n_ ._ ._a ul li a span {
+  font-size: 14px;
 }
 
 #_n_ ._ ._a ul li a i {
-  font-size: 15px;
-  top: 6px;
-  left: 0px;
-  visibility: hidden;
+  display: none;
 }
 
 .toastify {
@@ -2117,6 +2217,7 @@ pre[class*=language] {
   padding: 32px 24px 28px 60px;
   overflow: auto;
   font-weight: normal;
+  font-size: 16px;
   line-height: 1;
   /** Support for line numbers (pre tags) */
   transform: translateY(0);
@@ -2136,7 +2237,7 @@ pre[class*=language][data-line-numbers=false] {
 
 @media screen and (max-width: 575px) {
   pre[class*=language] {
-    font-size: 13px;
+    font-size: 14px;
     margin: 1rem -1rem;
   }
 }
@@ -2161,7 +2262,7 @@ pre[class*=language] .line-number span {
   width: 48px;
   padding-right: 10px;
   color: #797979;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 26px !important;
 }
 
@@ -2173,7 +2274,6 @@ pre[class*=language] .line-number span {
 }
 
 pre[class*=language] code {
-  font-size: 15px;
   white-space: pre;
   padding: 0 !important;
   line-height: 26px !important;
@@ -2279,7 +2379,7 @@ pre[class*=language][data-color=monokai-pro][class*=-scss] .token.property {
 }
 
 pre[class*=language][data-color=monokai-pro][class*=-javascript] {
-  color: #b5d5ff;
+  color: #dbdbdb;
 }
 
 pre[class*=language][data-color=monokai-pro][class*=-javascript] .token.keyword {
@@ -2319,9 +2419,6 @@ pre[class*=language][data-color=monokai-pro][class$=-markup] .token.punctuation 
 }
 
 pre[class*=language][data-color*=light] {
-  box-shadow: 0 2px 4px 1px rgba(49, 49, 49, 0.1);
-  -moz-box-shadow: 0 2px 4px 1px rgba(49, 49, 49, 0.1);
-  -webkit-box-shadow: 0 2px 4px 1px rgba(49, 49, 49, 0.1);
   color: #3d78c3;
 }
 
@@ -2502,7 +2599,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 
 #_psh div[class^=s] > .a {
   border-radius: 20px;
-  padding: 0.65rem 1rem;
+  padding: 0.75rem 1.5rem;
 }
 
 #_psh div[class^=s] > .a i {
@@ -2558,18 +2655,19 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 }
 
 #_bsp > div[class*=_] > * .q {
-  /** apapun headingnya akan jadi warna primary */
+  /** apapun headingnya  */
 }
 
 #_bsp > div[class*=_] > * .q > div {
   height: var(--blog-page-height);
+  border: 1px solid #dbdbfe;
 }
 
 #_bsp > div[class*=_] > * .q h3,
 #_bsp > div[class*=_] > * .q h4,
 #_bsp > div[class*=_] > * .q h5,
 #_bsp > div[class*=_] > * .q h6 {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.5;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -2577,6 +2675,10 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 
 #_bsp > div[class*=_] > * .q .ic {
   top: 22px;
+}
+
+#_bsp > div[class*=_] > * .q .ic i {
+  font-size: 20px;
 }
 
 #_bsp > div[class*=_] > *:first-of-type > .q .ic {
@@ -2613,6 +2715,10 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
   z-index: -1;
 }
 
+#hero {
+  /** contact button */
+}
+
 #hero[data-version=two] {
   background-color: #f4f4f4;
   /** Picture Area */
@@ -2621,7 +2727,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 }
 
 #hero[data-version=two] ._y ._x {
-  height: 70vh;
+  height: 75vh;
 }
 
 #hero[data-version=two] .anh_ {
@@ -2634,7 +2740,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 }
 
 #hero[data-version=two] .anh_ [class*=_] img {
-  height: 70vh;
+  height: 75vh;
   width: auto;
 }
 
@@ -2662,10 +2768,10 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 
 #hero[data-version=two] .u ._i h2 .typed-cursor:before {
   content: "";
-  height: 56px;
-  width: 2px;
+  height: 62px;
+  width: 1.75px;
   left: 4px;
-  top: 5px;
+  top: 2px;
   background-color: #1f77ff;
 }
 
@@ -2684,6 +2790,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 #hero[data-version=two][data-position=left] {
   width: 320px;
   /** Social links for layout hero left */
+  /** Show contact button */
 }
 
 #hero[data-version=two][data-position=left] ._y {
@@ -2692,43 +2799,58 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 
 #hero[data-version=two][data-position=left] ._y ._x .u {
   padding-right: unset;
-  padding: 0 36px;
+  padding: 0 60px;
 }
 
 #hero[data-version=two][data-position=left] ._y ._x .u > [class$=r] {
-  padding-top: 120px;
+  padding-top: 140px;
   padding-left: unset;
   margin-top: unset;
+  /** hide text bio */
 }
 
 #hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 {
-  margin-bottom: 0;
+  margin-bottom: 0.3rem;
   font-size: 22px;
 }
 
 #hero[data-version=two][data-position=left] ._y ._x > [class$=_] {
   right: unset;
   bottom: unset;
-  top: 36px;
-  left: 36px;
+  top: 72px;
+  left: 60px;
 }
 
 #hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_] {
-  width: 82px;
-  height: 82px;
-  border-radius: 10px;
-  border: 4px solid #fff;
+  width: 72px;
+  height: 72px;
+  border: 3px solid #fff;
 }
 
 #hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_] img {
-  width: 100px;
+  width: 82px;
   height: auto;
-  margin-left: -11px;
-  margin-top: -3px;
+  margin-left: -7px;
+  margin-top: -2px;
+}
+
+#hero[data-version=two][data-position=left] #__h_sl ._s ul li a .ic svg {
+  /** mengantisipasi agar icon tidak gede saat window ke loaf 
+   * (bug ini ketemu hanya di chrome window) */
 }
 
 #hero[data-version=two][data-position=left] #__h_sl ul li a {
   margin-right: unset;
+  height: 40px;
+}
+
+#hero ._h_c_ a {
+  padding-top: 0;
+  padding: 0.65rem;
+}
+
+#hero ._h_c_ a i {
+  font-size: 20px;
 }
 
 /** Style for layout left */
@@ -2736,11 +2858,12 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 [data-page=index] {
   /** follow background image */
   background-color: #f4f4f4;
+  /** set box shadow only on homepage */
 }
 
 [data-page=index] main#main {
   min-height: 100%;
-  top: 70vh;
+  top: 75vh;
 }
 
 [data-page=index] [data-layout-style=left] main#main .Anh {
@@ -2946,9 +3069,14 @@ footer#main .c__ > p i {
 }
 
 [data-blog=single] ._io_ ._m_ > ._ad_ ._pic {
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   margin-right: 0.5rem;
+}
+
+[data-blog=single] ._io_ ._m_ > ._ad_ img {
+  border: 2px solid #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 [data-blog=single] ._io_ ._m_ > ._ad_ > ._a {
@@ -2984,12 +3112,13 @@ footer#main .c__ > p i {
 
 [data-blog=single] ._io_ ._ps_ {
   /** Block custom */
+  /** Hyper links */
 }
 
 [data-blog=single] ._io_ ._ps_ code:not([class*=language]) {
   background: #eaeaea;
   color: #5e596f;
-  font-size: 15px;
+  font-size: 16px;
   padding: 0.2rem 0.3rem;
 }
 
@@ -3042,6 +3171,23 @@ footer#main .c__ > p i {
   font-size: 22px;
   line-height: 1.75;
   font-style: italic;
+}
+
+[data-blog=single] ._io_ ._ps_ a {
+  border-bottom: 1px solid #d7e0fc;
+  background-color: #f5f2ff;
+  padding: 0 0.3rem;
+}
+
+[data-blog=single] ._io_ ._ps_ a:hover {
+  border-bottom: 1px solid #1f77ff;
+  background-color: #ece6ff;
+}
+
+[data-blog=single] ._io_ ._ps_ a[class*=__]:after {
+  font-family: "Material Icons";
+  content: "open_in_new";
+  font-size: 18px;
 }
 
 /** Entry point style for theme post */
@@ -3387,7 +3533,7 @@ footer#main .c__ > p i {
 }
 
 #dln .b > * {
-  border-radius: 1.2rem;
+  border-radius: 1.05rem;
   top: 5.25rem;
   right: -1rem;
 }
@@ -3667,34 +3813,38 @@ Why #why .head h5 {
   height: 92%;
   width: 58%;
   display: inline-block;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow-y: auto;
+  border: 1px solid #70a8ff;
 }
 
 #about ._r ._a .c::-webkit-scrollbar-button {
   display: inline-block;
 }
 
-#about ._r ._a .c .top,
-#about ._r ._a .c .bottom {
+#about ._r ._a .c .__xt,
+#about ._r ._a .c .__xb {
   z-index: 1;
-  width: 58%;
+  width: 58% !important;
   height: 80px;
   padding-right: 30px;
+  border: 1px solid #70a8ff;
 }
 
-#about ._r ._a .c .top {
+#about ._r ._a .c .__xt {
   left: 40%;
   background: linear-gradient(180deg, #ffffff, rgba(255, 255, 255, 0.99), transparent);
   top: 4%;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
+  border-bottom: none;
 }
 
-#about ._r ._a .c .bottom {
+#about ._r ._a .c .__xb {
   left: 40%;
   background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.99), #ffffff);
   bottom: 4%;
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  border-top: none;
 }
 
 #about ._r ._a .c ._ > .rx {

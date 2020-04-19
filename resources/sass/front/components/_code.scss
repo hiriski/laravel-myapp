@@ -15,6 +15,7 @@ pre[class*=language] {
     padding: 32px 24px 28px 60px;
     overflow: auto;
     font-weight: normal;
+    font-size: 16px;
     line-height: 1;
     /** Support for line numbers (pre tags) */
     -webkit-transform: translateY(0);
@@ -22,7 +23,7 @@ pre[class*=language] {
     transform: translateY(0);
     
     @media #{$mobile-md-width} {
-        font-size: 13px;
+        font-size: 14px;
         margin: 1rem -1rem;
     }
 
@@ -45,7 +46,7 @@ pre[class*=language] {
             width: 48px;
             padding-right: 10px;
             color: #797979;
-            font-size: 14px;
+            font-size: 16px;
             line-height: $code-line-height !important;
             @media #{$mobile-md-width} {
                 font-size: 14px;
@@ -55,7 +56,6 @@ pre[class*=language] {
     }
     code {
         @extend %code-font;
-        font-size: $code-font-size;
         white-space: pre;
         padding:0 !important;
         line-height: $code-line-height !important;
@@ -166,7 +166,7 @@ pre[class*=language] {
         }
 
         &[class*="-javascript"] {
-            color: #b5d5ff;
+            color: #dbdbdb;
             .token {
                 &.keyword {
                     color: #20baff;
@@ -207,7 +207,6 @@ pre[class*=language] {
     /** light theme */
     &[data-color*="light"] {
         @extend %set-background-light;
-        @include box-shadow(0, 2px, 4px, 1px, rgba($main-color, 0.1));
         ::selection {
             background-color: rgb(219, 219, 219);
         }
