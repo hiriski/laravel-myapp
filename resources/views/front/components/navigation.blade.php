@@ -1,4 +1,4 @@
-<div id="_n_" data-has-set-width="false">
+<div id="_n_" data-has-set-width="false" data-is-show-on-mobile="false">
     <div class="_">
         <div class="_s">
             <div class="_a">
@@ -45,4 +45,9 @@
             </div>
         </div>
     </div>
+</div>
+
+{{-- Toggler for Mobile Only --}}
+<div id="__toggler_mobile__" data-is-mobile="false" data-is-show="false">
+    <a href="#"><i class="material-icons">arrow_forward</i></a>
 </div>

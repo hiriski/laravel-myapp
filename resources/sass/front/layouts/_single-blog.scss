@@ -121,7 +121,7 @@
                 @extend %margin-top;
                 @extend %margin-bottom;
                 img {
-                    @extend %border-radius;
+                    @extend %border-thin-radius;
                     @extend %image-box-shadow;
                 }
             }
@@ -132,8 +132,8 @@
             code:not([class*="language"]) {
                 @extend %code-font;
                 @extend %border-thin-radius;
-                background: #eaeaea;
-                color: #5e596f;
+                background: #cfe8ff;
+                color: #2052cb;
                 font-size: 16px;
                 padding: .2rem .3rem;
             }
@@ -143,6 +143,7 @@
                 padding: 20px 28px;
                 p {
                     @extend %margin-bottom-sm;
+                    line-height: 1.5;
                 }
                 p,
                 span {
@@ -216,20 +217,18 @@
             
             /** Hyper links */
             a {
-                @extend %text-decoration-none;
                 @extend %border-thin-radius;
                 @extend %primary-color;
-                border-bottom: 1px solid #d7e0fc;
                 background-color: #f5f2ff;
                 padding: 0 .3rem;
                 &:hover {
-                    border-bottom: 1px solid $primary-color;
-                    background-color: #ece6ff;
+                    @extend %background-primary-color-light;
                 }
                 &[class*=__] {
                     @extend %relative;
                     &:after {
                         @extend %vertical-align-middle;
+                        @extend %text-decoration-none;
                         font-family: "Material Icons";
                         content: "open_in_new";
                         font-size: 18px;

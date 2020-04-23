@@ -31,6 +31,7 @@
         @extend %top-left;
         @extend %full-height;
         width: unset;
+        @extend %set-background-white;
 
         border-right: 1px solid #e6e6e9;
         
@@ -168,6 +169,21 @@
                     }
                 }
             }
+        }
+    }
+
+    + #__toggler_mobile__ {
+        z-index: 100;
+        @extend %display-none;
+        @extend %fixed;
+        @extend %bottom-left;
+        a {
+            @extend %background-primary-color-light;
+            @extend %text-decoration-none;
+            @extend %inline-block;
+            @extend %round;
+            width: 40px;
+            height: 40px;
         }
     }
 }

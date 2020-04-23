@@ -162,7 +162,10 @@ window.addEventListener("DOMContentLoaded", function () {
 
 var navigationNotFresh = function navigationNotFresh() {
   var nav = document.querySelector('#_n_');
-  nav.dataset.windowHasScroll = "true";
+
+  if (nav) {
+    nav.dataset.windowHasScroll = "true";
+  }
 };
 
 window.addEventListener("scroll", function () {
@@ -258,6 +261,70 @@ var AnhOi = document.getElementById('AnhOi');
 var footer = document.querySelector("footer#main");
 var hero = document.getElementById('hero');
 var overflay = document.querySelector('.___g--dark___');
+
+
+/***/ }),
+
+/***/ "./resources/js/front/media-queries.js":
+/*!*********************************************!*\
+  !*** ./resources/js/front/media-queries.js ***!
+  \*********************************************/
+/*! exports provided: breakpoint, isTablet, isMobileLg, isMobile */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "breakpoint", function() { return breakpoint; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isTablet", function() { return isTablet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isMobileLg", function() { return isMobileLg; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isMobile", function() { return isMobile; });
+var breakpoint = {
+  desktop: 1366,
+  laptop: 1000,
+  tablet: 768,
+  mobile_lg: 640,
+  mobile: 480,
+  mobile_sm: 360
+};
+/** Media Screen Width */
+
+var isMediaWidth = function isMediaWidth(breakpointWidth) {
+  if (window.outerWidth < breakpointWidth) {
+    return true;
+  }
+};
+/** Media Screen Height */
+
+
+var isMediaHeight = function isMediaHeight(breakpointHeight) {
+  if (window.outerWidth < breakpointHeight) {
+    return true;
+  }
+};
+/** functions is media queries */
+// tablet
+
+
+var isTablet = function isTablet() {
+  if (isMediaWidth(breakpoint.tablet)) {
+    return true;
+  }
+}; // mobile
+
+
+var isMobileLg = function isMobileLg() {
+  if (isMediaWidth(breakpoint.mobile_lg)) {
+    return true;
+  }
+}; // mobile
+
+
+var isMobile = function isMobile() {
+  if (isMediaWidth(breakpoint.mobile)) {
+    return true;
+  }
+};
+
 
 
 /***/ }),
@@ -468,6 +535,8 @@ if (Object(_routes_function__WEBPACK_IMPORTED_MODULE_2__["isSingleBlog"])()) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _routes_function__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../routes_function */ "./resources/js/front/routes_function.js");
 /* harmony import */ var _global_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../global_element */ "./resources/js/front/global_element.js");
+/* harmony import */ var _media_queries__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../media-queries */ "./resources/js/front/media-queries.js");
+
 
 
 /** Typed */
@@ -502,7 +571,7 @@ if (Object(_routes_function__WEBPACK_IMPORTED_MODULE_0__["isIndex"])()) {
     if (userScroll >= 200) {
       setLayout('left');
 
-      if (userScroll > 440) {
+      if (userScroll > 500) {
         showHeroNav('slided');
       } else {
         showHeroNav('none');
@@ -546,6 +615,35 @@ var showHeroNav = function showHeroNav(classname) {
     heroNavElem.className = classname;
   }
 };
+/** Hero for Mobile */
+
+
+if (Object(_routes_function__WEBPACK_IMPORTED_MODULE_0__["isIndex"])() && Object(_media_queries__WEBPACK_IMPORTED_MODULE_2__["isMobileLg"])()) {
+  var centeringHeroImage = function centeringHeroImage() {
+    var windowWidth = window.outerWidth;
+    var heroImage = document.querySelector('#hero .anh_ ._h img');
+    var imageWidth = heroImage.clientWidth;
+    /** kirim variable window width, image dan image width */
+
+    setPositionImage(windowWidth, heroImage, imageWidth);
+  };
+
+  var setPositionImage = function setPositionImage(width, img, imgWidth) {
+    if (width < imgWidth) {
+      var marginSize = (imgWidth - width) / 2;
+      img.style.marginLeft = "-".concat(marginSize, "px");
+    } else {
+      var _marginSize = (width - imgWidth) / 2;
+
+      img.style.marginLeft = _marginSize + "px";
+      console.log('Masuk false');
+    }
+  };
+
+  window.addEventListener('DOMContentLoaded', function () {
+    centeringHeroImage();
+  });
+}
 
 /***/ }),
 

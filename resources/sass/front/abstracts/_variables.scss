@@ -1,3 +1,19 @@
+/** Media Queries */
+$breakpoint-desktop     : 1366px;
+$breakpoint-laptop      : 1200px;
+$breakpoint-tablet      : 768px;
+$breakpoint-mobile-lg   : 640px;
+$breakpoint-mobile      : 480px;
+$breakpoint-mobile-sm   : 360px;
+
+$desktop               : '(max-width: #{$breakpoint-desktop})';
+$laptop                : '(max-width: #{$breakpoint-laptop})';
+$tablet                : '(max-width: #{$breakpoint-tablet})';
+$mobile-lg             : '(max-width: #{$breakpoint-mobile-lg})';
+$mobile                : '(max-width: #{$breakpoint-mobile})';
+$mobile-sm             : '(max-width: #{$breakpoint-mobile-sm})';
+
+
 // Width
 $main-width          : 1120px;
 $one-k-width         : 1000px;
@@ -7,10 +23,6 @@ $index-center        : 80%;
 $full-width          : 100%;
 
 $index-post-width    : 500px;
-
-$left-width          : 25%;
-$mini-left           : 85px;
-$xleft-width         : 33%;
 
 // Height
 $header-height      : 72px;
@@ -25,8 +37,7 @@ $code-font          : 'Courier Prime', monospace;
 $reading-font-size  : 18px;
 $main-font-size     : 16px;
 $code-font-size     : 15px;
-$small              : 15px;
-$xsmall             : 14px;
+$small             : 14px;
 
 $line-height        : 1.65rem; 
 $code-line-height   : 26px;
@@ -41,23 +52,7 @@ $logo               : 30px;
 $logo-small         : 24px;
 
 
-// Responsive Variables
-$laptop-lg    : 1440px;
-$laptop-md    : 1280px;
-$laptop-sm    : 1000px;
-$tablet       : 768px;
-$mobile-lg    : 767px;
-$mobile-md    : 575px;
-$mobile-sm    : 480px;
-
-$laptop-lg-width  : 'screen and (max-width: #{$laptop-lg})';
-$laptop-md-width  : 'screen and (max-width: #{$laptop-md})';
-$laptop-sm-width  : 'screen and (max-width: #{$laptop-sm})';
-$tablet-width     : 'screen and (max-width: #{$tablet})';
-$mobile-lg-width  : 'screen and (max-width: #{$mobile-lg})';
-$mobile-md-width  : 'screen and (max-width: #{$mobile-md})';
-$mobile-sm-width  : 'screen and (max-width: #{$mobile-sm})';
-
-
 $hero-height      : 75vh;
 $left-width       : 320px;
+$mini-left-width  : 85px;
+$mini-left-width-mobile : 54px;

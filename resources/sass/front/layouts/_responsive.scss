@@ -1,0 +1,459 @@
+/** Global Responsive */
+
+@media #{$laptop} {
+    $left-width : 250px;
+    $left-space : 30px;
+    /** About */
+    #about ._r ._a .c ._ > .rx {
+        padding: 42px 40px;
+    }
+    #_Bx > .__q__ {
+        padding: 0 10px;
+    }
+
+    /** Hero */
+    #hero[data-version=two] {
+        &[data-position=left] {
+            width: $left-width;
+            ._y {
+                ._x {
+                    .u {
+                        padding: 0 $left-space;
+                    }
+                    > [class$=_] {
+                        left: $left-space;
+                    }
+                }
+            }
+        }
+    }
+    #hero_nav {
+        width: $left-width;
+        ul {
+            li {
+                padding-left: $left-space;
+            }
+        }
+        ._ {
+            padding-right: $left-space;
+        }
+    }
+
+    [data-page=index] {
+        [data-layout-style=left] {
+            main#main {
+                .Anh {
+                    padding-left: $left-width;
+                }
+            }
+        }
+    }
+}
+
+
+@media #{$tablet} {
+    /** toggle minilef for tablet and mobile */
+    #__toggler_mobile__ {
+        left: 1rem;
+        bottom: 1rem;
+    }
+    #_n_ {
+        &[data-is-show-on-mobile=false] {
+            display: none;
+        }
+        &[data-is-show-on-mobile=true] {
+            left: 0;
+        }
+    }
+
+    /** post share */
+    #_psh div[class^=s] {
+        width: 85%;
+        padding: 1.5rem;
+    }
+
+    [data-theme=light] {
+
+    }
+
+    /** Page Index */
+    [data-page=index] {
+        #AnhOi {
+            main#main {
+                .Anh {
+                    padding:  {
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
+            &[data-layout-style=left] {
+                main#main .Anh {
+                    padding-left: 0;
+                }
+                footer#main {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+
+
+    $hero-height: 480px;
+
+    [data-page=index] main#main {
+        top: $hero-height;
+    }
+
+    #AnhOi {
+        /** Hero style for tablet */
+        #hero {
+            &[data-version=two] {
+                height: $hero-height;
+                .u {
+                    > [class$=r] {
+                        padding-left: 1rem;
+                    }
+                }
+                ._y {
+                    ._x {
+                        height: $hero-height;
+                    }
+                }
+                .anh_ {
+                    [class*=_] {
+                        img {
+                            height: $hero-height;
+                        }
+                    }
+                }
+                &[data-position=left] {
+                    left: -$left-width;
+                    /** Hero Nav */
+                    #hero_nav {
+                        &.slided {
+                            margin-left: -$left-width;
+                        }
+                    }
+                }
+            }
+        }
+
+        /** blog index */
+        #_Bx > .__q__ {
+            padding: 0 0;
+            .__i__ {
+                .c_ > ._xo {
+                    padding: 20px 25px 15px 25px;
+                    ._t_ h2 {
+                        font-size: 20px;
+                    }
+                }
+                ._img_ {
+                    height: 154px;
+                }
+            }
+        }
+    }
+
+    /** Blog Single */
+    [data-page=blog-show] {
+        main#main .Anh > .__o__ {
+            padding-top: 0;
+            ._io_ ._xo > .__ {
+                margin-top: 0;
+            }
+        }
+        [data-blog=single] {
+        }
+    }
+
+    /** Single blog */
+    [data-blog=single] {
+        ._io_ {
+            ._t {
+                margin: 0 0;
+                padding: {
+                    left: 15px;
+                    right: 15px;
+                }
+                h1, h2 {
+                    font-size: 30px;
+                }
+            }
+            ._xo {
+                > {
+                    .__ {
+                        img {
+                            box-shadow: none;
+                            border-radius: 0;
+                        }
+                    }
+                }
+                > ._m_ {
+                    align-items: center;
+                    [class*=ad] {
+                        > ._a > *:first-child {
+                            font-size: 14px;
+                        }
+                        ._pic + [class^=_] {
+                            > *:last-child {
+                                font-size: 14px;
+                            }
+                            > :first-child:before {
+                                width: 20px;
+                            }
+                            > *:first-child {
+                                padding-right: 28px;
+                            }
+                        }
+                    }
+                    > .__c {
+                        margin-left: 20px;
+                        font-size: 14px;
+                    }
+                }
+            }
+            ._ps_ {
+                /** post heading */
+                h2 {
+                    font-size: 30px;
+                }
+                h3 {
+                    font-size: 28px;
+                }
+                h4 {
+                    font-size: 26px;
+                }
+                h5 {
+                    font-size: 22px;
+                }
+                h6 {
+                    font-size: 20px;
+                }
+                h1, h2, h3, h4, h5, h6 {
+                    line-height: 1.35;
+                }
+
+
+                /** blog font */
+                ._ps_ p {
+                    font-size: 17px;
+                }
+                padding: {
+                    left: 15px;
+                    right: 15px;
+                }
+                .block {
+                    padding: 14px 20px;
+                }
+                ul, ol {
+                    font-size: 16px;
+                }
+                code:not([class*=language]) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    /** Main Navigation */
+    #_n_ {
+        &[data-position=left] {
+            left: -100px;
+        }
+    }
+
+
+    /** Social links (hero) */
+    #__h_sl {
+        margin-top: 2rem;
+    }
+
+
+    /** About page */
+    /** About */
+    #about {
+        $image-area-height: 460px;
+        $c-padding-size: 20px;
+        ._r {
+            ._a {
+                .c {
+                    position: relative;
+                    left: 0;
+                    width: 100%;
+                    padding: $c-padding-size;
+                    margin-top: $image-area-height - $c-padding-size;
+                    border: none;
+                    > [class^="__x"] {
+                        display: none;
+                    }
+                    h1 {
+                        font-size: 26px;
+                    }
+                }
+                ._x {
+                    width: 100%;
+                    height: $image-area-height;
+                    bottom: unset;
+                    top: 0;
+                    > [class*=img] {
+                        width: 100%;
+                        height: $image-area-height;
+                        bottom: unset;
+                        top: 0;
+                    }
+                }
+            }
+        }
+
+        /** about social links */
+        #s.top {
+            bottom: 2rem;
+        }
+    }
+
+
+    /** pre and code */
+    pre[class*=language] {
+        padding: 20px 20px 20px 52px;
+        font-size: 13px;
+
+        /** Line numbers */
+        .line-number {
+            margin-left: -52px;
+            padding-top: 20px;
+            span {
+                font-size: 13px;
+            }
+        }
+
+        &[data-size=wide] {
+            margin: 1rem 0;
+        }
+    }
+
+    /** Blog single pager */
+    #_bsp {
+        [class*=_] {
+            flex-direction: column;
+            .l {
+                margin-bottom: 1rem;
+            }
+            [class^=q] {
+                padding: {
+                    left: 15px !important;
+                    right: 15px !important;
+                }
+            }
+        }
+    }
+
+    /** related post */
+    #RP .__i__ .in_ {
+        padding: {
+            left: 15px !important;
+            right: 15px !important;
+        }
+    }
+
+
+}
+
+
+/** Mobile lg 640px; */
+@media #{$mobile-lg} {
+    $hero-height: 520px;
+
+    [data-page=index] main#main {
+        top: $hero-height;
+    }
+    #AnhOi {
+        /** Hero style for tablet */
+        #hero {
+            z-index: -1 !important;
+            &[data-version=two] {
+                height: $hero-height;
+                ._y {
+                    ._x {
+                        height: $hero-height;
+                    }
+                }
+                .anh_ {
+                    width: 100%;
+                    [class*=_] {
+                        img {
+                            height: $hero-height;
+                        }
+                    }
+                    &:before {
+                        content: "";
+                        background-color: rgba($white, 0.9);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                .u {
+                    padding-right: 0;
+                    ._i h2 {
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            /** when position to left */
+            &[data-position=left] {
+                .anh_ {
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    ._ps_ div, ._ps_ p {
+        font-size: 16px;
+    }
+}
+
+
+
+@media #{$mobile} {
+    /** post */
+    [data-blog=single] {
+        ._io_ {
+            ._t {
+                margin: 0 0;
+                h1, h2 {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+    
+    /** post share */
+    #_psh div[class^=s] {
+        ul {
+            li {
+                a {
+                    justify-content: flex-start;
+                }
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    /** post index and related post width */
+    #RP .__i__, #_Bx .__i__, #_bsp > div[class*=_] > * {
+        width: 100%;
+    }
+}
+
+@media #{mobile-sm} {
+    
+}

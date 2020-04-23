@@ -11,7 +11,7 @@ pre[class*=language] {
     }
 
     @extend %relative;
-    @extend %border-radius;
+    @extend %border-thin-radius;
     padding: 32px 24px 28px 60px;
     overflow: auto;
     font-weight: normal;
@@ -22,11 +22,6 @@ pre[class*=language] {
     -moz-transform: translateY(0);
     transform: translateY(0);
     
-    @media #{$mobile-md-width} {
-        font-size: 14px;
-        margin: 1rem -1rem;
-    }
-
     /** Line Numbers */
     .line-number {
         @extend %code-font;
@@ -48,10 +43,6 @@ pre[class*=language] {
             color: #797979;
             font-size: 16px;
             line-height: $code-line-height !important;
-            @media #{$mobile-md-width} {
-                font-size: 14px;
-                width: 36px;
-            }
         }
     }
     code {
@@ -83,6 +74,10 @@ pre[class*=language] {
             background: #dadcf9;
             color: #525288;
         }
+        ::selection {
+            background-color: rgba($white, 0.1);
+            color: inherit;
+        }
     }
 
 
@@ -93,6 +88,7 @@ pre[class*=language] {
         color: #dadada;
         ::selection {
             background-color: rgb(15, 15, 15);
+            color: inherit;
         }
         .line-number span {
             background-color: $monokai-pro-background-color;

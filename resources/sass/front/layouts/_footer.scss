@@ -1,26 +1,29 @@
 footer#main {
+    $icon-size : 18px;
     @extend %transition;
+    @extend %set-background-white;
     > div[class*="_"] {
-        padding: 40px 0;
+        padding: 60px 0;
         > div {
             @extend %text-center;
         }
     }
     .c__ {
         > p {
-            @extend %secondary-text;
-            @extend %margin-bottom-xs;
+            @extend %muted;
+            @extend %small;
+            @extend %reset;
             .laravel {
                 @extend %reset-line-height;
                 @extend %vertical-align-middle;
                 svg {
-                    width: 20px;
-                    height: 20px;
+                    width: $icon-size;
+                    height: $icon-size;
                 }
             }
             i {
                 color: rgb(255, 44, 79);
-                font-size: 20px;
+                font-size: $icon-size;
             }
             &:first-child {
                 > span {

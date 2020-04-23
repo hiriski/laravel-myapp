@@ -48,11 +48,18 @@ $left-section-background-color: #f4f4f4;
                     left: 2rem;
                     z-index: 1;
                     a {
+                        @extend %border-thin-radius;
+                        padding: .4rem .75rem;
+                        &:hover,
+                        &:active {
+                            @extend %primary-color;
+                            @extend %set-background-white;
+                        }
                         i {
                             font-size: 22px;
                             @extend %margin-right-sm;
                         }
-                        @extend %primary-color;
+                        @extend %muted;
                         @extend %text-decoration-none;
                     }
                 }
@@ -99,9 +106,14 @@ $left-section-background-color: #f4f4f4;
                 border: 1px solid #70a8ff;
                 &::-webkit-scrollbar-button {
                     display: inline-block;
+                    height: 5px;
                 }
                 &::-webkit-scrollbar-track {
                     @extend %set-background-white;
+                }
+                h1 {
+                    font-size: 30px;
+                    @extend %reset-line-height;
                 }
                 .__xt, .__xb {
                     @extend %overflow-hidden;

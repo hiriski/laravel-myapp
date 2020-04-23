@@ -1,5 +1,6 @@
 import { isIndex } from '../routes_function';
 import { AnhOi, hero } from '../global_element';
+import { breakpoint, isTablet, isMobileLg } from '../media-queries';
 
 /** Typed */
 if(isIndex()) {
@@ -31,7 +32,7 @@ if(isIndex()) {
         let heroHeight = document.querySelector('#hero[data-version=two] ._z ._q');
         if(userScroll >= 200) {
             setLayout('left');
-            if(userScroll > 440) {
+            if(userScroll > 500) {
                 showHeroNav('slided');
             }
             else {
@@ -78,4 +79,35 @@ const showHeroNav = (classname) => {
     if(heroNavElem) {
         heroNavElem.className = classname;
     }
+}
+
+
+
+
+/** Hero for Mobile */
+if((isIndex() && isMobileLg())) {
+    const centeringHeroImage = () => {
+        let windowWidth = window.outerWidth;
+        let heroImage = document.querySelector('#hero .anh_ ._h img');
+        let imageWidth = heroImage.clientWidth;
+
+        /** kirim variable window width, image dan image width */
+        setPositionImage(windowWidth, heroImage, imageWidth);
+    }
+
+    const setPositionImage = (width, img, imgWidth) => {
+        if(width < imgWidth) {
+            let marginSize = (imgWidth - width) / 2;
+            img.style.marginLeft = `-${marginSize}px`;
+        }
+        else {
+            let marginSize = (width - imgWidth) / 2;
+            img.style.marginLeft = marginSize + "px";
+            console.log('Masuk false')
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        centeringHeroImage();
+    });
 }

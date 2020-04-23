@@ -64,8 +64,9 @@
             @extend %cursor-pointer;
             @extend %inline-block;
             @extend %box-shadow;
+            @extend %small;
             border-radius: 20px;
-            padding: .75rem 1.5rem;
+            padding: .65rem 1.35rem;
             &:hover {
                 i {
                     @extend %margin-right-xs;
@@ -87,6 +88,14 @@
         @extend %display-none;
         li {
             @extend %inline-block;
+            [data-target=linkedin] {
+                .ic {
+                    svg {
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
             a {
                 @extend %flex;
                 @extend %justify-content-center;

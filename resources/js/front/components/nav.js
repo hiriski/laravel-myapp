@@ -12,7 +12,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
 const navigationNotFresh = () => {
     let nav     = document.querySelector('#_n_');
-    nav.dataset.windowHasScroll = "true";
+    if(nav) {
+        nav.dataset.windowHasScroll = "true";
+    }
 }
 
 
