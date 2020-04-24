@@ -48,6 +48,9 @@ class DatabaseSeeder extends Seeder {
             ThemeStatusTableSeeder::class,
             ThemeTagsTableSeeder::class,
 
+            /** Contact */
+            ContactTopicsTableSeeder::class,
+
         ]);
 
         /** Blog Faker */
