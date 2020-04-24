@@ -30,7 +30,7 @@
                         </a>
                     </li>
                     <li data-route-target="contact">
-                        <a href="">
+                        <a href="{{ route('contact.index') }}">
                             <i class="material-icons">send</i>
                             <span>Contact</span>
                         </a>

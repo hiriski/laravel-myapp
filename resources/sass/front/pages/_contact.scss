@@ -1,0 +1,201 @@
+[data-page=contact-index] {
+    #contact {
+        width: 540px;
+        margin: auto;
+        form {
+            @extend %padding-top;
+        }
+        ._f {
+            @extend %relative;
+            @extend %margin-bottom;
+            &.tp {
+                @extend %flex;
+                label {
+                    @extend %muted;
+                }
+                select {
+                    @extend %margin-left-sm;
+                    @extend %primary-color;
+                    border: none;
+                    width: 250px;
+                    font-size: 18px;
+                }
+            }
+            input {
+                @extend %reset-line-height;
+            }
+            input, textarea {
+                @extend %border-thin-radius;
+                @extend %box-shadow;
+                border: 2px solid $light;
+                font-size: 18px;
+                &[class*=invalid] {
+                    border: 2px solid $error;
+                }
+            }
+            button {
+                @extend %border-default-primary;
+                @extend %set-background-white;
+                @extend %border-thin-radius;
+                @extend %primary-color;
+                @extend %transition;
+                padding: .5rem 1rem;
+                font-size: 16px;
+                &:hover, &:focus {
+                    @extend %background-primary-color-light;
+                    i {
+                        @extend %margin-left;
+                    }
+                }
+                i {
+                    @extend %transition;
+                    margin-left: 10px;
+                    font-size: 20px;
+                }
+            }
+            label:not(.topic-label) {
+                @extend %flex;
+                @extend %absolute;
+                @extend %transition;
+                color: $gray;
+                left: 1rem;
+                top: 14px;
+                span {
+                    margin-left: .3rem;
+                }
+                i {
+                    font-size: 20px;
+                }
+            }
+            &[has-value=true] {
+                input,
+                textarea {
+                    padding: 30px 15px 8px 15px;
+                }
+                label {
+                    @extend %primary-color;
+                    font-size: 12px;
+                    top: 10px;
+                    i {
+                        font-size: 16px;
+                    }
+                }
+            }
+            &[data-input-email=wrong] {
+                label {
+                    color: red;
+                }
+                input {
+                    border-color: red !important;
+                }
+            }
+            .spinner-validate {
+                @extend %absolute;
+                @extend %rotate;
+                top: 19px;
+                right: 19px;
+                &[data-has-validate=true] {
+                    animation: none !important;
+                }
+                i {
+                    @extend %primary-color;
+                    font-size: 20px;
+                }
+            }
+
+            [class*=feedback] {
+                @extend %small;
+                &[class*=invalid] {
+                    color: $error;
+                }
+            }
+        }
+        ._f input,
+        ._f textarea {
+            @extend %full-width;
+            @extend %transition;
+        }
+        ._f input,
+        ._f textarea {
+            &:focus {
+                @extend %box-shadow;
+            }
+        }
+        ._f textarea {
+            height:175px;
+        }
+
+        /** Back */
+        #back {
+            @extend %margin-bottom-lg;
+            a {
+                @extend %gray;
+                @extend %text-decoration-none;
+                &:hover,
+                &:active {
+                    @extend %primary-color;
+                    @extend %set-background-white;
+                }
+                i {
+                    font-size: 22px;
+                    @extend %margin-right-sm;
+                }
+            }
+        }
+    }
+
+
+    /** When message success to send */
+    #_c-s_ {
+        @extend %transition2x;
+        @extend %full-width;
+        @extend %absolute;
+        top: -100vh;
+        z-index: 1;
+        left: 0;
+        transition: background-color .2s ease;
+        &.show {
+            @extend %full-height;
+            @extend %top-left;
+            @extend %set-background-white;
+        }
+        .ms {
+            @extend %justify-content-center;
+            @extend %align-items-center;
+            @extend %text-center;
+            @extend %flex;
+            height: 100%;
+            ._c_ {
+                h3 {
+                    font-size: 26px;
+                    @extend %muted;
+                    @extend %font-weight-normal;
+                    @extend %margin-bottom-sm;
+                }
+                p {
+                    @extend %primary-color;
+                }
+                a {
+                    @extend %text-decoration-none;
+                    @extend %border-thin-primary;
+                    @extend %border-thin-radius;
+                    @extend %primary-color;
+                    @extend %margin-top-sm;
+                    @extend %inline-block;
+                    padding: .5rem 1rem;
+                    i {
+                        font-size: 20px;
+                    }
+                    &:hover {
+                        @extend %background-primary-color-light;
+                    }
+                }
+            }
+        }
+        
+        /** move container to down */
+        + __o__ {
+
+        }
+    }
+}

@@ -260,1296 +260,6 @@ th {
 
 /** Media Queries */
 
-/** Mixin to prefix a property
-  * @author Hugo Giraudel
-  * @param {String} $property - Property name
-  * @param {*} $value - Property value
-  * @param {List} $prefixes (()) - List of prefixes to print
-  */
-
-/** Mixin box-shadow
-* Sytnax : box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;
-* @author Riski Web ID
-* @param {*} $hOffset 	- Property horizontal offset
-* @param {*} $vOffset 	- Property vertical offset
-* @param {*} $blur 		- Property blur value
-* @param {*} $color 		- Property color value
-*/
-
-/** Temporary */
-
-.pC_ ._,
-*[id^=d_h] .a,
-#dln .a,
-.featureTheme .left,
-.featureTheme .right,
-.demo ._ {
-  width: 50%;
-  float: left;
-}
-
-.pC_ ._ > div,
-*[id^=d_h] .a > *,
-.demo ._ > div {
-  margin: 1rem;
-}
-
-.demo ._:hover img {
-  transform: scale(1.1);
-}
-
-#about #s ._s ul li a .ic + span,
-#hero ._h_c_,
-#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span:not(.name),
-#hero[data-version=two][data-position=left] ._y ._x .u > [class$=r] ._o,
-#hero[data-version=two] .u ._i h2 span.name,
-#_psh ul,
-#_psh.show div[class^=s] .a span:not([class*=i]),
-#_n_ + #__toggler_mobile__,
-#_n_[data-position=left] ._ ._s #_r_ ._z + span,
-#_n_[data-position=left] ._ ._s #_r_ > span,
-#_n_[data-position=left] ._ ._s ._a ul li a > span,
-#hero_nav ul li[data-stand-alone]:before,
-#hero_nav,
-#hero_nav_toggler,
-#__h_sl ._s ul li a .ic + span {
-  display: none;
-}
-
-[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
-footer#main .c__ > p:first-child > span {
-  position: relative;
-  padding-right: 41px;
-  margin-right: 10px;
-}
-
-[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > :first-child:before,
-footer#main .c__ > p:first-child > span:before {
-  top: 50%;
-  right: 0;
-  width: 32px;
-  height: 1px;
-  content: "";
-  background: #a4a4a4;
-  position: absolute;
-}
-
-#about ._r ._a ._x #back a,
-#RP .__i__ .c_ ._m_ .d_,
-#tm_ ._i .text,
-#tm_ ._i .l,
-#changelog .c .i ._a > [class*=i]:last-child,
-#changelog .log .t p,
-[data-blog=single] ._io_ ._m_ > ._ad_ > ._a > ._d,
-#_Bx .__i__ .c_ ._m_ .d_,
-footer#main .c__ > p,
-#hero[data-version=two] .u ._o,
-#hero[data-version=two] .u ._i h2 .typed-cursor,
-#_pa [class*=pa] ._ .n p,
-#_bsp > div[class*=_] > * .q > div a p,
-#_H_Cb ._ > p,
-#__h_sl ._s .sp span,
-#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child + *:not(div) {
-  color: #707070;
-}
-
-#hero_nav ul li a i {
-  color: #a3a3a3;
-}
-
-#hero[data-version=two][data-position=left] #__h_sl ul li a span,
-#hero_nav ul li a {
-  color: #0a0a0a;
-}
-
-#hero_nav ul li[data-stand-alone]:hover i,
-#hero_nav ul li[data-stand-alone] a i {
-  color: #fff;
-}
-
-#__l__ ._ti ._d,
-#_Bx .__i__ .c_ > ._xo ._t_ + .__,
-#_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
-footer#main .c__ a,
-#_bsp > div[class*=_] > * .q > div a {
-  color: #686868;
-}
-
-#about ._r ._a ._x #back a:hover,
-#about ._r ._a ._x #back a:active,
-#__l__ ._ti ._a a,
-#__l__ ._ti ._a- a:last-child,
-#__l__ ._ti ._a- a:first-child:hover,
-[data-blog=single] ._io_ ._ps_ a,
-#_bsp > div[class*=_] > * .q > div:hover .ic,
-#_bsp > div[class*=_] > * .q > div:hover h3,
-#_bsp > div[class*=_] > * .q > div:hover h4,
-#_bsp > div[class*=_] > * .q > div:hover h5,
-#_bsp > div[class*=_] > * .q > div:hover h6,
-#_bt_ ul li a,
-#_n_ ._ ._a ul li a i,
-#_n_ ._ ._a ul .you_are_with_me a,
-#hero_nav ul li:hover a i,
-#hero_nav ul .you_are_with_me a,
-#hero_nav ul .you_are_with_me a i,
-btn.anhoi-btn,
-a.anhoi-btn,
-#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
-#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
-#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child {
-  color: #1f77ff;
-}
-
-#RP .__i__ .c_ ._m_ .__c,
-#RP .__i__ .c_ > ._xo ._t_ a,
-[data-blog=single] ._io_ ._m_ > .__c,
-[data-blog=single] ._io_ ._t > *,
-[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
-#_Bx .__i__ .c_ ._m_ .__c,
-#_Bx .__i__ .c_ > ._xo ._t_ a,
-#hero[data-version=two][data-position=left] #__h_sl ul li a,
-#hero[data-version=two][data-position=left] ._y ._x .u > [class$=r] h2,
-#hero[data-version=two][data-position=left] ._y ._x .u > [class$=r] .name,
-#_psh ul li a,
-#_n_ #_r_ ._z + * {
-  color: #313131;
-}
-
-/** Success, Info, Warning and Danger */
-
-[data-blog=single] ._io_ ._ps_ .block.success {
-  background-color: #c3ffc0;
-  color: #448446;
-}
-
-[data-blog=single] ._io_ ._ps_ .block.info {
-  background-color: #d2d8ff;
-  color: #5f619c;
-}
-
-[data-blog=single] ._io_ ._ps_ .block.warning {
-  background-color: #fff2b3;
-  color: #755f43;
-}
-
-[data-blog=single] ._io_ ._ps_ .block.danger,
-#_psh.show div[class^=s] .a {
-  background-color: #ffcdc8;
-  color: #92574a;
-}
-
-#RP .__i__ .c_ ._m_ .d_,
-#_Bx .__i__ .c_ ._m_ .d_,
-#_Bx .__i__ .c_ ._m_ .__c,
-footer#main .c__ > p,
-#hero ._h_c_ a,
-#_bsp > div[class*=_] > * .q > div a p,
-#_psh div[class^=s] > .a span,
-#_psh div[class^=s] > .a,
-pre[class*=language] span.code-filename,
-#__h_sl ._s .sp span {
-  font-size: 14px;
-}
-
-#tm_ ._i .text,
-#_Bx > .__q__ > ._cn_ .__quote__ > blockquote cite {
-  font-size: 16px;
-}
-
-#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 {
-  font-weight: bold;
-}
-
-[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:last-child {
-  font-size: 16px;
-}
-
-#_H_Cb ._ > p {
-  font-size: 20px;
-}
-
-#about ._r ._a ._x #back a,
-#changelog .log .t a,
-#__l__ ._ti ._a- a,
-[data-blog=single] ._io_ ._ps_ a[class*=__]:after,
-[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
-footer#main .c__ a,
-#hero ._h_c_ a,
-#hero[data-version=two][data-position=left] #__h_sl ul li a,
-#_bsp > div[class*=_] > * .q > div a,
-#_psh ul li a,
-#_n_ + #__toggler_mobile__ a,
-#_n_ #_r_ a,
-btn.anhoi-btn,
-a.anhoi-btn {
-  text-decoration: none;
-}
-
-#_n_ ._ ._a ul li a span {
-  text-transform: uppercase;
-}
-
-#about #s ._s ul li a,
-#about ._r ._a ._x > [class*=img],
-#about ._r ._a ._x,
-#hero[data-version=two] .u ._i h2 #typed .laravelicon,
-#hero[data-version=two] .anh_ [class*=_],
-#_pa [class*=pa],
-#_psh ul li a .ic,
-#_n_ #_r_ ._z,
-#__h_sl ._s ul li a {
-  line-height: 0;
-}
-
-#about ._r ._a .c h1,
-Why #why .head h2,
-Why #why .head h3,
-Why #why .head h4,
-Why #why .head h5,
-#tm_ ._i .l,
-#tm_ ._i h6,
-#changelog ul li[data-changelog^=_]:before,
-#changelog .log .t h2,
-#changelog .log .t h3,
-#changelog .log .t h4,
-.featureTheme .single .featureText h2,
-.featureTheme .single .featureText h3,
-.featureTheme .single .featureText h4,
-[data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
-[data-blog=single][data-version=two] ._io_ ._xo > .__,
-footer#main .c__ > p .laravel,
-#hero[data-version=two] .u ._i h2,
-#_psh div[class^=s] > .a,
-#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
-#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
-#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child + *:not(div) {
-  line-height: 1;
-}
-
-#dln .a,
-#changelog ul li {
-  line-height: 1.3;
-}
-
-#_pa [class*=pa] ._ {
-  line-height: 1.65;
-}
-
-#about ._r ._a .c .__xt,
-#about ._r ._a .c .__xb,
-#about ._r ._a .c,
-#RP .__i__ .c_ > ._xo ._t_,
-#RP .__i__ ._img_,
-.pC_ ._ ._b,
-#dln .d_c ._i,
-.featureTheme .featureImg > div,
-.demo ._ ._t,
-#_Bx .__i__ .c_ > ._xo ._t_ + .__,
-#_Bx .__i__ .c_ > ._xo ._t_,
-#_Bx .__i__ ._img_,
-#Ftr_P .__i__ .c_ ._t_,
-#Ftr_P .__i__ ._img_,
-#hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_],
-#_bsp > div[class*=_] > * .q h3,
-#_bsp > div[class*=_] > * .q h4,
-#_bsp > div[class*=_] > * .q h5,
-#_bsp > div[class*=_] > * .q h6,
-#_bsp > div[class*=_] > * .q > div {
-  overflow: hidden;
-}
-
-#about #s,
-#about ._r ._a ._x img,
-#about ._r ._a ._x #back,
-#dln .b > *,
-#changelog ul li[data-changelog^=_]:before,
-.demo .x_,
-[data-blog=single] ._io_ ._ps_ ul li:before,
-[data-page=index] main#main,
-#hero[data-version=two] .u ._i h2 .typed-cursor:before,
-#hero[data-version=two] .anh_,
-#_pa [class*=pa] ._oh_waves_,
-#_bsp > div[class*=_] > *:first-of-type > .q .ic,
-#_bsp > div[class*=_] > * .q .ic,
-.__aw__,
-pre[class*=language] span.code-filename,
-#hero_nav ul li:before,
-._x0 ._a,
-._x0 ._b,
-#_x0 ._x0,
-#_x0 > div > ._a,
-#_x0 > div,
-#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
-#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
-#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child {
-  position: absolute;
-}
-
-#about ._r ._a .c .__xt,
-#about ._r ._a .c .__xb,
-#about ._r ._a .c,
-#about ._r ._a ._x > [class*=img],
-#about ._r ._a ._x,
-#hero[data-version=two],
-.___g--dark___[data-show=true],
-#_psh,
-#_n_ + #__toggler_mobile__,
-#_n_,
-#hero_nav,
-#_x0 {
-  position: fixed;
-}
-
-#changelog ul li[data-changelog^=_]:before,
-#hero[data-version=two],
-.___g--dark___[data-show=true],
-.__aw__,
-#_n_[data-position=left],
-#hero_nav ul li:before,
-#hero_nav,
-#_x0 > div,
-#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
-#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
-#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child {
-  top: 0;
-  left: 0;
-}
-
-#dln .b > * {
-  top: 0;
-  right: 0;
-}
-
-#about ._r ._a ._x > [class*=img],
-#about ._r ._a ._x,
-.demo .x_,
-#_pa [class*=pa] ._oh_waves_[data-position=bottom],
-#_psh,
-#_n_ + #__toggler_mobile__ {
-  bottom: 0;
-  left: 0;
-}
-
-#about ._r ._a .c ._,
-#RP .__i__ ._img_,
-.pC_ ._ ._b .bottom,
-.pC_ ._ ._b,
-#dln .d_c ._i,
-#dln .b,
-#changelog ul li,
-.featureTheme .featureImg > div,
-.demo ._ ._t,
-[data-blog=single] ._io_ ._ps_ a[class*=__],
-[data-blog=single] ._io_ ._ps_ ul li,
-#_Bx .__i__ ._img_,
-#Ftr_P .__i__ ._img_,
-main#main .Anh,
-#hero[data-version=two] .u ._i h2 .typed-cursor,
-#hero[data-version=two] ._y ._x,
-#_pa [class*=pa],
-#_bsp > div[class*=_] > * .q > div,
-pre[class*=language],
-#_n_ ._ ._a ul li a,
-#_n_[data-position=left] ._ ._s ._a ul li a i,
-#hero_nav ul li a,
-#hero_nav ul li,
-#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > *,
-#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > *,
-#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] {
-  position: relative;
-}
-
-#RP .__i__ .c_ > ._xo,
-#RP .__i__ .c_,
-#changelog .log .t a,
-.demo ._ ._t img,
-#__l__ ._ti ._a- a,
-#_Bx .__i__ .c_ > ._xo,
-#_Bx .__i__ .c_,
-footer#main,
-#hero ._h_c_,
-#hero[data-version=two][data-position=left] ._y ._x .u > [class$=r],
-#hero *,
-#_psh div[class$=s],
-#_psh *,
-#_psh,
-#hero_nav ul li a span,
-#hero_nav ul li:before,
-#hero_nav,
-#_x0 {
-  transition: all 0.3s ease;
-}
-
-#hero[data-version=two][data-position=left] #__h_sl ._s ul li a .ic svg,
-#hero[data-version=two] .u ._i h2 {
-  transition: none !important;
-}
-
-#about #s,
-main#main .Anh > div[class*=__],
-main#main .Anh,
-#hero[data-version=two] ._z ._q,
-#hero,
-#_n_ ._ ._a ul li a i,
-#_n_ ._,
-#_n_ {
-  transition: all 0.45s cubic-bezier(0.23, 0.1, 0, 1.02);
-}
-
-#RP .__l_m > a i,
-#_Bx .__l_m > a i {
-  transition: all 2s ease;
-}
-
-/** cursor */
-
-#_psh div[class^=s] > .a {
-  cursor: pointer;
-}
-
-#_psh div[class^=s] > .a {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-}
-
-/** Margin */
-
-#changelog .log .t h2,
-#changelog .log .t h3,
-#changelog .log .t h4,
-#__h_sl ._s ul {
-  margin-top: 0.5rem;
-}
-
-#tm_ ._i h6,
-#hero[data-version=two] .u ._i h2 {
-  margin-bottom: 0.5rem;
-}
-
-#RP .__i__ .c_ ._m_ ._ic,
-#changelog .c .i ._a > [class*=i]:last-child i,
-#__l__ ._ti ._a- a:first-child,
-#_psh ul li svg,
-#_psh div[class^=s] > .a:hover i,
-#_n_ #_r_ ._z {
-  margin-right: 0.5rem;
-}
-
-#__l__ ._ti ._a- a:last-child,
-#_psh div[class^=s] > .a span {
-  margin-left: 0.5rem;
-}
-
-#_Bx > .__q__ > ._cn_ .__quote__ > blockquote cite,
-#hero[data-version=two] .u ._o {
-  margin-top: 0.85rem;
-}
-
-#RP .__i__ .c_ > ._xo ._t_,
-#tm_ .t h3,
-#tm_ .t h4,
-#tm_ .t h5,
-#changelog ul li,
-[data-blog=single] ._io_ ._ps_ ul li,
-[data-blog=single] ._io_ ._ps_ ol li,
-[data-blog=single] ._io_ ._ps_ .block p,
-#_Bx .__i__ .c_ > ._xo ._t_,
-#_pa [class*=pa] ._ .n h6,
-#_pa [class*=pa] ._ .a,
-#_H_Cb ._ ._x0,
-._ps_ div,
-._ps_ h1,
-._ps_ h2,
-._ps_ h3,
-._ps_ h4,
-._ps_ h5,
-._ps_ h6 {
-  margin-bottom: 0.85rem;
-}
-
-#about ._r ._a ._x #back a i,
-[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic,
-#hero ._h_c_ a i,
-#hero[data-version=two][data-position=left] #__h_sl ul li a .ic,
-#_H_Cb ._ ._x0 > [class$=svg],
-#__h_sl ._s ul li a {
-  margin-right: 0.85rem;
-}
-
-#tm_ ._i .text,
-#tm_ ._i > img,
-[data-blog=single] ._io_ ._xo > .__,
-#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2,
-#_bt_,
-#__h_sl {
-  margin-top: 1.25rem;
-}
-
-#hero_nav ul li a span {
-  margin-left: 1.25rem;
-}
-
-#changelog .log .t p,
-#changelog .log .t h2,
-#changelog .log .t h3,
-#changelog .log .t h4,
-#__l__ ._ti ._a-,
-#__l__ ._ti ._t h1,
-#__l__ ._ti ._t h2,
-[data-blog=single] ._io_ ._xo > .__,
-#_Bx .__i__ .c_ > ._xo ._t_ + .__,
-#hero_nav ul li {
-  margin-bottom: 1.25rem;
-}
-
-#RP .__l_m,
-#changelog ul,
-#__l__ ._ti ._t h1,
-#__l__ ._ti ._t h2,
-[data-blog=single][data-version=two] ._io_ ._m_,
-#_Bx .__l_m,
-#hero[data-version=two][data-position=left] #__h_sl,
-#_psh ul,
-#_n_[data-position=left] ._ ._s ._a ul,
-._ps_ div,
-._ps_ h1,
-._ps_ h2,
-._ps_ h3,
-._ps_ h4,
-._ps_ h5,
-._ps_ h6 {
-  margin-top: 2rem;
-}
-
-#tm_ ._i,
-#__l__ ._ti ._d,
-[data-blog=single][data-version=two] ._io_ ._m_,
-#_Bx > .__q__ > ._cn_ .__quote__,
-#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] {
-  margin-bottom: 2rem;
-}
-
-#RP,
-#hero[data-version=two] .u > [class$=r] {
-  margin-top: 3rem;
-}
-
-#RP,
-#changelog .log .t,
-#_H_Cb,
-#hero_nav ul li[data-stand-alone] {
-  margin-bottom: 3rem;
-}
-
-/** padding */
-
-#_bsp > div[class*=_] > *:first-of-type > .q {
-  padding-right: 0.5rem;
-}
-
-#_bsp > div[class*=_] > *:last-of-type .q {
-  padding-left: 0.5rem;
-}
-
-#about #s ._s ul li a,
-#_bsp > div[class*=_] > * .q > div {
-  padding: 0.85rem;
-}
-
-#about #s ._s [class*=y_],
-#_n_ ._ ._a {
-  padding-top: 0.85rem;
-}
-
-#about #s ._s [class*=y_],
-#changelog ul li,
-#_n_ ._ ._a {
-  padding-bottom: 0.85rem;
-}
-
-#_psh ul li a {
-  padding-right: 0.85rem;
-}
-
-#_psh ul li a {
-  padding-left: 0.85rem;
-}
-
-#_pa {
-  padding-top: 1.25rem;
-}
-
-#_n_ ._ ._s {
-  padding-left: 1.25rem;
-}
-
-#_n_ ._ ._s {
-  padding-right: 1.25rem;
-}
-
-#_pa {
-  padding-bottom: 1.25rem;
-}
-
-#_pa [class*=pa] ._ {
-  padding: 2rem;
-}
-
-#hero[data-version=two][data-position=left] ._h_c_,
-#_bsp,
-#_psh div[class^=s] {
-  padding-top: 2rem;
-}
-
-#_pa [class*=pa] ._ .n {
-  padding-left: 2rem;
-}
-
-#_pa [class*=pa] ._ .n {
-  padding-right: 2rem;
-}
-
-#_bsp,
-#_psh div[class^=s] {
-  padding-bottom: 2rem;
-}
-
-#tm_ {
-  padding-top: 3rem;
-}
-
-#tm_,
-#__l__ ._ti {
-  padding-bottom: 3rem;
-}
-
-#about #s ._s [class*=y_],
-#hero[data-version=two] .u > [class$=r],
-#_bsp > div[class*=_] > *:first-of-type > .q > * {
-  padding-left: 3rem;
-}
-
-#about #s ._s [class*=y_],
-#_bsp > div[class*=_] > *:last-of-type .q > * {
-  padding-right: 3rem;
-}
-
-#hero[data-version=two][data-position=left] ._y ._x {
-  padding: unset;
-}
-
-/** Give Standar Padding/Margin for Block */
-
-#_Bx > .__q__ > ._cn_ ._g_ ._,
-[data-page=index] main#main .Anh,
-#hero[data-version=two] ._y ._x,
-#_H_Cb ._ {
-  padding-left: 12px;
-  padding-right: 12px;
-}
-
-#RP > .__q__ > ._cn_ {
-  margin-left: -12px;
-  margin-right: -12px;
-}
-
-@media (max-width: 768px) {
-  #RP > .__q__ > ._cn_ {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-[data-page=about] #AnhOi main,
-#hero[data-version=two],
-.___g--dark___[data-show=true],
-#_x0 > div,
-#_x0 {
-  height: 100vh;
-  width: 100%;
-}
-
-#about ._r ._a ._x > [class*=img],
-#hero[data-version=two][data-position=left] ._y ._x,
-#_n_[data-position=left],
-#hero_nav {
-  height: 100vh;
-}
-
-#hero[data-version=two] ._z ._q,
-#hero_nav ul li:before {
-  height: 100%;
-}
-
-#about #s,
-[data-page=about] #AnhOi main .Anh .__o__ [class*=__],
-*[id^=d_h] ._i,
-#dln .d_c ._i,
-.featureTheme .single .featureText > div,
-.demo .x_,
-[data-page=index] [data-layout-style=left] main#main .Anh,
-[data-page=index] main#main,
-#hero ._h_c_ a,
-#hero[data-version=two][data-position=left] #__h_sl ul li a,
-#hero[data-version=two][data-position=left] #__h_sl ul li,
-#_pa [class*=pa] ._oh_waves_,
-#_bsp > div[class*=_] > * .q > div a,
-#_psh,
-.__aw__,
-#_n_[data-position=left] ._ ._s ._a ul li,
-#_n_,
-#hero_nav ul li[data-stand-alone] a {
-  width: 100%;
-}
-
-[data-page=index] main#main .Anh {
-  width: 1120px;
-  margin: auto;
-}
-
-@media (max-width: 768px) {
-  [data-page=index] main#main .Anh {
-    width: 100% !important;
-  }
-}
-
-#intro,
-main#main .Anh > div[class*=__] > .__,
-#hero[data-version=two] ._y,
-#__pg__ > .__ {
-  width: 1000px;
-  margin: 0 auto;
-}
-
-@media (max-width: 1200px) {
-  #intro,
-  main#main .Anh > div[class*=__] > .__,
-  #hero[data-version=two] ._y,
-  #__pg__ > .__ {
-    width: 100% !important;
-  }
-}
-
-#RP > .__q__,
-[data-blog=single] ._io_ ._ps_,
-#_pa,
-#_bsp {
-  width: 700px;
-  margin: auto;
-}
-
-@media (max-width: 768px) {
-  #RP > .__q__,
-  [data-blog=single] ._io_ ._ps_,
-  #_pa,
-  #_bsp {
-    width: 100% !important;
-  }
-}
-
-#RP .__i__,
-#_Bx .__i__,
-#_bsp > div[class*=_] > * {
-  width: 50%;
-}
-
-/** flex family */
-
-#about #s ._s,
-#RP .__l_m,
-#RP .__i__ .c_ ._m_ ._ic,
-#RP .__i__ .c_ ._m_ .__c,
-#RP .__i__ .c_ ._m_,
-#RP > .__q__ > ._cn_ > .__sa,
-#changelog .c .i ._a > [class*=i]:last-child .d,
-#changelog .c .i ._a,
-.featureTheme .featureText > div,
-#__l__ ._ti ._a,
-#__l__ ._ti ._a-,
-#__l__ ._ti,
-[data-blog=single] ._io_ ._m_ > .__c,
-[data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
-[data-blog=single] ._io_ ._m_ > ._ad_,
-[data-blog=single] ._io_ ._m_,
-[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_],
-#_Bx .__l_m,
-#_Bx .__i__ .c_ ._m_ ._ic,
-#_Bx .__i__ .c_ ._m_ .__c,
-#_Bx .__i__ .c_ ._m_,
-#_Bx > .__q__ > ._cn_ .__quote__,
-#_Bx > .__q__ > ._cn_ > .__sa,
-#Ftr_P > .__f__ > .__ > ._p_,
-main#main .Anh > div[class*=__],
-#hero[data-version=two][data-position=left] #__h_sl ul li a,
-#hero[data-version=two] .u,
-#hero[data-version=two] ._y ._x,
-#hero[data-version=two] ._z ._q,
-#_pa [class*=pa] ._,
-#_bsp > div[class*=_] > * .q > div,
-#_bsp > div[class*=_],
-#_psh ul li a,
-#_H_Cb ._ ._x0,
-#__pg__ > .__ .pagination,
-#_n_ ._ ._a,
-#_n_ #_r_ a,
-#_n_[data-position=left] ._ ._s ._a ul,
-#hero_nav ul,
-#RP > .__q__ > ._cn_ ._g_ > div[class*=_],
-#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] {
-  display: flex;
-  display: -webkit-flex;
-}
-
-#about #s ._s,
-#RP .__l_m,
-.featureTheme .featureText > div,
-#__l__ ._ti,
-[data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
-[data-blog=single] ._io_ ._m_,
-#_Bx .__l_m,
-#_Bx > .__q__ > ._cn_ .__quote__,
-#hero[data-version=two] ._z ._q,
-#_pa [class*=pa] ._,
-#_psh ul li a,
-#__pg__ > .__ .pagination,
-#RP > .__q__ > ._cn_ ._g_ > div[class*=_],
-#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] {
-  justify-content: center;
-}
-
-#about #s ._s,
-#RP .__i__ .c_ ._m_ ._ic,
-#RP .__i__ .c_ ._m_,
-#changelog .c .i ._a > [class*=i]:last-child .d,
-#changelog .c .i ._a,
-#__l__ ._ti,
-[data-blog=single] ._io_ ._m_ > .__c,
-[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_],
-#_Bx .__i__ .c_ ._m_ ._ic,
-#_Bx .__i__ .c_ ._m_,
-#hero[data-version=two][data-position=left] #__h_sl ul li a,
-#hero[data-version=two] .u,
-#hero[data-version=two] ._z ._q,
-#_pa [class*=pa] ._,
-#_H_Cb ._ ._x0,
-#_n_ ._ ._a,
-#_n_ #_r_ a {
-  align-items: center;
-}
-
-.featureTheme .featureText > div,
-#hero[data-version=two][data-position=left] ._y ._x .u {
-  align-items: flex-start;
-}
-
-.featureTheme .featureText > div,
-#__l__ ._ti,
-[data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
-#hero[data-version=two] ._z ._q,
-#_pa [class*=pa] ._,
-#_n_[data-position=left] ._ ._s ._a ul,
-#_n_[data-position=left] ._ ._s ._a,
-#hero_nav ul {
-  flex-direction: column;
-}
-
-[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_],
-#hero[data-version=two][data-position=left] #__h_sl ul li a {
-  flex-direction: row;
-}
-
-#RP > .__q__ > ._cn_ > .__sa,
-#_Bx > .__q__ > ._cn_ > .__sa,
-#Ftr_P > .__f__ > .__ > ._p_ {
-  flex-wrap: wrap;
-}
-
-#_bsp > div[class*=_] {
-  flex-wrap: nowrap;
-}
-
-#RP .__i__ .c_ ._m_,
-#changelog .c .i ._a,
-#_Bx .__i__ .c_ ._m_,
-#_bsp > div[class*=_],
-#_n_ ._ ._a {
-  justify-content: space-between;
-}
-
-#_bsp > div[class*=_] > *:first-of-type > .q,
-#_n_[data-position=left] ._ ._s ._a {
-  justify-content: flex-start;
-}
-
-#_bsp > div[class*=_] > *:last-of-type .q {
-  justify-content: flex-end;
-}
-
-/** Box Shadow */
-
-#RP .__i__ .c_ > ._xo,
-#RP .__i__ ._img_,
-#faq #faqContent .i,
-#tm_ ._i,
-.featureTheme .right .featureImg > div._bs_,
-.featureTheme .left .featureImg > div._bs_,
-.demo ._ ._t,
-#__l__ ._ti ._a a,
-#_Bx .__i__ .c_ > ._xo,
-#_Bx .__i__ ._img_,
-#_pa [class*=pa],
-#_psh div[class^=s] > .a,
-#_psh.show div[class^=s] {
-  box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
-  -moz-box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
-  -webkit-box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
-}
-
-#hero ._h_c_ a,
-#hero_nav ul li[data-stand-alone] a {
-  box-shadow: 0 12px 35px 0 rgba(31, 119, 255, 0.2);
-}
-
-#__l__ ._ti ._a a,
-[data-page=index] [data-theme=light] main#main .Anh > div[class*=__] {
-  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.1);
-}
-
-#about #s ._s [class*=y_],
-#tm_ ._i > img,
-#_fs ._ ._i ._b:hover,
-[data-blog=single] ._io_ ._xo > .__ img,
-#hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_],
-#_pa [class*=pa] ._ .a img {
-  box-shadow: 0 15px 32px rgba(0, 0, 0, 0.1);
-}
-
-[data-page=about] #AnhOi main .Anh .__o__,
-.pC_ ._ ._b.free,
-[data-page=theme-show] #_n_ ._ ._s,
-[data-page=index] [data-layout-style=left] main#main .Anh > div[class*=__] {
-  box-shadow: none !important;
-}
-
-#tm_ .____,
-#changelog .log,
-#_psh div[class^=s] {
-  margin: auto;
-}
-
-#about ._r ._a ._x #back a,
-#tm_ ._i,
-#changelog ul li[data-changelog^=_]:before,
-#changelog .log .t a,
-[data-blog=single] ._io_ ._ps_ a,
-[data-blog=single] ._io_ ._ps_ .block,
-[data-blog=single] ._io_ ._ps_ code:not([class*=language]),
-[data-blog=single] ._io_ ._xo > .__ img,
-main#main .Anh > div[class*=__],
-#hero ._h_c_ a,
-#_pa [class*=pa],
-#_bsp > div[class*=_] > * .q > div,
-#_psh ul li a,
-#_psh div[class^=s],
-pre[class*=language] span.code-filename,
-pre[class*=language],
-pre[class*=language][data-line-numbers=false],
-#_bt_ ul li a,
-#_n_ ._ ._s,
-#hero_nav ul li:before,
-#hero_nav ul li[data-stand-alone] a {
-  border-radius: 0.2rem;
-}
-
-#about #s ._s ul li a,
-#about #s ._s [class*=y_],
-#RP .__i__ .c_ > ._xo,
-#RP .__i__ ._img_,
-#faq #faqContent .i,
-.pC_ ._ ._b,
-*[id^=d_h] .a > *,
-#dln .d_c > *,
-#changelog .c,
-.featureTheme .right .featureImg > div,
-.featureTheme .left .featureImg > div,
-.demo ._ ._t,
-#_fs ._ ._i ._b,
-#__l__ ._ti ._a- a,
-#_Bx .__i__ .c_ > ._xo,
-#_Bx .__i__ ._img_ {
-  border-radius: 0.35rem;
-}
-
-#tm_ ._i > img,
-#__l__ ._ti ._a a,
-[data-blog=single] ._io_ ._m_ > ._ad_ img,
-#hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_],
-#_pa [class*=pa] ._ .a img,
-#_n_ + #__toggler_mobile__ a {
-  border-radius: 50%;
-}
-
-ol,
-ul,
-#changelog .c .i ._a h4,
-#changelog .c .i ._a h5,
-#changelog .c .i ._a h6,
-#_fs ._ h6,
-#__l__ ._ti ._t > *,
-[data-blog=single] ._io_ ._ps_ .block p:last-child,
-[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *,
-#_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
-footer#main .c__ > p,
-#hero[data-version=two] .u ._o p,
-#_pa [class*=pa] ._ .n h6,
-#_bsp > div[class*=_] > * .q > div a *,
-#_H_Cb ._ ._x0 * h1,
-#_H_Cb ._ ._x0 * h2,
-#_H_Cb ._ ._x0 * h3,
-#_H_Cb ._ ._x0 * h4,
-#_H_Cb ._ ._x0 * h5 * h6,
-#__pg__ > .__ .pagination,
-#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
-#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
-#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child + *:not(div) {
-  margin: 0;
-  padding: 0;
-}
-
-#about #s ._s ul,
-#changelog ul,
-[data-blog=single] ._io_ ._ps_ ul,
-#_psh ul,
-#__pg__ > .__ .pagination,
-#_n_ ._ ._a ul,
-#hero_nav ul,
-#__h_sl ._s ul {
-  list-style: none;
-}
-
-#_Bx > .__q__ > ._cn_ .__quote__ > blockquote cite,
-#hero[data-version=two][data-position=left] ._h_c_,
-#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span.name,
-#hero_nav ul li a,
-#hero[data-position=left] #hero_nav.slided,
-#hero[data-position=left] #hero_nav,
-#hero[data-position=left] #hero_nav_toggler {
-  display: block;
-}
-
-#about #s ._s ul li a,
-#about #s ._s ul li,
-*[id^=d_h] ._i,
-#dln .d_c ._i,
-#tm_ ._tm ._s ._,
-#changelog .log .t a,
-.featureTheme .single .featureText > div,
-#__l__ ._ti ._a a,
-#hero ._h_c_ a,
-#hero[data-version=two][data-position=left] #__h_sl ul li a span,
-#hero[data-version=two][data-position=left] #__h_sl ul li a .ic,
-#hero[data-version=two] .u ._i h2 #typed .laravelicon svg,
-#_psh ul li,
-#_psh div[class^=s] > .a,
-#_bt_ ul li,
-#_n_ + #__toggler_mobile__ a,
-#_n_ ._ ._a ul li,
-#_n_[data-position=left] ._ ._s ._a ul li a i,
-#_n_[data-position=left] ._ ._s ._a ul li a,
-#hero_nav ul li[data-stand-alone] a,
-#__h_sl ._s ul li a,
-#__h_sl ._s ul li {
-  display: inline-block;
-}
-
-::-moz-selection {
-  background: #1f77ff;
-  color: #f7f7f7;
-}
-
-.pC_ ._ ._b,
-*[id^=d_h] .a .z,
-#dln .d_c > *,
-#changelog ul li[data-changelog^=_]:before,
-#changelog .log .t a,
-#__l__ ._ti ._a- a:last-child:hover,
-#__l__ ._ti ._a- a:first-child,
-[data-blog=single] ._io_ ._ps_ a:hover,
-::selection,
-#hero ._h_c_ a,
-#_psh div[class^=s] > .a,
-#_n_ + #__toggler_mobile__ a,
-#hero_nav ul li[data-stand-alone] a {
-  background: #1f77ff;
-  color: #f7f7f7;
-}
-
-*[id^=d_h] .a .y {
-  background: #ff0b39;
-  color: #f7f7f7;
-}
-
-#faq #faqContent .i[data-faq=expand],
-#__l__ ._ti ._a- a:last-child,
-#__l__ ._ti ._a- a:first-child {
-  border: 2px solid #1f77ff;
-}
-
-#_bsp > div[class*=_] > * .q > div:hover {
-  border: 1px solid #1f77ff;
-}
-
-#_pa [class*=pa] {
-  border: 1px solid #d2d8ff;
-}
-
-.material-icons,
-#tm_ ._i .n svg,
-#__l__ ._ti ._a- a i,
-[data-blog=single] ._io_ ._ps_ a[class*=__]:after,
-[data-blog=single] ._io_ ._m_ > .__c ._ic svg,
-footer#main .c__ > p .laravel {
-  vertical-align: middle;
-}
-
-[data-theme=light],
-[data-background-color=light],
-pre[class*=language][data-color*=light] {
-  background: #f7f7f7;
-}
-
-[data-background-color=white],
-#about #s ._s [class*=y_],
-#about ._r ._a .c ._ > .rx,
-#about ._r ._a .c::-webkit-scrollbar-track,
-#about ._r ._a ._x #back a:hover,
-#about ._r ._a ._x #back a:active,
-#RP .__i__ .c_ > ._xo,
-#tm_ ._i,
-#changelog .c,
-#__l__ ._ti ._a- a:last-child,
-#__l__ ._ti ._a- a:first-child:hover,
-#_Bx .__i__ .c_ > ._xo,
-footer#main,
-[data-theme=light] main#main .Anh > div[class*=__],
-#_psh.show div[class^=s],
-#_n_ ._ ._s,
-#_n_[data-position=left],
-#hero_nav {
-  background: #fff;
-}
-
-#_bt_ ul li a {
-  background: #dddfff;
-}
-
-#hero_nav ul li:before {
-  background: #1f77ff;
-}
-
-[data-blog=single] ._io_ ._ps_ .block p,
-[data-blog=single] ._io_ ._ps_ .block span,
-#_bt_ ul li a {
-  font-family: "HK Grotesk", Roboto, Ubuntu, sans-serif !important;
-}
-
-[data-blog=single] ._io_ ._ps_ ul,
-[data-blog=single] ._io_ ._ps_ ol,
-#_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
-._ps_ div,
-._ps_ h1,
-._ps_ h2,
-._ps_ h3,
-._ps_ h4,
-._ps_ h5,
-._ps_ h6,
-._ps_ p {
-  font-family: "Lora", serif !important;
-}
-
-[data-blog=single] ._io_ ._ps_ code:not([class*=language]),
-pre[class*=language] code,
-pre[class*=language] .line-number {
-  font-family: "Courier Prime", monospace !important;
-}
-
-#tm_ ._i .n svg {
-  height: 16px;
-  width: 16px;
-}
-
-.madewith,
-Why #why,
-.pC_ ._ ._b .bottom,
-.pC_.single .head,
-*[id^=d_h] .a > *,
-#tm_ .t,
-#changelog .log .t,
-.featureTheme .single,
-.demo .x_,
-#_fs ._ ._i,
-[data-blog=single] ._io_ ._t,
-#_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
-footer#main > div[class*=_] > div,
-#hero ._h_c_ a,
-#_pa [class*=pa] ._ .n,
-#_psh,
-#_n_[data-position=left] ._ ._s,
-#hero_nav ul li[data-stand-alone] {
-  text-align: center;
-}
-
-#changelog .c .i ._a > [class*=i]:last-child,
-#_bsp > div[class*=_] > *:first-of-type > .q > * {
-  text-align: right;
-}
-
-.madewith .x,
-.pC_ .x {
-  position: absolute;
-  border-radius: 50%;
-}
-
-[data-blog=single] ._io_ ._m_ > ._ad_ > ._a > *:first-child {
-  font-weight: 700;
-}
-
-/** Global Main Heading with icon beside */
-
-#Ftr_P > .__f__ > .__ ._mh_ {
-  /** child pertama harus memiliki class disertai _ (underscore) */
-}
-
-#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child + *:not(div) {
-  padding-left: 30px;
-  font-size: 24px;
-  font-weight: 800;
-}
-
-/** Global Main Heading Center with icon beside */
-
-#RP > .__q__ > ._cn_ ._g_,
-#_Bx > .__q__ > ._cn_ ._g_ {
-  /** child pertama harus memiliki class disertai _ (underscore) */
-}
-
-#RP > .__q__ > ._cn_ ._g_ > div[class*=_],
-#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] {
-  margin-bottom: 1.5rem;
-}
-
-#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > *,
-#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * {
-  display: inline-flex;
-}
-
-#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
-#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div) {
-  padding-left: 30px;
-  font-size: 24px;
-  font-weight: 800;
-}
-
 @-webkit-keyframes xRotate {
   0% {
     transform: rotate(0deg);
@@ -1654,6 +364,1396 @@ footer#main > div[class*=_] > div,
   40% {
     transform: scale(1);
   }
+}
+
+/** Keyframe Rotate */
+
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/** Mixin to prefix a property
+  * @author Hugo Giraudel
+  * @param {String} $property - Property name
+  * @param {*} $value - Property value
+  * @param {List} $prefixes (()) - List of prefixes to print
+  */
+
+/** Mixin box-shadow
+* Sytnax : box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;
+* @author Riski Web ID
+* @param {*} $hOffset 	- Property horizontal offset
+* @param {*} $vOffset 	- Property vertical offset
+* @param {*} $blur 		- Property blur value
+* @param {*} $color 		- Property color value
+*/
+
+/** Temporary */
+
+.pC_ ._,
+*[id^=d_h] .a,
+#dln .a,
+.featureTheme .left,
+.featureTheme .right,
+.demo ._ {
+  width: 50%;
+  float: left;
+}
+
+.pC_ ._ > div,
+*[id^=d_h] .a > *,
+.demo ._ > div {
+  margin: 1rem;
+}
+
+.demo ._:hover img {
+  transform: scale(1.1);
+}
+
+#about #s ._s ul li a .ic + span,
+#hero ._h_c_,
+#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span:not(.name),
+#hero[data-version=two][data-position=left] ._y ._x .u > [class$=r] ._o,
+#hero[data-version=two] .u ._i h2 span.name,
+#_psh ul,
+#_psh.show div[class^=s] .a span:not([class*=i]),
+#_n_ + #__toggler_mobile__,
+#_n_[data-position=left] ._ ._s #_r_ ._z + span,
+#_n_[data-position=left] ._ ._s #_r_ > span,
+#_n_[data-position=left] ._ ._s ._a ul li a > span,
+#hero_nav ul li[data-stand-alone]:before,
+#hero_nav,
+#hero_nav_toggler,
+#__h_sl ._s ul li a .ic + span {
+  display: none;
+}
+
+[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
+footer#main .c__ > p:first-child > span {
+  position: relative;
+  padding-right: 41px;
+  margin-right: 10px;
+}
+
+[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > :first-child:before,
+footer#main .c__ > p:first-child > span:before {
+  top: 50%;
+  right: 0;
+  width: 32px;
+  height: 1px;
+  content: "";
+  background: #a4a4a4;
+  position: absolute;
+}
+
+#about ._r ._a ._x #back a,
+[data-page=contact-index] #_c-s_ .ms ._c_ h3,
+[data-page=contact-index] #contact ._f.tp label,
+#RP .__i__ .c_ ._m_ .d_,
+#tm_ ._i .text,
+#tm_ ._i .l,
+#changelog .c .i ._a > [class*=i]:last-child,
+#changelog .log .t p,
+[data-blog=single] ._io_ ._m_ > ._ad_ > ._a > ._d,
+#_Bx .__i__ .c_ ._m_ .d_,
+footer#main .c__ > p,
+#hero[data-version=two] .u ._o,
+#hero[data-version=two] .u ._i h2 .typed-cursor,
+#_pa [class*=pa] ._ .n p,
+#_bsp > div[class*=_] > * .q > div a p,
+#_H_Cb ._ > p,
+#__h_sl ._s .sp span,
+#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child + *:not(div) {
+  color: #707070;
+}
+
+[data-page=contact-index] #contact #back a,
+#hero_nav ul li a i {
+  color: #a3a3a3;
+}
+
+#hero[data-version=two][data-position=left] #__h_sl ul li a span,
+#hero_nav ul li a {
+  color: #0a0a0a;
+}
+
+#hero_nav ul li[data-stand-alone]:hover i,
+#hero_nav ul li[data-stand-alone] a i {
+  color: #ffffff;
+}
+
+#__l__ ._ti ._d,
+#_Bx .__i__ .c_ > ._xo ._t_ + .__,
+#_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
+footer#main .c__ a,
+#_bsp > div[class*=_] > * .q > div a {
+  color: #686868;
+}
+
+#about ._r ._a ._x #back a:hover,
+#about ._r ._a ._x #back a:active,
+[data-page=contact-index] #_c-s_ .ms ._c_ a,
+[data-page=contact-index] #_c-s_ .ms ._c_ p,
+[data-page=contact-index] #contact #back a:hover,
+[data-page=contact-index] #contact #back a:active,
+[data-page=contact-index] #contact ._f .spinner-validate i,
+[data-page=contact-index] #contact ._f[has-value=true] label,
+[data-page=contact-index] #contact ._f button,
+[data-page=contact-index] #contact ._f.tp select,
+#__l__ ._ti ._a a,
+#__l__ ._ti ._a- a:last-child,
+#__l__ ._ti ._a- a:first-child:hover,
+[data-blog=single] ._io_ ._ps_ a,
+#_bsp > div[class*=_] > * .q > div:hover .ic,
+#_bsp > div[class*=_] > * .q > div:hover h3,
+#_bsp > div[class*=_] > * .q > div:hover h4,
+#_bsp > div[class*=_] > * .q > div:hover h5,
+#_bsp > div[class*=_] > * .q > div:hover h6,
+#_bt_ ul li a,
+#_n_ ._ ._a ul li a i,
+#_n_ ._ ._a ul .you_are_with_me a,
+#hero_nav ul li:hover a i,
+#hero_nav ul .you_are_with_me a,
+#hero_nav ul .you_are_with_me a i,
+btn.anhoi-btn,
+a.anhoi-btn,
+#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
+#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
+#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child {
+  color: #1f77ff;
+}
+
+#RP .__i__ .c_ ._m_ .__c,
+#RP .__i__ .c_ > ._xo ._t_ a,
+[data-blog=single] ._io_ ._m_ > .__c,
+[data-blog=single] ._io_ ._t > *,
+[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
+#_Bx .__i__ .c_ ._m_ .__c,
+#_Bx .__i__ .c_ > ._xo ._t_ a,
+#hero[data-version=two][data-position=left] #__h_sl ul li a,
+#hero[data-version=two][data-position=left] ._y ._x .u > [class$=r] h2,
+#hero[data-version=two][data-position=left] ._y ._x .u > [class$=r] .name,
+#_psh ul li a,
+#_n_ #_r_ ._z + * {
+  color: #313131;
+}
+
+/** Success, Info, Warning and Danger */
+
+[data-blog=single] ._io_ ._ps_ .block.success {
+  background-color: #c3ffc0;
+  color: #448446;
+}
+
+[data-blog=single] ._io_ ._ps_ .block.info {
+  background-color: #d2d8ff;
+  color: #5f619c;
+}
+
+[data-blog=single] ._io_ ._ps_ .block.warning {
+  background-color: #fff2b3;
+  color: #755f43;
+}
+
+[data-blog=single] ._io_ ._ps_ .block.danger,
+#_psh.show div[class^=s] .a {
+  background-color: #ffcdc8;
+  color: #92574a;
+}
+
+[data-page=contact-index] #contact ._f [class*=feedback],
+#RP .__i__ .c_ ._m_ .d_,
+#_Bx .__i__ .c_ ._m_ .d_,
+#_Bx .__i__ .c_ ._m_ .__c,
+footer#main .c__ > p,
+#hero ._h_c_ a,
+#_bsp > div[class*=_] > * .q > div a p,
+#_psh div[class^=s] > .a span,
+#_psh div[class^=s] > .a,
+pre[class*=language] span.code-filename,
+#__h_sl ._s .sp span {
+  font-size: 14px;
+}
+
+#tm_ ._i .text,
+#_Bx > .__q__ > ._cn_ .__quote__ > blockquote cite {
+  font-size: 16px;
+}
+
+#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 {
+  font-weight: bold;
+}
+
+[data-page=contact-index] #_c-s_ .ms ._c_ h3 {
+  font-weight: normal;
+}
+
+[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:last-child {
+  font-size: 16px;
+}
+
+#_H_Cb ._ > p {
+  font-size: 20px;
+}
+
+#about ._r ._a ._x #back a,
+[data-page=contact-index] #_c-s_ .ms ._c_ a,
+[data-page=contact-index] #contact #back a,
+#changelog .log .t a,
+#__l__ ._ti ._a- a,
+[data-blog=single] ._io_ ._ps_ a[class*=__]:after,
+[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
+footer#main .c__ a,
+#hero ._h_c_ a,
+#hero[data-version=two][data-position=left] #__h_sl ul li a,
+#_bsp > div[class*=_] > * .q > div a,
+#_psh ul li a,
+#_n_ + #__toggler_mobile__ a,
+#_n_ #_r_ a,
+btn.anhoi-btn,
+a.anhoi-btn {
+  text-decoration: none;
+}
+
+#_n_ ._ ._a ul li a span {
+  text-transform: uppercase;
+}
+
+#about #s ._s ul li a,
+#about ._r ._a ._x > [class*=img],
+#about ._r ._a ._x,
+#hero[data-version=two] .u ._i h2 #typed .laravelicon,
+#hero[data-version=two] .anh_ [class*=_],
+#_pa [class*=pa],
+#_psh ul li a .ic,
+#_n_ #_r_ ._z,
+#__h_sl ._s ul li a {
+  line-height: 0;
+}
+
+#about ._r ._a .c h1,
+[data-page=contact-index] #contact ._f input,
+Why #why .head h2,
+Why #why .head h3,
+Why #why .head h4,
+Why #why .head h5,
+#tm_ ._i .l,
+#tm_ ._i h6,
+#changelog ul li[data-changelog^=_]:before,
+#changelog .log .t h2,
+#changelog .log .t h3,
+#changelog .log .t h4,
+.featureTheme .single .featureText h2,
+.featureTheme .single .featureText h3,
+.featureTheme .single .featureText h4,
+[data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
+[data-blog=single][data-version=two] ._io_ ._xo > .__,
+footer#main .c__ > p .laravel,
+#hero[data-version=two] .u ._i h2,
+#_psh div[class^=s] > .a,
+#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
+#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
+#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child + *:not(div) {
+  line-height: 1;
+}
+
+#dln .a,
+#changelog ul li {
+  line-height: 1.3;
+}
+
+#_pa [class*=pa] ._ {
+  line-height: 1.65;
+}
+
+#about ._r ._a .c .__xt,
+#about ._r ._a .c .__xb,
+#about ._r ._a .c,
+#RP .__i__ .c_ > ._xo ._t_,
+#RP .__i__ ._img_,
+.pC_ ._ ._b,
+#dln .d_c ._i,
+.featureTheme .featureImg > div,
+.demo ._ ._t,
+#_Bx .__i__ .c_ > ._xo ._t_ + .__,
+#_Bx .__i__ .c_ > ._xo ._t_,
+#_Bx .__i__ ._img_,
+#Ftr_P .__i__ .c_ ._t_,
+#Ftr_P .__i__ ._img_,
+#hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_],
+#_bsp > div[class*=_] > * .q h3,
+#_bsp > div[class*=_] > * .q h4,
+#_bsp > div[class*=_] > * .q h5,
+#_bsp > div[class*=_] > * .q h6,
+#_bsp > div[class*=_] > * .q > div {
+  overflow: hidden;
+}
+
+#about #s,
+#about ._r ._a ._x img,
+#about ._r ._a ._x #back,
+[data-page=contact-index] #_c-s_,
+[data-page=contact-index] #contact ._f .spinner-validate,
+[data-page=contact-index] #contact ._f label:not(.topic-label),
+#dln .b > *,
+#changelog ul li[data-changelog^=_]:before,
+.demo .x_,
+[data-blog=single] ._io_ ._ps_ ul li:before,
+[data-page=index] main#main,
+#hero[data-version=two] .u ._i h2 .typed-cursor:before,
+#hero[data-version=two] .anh_,
+#_pa [class*=pa] ._oh_waves_,
+#_bsp > div[class*=_] > *:first-of-type > .q .ic,
+#_bsp > div[class*=_] > * .q .ic,
+.__aw__,
+pre[class*=language] span.code-filename,
+#hero_nav ul li:before,
+._x0 ._a,
+._x0 ._b,
+#_x0 ._x0,
+#_x0 > div > ._a,
+#_x0 > div,
+#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
+#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
+#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child {
+  position: absolute;
+}
+
+#about ._r ._a .c .__xt,
+#about ._r ._a .c .__xb,
+#about ._r ._a .c,
+#about ._r ._a ._x > [class*=img],
+#about ._r ._a ._x,
+#hero[data-version=two],
+.___g--dark___[data-show=true],
+#_psh,
+#_n_ + #__toggler_mobile__,
+#_n_,
+#hero_nav,
+#_x0 {
+  position: fixed;
+}
+
+[data-page=contact-index] #_c-s_.show,
+#changelog ul li[data-changelog^=_]:before,
+#hero[data-version=two],
+.___g--dark___[data-show=true],
+.__aw__,
+#_n_[data-position=left],
+#hero_nav ul li:before,
+#hero_nav,
+#_x0 > div,
+#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
+#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child,
+#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child {
+  top: 0;
+  left: 0;
+}
+
+#dln .b > * {
+  top: 0;
+  right: 0;
+}
+
+#about ._r ._a ._x > [class*=img],
+#about ._r ._a ._x,
+.demo .x_,
+#_pa [class*=pa] ._oh_waves_[data-position=bottom],
+#_psh,
+#_n_ + #__toggler_mobile__ {
+  bottom: 0;
+  left: 0;
+}
+
+#about ._r ._a .c ._,
+[data-page=contact-index] #contact ._f,
+#RP .__i__ ._img_,
+.pC_ ._ ._b .bottom,
+.pC_ ._ ._b,
+#dln .d_c ._i,
+#dln .b,
+#changelog ul li,
+.featureTheme .featureImg > div,
+.demo ._ ._t,
+[data-blog=single] ._io_ ._ps_ a[class*=__],
+[data-blog=single] ._io_ ._ps_ ul li,
+#_Bx .__i__ ._img_,
+#Ftr_P .__i__ ._img_,
+main#main .Anh,
+#hero[data-version=two] .u ._i h2 .typed-cursor,
+#hero[data-version=two] ._y ._x,
+#_pa [class*=pa],
+#_bsp > div[class*=_] > * .q > div,
+pre[class*=language],
+#_n_ ._ ._a ul li a,
+#_n_[data-position=left] ._ ._s ._a ul li a i,
+#hero_nav ul li a,
+#hero_nav ul li,
+#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > *,
+#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > *,
+#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] {
+  position: relative;
+}
+
+[data-page=contact-index] #contact ._f input,
+[data-page=contact-index] #contact ._f textarea,
+[data-page=contact-index] #contact ._f label:not(.topic-label),
+[data-page=contact-index] #contact ._f button i,
+[data-page=contact-index] #contact ._f button,
+#RP .__i__ .c_ > ._xo,
+#RP .__i__ .c_,
+#changelog .log .t a,
+.demo ._ ._t img,
+#__l__ ._ti ._a- a,
+#_Bx .__i__ .c_ > ._xo,
+#_Bx .__i__ .c_,
+footer#main,
+#hero ._h_c_,
+#hero[data-version=two][data-position=left] ._y ._x .u > [class$=r],
+#hero *,
+#_psh div[class$=s],
+#_psh *,
+#_psh,
+#hero_nav ul li a span,
+#hero_nav ul li:before,
+#hero_nav,
+#_x0 {
+  transition: all 0.3s ease;
+}
+
+[data-page=contact-index] #_c-s_ {
+  transition: all 0.6s ease;
+}
+
+#hero[data-version=two][data-position=left] #__h_sl ._s ul li a .ic svg,
+#hero[data-version=two] .u ._i h2 {
+  transition: none !important;
+}
+
+#about #s,
+main#main .Anh > div[class*=__],
+main#main .Anh,
+#hero[data-version=two] ._z ._q,
+#hero,
+#_n_ ._ ._a ul li a i,
+#_n_ ._,
+#_n_ {
+  transition: all 0.45s cubic-bezier(0.23, 0.1, 0, 1.02);
+}
+
+#RP .__l_m > a i,
+#_Bx .__l_m > a i {
+  transition: all 2s ease;
+}
+
+/** cursor */
+
+#_psh div[class^=s] > .a {
+  cursor: pointer;
+}
+
+#_psh div[class^=s] > .a {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+/** Margin */
+
+#changelog .log .t h2,
+#changelog .log .t h3,
+#changelog .log .t h4,
+#__h_sl ._s ul {
+  margin-top: 0.5rem;
+}
+
+#tm_ ._i h6,
+#hero[data-version=two] .u ._i h2 {
+  margin-bottom: 0.5rem;
+}
+
+#RP .__i__ .c_ ._m_ ._ic,
+#changelog .c .i ._a > [class*=i]:last-child i,
+#__l__ ._ti ._a- a:first-child,
+#_psh ul li svg,
+#_psh div[class^=s] > .a:hover i,
+#_n_ #_r_ ._z {
+  margin-right: 0.5rem;
+}
+
+#__l__ ._ti ._a- a:last-child,
+#_psh div[class^=s] > .a span {
+  margin-left: 0.5rem;
+}
+
+[data-page=contact-index] #_c-s_ .ms ._c_ a,
+#_Bx > .__q__ > ._cn_ .__quote__ > blockquote cite,
+#hero[data-version=two] .u ._o {
+  margin-top: 0.85rem;
+}
+
+[data-page=contact-index] #_c-s_ .ms ._c_ h3,
+#RP .__i__ .c_ > ._xo ._t_,
+#tm_ .t h3,
+#tm_ .t h4,
+#tm_ .t h5,
+#changelog ul li,
+[data-blog=single] ._io_ ._ps_ ul li,
+[data-blog=single] ._io_ ._ps_ ol li,
+[data-blog=single] ._io_ ._ps_ .block p,
+#_Bx .__i__ .c_ > ._xo ._t_,
+#_pa [class*=pa] ._ .n h6,
+#_pa [class*=pa] ._ .a,
+#_H_Cb ._ ._x0,
+._ps_ div,
+._ps_ h1,
+._ps_ h2,
+._ps_ h3,
+._ps_ h4,
+._ps_ h5,
+._ps_ h6 {
+  margin-bottom: 0.85rem;
+}
+
+#about ._r ._a ._x #back a i,
+[data-page=contact-index] #contact #back a i,
+[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic,
+#hero ._h_c_ a i,
+#hero[data-version=two][data-position=left] #__h_sl ul li a .ic,
+#_H_Cb ._ ._x0 > [class$=svg],
+#__h_sl ._s ul li a {
+  margin-right: 0.85rem;
+}
+
+[data-page=contact-index] #contact ._f.tp select {
+  margin-left: 0.85rem;
+}
+
+#tm_ ._i .text,
+#tm_ ._i > img,
+[data-blog=single] ._io_ ._xo > .__,
+#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2,
+#_bt_,
+#__h_sl {
+  margin-top: 1.25rem;
+}
+
+[data-page=contact-index] #contact ._f button:hover i,
+[data-page=contact-index] #contact ._f button:focus i,
+#hero_nav ul li a span {
+  margin-left: 1.25rem;
+}
+
+[data-page=contact-index] #contact ._f,
+#changelog .log .t p,
+#changelog .log .t h2,
+#changelog .log .t h3,
+#changelog .log .t h4,
+#__l__ ._ti ._a-,
+#__l__ ._ti ._t h1,
+#__l__ ._ti ._t h2,
+[data-blog=single] ._io_ ._xo > .__,
+#_Bx .__i__ .c_ > ._xo ._t_ + .__,
+#hero_nav ul li {
+  margin-bottom: 1.25rem;
+}
+
+#RP .__l_m,
+#changelog ul,
+#__l__ ._ti ._t h1,
+#__l__ ._ti ._t h2,
+[data-blog=single][data-version=two] ._io_ ._m_,
+#_Bx .__l_m,
+#hero[data-version=two][data-position=left] #__h_sl,
+#_psh ul,
+#_n_[data-position=left] ._ ._s ._a ul,
+._ps_ div,
+._ps_ h1,
+._ps_ h2,
+._ps_ h3,
+._ps_ h4,
+._ps_ h5,
+._ps_ h6 {
+  margin-top: 2rem;
+}
+
+[data-page=contact-index] #contact #back,
+#tm_ ._i,
+#__l__ ._ti ._d,
+[data-blog=single][data-version=two] ._io_ ._m_,
+#_Bx > .__q__ > ._cn_ .__quote__,
+#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] {
+  margin-bottom: 2rem;
+}
+
+#RP,
+#hero[data-version=two] .u > [class$=r] {
+  margin-top: 3rem;
+}
+
+#RP,
+#changelog .log .t,
+#_H_Cb,
+#hero_nav ul li[data-stand-alone] {
+  margin-bottom: 3rem;
+}
+
+/** padding */
+
+#_bsp > div[class*=_] > *:first-of-type > .q {
+  padding-right: 0.5rem;
+}
+
+#_bsp > div[class*=_] > *:last-of-type .q {
+  padding-left: 0.5rem;
+}
+
+#about #s ._s ul li a,
+#_bsp > div[class*=_] > * .q > div {
+  padding: 0.85rem;
+}
+
+#about #s ._s [class*=y_],
+#_n_ ._ ._a {
+  padding-top: 0.85rem;
+}
+
+#about #s ._s [class*=y_],
+#changelog ul li,
+#_n_ ._ ._a {
+  padding-bottom: 0.85rem;
+}
+
+#_psh ul li a {
+  padding-right: 0.85rem;
+}
+
+#_psh ul li a {
+  padding-left: 0.85rem;
+}
+
+[data-page=contact-index] #contact form,
+#_pa {
+  padding-top: 1.25rem;
+}
+
+#_n_ ._ ._s {
+  padding-left: 1.25rem;
+}
+
+#_n_ ._ ._s {
+  padding-right: 1.25rem;
+}
+
+#_pa {
+  padding-bottom: 1.25rem;
+}
+
+#_pa [class*=pa] ._ {
+  padding: 2rem;
+}
+
+#hero[data-version=two][data-position=left] ._h_c_,
+#_bsp,
+#_psh div[class^=s] {
+  padding-top: 2rem;
+}
+
+#_pa [class*=pa] ._ .n {
+  padding-left: 2rem;
+}
+
+#_pa [class*=pa] ._ .n {
+  padding-right: 2rem;
+}
+
+#_bsp,
+#_psh div[class^=s] {
+  padding-bottom: 2rem;
+}
+
+#tm_ {
+  padding-top: 3rem;
+}
+
+#tm_,
+#__l__ ._ti {
+  padding-bottom: 3rem;
+}
+
+#about #s ._s [class*=y_],
+#hero[data-version=two] .u > [class$=r],
+#_bsp > div[class*=_] > *:first-of-type > .q > * {
+  padding-left: 3rem;
+}
+
+#about #s ._s [class*=y_],
+#_bsp > div[class*=_] > *:last-of-type .q > * {
+  padding-right: 3rem;
+}
+
+#hero[data-version=two][data-position=left] ._y ._x {
+  padding: unset;
+}
+
+/** Give Standar Padding/Margin for Block */
+
+#_Bx > .__q__ > ._cn_ ._g_ ._,
+[data-page=index] main#main .Anh,
+#hero[data-version=two] ._y ._x,
+#_H_Cb ._ {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+#RP > .__q__ > ._cn_ {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+@media (max-width: 768px) {
+  #RP > .__q__ > ._cn_ {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+[data-page=about] #AnhOi main,
+#hero[data-version=two],
+.___g--dark___[data-show=true],
+#_x0 > div,
+#_x0 {
+  height: 100vh;
+  width: 100%;
+}
+
+#about ._r ._a ._x > [class*=img],
+[data-page=contact-index] #_c-s_.show,
+#hero[data-version=two][data-position=left] ._y ._x,
+#_n_[data-position=left],
+#hero_nav {
+  height: 100vh;
+}
+
+#hero[data-version=two] ._z ._q,
+#hero_nav ul li:before {
+  height: 100%;
+}
+
+#about #s,
+[data-page=about] #AnhOi main .Anh .__o__ [class*=__],
+[data-page=contact-index] #_c-s_,
+[data-page=contact-index] #contact ._f input,
+[data-page=contact-index] #contact ._f textarea,
+*[id^=d_h] ._i,
+#dln .d_c ._i,
+.featureTheme .single .featureText > div,
+.demo .x_,
+[data-page=index] [data-layout-style=left] main#main .Anh,
+[data-page=index] main#main,
+#hero ._h_c_ a,
+#hero[data-version=two][data-position=left] #__h_sl ul li a,
+#hero[data-version=two][data-position=left] #__h_sl ul li,
+#_pa [class*=pa] ._oh_waves_,
+#_bsp > div[class*=_] > * .q > div a,
+#_psh,
+.__aw__,
+#_n_[data-position=left] ._ ._s ._a ul li,
+#_n_,
+#hero_nav ul li[data-stand-alone] a {
+  width: 100%;
+}
+
+[data-page=index] main#main .Anh {
+  width: 1120px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  [data-page=index] main#main .Anh {
+    width: 100% !important;
+  }
+}
+
+#intro,
+main#main .Anh > div[class*=__] > .__,
+#hero[data-version=two] ._y,
+#__pg__ > .__ {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  #intro,
+  main#main .Anh > div[class*=__] > .__,
+  #hero[data-version=two] ._y,
+  #__pg__ > .__ {
+    width: 100% !important;
+  }
+}
+
+#RP > .__q__,
+[data-blog=single] ._io_ ._ps_,
+#_pa,
+#_bsp {
+  width: 700px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  #RP > .__q__,
+  [data-blog=single] ._io_ ._ps_,
+  #_pa,
+  #_bsp {
+    width: 100% !important;
+  }
+}
+
+#RP .__i__,
+#_Bx .__i__,
+#_bsp > div[class*=_] > * {
+  width: 50%;
+}
+
+/** flex family */
+
+#about #s ._s,
+[data-page=contact-index] #_c-s_ .ms,
+[data-page=contact-index] #contact ._f label:not(.topic-label),
+[data-page=contact-index] #contact ._f.tp,
+#RP .__l_m,
+#RP .__i__ .c_ ._m_ ._ic,
+#RP .__i__ .c_ ._m_ .__c,
+#RP .__i__ .c_ ._m_,
+#RP > .__q__ > ._cn_ > .__sa,
+#changelog .c .i ._a > [class*=i]:last-child .d,
+#changelog .c .i ._a,
+.featureTheme .featureText > div,
+#__l__ ._ti ._a,
+#__l__ ._ti ._a-,
+#__l__ ._ti,
+[data-blog=single] ._io_ ._m_ > .__c,
+[data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
+[data-blog=single] ._io_ ._m_ > ._ad_,
+[data-blog=single] ._io_ ._m_,
+[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_],
+#_Bx .__l_m,
+#_Bx .__i__ .c_ ._m_ ._ic,
+#_Bx .__i__ .c_ ._m_ .__c,
+#_Bx .__i__ .c_ ._m_,
+#_Bx > .__q__ > ._cn_ .__quote__,
+#_Bx > .__q__ > ._cn_ > .__sa,
+#Ftr_P > .__f__ > .__ > ._p_,
+main#main .Anh > div[class*=__],
+#hero[data-version=two][data-position=left] #__h_sl ul li a,
+#hero[data-version=two] .u,
+#hero[data-version=two] ._y ._x,
+#hero[data-version=two] ._z ._q,
+#_pa [class*=pa] ._,
+#_bsp > div[class*=_] > * .q > div,
+#_bsp > div[class*=_],
+#_psh ul li a,
+#_H_Cb ._ ._x0,
+#__pg__ > .__ .pagination,
+#_n_ ._ ._a,
+#_n_ #_r_ a,
+#_n_[data-position=left] ._ ._s ._a ul,
+#hero_nav ul,
+#RP > .__q__ > ._cn_ ._g_ > div[class*=_],
+#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] {
+  display: flex;
+  display: -webkit-flex;
+}
+
+#about #s ._s,
+[data-page=contact-index] #_c-s_ .ms,
+#RP .__l_m,
+.featureTheme .featureText > div,
+#__l__ ._ti,
+[data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
+[data-blog=single] ._io_ ._m_,
+#_Bx .__l_m,
+#_Bx > .__q__ > ._cn_ .__quote__,
+#hero[data-version=two] ._z ._q,
+#_pa [class*=pa] ._,
+#_psh ul li a,
+#__pg__ > .__ .pagination,
+#RP > .__q__ > ._cn_ ._g_ > div[class*=_],
+#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] {
+  justify-content: center;
+}
+
+#about #s ._s,
+[data-page=contact-index] #_c-s_ .ms,
+#RP .__i__ .c_ ._m_ ._ic,
+#RP .__i__ .c_ ._m_,
+#changelog .c .i ._a > [class*=i]:last-child .d,
+#changelog .c .i ._a,
+#__l__ ._ti,
+[data-blog=single] ._io_ ._m_ > .__c,
+[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_],
+#_Bx .__i__ .c_ ._m_ ._ic,
+#_Bx .__i__ .c_ ._m_,
+#hero[data-version=two][data-position=left] #__h_sl ul li a,
+#hero[data-version=two] .u,
+#hero[data-version=two] ._z ._q,
+#_pa [class*=pa] ._,
+#_H_Cb ._ ._x0,
+#_n_ ._ ._a,
+#_n_ #_r_ a {
+  align-items: center;
+}
+
+.featureTheme .featureText > div,
+#hero[data-version=two][data-position=left] ._y ._x .u {
+  align-items: flex-start;
+}
+
+.featureTheme .featureText > div,
+#__l__ ._ti,
+[data-blog=single] ._io_ ._m_ > ._ad_ > ._a,
+#hero[data-version=two] ._z ._q,
+#_pa [class*=pa] ._,
+#_n_[data-position=left] ._ ._s ._a ul,
+#_n_[data-position=left] ._ ._s ._a,
+#hero_nav ul {
+  flex-direction: column;
+}
+
+[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_],
+#hero[data-version=two][data-position=left] #__h_sl ul li a {
+  flex-direction: row;
+}
+
+#RP > .__q__ > ._cn_ > .__sa,
+#_Bx > .__q__ > ._cn_ > .__sa,
+#Ftr_P > .__f__ > .__ > ._p_ {
+  flex-wrap: wrap;
+}
+
+#_bsp > div[class*=_] {
+  flex-wrap: nowrap;
+}
+
+#RP .__i__ .c_ ._m_,
+#changelog .c .i ._a,
+#_Bx .__i__ .c_ ._m_,
+#_bsp > div[class*=_],
+#_n_ ._ ._a {
+  justify-content: space-between;
+}
+
+#_bsp > div[class*=_] > *:first-of-type > .q,
+#_n_[data-position=left] ._ ._s ._a {
+  justify-content: flex-start;
+}
+
+#_bsp > div[class*=_] > *:last-of-type .q {
+  justify-content: flex-end;
+}
+
+/** Box Shadow */
+
+[data-page=contact-index] #contact ._f input:focus,
+[data-page=contact-index] #contact ._f textarea:focus,
+[data-page=contact-index] #contact ._f input,
+[data-page=contact-index] #contact ._f textarea,
+#RP .__i__ .c_ > ._xo,
+#RP .__i__ ._img_,
+#faq #faqContent .i,
+#tm_ ._i,
+.featureTheme .right .featureImg > div._bs_,
+.featureTheme .left .featureImg > div._bs_,
+.demo ._ ._t,
+#__l__ ._ti ._a a,
+#_Bx .__i__ .c_ > ._xo,
+#_Bx .__i__ ._img_,
+#_pa [class*=pa],
+#_psh div[class^=s] > .a,
+#_psh.show div[class^=s] {
+  box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.06);
+}
+
+#hero ._h_c_ a,
+#hero_nav ul li[data-stand-alone] a {
+  box-shadow: 0 12px 35px 0 rgba(31, 119, 255, 0.2);
+}
+
+#__l__ ._ti ._a a,
+[data-page=index] [data-theme=light] main#main .Anh > div[class*=__] {
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.1);
+}
+
+#about #s ._s [class*=y_],
+#tm_ ._i > img,
+#_fs ._ ._i ._b:hover,
+[data-blog=single] ._io_ ._xo > .__ img,
+#hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_],
+#_pa [class*=pa] ._ .a img {
+  box-shadow: 0 15px 32px rgba(0, 0, 0, 0.1);
+}
+
+[data-page=about] #AnhOi main .Anh .__o__,
+.pC_ ._ ._b.free,
+[data-page=theme-show] #_n_ ._ ._s,
+[data-page=index] [data-layout-style=left] main#main .Anh > div[class*=__] {
+  box-shadow: none !important;
+}
+
+#tm_ .____,
+#changelog .log,
+#_psh div[class^=s] {
+  margin: auto;
+}
+
+#about ._r ._a ._x #back a,
+[data-page=contact-index] #_c-s_ .ms ._c_ a,
+[data-page=contact-index] #contact ._f button,
+[data-page=contact-index] #contact ._f input,
+[data-page=contact-index] #contact ._f textarea,
+#tm_ ._i,
+#changelog ul li[data-changelog^=_]:before,
+#changelog .log .t a,
+[data-blog=single] ._io_ ._ps_ a,
+[data-blog=single] ._io_ ._ps_ .block,
+[data-blog=single] ._io_ ._ps_ code:not([class*=language]),
+[data-blog=single] ._io_ ._xo > .__ img,
+main#main .Anh > div[class*=__],
+#hero ._h_c_ a,
+#_pa [class*=pa],
+#_bsp > div[class*=_] > * .q > div,
+#_psh ul li a,
+#_psh div[class^=s],
+pre[class*=language] span.code-filename,
+pre[class*=language],
+pre[class*=language][data-line-numbers=false],
+#_bt_ ul li a,
+#_n_ ._ ._s,
+#hero_nav ul li:before,
+#hero_nav ul li[data-stand-alone] a {
+  border-radius: 0.2rem;
+}
+
+#about #s ._s ul li a,
+#about #s ._s [class*=y_],
+#RP .__i__ .c_ > ._xo,
+#RP .__i__ ._img_,
+#faq #faqContent .i,
+.pC_ ._ ._b,
+*[id^=d_h] .a > *,
+#dln .d_c > *,
+#changelog .c,
+.featureTheme .right .featureImg > div,
+.featureTheme .left .featureImg > div,
+.demo ._ ._t,
+#_fs ._ ._i ._b,
+#__l__ ._ti ._a- a,
+#_Bx .__i__ .c_ > ._xo,
+#_Bx .__i__ ._img_ {
+  border-radius: 0.35rem;
+}
+
+#tm_ ._i > img,
+#__l__ ._ti ._a a,
+[data-blog=single] ._io_ ._m_ > ._ad_ img,
+#hero[data-version=two][data-position=left] ._y ._x > [class$=_] > [class^=_],
+#_pa [class*=pa] ._ .a img,
+#_n_ + #__toggler_mobile__ a {
+  border-radius: 50%;
+}
+
+ol,
+ul,
+#changelog .c .i ._a h4,
+#changelog .c .i ._a h5,
+#changelog .c .i ._a h6,
+#_fs ._ h6,
+#__l__ ._ti ._t > *,
+[data-blog=single] ._io_ ._ps_ .block p:last-child,
+[data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *,
+#_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
+footer#main .c__ > p,
+#hero[data-version=two] .u ._o p,
+#_pa [class*=pa] ._ .n h6,
+#_bsp > div[class*=_] > * .q > div a *,
+#_H_Cb ._ ._x0 * h1,
+#_H_Cb ._ ._x0 * h2,
+#_H_Cb ._ ._x0 * h3,
+#_H_Cb ._ ._x0 * h4,
+#_H_Cb ._ ._x0 * h5 * h6,
+#__pg__ > .__ .pagination,
+#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
+#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
+#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child + *:not(div) {
+  margin: 0;
+  padding: 0;
+}
+
+#about #s ._s ul,
+#changelog ul,
+[data-blog=single] ._io_ ._ps_ ul,
+#_psh ul,
+#__pg__ > .__ .pagination,
+#_n_ ._ ._a ul,
+#hero_nav ul,
+#__h_sl ._s ul {
+  list-style: none;
+}
+
+#_Bx > .__q__ > ._cn_ .__quote__ > blockquote cite,
+#hero[data-version=two][data-position=left] ._h_c_,
+#hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span.name,
+#hero_nav ul li a,
+#hero[data-position=left] #hero_nav.slided,
+#hero[data-position=left] #hero_nav,
+#hero[data-position=left] #hero_nav_toggler {
+  display: block;
+}
+
+#about #s ._s ul li a,
+#about #s ._s ul li,
+[data-page=contact-index] #_c-s_ .ms ._c_ a,
+*[id^=d_h] ._i,
+#dln .d_c ._i,
+#tm_ ._tm ._s ._,
+#changelog .log .t a,
+.featureTheme .single .featureText > div,
+#__l__ ._ti ._a a,
+#hero ._h_c_ a,
+#hero[data-version=two][data-position=left] #__h_sl ul li a span,
+#hero[data-version=two][data-position=left] #__h_sl ul li a .ic,
+#hero[data-version=two] .u ._i h2 #typed .laravelicon svg,
+#_psh ul li,
+#_psh div[class^=s] > .a,
+#_bt_ ul li,
+#_n_ + #__toggler_mobile__ a,
+#_n_ ._ ._a ul li,
+#_n_[data-position=left] ._ ._s ._a ul li a i,
+#_n_[data-position=left] ._ ._s ._a ul li a,
+#hero_nav ul li[data-stand-alone] a,
+#__h_sl ._s ul li a,
+#__h_sl ._s ul li {
+  display: inline-block;
+}
+
+::-moz-selection {
+  background: #1f77ff;
+  color: #f7f7f7;
+}
+
+[data-page=contact-index] #_c-s_ .ms ._c_ a:hover,
+[data-page=contact-index] #contact ._f button:hover,
+[data-page=contact-index] #contact ._f button:focus,
+.pC_ ._ ._b,
+*[id^=d_h] .a .z,
+#dln .d_c > *,
+#changelog ul li[data-changelog^=_]:before,
+#changelog .log .t a,
+#__l__ ._ti ._a- a:last-child:hover,
+#__l__ ._ti ._a- a:first-child,
+[data-blog=single] ._io_ ._ps_ a:hover,
+::selection,
+#hero ._h_c_ a,
+#_psh div[class^=s] > .a,
+#_n_ + #__toggler_mobile__ a,
+#hero_nav ul li[data-stand-alone] a {
+  background: #1f77ff;
+  color: #f7f7f7;
+}
+
+*[id^=d_h] .a .y {
+  background: #ff0b39;
+  color: #f7f7f7;
+}
+
+[data-page=contact-index] #contact ._f button,
+#faq #faqContent .i[data-faq=expand],
+#__l__ ._ti ._a- a:last-child,
+#__l__ ._ti ._a- a:first-child {
+  border: 2px solid #1f77ff;
+}
+
+[data-page=contact-index] #_c-s_ .ms ._c_ a,
+#_bsp > div[class*=_] > * .q > div:hover {
+  border: 1px solid #1f77ff;
+}
+
+#_pa [class*=pa] {
+  border: 1px solid #d2d8ff;
+}
+
+.material-icons,
+#tm_ ._i .n svg,
+#__l__ ._ti ._a- a i,
+[data-blog=single] ._io_ ._ps_ a[class*=__]:after,
+[data-blog=single] ._io_ ._m_ > .__c ._ic svg,
+footer#main .c__ > p .laravel {
+  vertical-align: middle;
+}
+
+[data-theme=light],
+[data-background-color=light],
+pre[class*=language][data-color*=light] {
+  background: #f7f7f7;
+}
+
+[data-background-color=white],
+#about #s ._s [class*=y_],
+#about ._r ._a .c ._ > .rx,
+#about ._r ._a .c::-webkit-scrollbar-track,
+#about ._r ._a ._x #back a:hover,
+#about ._r ._a ._x #back a:active,
+[data-page=contact-index] #_c-s_.show,
+[data-page=contact-index] #contact #back a:hover,
+[data-page=contact-index] #contact #back a:active,
+[data-page=contact-index] #contact ._f button,
+#RP .__i__ .c_ > ._xo,
+#tm_ ._i,
+#changelog .c,
+#__l__ ._ti ._a- a:last-child,
+#__l__ ._ti ._a- a:first-child:hover,
+#_Bx .__i__ .c_ > ._xo,
+footer#main,
+[data-theme=light] main#main .Anh > div[class*=__],
+#_psh.show div[class^=s],
+#_n_ ._ ._s,
+#_n_[data-position=left],
+#hero_nav {
+  background: #ffffff;
+}
+
+#_bt_ ul li a {
+  background: #dddfff;
+}
+
+#hero_nav ul li:before {
+  background: #1f77ff;
+}
+
+[data-blog=single] ._io_ ._ps_ .block p,
+[data-blog=single] ._io_ ._ps_ .block span,
+#_bt_ ul li a {
+  font-family: "HK Grotesk", Roboto, Ubuntu, sans-serif !important;
+}
+
+[data-blog=single] ._io_ ._ps_ ul,
+[data-blog=single] ._io_ ._ps_ ol,
+#_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
+._ps_ div,
+._ps_ h1,
+._ps_ h2,
+._ps_ h3,
+._ps_ h4,
+._ps_ h5,
+._ps_ h6,
+._ps_ p {
+  font-family: "Lora", serif !important;
+}
+
+[data-blog=single] ._io_ ._ps_ code:not([class*=language]),
+pre[class*=language] code,
+pre[class*=language] .line-number {
+  font-family: "Courier Prime", monospace !important;
+}
+
+#tm_ ._i .n svg {
+  height: 16px;
+  width: 16px;
+}
+
+[data-page=contact-index] #_c-s_ .ms,
+.madewith,
+Why #why,
+.pC_ ._ ._b .bottom,
+.pC_.single .head,
+*[id^=d_h] .a > *,
+#tm_ .t,
+#changelog .log .t,
+.featureTheme .single,
+.demo .x_,
+#_fs ._ ._i,
+[data-blog=single] ._io_ ._t,
+#_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
+footer#main > div[class*=_] > div,
+#hero ._h_c_ a,
+#_pa [class*=pa] ._ .n,
+#_psh,
+#_n_[data-position=left] ._ ._s,
+#hero_nav ul li[data-stand-alone] {
+  text-align: center;
+}
+
+#changelog .c .i ._a > [class*=i]:last-child,
+#_bsp > div[class*=_] > *:first-of-type > .q > * {
+  text-align: right;
+}
+
+.madewith .x,
+.pC_ .x {
+  position: absolute;
+  border-radius: 50%;
+}
+
+[data-blog=single] ._io_ ._m_ > ._ad_ > ._a > *:first-child {
+  font-weight: 700;
+}
+
+/** Global Main Heading with icon beside */
+
+#Ftr_P > .__f__ > .__ ._mh_ {
+  /** child pertama harus memiliki class disertai _ (underscore) */
+}
+
+#Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child + *:not(div) {
+  padding-left: 30px;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+/** Global Main Heading Center with icon beside */
+
+#RP > .__q__ > ._cn_ ._g_,
+#_Bx > .__q__ > ._cn_ ._g_ {
+  /** child pertama harus memiliki class disertai _ (underscore) */
+}
+
+#RP > .__q__ > ._cn_ ._g_ > div[class*=_],
+#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] {
+  margin-bottom: 1.5rem;
+}
+
+#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > *,
+#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * {
+  display: inline-flex;
+}
+
+#RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
+#_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div) {
+  padding-left: 30px;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+[data-page=contact-index] #contact ._f .spinner-validate {
+  -webkit-animation: rotate 1s infinite;
+          animation: rotate 1s infinite;
 }
 
 h1,
@@ -2961,6 +3061,10 @@ footer#main > div[class*=_] {
   padding: 60px 0;
 }
 
+footer#main .c__ > p {
+  margin-bottom: 0.3rem;
+}
+
 footer#main .c__ > p .laravel svg {
   width: 18px;
   height: 18px;
@@ -3111,7 +3215,7 @@ footer#main .c__ > p i {
 }
 
 [data-blog=single] ._io_ ._m_ > ._ad_ img {
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -3778,6 +3882,129 @@ Why #why .head h5 {
 
 #RP .__l_m > a:hover i {
   transform: rotate(360deg);
+}
+
+[data-page=contact-index] {
+  /** When message success to send */
+}
+
+[data-page=contact-index] #contact {
+  width: 540px;
+  margin: auto;
+  /** Back */
+}
+
+[data-page=contact-index] #contact ._f.tp select {
+  border: none;
+  width: 250px;
+  font-size: 18px;
+}
+
+[data-page=contact-index] #contact ._f input,
+[data-page=contact-index] #contact ._f textarea {
+  border: 2px solid #f7f7f7;
+  font-size: 18px;
+}
+
+[data-page=contact-index] #contact ._f input[class*=invalid],
+[data-page=contact-index] #contact ._f textarea[class*=invalid] {
+  border: 2px solid #f56b6b;
+}
+
+[data-page=contact-index] #contact ._f button {
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+}
+
+[data-page=contact-index] #contact ._f button i {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+[data-page=contact-index] #contact ._f label:not(.topic-label) {
+  color: #a3a3a3;
+  left: 1rem;
+  top: 14px;
+}
+
+[data-page=contact-index] #contact ._f label:not(.topic-label) span {
+  margin-left: 0.3rem;
+}
+
+[data-page=contact-index] #contact ._f label:not(.topic-label) i {
+  font-size: 20px;
+}
+
+[data-page=contact-index] #contact ._f[has-value=true] input,
+[data-page=contact-index] #contact ._f[has-value=true] textarea {
+  padding: 30px 15px 8px 15px;
+}
+
+[data-page=contact-index] #contact ._f[has-value=true] label {
+  font-size: 12px;
+  top: 10px;
+}
+
+[data-page=contact-index] #contact ._f[has-value=true] label i {
+  font-size: 16px;
+}
+
+[data-page=contact-index] #contact ._f[data-input-email=wrong] label {
+  color: red;
+}
+
+[data-page=contact-index] #contact ._f[data-input-email=wrong] input {
+  border-color: red !important;
+}
+
+[data-page=contact-index] #contact ._f .spinner-validate {
+  top: 19px;
+  right: 19px;
+}
+
+[data-page=contact-index] #contact ._f .spinner-validate[data-has-validate=true] {
+  -webkit-animation: none !important;
+          animation: none !important;
+}
+
+[data-page=contact-index] #contact ._f .spinner-validate i {
+  font-size: 20px;
+}
+
+[data-page=contact-index] #contact ._f [class*=feedback][class*=invalid] {
+  color: #f56b6b;
+}
+
+[data-page=contact-index] #contact ._f textarea {
+  height: 175px;
+}
+
+[data-page=contact-index] #contact #back a i {
+  font-size: 22px;
+}
+
+[data-page=contact-index] #_c-s_ {
+  top: -100vh;
+  z-index: 1;
+  left: 0;
+  transition: background-color 0.2s ease;
+  /** move container to down */
+}
+
+[data-page=contact-index] #_c-s_ .ms {
+  height: 100%;
+}
+
+[data-page=contact-index] #_c-s_ .ms ._c_ h3 {
+  font-size: 26px;
+}
+
+[data-page=contact-index] #_c-s_ .ms ._c_ a {
+  padding: 0.5rem 1rem;
+}
+
+[data-page=contact-index] #_c-s_ .ms ._c_ a i {
+  font-size: 20px;
 }
 
 /** Redefined style for about page */

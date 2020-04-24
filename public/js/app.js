@@ -102,6 +102,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _front_pages_about__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./front/pages/about */ "./resources/js/front/pages/about.js");
 /* harmony import */ var _front_pages_blog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./front/pages/blog */ "./resources/js/front/pages/blog.js");
 /* harmony import */ var _front_pages_template_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./front/pages/template-page */ "./resources/js/front/pages/template-page.js");
+/* harmony import */ var _front_pages_contact__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./front/pages/contact */ "./resources/js/front/pages/contact.js");
+
 
 
 
@@ -524,6 +526,81 @@ if (Object(_routes_function__WEBPACK_IMPORTED_MODULE_2__["isSingleBlog"])()) {
 
 /***/ }),
 
+/***/ "./resources/js/front/pages/contact.js":
+/*!*********************************************!*\
+  !*** ./resources/js/front/pages/contact.js ***!
+  \*********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _routes_function__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../routes_function */ "./resources/js/front/routes_function.js");
+
+
+if (Object(_routes_function__WEBPACK_IMPORTED_MODULE_0__["isContact"])()) {
+  /** 
+  * Validate Email
+  * Get it from stackoverflow 
+  * https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
+  *
+  */
+  var validateEmail = function validateEmail(email) {
+    var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return emailRegex.test(email);
+  };
+
+  var validate = function validate(inputEmail, email) {
+    var spinnerValidate = document.getElementsByClassName('spinner-validate')[0];
+    var spinnerIcon = spinnerValidate.querySelector('i');
+
+    if (validateEmail(email)) {
+      spinnerValidate.dataset.hasValidate = "true";
+      spinnerIcon.textContent = "check";
+      inputEmail.parentElement.dataset.validate = "true";
+    } else {
+      spinnerValidate.dataset.hasValidate = "false";
+      spinnerIcon.textContent = "sync";
+      inputEmail.parentElement.dataset.validate = "false";
+    }
+  };
+
+  var inputFocus = function inputFocus(event) {
+    event.target.parentElement.setAttribute('has-value', 'true');
+  };
+
+  var inputBlur = function inputBlur(event) {
+    event.target.parentElement.removeAttribute('has-value');
+
+    if (event.target.value.length > 0) {
+      event.target.parentElement.setAttribute('has-value', 'true');
+    }
+  };
+
+  window.addEventListener('DOMContentLoaded', function () {
+    var fi = document.querySelectorAll("form .fi");
+    var i = 0;
+
+    for (; i < fi.length; i++) {
+      if (fi[i].getAttribute('id') === "email") {
+        (function () {
+          var inputEmail = fi[i];
+          inputEmail.addEventListener('keyup', function () {
+            setTimeout(function () {
+              validate(inputEmail, inputEmail.value);
+            }, 500);
+          });
+        })();
+      }
+
+      fi[i].addEventListener('focus', inputFocus);
+      fi[i].addEventListener('blur', inputBlur);
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/front/pages/home.js":
 /*!******************************************!*\
   !*** ./resources/js/front/pages/home.js ***!
@@ -677,7 +754,7 @@ if (_routes_function__WEBPACK_IMPORTED_MODULE_0__["isTemplate"]) {
 /*!***********************************************!*\
   !*** ./resources/js/front/routes_function.js ***!
   \***********************************************/
-/*! exports provided: isIndex, isAbout, isSingleBlog, isTemplate */
+/*! exports provided: isIndex, isAbout, isSingleBlog, isTemplate, isContact */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -686,6 +763,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isAbout", function() { return isAbout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isSingleBlog", function() { return isSingleBlog; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isTemplate", function() { return isTemplate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isContact", function() { return isContact; });
 function isIndex() {
   if (currentRouteName === "index") {
     return true;
@@ -706,6 +784,12 @@ function isSingleBlog() {
 
 function isTemplate() {
   if (currentRouteName === "theme.show") {
+    return true;
+  }
+}
+
+function isContact() {
+  if (currentRouteName === "contact.index") {
     return true;
   }
 }

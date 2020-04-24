@@ -13,6 +13,7 @@ footer#main {
             @extend %muted;
             @extend %small;
             @extend %reset;
+            margin-bottom: .3rem;
             .laravel {
                 @extend %reset-line-height;
                 @extend %vertical-align-middle;

@@ -112,6 +112,10 @@
     font-weight: bold;
 }
 
+%font-weight-normal {
+    font-weight: normal;
+}
+
 %default-font-size {
     font-size:  $main-font-size;
 }
@@ -187,6 +191,10 @@
 
 %transition {
     @include transition(all 0.3s ease);
+}
+
+%transition2x {
+    @include transition(all 0.6s ease);
 }
 
 %remove-transition {
@@ -993,4 +1001,9 @@
             }
         }
     }
+}
+
+
+%rotate {
+    animation: rotate 1s infinite;
 }

@@ -16,11 +16,16 @@ function isSingleBlog() {
     }
 }
 
-
 function isTemplate() {
     if(currentRouteName === "theme.show") {
         return true;
     }
 }
 
-export {isIndex, isAbout, isSingleBlog, isTemplate};
+function isContact() {
+    if(currentRouteName === "contact.index") {
+        return true;
+    }
+}
+
+export {isIndex, isAbout, isSingleBlog, isTemplate, isContact};

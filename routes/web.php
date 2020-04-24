@@ -15,6 +15,9 @@ Auth::routes();
 
 Route::get('/', 'IndexController@index')->name('index');
 Route::get('/about', 'AboutController@index')->name('about');
+Route::resource('/contact', 'ContactController', array(
+	'only' => array('index', 'store')
+));
 
 /** Route : blog/ */
 Route::prefix('/blog')->group(function() {

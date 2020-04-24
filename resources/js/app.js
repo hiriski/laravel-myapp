@@ -4,6 +4,7 @@ import './front/pages/home';
 import './front/pages/about';
 import './front/pages/blog';
 import './front/pages/template-page';
+import './front/pages/contact';
 
 // const removePreload = () => {
 //     setTimeout(() => {

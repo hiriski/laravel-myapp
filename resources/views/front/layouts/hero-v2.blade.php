@@ -17,7 +17,7 @@
                             @include('front.components.social-links')
 
                             <div class="_h_c_">
-                                <a href="#"><i class="material-icons">send</i> <span>Send me message</span></a>
+                                <a href="{{ route('contact.index') }}"><i class="material-icons">send</i> <span>Send me message</span></a>
                             </div>
                         </div>
                     </div>
