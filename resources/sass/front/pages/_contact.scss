@@ -1,10 +1,27 @@
 [data-page=contact-index] {
+    &[data-theme=light]  {
+        main#main .Anh > div[class*=__] {
+            @extend %remove-background-color;
+        }
+        footer#main {
+            @extend %remove-background-color;
+        }
+    }
+
+    ._wave_ {
+        @extend %fixed;
+        @extend %top-left;
+        height: auto;
+        @extend %full-width;
+        z-index: -1;
+    }
+    
     #contact {
         width: 540px;
         margin: auto;
         ._h_ {
             h1 {
-                @extend %muted;
+                @extend %primary-color;
                 font-size: 30px;
             }
         }
@@ -15,26 +32,31 @@
             @extend %relative;
             @extend %margin-bottom;
             &.tp {
-                @extend %flex;
                 label {
-                    @extend %muted;
+                    @extend %gray;
+                    @extend %absolute;
+                    top: 5px;
+                    left: 18px;
+                    font-size: 15px;
                 }
                 select {
+                    @extend %border-default-light;
                     @extend %set-background-white;
-                    @extend %margin-left-xs;
-                    @extend %primary-color;
+                    @extend %border-thin-radius;
+                    @extend %full-width;
+                    @extend %bold;
                     border: none;
-                    width: 250px;
                     font-size: 18px;
+                    padding: 30px 15px 8px 15px;
                 }
             }
             input {
                 @extend %reset-line-height;
             }
             input, textarea {
+                @extend %border-default-transparent;
                 @extend %border-thin-radius;
                 @extend %box-shadow;
-                border: 2px solid $light;
                 font-size: 18px;
                 &[class*=invalid] {
                     border: 2px solid $error;
@@ -78,7 +100,7 @@
                 input,
                 textarea {
                     padding: 30px 15px 8px 15px;
-                    
+                    @extend %border-default-light;
                     &[class*=invalid] {
                         @extend %border-default-primary;
                     }
@@ -170,14 +192,13 @@
 
         /** Back */
         #back {
-            @extend %margin-bottom-lg;
+            @extend %margin-bottom;
             a {
                 @extend %gray;
                 @extend %text-decoration-none;
                 &:hover,
                 &:active {
                     @extend %primary-color;
-                    @extend %set-background-white;
                 }
                 i {
                     font-size: 22px;

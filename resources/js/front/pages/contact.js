@@ -81,9 +81,7 @@ if(isContact()) {
             input.addEventListener('focus', inputFocus);
             input.addEventListener('blur', inputBlur);
         });
-
     });
-
 }
 
 

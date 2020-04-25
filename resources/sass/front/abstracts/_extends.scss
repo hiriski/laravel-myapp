@@ -194,7 +194,15 @@
 }
 
 %transition2x {
-    @include transition(all 0.6s ease);
+    @include transition(all 0.5s ease);
+}
+
+%transition3x {
+    @include transition(all 0.9s ease);
+}
+
+%transition-slow {
+    @include transition(all 1s ease);
 }
 
 %remove-transition {
@@ -209,14 +217,9 @@
     @include transition(all 0.3s ease);
 }
 
-%animation2x {
-    @include transition(all 0.5s ease);
-}
-
 %animation-slow {
-    @include transition(all 2s ease);
+    @include transition(all 1s ease);
 }
-
 
 /** cursor */
 %cursor-pointer {
@@ -820,6 +823,9 @@
 }
 
 
+%border-default-light {
+    border: 2px solid #fbfbfb;
+}
 
 %border-default-primary {
     border: 2px solid $primary-color;
@@ -863,6 +869,10 @@
 
 %set-background-primary {
     background: $primary-color;
+}
+
+%remove-background-color {
+    background-color: transparent;
 }
 
 // Font Family

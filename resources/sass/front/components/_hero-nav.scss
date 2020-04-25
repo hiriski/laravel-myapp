@@ -1,3 +1,7 @@
+#hero #hero_nav {
+    @extend %transition;
+}
+
 #hero_nav_toggler {
     @extend %display-none;
 }
@@ -16,7 +20,6 @@
 }
 
 #hero_nav {
-    @extend %transition;
     width: $left-width;
     @extend %fixed;
     @extend %top-left;

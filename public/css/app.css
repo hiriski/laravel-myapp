@@ -465,8 +465,6 @@ footer#main .c__ > p:first-child > span:before {
 
 #about ._r ._a ._x #back a,
 [data-page=contact-index] #_c-s_ .ms ._c_ h3,
-[data-page=contact-index] #contact ._f.tp label,
-[data-page=contact-index] #contact ._h_ h1,
 #RP .__i__ .c_ ._m_ .d_,
 #tm_ ._i .text,
 #tm_ ._i .l,
@@ -486,6 +484,7 @@ footer#main .c__ > p,
 }
 
 [data-page=contact-index] #contact #back a,
+[data-page=contact-index] #contact ._f.tp label,
 #hero_nav ul li a i {
   color: #a3a3a3;
 }
@@ -517,7 +516,7 @@ footer#main .c__ a,
 [data-page=contact-index] #contact ._f .spinner-validate i,
 [data-page=contact-index] #contact ._f[data-has-value=true] label,
 [data-page=contact-index] #contact ._f button,
-[data-page=contact-index] #contact ._f.tp select,
+[data-page=contact-index] #contact ._h_ h1,
 #__l__ ._ti ._a a,
 #__l__ ._ti ._a- a:last-child,
 #__l__ ._ti ._a- a:first-child:hover,
@@ -598,6 +597,7 @@ pre[class*=language] span.code-filename,
   font-size: 16px;
 }
 
+[data-page=contact-index] #contact ._f.tp select,
 #hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 {
   font-weight: bold;
 }
@@ -713,6 +713,7 @@ footer#main .c__ > p .laravel,
 [data-page=contact-index] #_c-s_,
 [data-page=contact-index] #contact ._f .spinner-validate,
 [data-page=contact-index] #contact ._f label:not(.topic-label),
+[data-page=contact-index] #contact ._f.tp label,
 #dln .b > *,
 #changelog ul li[data-changelog^=_]:before,
 .demo .x_,
@@ -742,6 +743,8 @@ pre[class*=language] span.code-filename,
 #about ._r ._a .c,
 #about ._r ._a ._x > [class*=img],
 #about ._r ._a ._x,
+[data-page=contact-index] ._wave_,
+#hero #hero_nav_toggler,
 #hero[data-version=two],
 .___g--dark___[data-show=true],
 #_psh,
@@ -753,6 +756,7 @@ pre[class*=language] span.code-filename,
 }
 
 [data-page=contact-index] #_c-s_.show,
+[data-page=contact-index] ._wave_,
 #changelog ul li[data-changelog^=_]:before,
 #hero[data-version=two],
 .___g--dark___[data-show=true],
@@ -829,19 +833,21 @@ pre[class*=language],
 footer#main,
 #hero ._h_c_,
 #hero[data-version=two][data-position=left] ._y ._x .u > [class$=r],
-#hero *,
 #_psh div[class$=s],
 #_psh *,
 #_psh,
 #hero_nav ul li a span,
 #hero_nav ul li:before,
-#hero_nav,
+#hero #hero_nav,
 #_x0 {
   transition: all 0.3s ease;
 }
 
-[data-page=contact-index] #_c-s_ {
-  transition: all 0.6s ease;
+[data-page=contact-index] #_c-s_,
+#hero[data-version=two] ._z ._q,
+#hero *,
+#hero {
+  transition: all 0.5s ease;
 }
 
 #hero[data-version=two][data-position=left] #__h_sl ._s ul li a .ic svg,
@@ -852,8 +858,6 @@ footer#main,
 #about #s,
 main#main .Anh > div[class*=__],
 main#main .Anh,
-#hero[data-version=two] ._z ._q,
-#hero,
 #_n_ ._ ._a ul li a i,
 #_n_ ._,
 #_n_ {
@@ -862,7 +866,7 @@ main#main .Anh,
 
 #RP .__l_m > a i,
 #_Bx .__l_m > a i {
-  transition: all 2s ease;
+  transition: all 1s ease;
 }
 
 /** cursor */
@@ -899,7 +903,6 @@ main#main .Anh,
   margin-right: 0.5rem;
 }
 
-[data-page=contact-index] #contact ._f.tp select,
 #__l__ ._ti ._a- a:last-child,
 #_psh div[class^=s] > .a span {
   margin-left: 0.5rem;
@@ -964,6 +967,7 @@ main#main .Anh,
   margin-left: 1.25rem;
 }
 
+[data-page=contact-index] #contact #back,
 [data-page=contact-index] #contact ._f,
 #changelog .log .t p,
 #changelog .log .t h2,
@@ -997,7 +1001,6 @@ main#main .Anh,
   margin-top: 2rem;
 }
 
-[data-page=contact-index] #contact #back,
 #tm_ ._i,
 #__l__ ._ti ._d,
 [data-blog=single][data-version=two] ._io_ ._m_,
@@ -1165,6 +1168,8 @@ main#main .Anh,
 [data-page=contact-index] #_c-s_,
 [data-page=contact-index] #contact ._f input,
 [data-page=contact-index] #contact ._f textarea,
+[data-page=contact-index] #contact ._f.tp select,
+[data-page=contact-index] ._wave_,
 *[id^=d_h] ._i,
 #dln .d_c ._i,
 .featureTheme .single .featureText > div,
@@ -1240,7 +1245,6 @@ main#main .Anh > div[class*=__] > .__,
 #about #s ._s,
 [data-page=contact-index] #_c-s_ .ms,
 [data-page=contact-index] #contact ._f label:not(.topic-label),
-[data-page=contact-index] #contact ._f.tp,
 #RP .__l_m,
 #RP .__i__ .c_ ._m_ ._ic,
 #RP .__i__ .c_ ._m_ .__c,
@@ -1433,6 +1437,7 @@ main#main .Anh > div[class*=__],
 [data-page=contact-index] #contact ._f button,
 [data-page=contact-index] #contact ._f input,
 [data-page=contact-index] #contact ._f textarea,
+[data-page=contact-index] #contact ._f.tp select,
 #tm_ ._i,
 #changelog ul li[data-changelog^=_]:before,
 #changelog .log .t a,
@@ -1588,6 +1593,12 @@ footer#main .c__ > p,
   color: #f7f7f7;
 }
 
+[data-page=contact-index] #contact ._f[data-has-value=true] input,
+[data-page=contact-index] #contact ._f[data-has-value=true] textarea,
+[data-page=contact-index] #contact ._f.tp select {
+  border: 2px solid #fbfbfb;
+}
+
 [data-page=contact-index] #contact ._f[data-has-value=true] input[class*=invalid],
 [data-page=contact-index] #contact ._f[data-has-value=true] textarea[class*=invalid],
 [data-page=contact-index] #contact ._f button,
@@ -1595,6 +1606,11 @@ footer#main .c__ > p,
 #__l__ ._ti ._a- a:last-child,
 #__l__ ._ti ._a- a:first-child {
   border: 2px solid #1f77ff;
+}
+
+[data-page=contact-index] #contact ._f input,
+[data-page=contact-index] #contact ._f textarea {
+  border: 2px solid transparent;
 }
 
 [data-page=contact-index] #_c-s_ .ms ._c_ a,
@@ -1628,8 +1644,6 @@ pre[class*=language][data-color*=light] {
 #about ._r ._a ._x #back a:hover,
 #about ._r ._a ._x #back a:active,
 [data-page=contact-index] #_c-s_.show,
-[data-page=contact-index] #contact #back a:hover,
-[data-page=contact-index] #contact #back a:active,
 [data-page=contact-index] #contact ._f button,
 [data-page=contact-index] #contact ._f.tp select,
 #RP .__i__ .c_ > ._xo,
@@ -1653,6 +1667,11 @@ footer#main,
 
 #hero_nav ul li:before {
   background: #1f77ff;
+}
+
+[data-page=contact-index][data-theme=light] footer#main,
+[data-page=contact-index][data-theme=light] main#main .Anh > div[class*=__] {
+  background-color: transparent;
 }
 
 [data-blog=single] ._io_ ._ps_ .block p,
@@ -2143,7 +2162,7 @@ textarea::placeholder {
 }
 
 #_n_ ._ ._s {
-  border: 1px solid #e6e6e9;
+  border: 1px solid #e6e6ff;
 }
 
 #_n_ ._ ._a ul {
@@ -2992,6 +3011,12 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
   font-size: 20px;
 }
 
+#hero #hero_nav_toggler {
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+}
+
 /** Style for layout left */
 
 [data-page=index] {
@@ -3019,10 +3044,6 @@ main#main .Anh > div[class*=__] {
 
 [data-page=blog-category-show] main#main .Anh > div[class*=__] {
   padding-top: 125px;
-}
-
-[data-page=blog-category-show] #_Bx > .__q__ {
-  padding: unset;
 }
 
 #Ftr_P {
@@ -3891,6 +3912,11 @@ Why #why .head h5 {
   /** When message success to send */
 }
 
+[data-page=contact-index] ._wave_ {
+  height: auto;
+  z-index: -1;
+}
+
 [data-page=contact-index] #contact {
   width: 540px;
   margin: auto;
@@ -3901,15 +3927,20 @@ Why #why .head h5 {
   font-size: 30px;
 }
 
+[data-page=contact-index] #contact ._f.tp label {
+  top: 5px;
+  left: 18px;
+  font-size: 15px;
+}
+
 [data-page=contact-index] #contact ._f.tp select {
   border: none;
-  width: 250px;
   font-size: 18px;
+  padding: 30px 15px 8px 15px;
 }
 
 [data-page=contact-index] #contact ._f input,
 [data-page=contact-index] #contact ._f textarea {
-  border: 2px solid #f7f7f7;
   font-size: 18px;
 }
 
@@ -4296,6 +4327,10 @@ body {
     height: 480px;
   }
 
+  #AnhOi #hero[data-version=two] .u ._o {
+    font-size: 17px;
+  }
+
   #AnhOi #hero[data-version=two] .u > [class$=r] {
     padding-left: 1rem;
   }
@@ -4572,7 +4607,7 @@ body {
 
   #AnhOi #hero[data-version=two] .anh_:before {
     content: "";
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     position: absolute;
     top: 0;
     left: 0;
@@ -4592,6 +4627,15 @@ body {
     display: none;
   }
 
+  #AnhOi #hero #hero_nav_toggler {
+    display: inline-block;
+  }
+
+  #AnhOi #hero #hero_nav.show {
+    margin-left: 0;
+    display: block;
+  }
+
   ._ps_ div,
   ._ps_ p {
     font-size: 16px;
@@ -4606,6 +4650,30 @@ body {
 }
 
 @media (max-width: 480px) {
+  [data-page=index] main#main {
+    top: 100vh;
+  }
+
+  #AnhOi {
+    /** Hero style for mobile */
+  }
+
+  #AnhOi #hero[data-version=two] {
+    height: 100vh;
+  }
+
+  #AnhOi #hero[data-version=two] ._y ._x {
+    height: 100vh;
+  }
+
+  #AnhOi #hero[data-version=two] .anh_ [class*=_] img {
+    height: 100vh;
+  }
+
+  #AnhOi #hero[data-version=two] .u ._i h2 {
+    font-size: 27px;
+  }
+
   /** post */
 
   [data-blog=single] ._io_ ._t {

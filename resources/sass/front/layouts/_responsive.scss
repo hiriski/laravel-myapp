@@ -111,6 +111,10 @@
         #hero {
             &[data-version=two] {
                 height: $hero-height;
+                
+                .u ._o {
+                    font-size: 17px;
+                }
                 .u {
                     > [class$=r] {
                         padding-left: 1rem;
@@ -389,7 +393,7 @@
                     }
                     &:before {
                         content: "";
-                        background-color: rgba($white, 0.9);
+                        background-color: rgba($white, 0.95);
                         position: absolute;
                         top: 0;
                         left: 0;
@@ -413,6 +417,15 @@
                     }
                 }
             }
+
+            #hero_nav_toggler {
+                display: inline-block;
+            }
+
+            #hero_nav.show {
+                margin-left: 0;
+                display: block;
+            }
         }
     }
     ._ps_ div, ._ps_ p {
@@ -431,6 +444,43 @@
 
 
 @media #{$mobile} {
+    $hero-height: 100vh;
+    [data-page=index] main#main {
+        top: $hero-height;
+    }
+    #AnhOi {
+        /** Hero style for mobile */
+        #hero {
+            &[data-version=two] {
+                height: $hero-height;
+                ._y {
+                    ._x {
+                        height: $hero-height;
+                    }
+                }
+                .anh_ {
+                    [class*=_] {
+                        img {
+                            height: $hero-height;
+                        }
+                    }
+                }
+                .u {
+                    ._i h2 {
+                        font-size: 27px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+    
     /** post */
     [data-blog=single] {
         ._io_ {

@@ -6,35 +6,16 @@ import './front/pages/blog';
 import './front/pages/template-page';
 import './front/pages/contact';
 
-// const removePreload = () => {
-//     setTimeout(() => {
-//         document.getElementById("_x0").className = 'removed';
-//         console.log("Preload Removed!");
-//     }, 500);
-// }
 
 
-/** Scroll */
-// window.addEventListener('scroll', () => {
-//     let userScrollTo = window.scrollY;
-//     if(userScrollTo > 100) {
-//         moveNavigation('left');
-//         if(isIndex()) {
-//             layoutStyle('left');
-//         }
-//     }
-//     if(userScrollTo > 400) {
-//         if(currentRouteName === 'blog.show') {
-//             showFloatingShare();
-//         }
-//     }
-//     else {
-//         moveNavigation('top');
-//         if(currentRouteName === 'blog.show') {
-//             removeFloatingShare();
-//         }
-//         else if(currentRouteName === 'index') {
-//             layoutStyle('center');
-//         }
-//     }
-// });
+
+/** Rencana akan membuat fungsi yang dimana ketika window di rezize melebihi batas, misal ukuran tablet kemudian di rezie ke ukuran mobile maka window akan reload secara otomatis */
+
+const windowResized = (currentWidth) => {
+    console.log(`current width is :  ${currentWidth}`);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    let currentWindowWidth = window.innerHeight;
+    windowResized(currentWindowWidth);
+});

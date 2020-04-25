@@ -2,9 +2,9 @@ $hero_pic_size : 174px;
 $follow-background-image : #f4f4f4;
 
 #hero {
-    @extend %transition-cubic-bezier;
+    @extend %transition2x;
     * {
-        @extend %transition;
+        @extend %transition2x;
     }
     &[data-version=two] {
         background-color: $follow-background-image;
@@ -13,7 +13,7 @@ $follow-background-image : #f4f4f4;
         @extend %full;
         ._z {
             ._q {
-                @extend %transition-cubic-bezier;
+                @extend %transition2x;
                 @extend %flex;
                 @extend %align-items-center;
                 @extend %justify-content-center;
@@ -241,6 +241,14 @@ $follow-background-image : #f4f4f4;
                     @extend %margin-right-sm;
                 }
         }
+    }
+
+
+    #hero_nav_toggler {
+        @extend %fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 10;
     }
 
 }
