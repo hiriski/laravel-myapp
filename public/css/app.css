@@ -427,6 +427,7 @@ th {
 }
 
 #about #s ._s ul li a .ic + span,
+[data-page=contact-index] #contact ._f[data-has-value=true] [class*=feedback][class*=invalid],
 #hero ._h_c_,
 #hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span:not(.name),
 #hero[data-version=two][data-position=left] ._y ._x .u > [class$=r] ._o,
@@ -465,6 +466,7 @@ footer#main .c__ > p:first-child > span:before {
 #about ._r ._a ._x #back a,
 [data-page=contact-index] #_c-s_ .ms ._c_ h3,
 [data-page=contact-index] #contact ._f.tp label,
+[data-page=contact-index] #contact ._h_ h1,
 #RP .__i__ .c_ ._m_ .d_,
 #tm_ ._i .text,
 #tm_ ._i .l,
@@ -513,7 +515,7 @@ footer#main .c__ a,
 [data-page=contact-index] #contact #back a:hover,
 [data-page=contact-index] #contact #back a:active,
 [data-page=contact-index] #contact ._f .spinner-validate i,
-[data-page=contact-index] #contact ._f[has-value=true] label,
+[data-page=contact-index] #contact ._f[data-has-value=true] label,
 [data-page=contact-index] #contact ._f button,
 [data-page=contact-index] #contact ._f.tp select,
 #__l__ ._ti ._a a,
@@ -813,6 +815,7 @@ pre[class*=language],
 
 [data-page=contact-index] #contact ._f input,
 [data-page=contact-index] #contact ._f textarea,
+[data-page=contact-index] #contact ._f [class*=feedback],
 [data-page=contact-index] #contact ._f label:not(.topic-label),
 [data-page=contact-index] #contact ._f button i,
 [data-page=contact-index] #contact ._f button,
@@ -896,6 +899,7 @@ main#main .Anh,
   margin-right: 0.5rem;
 }
 
+[data-page=contact-index] #contact ._f.tp select,
 #__l__ ._ti ._a- a:last-child,
 #_psh div[class^=s] > .a span {
   margin-left: 0.5rem;
@@ -940,7 +944,7 @@ main#main .Anh,
   margin-right: 0.85rem;
 }
 
-[data-page=contact-index] #contact ._f.tp select {
+[data-page=contact-index] #contact ._f label:not(.topic-label) span {
   margin-left: 0.85rem;
 }
 
@@ -953,6 +957,7 @@ main#main .Anh,
   margin-top: 1.25rem;
 }
 
+[data-page=contact-index] #contact ._f button i,
 [data-page=contact-index] #contact ._f button:hover i,
 [data-page=contact-index] #contact ._f button:focus i,
 #hero_nav ul li a span {
@@ -1583,6 +1588,8 @@ footer#main .c__ > p,
   color: #f7f7f7;
 }
 
+[data-page=contact-index] #contact ._f[data-has-value=true] input[class*=invalid],
+[data-page=contact-index] #contact ._f[data-has-value=true] textarea[class*=invalid],
 [data-page=contact-index] #contact ._f button,
 #faq #faqContent .i[data-faq=expand],
 #__l__ ._ti ._a- a:last-child,
@@ -1624,6 +1631,7 @@ pre[class*=language][data-color*=light] {
 [data-page=contact-index] #contact #back a:hover,
 [data-page=contact-index] #contact #back a:active,
 [data-page=contact-index] #contact ._f button,
+[data-page=contact-index] #contact ._f.tp select,
 #RP .__i__ .c_ > ._xo,
 #tm_ ._i,
 #changelog .c,
@@ -1749,11 +1757,6 @@ footer#main > div[class*=_] > div,
   padding-left: 30px;
   font-size: 24px;
   font-weight: 800;
-}
-
-[data-page=contact-index] #contact ._f .spinner-validate {
-  -webkit-animation: rotate 1s infinite;
-          animation: rotate 1s infinite;
 }
 
 h1,
@@ -3894,6 +3897,10 @@ Why #why .head h5 {
   /** Back */
 }
 
+[data-page=contact-index] #contact ._h_ h1 {
+  font-size: 30px;
+}
+
 [data-page=contact-index] #contact ._f.tp select {
   border: none;
   width: 250px;
@@ -3917,7 +3924,6 @@ Why #why .head h5 {
 }
 
 [data-page=contact-index] #contact ._f button i {
-  margin-left: 10px;
   font-size: 20px;
 }
 
@@ -3927,25 +3933,33 @@ Why #why .head h5 {
   top: 14px;
 }
 
-[data-page=contact-index] #contact ._f label:not(.topic-label) span {
-  margin-left: 0.3rem;
-}
-
 [data-page=contact-index] #contact ._f label:not(.topic-label) i {
   font-size: 20px;
 }
 
-[data-page=contact-index] #contact ._f[has-value=true] input,
-[data-page=contact-index] #contact ._f[has-value=true] textarea {
+[data-page=contact-index] #contact ._f[data-has-value=true] {
+  /** jika keadaan data-has-value tapi juga validatenya false */
+}
+
+[data-page=contact-index] #contact ._f[data-has-value=true] input,
+[data-page=contact-index] #contact ._f[data-has-value=true] textarea {
   padding: 30px 15px 8px 15px;
 }
 
-[data-page=contact-index] #contact ._f[has-value=true] label {
+[data-page=contact-index] #contact ._f[data-has-value=true][data-validate=false] input[class*=invalid],
+[data-page=contact-index] #contact ._f[data-has-value=true][data-validate=false] textarea[class*=invalid] {
+  border-bottom: 2px solid #e74c3c;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+[data-page=contact-index] #contact ._f[data-has-value=true] label {
   font-size: 12px;
   top: 10px;
 }
 
-[data-page=contact-index] #contact ._f[has-value=true] label i {
+[data-page=contact-index] #contact ._f[data-has-value=true] label i {
   font-size: 16px;
 }
 
@@ -3962,13 +3976,22 @@ Why #why .head h5 {
   right: 19px;
 }
 
-[data-page=contact-index] #contact ._f .spinner-validate[data-has-validate=true] {
-  -webkit-animation: none !important;
-          animation: none !important;
+[data-page=contact-index] #contact ._f .spinner-validate[data-has-validate=true] i {
+  color: #27ae60;
+}
+
+[data-page=contact-index] #contact ._f .spinner-validate[data-has-validate=false] i {
+  color: #e74c3c;
 }
 
 [data-page=contact-index] #contact ._f .spinner-validate i {
   font-size: 20px;
+}
+
+[data-page=contact-index] #contact ._f[data-validate=false] input,
+[data-page=contact-index] #contact ._f[data-validate=false] textarea,
+[data-page=contact-index] #contact ._f[data-validate=false] select {
+  border-bottom: 2px solid #e74c3c;
 }
 
 [data-page=contact-index] #contact ._f [class*=feedback][class*=invalid] {
@@ -3976,7 +3999,7 @@ Why #why .head h5 {
 }
 
 [data-page=contact-index] #contact ._f textarea {
-  height: 175px;
+  height: 200px;
 }
 
 [data-page=contact-index] #contact #back a i {
@@ -3988,7 +4011,6 @@ Why #why .head h5 {
   z-index: 1;
   left: 0;
   transition: background-color 0.2s ease;
-  /** move container to down */
 }
 
 [data-page=contact-index] #_c-s_ .ms {
@@ -4574,6 +4596,13 @@ body {
   ._ps_ p {
     font-size: 16px;
   }
+
+  /** contact page */
+
+  [data-page=contact-index] #contact {
+    width: 100%;
+    padding: 0 72px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -4605,6 +4634,26 @@ body {
   #_Bx .__i__,
   #_bsp > div[class*=_] > * {
     width: 100%;
+  }
+
+  /** contact page */
+
+  [data-page=contact-index] #contact {
+    padding: 0 35px;
+  }
+
+  [data-page=contact-index] #contact ._f.tp {
+    flex-direction: column;
+  }
+
+  [data-page=contact-index] #contact ._f.tp label {
+    padding-left: 3px;
+  }
+
+  [data-page=contact-index] #contact ._f.tp select {
+    width: 100%;
+    margin-left: unset;
+    margin-top: 0.6rem;
   }
 }
 

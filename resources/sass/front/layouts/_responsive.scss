@@ -418,6 +418,14 @@
     ._ps_ div, ._ps_ p {
         font-size: 16px;
     }
+
+    /** contact page */
+    [data-page=contact-index] {
+        #contact {
+            width: 100%;
+            padding: 0 72px;
+        }
+    }
 }
 
 
@@ -451,6 +459,24 @@
     /** post index and related post width */
     #RP .__i__, #_Bx .__i__, #_bsp > div[class*=_] > * {
         width: 100%;
+    }
+
+    /** contact page */
+    [data-page=contact-index] {
+        #contact {
+            padding: 0 35px;
+            ._f.tp {
+                flex-direction: column;
+                label {
+                    padding-left: 3px
+                }
+                select {
+                    width: 100%;
+                    margin-left: unset;
+                    margin-top: .6rem;
+                }
+            }
+        }
     }
 }
 

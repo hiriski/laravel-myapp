@@ -554,48 +554,69 @@ if (Object(_routes_function__WEBPACK_IMPORTED_MODULE_0__["isContact"])()) {
     var spinnerValidate = document.getElementsByClassName('spinner-validate')[0];
     var spinnerIcon = spinnerValidate.querySelector('i');
 
+    var validateIcon = function validateIcon(_ref) {
+      var parent = _ref.parent,
+          value = _ref.value,
+          icon = _ref.icon;
+      console.log(inputEmail);
+      inputEmail.parentElement.dataset.validate = parent;
+      spinnerValidate.dataset.hasValidate = value;
+      spinnerIcon.textContent = icon;
+    };
+
     if (validateEmail(email)) {
-      spinnerValidate.dataset.hasValidate = "true";
-      spinnerIcon.textContent = "check";
-      inputEmail.parentElement.dataset.validate = "true";
+      validateIcon({
+        'parent': 'true',
+        'value': 'true',
+        'icon': 'check'
+      });
     } else {
-      spinnerValidate.dataset.hasValidate = "false";
-      spinnerIcon.textContent = "sync";
-      inputEmail.parentElement.dataset.validate = "false";
+      validateIcon({
+        'parent': 'false',
+        'value': 'false',
+        'icon': 'close'
+      });
     }
   };
 
   var inputFocus = function inputFocus(event) {
-    event.target.parentElement.setAttribute('has-value', 'true');
+    event.target.parentElement.setAttribute('data-has-value', 'true');
   };
 
   var inputBlur = function inputBlur(event) {
-    event.target.parentElement.removeAttribute('has-value');
+    event.target.parentElement.removeAttribute('data-has-value');
 
     if (event.target.value.length > 0) {
-      event.target.parentElement.setAttribute('has-value', 'true');
+      event.target.parentElement.setAttribute('data-has-value', 'true');
     }
+  };
+
+  var inputHasValue = function inputHasValue(input) {
+    input.parentElement.dataset.hasValue = "true";
   };
 
   window.addEventListener('DOMContentLoaded', function () {
     var fi = document.querySelectorAll("form .fi");
     var i = 0;
+    fi.forEach(function (input) {
+      /** Check value pada input. Jika ada value maka panggil fungsi inputHasValue */
+      if (input.value.length > 0) {
+        inputHasValue(input);
+      }
+      /** jika input type email perlakukan khusus */
 
-    for (; i < fi.length; i++) {
-      if (fi[i].getAttribute('id') === "email") {
-        (function () {
-          var inputEmail = fi[i];
-          inputEmail.addEventListener('keyup', function () {
-            setTimeout(function () {
-              validate(inputEmail, inputEmail.value);
-            }, 500);
-          });
-        })();
+
+      if (input.getAttribute('id') === "email") {
+        input.addEventListener('keyup', function () {
+          setTimeout(function () {
+            validate(input, input.value);
+          }, 100);
+        });
       }
 
-      fi[i].addEventListener('focus', inputFocus);
-      fi[i].addEventListener('blur', inputBlur);
-    }
+      input.addEventListener('focus', inputFocus);
+      input.addEventListener('blur', inputBlur);
+    });
   });
 }
 

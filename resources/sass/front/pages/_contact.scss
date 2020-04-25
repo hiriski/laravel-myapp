@@ -2,6 +2,12 @@
     #contact {
         width: 540px;
         margin: auto;
+        ._h_ {
+            h1 {
+                @extend %muted;
+                font-size: 30px;
+            }
+        }
         form {
             @extend %padding-top;
         }
@@ -14,7 +20,8 @@
                     @extend %muted;
                 }
                 select {
-                    @extend %margin-left-sm;
+                    @extend %set-background-white;
+                    @extend %margin-left-xs;
                     @extend %primary-color;
                     border: none;
                     width: 250px;
@@ -49,7 +56,7 @@
                 }
                 i {
                     @extend %transition;
-                    margin-left: 10px;
+                    @extend %margin-left;
                     font-size: 20px;
                 }
             }
@@ -61,16 +68,41 @@
                 left: 1rem;
                 top: 14px;
                 span {
-                    margin-left: .3rem;
+                    @extend %margin-left-sm;
                 }
                 i {
                     font-size: 20px;
                 }
             }
-            &[has-value=true] {
+            &[data-has-value=true] {
                 input,
                 textarea {
                     padding: 30px 15px 8px 15px;
+                    
+                    &[class*=invalid] {
+                        @extend %border-default-primary;
+                    }
+                }
+
+                /** jika keadaan data-has-value tapi juga validatenya false */
+                &[data-validate=false] {
+                    input,
+                    textarea {
+                        &[class*=invalid] {
+                            border-bottom: 2px solid $red;
+                            border: {
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+
+                [class*=feedback] {
+                    &[class*=invalid] {
+                        @extend %display-none;
+                    }
                 }
                 label {
                     @extend %primary-color;
@@ -91,11 +123,17 @@
             }
             .spinner-validate {
                 @extend %absolute;
-                @extend %rotate;
                 top: 19px;
                 right: 19px;
                 &[data-has-validate=true] {
-                    animation: none !important;
+                    i {
+                        color: $green;
+                    }
+                }
+                &[data-has-validate=false] {
+                    i {
+                        color: $red;
+                    }
                 }
                 i {
                     @extend %primary-color;
@@ -103,26 +141,31 @@
                 }
             }
 
+            &[data-validate=false] {
+                input, textarea, select {
+                    border-bottom: 2px solid $red;
+                }
+            }
+
             [class*=feedback] {
                 @extend %small;
+                @extend %transition;
                 &[class*=invalid] {
                     color: $error;
                 }
             }
-        }
-        ._f input,
-        ._f textarea {
-            @extend %full-width;
-            @extend %transition;
-        }
-        ._f input,
-        ._f textarea {
-            &:focus {
-                @extend %box-shadow;
+
+            input,
+            textarea {
+                @extend %full-width;
+                @extend %transition;
+                &:focus {
+                    @extend %box-shadow;
+                }
             }
-        }
-        ._f textarea {
-            height:175px;
+            textarea {
+                height:200px;
+            }
         }
 
         /** Back */
@@ -191,11 +234,6 @@
                     }
                 }
             }
-        }
-        
-        /** move container to down */
-        + __o__ {
-
         }
     }
 }
