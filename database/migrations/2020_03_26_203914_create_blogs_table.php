@@ -35,6 +35,7 @@ class CreateBlogsTable extends Migration {
             $table->boolean('show_sidebar')->default(false);
             $table->boolean('show_hit')->default(true);
             $table->boolean('show_author')->default(false);
+            $table->boolean('show_subscribe_box')->default(true);
 
             /** etc */
             $table->unsignedBigInteger('hit')->nullable();
