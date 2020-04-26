@@ -51,6 +51,11 @@ class DatabaseSeeder extends Seeder {
             /** Contact */
             ContactTopicsTableSeeder::class,
 
+            /** Work */
+            WorkTagsTableSeeder::class,
+            WorkStatusTableSeeder::class,
+            WorkCategoriesTableSeeder::class,
+
         ]);
 
         /** Blog Faker */

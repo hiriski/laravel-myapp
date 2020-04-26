@@ -71,6 +71,16 @@
                             </span>
                         </a>
                     </li>
+                    <li class="sidebar-menu-item {{ Route::getCurrentRoute()->uri === "admin/work" ? 'active' : '' }}">
+                        <a class="sidebar-menu-link" href="{{ route('admin.work.index') }}">
+                            <span class="sidebar-menu-icon">
+                                <i class="material-icons">web</i>
+                            </span>
+                            <span class="sidebar-menu-text">
+                                My Works
+                            </span>
+                        </a>
+                    </li>
                     <li class="sidebar-menu-item {{ Route::getCurrentRoute()->uri === "admin/user" ? 'active' : '' }}">
                         <a class="sidebar-menu-link" href="{{ route('admin.user.index') }}">
                             <span class="sidebar-menu-icon">

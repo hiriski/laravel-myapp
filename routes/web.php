@@ -59,6 +59,11 @@ Route::resource('/theme', 'ThemeController', array(
 ));
 
 
+/** /work */
+Route::resource('/work', 'WorkController', array(
+	'only' => array('index', 'show')
+));
+
 
 /** Protect under middleware auth */
 Route::group(['middleware' => 'auth'], function() {
@@ -115,6 +120,19 @@ Route::group(['middleware' => 'auth'], function() {
 				});
 				/** /admin/theme */
 				Route::resource('/theme', 'Admin\ThemeController', array(
+					'except' => array('show')
+				));
+
+				/** admin/work/ */
+				Route::prefix('/work')->group(function() {
+					/** Name : work. */
+					Route::name('work.')->group(function() {
+						/** Route /work/category */
+						Route::resource('/category', 'Admin\WorkCategoryController');
+					});
+				});
+				/** /admin/work */
+				Route::resource('/work', 'Admin\WorkController', array(
 					'except' => array('show')
 				));
 		
