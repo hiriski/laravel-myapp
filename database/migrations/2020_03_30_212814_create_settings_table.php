@@ -32,7 +32,9 @@ class CreateSettingsTable extends Migration {
 
             $table->boolean('show_featured_post')->default(false);
             $table->boolean('show_blog_homepage')->default(false);
+            $table->boolean('show_work_homepage')->default(true);
             $table->unsignedInteger('blog_perpage')->default(6);
+            $table->unsignedInteger('work_perpage')->default(6);
         });
     }
 
