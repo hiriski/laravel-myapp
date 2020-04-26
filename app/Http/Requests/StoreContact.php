@@ -24,7 +24,7 @@ class StoreContact extends FormRequest {
             'topic_id'  => 'required',
             'name'      => 'required',
             'email'     => 'required',
-            'content'   => 'required|min:4:max:1000'
+            'message'   => 'required|min:4:max:1000'
         ];
     }
 }
