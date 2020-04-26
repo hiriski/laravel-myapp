@@ -1,5 +1,7 @@
 {
+    "/js/admin.js": "/js/admin.js",
     "/js/app.js": "/js/app.js",
     "/css/back/app.css": "/css/back/app.css",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/js/app-vue.js": "/js/app-vue.js"
 }

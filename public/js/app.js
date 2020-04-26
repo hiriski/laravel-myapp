@@ -576,9 +576,8 @@ if (Object(_routes_function__WEBPACK_IMPORTED_MODULE_0__["isContact"])()) {
   };
 
   window.addEventListener('DOMContentLoaded', function () {
-    var fi = document.querySelectorAll("form .fi");
-    var i = 0;
-    fi.forEach(function (input) {
+    var inputElems = document.querySelectorAll("form .fi");
+    inputElems.forEach(function (input) {
       /** Check value pada input. Jika ada value maka panggil fungsi inputHasValue */
       if (input.value.length > 0) {
         inputHasValue(input);
@@ -591,6 +590,14 @@ if (Object(_routes_function__WEBPACK_IMPORTED_MODULE_0__["isContact"])()) {
           setTimeout(function () {
             validate(input, input.value);
           }, 100);
+        });
+      }
+      /** Jika input select (topic pesan) */
+
+
+      if (input.getAttribute('id') === 'topic') {
+        input.addEventListener('change', function () {
+          input.dataset.hasChange = 'true';
         });
       }
 

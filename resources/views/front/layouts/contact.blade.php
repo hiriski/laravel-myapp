@@ -1,4 +1,4 @@
-<div id="contact">
+<div id="_CxT">
     <div class="__s">
         <div id="back">
             <a href="{{ route('index') }}"><i class="material-icons">arrow_back</i><span>Back</span></a>
@@ -12,7 +12,7 @@
         
             <div class="_f tp">
                 <label for="topic" class="topic-label">What are you inquiring about?</label>
-                {{ Form::select('topic_id', $topic, 1, array('class' => 'topic')) }}
+                {{ Form::select('topic_id', $topic, 1, array('id' => 'topic', 'class' => 'topic fi')) }}
                 @error('category_id')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -44,9 +44,9 @@
             </div>
 
             <div class="_f">
-                <label for="content"><i class="material-icons">chat_bubble_outline</i><span>Write a message here..</span></label>
-                <textarea id="content" class="fi @error('content') is-invalid @enderror" name="content" maxlength="500" minlength="5">{{ old('content') }}</textarea>
-                @error('content')
+                <label for="message"><i class="material-icons">chat_bubble_outline</i><span>Write a message here..</span></label>
+                <textarea id="message" class="fi @error('message') is-invalid @enderror" name="message" maxlength="500" minlength="5">{{ old('message') }}</textarea>
+                @error('message')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>

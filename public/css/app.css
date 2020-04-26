@@ -427,7 +427,7 @@ th {
 }
 
 #about #s ._s ul li a .ic + span,
-[data-page=contact-index] #contact ._f[data-has-value=true] [class*=feedback][class*=invalid],
+#_CxT ._f[data-has-value=true] [class*=feedback][class*=invalid],
 #hero ._h_c_,
 #hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span:not(.name),
 #hero[data-version=two][data-position=left] ._y ._x .u > [class$=r] ._o,
@@ -463,7 +463,6 @@ footer#main .c__ > p:first-child > span:before {
   position: absolute;
 }
 
-#about ._r ._a ._x #back a,
 [data-page=contact-index] #_c-s_ .ms ._c_ h3,
 #RP .__i__ .c_ ._m_ .d_,
 #tm_ ._i .text,
@@ -483,8 +482,9 @@ footer#main .c__ > p,
   color: #707070;
 }
 
-[data-page=contact-index] #contact #back a,
-[data-page=contact-index] #contact ._f.tp label,
+#about ._r ._a ._x #back a,
+#_CxT #back a,
+#_CxT ._f.tp label,
 #hero_nav ul li a i {
   color: #a3a3a3;
 }
@@ -509,14 +509,13 @@ footer#main .c__ a,
 
 #about ._r ._a ._x #back a:hover,
 #about ._r ._a ._x #back a:active,
+#_CxT #back a:hover,
+#_CxT #back a:active,
+#_CxT ._f .spinner-validate i,
+#_CxT ._f[data-has-value=true] label,
+#_CxT ._h_ h1,
 [data-page=contact-index] #_c-s_ .ms ._c_ a,
 [data-page=contact-index] #_c-s_ .ms ._c_ p,
-[data-page=contact-index] #contact #back a:hover,
-[data-page=contact-index] #contact #back a:active,
-[data-page=contact-index] #contact ._f .spinner-validate i,
-[data-page=contact-index] #contact ._f[data-has-value=true] label,
-[data-page=contact-index] #contact ._f button,
-[data-page=contact-index] #contact ._h_ h1,
 #__l__ ._ti ._a a,
 #__l__ ._ti ._a- a:last-child,
 #__l__ ._ti ._a- a:first-child:hover,
@@ -578,7 +577,7 @@ a.anhoi-btn,
   color: #92574a;
 }
 
-[data-page=contact-index] #contact ._f [class*=feedback],
+#_CxT ._f [class*=feedback],
 #RP .__i__ .c_ ._m_ .d_,
 #_Bx .__i__ .c_ ._m_ .d_,
 #_Bx .__i__ .c_ ._m_ .__c,
@@ -597,7 +596,7 @@ pre[class*=language] span.code-filename,
   font-size: 16px;
 }
 
-[data-page=contact-index] #contact ._f.tp select,
+#_CxT ._f.tp select,
 #hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 {
   font-weight: bold;
 }
@@ -615,8 +614,8 @@ pre[class*=language] span.code-filename,
 }
 
 #about ._r ._a ._x #back a,
+#_CxT #back a,
 [data-page=contact-index] #_c-s_ .ms ._c_ a,
-[data-page=contact-index] #contact #back a,
 #changelog .log .t a,
 #__l__ ._ti ._a- a,
 [data-blog=single] ._io_ ._ps_ a[class*=__]:after,
@@ -650,7 +649,7 @@ a.anhoi-btn {
 }
 
 #about ._r ._a .c h1,
-[data-page=contact-index] #contact ._f input,
+#_CxT ._f input,
 Why #why .head h2,
 Why #why .head h3,
 Why #why .head h4,
@@ -710,10 +709,10 @@ footer#main .c__ > p .laravel,
 #about #s,
 #about ._r ._a ._x img,
 #about ._r ._a ._x #back,
+#_CxT ._f .spinner-validate,
+#_CxT ._f label,
+#_CxT ._f.tp label,
 [data-page=contact-index] #_c-s_,
-[data-page=contact-index] #contact ._f .spinner-validate,
-[data-page=contact-index] #contact ._f label:not(.topic-label),
-[data-page=contact-index] #contact ._f.tp label,
 #dln .b > *,
 #changelog ul li[data-changelog^=_]:before,
 .demo .x_,
@@ -788,7 +787,7 @@ pre[class*=language] span.code-filename,
 }
 
 #about ._r ._a .c ._,
-[data-page=contact-index] #contact ._f,
+#_CxT ._f,
 #RP .__i__ ._img_,
 .pC_ ._ ._b .bottom,
 .pC_ ._ ._b,
@@ -817,12 +816,12 @@ pre[class*=language],
   position: relative;
 }
 
-[data-page=contact-index] #contact ._f input,
-[data-page=contact-index] #contact ._f textarea,
-[data-page=contact-index] #contact ._f [class*=feedback],
-[data-page=contact-index] #contact ._f label:not(.topic-label),
-[data-page=contact-index] #contact ._f button i,
-[data-page=contact-index] #contact ._f button,
+#_CxT ._f input,
+#_CxT ._f textarea,
+#_CxT ._f [class*=feedback],
+#_CxT ._f label,
+#_CxT ._f button i,
+#_CxT ._f button,
 #RP .__i__ .c_ > ._xo,
 #RP .__i__ .c_,
 #changelog .log .t a,
@@ -938,7 +937,7 @@ main#main .Anh,
 }
 
 #about ._r ._a ._x #back a i,
-[data-page=contact-index] #contact #back a i,
+#_CxT #back a i,
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic,
 #hero ._h_c_ a i,
 #hero[data-version=two][data-position=left] #__h_sl ul li a .ic,
@@ -947,7 +946,8 @@ main#main .Anh,
   margin-right: 0.85rem;
 }
 
-[data-page=contact-index] #contact ._f label:not(.topic-label) span {
+#_CxT ._f label span,
+#_CxT ._f button i {
   margin-left: 0.85rem;
 }
 
@@ -960,15 +960,14 @@ main#main .Anh,
   margin-top: 1.25rem;
 }
 
-[data-page=contact-index] #contact ._f button i,
-[data-page=contact-index] #contact ._f button:hover i,
-[data-page=contact-index] #contact ._f button:focus i,
+#_CxT ._f button:hover i,
+#_CxT ._f button:focus i,
 #hero_nav ul li a span {
   margin-left: 1.25rem;
 }
 
-[data-page=contact-index] #contact #back,
-[data-page=contact-index] #contact ._f,
+#_CxT #back,
+#_CxT ._f,
 #changelog .log .t p,
 #changelog .log .t h2,
 #changelog .log .t h3,
@@ -1055,7 +1054,6 @@ main#main .Anh,
   padding-left: 0.85rem;
 }
 
-[data-page=contact-index] #contact form,
 #_pa {
   padding-top: 1.25rem;
 }
@@ -1082,10 +1080,12 @@ main#main .Anh,
   padding-top: 2rem;
 }
 
+#about #s ._s [class*=y_],
 #_pa [class*=pa] ._ .n {
   padding-left: 2rem;
 }
 
+#about #s ._s [class*=y_],
 #_pa [class*=pa] ._ .n {
   padding-right: 2rem;
 }
@@ -1104,13 +1104,11 @@ main#main .Anh,
   padding-bottom: 3rem;
 }
 
-#about #s ._s [class*=y_],
 #hero[data-version=two] .u > [class$=r],
 #_bsp > div[class*=_] > *:first-of-type > .q > * {
   padding-left: 3rem;
 }
 
-#about #s ._s [class*=y_],
 #_bsp > div[class*=_] > *:last-of-type .q > * {
   padding-right: 3rem;
 }
@@ -1165,10 +1163,10 @@ main#main .Anh,
 
 #about #s,
 [data-page=about] #AnhOi main .Anh .__o__ [class*=__],
+#_CxT ._f input,
+#_CxT ._f textarea,
+#_CxT ._f.tp select,
 [data-page=contact-index] #_c-s_,
-[data-page=contact-index] #contact ._f input,
-[data-page=contact-index] #contact ._f textarea,
-[data-page=contact-index] #contact ._f.tp select,
 [data-page=contact-index] ._wave_,
 *[id^=d_h] ._i,
 #dln .d_c ._i,
@@ -1243,8 +1241,8 @@ main#main .Anh > div[class*=__] > .__,
 /** flex family */
 
 #about #s ._s,
+#_CxT ._f label,
 [data-page=contact-index] #_c-s_ .ms,
-[data-page=contact-index] #contact ._f label:not(.topic-label),
 #RP .__l_m,
 #RP .__i__ .c_ ._m_ ._ic,
 #RP .__i__ .c_ ._m_ .__c,
@@ -1378,10 +1376,11 @@ main#main .Anh > div[class*=__],
 
 /** Box Shadow */
 
-[data-page=contact-index] #contact ._f input:focus,
-[data-page=contact-index] #contact ._f textarea:focus,
-[data-page=contact-index] #contact ._f input,
-[data-page=contact-index] #contact ._f textarea,
+#about ._r ._a .c,
+#_CxT ._f input:focus,
+#_CxT ._f textarea:focus,
+#_CxT ._f input,
+#_CxT ._f textarea,
 #RP .__i__ .c_ > ._xo,
 #RP .__i__ ._img_,
 #faq #faqContent .i,
@@ -1433,11 +1432,11 @@ main#main .Anh > div[class*=__],
 }
 
 #about ._r ._a ._x #back a,
+#_CxT ._f button,
+#_CxT ._f input,
+#_CxT ._f textarea,
+#_CxT ._f.tp select,
 [data-page=contact-index] #_c-s_ .ms ._c_ a,
-[data-page=contact-index] #contact ._f button,
-[data-page=contact-index] #contact ._f input,
-[data-page=contact-index] #contact ._f textarea,
-[data-page=contact-index] #contact ._f.tp select,
 #tm_ ._i,
 #changelog ul li[data-changelog^=_]:before,
 #changelog .log .t a,
@@ -1532,8 +1531,7 @@ footer#main .c__ > p,
 #hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span.name,
 #hero_nav ul li a,
 #hero[data-position=left] #hero_nav.slided,
-#hero[data-position=left] #hero_nav,
-#hero[data-position=left] #hero_nav_toggler {
+#hero[data-position=left] #hero_nav {
   display: block;
 }
 
@@ -1568,9 +1566,8 @@ footer#main .c__ > p,
   color: #f7f7f7;
 }
 
+#_CxT ._f button,
 [data-page=contact-index] #_c-s_ .ms ._c_ a:hover,
-[data-page=contact-index] #contact ._f button:hover,
-[data-page=contact-index] #contact ._f button:focus,
 .pC_ ._ ._b,
 *[id^=d_h] .a .z,
 #dln .d_c > *,
@@ -1593,23 +1590,25 @@ footer#main .c__ > p,
   color: #f7f7f7;
 }
 
-[data-page=contact-index] #contact ._f[data-has-value=true] input,
-[data-page=contact-index] #contact ._f[data-has-value=true] textarea,
-[data-page=contact-index] #contact ._f.tp select {
+#_CxT ._f[data-has-value=true] input,
+#_CxT ._f[data-has-value=true] textarea,
+#_CxT ._f.tp select[data-has-change=true] {
   border: 2px solid #fbfbfb;
 }
 
-[data-page=contact-index] #contact ._f[data-has-value=true] input[class*=invalid],
-[data-page=contact-index] #contact ._f[data-has-value=true] textarea[class*=invalid],
-[data-page=contact-index] #contact ._f button,
+#_CxT ._f[data-has-value=true] input[class*=invalid],
+#_CxT ._f[data-has-value=true] textarea[class*=invalid],
+#_CxT ._f button,
+#_CxT ._f.tp select:focus,
 #faq #faqContent .i[data-faq=expand],
 #__l__ ._ti ._a- a:last-child,
 #__l__ ._ti ._a- a:first-child {
   border: 2px solid #1f77ff;
 }
 
-[data-page=contact-index] #contact ._f input,
-[data-page=contact-index] #contact ._f textarea {
+#_CxT ._f input,
+#_CxT ._f textarea,
+#_CxT ._f.tp select {
   border: 2px solid transparent;
 }
 
@@ -1641,11 +1640,8 @@ pre[class*=language][data-color*=light] {
 #about #s ._s [class*=y_],
 #about ._r ._a .c ._ > .rx,
 #about ._r ._a .c::-webkit-scrollbar-track,
-#about ._r ._a ._x #back a:hover,
-#about ._r ._a ._x #back a:active,
+#_CxT ._f.tp select,
 [data-page=contact-index] #_c-s_.show,
-[data-page=contact-index] #contact ._f button,
-[data-page=contact-index] #contact ._f.tp select,
 #RP .__i__ .c_ > ._xo,
 #tm_ ._i,
 #changelog .c,
@@ -2027,6 +2023,10 @@ textarea::placeholder {
 
 #__h_sl ._s ul li a .ic svg {
   fill: #707070;
+}
+
+#hero_nav_toggler {
+  /** hide for desktop */
 }
 
 #hero[data-position=left] #hero_nav.slided {
@@ -3917,126 +3917,6 @@ Why #why .head h5 {
   z-index: -1;
 }
 
-[data-page=contact-index] #contact {
-  width: 540px;
-  margin: auto;
-  /** Back */
-}
-
-[data-page=contact-index] #contact ._h_ h1 {
-  font-size: 30px;
-}
-
-[data-page=contact-index] #contact ._f.tp label {
-  top: 5px;
-  left: 18px;
-  font-size: 15px;
-}
-
-[data-page=contact-index] #contact ._f.tp select {
-  border: none;
-  font-size: 18px;
-  padding: 30px 15px 8px 15px;
-}
-
-[data-page=contact-index] #contact ._f input,
-[data-page=contact-index] #contact ._f textarea {
-  font-size: 18px;
-}
-
-[data-page=contact-index] #contact ._f input[class*=invalid],
-[data-page=contact-index] #contact ._f textarea[class*=invalid] {
-  border: 2px solid #f56b6b;
-}
-
-[data-page=contact-index] #contact ._f button {
-  padding: 0.5rem 1rem;
-  font-size: 16px;
-}
-
-[data-page=contact-index] #contact ._f button i {
-  font-size: 20px;
-}
-
-[data-page=contact-index] #contact ._f label:not(.topic-label) {
-  color: #a3a3a3;
-  left: 1rem;
-  top: 14px;
-}
-
-[data-page=contact-index] #contact ._f label:not(.topic-label) i {
-  font-size: 20px;
-}
-
-[data-page=contact-index] #contact ._f[data-has-value=true] {
-  /** jika keadaan data-has-value tapi juga validatenya false */
-}
-
-[data-page=contact-index] #contact ._f[data-has-value=true] input,
-[data-page=contact-index] #contact ._f[data-has-value=true] textarea {
-  padding: 30px 15px 8px 15px;
-}
-
-[data-page=contact-index] #contact ._f[data-has-value=true][data-validate=false] input[class*=invalid],
-[data-page=contact-index] #contact ._f[data-has-value=true][data-validate=false] textarea[class*=invalid] {
-  border-bottom: 2px solid #e74c3c;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-}
-
-[data-page=contact-index] #contact ._f[data-has-value=true] label {
-  font-size: 12px;
-  top: 10px;
-}
-
-[data-page=contact-index] #contact ._f[data-has-value=true] label i {
-  font-size: 16px;
-}
-
-[data-page=contact-index] #contact ._f[data-input-email=wrong] label {
-  color: red;
-}
-
-[data-page=contact-index] #contact ._f[data-input-email=wrong] input {
-  border-color: red !important;
-}
-
-[data-page=contact-index] #contact ._f .spinner-validate {
-  top: 19px;
-  right: 19px;
-}
-
-[data-page=contact-index] #contact ._f .spinner-validate[data-has-validate=true] i {
-  color: #27ae60;
-}
-
-[data-page=contact-index] #contact ._f .spinner-validate[data-has-validate=false] i {
-  color: #e74c3c;
-}
-
-[data-page=contact-index] #contact ._f .spinner-validate i {
-  font-size: 20px;
-}
-
-[data-page=contact-index] #contact ._f[data-validate=false] input,
-[data-page=contact-index] #contact ._f[data-validate=false] textarea,
-[data-page=contact-index] #contact ._f[data-validate=false] select {
-  border-bottom: 2px solid #e74c3c;
-}
-
-[data-page=contact-index] #contact ._f [class*=feedback][class*=invalid] {
-  color: #f56b6b;
-}
-
-[data-page=contact-index] #contact ._f textarea {
-  height: 200px;
-}
-
-[data-page=contact-index] #contact #back a i {
-  font-size: 22px;
-}
-
 [data-page=contact-index] #_c-s_ {
   top: -100vh;
   z-index: 1;
@@ -4058,6 +3938,127 @@ Why #why .head h5 {
 
 [data-page=contact-index] #_c-s_ .ms ._c_ a i {
   font-size: 20px;
+}
+
+#_CxT {
+  width: 540px;
+  margin: auto;
+  /** Back */
+}
+
+#_CxT ._h_ h1 {
+  font-size: 34px;
+}
+
+#_CxT ._f.tp label {
+  top: 5px;
+  left: 18px;
+  font-size: 15px;
+}
+
+#_CxT ._f.tp select {
+  font-size: 18px;
+  padding: 30px 15px 8px 15px;
+  /** remove default arrow icon */
+  -webkit-appearance: none;
+  -ms-expand: none;
+}
+
+#_CxT ._f input,
+#_CxT ._f textarea {
+  font-size: 18px;
+}
+
+#_CxT ._f input[class*=invalid],
+#_CxT ._f textarea[class*=invalid] {
+  border: 2px solid #f56b6b;
+}
+
+#_CxT ._f button {
+  padding: 0.75rem 1.45rem;
+}
+
+#_CxT ._f button i {
+  font-size: 20px;
+}
+
+#_CxT ._f label {
+  color: #a3a3a3;
+  left: 1rem;
+  top: 14px;
+}
+
+#_CxT ._f label i {
+  font-size: 20px;
+}
+
+#_CxT ._f[data-has-value=true] {
+  /** jika keadaan data-has-value tapi juga validatenya false */
+}
+
+#_CxT ._f[data-has-value=true] input,
+#_CxT ._f[data-has-value=true] textarea {
+  padding: 30px 15px 8px 15px;
+}
+
+#_CxT ._f[data-has-value=true][data-validate=false] input[class*=invalid],
+#_CxT ._f[data-has-value=true][data-validate=false] textarea[class*=invalid] {
+  border-bottom: 2px solid #e74c3c;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+#_CxT ._f[data-has-value=true] label {
+  font-size: 12px;
+  top: 10px;
+}
+
+#_CxT ._f[data-has-value=true] label i {
+  font-size: 16px;
+}
+
+#_CxT ._f[data-input-email=wrong] label {
+  color: red;
+}
+
+#_CxT ._f[data-input-email=wrong] input {
+  border-color: red !important;
+}
+
+#_CxT ._f .spinner-validate {
+  top: 19px;
+  right: 19px;
+}
+
+#_CxT ._f .spinner-validate[data-has-validate=true] i {
+  color: #27ae60;
+}
+
+#_CxT ._f .spinner-validate[data-has-validate=false] i {
+  color: #e74c3c;
+}
+
+#_CxT ._f .spinner-validate i {
+  font-size: 20px;
+}
+
+#_CxT ._f[data-validate=false] input,
+#_CxT ._f[data-validate=false] textarea,
+#_CxT ._f[data-validate=false] select {
+  border-bottom: 2px solid #e74c3c;
+}
+
+#_CxT ._f [class*=feedback][class*=invalid] {
+  color: #f56b6b;
+}
+
+#_CxT ._f textarea {
+  height: 200px;
+}
+
+#_CxT #back a i {
+  font-size: 22px;
 }
 
 /** Redefined style for about page */
@@ -4100,10 +4101,6 @@ Why #why .head h5 {
   z-index: 1;
 }
 
-#about ._r ._a ._x #back a {
-  padding: 0.4rem 0.75rem;
-}
-
 #about ._r ._a ._x #back a i {
   font-size: 22px;
 }
@@ -4131,9 +4128,9 @@ Why #why .head h5 {
   height: 92%;
   width: 58%;
   display: inline-block;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   overflow-y: auto;
-  border: 1px solid #70a8ff;
+  border: 1px solid transparent;
 }
 
 #about ._r ._a .c::-webkit-scrollbar-button {
@@ -4151,14 +4148,14 @@ Why #why .head h5 {
   width: 58% !important;
   height: 80px;
   padding-right: 30px;
-  border: 1px solid #70a8ff;
+  border: 1px solid transparent;
 }
 
 #about ._r ._a .c .__xt {
   left: 40%;
   background: linear-gradient(180deg, #ffffff, rgba(255, 255, 255, 0.99), transparent);
   top: 4%;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 1rem 1rem 0 0;
   border-bottom: none;
 }
 
@@ -4166,14 +4163,14 @@ Why #why .head h5 {
   left: 40%;
   background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.99), #ffffff);
   bottom: 4%;
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0 1rem 1rem;
   border-top: none;
 }
 
 #about ._r ._a .c ._ > .rx {
   font-size: 17px;
   line-height: 1.65;
-  padding: 52px 80px;
+  padding: 60px 70px;
 }
 
 #about #s.bottom {
@@ -4498,7 +4495,7 @@ body {
     position: relative;
     left: 0;
     width: 100%;
-    padding: 20px;
+    padding: 20px 0;
     margin-top: 440px;
     border: none;
   }
@@ -4628,12 +4625,25 @@ body {
   }
 
   #AnhOi #hero #hero_nav_toggler {
-    display: inline-block;
+    display: inline-block !important;
+  }
+
+  #AnhOi #hero #hero_nav {
+    --hero-nav-mobile-space: 60px;
+    width: 100%;
   }
 
   #AnhOi #hero #hero_nav.show {
     margin-left: 0;
     display: block;
+  }
+
+  #AnhOi #hero #hero_nav ._ {
+    padding-right: 60px;
+  }
+
+  #AnhOi #hero #hero_nav ul li {
+    padding-left: 60px;
   }
 
   ._ps_ div,
@@ -4643,9 +4653,19 @@ body {
 
   /** contact page */
 
-  [data-page=contact-index] #contact {
+  [data-page=contact-index] #_CxT {
     width: 100%;
     padding: 0 72px;
+  }
+
+  [data-page=contact-index] #_CxT form button {
+    width: 100%;
+  }
+
+  /** about for mobile */
+
+  #about ._r ._a .c ._ > .rx {
+    padding: 32px 30px;
   }
 }
 
@@ -4706,22 +4726,8 @@ body {
 
   /** contact page */
 
-  [data-page=contact-index] #contact {
+  [data-page=contact-index] #_CxT {
     padding: 0 35px;
-  }
-
-  [data-page=contact-index] #contact ._f.tp {
-    flex-direction: column;
-  }
-
-  [data-page=contact-index] #contact ._f.tp label {
-    padding-left: 3px;
-  }
-
-  [data-page=contact-index] #contact ._f.tp select {
-    width: 100%;
-    margin-left: unset;
-    margin-top: 0.6rem;
   }
 }
 

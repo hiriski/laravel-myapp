@@ -16,199 +16,6 @@
         z-index: -1;
     }
     
-    #contact {
-        width: 540px;
-        margin: auto;
-        ._h_ {
-            h1 {
-                @extend %primary-color;
-                font-size: 30px;
-            }
-        }
-        form {
-            @extend %padding-top;
-        }
-        ._f {
-            @extend %relative;
-            @extend %margin-bottom;
-            &.tp {
-                label {
-                    @extend %gray;
-                    @extend %absolute;
-                    top: 5px;
-                    left: 18px;
-                    font-size: 15px;
-                }
-                select {
-                    @extend %border-default-light;
-                    @extend %set-background-white;
-                    @extend %border-thin-radius;
-                    @extend %full-width;
-                    @extend %bold;
-                    border: none;
-                    font-size: 18px;
-                    padding: 30px 15px 8px 15px;
-                }
-            }
-            input {
-                @extend %reset-line-height;
-            }
-            input, textarea {
-                @extend %border-default-transparent;
-                @extend %border-thin-radius;
-                @extend %box-shadow;
-                font-size: 18px;
-                &[class*=invalid] {
-                    border: 2px solid $error;
-                }
-            }
-            button {
-                @extend %border-default-primary;
-                @extend %set-background-white;
-                @extend %border-thin-radius;
-                @extend %primary-color;
-                @extend %transition;
-                padding: .5rem 1rem;
-                font-size: 16px;
-                &:hover, &:focus {
-                    @extend %background-primary-color-light;
-                    i {
-                        @extend %margin-left;
-                    }
-                }
-                i {
-                    @extend %transition;
-                    @extend %margin-left;
-                    font-size: 20px;
-                }
-            }
-            label:not(.topic-label) {
-                @extend %flex;
-                @extend %absolute;
-                @extend %transition;
-                color: $gray;
-                left: 1rem;
-                top: 14px;
-                span {
-                    @extend %margin-left-sm;
-                }
-                i {
-                    font-size: 20px;
-                }
-            }
-            &[data-has-value=true] {
-                input,
-                textarea {
-                    padding: 30px 15px 8px 15px;
-                    @extend %border-default-light;
-                    &[class*=invalid] {
-                        @extend %border-default-primary;
-                    }
-                }
-
-                /** jika keadaan data-has-value tapi juga validatenya false */
-                &[data-validate=false] {
-                    input,
-                    textarea {
-                        &[class*=invalid] {
-                            border-bottom: 2px solid $red;
-                            border: {
-                                top: 0;
-                                left: 0;
-                                right: 0;
-                            }
-                        }
-                    }
-                }
-
-                [class*=feedback] {
-                    &[class*=invalid] {
-                        @extend %display-none;
-                    }
-                }
-                label {
-                    @extend %primary-color;
-                    font-size: 12px;
-                    top: 10px;
-                    i {
-                        font-size: 16px;
-                    }
-                }
-            }
-            &[data-input-email=wrong] {
-                label {
-                    color: red;
-                }
-                input {
-                    border-color: red !important;
-                }
-            }
-            .spinner-validate {
-                @extend %absolute;
-                top: 19px;
-                right: 19px;
-                &[data-has-validate=true] {
-                    i {
-                        color: $green;
-                    }
-                }
-                &[data-has-validate=false] {
-                    i {
-                        color: $red;
-                    }
-                }
-                i {
-                    @extend %primary-color;
-                    font-size: 20px;
-                }
-            }
-
-            &[data-validate=false] {
-                input, textarea, select {
-                    border-bottom: 2px solid $red;
-                }
-            }
-
-            [class*=feedback] {
-                @extend %small;
-                @extend %transition;
-                &[class*=invalid] {
-                    color: $error;
-                }
-            }
-
-            input,
-            textarea {
-                @extend %full-width;
-                @extend %transition;
-                &:focus {
-                    @extend %box-shadow;
-                }
-            }
-            textarea {
-                height:200px;
-            }
-        }
-
-        /** Back */
-        #back {
-            @extend %margin-bottom;
-            a {
-                @extend %gray;
-                @extend %text-decoration-none;
-                &:hover,
-                &:active {
-                    @extend %primary-color;
-                }
-                i {
-                    font-size: 22px;
-                    @extend %margin-right-sm;
-                }
-            }
-        }
-    }
-
-
     /** When message success to send */
     #_c-s_ {
         @extend %transition2x;
@@ -254,6 +61,204 @@
                         @extend %background-primary-color-light;
                     }
                 }
+            }
+        }
+    }
+}
+
+#_CxT {
+    width: 540px;
+    margin: auto;
+    ._h_ {
+        h1 {
+            @extend %primary-color;
+            font-size: 34px;
+        }
+    }
+    form {
+        
+    }
+    ._f {
+        @extend %relative;
+        @extend %margin-bottom;
+        &.tp {
+            label {
+                @extend %gray;
+                @extend %absolute;
+                top: 5px;
+                left: 18px;
+                font-size: 15px;
+            }
+            select {
+                @extend %border-default-transparent;
+                @extend %set-background-white;
+                @extend %border-thin-radius;
+                @extend %full-width;
+                @extend %bold;
+                font-size: 18px;
+                padding: 30px 15px 8px 15px;
+                &:focus {
+                    @extend %border-default-primary;
+                }
+                &[data-has-change=true] {
+                    @extend %border-default-light;
+                }
+
+                /** remove default arrow icon */
+                -webkit-appearance: none;
+                -ms-expand: none;
+            }
+        }
+        input {
+            @extend %reset-line-height;
+        }
+        input, textarea {
+            @extend %border-default-transparent;
+            @extend %border-thin-radius;
+            @extend %box-shadow;
+            font-size: 18px;
+            &[class*=invalid] {
+                border: 2px solid $error;
+            }
+        }
+        button {
+            @extend %background-primary-color-light;
+            @extend %border-default-primary;
+            @extend %border-thin-radius;
+            @extend %transition;
+            padding: .75rem 1.45rem;
+            &:hover, &:focus {
+                i {
+                    @extend %margin-left;
+                }
+            }
+            i {
+                @extend %transition;
+                @extend %margin-left-sm;
+                font-size: 20px;
+            }
+        }
+        label {
+            @extend %flex;
+            @extend %absolute;
+            @extend %transition;
+            color: $gray;
+            left: 1rem;
+            top: 14px;
+            span {
+                @extend %margin-left-sm;
+            }
+            i {
+                font-size: 20px;
+            }
+        }
+        &[data-has-value=true] {
+            input,
+            textarea {
+                padding: 30px 15px 8px 15px;
+                @extend %border-default-light;
+                &[class*=invalid] {
+                    @extend %border-default-primary;
+                }
+            }
+
+            /** jika keadaan data-has-value tapi juga validatenya false */
+            &[data-validate=false] {
+                input,
+                textarea {
+                    &[class*=invalid] {
+                        border-bottom: 2px solid $red;
+                        border: {
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+
+            [class*=feedback] {
+                &[class*=invalid] {
+                    @extend %display-none;
+                }
+            }
+            label {
+                @extend %primary-color;
+                font-size: 12px;
+                top: 10px;
+                i {
+                    font-size: 16px;
+                }
+            }
+        }
+        &[data-input-email=wrong] {
+            label {
+                color: red;
+            }
+            input {
+                border-color: red !important;
+            }
+        }
+        .spinner-validate {
+            @extend %absolute;
+            top: 19px;
+            right: 19px;
+            &[data-has-validate=true] {
+                i {
+                    color: $green;
+                }
+            }
+            &[data-has-validate=false] {
+                i {
+                    color: $red;
+                }
+            }
+            i {
+                @extend %primary-color;
+                font-size: 20px;
+            }
+        }
+
+        &[data-validate=false] {
+            input, textarea, select {
+                border-bottom: 2px solid $red;
+            }
+        }
+
+        [class*=feedback] {
+            @extend %small;
+            @extend %transition;
+            &[class*=invalid] {
+                color: $error;
+            }
+        }
+
+        input,
+        textarea {
+            @extend %full-width;
+            @extend %transition;
+            &:focus {
+                @extend %box-shadow;
+            }
+        }
+        textarea {
+            height:200px;
+        }
+    }
+
+    /** Back */
+    #back {
+        @extend %margin-bottom;
+        a {
+            @extend %gray;
+            @extend %text-decoration-none;
+            &:hover,
+            &:active {
+                @extend %primary-color;
+            }
+            i {
+                font-size: 22px;
+                @extend %margin-right-sm;
             }
         }
     }

@@ -49,17 +49,15 @@ $left-section-background-color: #f4f4f4;
                     z-index: 1;
                     a {
                         @extend %border-thin-radius;
-                        padding: .4rem .75rem;
                         &:hover,
                         &:active {
                             @extend %primary-color;
-                            @extend %set-background-white;
                         }
                         i {
                             font-size: 22px;
                             @extend %margin-right-sm;
                         }
-                        @extend %muted;
+                        @extend %gray;
                         @extend %text-decoration-none;
                     }
                 }
@@ -101,9 +99,10 @@ $left-section-background-color: #f4f4f4;
                 height: 92%;
                 width: 58%;
                 display: inline-block;
-                border-radius: .5rem;
+                border-radius: 1rem;
                 overflow-y: auto;
-                border: 1px solid #70a8ff;
+                border: 1px solid transparent;
+                @extend %box-shadow;
                 &::-webkit-scrollbar-button {
                     display: inline-block;
                     height: 5px;
@@ -122,20 +121,20 @@ $left-section-background-color: #f4f4f4;
                     width: 58% !important;
                     height: 80px;
                     padding-right: 30px;
-                    border: 1px solid #70a8ff;
+                    border: 1px solid transparent;
                 }
                 .__xt {
                     left: $background-image-width;
                     background: linear-gradient(180deg, #ffffff, rgba(255, 255, 255, 0.99), transparent);
                     top: 4%;
-                    border-radius: .5rem .5rem 0 0;
+                    border-radius: 1rem 1rem 0 0;
                     border-bottom: none;
                 }
                 .__xb {
                     left: $background-image-width;
                     background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.99), #ffffff);
                     bottom: 4%;
-                    border-radius: 0 0 .5rem .5rem;
+                    border-radius: 0 0 1rem 1rem;
                     border-top: none;
                 }
                 ._ {
@@ -144,7 +143,7 @@ $left-section-background-color: #f4f4f4;
                         @extend %set-background-white;
                         font-size: 17px;
                         line-height: 1.65;
-                        padding: 52px 80px;
+                        padding: 60px 70px;
                     }
                 }
             }
@@ -173,8 +172,8 @@ $left-section-background-color: #f4f4f4;
                 @extend %image-box-shadow;
                 @extend %padding-top-sm;
                 @extend %padding-bottom-sm;
-                @extend %padding-right-xl;
-                @extend %padding-left-xl;
+                @extend %padding-right-lg;
+                @extend %padding-left-lg;
             }
             ul {
                 $svg-size : 18px;

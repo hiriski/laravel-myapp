@@ -59,10 +59,9 @@ if(isContact()) {
 
     
     window.addEventListener('DOMContentLoaded', () => {
-        let fi = document.querySelectorAll("form .fi");
-        let i = 0;
+        let inputElems = document.querySelectorAll("form .fi");
 
-        fi.forEach(input => {
+        inputElems.forEach(input => {
 
             /** Check value pada input. Jika ada value maka panggil fungsi inputHasValue */
             if(input.value.length > 0) {
@@ -75,6 +74,13 @@ if(isContact()) {
                     setTimeout(() => {
                         validate(input, input.value);
                     }, 100);
+                });
+            }
+
+            /** Jika input select (topic pesan) */
+            if(input.getAttribute('id') === 'topic') {
+                input.addEventListener('change', () => {
+                    input.dataset.hasChange = 'true'
                 });
             }
             

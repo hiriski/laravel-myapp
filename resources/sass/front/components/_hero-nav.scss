@@ -3,11 +3,12 @@
 }
 
 #hero_nav_toggler {
+    /** hide for desktop */
     @extend %display-none;
 }
 
 #hero[data-position=left] {
-    #hero_nav, #hero_nav_toggler {
+    #hero_nav {
         @extend %block;
     }
     #hero_nav {
