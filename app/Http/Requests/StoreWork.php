@@ -23,7 +23,8 @@ class StoreWork extends FormRequest {
         return [
             'name'          => 'required',
             'slug'          => 'required|string|unique:works,slug',
-            'description'   => 'required|min:5|max:500'
+            'description'   => 'required|min:5|max:500',
+            'image'         => 'image|mimes:jpg,png,jpeg,gif|max:2048'
         ];
     }
 }
