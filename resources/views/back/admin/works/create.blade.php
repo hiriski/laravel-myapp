@@ -1,6 +1,6 @@
 @extends('back.layouts.app')
 @section('content')
-@include('back.layouts.page-header.blog')
+@include('back.layouts.page-header.work')
 
 @push('swal')
 <script src="{{ asset('libs/sweetalert2@9.js') }}"></script>

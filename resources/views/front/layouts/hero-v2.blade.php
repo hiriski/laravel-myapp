@@ -11,8 +11,7 @@
                                 <span>@riskiwebid</span>
                             </div>
                             <div class="_o">
-                                {{-- <p>I'm a web developer and graphic designer living in Bandung, Indonesia.</p> --}}
-                                <p>Seorang backend developer yang lebih menyukai front end 😕</p>
+                                <p>I am web designer and developer based in Bandung, Indonesia. I have a passion for backend engineer and love to create simple and cleand design.</p>
                             </div>
                             @include('front.components.social-links')
 

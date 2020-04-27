@@ -1,265 +1,298 @@
 [data-page=contact-index] {
-    &[data-theme=light]  {
-        main#main .Anh > div[class*=__] {
-            @extend %remove-background-color;
-        }
-        footer#main {
-            @extend %remove-background-color;
-        }
+  &[data-theme=light]  {
+    main#main .Anh > div[class*=__] {
+      @extend %remove-background-color;
     }
+    footer#main {
+      @extend %remove-background-color;
+    }
+  }
 
-    ._wave_ {
-        @extend %fixed;
-        @extend %top-left;
-        height: auto;
-        @extend %full-width;
-        z-index: -1;
+  ._wR {
+    @extend %fixed;
+    @extend %top-left;
+    height: auto;
+    @extend %full-width;
+    z-index: -1;
+    svg {
+      @extend %transition3x;
+      height: 0;
     }
-    
-    /** When message success to send */
-    #_c-s_ {
-        @extend %transition2x;
-        @extend %full-width;
-        @extend %absolute;
-        top: -100vh;
-        z-index: 1;
-        left: 0;
-        transition: background-color .2s ease;
-        &.show {
-            @extend %full-height;
-            @extend %top-left;
-            @extend %set-background-white;
-        }
-        .ms {
-            @extend %justify-content-center;
-            @extend %align-items-center;
-            @extend %text-center;
-            @extend %flex;
-            height: 100%;
-            ._c_ {
-                h3 {
-                    font-size: 26px;
-                    @extend %muted;
-                    @extend %font-weight-normal;
-                    @extend %margin-bottom-sm;
-                }
-                p {
-                    @extend %primary-color;
-                }
-                a {
-                    @extend %text-decoration-none;
-                    @extend %border-thin-primary;
-                    @extend %border-thin-radius;
-                    @extend %primary-color;
-                    @extend %margin-top-sm;
-                    @extend %inline-block;
-                    padding: .5rem 1rem;
-                    i {
-                        font-size: 20px;
-                    }
-                    &:hover {
-                        @extend %background-primary-color-light;
-                    }
-                }
-            }
-        }
+    &[data-show=true] {
+      svg {
+        height: 362px;
+      }
     }
+  }
+  
+  /** When message success to send */
+  #_c-s_ {
+    @extend %transition2x;
+    @extend %full-width;
+    @extend %absolute;
+    top: -100vh;
+    z-index: 1;
+    left: 0;
+    transition: background-color .2s ease;
+    &.show {
+      @extend %full-height;
+      @extend %top-left;
+      @extend %set-background-white;
+    }
+    .ms {
+      @extend %justify-content-center;
+      @extend %align-items-center;
+      @extend %text-center;
+      @extend %flex;
+      height: 100%;
+      ._c_ {
+        h3 {
+          font-size: 26px;
+          @extend %muted;
+          @extend %font-weight-normal;
+          @extend %margin-bottom-sm;
+        }
+        p {
+          @extend %primary-color;
+        }
+        a {
+          @extend %text-decoration-none;
+          @extend %border-thin-primary;
+          @extend %border-thin-radius;
+          @extend %primary-color;
+          @extend %margin-top-sm;
+          @extend %inline-block;
+          padding: .5rem 1rem;
+          i {
+            font-size: 20px;
+          }
+          &:hover {
+            @extend %background-primary-color-light;
+          }
+        }
+      }
+    }
+  }
 }
 
 #_CxT {
-    width: 540px;
-    margin: auto;
-    ._h_ {
-        h1 {
-            @extend %primary-color;
-            font-size: 34px;
+  width: 540px;
+  margin: auto;
+  ._h_ {
+    h1 {
+      font-size: 32px;
+      @extend %transition3x;
+      /** Ketika svg muncul set text color jadi putih */
+      @at-root {
+        #_CxT {
+          &[data-has-waves=true] {
+            ._h_ {
+              h1 {
+                @extend %light;
+              }
+            }
+          }
         }
+      }
+
     }
-    form {
-        
+  }
+  ._f {
+    @extend %relative;
+    @extend %margin-bottom;
+    &.tp {
+      label {
+        @extend %gray;
+        @extend %absolute;
+        top: 5px;
+        left: 18px;
+        font-size: 15px;
+      }
+      select {
+        @extend %set-background-blue-light;
+        @extend %border-default-light;
+        @extend %set-background-white;
+        @extend %border-thin-radius;
+        @extend %full-width;
+        @extend %bold;
+        font-size: 18px;
+        padding: 30px 15px 8px 15px;
+        &:focus {
+          @extend %border-default-primary;
+        }
+        &[data-has-change=true] {
+          @extend %border-default-light;
+        }
+
+        /** remove default arrow icon */
+        -webkit-appearance: none;
+        -ms-expand: none;
+      }
     }
-    ._f {
-        @extend %relative;
-        @extend %margin-bottom;
-        &.tp {
-            label {
-                @extend %gray;
-                @extend %absolute;
-                top: 5px;
-                left: 18px;
-                font-size: 15px;
-            }
-            select {
-                @extend %border-default-transparent;
-                @extend %set-background-white;
-                @extend %border-thin-radius;
-                @extend %full-width;
-                @extend %bold;
-                font-size: 18px;
-                padding: 30px 15px 8px 15px;
-                &:focus {
-                    @extend %border-default-primary;
-                }
-                &[data-has-change=true] {
-                    @extend %border-default-light;
-                }
+    input {
+      @extend %reset-line-height;
+    }
+    input, textarea {
+      @extend %border-default-transparent;
+      @extend %border-thin-radius;
+      @extend %box-shadow;
+      font-size: 18px;
+      &[class*=invalid] {
+        border: 2px solid $error;
+      }
+    }
+    button {
+      @extend %background-primary-color-light;
+      @extend %border-default-primary;
+      @extend %border-thin-radius;
+      @extend %transition;
+      padding: .75rem 1.45rem;
+      &:hover, &:focus {
+        i {
+          @extend %margin-left;
+        }
+      }
+      i {
+        @extend %transition;
+        @extend %margin-left-sm;
+        font-size: 20px;
+      }
+    }
+    label {
+      @extend %flex;
+      @extend %absolute;
+      @extend %transition;
+      color: $gray;
+      left: 1rem;
+      top: 14px;
+      span {
+        @extend %margin-left-sm;
+      }
+      i {
+        font-size: 20px;
+      }
+    }
+    &[data-has-value=true] {
+      input,
+      textarea {
+        padding: 30px 15px 8px 15px;
+        @extend %border-default-light;
+        @extend %set-background-blue-light;
+        &[class*=invalid] {
+          @extend %border-default-primary;
+        }
+      }
 
-                /** remove default arrow icon */
-                -webkit-appearance: none;
-                -ms-expand: none;
-            }
-        }
-        input {
-            @extend %reset-line-height;
-        }
-        input, textarea {
-            @extend %border-default-transparent;
-            @extend %border-thin-radius;
-            @extend %box-shadow;
-            font-size: 18px;
-            &[class*=invalid] {
-                border: 2px solid $error;
-            }
-        }
-        button {
-            @extend %background-primary-color-light;
-            @extend %border-default-primary;
-            @extend %border-thin-radius;
-            @extend %transition;
-            padding: .75rem 1.45rem;
-            &:hover, &:focus {
-                i {
-                    @extend %margin-left;
-                }
-            }
-            i {
-                @extend %transition;
-                @extend %margin-left-sm;
-                font-size: 20px;
-            }
-        }
-        label {
-            @extend %flex;
-            @extend %absolute;
-            @extend %transition;
-            color: $gray;
-            left: 1rem;
-            top: 14px;
-            span {
-                @extend %margin-left-sm;
-            }
-            i {
-                font-size: 20px;
-            }
-        }
-        &[data-has-value=true] {
-            input,
-            textarea {
-                padding: 30px 15px 8px 15px;
-                @extend %border-default-light;
-                &[class*=invalid] {
-                    @extend %border-default-primary;
-                }
-            }
-
-            /** jika keadaan data-has-value tapi juga validatenya false */
-            &[data-validate=false] {
-                input,
-                textarea {
-                    &[class*=invalid] {
-                        border-bottom: 2px solid $red;
-                        border: {
-                            top: 0;
-                            left: 0;
-                            right: 0;
-                        }
-                    }
-                }
-            }
-
-            [class*=feedback] {
-                &[class*=invalid] {
-                    @extend %display-none;
-                }
-            }
-            label {
-                @extend %primary-color;
-                font-size: 12px;
-                top: 10px;
-                i {
-                    font-size: 16px;
-                }
-            }
-        }
-        &[data-input-email=wrong] {
-            label {
-                color: red;
-            }
-            input {
-                border-color: red !important;
-            }
-        }
-        .spinner-validate {
-            @extend %absolute;
-            top: 19px;
-            right: 19px;
-            &[data-has-validate=true] {
-                i {
-                    color: $green;
-                }
-            }
-            &[data-has-validate=false] {
-                i {
-                    color: $red;
-                }
-            }
-            i {
-                @extend %primary-color;
-                font-size: 20px;
-            }
-        }
-
-        &[data-validate=false] {
-            input, textarea, select {
-                border-bottom: 2px solid $red;
-            }
-        }
-
-        [class*=feedback] {
-            @extend %small;
-            @extend %transition;
-            &[class*=invalid] {
-                color: $error;
-            }
-        }
-
+      /** jika keadaan data-has-value tapi juga validatenya false */
+      &[data-validate=false] {
         input,
         textarea {
-            @extend %full-width;
-            @extend %transition;
-            &:focus {
-                @extend %box-shadow;
+          &[class*=invalid] {
+            border-bottom: 2px solid $red;
+            border: {
+              top: 0;
+              left: 0;
+              right: 0;
             }
+          }
         }
-        textarea {
-            height:200px;
+      }
+
+      [class*=feedback] {
+        &[class*=invalid] {
+          @extend %display-none;
         }
+      }
+      label {
+        @extend %primary-color;
+        font-size: 12px;
+        top: 10px;
+        i {
+          font-size: 16px;
+        }
+      }
+    }
+    &[data-input-email=wrong] {
+      label {
+        color: red;
+      }
+      input {
+        border-color: red !important;
+      }
+    }
+    .spinner-validate {
+      @extend %absolute;
+      top: 19px;
+      right: 19px;
+      &[data-has-validate=true] {
+        i {
+          color: $green;
+        }
+      }
+      &[data-has-validate=false] {
+        i {
+          color: $red;
+        }
+      }
+      i {
+        @extend %primary-color;
+        font-size: 20px;
+      }
     }
 
-    /** Back */
-    #back {
-        @extend %margin-bottom;
-        a {
-            @extend %gray;
-            @extend %text-decoration-none;
-            &:hover,
-            &:active {
-                @extend %primary-color;
-            }
-            i {
-                font-size: 22px;
-                @extend %margin-right-sm;
-            }
-        }
+    &[data-validate=false] {
+      input, textarea, select {
+        border-bottom: 2px solid $red;
+      }
     }
+
+    [class*=feedback] {
+      @extend %small;
+      @extend %transition;
+      &[class*=invalid] {
+        color: $error;
+      }
+    }
+    select,
+    input,
+    textarea {
+      @extend %box-shadow;
+      @extend %full-width;
+      @extend %transition;
+    }
+    textarea {
+      height:200px;
+    }
+  }
+
+  /** Back */
+  #back {
+    @extend %margin-bottom;
+    a {
+      @extend %text-decoration-none;
+      @extend %gray;
+      @extend %transition3x;
+      /** Ketika svg muncul set text color jadi putih */
+      @at-root {
+        #_CxT {
+          &[data-has-waves=true] {
+            #back {
+              a {
+                @extend %light;
+              }
+            }
+          }
+        }
+      }
+
+      // &:hover,
+      // &:active {
+      //     @extend %primary-color;
+      // }
+      i {
+        font-size: 22px;
+        @extend %margin-right-sm;
+      }
+    }
+  }
 }

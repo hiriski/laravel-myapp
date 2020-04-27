@@ -70,6 +70,12 @@ class BlogController extends Controller {
         /** if request has a file */
         if($file = $request->file('image')) {
 
+            /** Jika folder destination belum ada maka buat folder tersebut */
+            if(!file_exists($this->destinationPath)) {
+                $createNewDirectories = 'public/uploads/images/blog';
+                Storage::makeDirectory($createNewDirectories);
+            }
+
             /** give a file name for image */
             $fileName       = Str::slug($title) . '_' . Str::random(5);
 
@@ -146,7 +152,7 @@ class BlogController extends Controller {
 
 
     public function destroy($id) {
-        //
+        Blog::findOrFail($id)->delete();
     }
 
 }

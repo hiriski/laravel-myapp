@@ -9,8 +9,15 @@
 
 <!-- Auto Generate Meta Tag -->
 {!! SEOMeta::generate() !!}
-<meta name="msapplication-TileColor" content="#f7f7f7"/>
-<meta name="theme-color" content="#f7f7f7"/>
+
+
+@if(Route::currentRouteName() === "contact.index")
+    <meta name="msapplication-TileColor" content="#1f77ff"/>
+    <meta name="theme-color" content="#1f77ff"/>
+@else
+    <meta name="msapplication-TileColor" content="#f7f7f7"/>
+    <meta name="theme-color" content="#f7f7f7"/>
+@endif
 
 <!-- Auto OpenGraph -->
 {!! OpenGraph::generate() !!}

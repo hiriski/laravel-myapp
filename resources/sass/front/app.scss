@@ -39,7 +39,7 @@
 @import 'layouts/sidebar';
 @import 'layouts/footer';
 @import 'layouts/forms';
-@import 'layouts/blog';
+@import 'layouts/post-items';
 @import 'layouts/single-blog';
 @import 'layouts/single-theme';
 @import 'layouts/related-post';
@@ -52,5 +52,5 @@
 @import 'themes/default';
 @import 'themes/dark';
 
-@import 'layouts/responsive';
 @import 'abstracts/responsive-extends';
+@import 'themes/responsive';

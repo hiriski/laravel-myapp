@@ -19,6 +19,12 @@
     </script>
     @endif
 
+		@if ($message = Session::has('work_delete_success'))
+    <script>
+        showSwal('Yey!', 'Work berhasil dihapus!');
+    </script>
+		@endif
+		
     {{-- Blog Card --}}
     <div class="row">
         @foreach($works as $item)
@@ -30,19 +36,26 @@
                 <div class="edit position-absolute">
                     <a href="{{ route('admin.work.edit', $item->id) }}" class="btn btn-sm btn-success"><i class="material-icons">edit</i> Edit</a>
                 </div>
+                <div class="delete position-absolute">
+									{{ Form::open(['url' => route('admin.work.destroy', $item->id) ]) }}
+									@method('DELETE')
+										<button type="submit" role="button" class="btn btn-sm btn-danger"><i class="material-icons">delete</i> Delete</button>
+									{{ Form::close() }}
+                </div>
                 @if(!empty($item->image) || !empty($item->image_md))
                 <div class="post-img">
-                    <img class="card-img-top" src="{{ getBlogImage($item->image_md) }}" alt="{{ $item->title }}">
+                    <img class="card-img-top" src="{{ getWorkImage($item->image_md) }}" alt="{{ $item->title }}">
                 </div>
                 @else
                 <div class="post-img">
+                    {{-- Show no image here --}}
                     <img src="{{ asset('images/sm.jpg') }}" alt="Sample Image" class="card-img-top">
                 </div>
                 @endif
                 <div class="card-body">
 
                     <div class="post-title">
-                        <h2 class="card-title"> {{ $item->title }}</h2>
+                        <h2 class="card-title"> {{ $item->name }}</h2>
                     </div>
                     <div class="post-summary">
                         <p>{{ $item->description }}</p>

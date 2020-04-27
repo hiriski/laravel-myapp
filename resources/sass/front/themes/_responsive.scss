@@ -393,7 +393,7 @@
                     }
                     &:before {
                         content: "";
-                        background-color: rgba($white, 0.95);
+                        background-color: rgba(243, 243, 243, 0.98);
                         position: absolute;
                         top: 0;
                         left: 0;
@@ -447,7 +447,12 @@
     [data-page=contact-index] {
         #_CxT {
             width: 100%;
-            padding: 0 72px;
+            padding: 0 62px;
+            ._h_ {
+                h1 {
+                    font-size: 27px;
+                }
+            }
             form {
                 button {
                     width: 100%;
@@ -497,12 +502,6 @@
     }
 
 
-
-
-
-
-
-    
     /** post */
     [data-blog=single] {
         ._io_ {
@@ -535,9 +534,57 @@
 
     /** contact page */
     [data-page=contact-index] {
-        #_CxT {
-            padding: 0 35px;
+        ._wR svg {
+            margin-left: -30px;
         }
+        #_CxT {
+            padding: 0 30px;
+            ._h_ {
+                h1 {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    /** About */
+    #about {
+        ._r ._a .c {
+            box-shadow: none !important;
+        }
+        #s {
+            &.top {
+                bottom: 1rem;
+            }
+            ._y_4 {
+                padding: 10px 20px !important;
+            }
+            ._s ul li a  {
+                padding: 0.55rem;
+                svg {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+
+    /** Define global element for about page */
+    [data-page=about] {
+        main#main .Anh > div[class*=__] {
+            padding-bottom: 0;
+        }
+        footer {
+            &#main {
+                padding-left: 0;
+            }
+        }
+    }
+
+
+    /** Define footer padding size for mobile */
+    footer#main > div[class*=_] {
+        padding: 42px 0;
     }
 }
 

@@ -40,7 +40,7 @@
                             <label class="d-flex justify-content-center align-items-center" for="blogImage" id="dragImageHere">
 
                                 <div class="imageResult">
-                                    <img src="{{ asset('storage/uploads/images/blog/' . $work->image_md) }}" alt="preview" id="imagePreview" class="">
+                                    <img src="{{ getWorkImage($work->image_md) }}" alt="preview" id="imagePreview" class="">
                                 </div>
 
                                 <div class="meta w-100 text-center mt-3 d-none">
@@ -133,7 +133,7 @@
                         </div>
 
                         <div class="form-group mt-4">
-                            <button type="submit" class="submit-btn btn btn-lg btn-primary rux-btn">@lang('auth.submit') <i class="material-icons">arrow_forward</i></button>
+                            <button type="submit" class="submit-btn btn btn-lg btn-primary rux-btn">Update <i class="material-icons">arrow_forward</i></button>
                         </div>
                         
                     {{ Form::close() }}

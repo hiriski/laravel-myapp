@@ -55,6 +55,9 @@
 %white {
     color: $white;
 }
+%light {
+    color: $light;
+}
 %secondary-text {
     color: $secondary-text;
 }
@@ -234,6 +237,10 @@
 
 
 /** Margin */
+%no-margin {
+    margin: 0;
+}
+
 %margin-top-xs {
     margin-top: .5rem;
 }
@@ -735,10 +742,6 @@
     box-shadow: 0 12px 35px 0 rgba(31, 119, 255, 0.2);
 }
 
-%blue-light-bg {
-    background-color: $blue-light-background;
-}
-
 %xbox-shadow {
     -webkit-box-shadow: 0 15px 32px rgba(0,0,0,.05);
     -moz-box-shadow: 0 15px 32px rgba(0,0,0,.05);
@@ -861,6 +864,10 @@
 
 %set-background-white {
     background: $white;
+}
+
+%set-background-blue-light {
+    background: $blue-light;
 }
 
 %set-background-primary-light {
