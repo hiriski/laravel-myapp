@@ -18,6 +18,7 @@ Route::get('/about', 'AboutController@index')->name('about');
 Route::resource('/contact', 'ContactController', array(
 	'only' => array('index', 'store')
 ));
+Route::post('/newsletter', 'NewsletterController@store')->name('newsletter.store');
 
 /** Route : blog/ */
 Route::prefix('/blog')->group(function() {
@@ -80,6 +81,7 @@ Route::group(['middleware' => 'auth'], function() {
 
 				/** admin/setting */
 				Route::get('/settings', 'Admin\SettingController@index')->name('settings');
+				Route::put('/settings', 'Admin\SettingController@update')->name('settings.update');
 				
 				/** admin/role */
 				Route::resource('/role', 'Admin\RoleController')

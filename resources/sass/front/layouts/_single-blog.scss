@@ -132,9 +132,8 @@
             code:not([class*="language"]) {
                 @extend %code-font;
                 @extend %border-thin-radius;
-                background: #cfe8ff;
-                color: #2052cb;
-                font-size: 16px;
+                background-color: rgba($primary-color, 0.1);
+                font-size: 15px;
                 padding: .2rem .3rem;
             }
             /** Block custom */

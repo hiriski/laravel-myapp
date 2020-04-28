@@ -1,4 +1,4 @@
-@include('front.hi')
+{{-- @include('front.hi') --}}
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -7,20 +7,20 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="icon" href="{{ asset('favicon.ico') }}"/>
 
+@if(!empty(SEOMeta::generate()))
 <!-- Auto Generate Meta Tag -->
 {!! SEOMeta::generate() !!}
-
-
-@if(Route::currentRouteName() === "contact.index")
-    <meta name="msapplication-TileColor" content="#1f77ff"/>
-    <meta name="theme-color" content="#1f77ff"/>
-@else
-    <meta name="msapplication-TileColor" content="#f7f7f7"/>
-    <meta name="theme-color" content="#f7f7f7"/>
 @endif
 
-<!-- Auto OpenGraph -->
+<!-- Generate theme color -->
+<meta name="msapplication-TileColor" content="{{ $tile_color ?? "#f7f7f7" }}"/>
+<meta name="theme-color" content="{{ $tile_color ?? "#f7f7f7" }}"/>
+
+@if(!empty(OpenGraph::generate()))
+<!-- Auto Generate Meta Tag -->
 {!! OpenGraph::generate() !!}
+@endif
+
 @if(Route::currentRouteName() === "blog.show")
 <script type="application/ld+json">
 {

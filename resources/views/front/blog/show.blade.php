@@ -8,11 +8,18 @@
 @endisset
 @section('content')
 <div class="Anh">
+
+{{-- Subscribe message response --}}
+@if(Session::has('subscribe_message'))
+    <h1>{{ Session('subscribe_message') }} </h1>
+@endif
+
     @include('front.components.navigation')
     <div class="__o__">
         <div class="__">
             @include('front.layouts.single-blog-v2')
             @include('front.components.blog-single-pager')
+            @include('front.components.newsletter')
             @include('front.components.share-button')
             @if($post->show_author)
                 @include('front.components.post-author')

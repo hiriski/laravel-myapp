@@ -33,22 +33,21 @@ class BlogController extends Controller {
             ->orderBy('created_at', 'DESC')->paginate($this->blog_perpage);
 
         /** SEO META     */
-        SEOMeta::setTitle('Blog index')
-                ->setDescription('Deskripsi halaman blog index disini')
-                ->setKeywords('Keyword1, keyword2 and more')
+        SEOMeta::setTitle('📰 blog')
+                ->setDescription('Artikel belajar programming bahasa indonesia')
+                ->setKeywords('Belajar programming, laravel, javascript, html, css3, vuejs, backend, frontend developer')
                 ->addMeta('author', 'Riski' . ', hi@riski.web.id', 'name')
                 ->addMeta('copyright', 'Riski Web ID', 'name')
                 ->addMeta('designer', 'Riski', 'name')
                 ->setCanonical(route('blog.index'));
 
         /** OpenGraph */
-        OpenGraph::setTitle('Blog')
-                ->setDescription('Deskripsi halaman blog index disini')
-                ->setUrl(route('blog.index'))
-                ->setSiteName('Riski Web ID')
-                ->addImage(getBlogImage('image-jpg'))
-                ->addProperty('locale', 'id-ID')
-                ->addProperty('locale:alternate', ['id-ID', 'en-US']);
+        OpenGraph::setTitle('📰 blog')
+            ->setDescription('Artikel belajar programming bahasa indonesia')
+            ->setUrl(route('blog.index'))
+            ->addImage(getBlogImage('image-jpg'))
+            ->addProperty('locale', 'id-ID')
+            ->addProperty('locale:alternate', ['id-ID', 'en-US']);
 
         return view('front.blog.index', compact('posts'));
     }

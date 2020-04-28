@@ -474,6 +474,7 @@ footer#main .c__ > p:first-child > span:before {
 footer#main .c__ > p,
 #hero[data-version=two] .u ._o,
 #hero[data-version=two] .u ._i h2 .typed-cursor,
+#_nRx9 ._s .r p,
 #_pa [class*=pa] ._ .n p,
 #_bsp > div[class*=_] > * .q > div a p,
 #_H_Cb ._ > p,
@@ -482,9 +483,26 @@ footer#main .c__ > p,
   color: #707070;
 }
 
+#_nRx9 ._s input[type=text]::-webkit-input-placeholder {
+  color: #a3a3a3;
+}
+
+#_nRx9 ._s input[type=text]::-moz-placeholder {
+  color: #a3a3a3;
+}
+
+#_nRx9 ._s input[type=text]:-ms-input-placeholder {
+  color: #a3a3a3;
+}
+
+#_nRx9 ._s input[type=text]::-ms-input-placeholder {
+  color: #a3a3a3;
+}
+
 #about ._r ._a ._x #back a,
 #_CxT #back a,
 #_CxT ._f.tp label,
+#_nRx9 ._s input[type=text]::placeholder,
 #hero_nav ul li a i {
   color: #a3a3a3;
 }
@@ -522,6 +540,7 @@ footer#main .c__ a,
 #__l__ ._ti ._a- a:last-child,
 #__l__ ._ti ._a- a:first-child:hover,
 [data-blog=single] ._io_ ._ps_ a,
+#_nRx9 ._s,
 #_bsp > div[class*=_] > * .q > div:hover .ic,
 #_bsp > div[class*=_] > * .q > div:hover h3,
 #_bsp > div[class*=_] > * .q > div:hover h4,
@@ -904,7 +923,8 @@ main#main .Anh,
 }
 
 #tm_ ._i h6,
-#hero[data-version=two] .u ._i h2 {
+#hero[data-version=two] .u ._i h2,
+#_nRx9 ._s .r h3 {
   margin-bottom: 0.5rem;
 }
 
@@ -1074,10 +1094,12 @@ main#main .Anh,
   padding-top: 1.25rem;
 }
 
+#_nRx9 ._s input + button,
 #_n_ ._ ._s {
   padding-left: 1.25rem;
 }
 
+#_nRx9 ._s input + button,
 #_n_ ._ ._s {
   padding-right: 1.25rem;
 }
@@ -1234,6 +1256,7 @@ main#main .Anh > div[class*=__] > .__,
 
 #RP > .__q__,
 [data-blog=single] ._io_ ._ps_,
+#_nRx9,
 #_pa,
 #_bsp {
   width: 700px;
@@ -1243,6 +1266,7 @@ main#main .Anh > div[class*=__] > .__,
 @media (max-width: 768px) {
   #RP > .__q__,
   [data-blog=single] ._io_ ._ps_,
+  #_nRx9,
   #_pa,
   #_bsp {
     width: 100% !important;
@@ -1462,6 +1486,9 @@ main#main .Anh > div[class*=__],
 [data-blog=single] ._io_ ._xo > .__ img,
 main#main .Anh > div[class*=__],
 #hero ._h_c_ a,
+#_nRx9 ._s input + button,
+#_nRx9 ._s input[type=text],
+#_nRx9 ._s,
 #_pa [class*=pa],
 #_bsp > div[class*=_] > * .q > div,
 #_psh ul li a,
@@ -1595,6 +1622,7 @@ footer#main .c__ > p,
 [data-blog=single] ._io_ ._ps_ a:hover,
 ::selection,
 #hero ._h_c_ a,
+#_nRx9 ._s input + button,
 #_psh div[class^=s] > .a,
 #_n_ + #__toggler_mobile__ a,
 #hero_nav ul li[data-stand-alone] a {
@@ -1625,7 +1653,9 @@ footer#main .c__ > p,
 }
 
 #_CxT ._f input,
-#_CxT ._f textarea {
+#_CxT ._f textarea,
+#_nRx9 ._s input + button,
+#_nRx9 ._s input[type=text] {
   border: 2px solid transparent;
 }
 
@@ -1649,6 +1679,7 @@ footer#main .c__ > p .laravel {
 
 [data-theme=light],
 [data-background-color=light],
+#_nRx9 ._s,
 pre[class*=language][data-color*=light] {
   background: #f7f7f7;
 }
@@ -1695,7 +1726,13 @@ footer#main,
 
 [data-blog=single] ._io_ ._ps_ .block p,
 [data-blog=single] ._io_ ._ps_ .block span,
-#_bt_ ul li a {
+#_bt_ ul li a,
+._ps_ h1,
+._ps_ h2,
+._ps_ h3,
+._ps_ h4,
+._ps_ h5,
+._ps_ h6 {
   font-family: "HK Grotesk", Roboto, Ubuntu, sans-serif !important;
 }
 
@@ -1703,12 +1740,6 @@ footer#main,
 [data-blog=single] ._io_ ._ps_ ol,
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
 ._ps_ div,
-._ps_ h1,
-._ps_ h2,
-._ps_ h3,
-._ps_ h4,
-._ps_ h5,
-._ps_ h6,
 ._ps_ p {
   font-family: "Lora", serif !important;
 }
@@ -1716,7 +1747,7 @@ footer#main,
 [data-blog=single] ._io_ ._ps_ code:not([class*=language]),
 pre[class*=language] code,
 pre[class*=language] .line-number {
-  font-family: "Courier Prime", monospace !important;
+  font-family: "Fira Code Retina", monospace !important;
 }
 
 #tm_ ._i .n svg {
@@ -2395,7 +2426,7 @@ pre[class*=language] {
   padding: 32px 24px 28px 60px;
   overflow: auto;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
   /** Support for line numbers (pre tags) */
   transform: translateY(0);
@@ -2433,7 +2464,7 @@ pre[class*=language] .line-number span {
   width: 48px;
   padding-right: 10px;
   color: #797979;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 26px !important;
 }
 
@@ -2896,6 +2927,23 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
   z-index: -1;
 }
 
+#_nRx9 ._s {
+  padding: 50px;
+}
+
+#_nRx9 ._s .r h3 {
+  font-size: 32px;
+}
+
+#_nRx9 ._s input[type=text] {
+  width: 355px;
+  height: 50px;
+}
+
+#_nRx9 ._s input + button {
+  height: 50px;
+}
+
 #hero {
   /** contact button */
 }
@@ -3334,9 +3382,8 @@ footer#main .c__ > p i {
 }
 
 [data-blog=single] ._io_ ._ps_ code:not([class*=language]) {
-  background: #cfe8ff;
-  color: #2052cb;
-  font-size: 16px;
+  background-color: rgba(31, 119, 255, 0.1);
+  font-size: 15px;
   padding: 0.2rem 0.3rem;
 }
 

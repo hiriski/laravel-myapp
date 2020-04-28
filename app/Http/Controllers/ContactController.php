@@ -13,12 +13,30 @@ use App\Http\Requests\StoreContact;
 use App\Mail\ContactEmail;
 use Illuminate\Support\Facades\Mail;
 
+/** SEO */
+use Artesaos\SEOTools\Facades\SEOMeta;
 
 class ContactController extends Controller {
 
+  public function __construct() {
+    $this->page_title = "Say hello 👋";
+    $this->tile_color = "#1f77ff";
+  }
+
   public function index() {
+
+    /** SEO META     */
+    SEOMeta::setTitle($this->page_title)
+      ->setDescription('Contact page')
+      ->addMeta('author', 'Riski' . ', hi@riski.web.id', 'name')
+      ->addMeta('copyright', 'Riski Web ID', 'name')
+      ->addMeta('designer', 'Riski', 'name')
+      ->setCanonical(route('contact.index'));
+    
+    $tile_color = $this->tile_color;
+
     $topic = Topic::orderBy('id', 'ASC')->pluck('name', 'id');
-    return view('front.contact', compact('topic'));
+    return view('front.contact', compact('topic', 'tile_color'));
   }
 
   public function store(StoreContact $request) {

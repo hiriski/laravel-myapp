@@ -23,11 +23,6 @@
   transition: all 0.5s cubic-bezier(0.25, 0.1, 0, 0.99);
 }
 
-#sidebar .sidebar-box {
-  overflow: hidden;
-  position: relative;
-}
-
 .admin-area #sidebar .sidebar-label,
 #btn-force-change-slug {
   position: absolute;
@@ -324,6 +319,8 @@ h2.card-title {
 }
 
 #sidebar .sidebar-box {
+  position: relative;
+  overflow-y: scroll;
   height: calc(100vh - 40px);
   background-color: #fff;
   border-radius: 10px;
@@ -336,8 +333,8 @@ h2.card-title {
 
 #sidebar .sidebar-header .profile-pic {
   margin: auto;
-  width: 100px;
-  height: 100px;
+  width: 72px;
+  height: 72px;
 }
 
 #sidebar .sidebar-header .profile-name {

@@ -16,6 +16,10 @@ use Artesaos\SEOTools\Facades\OpenGraph;
 
 class IndexController extends Controller {
 
+  public function __construct() {
+    $this->page_title = "index";
+  }
+
   public function index() {
     $feature_posts = FeaturePost::all();
     $setting = Setting::findOrFail(1);
@@ -26,9 +30,9 @@ class IndexController extends Controller {
     $works = Work::with(['category'])->orderBy('created_at', 'DESC')->paginate(6);
         
     /** SEO META     */
-    SEOMeta::setTitle('Home')
-      ->setDescription('Deskripsi homepage disini')
-      ->setKeywords('Keyword1, keyword2 and more')
+    SEOMeta::setTitle($this->page_title)
+      ->setDescription('Riski Web ID')
+      ->setKeywords('')
       ->addMeta('author', 'Riski' . ', hi@riski.web.id', 'name')
       ->addMeta('copyright', 'Riski Web ID', 'name')
       ->addMeta('designer', 'Riski', 'name')
