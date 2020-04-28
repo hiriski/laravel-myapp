@@ -16,7 +16,7 @@ class CreateContactsTable extends Migration {
             $table->unsignedInteger('topic_id');
             $table->string('name');
             $table->string('email');
-            $table->string('content');
+            $table->text('content');
             $table->string('phone_number')->nullable();
             $table->string('website')->nullable();
             $table->string('devices')->nullable();
