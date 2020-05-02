@@ -527,8 +527,13 @@
         }
     }
 
-    /** post index and related post width */
-    #RP .__i__, #_Bx .__i__, #_bsp > div[class*=_] > * {
+    /** post index, works, and related post width */
+    #_Bx._works .__sa {
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    #RP .__i__, #_Bx .__i__,
+    #_bsp > div[class*=_] > * {
         width: 100%;
     }
 

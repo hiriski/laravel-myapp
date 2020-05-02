@@ -40,6 +40,16 @@ Route::name('api.')->group(function() {
 				});
 			});
 		});
+
+		/** Name : api.work */
+		Route::name('work')->group(function() {
+			/** /api/work/ */
+			Route::prefix('work')->group(function() {
+			});
+			
+			/** /api/work */
+			Route::apiResource('work', 'Api\WorkController');
+		});
 	});
 
 	/** Name : api.admin. */

@@ -1,8 +1,8 @@
+@import 'theme-info';
 @import 'base/reset';
 @import 'base/colors';
-@import 'theme-info';
+@import 'base/variables';
 
-@import 'abstracts/variables';
 @import 'abstracts/functions';
 @import 'abstracts/keyframes';
 @import 'abstracts/mixins';

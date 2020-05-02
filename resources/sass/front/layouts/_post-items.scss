@@ -5,25 +5,25 @@
 
   /** Works Layout */
   &._works {
-    @extend %margin-bottom-xl;
+    @extend %padding-bottom-xl;
     .__sa {
       -moz-column-count: 2;
       column-count: 2;
-      -moz-column-count: 2;
-      column-count: 2;
-      -moz-column-gap: 1em;
-      column-gap: 1em;
-      margin: 0 1rem;
-      padding: 0;
-      -moz-column-gap: 1.5em;
-      column-gap: 1.5em;
+      // -moz-column-gap: 1em;
+      // column-gap: 1em;
+      // -moz-column-gap: 1.5em;
+      // column-gap: 1.5em;
       display: block !important;
+      padding: 12px;
       .__i__ {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        -webkit-column-break-inside: avoid;
         width: 100%;
         .in_ {
-          padding: unset;
+          padding: 12px 0;
           ._img_ {
-            height: auto;
+            height: auto !important;
           }
         }
         .c_ > ._xo ._t_ {
@@ -60,16 +60,14 @@
         @extend %justify-content-center;
         @extend %margin-bottom-lg;
         > blockquote {
-          @extend %reading-font;
           @extend %text-center;
           @extend %secondary-text;
           @extend %reset;
-          font-weight: 600;
-          font-size: 20px;
+          font-size:18px;
           width: 500px;
           cite {
             @extend %block;
-            @extend %normal;
+            @extend %small;
             @extend %margin-top-sm;
           }
         }

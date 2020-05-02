@@ -26,3 +26,5 @@ mix.js('resources/js/admin.js', 'public/js/admin.js');
 
 /** App Vue js (for vue version) */
 mix.js('resources/js/app-vue.js', 'public/js/app-vue.js');
+
+mix.sourceMaps();

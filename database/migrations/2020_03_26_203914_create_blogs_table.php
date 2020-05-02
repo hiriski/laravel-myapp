@@ -25,6 +25,7 @@ class CreateBlogsTable extends Migration {
             $table->string('image_md')->nullable();
             $table->string('featured_image')->nullable();
             $table->string('image')->nullable()->comment('Original image');
+            $table->string('tile_color')->nullable()->comment('Header theme color for mobile browsers');
 
             /** Foreign Key */
             $table->unsignedBigInteger('user_id');

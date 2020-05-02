@@ -23,20 +23,31 @@ if(isIndex()) {
 if(isIndex()) {
 	
 	window.addEventListener('DOMContentLoaded', homeStyling);
+	
+	/** Tinggi hero content
+	 * variable ini harus diletakan di luar event scroll agar nilainya fix */
+	var heroContentOffsetHeight = document.querySelector('#hero > ._z').offsetHeight;
+
 	window.addEventListener('scroll', () => {
 		homeStyling();
 	});
 
 	const homeStyling = () => {
+		let currentState = document.documentElement.scrollTop;
+		console.log(currentState);
+
+		// console.log('window.innerHeight : ' + window.innerHeight);
+		// console.log('window.pageYOffset : ' + window.pageYOffset);
+		// console.log('window.offsetHeight : ' + document.body.offsetHeight);
+
+		// console.log(mainElementOffset);
 
 		/** jika lebar layar tidak kurang dari 640 kebawah */
 		if(!isMobileLg()) {
 			let userScroll = window.scrollY;
-			/** Patokan saat nanti scroll */
-			let heroHeight = document.querySelector('#hero[data-version=two] ._z ._q');
-			if(userScroll >= 200) {
+			if(userScroll >= 130) {
 				setLayout('left');
-				if(userScroll > 600) {
+				if(userScroll > heroContentOffsetHeight) {
 					showHeroNav('slided');
 				}
 				else {
@@ -48,9 +59,9 @@ if(isIndex()) {
 			}
 		}
 
-		/** Tapi jika lebar layar lebih kecil mau apa */
+		/** Lakukan sesuatu jika lebar layar ukran smartphone */
 		else {
-			console.log('masuk sini');
+			console.log('Mobile ready');
 		}
 
 	}
@@ -65,25 +76,22 @@ const moveHero = (position) => {
 	if(position === "left") {
 		setTimeout(() => {
 			hero.style.zIndex = '1';
-		}, 1500);
+		}, 1000);
 	}
 	else if(position === "center") {
-		setTimeout(() => {
 			hero.removeAttribute('style');
-		}, 200);
+			/** jika kembali ke tengah set zIndex jadi 0 */
+			hero.style.zIndex = 0;
 	}
 }
-
 const setLayoutAnhOi = (style) => {
 	AnhOi.dataset.layoutStyle = style; 
 }
-
 
 const setLayout = (position) => {
 	setLayoutAnhOi(position);
 	moveHero(position);
 }
-
 
 const showHeroNav = (classname) => {
 	let heroNavElem = document.getElementById("hero_nav");
@@ -92,16 +100,12 @@ const showHeroNav = (classname) => {
 	}
 }
 
-
-
 const showHeroMenuOnMobile = () => {
 	let heroNavElem = document.getElementById("hero_nav");
 	if(heroNavElem) {
 		heroNavElem.classList.toggle('show');
 	}
 }
-
-
 
 /** Hero for Mobile */
 if((isIndex() && isMobileLg())) {

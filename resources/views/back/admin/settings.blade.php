@@ -81,7 +81,7 @@
             <div class="form-group mb-2">
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" name="show_featured_post" id="show_featured_post"
-                  class="custom-control-input"
+                  class="custom-control-input" value="1"
                   {{ $settings->show_featured_post ? 'checked' : '' }} >
                 <label class="custom-control-label" for="show_featured_post">Show Featured Post ?</label>
               </div>
@@ -90,7 +90,7 @@
 						<div class="form-group mb-2">
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" name="show_blog_homepage" id="show_blog_homepage"
-                  class="custom-control-input"
+                  class="custom-control-input" value="1"
                   {{ $settings->show_blog_homepage ? 'checked' : '' }} >
                 <label class="custom-control-label" for="show_blog_homepage">Show Blog in Homepage</label>
               </div>
@@ -99,7 +99,7 @@
 						<div class="form-group mb-2">
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" name="show_work_homepage" id="show_work_homepage"
-                  class="custom-control-input"
+                  class="custom-control-input" value="1"
                   {{ $settings->show_work_homepage ? 'checked' : '' }} >
                 <label class="custom-control-label" for="show_work_homepage">Show Work in Homepage</label>
               </div>

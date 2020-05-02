@@ -1,5 +1,23 @@
 @charset "UTF-8";
 
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++|                                                                |++++++++
+++++++++|  Theme Name  : AnhOi                                           |++++++++
+++++++++|  Author      : Riski                                           |++++++++
+++++++++|  Author URI  : https://riski.web.id                            |++++++++
+++++++++|  Version     : 1.2                                             |++++++++
+++++++++|                                                                |++++++++
+++++++++|  Made with Sass, RaxCore Sass & ❤ | Bandung/Indonesia          |++++++++
+++++++++|                                                                |++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++ Don't forget to close the comment tag 👉*/
+
 /* NORMALIZE */
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
@@ -240,24 +258,6 @@ th {
   --danger-text: #92574a;
 }
 
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++|                                                                |++++++++
-++++++++|  Theme Name  : AnhOi                                           |++++++++
-++++++++|  Author      : Riski                                           |++++++++
-++++++++|  Author URI  : https://riski.web.id                            |++++++++
-++++++++|  Version     : 1.2                                             |++++++++
-++++++++|                                                                |++++++++
-++++++++|  Made with Sass, RaxCore Sass & ❤ | Bandung/Indonesia          |++++++++
-++++++++|                                                                |++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+++++++++++++++++++++++++++++++++++++++ Don't forget to close the comment tag 👉*/
-
 /** Media Queries */
 
 @-webkit-keyframes xRotate {
@@ -440,7 +440,6 @@ th {
 #_n_[data-position=left] ._ ._s ._a ul li a > span,
 #hero_nav ul li[data-stand-alone]:before,
 #hero_nav,
-#hero_nav_toggler,
 #__h_sl ._s ul li a .ic + span {
   display: none;
 }
@@ -602,6 +601,7 @@ a.anhoi-btn,
 #RP .__i__ .c_ ._m_ .d_,
 #_Bx .__i__ .c_ ._m_ .d_,
 #_Bx .__i__ .c_ ._m_ .__c,
+#_Bx > .__q__ > ._cn_ .__quote__ > blockquote cite,
 footer#main .c__ > p,
 #hero ._h_c_ a,
 #_bsp > div[class*=_] > * .q > div a p,
@@ -612,8 +612,7 @@ pre[class*=language] span.code-filename,
   font-size: 14px;
 }
 
-#tm_ ._i .text,
-#_Bx > .__q__ > ._cn_ .__quote__ > blockquote cite {
+#tm_ ._i .text {
   font-size: 16px;
 }
 
@@ -1050,7 +1049,6 @@ main#main .Anh,
 
 #RP,
 #changelog .log .t,
-#_Bx._works,
 #_H_Cb,
 #hero_nav ul li[data-stand-alone] {
   margin-bottom: 3rem;
@@ -1138,7 +1136,8 @@ main#main .Anh,
 }
 
 #tm_,
-#__l__ ._ti {
+#__l__ ._ti,
+#_Bx._works {
   padding-bottom: 3rem;
 }
 
@@ -1738,7 +1737,6 @@ footer#main,
 
 [data-blog=single] ._io_ ._ps_ ul,
 [data-blog=single] ._io_ ._ps_ ol,
-#_Bx > .__q__ > ._cn_ .__quote__ > blockquote,
 ._ps_ div,
 ._ps_ p {
   font-family: "Lora", serif !important;
@@ -2956,7 +2954,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 }
 
 #hero[data-version=two] ._y ._x {
-  height: 75vh;
+  height: 70vh;
 }
 
 #hero[data-version=two] .anh_ {
@@ -2969,7 +2967,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 }
 
 #hero[data-version=two] .anh_ [class*=_] img {
-  height: 75vh;
+  height: 70vh;
   width: auto;
 }
 
@@ -3098,7 +3096,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 
 [data-page=index] main#main {
   min-height: 100%;
-  top: 75vh;
+  top: 70vh;
 }
 
 [data-page=index] [data-layout-style=left] main#main .Anh {
@@ -3183,27 +3181,24 @@ footer#main .c__ > p i {
 #_Bx._works .__sa {
   -moz-column-count: 2;
   column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
-  -moz-column-gap: 1em;
-  column-gap: 1em;
-  margin: 0 1rem;
-  padding: 0;
-  -moz-column-gap: 1.5em;
-  column-gap: 1.5em;
   display: block !important;
+  padding: 12px;
 }
 
 #_Bx._works .__sa .__i__ {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
   width: 100%;
 }
 
 #_Bx._works .__sa .__i__ .in_ {
-  padding: unset;
+  padding: 12px 0;
 }
 
 #_Bx._works .__sa .__i__ .in_ ._img_ {
-  height: auto;
+  height: auto !important;
 }
 
 #_Bx._works .__sa .__i__ .c_ > ._xo ._t_ {
@@ -3219,8 +3214,7 @@ footer#main .c__ > p i {
 }
 
 #_Bx > .__q__ > ._cn_ .__quote__ > blockquote {
-  font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   width: 500px;
 }
 
@@ -4840,7 +4834,12 @@ body {
     justify-content: flex-start;
   }
 
-  /** post index and related post width */
+  /** post index, works, and related post width */
+
+  #_Bx._works .__sa {
+    -moz-column-count: 1;
+    column-count: 1;
+  }
 
   #RP .__i__,
   #_Bx .__i__,
