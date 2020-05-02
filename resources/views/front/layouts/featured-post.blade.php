@@ -12,8 +12,8 @@
             </div>
 
             <div class="_p_">
-            @isset($feature_posts)
-            @foreach($feature_posts as $item)
+            @isset($featured_posts)
+            @foreach($featured_posts as $item)
                 <div class="__i__">
                     <div class="in_">
 

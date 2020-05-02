@@ -18,17 +18,33 @@ class IndexController extends Controller {
 
   public function __construct() {
     $this->page_title = "index";
+    $this->setting = Setting::findOrFail(1);
   }
 
   public function index() {
-    $feature_posts = FeaturePost::all();
-    $setting = Setting::findOrFail(1);
+    $setting = $this->setting;
 
-    $posts = Blog::with(['category'])->where('status_id', 1)
-    ->orderBy('created_at', 'DESC')->paginate(6);
+    $featured_posts = [];
+    $posts = [];
+    $works = [];
 
-    $works = Work::with(['category'])->orderBy('created_at', 'DESC')->paginate(6);
-        
+    /** Check setting for show featured post in homepage */
+    if($setting->showFeaturedPost()) {
+      $featured_posts = FeaturePost::all();
+    }
+
+    /** Check setting for show blog in homepage */
+    if($setting->showBlog()) {
+      $posts = Blog::with(['category'])->where('status_id', 1)
+        ->orderBy('created_at', 'DESC')->paginate(6);
+    }
+
+    /** Check setting for show work in homepage */
+    if($setting->showWork()) {
+      $works = Work::with(['category'])->where('status_id', 1)
+        ->orderBy('created_at', 'DESC')->paginate(6);
+    }
+
     /** SEO META     */
     SEOMeta::setTitle($this->page_title)
       ->setDescription('Riski Web ID')
@@ -47,6 +63,6 @@ class IndexController extends Controller {
       ->addProperty('locale', 'id-ID')
       ->addProperty('locale:alternate', ['id-ID', 'en-US']);
       
-    return view('front.index', compact('feature_posts', 'setting', 'posts', 'works'));
+    return view('front.index', compact('featured_posts', 'setting', 'posts', 'works'));
   }
 }
