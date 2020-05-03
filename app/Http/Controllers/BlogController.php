@@ -70,7 +70,7 @@ class BlogController extends Controller {
     }
 
     /** Related Posts */
-    $related_post = Blog::where('category_id', $post->category_id)
+    $related_post = Blog::with('category')->where('category_id', $post->category_id)
       ->orderBy('created_at', 'DESC')->take(4)->get();
 
     /** Next and Previous Post */
