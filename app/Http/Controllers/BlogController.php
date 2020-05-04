@@ -27,10 +27,8 @@ class BlogController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function index() {
-    $setting  = Setting::findOrFail(1);
-
     $posts = Blog::with(['category'])->where('status_id', 1)
-      ->orderBy('created_at', 'DESC')->paginate($this->blog_perpage);
+      ->orderBy('created_at', 'DESC')->simplePaginate($this->blog_perpage);
 
     /** SEO META     */
     SEOMeta::setTitle('📰 blog')
