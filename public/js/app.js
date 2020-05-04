@@ -246,9 +246,9 @@ eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourc
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /opt/lampp/htdocs/myapp/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /opt/lampp/htdocs/myapp/resources/sass/back/app.scss */"./resources/sass/back/app.scss");
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/myapp/resources/sass/front/app.scss */"./resources/sass/front/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\myapp\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\xampp\htdocs\myapp\resources\sass\back\app.scss */"./resources/sass/back/app.scss");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\myapp\resources\sass\front\app.scss */"./resources/sass/front/app.scss");
 
 
 /***/ })

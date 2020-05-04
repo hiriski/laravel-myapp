@@ -18,7 +18,9 @@ class CreateBlogCategoriesTable extends Migration {
             $table->string('description')->nullable();
             $table->string('keywords')->nullable();
             $table->text('icon')->nullable()->comment('maybe image format base64');
-            $table->string('color')->nullable();
+            $table->string('image')->nullable()
+                ->comment('image for OpenGraph');
+            $table->string('tile_color')->nullable()->comment('Header theme color for mobile browsers');
             $table->timestamps();
         });
     }
