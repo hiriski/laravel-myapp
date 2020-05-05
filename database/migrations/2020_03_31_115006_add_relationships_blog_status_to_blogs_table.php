@@ -14,7 +14,7 @@ class AddRelationshipsBlogStatusToBlogsTable extends Migration {
     Schema::table('blogs', function (Blueprint $table) {
 			$table->foreign('status_id')->references('id')->on('blog_status')
 				->onUpdate('set null')
-				->onUpdate('set null');
+				->onDelete('set null');
     });
   }
 
