@@ -5,26 +5,26 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 class CreateWorkStatusesTable extends Migration {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up() {
-        Schema::create('work_statuses', function (Blueprint $table) {
-            $table->tinyIncrements('id');
-            $table->string('name');
-            $table->string('slug')->unique();
-        });
-    }
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up() {
+    Schema::create('work_statuses', function (Blueprint $table) {
+      $table->tinyIncrements('id');
+      $table->string('name');
+      $table->string('slug')->unique();
+    });
+  }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('work_statuses');
-    }
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down()
+  {
+    Schema::dropIfExists('work_statuses');
+  }
 }

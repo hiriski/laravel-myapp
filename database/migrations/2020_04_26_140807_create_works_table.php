@@ -17,8 +17,8 @@ class CreateWorksTable extends Migration {
 	
       $table->text('description');
       $table->unsignedBigInteger('user_id');
-      $table->unsignedInteger('category_id');
-      $table->unsignedTinyInteger('status_id');
+      $table->unsignedInteger('category_id')->nullable();
+      $table->unsignedTinyInteger('status_id')->nullable();
 			
       $table->string('image_xs')->nullable();
       $table->string('image_md')->nullable();

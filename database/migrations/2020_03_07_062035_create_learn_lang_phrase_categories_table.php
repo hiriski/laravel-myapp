@@ -5,25 +5,25 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 class CreateLearnLangPhraseCategoriesTable extends Migration {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up() {
-        Schema::create('learn_lang_phrase_categories', function (Blueprint $table) {
-            $table->Increments('id');
-            $table->string('name');
-            $table->text('image_url')->nullable();
-        });
-    }
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up() {
+    Schema::create('learn_lang_phrase_categories', function (Blueprint $table) {
+      $table->Increments('id');
+      $table->string('name');
+      $table->text('image_url')->nullable()->comment('phrase category image or icon');
+    });
+  }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down() {
-        Schema::dropIfExists('learn_lang_phrase_categories');
-    }
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down() {
+    Schema::dropIfExists('learn_lang_phrase_categories');
+  }
 }

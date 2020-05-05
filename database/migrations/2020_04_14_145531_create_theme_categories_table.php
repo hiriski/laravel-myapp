@@ -5,30 +5,29 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 class CreateThemeCategoriesTable extends Migration {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up() {
-        Schema::create('theme_categories', function (Blueprint $table) {
-            $table->Increments('id');
-            $table->string('name', 75);
-            $table->string('slug')->unique();
-            $table->string('description')->nullable();
-            $table->string('keywords')->nullable();
-            $table->text('icon')->nullable()->comment('maybe image format base64 or url image svg');
-            $table->string('color')->nullable();
-            $table->timestamps();
-        });
-    }
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up() {
+    Schema::create('theme_categories', function (Blueprint $table) {
+      $table->Increments('id');
+      $table->string('name', 75);
+      $table->string('slug')->unique();
+      $table->string('description')->nullable();
+      $table->string('keywords')->nullable();
+      $table->text('icon')->nullable()->comment('theme category image or icon');
+      $table->string('tile_color')->nullable();
+    });
+  }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down() {
-        Schema::dropIfExists('theme_categories');
-    }
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down() {
+    Schema::dropIfExists('theme_categories');
+  }
 }

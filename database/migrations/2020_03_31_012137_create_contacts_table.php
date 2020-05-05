@@ -13,7 +13,7 @@ class CreateContactsTable extends Migration {
   public function up() {
     Schema::create('contacts', function (Blueprint $table) {
       $table->bigIncrements('id');
-      $table->unsignedInteger('topic_id');
+      $table->unsignedInteger('topic_id')->nullable();
       $table->string('name');
       $table->string('email');
       $table->text('content');

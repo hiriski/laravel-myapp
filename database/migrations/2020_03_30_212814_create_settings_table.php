@@ -13,7 +13,8 @@ class CreateSettingsTable extends Migration {
   public function up() {
     Schema::create('settings', function (Blueprint $table) {
       $table->bigIncrements('id');
-      $table->unsignedTinyInteger('language_id')->default(1)->comment('Site Language, default 1 is english');
+      $table->unsignedTinyInteger('language_id')->default(1)->nullable()
+        ->comment('Site Language, default 1 : english');
 
       /** Info */
       $table->string('app_name')->nullable();
