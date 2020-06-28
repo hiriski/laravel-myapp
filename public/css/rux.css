@@ -1,0 +1,819 @@
+@charset "UTF-8";
+
+/**
+ * Import All Base
+ */
+
+/**
+ * Color Variables 
+ */
+
+/** Width */
+
+/** Media Queries */
+
+/** icon size for material design icons */
+
+/** Etc */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+html {
+  background: #fff;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  background: transparent;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/**
+ * Import Mixins and Extends
+ */
+
+/** Mixin to prefix a property
+  * @author Hugo Giraudel
+  * @param {String} $property - Property name
+  * @param {*} $value - Property value
+  * @param {List} $prefixes (()) - List of prefixes to print
+  */
+
+/** box-shadow
+  * Sytnax : box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;
+  * @author Riski Web ID
+  * @param {*} $hOffset 	- Property horizontal offset
+  * @param {*} $vOffset 	- Property vertical offset
+  * @param {*} $blur 		- Property blur value
+  * @param {*} $color 	- Property color value
+  */
+
+/** Transform */
+
+/**
+ * Import All Extends
+ */
+
+[class$=btn],
+header nav li {
+  display: inline-block;
+}
+
+header nav {
+  display: flex;
+}
+
+header nav ul.r a:before,
+header #logo {
+  display: none;
+}
+
+/**
+ * Colors
+ */
+
+.btn-dark,
+.btn-secondary,
+.btn-primary {
+  color: #ffffff;
+}
+
+header nav a:hover,
+.btn-white {
+  color: #0575ff;
+}
+
+header nav a {
+  color: #5e5e5e;
+}
+
+/**
+ * SVG Fill color
+ */
+
+/**
+ * Colors
+ */
+
+/**
+ * Background
+ */
+
+.btn-white,
+.card {
+  background-color: #ffffff;
+}
+
+header nav a:before,
+.btn-primary {
+  background-color: #0575ff;
+}
+
+.btn-secondary {
+  background-color: #ffa000;
+}
+
+.btn-dark {
+  background-color: #444;
+}
+
+/** Justify Content */
+
+header nav {
+  justify-content: space-between;
+}
+
+/** Justify Items */
+
+/** Align Items */
+
+/** Align Content */
+
+/** Align Selft */
+
+/** Flex Directions */
+
+/** Flex Grow */
+
+/** Flex Basis */
+
+/** Flex Flows */
+
+/** Flex shrink */
+
+/** Flex Wraps */
+
+/** Place Contents */
+
+/**
+ * Float 
+ */
+
+/**
+ * Margins
+ */
+
+header nav ul {
+  margin: 0;
+}
+
+/* Margin extra small */
+
+/* Margin small */
+
+/* Margin middle */
+
+/* Margin large */
+
+/* Margin extra large */
+
+/* Margin auto */
+
+#hero,
+header {
+  margin: 0 auto;
+}
+
+/**
+ * Paddings 
+ */
+
+header nav ul.r a,
+header nav ul {
+  padding: 0;
+}
+
+/* Padding extra small */
+
+/* Padding small */
+
+#hero > .a,
+header > .a {
+  padding: 0 0.85rem;
+}
+
+header nav a {
+  padding-left: 0.85rem;
+}
+
+/* Padding middle */
+
+.card {
+  padding: 1.25rem;
+}
+
+/* Padding Large */
+
+header nav a {
+  padding-right: 2rem;
+}
+
+/* Padding extra large */
+
+#hero,
+header {
+  padding-top: 3rem;
+}
+
+/**
+ * Border
+ */
+
+[class$=btn] {
+  border: 1px transparent;
+}
+
+/* Border Radius */
+
+[class$=btn],
+.card {
+  border-radius: 0.2rem;
+}
+
+header nav a:before {
+  border-radius: 50%;
+}
+
+/**
+ * Font
+ */
+
+/* font family */
+
+/* font size */
+
+.btn-dark,
+.btn-white,
+.btn-secondary,
+.btn-primary {
+  font-size: 13px;
+}
+
+/** font weight */
+
+/**
+ * Text
+ */
+
+/** Text align */
+
+body {
+  text-align: left;
+}
+
+/** Text transform */
+
+/** Text overflow */
+
+/** Text decoration */
+
+header nav a {
+  text-decoration: none;
+}
+
+/** Overflows */
+
+/** Vertical overflows */
+
+/** Horizontal overflows  */
+
+/** Position */
+
+header nav a {
+  position: relative;
+}
+
+header nav a:before {
+  position: absolute;
+}
+
+/** Visibility */
+
+/** Width */
+
+/** width */
+
+#hero,
+header {
+  width: 1024px;
+}
+
+@media (max-width: 1024px) {
+  #hero,
+  header {
+    width: 100% !important;
+  }
+}
+
+/**
+ * Box shadow
+ */
+
+.shadow-soft {
+  box-shadow: 0 12px 32px 0 rgba(10, 10, 10, 0.02);
+  -moz-box-shadow: 0 12px 32px 0 rgba(10, 10, 10, 0.02);
+  -webkit-box-shadow: 0 12px 32px 0 rgba(10, 10, 10, 0.02);
+}
+
+.shadow {
+  box-shadow: 0 12px 32px 0 rgba(10, 10, 10, 0.05);
+  -moz-box-shadow: 0 12px 32px 0 rgba(10, 10, 10, 0.05);
+  -webkit-box-shadow: 0 12px 32px 0 rgba(10, 10, 10, 0.05);
+}
+
+/**
+ * Vertical align
+ * vertical-align: baseline|length|sub|super|top|text-top|middle|bottom|text-bottom|initial|inherit;
+ */
+
+/**
+ * List style 
+ */
+
+header nav ul {
+  list-style: none;
+}
+
+/** 
+ * z-index 
+ */
+
+/**
+ * Etc extends 
+ */
+
+/** Icon for material icons */
+
+/** SVG Size */
+
+/** Absolute or fixed positions */
+
+header nav a:before {
+  left: 0;
+}
+
+/** pseudo content */
+
+header nav a:hover:before {
+  content: "";
+}
+
+/**
+ * All components extends
+ */
+
+/** Cards */
+
+/** Button */
+
+.btn-dark,
+.btn-white,
+.btn-secondary,
+.btn-primary {
+  padding: 0.4rem 1rem;
+}
+
+/* button primary */
+
+/* button secondary */
+
+/* button white */
+
+/* button dark */
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 60%, 100% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}
+
+/** Rotate */
+
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/** Rotate with opacity */
+
+@-webkit-keyframes rotate-opacity {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-opacity {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+/** Opacity with scale */
+
+@-webkit-keyframes opacity-with-scale {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes opacity-with-scale {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/**
+ * Layouts
+ */
+
+/**
+ * Header
+ */
+
+header {
+  /* Header inner */
+  /* logo and navigation */
+  /**
+   * Logo header
+   */
+  /**
+   * Nav header
+   */
+}
+
+header nav ul {
+  /* ul right */
+}
+
+header nav a {
+  /* menu dot style */
+}
+
+header nav a:before {
+  width: 6px;
+  height: 6px;
+  top: 6px;
+  box-shadow: 0 0 0 4px rgba(5, 117, 255, 0.25);
+  -moz-box-shadow: 0 0 0 4px rgba(5, 117, 255, 0.25);
+  -webkit-box-shadow: 0 0 0 4px rgba(5, 117, 255, 0.25);
+}
+
+/**
+ * Hero
+ */
+
+#hero {
+  /* Hero inner */
+}
+
+/**
+ * Import all components
+ */
+
+/**
+ * Button
+ */
+
+[class$=btn] {
+  letter-spacing: 1px;
+}
+
+/** 
+ * Card Components
+ */
+
+/**
+ * Box shadow
+ */
+
+/**
+ * Import all theme
+ */
+
+*,
+::after,
+::before {
+  -webit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "HK Grotesk", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.5;
+  font-weight: 500;
+}
+

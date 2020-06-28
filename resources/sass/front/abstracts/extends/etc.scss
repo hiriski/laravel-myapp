@@ -69,21 +69,37 @@
 	bottom: 0;
 }
 
+%left {
+	left: 0;
+}
+
+%right {
+	right: 0;
+}
+
 %top-left {
 	@extend %top;
+	@extend %left;
 }
 
 %top-right {
 	@extend %top;
-	right: 0;
+	@extend %right;
 }
 
 %bottom-left {
 	@extend %bottom;
-	left: 0;
+	@extend %left;
 }
 
 %bottom-right {
 	@extend %bottom;
-	right: 0;
+	@extend %right;
+}
+
+
+
+/** pseudo content */
+%content {
+	content: "";
 }

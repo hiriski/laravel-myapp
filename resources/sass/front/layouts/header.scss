@@ -1,0 +1,18 @@
+
+/**
+ * Header
+ */
+header {
+	@extend %width-default;
+	@extend %margin-x-auto;
+	@extend %padding-top-xl;
+
+	/* Header inner */
+	> .a {
+		@extend %padding-x-sm;
+	}
+
+	/* logo and navigation */
+	@import 'header.part/logo';
+	@import 'header.part/nav';
+}

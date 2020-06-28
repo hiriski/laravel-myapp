@@ -1,0 +1,15 @@
+
+/**
+ * Hero
+ */
+
+#hero {
+	@extend %width-default;
+	@extend %margin-x-auto;
+	@extend %padding-top-xl;
+	
+	/* Hero inner */
+	> .a {
+		@extend %padding-x-sm;
+	}
+}

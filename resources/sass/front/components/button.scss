@@ -5,6 +5,9 @@
 
 [class$=btn] {
 	@extend %border-thin-radius;
+	@extend %border-thin-transparent;
+	@extend %display-inline-block;
+	letter-spacing: 1px;
 }
 
 .btn {

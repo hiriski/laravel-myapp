@@ -13,18 +13,18 @@ const mix = require('laravel-mix');
 
 
 /** Back css */
-mix.sass('resources/sass/back/app.scss', 'public/css/back');
+// mix.sass('resources/sass/back/app.scss', 'public/css/back');
 
 /** Front css */
-mix.sass('resources/sass/front/app.scss', 'public/css');
+mix.sass('resources/sass/front/rux.scss', 'public/css');
 
 /** Front Js */
-mix.js('resources/js/app.js', 'public/js');
+// mix.js('resources/js/app.js', 'public/js');
 
 /** Admin Js */
-mix.js('resources/js/admin.js', 'public/js/admin.js');
+// mix.js('resources/js/admin.js', 'public/js/admin.js');
 
 /** App Vue js (for vue version) */
-mix.js('resources/js/app-vue.js', 'public/js/app-vue.js');
+// mix.js('resources/js/app-vue.js', 'public/js/app-vue.js');
 
 mix.sourceMaps();

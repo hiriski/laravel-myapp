@@ -44,6 +44,7 @@
 }
 
 
+
 /** Text overflow */
 %text-overflow-clip {
 	text-overflow: clip;
@@ -55,4 +56,47 @@
 
 %text-overflow-unset {
 	text-overflow: unset;
+}
+
+
+
+/** Text decoration */
+%text-decoration-none {
+	text-decoration: none;
+}
+
+%text-decoration-blink {
+	text-decoration: blink;
+}
+
+%text-decoration-dashed {
+	text-decoration: dashed;
+}
+
+%text-decoration-dotted {
+	text-decoration: dotted;
+}
+
+%text-decoration-double {
+	text-decoration: double;
+}
+
+%text-decoration-line-through {
+	text-decoration: line-through;
+}
+
+%text-decoration-overline {
+	text-decoration: overline;
+}
+
+%text-decoration-underline {
+	text-decoration: underline;
+}
+
+%text-decoration-solid {
+	text-decoration: solid;
+}
+
+%text-decoration-unset {
+	text-decoration: unset;
 }

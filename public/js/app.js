@@ -240,27 +240,27 @@ eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourc
 
 /***/ }),
 
-/***/ "./resources/sass/front/app.scss":
+/***/ "./resources/sass/front/rux.scss":
 /*!***************************************!*\
-  !*** ./resources/sass/front/app.scss ***!
+  !*** ./resources/sass/front/rux.scss ***!
   \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9mcm9udC9hcHAuc2Nzcz9lMzQyIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6Ii4vcmVzb3VyY2VzL3Nhc3MvZnJvbnQvYXBwLnNjc3MuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyByZW1vdmVkIGJ5IGV4dHJhY3QtdGV4dC13ZWJwYWNrLXBsdWdpbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/sass/front/app.scss\n");
+eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9mcm9udC9ydXguc2Nzcz8yZjMwIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6Ii4vcmVzb3VyY2VzL3Nhc3MvZnJvbnQvcnV4LnNjc3MuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyByZW1vdmVkIGJ5IGV4dHJhY3QtdGV4dC13ZWJwYWNrLXBsdWdpbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/sass/front/rux.scss\n");
 
 /***/ }),
 
 /***/ 0:
 /*!**************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/back/app.scss ./resources/sass/front/app.scss ***!
+  !*** multi ./resources/js/app.js ./resources/sass/back/app.scss ./resources/sass/front/rux.scss ***!
   \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\xampp\htdocs\myapp\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\xampp\htdocs\myapp\resources\sass\back\app.scss */"./resources/sass/back/app.scss");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\myapp\resources\sass\front\app.scss */"./resources/sass/front/app.scss");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\myapp\resources\sass\front\rux.scss */"./resources/sass/front/rux.scss");
 
 
 /***/ })

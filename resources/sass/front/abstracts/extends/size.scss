@@ -27,7 +27,6 @@
 
 %width-default {
 	width: $main-width;
-	margin: auto;
 	@media (max-width: $main-width) {
 		width: 100% !important;
 	}
@@ -35,7 +34,6 @@
 
 %width-one-k {
 	width: $one-k-width;
-	margin: 0 auto;
 	@media (max-width: $one-k-width) {
 		width: 100% !important;
 	}
@@ -43,7 +41,6 @@
 
 %width-lite {
 	width: $lite-width;
-	margin: auto;
 	@media (max-width: $lite-width) {
 		width: 100% !important;
 	}

@@ -14,27 +14,17 @@
 
 
 /** Button */
-
-%base-button {
-	@extend %border-thin-transparent;
-	@extend %display-inline-block;
-	letter-spacing: 1px;
-}
-
 %button-sm {
-	@extend %base-button;
 	padding: .3rem .85rem;
 	@extend %font-sm;
 }
 
 %button-md {
-	@extend %base-button;
 	padding: .4rem 1rem;
 	@extend %font-sm;
 }
 
 %button-lg {
-	@extend %base-button;
 	padding: .8rem 1.25rem;
 	@extend %font-md;
 }

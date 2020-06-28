@@ -1,4 +1,3 @@
-{{-- @include('front.hi') --}}
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -8,16 +7,14 @@
 	<link rel="icon" href="{{ asset('favicon.ico') }}"/>
 
 	@if(!empty(SEOMeta::generate()))
-	<!-- Auto SEO Meta Tag -->
 	{!! SEOMeta::generate() !!}
 	@endif
 
 	<!-- Generate theme color -->
-	<meta name="msapplication-TileColor" content="{{ $tile_color ?? "#f7f7f7" }}"/>
-	<meta name="theme-color" content="{{ $tile_color ?? "#f7f7f7" }}"/>
+	<meta name="msapplication-TileColor" content="{{ $tile_color ?? "#fbfbfb" }}"/>
+	<meta name="theme-color" content="{{ $tile_color ?? "#fbfbfb" }}"/>
 
 	@if(!empty(OpenGraph::generate()))
-	<!-- Auto OpenGraph -->
 	{!! OpenGraph::generate() !!}
 	@endif
 
@@ -32,19 +29,20 @@
 	<script src="{{ asset('js/app.js') }}" defer></script>
 	<link rel="stylesheet" href="{{ asset('fonts/hk-grotesk/style.css') }}">
 	<link rel="stylesheet" href="{{ asset('fonts/material-icons/material-icons.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/rux.css') }}">
 </head>
 
-{{-- Value data page akan dinamis berdasarkan route masing2 --}}
+{{-- dinamic attribute data-page value --}}
 <body data-theme="light" data-page="{{ str_replace('.', '-', Route::currentRouteName()) }}">
-	<div id="AnhOi" data-version="one" data-version-name="anhoi-mot">
+	<div id="rux">
+		@include('front.layouts.header')
 		{{-- @include('front.components.preload') --}}
 		@if( Route::currentRouteName() === "index")
-			@include('front.layouts.hero-v2')
+			@include('front.layouts.hero')
 		@endif
 		<main id="main">
 			@yield('content')
-			@include('front.layouts.footer-v2')
+			@include('front.layouts.footer')
 		</main>
 		<div class="___g--dark___" data-show="false"></div>
 	</div>

@@ -1,0 +1,54 @@
+
+/**
+ * Nav header
+ */
+
+nav {
+	@extend %display-flex;
+	@extend %justify-content-space-between;
+	ul {
+		@extend %no-padding;
+		@extend %no-margin;
+		@extend %list-style-none;
+		
+		/* ul right */
+		&.r {
+			a {
+				@extend %no-padding;
+				&:before {
+					@extend %display-none;
+				}
+			}
+		}
+	}
+	li {
+		@extend %display-inline-block;
+	}
+	a {
+		@extend %color-muted;
+		@extend %text-decoration-none;
+		@extend %position-relative;
+		@extend %padding-right-lg;
+		@extend %padding-left-sm;
+
+		/* menu dot style */
+		$dot-size: 6px;
+		&:before {
+			@extend %position-absolute;
+			width: $dot-size;
+			height: $dot-size;
+			@extend %background-color-primary;
+			@extend %rounded;
+			@extend %left;
+			top: 6px;
+			@include box-shadow(0, 0, 0, 4px, rgba($primary-color, 0.25));
+		}
+
+		&:hover {
+			@extend %color-primary;
+			&:before {
+				@extend %content;
+			}
+		}
+	}
+}
