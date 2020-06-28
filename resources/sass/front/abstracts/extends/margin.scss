@@ -1,0 +1,194 @@
+
+/**
+ * Margins
+ */
+
+$margin-xs : .5rem;
+$margin-sm : .85rem;
+$margin-md : 1.25rem;
+$margin-lg : 2rem;
+$margin-xl : 3rem;
+
+
+%no-margin {
+	margin: 0;
+}
+
+
+/* Margin extra small */
+
+%margin-xs {
+	margin: $margin-xs;
+}
+
+%margin-top-xs {
+	margin-top: $margin-xs;
+}
+
+%margin-x-xs {
+	margin: 0 $margin-xs;
+}
+
+%margin-y-xs {
+	margin: $margin-xs 0;
+}
+
+%margin-bottom-xs {
+	margin-bottom: $margin-xs;
+}
+
+%margin-right-xs {
+	margin-right: $margin-xs;
+}
+
+%margin-left-xs {
+	margin-left: $margin-xs;
+}
+
+
+/* Margin small */
+
+%margin-sm {
+	margin: $margin-sm;
+}
+
+%margin-top-sm {
+	margin-top: $margin-sm;
+}
+
+%margin-x-sm {
+	margin: 0 $margin-sm;
+}
+
+%margin-y-sm {
+	margin: $margin-sm 0;
+}
+
+%margin-bottom-sm {
+	margin-bottom: $margin-sm;
+}
+
+%margin-right-sm {
+	margin-right: $margin-sm;
+}
+
+%margin-left-sm {
+	margin-left: $margin-sm;
+}
+
+
+/* Margin middle */
+
+%margin-md {
+	margin: $margin-md;
+}
+
+%margin-top-md {
+	margin-top: $margin-md;
+}
+
+%margin-x-md {
+	margin: 0 $margin-md;
+}
+
+%margin-y-md {
+	margin: $margin-md 0;
+}
+
+%margin-left-md {
+	margin-left: $margin-md;
+}
+
+%margin-right-md {
+	margin-right: $margin-md;
+}
+
+%margin-bottom-md {
+	margin-bottom: $margin-md;
+}
+
+
+/* Margin large */
+
+%margin-lg {
+	margin: $margin-lg;
+}
+
+%margin-top-lg {
+	margin-top: $margin-lg;
+}
+
+%margin-x-lg {
+	margin: 0 $margin-lg;
+}
+
+%margin-y-lg {
+	margin: $margin-lg 0;
+}
+
+%margin-left-lg {
+	margin-left: $margin-lg;
+}
+
+%margin-right-lg {
+	margin-right: $margin-lg;
+}
+
+%margin-bottom-lg {
+	margin-bottom: $margin-lg;
+}
+
+
+/* Margin extra large */
+
+%margin-xl {
+	margin: $margin-xl;
+}
+
+%margin-top-xl {
+	margin-top: $margin-xl;
+}
+
+%margin-y-xl {
+	margin: $margin-xs 0;
+}
+
+%margin-x-xl {
+	margin: 0 $margin-xs;
+}
+
+%margin-bottom-xl {
+	margin-bottom: $margin-xl;
+}
+
+%margin-left-xl {
+	margin-left: $margin-xl;
+}
+
+%margin-right-xl {
+	margin-right: $margin-xl;
+}
+
+
+
+/* Margin auto */
+
+%margin-auto {
+	margin: auto;
+}
+
+%margin-x-auto {
+	margin: 0 auto;
+}
+
+%margin-y-auto {
+	margin: auto 0;
+}
+
+%margin-left-auto {
+	margin: 0 0 0 auto;
+}
+
+%margin-right-auto {
+	margin: 0 auto 0 0;
+}

@@ -1,0 +1,170 @@
+
+/**
+ * Paddings 
+ */
+
+$padding-xs : .5rem;
+$padding-sm : .85rem;
+$padding-md : 1.25rem;
+$padding-lg : 2rem;
+$padding-xl : 3rem;
+
+
+%no-padding {
+	padding: 0;
+}
+
+
+/* Padding extra small */
+
+%padding-xs {
+	padding: $padding-xs;
+}
+
+%padding-top-xs {
+	padding-top: $padding-xs;
+}
+
+%padding-x-xs {
+	padding: 0 $padding-xs;
+}
+
+%padding-y-xs {
+	padding: $padding-sm 0;
+}
+
+%padding-bottom-xs {
+	padding-bottom: $padding-xs;
+}
+
+%padding-right-xs {
+	padding-right: $padding-xs;
+}
+
+%padding-left-xs {
+	padding-left: $padding-xs;
+}
+
+
+/* Padding small */
+
+%padding-sm {
+	padding: $padding-xs;
+}
+
+%padding-top-sm {
+	padding-top: $padding-sm;
+}
+
+%padding-x-sm {
+	padding: 0 $padding-sm;
+}
+
+%padding-y-sm {
+	padding: $padding-sm 0;
+}
+
+%padding-bottom-sm {
+	padding-bottom: $padding-sm;
+}
+
+%padding-right-sm {
+	padding-right: $padding-sm;
+}
+
+%padding-left-sm {
+	padding-left: $padding-sm;
+}
+
+
+/* Padding middle */
+
+%padding-md {
+	padding: $padding-md;
+}
+
+%padding-top-md {
+	padding-top: $padding-md;
+}
+
+%padding-x-md {
+	padding: 0 $padding-md;
+}
+
+%padding-y-md {
+	padding: $padding-md 0;
+}
+
+%padding-left-md {
+	padding-left: $padding-md;
+}
+
+%padding-right-md {
+	padding-right: $padding-md;
+}
+
+%padding-bottom-md {
+	padding-bottom: $padding-md;
+}
+
+
+/* Padding Large */
+
+%padding-lg {
+	padding: $padding-lg;
+}
+
+%padding-top-lg {
+	padding-top: $padding-lg;
+}
+
+%padding-x-lg {
+	padding: 0 $padding-lg;
+}
+
+%padding-y-lg {
+	padding: $padding-lg 0;
+}
+
+%padding-left-lg {
+	padding-left: $padding-lg;
+}
+
+%padding-right-lg {
+	padding-right: $padding-lg;
+}
+
+%padding-bottom-lg {
+	padding-bottom: $padding-lg;
+}
+
+
+/* Padding extra large */
+
+%padding-xl {
+	padding: $padding-xl;
+}
+
+%padding-top-xl {
+	padding-top: $padding-xl;
+}
+
+%padding-y-xl {
+	padding: $padding-xl 0;
+}
+
+%padding-x-xl {
+	padding: 0 $padding-xl;
+}
+
+%padding-bottom-xl {
+	padding-bottom: $padding-xl;
+}
+
+%padding-left-xl {
+	padding-left: $padding-xl;
+}
+
+%padding-right-xl {
+	padding-right: $padding-xl;
+}

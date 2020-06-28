@@ -1,0 +1,49 @@
+%display-block {
+	display: block;
+}
+
+%display-inline {
+	display: inline;
+}
+
+%display-inline-block {
+	display: inline-block;
+}
+
+%display-flex {
+	display: -webkit-flex; 
+	display: flex;
+}
+
+%display-inline-flex {
+	display: -webkit-inline-flex; 
+	display: inline-flex;
+}
+
+%display-grid {
+	display: grid;
+}
+
+%display-inline-grid {
+	display: inline-grid;
+}
+
+%display-table {
+	display: table;
+}
+
+%display-inline-table {
+	display: inline-table;
+}
+
+%display-contents {
+	display: contents;
+}
+
+%display-none {
+	display: none;
+}
+
+%display-unset {
+	display: unset;
+}

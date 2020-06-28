@@ -1,0 +1,12 @@
+
+/**
+ * Box shadow
+ */
+
+.shadow {
+	@extend %box-shadow-default;
+}
+
+.shadow-soft {
+	@extend %box-shadow-soft;
+}

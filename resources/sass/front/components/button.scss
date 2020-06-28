@@ -1,0 +1,27 @@
+
+/**
+ * Button
+ */
+
+[class$=btn] {
+	@extend %border-thin-radius;
+}
+
+.btn {
+	&-primary {
+		@extend %button-md;
+		@extend %button-md-primary;
+	}
+	&-secondary {
+		@extend %button-md;
+		@extend %button-md-secondary;
+	}
+	&-white {
+		@extend %button-md;
+		@extend %button-md-white;
+	}
+	&-dark {
+		@extend %button-md;
+		@extend %button-md-dark;
+	}
+}

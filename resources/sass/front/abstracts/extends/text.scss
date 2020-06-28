@@ -1,0 +1,58 @@
+
+/**
+ * Text
+ */
+
+/** Text align */
+%text-align-right {
+	text-align: right;
+}
+
+%text-align-left {
+	text-align: left;
+}
+
+%text-align-inherit {
+	text-align: inherit;
+}
+
+%text-align-unset {
+	text-align: unset;
+}
+
+
+
+/** Text transform */
+%text-transform-uppercase {
+	text-transform: uppercase;
+}
+
+%text-transform-capitalize {
+	text-transform: capitalize;
+}
+
+%text-transform-lowercase {
+	text-transform: lowercase;
+}
+
+%text-transform-inherit {
+	text-transform: inherit;
+}
+
+%text-transform-unset {
+	text-transform: unset;
+}
+
+
+/** Text overflow */
+%text-overflow-clip {
+	text-overflow: clip;
+}
+
+%text-overflow-ellipsis {
+	text-overflow: ellipsis;
+}
+
+%text-overflow-unset {
+	text-overflow: unset;
+}

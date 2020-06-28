@@ -1,0 +1,89 @@
+
+/**
+ * Etc extends 
+ */
+
+/** Icon for material icons */
+
+%icon-xs {
+	font-size: $icon-xs;
+}
+
+%icon-sm {
+	font-size: $icon-sm;
+}
+
+%icon-md {
+	font-size: $icon-md;
+}
+
+%icon-lg {
+	font-size: $icon-lg;
+}
+
+%icon-xl {
+	font-size: $icon-xl;
+}
+
+
+
+/** SVG Size */
+%svg-size {
+	height: auto;
+}
+
+%svg-xs {
+	@extend %svg-size;
+	width: $icon-xs;
+}
+
+%svg-sm {
+	@extend %svg-size;
+	width: $icon-sm;
+}
+
+%svg-md {
+	@extend %svg-size;
+	width: $icon-md;
+}
+
+%svg-lg {
+	@extend %svg-size;
+	width: $icon-lg;
+}
+
+%svg-xl {
+	@extend %svg-size;
+	width: $icon-xl;
+}
+
+
+
+/** Absolute or fixed positions */
+
+%top {
+	top: 0;
+}
+
+%bottom {
+	bottom: 0;
+}
+
+%top-left {
+	@extend %top;
+}
+
+%top-right {
+	@extend %top;
+	right: 0;
+}
+
+%bottom-left {
+	@extend %bottom;
+	left: 0;
+}
+
+%bottom-right {
+	@extend %bottom;
+	right: 0;
+}

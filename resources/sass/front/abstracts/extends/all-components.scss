@@ -1,0 +1,135 @@
+
+/**
+ * All components extends
+ */
+
+
+/** Cards */
+%card {
+	@extend %border-thin-radius;
+	@extend %padding-md;
+	@extend %background-color-white;
+}
+
+
+
+/** Button */
+
+%base-button {
+	@extend %border-thin-transparent;
+	@extend %display-inline-block;
+	letter-spacing: 1px;
+}
+
+%button-sm {
+	@extend %base-button;
+	padding: .3rem .85rem;
+	@extend %font-sm;
+}
+
+%button-md {
+	@extend %base-button;
+	padding: .4rem 1rem;
+	@extend %font-sm;
+}
+
+%button-lg {
+	@extend %base-button;
+	padding: .8rem 1.25rem;
+	@extend %font-md;
+}
+
+
+
+/* button primary */
+
+%base-button-primary {
+	@extend %background-color-primary;
+	@extend %color-white;
+}
+
+%button-sm-primary {
+	@extend %base-button-primary;
+	@extend %button-sm;
+}
+
+%button-md-primary {
+	@extend %base-button-primary;
+	@extend %button-md;
+}
+
+%button-lg-primary {
+	@extend %base-button-primary;
+	@extend %button-lg;
+}
+
+
+/* button secondary */
+
+%base-button-secondary {
+	@extend %background-color-secondary;
+	@extend %color-white;
+}
+
+%button-sm-secondary {
+	@extend %base-button-secondary;
+	@extend %button-sm;
+}
+
+%button-md-secondary {
+	@extend %base-button-secondary;
+	@extend %button-md;
+}
+
+%button-lg-secondary {
+	@extend %base-button-secondary;
+	@extend %button-lg;
+}
+
+
+
+/* button white */
+
+%base-button-white {
+	@extend %background-color-white;
+	@extend %color-primary;
+}
+
+%button-sm-white {
+	@extend %base-button-white;
+	@extend %button-sm;
+}
+
+%button-md-white {
+	@extend %base-button-white;
+	@extend %button-md;
+}
+
+%button-lg-white {
+	@extend %base-button-white;
+	@extend %button-lg;
+}
+
+
+
+/* button dark */
+
+%base-button-dark {
+	@extend %background-color-dark;
+	@extend %color-white;
+}
+
+%button-sm-dark {
+	@extend %base-button-dark;
+	@extend %button-sm;
+}
+
+%button-md-dark {
+	@extend %base-button-dark;
+	@extend %button-md;
+}
+
+%button-lg-dark {
+	@extend %base-button-dark;
+	@extend %button-lg;
+}

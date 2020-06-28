@@ -1,0 +1,12 @@
+
+/**
+ * Box shadow
+ */
+
+%box-shadow-soft {
+	@include box-shadow(0, 12px, 32px, 0, rgba($black, .02));
+}
+
+%box-shadow-default {
+	@include box-shadow(0, 12px, 32px, 0, rgba($black, .05));
+}

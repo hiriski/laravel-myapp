@@ -1,0 +1,54 @@
+
+/** Width */
+
+%full {
+	height: 100vh;
+	width: 100%;
+}
+
+%full-percen {
+	height: 100%;
+	width: 100%;
+}
+
+%height-full {
+	height: 100vh;
+}
+
+%height-full-percen {
+	height: 100%;
+}
+
+
+/** width */
+%width-full {
+	width: 100%;
+}
+
+%width-default {
+	width: $main-width;
+	margin: auto;
+	@media (max-width: $main-width) {
+		width: 100% !important;
+	}
+}
+
+%width-one-k {
+	width: $one-k-width;
+	margin: 0 auto;
+	@media (max-width: $one-k-width) {
+		width: 100% !important;
+	}
+}
+
+%width-lite {
+	width: $lite-width;
+	margin: auto;
+	@media (max-width: $lite-width) {
+		width: 100% !important;
+	}
+}
+
+%half {
+	width: 50%;
+}

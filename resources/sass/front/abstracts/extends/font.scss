@@ -1,0 +1,75 @@
+
+/**
+ * Font
+ */
+
+
+/* font family */
+
+%primary-font {
+	font-family: $primary-font;
+}
+
+%secondary-font {
+	font-family: $secondary-font;
+}
+
+
+
+/* font size */
+
+%font-xs {
+	font-size: $extra-small;
+}
+
+%font-sm {
+	font-size: $small;
+}
+
+%font-md {
+	font-size: $default;
+}
+
+%font-lg {
+	font-size: $large;
+}
+
+
+
+/** font weight */
+
+%font-weight-normal {
+	font-weight: normal;
+}
+
+%font-weight-300 {
+	font-weight: 300;
+}
+
+%font-weight-400 {
+	font-weight: 400;
+}
+
+%font-weight-500 {
+	font-weight: 500;
+}
+
+%font-weight-600 {
+	font-weight: 600;
+}
+
+%font-weight-700 {
+	font-weight: 700;
+}
+
+%font-weight-800 {
+	font-weight: 800;
+}
+
+%font-weight-800 {
+	font-weight: 800;
+}
+
+%font-weight-900 {
+	font-weight: 900;
+}

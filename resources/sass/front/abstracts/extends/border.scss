@@ -1,0 +1,32 @@
+
+/**
+ * Border
+ */
+
+%border-thin-primary {
+	border: 1px solid $primary-color;
+}
+
+%border-thin-transparent {
+	border: 1px transparent;
+}
+
+%border-transparent {
+	border: 2px transparent;
+}
+
+%border-primary {
+	border: 2px solid $primary-color; 
+}
+
+
+
+
+/* Border Radius */
+%border-thin-radius {
+	border-radius: $border-thin-radius;
+}
+
+%border-radius {
+	border-radius: $border-radius;
+}
