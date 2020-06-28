@@ -1,0 +1,36 @@
+
+/** Blog pager */
+#__pg__ {
+  > .__ {
+    @extend %one-k-width;
+		nav {
+			@extend %padding-top-lg;
+			@extend %padding-bottom;
+		}
+    ul {
+      @extend %flex;
+      @extend %justify-content-center;
+      @extend %reset;
+      @extend %remove-bullet-list;
+			li {
+				&.disabled {
+					> * {
+						@extend %gray;
+						cursor: no-drop;
+					}
+				}
+				&:first-child {
+					@extend %margin-right-sm;
+				}
+				&:last-child {
+					@extend %margin-left-sm;
+				}
+				> * {
+					@extend %primary-color;
+					@extend %large;
+					@extend %text-decoration-none;
+				}
+			}
+    }
+  }
+}

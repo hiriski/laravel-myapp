@@ -428,6 +428,7 @@ th {
 
 #about #s ._s ul li a .ic + span,
 #_CxT ._f[data-has-value=true] [class*=feedback][class*=invalid],
+#hero #hero_nav_toggler,
 #hero ._h_c_,
 #hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 span:not(.name),
 #hero[data-version=two][data-position=left] ._y ._x .u > [class$=r] ._o,
@@ -445,14 +446,14 @@ th {
 }
 
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > *:first-child,
-footer#main .c__ > p:first-child > span {
+footer#main .c__ > p > a {
   position: relative;
   padding-right: 41px;
   margin-right: 10px;
 }
 
 [data-blog=single][data-version=two] ._io_ ._m_ > ._ad_ ._pic + [class^=_] > :first-child:before,
-footer#main .c__ > p:first-child > span:before {
+footer#main .c__ > p > a:before {
   top: 50%;
   right: 0;
   width: 32px;
@@ -502,6 +503,8 @@ footer#main .c__ > p,
 #_CxT #back a,
 #_CxT ._f.tp label,
 #_nRx9 ._s input[type=text]::placeholder,
+#__pg__ > .__ ul li.disabled > *,
+#_n_ ._ ._a ul li a i,
 #hero_nav ul li a i {
   color: #a3a3a3;
 }
@@ -546,8 +549,10 @@ footer#main .c__ a,
 #_bsp > div[class*=_] > * .q > div:hover h5,
 #_bsp > div[class*=_] > * .q > div:hover h6,
 #_bt_ ul li a,
-#_n_ ._ ._a ul li a i,
+#__pg__ > .__ ul li > *,
 #_n_ ._ ._a ul .you_are_with_me a,
+#_n_ #_r_ ._z + *,
+#_n_[data-position=left] ._ ._s ._a ul li a:hover i,
 #hero_nav ul li:hover a i,
 #hero_nav ul .you_are_with_me a,
 #hero_nav ul .you_are_with_me a i,
@@ -569,8 +574,7 @@ a.anhoi-btn,
 #hero[data-version=two][data-position=left] #__h_sl ul li a,
 #hero[data-version=two][data-position=left] ._y ._x .u > [class$=r] h2,
 #hero[data-version=two][data-position=left] ._y ._x .u > [class$=r] .name,
-#_psh ul li a,
-#_n_ #_r_ ._z + * {
+#_psh ul li a {
   color: #313131;
 }
 
@@ -616,6 +620,10 @@ pre[class*=language] span.code-filename,
   font-size: 16px;
 }
 
+#__pg__ > .__ ul li > * {
+  font-size: 20px;
+}
+
 #_CxT ._f.tp select,
 #hero[data-version=two][data-position=left] ._y ._x .u [class$=i] h2 {
   font-weight: bold;
@@ -645,6 +653,7 @@ footer#main .c__ a,
 #hero[data-version=two][data-position=left] #__h_sl ul li a,
 #_bsp > div[class*=_] > * .q > div a,
 #_psh ul li a,
+#__pg__ > .__ ul li > *,
 #_n_ + #__toggler_mobile__ a,
 #_n_ #_r_ a,
 btn.anhoi-btn,
@@ -747,6 +756,7 @@ footer#main .c__ > p .laravel,
 #_bsp > div[class*=_] > * .q .ic,
 .__aw__,
 pre[class*=language] span.code-filename,
+#_n_[data-position=left] ._ ._s ._a ul li a > span,
 #hero_nav ul li:before,
 ._x0 ._a,
 ._x0 ._b,
@@ -922,6 +932,7 @@ main#main .Anh,
 }
 
 #tm_ ._i h6,
+footer#main .c__ .logo,
 #hero[data-version=two] .u ._i h2,
 #_nRx9 ._s .r h3 {
   margin-bottom: 0.5rem;
@@ -976,12 +987,14 @@ main#main .Anh,
 #hero ._h_c_ a i,
 #hero[data-version=two][data-position=left] #__h_sl ul li a .ic,
 #_H_Cb ._ ._x0 > [class$=svg],
+#__pg__ > .__ ul li:first-child,
 #__h_sl ._s ul li a {
   margin-right: 0.85rem;
 }
 
 #_CxT ._f label span,
-#_CxT ._f button i {
+#_CxT ._f button i,
+#__pg__ > .__ ul li:last-child {
   margin-left: 0.85rem;
 }
 
@@ -1102,7 +1115,8 @@ main#main .Anh,
   padding-right: 1.25rem;
 }
 
-#_pa {
+#_pa,
+#__pg__ > .__ nav {
   padding-bottom: 1.25rem;
 }
 
@@ -1112,7 +1126,8 @@ main#main .Anh,
 
 #hero[data-version=two][data-position=left] ._h_c_,
 #_bsp,
-#_psh div[class^=s] {
+#_psh div[class^=s],
+#__pg__ > .__ nav {
   padding-top: 2rem;
 }
 
@@ -1316,7 +1331,7 @@ main#main .Anh > div[class*=__],
 #_bsp > div[class*=_],
 #_psh ul li a,
 #_H_Cb ._ ._x0,
-#__pg__ > .__ .pagination,
+#__pg__ > .__ ul,
 #_n_ ._ ._a,
 #_n_ #_r_ a,
 #_n_[data-position=left] ._ ._s ._a ul,
@@ -1339,7 +1354,7 @@ main#main .Anh > div[class*=__],
 #hero[data-version=two] ._z ._q,
 #_pa [class*=pa] ._,
 #_psh ul li a,
-#__pg__ > .__ .pagination,
+#__pg__ > .__ ul,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_],
 #_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] {
   justify-content: center;
@@ -1550,7 +1565,7 @@ footer#main .c__ > p,
 #_H_Cb ._ ._x0 * h3,
 #_H_Cb ._ ._x0 * h4,
 #_H_Cb ._ ._x0 * h5 * h6,
-#__pg__ > .__ .pagination,
+#__pg__ > .__ ul,
 #RP > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
 #_Bx > .__q__ > ._cn_ ._g_ > div[class*=_] > * > *:first-child + *:not(div),
 #Ftr_P > .__f__ > .__ ._mh_ > div[class*=_] > *:first-child + *:not(div) {
@@ -1562,7 +1577,7 @@ footer#main .c__ > p,
 #changelog ul,
 [data-blog=single] ._io_ ._ps_ ul,
 #_psh ul,
-#__pg__ > .__ .pagination,
+#__pg__ > .__ ul,
 #_n_ ._ ._a ul,
 #hero_nav ul,
 #__h_sl ._s ul {
@@ -1597,6 +1612,7 @@ footer#main .c__ > p,
 #_n_ + #__toggler_mobile__ a,
 #_n_ ._ ._a ul li,
 #_n_[data-position=left] ._ ._s ._a ul li a i,
+#_n_[data-position=left] ._ ._s ._a ul li a:hover span,
 #_n_[data-position=left] ._ ._s ._a ul li a,
 #hero_nav ul li[data-stand-alone] a,
 #__h_sl ._s ul li a,
@@ -1773,6 +1789,10 @@ footer#main > div[class*=_] > div,
 #_n_[data-position=left] ._ ._s,
 #hero_nav ul li[data-stand-alone] {
   text-align: center;
+}
+
+#_n_[data-position=left] ._ ._s ._a ul li a > span {
+  text-align: left;
 }
 
 #changelog .c .i ._a > [class*=i]:last-child,
@@ -2134,7 +2154,7 @@ textarea::placeholder {
 }
 
 #_n_ {
-  --nativation-space-top: 20px;
+  --navigation-space-top: 20px;
   --reset-top-space: 0;
   --reset-padding-left: unset;
   --reset-padding-right: unset;
@@ -2145,17 +2165,12 @@ textarea::placeholder {
   /** When position left */
 }
 
-#_n_[data-has-set-width=false] {
-  top: -125px;
-}
-
 #_n_[data-has-set-width=true] {
-  top: var(--nativation-space-top);
+  top: var(--navigation-space-top);
 }
 
 #_n_[data-position=left] {
   width: unset;
-  border-right: 1px solid #e6e6e9;
   /** reset padding */
   padding-left: var(--reset-padding-left) !important;
   padding-right: var(--reset-padding-right) !important;
@@ -2167,16 +2182,8 @@ textarea::placeholder {
 }
 
 #_n_[data-position=left] ._ {
-  width: 62px;
   margin: unset;
-  padding: unset;
-  padding-top: 1rem;
   border-bottom: unset;
-}
-
-#_n_[data-position=left] ._ ._s {
-  padding: 0;
-  border: none;
 }
 
 #_n_[data-position=left] ._ ._s ._a ul li a {
@@ -2187,12 +2194,14 @@ textarea::placeholder {
   padding-right: 0;
 }
 
-#_n_[data-position=left] ._ ._s ._a ul li a:hover i {
-  left: 0;
-}
-
 #_n_[data-position=left] ._ ._s ._a ul li a i {
   font-size: 18px;
+}
+
+#_n_[data-position=left] ._ ._s ._a ul li a > span {
+  width: 110px;
+  margin-top: 4px;
+  margin-left: 10px;
 }
 
 #_n_[data-position=left] ._ ._s #_r_ ._z {
@@ -2210,11 +2219,7 @@ textarea::placeholder {
 }
 
 #_n_ #_r_ ._z + * {
-  font-size: 18px;
-}
-
-#_n_ ._ ._s {
-  border: 1px solid #e6e6ff;
+  font-size: 15px;
 }
 
 #_n_ ._ ._a ul {
@@ -2228,7 +2233,8 @@ textarea::placeholder {
 }
 
 #_n_ ._ ._a ul li a span {
-  font-size: 14px;
+  font-size: 13px;
+  letter-spacing: 1px;
 }
 
 #_n_ ._ ._a ul li a i {
@@ -2320,6 +2326,10 @@ textarea::placeholder {
 }
 
 /** Blog pager */
+
+#__pg__ > .__ ul li.disabled > * {
+  cursor: no-drop;
+}
 
 #_bt_ ul {
   padding-left: 0;
@@ -2947,7 +2957,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 }
 
 #hero[data-version=two] {
-  background-color: #f4f4f4;
+  background-color: #f0f0f0;
   /** Picture Area */
   /** Menetralkan kembali z index hero */
   /** Style for position hero to left */
@@ -2976,7 +2986,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 }
 
 #hero[data-version=two] .u ._i h2 {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 300;
   color: #755ade;
 }
@@ -2990,7 +3000,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 #hero[data-version=two] .u ._i h2 .typed-cursor {
   font-size: 52px;
   font-weight: 300;
-  color: #f4f4f4;
+  color: #f0f0f0;
 }
 
 #hero[data-version=two] .u ._i h2 .typed-cursor:before {
@@ -2999,7 +3009,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
   width: 1.75px;
   left: 4px;
   top: 2px;
-  background-color: #1f77ff;
+  background-color: #313131;
 }
 
 #hero[data-version=two] .u ._i h2 .laravel-color {
@@ -3090,7 +3100,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 
 [data-page=index] {
   /** follow background image */
-  background-color: #f4f4f4;
+  background-color: #f0f0f0;
   /** set box shadow only on homepage */
 }
 
@@ -3151,7 +3161,11 @@ main#main .Anh > div[class*=__] {
 }
 
 footer#main > div[class*=_] {
-  padding: 60px 0;
+  padding: 80px 0;
+}
+
+footer#main .c__ {
+  /** logo for footer v2 */
 }
 
 footer#main .c__ > p {
@@ -3166,6 +3180,28 @@ footer#main .c__ > p .laravel svg {
 footer#main .c__ > p i {
   color: #ff2c4f;
   font-size: 18px;
+}
+
+footer#main .c__ .logo svg {
+  width: 40px;
+  height: 40px;
+  /** change svg logo color when hover */
+}
+
+footer#main .c__ .logo svg g {
+  fill: #cbd2ed;
+}
+
+footer#main .c__ .logo svg path#r {
+  fill: #b3c5df;
+}
+
+footer#main .c__ .logo svg:hover g {
+  fill: #3974f5;
+}
+
+footer#main .c__ .logo svg:hover path#r {
+  fill: #0049e6;
 }
 
 [data-page=index] [data-layout-style=left] footer#main {
@@ -3323,6 +3359,7 @@ footer#main .c__ > p i {
   color: #1f77ff;
 }
 
+[data-blog=single] ._io_ ._t > * h1,
 [data-blog=single] ._io_ ._t > * h2 {
   font-size: 40px;
   line-height: 1.3;
@@ -4476,7 +4513,7 @@ body {
   }
 
   #AnhOi #_Bx > .__q__ .__i__ ._img_ {
-    height: 154px;
+    height: 162px;
   }
 
   /** Blog Single */
@@ -4892,6 +4929,12 @@ body {
 
   [data-page=about] footer#main {
     padding-left: 0;
+  }
+
+  /** Blog pager */
+
+  #__pg__ ul li > * {
+    font-size: 16px !important;
   }
 
   /** Define footer padding size for mobile */

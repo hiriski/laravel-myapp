@@ -76,7 +76,7 @@ const moveHero = (position) => {
 	if(position === "left") {
 		setTimeout(() => {
 			hero.style.zIndex = '1';
-		}, 1000);
+		}, 750);
 	}
 	else if(position === "center") {
 			hero.removeAttribute('style');

@@ -32,7 +32,7 @@ class BlogController extends Controller {
 
     /** SEO META     */
     SEOMeta::setTitle('📰 blog')
-        ->setDescription('Artikel belajar programming bahasa indonesia')
+        ->setDescription('Blog belajar programming bahasa indonesia')
         ->setKeywords('Belajar programming, laravel, javascript, html, css3, vuejs, backend, frontend developer')
         ->addMeta('author', 'Riski' . ', hi@riski.web.id', 'name')
         ->addMeta('copyright', 'Riski Web ID', 'name')

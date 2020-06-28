@@ -1,14 +1,14 @@
 /** Navigation */
-window.addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => {
-        showNavigation();
-    }, 500);
+// window.addEventListener("DOMContentLoaded", () => {
+//     setTimeout(() => {
+//         showNavigation();
+//     }, 500);
 
-    /** option for navigation */
-    if(window.scrollY > 200) {
-        navigationNotFresh();
-    }
-});
+//     /** option for navigation */
+//     if(window.scrollY > 200) {
+//         navigationNotFresh();
+//     }
+// });
 
 const navigationNotFresh = () => {
     let nav     = document.querySelector('#_n_');
@@ -38,32 +38,32 @@ const getPageWrapWidth = () => {
     }
 }
 
-const setNavigationWidth = (callback) => {
-    let nav     = document.querySelector('#_n_');
-    /** jika element nav-nya ada */
-    if(nav) {
-        /** ambil lebar navigasi saat ini (berdasarkan lebar browser user */
-        navWidth    = nav.clientWidth;
+// const setNavigationWidth = (callback) => {
+//     let nav     = document.querySelector('#_n_');
+//     /** jika element nav-nya ada */
+//     if(nav) {
+//         /** ambil lebar navigasi saat ini (berdasarkan lebar browser user */
+//         navWidth    = nav.clientWidth;
 
-        /** Kurang lebar navigasi dengan lebar page wrap (dapat dari function getPageWrapWidth) kemudian bagi dua hasil baginya. Ahhhh lieur :-D */
-        let paddingSize         = (navWidth - getPageWrapWidth()) / 2;
-        nav.style.paddingLeft   = paddingSize + 'px';
-        nav.style.paddingRight  = paddingSize + 'px';
+//         /** Kurang lebar navigasi dengan lebar page wrap (dapat dari function getPageWrapWidth) kemudian bagi dua hasil baginya. Ahhhh lieur :-D */
+//         let paddingSize         = (navWidth - getPageWrapWidth()) / 2;
+//         nav.style.paddingLeft   = paddingSize + 'px';
+//         nav.style.paddingRight  = paddingSize + 'px';
 
-        /** jika callback itu function */
-        if(typeof callback == 'function') {
-            /** kirimkan variable nav ke callback */
-            callback(nav);
-        }
-    }
-}
+//         /** jika callback itu function */
+//         if(typeof callback == 'function') {
+//             /** kirimkan variable nav ke callback */
+//             callback(nav);
+//         }
+//     }
+// }
 
-const showNavigation = () => {
-    setNavigationWidth(function(nav) {
-        /** terima variable dari param callback */
-        nav.dataset.hasSetWidth = true;
-    });
-}
+// const showNavigation = () => {
+//     setNavigationWidth(function(nav) {
+//         /** terima variable dari param callback */
+//         nav.dataset.hasSetWidth = true;
+//     });
+// }
 
 
 const moveNavigation = (position) => {

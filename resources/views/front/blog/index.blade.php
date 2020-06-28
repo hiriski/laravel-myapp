@@ -1,13 +1,12 @@
 @extends('front.layouts.app')
 @section('content')
 <div class="Anh">
-    @include('front.components.navigation')
-    <div class="__o__">
-        <div class="__">
-            @include('front.layouts.blog-index')
-            @include('front.components.blog-pager')
-        </div>
+  @include('front.components.navigation')
+  <div class="__o__">
+    <div class="__">
+      @include('front.layouts.blog-index')
     </div>
+  </div>
 </div>
 @endsection
 @push('script')

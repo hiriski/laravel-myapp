@@ -1,6 +1,7 @@
 import './front/components/overlay';
 import './front/components/nav';
 import './front/pages/home';
+import './front/pages/blog-index';
 import './front/pages/about';
 import './front/pages/blog';
 import './front/pages/template-page';

@@ -1,255 +1,254 @@
 $hero_pic_size : 174px;
-$follow-background-image : #f4f4f4;
-
 #hero {
+  @extend %transition2x;
+  * {
     @extend %transition2x;
-    * {
+  }
+  &[data-version=two] {
+    background-color: $hero-background-color;
+    @extend %fixed;
+    @extend %top-left;
+    @extend %full;
+    ._z {
+      ._q {
         @extend %transition2x;
+        @extend %flex;
+        @extend %align-items-center;
+        @extend %justify-content-center;
+        @extend %full-height-percen;
+        @extend %flex-direction-column;
+      }
     }
-    &[data-version=two] {
-        background-color: $follow-background-image;
-        @extend %fixed;
-        @extend %top-left;
-        @extend %full;
-        ._z {
-            ._q {
-                @extend %transition2x;
-                @extend %flex;
-                @extend %align-items-center;
-                @extend %justify-content-center;
-                @extend %full-height-percen;
-                @extend %flex-direction-column;
-            }
-        }
-        ._y {
-            @extend %one-k-width;
-            ._x {
-                @extend %flex;
-                @extend %relative;
-                @extend %give-standard-padding;
-                height: $hero-height;
-            }
-        }
-
-        /** Picture Area */
-        .anh_ {
-            @extend %absolute;
-            z-index: -1;
-            right: 0;
-            [class*="_"] {
-                @extend %line-height-zero;
-                transition: none;;
-                img {
-                    height: $hero-height;
-                    width: auto;    
-                }
-            }
-        }
-    
-        .u {
-            @extend %flex;
-            @extend %align-items-center;
-            padding-right: 40%;
-            > [class$=r] {
-                @extend %margin-top-xl;
-                @extend %padding-left-xl;
-            }
-            ._i {
-                h2 {
-                    @extend %reset-line-height;
-                    @extend %margin-bottom-xs;
-                    font-size: 40px;
-                    font-weight: 300;
-                    color: #755ade;
-                    @extend %remove-transition;
-                    #typed {
-                        .laravelicon {
-                            @extend %line-height-zero;
-                            svg {
-                                vertical-align: middle;
-                                @extend %inline-block;
-                                width: 34px;
-                                height: auto;
-                            }
-                        }
-                    }
-                    .typed-cursor {
-                        @extend %muted;
-                        @extend %relative;
-                        font-size: 52px;
-                        font-weight: 300;
-                        color: #f4f4f4; // sama dengan warna background
-                        &:before {
-                            content: "";
-                            height: 62px;
-                            width: 1.75px;
-                            @extend %absolute;
-                            left: 4px;
-                            top: 2px;
-                            background-color: $primary-color;
-                        }
-                    }
-                    .laravel-color {
-                        color: $laravel-color;
-                    }
-                    span.name {
-                        @extend %display-none;
-                    }
-                }
-            }
-            ._o {
-                @extend %margin-top-sm;
-                @extend %line-height-default;
-                @extend %muted;
-                font-size: 17px;
-                p {
-                    
-                    @extend %reset;
-                }
-            }
-        }
-
-        /** Menetralkan kembali z index hero */
-        &[data-position=center] {
-            z-index: 0 !important;
-        }
-
-
-        /** Style for position hero to left */
-        &[data-position=left] {
-            // z-index: 10; sudah di handle sama javascript
-            width: $left-width;
-            ._y {
-                width: $left-width;
-                ._x {
-                    @extend %full-height;
-                    @extend %padding-unset;
-                    .u {
-                        @extend %align-items-flex-start;
-                        padding-right: unset;
-                        padding: 0 60px;
-                        > [class$=r] {
-                            @extend %transition;
-                            padding-top: 140px;
-                            padding-left: unset;
-                            margin-top: unset;
-                            h2, .name {
-                                @extend %main-color;
-                            }
-                            /** hide text bio */
-                            ._o {
-                                @extend %display-none;
-                            }
-                        }
-                        [class$=i] {
-                            h2 {
-                                @extend %margin-top;
-                                margin-bottom: .3rem;
-                                font-size: 22px;
-                                @extend %bold;
-                                span:not(.name) {
-                                    @extend %display-none;
-                                }
-                                span.name {
-                                    @extend %block;
-                                }
-                            }
-                        }
-                    }
-                    > [class$=_] {
-                        $image-size : 72px;
-
-                        right: unset;
-                        bottom: unset;
-                        top: 72px;
-                        left: 60px;
-                        > [class^=_] {
-                            width: $image-size;
-                            height: $image-size;
-                            @extend %round;
-                            @extend %overflow-hidden;
-                            @extend %image-box-shadow;
-                            border: 3px solid #fff;
-                            img {
-                                width: 82px;
-                                height: auto;
-                                margin-left: -7px;
-                                margin-top: -2px;
-                            }
-                        }
-                    }
-                }
-            }
-            /** Social links for layout hero left */
-            #__h_sl ._s ul li a .ic svg {
-                /** mengantisipasi agar icon tidak gede saat window ke loaf 
-                 * (bug ini ketemu hanya di chrome window) */
-                @extend %remove-transition;
-            }
-            #__h_sl {
-                @extend %margin-top-lg;
-                ul {
-                    li {
-                        @extend %full-width;
-                        a {
-                            @extend %text-decoration-none;
-                            @extend %full-width;
-                            @extend %flex;
-                            margin-right: unset;
-                            @extend %flex-direction-row;
-                            @extend %align-items-center;
-                            @extend %main-color;
-                            height: 40px;
-                            .ic {
-                                @extend %inline-block;
-                                @extend %margin-right-sm;
-                            }
-                            span {
-                                @extend %inline-block;
-                                @extend %black;
-                            }
-                        }
-                    }
-                }
-            }
-
-            /** Show contact button */
-            ._h_c_ {
-                @extend %block;
-                @extend %padding-top-lg;
-            }
-        }
-
+    ._y {
+      @extend %one-k-width;
+      ._x {
+        @extend %flex;
+        @extend %relative;
+        @extend %give-standard-padding;
+        height: $hero-height;
+      }
     }
 
-    /** contact button */
-    ._h_c_ {
-        @extend %transition;
-        @extend %display-none;
-        a {
-                @extend %background-primary-color-light;
-                @extend %box-shadow-primary-color;
-                @extend %text-decoration-none;
-                @extend %border-thin-radius;
+    /** Picture Area */
+    .anh_ {
+      @extend %absolute;
+      z-index: -1;
+      right: 0;
+      [class*="_"] {
+        @extend %line-height-zero;
+        transition: none;;
+        img {
+          height: $hero-height;
+          width: auto;    
+        }
+      }
+    }
+  
+    .u {
+      @extend %flex;
+      @extend %align-items-center;
+      padding-right: 40%;
+      > [class$=r] {
+        @extend %margin-top-xl;
+        @extend %padding-left-xl;
+      }
+      ._i {
+        h2 {
+          @extend %reset-line-height;
+          @extend %margin-bottom-xs;
+          font-size: 32px;
+          font-weight: 300;
+          color: #755ade;
+          @extend %remove-transition;
+          #typed {
+            .laravelicon {
+              @extend %line-height-zero;
+              svg {
+                vertical-align: middle;
                 @extend %inline-block;
-                @extend %text-center;
-                @extend %full-width;
-                @extend %small;
-                padding-top: 0;
-                padding: .65rem;
-                i {
-                    font-size: 20px;
-                    @extend %margin-right-sm;
+                width: 34px;
+                height: auto;
+              }
+            }
+          }
+          .typed-cursor {
+            @extend %muted;
+            @extend %relative;
+            font-size: 52px;
+            font-weight: 300;
+            color: $hero-background-color; // sama dengan warna background
+            &:before {
+              content: "";
+              height: 62px;
+              width: 1.75px;
+              @extend %absolute;
+              left: 4px;
+              top: 2px;
+              background-color: $main-color;
+            }
+          }
+          .laravel-color {
+            color: $laravel-color;
+          }
+          span.name {
+            @extend %display-none;
+          }
+        }
+      }
+      ._o {
+        @extend %margin-top-sm;
+        @extend %line-height-default;
+        @extend %muted;
+        font-size: 17px;
+        p {
+          
+          @extend %reset;
+        }
+      }
+    }
+
+    /** Menetralkan kembali z index hero */
+    &[data-position=center] {
+      z-index: 0 !important;
+    }
+
+
+    /** Style for position hero to left */
+    &[data-position=left] {
+      // z-index: 10; sudah di handle sama javascript
+      width: $left-width;
+      ._y {
+        width: $left-width;
+        ._x {
+          @extend %full-height;
+          @extend %padding-unset;
+          .u {
+            @extend %align-items-flex-start;
+            padding-right: unset;
+            padding: 0 60px;
+            > [class$=r] {
+              @extend %transition;
+              padding-top: 140px;
+              padding-left: unset;
+              margin-top: unset;
+              h2, .name {
+                @extend %main-color;
+              }
+              /** hide text bio */
+              ._o {
+                @extend %display-none;
+              }
+            }
+            [class$=i] {
+              h2 {
+                @extend %margin-top;
+                margin-bottom: .3rem;
+                font-size: 22px;
+                @extend %bold;
+                span:not(.name) {
+                  @extend %display-none;
                 }
+                span.name {
+                  @extend %block;
+                }
+              }
+            }
+          }
+          > [class$=_] {
+            $image-size : 72px;
+
+            right: unset;
+            bottom: unset;
+            top: 72px;
+            left: 60px;
+            > [class^=_] {
+              width: $image-size;
+              height: $image-size;
+              @extend %round;
+              @extend %overflow-hidden;
+              @extend %image-box-shadow;
+              border: 3px solid #fff;
+              img {
+                width: 82px;
+                height: auto;
+                margin-left: -7px;
+                margin-top: -2px;
+              }
+            }
+          }
+        }
+      }
+      /** Social links for layout hero left */
+      #__h_sl ._s ul li a .ic svg {
+        /** mengantisipasi agar icon tidak gede saat window ke loaf 
+         * (bug ini ketemu hanya di chrome window) */
+        @extend %remove-transition;
+      }
+      #__h_sl {
+        @extend %margin-top-lg;
+        ul {
+          li {
+            @extend %full-width;
+            a {
+              @extend %text-decoration-none;
+              @extend %full-width;
+              @extend %flex;
+              margin-right: unset;
+              @extend %flex-direction-row;
+              @extend %align-items-center;
+              @extend %main-color;
+              height: 40px;
+              .ic {
+                @extend %inline-block;
+                @extend %margin-right-sm;
+              }
+              span {
+                @extend %inline-block;
+                @extend %black;
+              }
+            }
+          }
+        }
+      }
+
+      /** Show contact button */
+      ._h_c_ {
+        @extend %block;
+        @extend %padding-top-lg;
+      }
+    }
+
+  }
+
+  /** contact button */
+  ._h_c_ {
+    @extend %transition;
+    @extend %display-none;
+    a {
+        @extend %background-primary-color-light;
+        @extend %box-shadow-primary-color;
+        @extend %text-decoration-none;
+        @extend %border-thin-radius;
+        @extend %inline-block;
+        @extend %text-center;
+        @extend %full-width;
+        @extend %small;
+        padding-top: 0;
+        padding: .65rem;
+        i {
+          font-size: 20px;
+          @extend %margin-right-sm;
         }
     }
+  }
 
 
-    #hero_nav_toggler {
-        @extend %fixed;
-        top: 1rem;
-        left: 1rem;
-        z-index: 10;
-    }
+  #hero_nav_toggler {
+    @extend %fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+		@extend %display-none;
+  }
 
 }

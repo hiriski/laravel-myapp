@@ -5,7 +5,7 @@
 /** Style for layout left */
 [data-page=index] {
     /** follow background image */
-    background-color: #f4f4f4;
+    background-color: $hero-background-color;
 
     main#main {
         @extend %absolute;

@@ -36,13 +36,13 @@ class IndexController extends Controller {
     /** Check setting for show blog in homepage */
     if($setting->showBlog()) {
       $posts = Blog::with(['category'])->where('status_id', 1)
-        ->orderBy('created_at', 'DESC')->paginate(6);
+        ->orderBy('created_at', 'DESC')->simplePaginate(6);
     }
 
     /** Check setting for show work in homepage */
     if($setting->showWork()) {
       $works = Work::with(['category'])->where('status_id', 1)
-        ->orderBy('created_at', 'DESC')->paginate(6);
+        ->orderBy('created_at', 'DESC')->simplePaginate(6);
     }
 
     /** SEO META     */
