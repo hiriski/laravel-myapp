@@ -1,0 +1,18 @@
+
+/**
+ * Main
+ */
+
+main {
+	@extend %padding-top-xl;
+	#r {
+		// @extend %default-width;
+		// @extend %margin-x-auto;
+		> .r {
+			// @extend %padding-x-xs;
+		}
+	}
+}
+
+
+@import 'main.part/post-list';

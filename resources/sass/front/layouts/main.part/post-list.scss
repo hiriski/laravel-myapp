@@ -1,0 +1,165 @@
+
+
+/**
+ * Post List
+ * blog index, works/portfolio
+ */
+
+.posts {
+
+	$post-thumbnail-height: 190px;
+
+	@extend %lite-width;
+	@extend %margin-x-auto;
+
+	.inner {
+		@extend %padding-x-sm;
+	}
+
+	/* head title */
+	.h {
+		@extend %text-align-center;
+		.dot {
+			@extend %display-inline-block;
+			$dot-size: 8px;
+			width: $dot-size;
+			height: $dot-size;
+			@extend %rounded;
+			@extend %background-color-primary;
+			@include box-shadow(0, 0, 0, 6px, rgba($primary-color, 0.25));
+			margin-top: -6px;
+		}
+		h2 {
+			@extend %display-inline-block;
+			font-size: 24px;
+			@extend %line-height-1;
+			@extend %padding-left-sm;
+		}
+	}
+	.quote {
+		@extend %text-align-center;
+		blockquote {
+			@extend %no-margin;
+		}
+	}
+
+	.p {
+		@extend %display-flex;
+		@extend %flex-wrap-wrap;
+	}
+
+	/** items */
+	.i {
+		@extend %half;
+
+		/** item inner (firt child of items)  */
+		._ia {
+			padding: 12px;
+		}
+
+		@at-root {
+			.posts {
+				/* Post image (thumbnails) */
+				.thumb {
+					@extend %position-relative;
+					@extend %box-shadow-default;
+					@extend %border-radius;
+					@extend %overflow-hidden;
+					height: $post-thumbnail-height;
+					@extend %line-height-0;
+				}
+
+				/* Posts summary */
+				.summary {
+					@extend %muted;
+					@extend %overflow-hidden;
+					@extend %margin-bottom-md;
+					height: 48px;
+				}
+			}
+		}
+
+
+		/** content of post include post title summary not post meta*/
+		.c {
+			@include translate(0, -45px);
+			@extend %transition;
+			@extend %margin-x-sm;
+			&:hover {
+				> ._ci {
+					@include translateY(-8px);
+				}
+			}
+		}
+
+		/** post content inner */
+		._ci {
+			@extend %background-color-white;
+			@extend %box-shadow-default;
+			@extend %border-radius;
+			@extend %transition;
+			padding: 32px 34px 22px 34px;
+			margin-bottom: -45px;
+
+			/** post title */
+			._t_ {
+				@extend %overflow-hidden;
+				@extend %margin-bottom-xs;
+				height: 58px;
+				a {
+					@extend %color-default;
+				}
+			}
+			h2 {
+				font-size: 21px;
+				line-height: 1.4;
+			}
+		}
+	}
+
+	/** post footer */
+	.foot {
+		@extend %display-flex;
+		@extend %justify-content-space-between;
+		@extend %align-items-center;
+		@extend %font-sm;
+		.d_ {
+			@extend %color-muted;
+			svg {
+				@extend %svg-xs;
+				@extend %fill-gray;
+				@extend %vertical-align-middle;
+				margin-right: 5px;
+			}
+		}
+		a {
+			@extend %color-muted;
+			@extend %text-decoration-none;
+			&:hover {
+				@extend %color-primary;
+				svg {
+					@extend %fill-primary;
+				}
+			}
+			svg {
+				height: 10px;
+				@extend %fill-gray;
+				@extend %margin-left-xs;
+				@extend %vertical-align-middle;
+			}
+		}
+	}
+
+	.category {
+		@extend %position-absolute;
+		top: -10px;
+		left: 34px;
+		border-radius: 28px;
+		background-color: $laravel;
+		@extend %white;
+		padding: .3rem 1.5rem;
+		@extend %font-xs;
+		@include box-shadow(0, 3px, 12px, 0, rgba($black, 0.1));
+	}
+
+}

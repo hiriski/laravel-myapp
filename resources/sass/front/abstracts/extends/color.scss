@@ -6,27 +6,55 @@
 %color-default {
 	color: $default-color;
 }
+// alias
+%default-color {
+	@extend %color-default;
+}
 
 %color-white {
 	color: $white;
+}
+// alias
+%white {
+	@extend %color-white;
 }
 
 %color-black {
 	color: $black;
 }
+// alias
+%black {
+	@extend %color-black;
+}
 
 %color-primary {
 	color: $primary-color;
 }
+// alias
+%primary-color {
+	@extend %color-primary;
+}
 
 %color-secondary {
-	color: $primary-color;
+	color: $secondary-color;
+}
+// alias
+%secondary-color {
+	@extend %color-secondary;
 }
 
 %color-muted {
 	color: $muted;
 }
+// alias
+%muted {
+	@extend %color-muted;
+}
 
 %color-gray {
 	color: $gray;
+}
+// alias
+%gray {
+	@extend %color-gray;
 }

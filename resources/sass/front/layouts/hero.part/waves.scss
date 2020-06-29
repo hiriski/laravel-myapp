@@ -1,0 +1,15 @@
+
+/**
+ * Hero waves
+ */
+.waves {
+	@extend %position-absolute;
+	@extend %bottom-left;
+	@extend %full-width;
+	@extend %overflow-hidden;
+	@extend %line-height-0;
+	svg {
+		fill: $default-background;
+		width: 140%;
+	}
+}

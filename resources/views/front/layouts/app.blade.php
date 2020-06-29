@@ -17,8 +17,7 @@
 	@if(!empty(OpenGraph::generate()))
 	{!! OpenGraph::generate() !!}
 	@endif
-
-	{{-- JSON ld for single blog --}}
+	
 	@yield('single-blog-json-ld')
 	@yield('breadcrumbs-json-ld')
 	@yield('index-json-ld')

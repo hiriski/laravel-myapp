@@ -1,7 +1,7 @@
 
 /* Hero social links */
 .s {
-	margin-top: -85px;
+	@extend %margin-top-sm;
 	ul {
 		@extend %no-padding;
 		@extend %no-margin;
@@ -9,13 +9,18 @@
 	li {
 		@extend %display-inline-block;
 		@extend %padding-right-md;
+		.tw {
+			svg {
+				padding: 1px;
+			}
+		}
 	}
 	svg {
-		@extend %svg-sm;
+		@extend %svg-xs;
 		@extend %fill-gray;
 	}
 	a {
-		span {
+		.username {
 			@extend %display-none;
 		}
 		&:hover {

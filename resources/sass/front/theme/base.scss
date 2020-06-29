@@ -12,7 +12,7 @@ body {
 	line-height: $default-line-height;
 	@extend %font-weight-500;
 	@extend %text-align-left;
-	// @extend %background-color-default;
+	@extend %background-color-default;
 }
 
 
@@ -27,6 +27,9 @@ p {
 	margin-top: 0;
 }
 
+img {
+	@extend %full-width;
+}
 
 /** Links */
 a {

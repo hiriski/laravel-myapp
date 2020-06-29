@@ -3,9 +3,10 @@
  * Header
  */
 header {
-	@extend %padding-top-xl;
+	padding-top: 4.5rem;
 	@extend %position-fixed;
 	@extend %full-width;
+	@extend %z-index-2;
 
 	/* Header inner */
 	> .a {

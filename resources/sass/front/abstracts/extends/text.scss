@@ -4,6 +4,10 @@
  */
 
 /** Text align */
+%text-align-center {
+	text-align: center;
+}
+
 %text-align-right {
 	text-align: right;
 }
@@ -99,4 +103,18 @@
 
 %text-decoration-unset {
 	text-decoration: unset;
+}
+
+
+
+/**
+ * Line height
+ */
+
+%line-height-0 {
+	line-height: 0;
+}
+
+%line-height-1 {
+	line-height: 1;
 }

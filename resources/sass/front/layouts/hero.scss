@@ -5,18 +5,23 @@
 
 #hero {
 	@extend %full-width;
-	
+	@extend %position-relative;
+	@extend %background-color-white;
+
 	/* Hero inner */
 	.inner {
 		@extend %margin-x-auto;
 		@extend %width-default;
+		@extend %position-relative;
+		@extend %z-index-1;
 	}
 	.a {
 		@extend %full;
 		@extend %display-flex;
 		@extend %padding-x-sm;
-		@extend %align-items-center;
+		@extend %align-items-flex-end;
 		@extend %justify-content-flex-start;
+		padding-bottom: 70px;
 	}
 	.b {
 		@extend %display-flex;
@@ -32,4 +37,5 @@
 	@import 'hero.part/avatar';
 	@import 'hero.part/info';
 	@import 'hero.part/social-links';
+	@import 'hero.part/waves';
 }

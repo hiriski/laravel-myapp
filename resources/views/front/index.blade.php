@@ -2,16 +2,16 @@
 
 @section('index-json-ld')
 <script type="application/ld+json">
-	{
-		"@context": "https://schema.org/",
-		"@type": "WebSite",
-		"name": "Riski Web ID",
-		"url": "https://riski.web.id",
-		"potentialAction": {
-				"@type": "SearchAction",
-				"target": "https://riski.web.id/search?q={search_term_string}",
-				"query-input": "required name=search_term_string"
-		}
+{
+	"@context": "https://schema.org/",
+	"@type": "WebSite",
+	"name": "Riski Web ID",
+	"url": "https://riski.web.id",
+	"potentialAction": {
+			"@type": "SearchAction",
+			"target": "https://riski.web.id/search?q={search_term_string}",
+			"query-input": "required name=search_term_string"
+	}
 }
 </script>
 @endsection
@@ -19,7 +19,6 @@
 @section('content')
 	<div id="r">
 		<div class="r">
-			<div class="z">
 
 				@empty(!$works)
 					@include('front.layouts.works')
@@ -30,14 +29,14 @@
 				@endempty
 
 				@empty(!$posts)
-					@include('front.layouts.blog-index')
+					@include('front.layouts.main_part.post-list')
 				@endempty
 
-			</div>
 		</div>
 	</div>
 @endsection
+
 @push('script')
-<script src="{{ asset('js/blurry-load.min.js') }}"></script>
-<script src="{{ asset('js/typed.min.js') }}"></script>
+	<script src="{{ asset('js/blurry-load.min.js') }}"></script>
+	<script src="{{ asset('js/typed.min.js') }}"></script>
 @endpush

@@ -35,11 +35,11 @@
                     <li data-route="contact">
                         <a href="{{ route('contact.index') }}">
                             <span>Say hello</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.816 11.574">
+                            <svg viewBox="0 0 25.995 11.574">
                                 <defs>
                                 </defs>
-                                <path id="ic_arrow_back_24px" class="cls-1" d="M46.816,9.064H6.771L10.814,5.02,9.787,4,4,9.787l5.787,5.787,1.02-1.02L6.771,10.51H46.816Z" transform="translate(46.816 15.574) rotate(180)"/>
-                            </svg>  
+                                <path id="ic_arrow_back_24px" class="cls-1" d="M29.995,9.064H6.771L10.814,5.02,9.787,4,4,9.787l5.787,5.787,1.02-1.02L6.771,10.51H29.995Z" transform="translate(29.995 15.574) rotate(180)"/>
+                            </svg>
                         </a>
                     </li>
                 </ul>

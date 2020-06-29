@@ -286,11 +286,15 @@ input[type=radio] {
  */
 
 [class$=btn],
+.posts .h h2,
+.posts .h .dot,
 #hero .s li,
 header nav li {
   display: inline-block;
 }
 
+.posts .foot,
+.posts .p,
 #hero .b,
 #hero .a,
 header nav {
@@ -298,7 +302,7 @@ header nav {
 }
 
 #hero .s ._st span,
-#hero .s a span,
+#hero .s a .username,
 header nav ul.r a:before,
 header #logo {
   display: none;
@@ -308,20 +312,29 @@ header #logo {
  * Colors
  */
 
+.posts .i ._ci ._t_ a {
+  color: #262626;
+}
+
 .btn-dark,
 .btn-secondary,
-.btn-primary {
+.btn-primary,
+.posts .category {
   color: #ffffff;
 }
 
 a,
+.posts .foot a:hover,
 header nav a:hover,
 .btn-white {
   color: #0575ff;
 }
 
+.posts .foot a,
+.posts .foot .d_,
 #hero .s ._st span,
-#hero ._b p {
+#hero ._b p,
+.posts .summary {
   color: #5e5e5e;
 }
 
@@ -337,11 +350,14 @@ header nav a {
  * Colors
  */
 
+.posts .foot a:hover svg,
 #hero .s a:hover svg,
 header nav ul.r a:hover svg {
   fill: #0575ff;
 }
 
+.posts .foot a svg,
+.posts .foot .d_ svg,
 #hero .s svg,
 header nav ul.r a svg {
   fill: #a3a3a3;
@@ -351,11 +367,18 @@ header nav ul.r a svg {
  * Background
  */
 
+.posts .i ._ci,
+#hero,
 .btn-white,
 .card {
   background-color: #ffffff;
 }
 
+body {
+  background-color: #fbfbfb;
+}
+
+.posts .h .dot,
 header nav a:before,
 .btn-primary {
   background-color: #0575ff;
@@ -376,6 +399,7 @@ header nav a:before,
   justify-content: flex-start;
 }
 
+.posts .foot,
 header nav {
   justify-content: space-between;
 }
@@ -384,9 +408,13 @@ header nav {
 
 /** Align Items */
 
-#hero .b,
-#hero .a {
+.posts .foot,
+#hero .b {
   align-items: center;
+}
+
+#hero .a {
+  align-items: flex-end;
 }
 
 /** Align Content */
@@ -405,6 +433,10 @@ header nav {
 
 /** Flex Wraps */
 
+.posts .p {
+  flex-wrap: wrap;
+}
+
 /** Place Contents */
 
 /**
@@ -415,6 +447,7 @@ header nav {
  * Margins
  */
 
+.posts .quote blockquote,
 #hero .s ul,
 #hero ._b p,
 header nav ul {
@@ -423,16 +456,33 @@ header nav ul {
 
 /* Margin extra small */
 
+.posts .i ._ci ._t_,
 #hero ._b h2 {
   margin-bottom: 0.5rem;
 }
 
+.posts .foot a svg {
+  margin-left: 0.5rem;
+}
+
 /* Margin small */
+
+#hero .s {
+  margin-top: 0.85rem;
+}
+
+.posts .i .c {
+  margin: 0 0.85rem;
+}
 
 /* Margin middle */
 
 header nav ul.r a span {
   margin-right: 1.25rem;
+}
+
+.posts .summary {
+  margin-bottom: 1.25rem;
 }
 
 /* Margin large */
@@ -445,6 +495,7 @@ header nav ul.r a span {
 
 /* Margin auto */
 
+.posts,
 #hero .inner,
 header > .a {
   margin: 0 auto;
@@ -464,9 +515,14 @@ header nav ul {
 
 /* Padding small */
 
+.posts .inner,
 #hero .a,
 header > .a .b {
   padding: 0 0.85rem;
+}
+
+.posts .h h2 {
+  padding-left: 0.85rem;
 }
 
 /* Padding middle */
@@ -483,7 +539,7 @@ header > .a .b {
 
 /* Padding extra large */
 
-header {
+main {
   padding-top: 3rem;
 }
 
@@ -506,6 +562,12 @@ header nav a {
   border-radius: 0.2rem;
 }
 
+.posts .i ._ci,
+.posts .thumb {
+  border-radius: 0.45rem;
+}
+
+.posts .h .dot,
 #hero .img,
 header nav a:before {
   border-radius: 50%;
@@ -519,6 +581,11 @@ header nav a:before {
 
 /* font size */
 
+.posts .category {
+  font-size: 13px;
+}
+
+.posts .foot,
 #hero .s ._st span,
 .btn-dark,
 .btn-white,
@@ -540,6 +607,11 @@ header nav {
 
 /** Text align */
 
+.posts .quote,
+.posts .h {
+  text-align: center;
+}
+
 body {
   text-align: left;
 }
@@ -551,12 +623,30 @@ body {
 /** Text decoration */
 
 a,
+.posts .foot a,
 header nav a {
   text-decoration: none;
 }
 
+/**
+ * Line height
+ */
+
+.posts .thumb,
+#hero .waves {
+  line-height: 0;
+}
+
+.posts .h h2 {
+  line-height: 1;
+}
+
 /** Overflows */
 
+.posts .i ._ci ._t_,
+.posts .summary,
+.posts .thumb,
+#hero .waves,
 #hero .img {
   overflow: hidden;
 }
@@ -567,10 +657,15 @@ header nav a {
 
 /** Position */
 
+.posts .thumb,
+#hero .inner,
+#hero,
 header nav a {
   position: relative;
 }
 
+.posts .category,
+#hero .waves,
 header nav a:before {
   position: absolute;
 }
@@ -583,6 +678,8 @@ header {
 
 /** Width */
 
+img,
+#hero .waves,
 #hero,
 header,
 #hero .a {
@@ -608,6 +705,20 @@ header > .a {
   }
 }
 
+.posts {
+  width: 900px;
+}
+
+@media (max-width: 900px) {
+  .posts {
+    width: 100% !important;
+  }
+}
+
+.posts .i {
+  width: 50%;
+}
+
 /**
  * Box shadow
  */
@@ -618,10 +729,20 @@ header > .a {
   -webkit-box-shadow: 0 12px 32px 0 rgba(10, 10, 10, 0.02);
 }
 
-.shadow {
+.shadow,
+.posts .i ._ci,
+.posts .thumb {
   box-shadow: 0 12px 32px 0 rgba(10, 10, 10, 0.05);
   -moz-box-shadow: 0 12px 32px 0 rgba(10, 10, 10, 0.05);
   -webkit-box-shadow: 0 12px 32px 0 rgba(10, 10, 10, 0.05);
+}
+
+/**
+ * Transitions */
+
+.posts .i ._ci,
+.posts .i .c {
+  transition: all 0.3s ease;
 }
 
 /**
@@ -629,6 +750,8 @@ header > .a {
  * vertical-align: baseline|length|sub|super|top|text-top|middle|bottom|text-bottom|initial|inherit;
  */
 
+.posts .foot a svg,
+.posts .foot .d_ svg,
 header nav ul.r a svg {
   vertical-align: middle;
 }
@@ -645,6 +768,14 @@ header nav ul {
  * z-index 
  */
 
+#hero .inner {
+  z-index: 1;
+}
+
+header {
+  z-index: 2;
+}
+
 /**
  * Etc extends 
  */
@@ -653,15 +784,25 @@ header nav ul {
 
 /** SVG Size */
 
+.posts .foot .d_ svg,
 #hero .s svg {
-  height: auto;
+  width: auto;
 }
 
+.posts .foot .d_ svg,
 #hero .s svg {
-  width: 18px;
+  height: 16px;
 }
 
 /** Absolute or fixed positions */
+
+#hero .waves {
+  bottom: 0;
+}
+
+#hero .waves {
+  left: 0;
+}
 
 /** pseudo content */
 
@@ -823,6 +964,7 @@ header nav a:hover:before {
  */
 
 header {
+  padding-top: 4.5rem;
   /* Header inner */
   /* logo and navigation */
   /**
@@ -838,7 +980,7 @@ header nav ul {
 }
 
 header nav ul.r a svg {
-  height: 14px;
+  height: 12px;
   width: auto;
 }
 
@@ -868,10 +1010,17 @@ header nav a:before {
    * Hero info (includes name and bio)
    */
   /* Hero social links */
+  /**
+   * Hero waves
+   */
+}
+
+#hero .a {
+  padding-bottom: 70px;
 }
 
 #hero ._a img {
-  width: 130px;
+  width: 150px;
   height: auto;
 }
 
@@ -879,13 +1028,119 @@ header nav a:before {
   box-shadow: 0 0.5rem 2.25rem 0 rgba(10, 10, 10, 0.1);
   -moz-box-shadow: 0 0.5rem 2.25rem 0 rgba(10, 10, 10, 0.1);
   -webkit-box-shadow: 0 0.5rem 2.25rem 0 rgba(10, 10, 10, 0.1);
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
+}
+
+#hero ._b h2 {
+  font-size: 20px;
+  line-height: 1;
 }
 
 #hero .s {
-  margin-top: -85px;
   /* Span follow me */
+}
+
+#hero .s li .tw svg {
+  padding: 1px;
+}
+
+#hero .waves svg {
+  fill: #fbfbfb;
+  width: 140%;
+}
+
+/**
+ * Main
+ */
+
+/**
+ * Post List
+ * blog index, works/portfolio
+ */
+
+.posts {
+  /* head title */
+  /** items */
+  /** post footer */
+}
+
+.posts .h .dot {
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 0 6px rgba(5, 117, 255, 0.25);
+  -moz-box-shadow: 0 0 0 6px rgba(5, 117, 255, 0.25);
+  -webkit-box-shadow: 0 0 0 6px rgba(5, 117, 255, 0.25);
+  margin-top: -6px;
+}
+
+.posts .h h2 {
+  font-size: 24px;
+}
+
+.posts .i {
+  /** item inner (firt child of items)  */
+  /** content of post include post title summary not post meta*/
+  /** post content inner */
+}
+
+.posts .i ._ia {
+  padding: 12px;
+}
+
+.posts {
+  /* Post image (thumbnails) */
+  /* Posts summary */
+}
+
+.posts .thumb {
+  height: 190px;
+}
+
+.posts .summary {
+  height: 48px;
+}
+
+.posts .i .c {
+  transform: translate(0, -45px);
+}
+
+.posts .i .c:hover > ._ci {
+  transform: translateY(-8px);
+}
+
+.posts .i ._ci {
+  padding: 32px 34px 22px 34px;
+  margin-bottom: -45px;
+  /** post title */
+}
+
+.posts .i ._ci ._t_ {
+  height: 58px;
+}
+
+.posts .i ._ci h2 {
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+.posts .foot .d_ svg {
+  margin-right: 5px;
+}
+
+.posts .foot a svg {
+  height: 10px;
+}
+
+.posts .category {
+  top: -10px;
+  left: 34px;
+  border-radius: 28px;
+  background-color: #F05340;
+  padding: 0.3rem 1.5rem;
+  box-shadow: 0 3px 12px 0 rgba(10, 10, 10, 0.1);
+  -moz-box-shadow: 0 3px 12px 0 rgba(10, 10, 10, 0.1);
+  -webkit-box-shadow: 0 3px 12px 0 rgba(10, 10, 10, 0.1);
 }
 
 /**
@@ -922,7 +1177,7 @@ header nav a:before {
 body {
   font-family: "HK Grotesk", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
-  color: #333333;
+  color: #262626;
   line-height: 1.55;
 }
 

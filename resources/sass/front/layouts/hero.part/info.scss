@@ -5,6 +5,8 @@
 ._b {
 	h2 {
 		@extend %margin-bottom-xs;
+		font-size: 20px;
+		line-height: 1;
 	}
 	p {
 		@extend %color-muted;

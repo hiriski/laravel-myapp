@@ -29,32 +29,32 @@
 
 /** SVG Size */
 %svg-size {
-	height: auto;
+	width: auto;
 }
 
 %svg-xs {
 	@extend %svg-size;
-	width: $icon-xs;
+	height: $icon-xs;
 }
 
 %svg-sm {
 	@extend %svg-size;
-	width: $icon-sm;
+	height: $icon-sm;
 }
 
 %svg-md {
 	@extend %svg-size;
-	width: $icon-md;
+	height: $icon-md;
 }
 
 %svg-lg {
 	@extend %svg-size;
-	width: $icon-lg;
+	height: $icon-lg;
 }
 
 %svg-xl {
 	@extend %svg-size;
-	width: $icon-xl;
+	height: $icon-xl;
 }
 
 
