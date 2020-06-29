@@ -10,6 +10,29 @@ body {
 	font-size: $default;
 	color: $default-color;
 	line-height: $default-line-height;
-	font-weight: 500;
+	@extend %font-weight-500;
 	@extend %text-align-left;
+	// @extend %background-color-default;
+}
+
+
+/** Text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;
+}
+
+
+/** Links */
+a {
+	@extend %color-primary;
+	@extend %text-decoration-none;
+	&:focus {
+		outline: none;
+	}
 }

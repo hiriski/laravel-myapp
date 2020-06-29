@@ -5,6 +5,7 @@
 
 nav {
 	@extend %display-flex;
+	@extend %font-weight-500;
 	@extend %justify-content-space-between;
 	ul {
 		@extend %no-padding;
@@ -18,6 +19,20 @@ nav {
 				&:before {
 					@extend %display-none;
 				}
+				span {
+					@extend %margin-right-md;
+				}
+				svg {
+					@extend %fill-gray;
+					height: 14px;
+					width: auto;
+					@extend %vertical-align-middle;
+				}
+				&:hover {
+					svg {
+						@extend %fill-primary;
+					}
+				}
 			}
 		}
 	}
@@ -25,11 +40,11 @@ nav {
 		@extend %display-inline-block;
 	}
 	a {
-		@extend %color-muted;
+		@extend %color-gray;
 		@extend %text-decoration-none;
 		@extend %position-relative;
-		@extend %padding-right-lg;
-		@extend %padding-left-sm;
+		@extend %padding-right-xl;
+		// @extend %padding-left-sm;
 
 		/* menu dot style */
 		$dot-size: 6px;
@@ -39,7 +54,7 @@ nav {
 			height: $dot-size;
 			@extend %background-color-primary;
 			@extend %rounded;
-			@extend %left;
+			left: -16px;
 			top: 6px;
 			@include box-shadow(0, 0, 0, 4px, rgba($primary-color, 0.25));
 		}

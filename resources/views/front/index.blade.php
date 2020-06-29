@@ -17,9 +17,9 @@
 @endsection
 
 @section('content')
-	<div class="Anh">
-		<div class="__o__">
-			<div class="__">
+	<div id="r">
+		<div class="r">
+			<div class="z">
 
 				@empty(!$works)
 					@include('front.layouts.works')

@@ -26,24 +26,24 @@
 
 	<script> var currentRouteName = "{{ Route::currentRouteName() }}"; </script>
 
-	<script src="{{ asset('js/app.js') }}" defer></script>
+	{{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
 	<link rel="stylesheet" href="{{ asset('fonts/hk-grotesk/style.css') }}">
 	<link rel="stylesheet" href="{{ asset('fonts/material-icons/material-icons.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/rux.css') }}">
 </head>
 
 {{-- dinamic attribute data-page value --}}
-<body data-theme="light" data-page="{{ str_replace('.', '-', Route::currentRouteName()) }}">
+<body class='default' data-page="{{ str_replace('.', '-', Route::currentRouteName()) }}">
 	<div id="rux">
 		@include('front.layouts.header')
 		{{-- @include('front.components.preload') --}}
 		@if( Route::currentRouteName() === "index")
 			@include('front.layouts.hero')
 		@endif
-		<main id="main">
+		<main>
 			@yield('content')
-			@include('front.layouts.footer')
 		</main>
+		@include('front.layouts.footer')
 		<div class="___g--dark___" data-show="false"></div>
 	</div>
 	@stack('script')

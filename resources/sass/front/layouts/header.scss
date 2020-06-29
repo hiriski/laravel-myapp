@@ -3,13 +3,17 @@
  * Header
  */
 header {
-	@extend %width-default;
-	@extend %margin-x-auto;
 	@extend %padding-top-xl;
+	@extend %position-fixed;
+	@extend %full-width;
 
 	/* Header inner */
 	> .a {
-		@extend %padding-x-sm;
+		@extend %width-default;
+		@extend %margin-x-auto;
+		.b {
+			@extend %padding-x-sm;
+		}
 	}
 
 	/* logo and navigation */

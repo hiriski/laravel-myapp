@@ -1,0 +1,34 @@
+
+/* Hero social links */
+.s {
+	margin-top: -85px;
+	ul {
+		@extend %no-padding;
+		@extend %no-margin;
+	}
+	li {
+		@extend %display-inline-block;
+		@extend %padding-right-md;
+	}
+	svg {
+		@extend %svg-sm;
+		@extend %fill-gray;
+	}
+	a {
+		span {
+			@extend %display-none;
+		}
+		&:hover {
+			svg {
+				@extend %fill-primary;
+			}
+		}
+	}
+	
+	/* Span follow me */
+	._st span {
+		@extend %color-muted;
+		@extend %font-sm;
+		@extend %display-none;
+	}
+}

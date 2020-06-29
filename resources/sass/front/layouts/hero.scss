@@ -4,12 +4,32 @@
  */
 
 #hero {
-	@extend %width-default;
-	@extend %margin-x-auto;
-	@extend %padding-top-xl;
+	@extend %full-width;
 	
 	/* Hero inner */
-	> .a {
-		@extend %padding-x-sm;
+	.inner {
+		@extend %margin-x-auto;
+		@extend %width-default;
 	}
+	.a {
+		@extend %full;
+		@extend %display-flex;
+		@extend %padding-x-sm;
+		@extend %align-items-center;
+		@extend %justify-content-flex-start;
+	}
+	.b {
+		@extend %display-flex;
+		@extend %align-items-center;
+		@extend %justify-content-flex-start;
+	}
+
+	.c {
+		@extend %full-height;
+	}
+
+	/* import */
+	@import 'hero.part/avatar';
+	@import 'hero.part/info';
+	@import 'hero.part/social-links';
 }

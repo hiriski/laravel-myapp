@@ -1,0 +1,13 @@
+
+/**
+ * Hero info (includes name and bio)
+ */
+._b {
+	h2 {
+		@extend %margin-bottom-xs;
+	}
+	p {
+		@extend %color-muted;
+		@extend %no-margin;
+	}
+}

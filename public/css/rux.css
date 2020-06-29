@@ -286,14 +286,19 @@ input[type=radio] {
  */
 
 [class$=btn],
+#hero .s li,
 header nav li {
   display: inline-block;
 }
 
+#hero .b,
+#hero .a,
 header nav {
   display: flex;
 }
 
+#hero .s ._st span,
+#hero .s a span,
 header nav ul.r a:before,
 header #logo {
   display: none;
@@ -309,13 +314,19 @@ header #logo {
   color: #ffffff;
 }
 
+a,
 header nav a:hover,
 .btn-white {
   color: #0575ff;
 }
 
-header nav a {
+#hero .s ._st span,
+#hero ._b p {
   color: #5e5e5e;
+}
+
+header nav a {
+  color: #a3a3a3;
 }
 
 /**
@@ -325,6 +336,16 @@ header nav a {
 /**
  * Colors
  */
+
+#hero .s a:hover svg,
+header nav ul.r a:hover svg {
+  fill: #0575ff;
+}
+
+#hero .s svg,
+header nav ul.r a svg {
+  fill: #a3a3a3;
+}
 
 /**
  * Background
@@ -350,6 +371,11 @@ header nav a:before,
 
 /** Justify Content */
 
+#hero .b,
+#hero .a {
+  justify-content: flex-start;
+}
+
 header nav {
   justify-content: space-between;
 }
@@ -357,6 +383,11 @@ header nav {
 /** Justify Items */
 
 /** Align Items */
+
+#hero .b,
+#hero .a {
+  align-items: center;
+}
 
 /** Align Content */
 
@@ -384,24 +415,38 @@ header nav {
  * Margins
  */
 
+#hero .s ul,
+#hero ._b p,
 header nav ul {
   margin: 0;
 }
 
 /* Margin extra small */
 
+#hero ._b h2 {
+  margin-bottom: 0.5rem;
+}
+
 /* Margin small */
 
 /* Margin middle */
 
+header nav ul.r a span {
+  margin-right: 1.25rem;
+}
+
 /* Margin large */
+
+#hero ._a {
+  margin-right: 2rem;
+}
 
 /* Margin extra large */
 
 /* Margin auto */
 
-#hero,
-header {
+#hero .inner,
+header > .a {
   margin: 0 auto;
 }
 
@@ -409,6 +454,7 @@ header {
  * Paddings 
  */
 
+#hero .s ul,
 header nav ul.r a,
 header nav ul {
   padding: 0;
@@ -418,13 +464,9 @@ header nav ul {
 
 /* Padding small */
 
-#hero > .a,
-header > .a {
+#hero .a,
+header > .a .b {
   padding: 0 0.85rem;
-}
-
-header nav a {
-  padding-left: 0.85rem;
 }
 
 /* Padding middle */
@@ -433,17 +475,20 @@ header nav a {
   padding: 1.25rem;
 }
 
-/* Padding Large */
-
-header nav a {
-  padding-right: 2rem;
+#hero .s li {
+  padding-right: 1.25rem;
 }
+
+/* Padding Large */
 
 /* Padding extra large */
 
-#hero,
 header {
   padding-top: 3rem;
+}
+
+header nav a {
+  padding-right: 3rem;
 }
 
 /**
@@ -461,6 +506,7 @@ header {
   border-radius: 0.2rem;
 }
 
+#hero .img,
 header nav a:before {
   border-radius: 50%;
 }
@@ -473,14 +519,20 @@ header nav a:before {
 
 /* font size */
 
+#hero .s ._st span,
 .btn-dark,
 .btn-white,
 .btn-secondary,
 .btn-primary {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 /** font weight */
+
+body,
+header nav {
+  font-weight: 500;
+}
 
 /**
  * Text
@@ -498,11 +550,16 @@ body {
 
 /** Text decoration */
 
+a,
 header nav a {
   text-decoration: none;
 }
 
 /** Overflows */
+
+#hero .img {
+  overflow: hidden;
+}
 
 /** Vertical overflows */
 
@@ -518,20 +575,35 @@ header nav a:before {
   position: absolute;
 }
 
+header {
+  position: fixed;
+}
+
 /** Visibility */
 
 /** Width */
 
+#hero,
+header,
+#hero .a {
+  width: 100%;
+}
+
+#hero .c,
+#hero .a {
+  height: 100vh;
+}
+
 /** width */
 
-#hero,
-header {
+#hero .inner,
+header > .a {
   width: 1024px;
 }
 
 @media (max-width: 1024px) {
-  #hero,
-  header {
+  #hero .inner,
+  header > .a {
     width: 100% !important;
   }
 }
@@ -557,6 +629,10 @@ header {
  * vertical-align: baseline|length|sub|super|top|text-top|middle|bottom|text-bottom|initial|inherit;
  */
 
+header nav ul.r a svg {
+  vertical-align: middle;
+}
+
 /**
  * List style 
  */
@@ -577,11 +653,15 @@ header nav ul {
 
 /** SVG Size */
 
-/** Absolute or fixed positions */
-
-header nav a:before {
-  left: 0;
+#hero .s svg {
+  height: auto;
 }
+
+#hero .s svg {
+  width: 18px;
+}
+
+/** Absolute or fixed positions */
 
 /** pseudo content */
 
@@ -757,6 +837,11 @@ header nav ul {
   /* ul right */
 }
 
+header nav ul.r a svg {
+  height: 14px;
+  width: auto;
+}
+
 header nav a {
   /* menu dot style */
 }
@@ -764,6 +849,7 @@ header nav a {
 header nav a:before {
   width: 6px;
   height: 6px;
+  left: -16px;
   top: 6px;
   box-shadow: 0 0 0 4px rgba(5, 117, 255, 0.25);
   -moz-box-shadow: 0 0 0 4px rgba(5, 117, 255, 0.25);
@@ -776,6 +862,30 @@ header nav a:before {
 
 #hero {
   /* Hero inner */
+  /* import */
+  /** hero avatar */
+  /**
+   * Hero info (includes name and bio)
+   */
+  /* Hero social links */
+}
+
+#hero ._a img {
+  width: 130px;
+  height: auto;
+}
+
+#hero .img {
+  box-shadow: 0 0.5rem 2.25rem 0 rgba(10, 10, 10, 0.1);
+  -moz-box-shadow: 0 0.5rem 2.25rem 0 rgba(10, 10, 10, 0.1);
+  -webkit-box-shadow: 0 0.5rem 2.25rem 0 rgba(10, 10, 10, 0.1);
+  width: 130px;
+  height: 130px;
+}
+
+#hero .s {
+  margin-top: -85px;
+  /* Span follow me */
 }
 
 /**
@@ -813,7 +923,24 @@ body {
   font-family: "HK Grotesk", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
   color: #333333;
-  line-height: 1.5;
-  font-weight: 500;
+  line-height: 1.55;
+}
+
+/** Text */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+/** Links */
+
+a:focus {
+  outline: none;
 }
 

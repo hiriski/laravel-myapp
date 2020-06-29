@@ -1,0 +1,20 @@
+
+/** hero avatar */
+
+$hero-avatar-size: 130px;
+
+._a {
+	@extend %margin-right-lg;
+	img {
+		width: $hero-avatar-size;
+		height: auto;
+	}
+}
+
+.img {
+	@extend %rounded;
+	@extend %overflow-hidden;
+	@include box-shadow(0, .5rem, 2.25rem, 0, rgba($black, 0.1));
+	width: $hero-avatar-size;
+	height: $hero-avatar-size;
+}
