@@ -1,0 +1,39 @@
+#_nRx9 {
+	@extend %lite-width;
+	$input-height: 50px;
+	._s {
+		padding: 50px;
+		@extend %border-thin-radius;
+		@extend %background-color-white;
+		@extend %primary-color;
+		.r {
+			h3 {
+				font-size: 32px;
+					@extend %margin-bottom-xs;
+				}
+			p {
+				@extend %color-muted;
+			}      
+		}
+		input {
+			&[type=text] {
+			@extend %border-transparent;
+			@extend %border-radius;
+			width: 355px;
+			height: $input-height;
+			&::placeholder {
+				@extend %gray;
+			}
+			}
+			+ button {
+				@extend %border-transparent;
+				@extend %background-color-primary;
+				@extend %color-white;
+				@extend %border-thin-radius;
+				height: $input-height;
+				@extend %padding-left-md;
+				@extend %padding-right-md;
+			}
+		}
+	}
+}

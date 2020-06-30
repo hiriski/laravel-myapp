@@ -39,3 +39,7 @@ a {
 		outline: none;
 	}
 }
+
+pre, code {
+	font-family: $pre-format-font !important;
+}

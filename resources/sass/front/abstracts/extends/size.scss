@@ -26,7 +26,6 @@
 %height-full {
 	@extend %height-100vh;
 }
-
 // alias
 %full-height {
 	@extend %height-full;
@@ -35,7 +34,6 @@
 %height-full-percen {
 	@extend %height-100;
 }
-
 // alias
 %full-height-percen {
 	@extend %height-full-percen;
@@ -45,7 +43,6 @@
 %width-full {
 	@extend %width-100;
 }
-
 // alias
 %full-width {
 	@extend %width-full;
@@ -57,7 +54,6 @@
 		width: 100% !important;
 	}
 }
-
 // alias
 %default-width {
 	@extend %width-default;
@@ -69,6 +65,10 @@
 		width: 100% !important;
 	}
 }
+// alias
+%one-k-width {
+	@extend %width-one-k;
+}
 
 %width-lite {
 	width: $lite-width;
@@ -76,11 +76,22 @@
 		width: 100% !important;
 	}
 }
-
 // alias
 %lite-width {
 	@extend %width-lite;
 }
+
+%width-post {
+	width: $post-width;
+	@media (max-width: $post-width) {
+		width: 100% !important;
+	}
+}
+// alias
+%post-width {
+	@extend %width-post;
+}
+
 
 %half {
 	width: 50%;

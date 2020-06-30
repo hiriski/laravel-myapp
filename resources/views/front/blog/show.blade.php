@@ -61,39 +61,47 @@
 	@endsection
 @endisset
 
+
+
 @section('content')
+<div id="r">
+	<div class="r">
 
-<div class="Anh">
+		{{-- Subscribe message response --}}
+		@if(Session::has('subscribe_message'))
+			<h1>{{ Session('subscribe_message') }} </h1>
+		@endif
 
-{{-- Subscribe message response --}}
-@if(Session::has('subscribe_message'))
-  <h1>{{ Session('subscribe_message') }} </h1>
-@endif
+		@isset($post)
+			@empty(!$post)
+				@include('front.layouts.main_part.post-single')
+				@include('front.components.blog-single-pager')
+				{{-- @include('front.components.share-button') --}}
+				@if($post->show_author)
+				{{-- @include('front.components.post-author') --}}
+				@endif
+				@include('front.layouts.main_part.related-posts')
+				{{-- @include('front.components.newsletter') --}}
+			@endempty
+		@endisset
 
-  @include('front.components.navigation')
-  <div class="__o__">
-  <div class="__">
-    @include('front.layouts.single-blog-v2')
-    @include('front.components.blog-single-pager')
-    @include('front.components.newsletter')
-    @include('front.components.share-button')
-    @if($post->show_author)
-    @include('front.components.post-author')
-    @endif
-    @include('front.layouts.related-post')
-  </div>
-  </div>
+	</div>
 </div>
 @endsection
 
+
+
+
+
+
 @push('script')
-<script src="{{ asset('js/lazyload.min.js') }}"></script>
-<script>
-var lazyLoadInstance = new LazyLoad({
-  elements_selector: ".lz_"
-  // ... more custom settings?
-});
-</script>
-<script src="{{ asset('js/blurry-load.min.js') }}"></script>
-<script src="{{ asset('js/prism.js') }}"></script>
+	<script src="{{ asset('js/lazyload.min.js') }}"></script>
+	<script>
+		var lazyLoadInstance = new LazyLoad({
+		elements_selector: ".lz_"
+			// ... more custom settings?
+		});
+	</script>
+	<script src="{{ asset('js/blurry-load.min.js') }}"></script>
+	<script src="{{ asset('js/prism.js') }}"></script>
 @endpush

@@ -1,0 +1,96 @@
+#rp {
+    @extend %margin-bottom-xl;
+	$post-thumbnail-height: 145px;
+	@extend %background-color-default;
+
+	@extend %padding-top-xl;
+	@extend %padding-bottom-xl;
+
+    ._q {
+		@extend %post-width;
+		@extend %margin-x-auto;
+        > ._cn_ {
+            > ._sa {
+                @extend %display-flex;
+                @extend %flex-wrap-wrap;
+            }
+
+            /** Main heading */
+            ._g {
+                @extend %text-align-center;
+                h3, h4 {
+                    font-size: 22px;
+                    @extend %color-muted;
+                    @extend %margin-bottom-sm;
+                }
+            }
+        }
+    }
+
+    /** items */
+    .i {
+        @extend %half;
+        /** item inner (firt child of post items)  */
+        .in_ {
+            padding: 12px;
+        }
+        ._img_ {
+            @extend %position-relative;
+            @extend %box-shadow-soft;
+            @extend %border-radius;
+            @extend %overflow-hidden;
+            height: $post-thumbnail-height;
+		}
+		
+        /** content of post include post title summary not post meta*/
+        .c_ {
+            @include translate(0, -56px);
+            @extend %transition;
+			padding: 12px;
+			
+            /** post content inner */
+            ._xo {
+                @extend %background-color-white;
+                @extend %border-radius;
+                @extend %box-shadow-soft;
+                @extend %transition;
+                padding: 18px 22px 16px 22px;
+				margin-bottom: -68px;
+				
+                /** post title */
+                ._t_ {
+                    @extend %overflow-hidden;
+                    height: 48px;
+                    @extend %margin-bottom-sm;
+                    a {
+						@extend %default-color;
+						&:hover {
+							@extend %primary-color;
+						}
+                    }
+                    h4 {
+                        font-size: 18px;
+                        line-height: 1.35;
+                    }
+                }
+            }
+            /** post meta */
+            ._m_ {
+                @extend %display-flex;
+                @extend %justify-content-space-between;
+                @extend %align-items-center;
+                a svg {
+					@extend %fill-gray;
+					height: 11px;
+					&:hover {
+						@extend %fill-primary;
+					}
+				}
+                .d_ {
+                    @extend %color-muted;
+                    @extend %font-sm;
+                }
+            }
+        }
+    }
+}

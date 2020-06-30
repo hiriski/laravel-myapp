@@ -15,6 +15,10 @@
 	border: 2px transparent;
 }
 
+%border-white {
+	border: 2px $white;
+}
+
 %border-primary {
 	border: 2px solid $primary-color; 
 }

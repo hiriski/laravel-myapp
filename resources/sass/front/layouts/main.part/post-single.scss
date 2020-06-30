@@ -1,0 +1,278 @@
+
+
+/**
+ * Post Single
+ */
+
+@import 'post-single.part/syntax-higlighting';
+@import 'post-single.part/blog-pager';
+@import 'post-single.part/related-posts';
+
+.post {
+
+    @extend %padding-bottom-md;
+	@extend %background-color-white;
+
+	/* Post content */
+	._ps_ {
+		@extend %post-width;
+		@extend %margin-x-auto;
+		div, p {
+			@extend %secondary-font;
+			line-height: 1.85;
+			font-size: 17px;
+		}
+		div, h1, h2, h3, h4, h5, h6 {
+			@extend %margin-top-lg;
+			@extend %margin-bottom-sm;
+		}
+		h2 {
+			font-size: 36px;
+		}
+		h3 {
+			font-size: 32px;
+		}
+		h4 {
+			font-size: 30px;
+		}
+		h5 {
+			font-size: 27px;
+		}
+		h6 {
+			font-size: 22px;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			line-height: 1.55;
+			@extend %primary-font;
+        }
+        
+
+        code:not([class*="language"]) {
+            font-family: $pre-format-font;
+            @extend %border-thin-radius;
+            background-color: rgba($primary-color, 0.1);
+            font-size: 15px;
+            padding: .2rem .3rem;
+        }
+        
+        /** Block custom */
+        .block {
+            @extend %border-thin-radius;
+            padding: 20px 28px;
+            p {
+                @extend %margin-bottom-sm;
+                line-height: 1.5;
+            }
+            p,
+            span {
+                @extend %primary-font;
+                font-size: 17px;
+                
+            }
+            p:last-child {
+                @extend %no-margin;
+            }
+
+            &.success {
+                @extend %success;
+                code {
+                    background-color: #7afd74;
+                }
+            }
+            &.info {
+                @extend %info;
+                code {
+                    background-color: #92bdff;
+                }
+            }
+            &.warning {
+                @extend %warning;
+                code {
+                    background-color: #ffd086;
+                }
+            }
+            &.danger {
+                @extend %danger;
+                code {
+                    background-color: #ffa5a5;
+                }
+            }
+        }
+        ul, ol {
+            font-size: 17px;
+            @extend %secondary-font;
+            padding-left: 26px;
+            margin-bottom: 1rem;
+            line-height: 1.75rem;
+            font-weight: normal;
+            li {
+                @extend %margin-bottom-sm;
+            }
+        }
+        ul {
+            @extend %list-style-none;
+            li {
+                @extend %position-relative;
+                &:before {
+                    background: $primary-color;
+                    @extend %position-absolute;
+                    content: "";
+                    left: -20px;
+                    top: 10px;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 10px;
+                }
+            }
+        }
+        blockquote, blockquote > p {
+            font-size: 22px;
+            line-height: 1.75;
+            font-style: italic;
+        }
+        
+        /** Hyper links */
+        a {
+            @extend %border-thin-radius;
+            @extend %primary-color;
+            background-color: #f5f2ff;
+            padding: 0 .3rem;
+            &:hover {
+                @extend %background-color-primary;
+                @extend %color-white;
+            }
+            &[class*=__] {
+                @extend %position-relative;
+                &:after {
+                    @extend %vertical-align-middle;
+                    @extend %text-decoration-none;
+                    font-family: "Material Icons";
+                    content: "open_in_new";
+                    font-size: 18px;
+                }
+            }
+        }
+
+	}
+
+
+	._io_ {
+		// @extend %post-width;
+		// @extend %margin-x-auto;
+		._xo {
+			> ._thumb {
+				@extend %line-height-0;
+				@extend %no-margin;
+			}
+		}
+	}
+
+    ._io_ {
+
+        /** Post Meta (include post author, date and category) */
+        ._m {
+            
+            $pic_size : 40px;
+            @extend %display-flex;
+            @extend %justify-content-center;
+            
+            @extend %margin-y-lg;
+
+            /* Every anchor links and span */
+            a, span {
+                @extend %color-muted;
+            }
+
+            ._ma {
+                @extend %display-flex;
+                @extend %align-items-center;
+            }
+
+
+            .avatar {
+                width: $pic_size;
+                height: $pic_size;
+                @extend %margin-right-md;
+                @extend %border-white;
+            }
+
+            img {
+                @extend %rounded;
+            }
+
+            .name {
+                @extend %position-relative;
+                padding-right: 44px;
+                margin-right: 14px;
+                a, span {
+                    @extend %default-color;
+                }
+                a:hover {
+                    span {
+                        @extend %color-primary;
+                    }
+                }
+                &:after {
+                    @extend %content;
+                    @extend %position-absolute;
+                    top: 50%;
+                    @extend %right;
+                    width: 32px;
+                    height: 1px;    
+                    background: #a4a4a4;
+                }
+            }
+
+            .__c {
+                @extend %display-flex;
+                @extend %default-color;
+                @extend %align-items-center;
+                @extend %text-decoration-none;
+                margin-left: 7rem;
+                padding: .3rem 1.45rem;
+                border-radius: 1.25rem;
+                &:hover {
+                    @extend %background-color-blue-light;
+                }
+                .ic {
+                    @extend %margin-right-sm;
+                    svg {
+                        @extend %vertical-align-middle;
+                        @extend %svg-sm;
+                    }
+                }
+            }
+        }
+
+        ._t {
+            @extend %text-align-center;
+            @extend %post-width;
+            @extend %margin-x-auto;
+            > * {
+                @extend %default-color;
+                @extend %text-decoration-none;
+                &:hover {
+                    color: $primary-color;
+                }
+                h1 {
+                    font-size: 40px;
+                    line-height: 1.35;
+                    margin-left: -4rem;
+                    margin-right: -4rem;
+                }
+            }
+		}
+
+        ._xo {
+            /** Post Image */
+            > .__ {
+                @extend %margin-top-md;
+                @extend %margin-bottom-md;
+                img {
+                    @extend %border-thin-radius;
+                    @extend %box-shadow-default;
+                }
+            }
+        }
+    }
+}

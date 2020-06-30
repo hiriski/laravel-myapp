@@ -1,22 +1,17 @@
-<div id="RP">
-    <div class="__q__">
+<div id="rp">
+    <div class="_q">
         <div class="_cn_">
 
-            {{-- Main Heading with Icon --}}
-            {{-- this is template for make main heading --}}
-            <div class="_g_">
-                <div class="_">
-                    <div class="_io">
-                        <span class="_icon"><i class="material-icons">notes</i></span>
-                        <h3>Related Post</h3>
-                    </div>
+            <div class="_g">
+                <div class="_gi">
+                    <h3>Related Posts</h3>
                 </div>
             </div>
 
-            <div class="__sa">
+            <div class="_sa">
                 @isset($related_post)
                 @foreach($related_post as $item)
-                <div class="__i__">
+                <div class="i">
                     <div class="in_">
     
                         {{-- Post Image --}}
@@ -46,19 +41,12 @@
                                 
                                 {{-- Post Meta --}}
                                 <div class="_m_">
-                                    <a href="{{ route('blog.category.show', $item->category->slug) }}" class="__c">
-                                        {{-- Dinamis Icon  --}}
-                                        <div class="_ic">
-                                            @if($item->category->name === "Uncategory")
-                                            @else
-                                            @include(getsvg($item->category->name))
-                                            @endif
-                                        </div>
-                                        <span>{{ $item->category->name }}</span>
-                                    </a>
                                     <div class="d_">
                                         <span>{{ \Carbon\Carbon::parse($item->created_at)->isoFormat('MMMM Do, YYYY') }}</span>
                                     </div>
+                                    <a href="{{ route('blog.show', $item->slug) }}" class="read_more">
+                                        <svg viewBox="0 0 25.995 11.574"><defs></defs><path id="ic_arrow_back_24px" class="cls-1" d="M29.995,9.064H6.771L10.814,5.02,9.787,4,4,9.787l5.787,5.787,1.02-1.02L6.771,10.51H29.995Z" transform="translate(29.995 15.574) rotate(180)"/></svg>
+                                    </a>
                                 </div>
                             </div>
                         </div>

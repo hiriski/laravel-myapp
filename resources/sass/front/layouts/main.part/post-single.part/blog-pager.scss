@@ -1,0 +1,111 @@
+#_bsp {
+
+    $blog-pager-height: 70px;
+    @extend %padding-bottom-xl;
+	@extend %background-color-white;
+
+    .inner {
+		@extend %post-width;
+		@extend %margin-x-auto;
+
+        /** next and previous */
+        .i {
+			@extend %half;
+        }
+	}
+
+	.y {
+		@extend %display-flex;
+        @extend %justify-content-space-between;
+		@extend %flex-wrap-nowrap;
+	}
+
+	
+	/* Item */
+	.i {
+		/** previous */
+		&:first-of-type {
+			> .q {
+				@extend %justify-content-flex-start;
+				@extend %padding-right-xs;
+				> * {
+					@extend %text-align-right;
+					padding-left: 56px;
+					@extend %padding-right-md;
+				}
+				svg {
+					left: 20px;
+				}
+			}
+		}
+		
+		/** next */
+		&:last-of-type {
+			.q {
+				@extend %justify-content-flex-end;
+				@extend %padding-left-xs;
+				> * {
+					padding-right: 56px;
+					@extend %padding-left-md;
+				}
+				svg {
+					right: 20px;
+				}
+			}
+		}
+	}
+	
+
+	.q {
+		> * {
+			height: $blog-pager-height;
+			@extend %padding-sm;
+			@extend %display-flex;
+			@extend %overflow-hidden;
+			@extend %position-relative;
+			@extend %border-thin-radius;
+			border: 1px solid #dbdbfe;
+			@extend %background-color-white;
+
+			svg {
+				top: 28px;
+				height: 11px;
+				@extend %position-absolute;
+				@extend %fill-gray;
+			}
+			
+			&:hover {
+				@extend %border-thin-primary;
+				h5, h6 {
+					@extend %color-primary;
+				}
+				svg {
+					@extend %fill-primary;
+				}
+			}
+			
+			a {
+				@extend %full-width;
+				@extend %text-decoration-none;
+				@extend %color-muted;
+				* {
+					@extend %no-margin;
+				}
+				p {
+					@extend %color-gray;
+					@extend %font-sm;
+				}
+			}
+		}
+		
+		/** post title */
+		h5, h6 {
+			@extend %overflow-hidden;
+			font-size: 17px;
+			line-height: 1.4;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+	}
+}

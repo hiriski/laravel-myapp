@@ -123,3 +123,23 @@
 	@extend %base-button-dark;
 	@extend %button-lg;
 }
+
+
+/** custom */
+/** Success, Info, Warning and Danger */
+%success {
+	background-color: $success-color;
+	color: $success-text-color;
+}
+%info {
+	background-color: $info-color;
+	color: $info-text-color;
+}
+%warning {
+	background-color: $warning-color;
+	color: $warning-text-color;
+}
+%danger {
+	background-color: $danger-color;
+	color: $danger-text-color;
+}
