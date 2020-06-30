@@ -378,6 +378,7 @@ body {
   background-color: #fbfbfb;
 }
 
+.posts .category,
 .posts .h .dot,
 header nav a:before,
 .btn-primary {
@@ -1136,11 +1137,63 @@ header nav a:before {
   top: -10px;
   left: 34px;
   border-radius: 28px;
-  background-color: #F05340;
   padding: 0.3rem 1.5rem;
   box-shadow: 0 3px 12px 0 rgba(10, 10, 10, 0.1);
   -moz-box-shadow: 0 3px 12px 0 rgba(10, 10, 10, 0.1);
   -webkit-box-shadow: 0 3px 12px 0 rgba(10, 10, 10, 0.1);
+  /** Dinamic colors */
+}
+
+.posts .category[data-category*=Laravel] {
+  background-color: #F05340;
+}
+
+.posts .category[data-category*=Android] {
+  background-color: #7AC157;
+}
+
+.posts .category[data-category*=Blogger] {
+  background-color: #F06A35;
+}
+
+.posts .category[data-category*=Vue] {
+  background-color: #009c6d;
+}
+
+.posts .category[data-category*=Javascript] {
+  background-color: #F9DC3D;
+}
+
+.posts .category[data-category*=Pyhton] {
+  background-color: #0C9DBF;
+}
+
+.posts .category[data-category*=ES6] {
+  background-color: #F9DC3D;
+}
+
+.posts .category[data-category*=CSS] {
+  background-color: #0277BD;
+}
+
+.posts .category[data-category*=HTML] {
+  background-color: #E44D26;
+}
+
+.posts .category[data-category*=React] {
+  background-color: #0096c3;
+}
+
+.posts .category[data-category*=Linux] {
+  background-color: #3f3f3f;
+}
+
+.posts .category[data-category*=Angular] {
+  background-color: #E44D26;
+}
+
+.posts .category[data-category*=Node] {
+  background-color: #00be59;
 }
 
 /**

@@ -155,11 +155,52 @@
 		top: -10px;
 		left: 34px;
 		border-radius: 28px;
-		background-color: $laravel;
+		@extend %background-color-primary;
 		@extend %white;
 		padding: .3rem 1.5rem;
 		@extend %font-xs;
 		@include box-shadow(0, 3px, 12px, 0, rgba($black, 0.1));
+		
+		/** Dinamic colors */
+		&[data-category*='Laravel'] {
+			background-color: $laravel;
+		}
+		&[data-category*='Android'] {
+			background-color: $android;
+		}
+		&[data-category*='Blogger'] {
+			background-color: $blogger;
+		}
+		&[data-category*='Vue'] {
+			background-color: rgb(0, 156, 109);
+		}
+		&[data-category*='Javascript'] {
+			background-color: $javascript;
+		}
+		&[data-category*='Pyhton'] {
+			background-color: $python;
+		}
+		&[data-category*='ES6'] {
+			background-color: $javascript;
+		}
+		&[data-category*='CSS'] {
+			background-color: $css3;
+		}
+		&[data-category*='HTML'] {
+			background-color: $html5;
+		}
+		&[data-category*='React'] {
+			background-color: rgb(0, 150, 195);
+		}
+		&[data-category*='Linux'] {
+			background-color: rgb(63, 63, 63);
+		}
+		&[data-category*='Angular'] {
+			background-color: $html5;
+		}
+		&[data-category*='Node'] {
+			background-color: rgb(0, 190, 89);
+		}
 	}
 
 }

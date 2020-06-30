@@ -73,8 +73,9 @@
 									</div>
 
 									{{-- Category --}}
-									<a class='category' data-category="laravel" href="">
-										Laravel
+									<a class='category'
+										data-category="{{ $item->category->name }}" href="">
+										{{ $item-> category-> name }}
 									</a>
 
 								</div>
