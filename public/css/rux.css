@@ -349,12 +349,15 @@ a,
 .posts .foot a:hover,
 header nav a:hover,
 .btn-white,
+#xfR2 .c_ > p > a:hover,
 #_nRx9 ._s,
 .post ._ps_ a,
 #rp .i .c_ ._xo ._t_ a:hover {
   color: #0575ff;
 }
 
+#xfR2 .c_ a,
+#xfR2 .c_ > p,
 #_nRx9 ._s .r p,
 .post ._io_ ._m a,
 .post ._io_ ._m span,
@@ -434,6 +437,7 @@ header nav ul.r a svg {
 }
 
 body,
+#xfR2,
 #rp,
 pre[class*=language][data-color*=light] {
   background-color: #fbfbfb;
@@ -550,6 +554,8 @@ header nav ul {
 
 /* Margin extra small */
 
+#xfR2 .c_ .logo,
+#xfR2 .c_ > p,
 #_nRx9 ._s .r h3,
 .posts .i ._ci ._t_,
 #hero ._b h2 {
@@ -705,11 +711,13 @@ header > .a .b {
 
 /* Padding extra large */
 
+#xfR2 ._f2,
 #rp,
 main {
   padding-top: 3rem;
 }
 
+#xfR2 ._f2,
 #rp,
 #_bsp {
   padding-bottom: 3rem;
@@ -802,6 +810,7 @@ header nav a:before {
   font-size: 13px;
 }
 
+#xfR2 .c_ > p,
 #rp .i .c_ ._m_ .d_,
 #_bsp .q > * a p,
 pre[class*=language] span.code-filename,
@@ -828,6 +837,7 @@ header nav {
 
 /** Text align */
 
+#xfR2 ._f2 > div,
 .post ._io_ ._t,
 #rp ._q > ._cn_ ._g,
 .posts .quote,
@@ -870,6 +880,7 @@ header nav a {
   line-height: 0;
 }
 
+#xfR2 .c_ > p,
 .posts .h h2 {
   line-height: 1;
 }
@@ -895,6 +906,7 @@ header nav a {
 
 /** Position */
 
+#xfR2 .c_ > p > a,
 .post ._io_ ._m .name,
 .post ._ps_ a[class*=__],
 .post ._ps_ ul li,
@@ -908,6 +920,7 @@ header nav a {
   position: relative;
 }
 
+#xfR2 .c_ > p > a:after,
 .post ._io_ ._m .name:after,
 .post ._ps_ ul li:before,
 #_bsp .q > * svg,
@@ -1014,6 +1027,7 @@ pre[class*=language] {
 /**
  * Transitions */
 
+#xfR2,
 #rp .i .c_ ._xo,
 #rp .i .c_,
 .posts .i ._ci,
@@ -1026,6 +1040,7 @@ pre[class*=language] {
  * vertical-align: baseline|length|sub|super|top|text-top|middle|bottom|text-bottom|initial|inherit;
  */
 
+#xfR2 .c_ > p svg,
 .post ._io_ ._m .__c .ic svg,
 .post ._ps_ a[class*=__]:after,
 .posts .foot a svg,
@@ -1065,11 +1080,13 @@ header {
 /** SVG Size */
 
 .post ._io_ ._m .__c .ic svg,
+#xfR2 .c_ > p svg,
 .posts .foot .d_ svg,
 #hero .s svg {
   width: auto;
 }
 
+#xfR2 .c_ > p svg,
 .posts .foot .d_ svg,
 #hero .s svg {
   height: 16px;
@@ -1093,12 +1110,14 @@ pre[class*=language] .line-number {
   left: 0;
 }
 
+#xfR2 .c_ > p > a:after,
 .post ._io_ ._m .name:after {
   right: 0;
 }
 
 /** pseudo content */
 
+#xfR2 .c_ > p > a:after,
 .post ._io_ ._m .name:after,
 header nav a:hover:before {
   content: "";
@@ -2019,7 +2038,6 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
   padding-left: 26px;
   margin-bottom: 1rem;
   line-height: 1.75rem;
-  font-weight: normal;
 }
 
 .post ._ps_ ul li:before {
@@ -2111,6 +2129,44 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 
 #_nRx9 ._s input + button {
   height: 50px;
+}
+
+#xfR2 .c_ {
+  /** logo for footer v2 */
+}
+
+#xfR2 .c_ > p > a {
+  padding-right: 44px;
+  margin-right: 12px;
+}
+
+#xfR2 .c_ > p > a:after {
+  top: 50%;
+  width: 32px;
+  height: 1px;
+  background: #a4a4a4;
+}
+
+#xfR2 .c_ .logo svg {
+  width: 40px;
+  height: 40px;
+  /** change svg logo color when hover */
+}
+
+#xfR2 .c_ .logo svg g {
+  fill: #cbd2ed;
+}
+
+#xfR2 .c_ .logo svg path#r {
+  fill: #b3c5df;
+}
+
+#xfR2 .c_ .logo svg:hover g {
+  fill: #3974f5;
+}
+
+#xfR2 .c_ .logo svg:hover path#r {
+  fill: #0049e6;
 }
 
 /**

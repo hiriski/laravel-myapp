@@ -1,7 +1,7 @@
-<footer id="main" class="v2">
-  <div class="_fm">
-    <div class="__">
-      <div class="c__">
+<footer id="xfR2">
+  <div class="_f2">
+    <div class="p">
+      <div class="c_">
         <div class="logo">
           <a href="{{ route('index') }}">
             <svg xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,10 @@
             </svg>
           </a>
         </div>
-        <p><span>© </span> <a href="">Riski Web ID</a> Crafted with <i class="material-icons">favorite</i></p>
+        <p><span>© </span> <a href="">Riski Web ID</a>
+            <span>Crafted with</span>
+            <svg viewBox="0 -20 464 464"><path d="m340 0c-44.773438.00390625-86.066406 24.164062-108 63.199219-21.933594-39.035157-63.226562-63.19531275-108-63.199219-68.480469 0-124 63.519531-124 132 0 172 232 292 232 292s232-120 232-292c0-68.480469-55.519531-132-124-132zm0 0" fill="#ff6243"/></svg>
+        </p>
         <p>Bandung, Indonesia</p>
       </div>
     </div>
