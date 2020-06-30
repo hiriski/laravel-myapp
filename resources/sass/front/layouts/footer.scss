@@ -1,0 +1,86 @@
+#xfR2 {
+
+	$logo-v2-width : 40px;
+
+	$icon-size : 18px;
+	@extend %transition;
+	@extend %background-color-default;
+
+	._f2 {
+		@extend %padding-top-xl;
+		@extend %padding-bottom-xl;
+		> div {
+			@extend %text-align-center;
+		}
+	}
+	.c_ {
+		> p {
+			@extend %font-sm;
+			@extend %color-muted;
+			@extend %line-height-1;
+			@extend %margin-bottom-xs;
+			// .laravel {
+			// 	@extend %line-height-1;
+			// 	@extend %vertical-align-middle;
+			// 	svg {
+			// 		width: $icon-size;
+			// 		height: $icon-size;
+			// 	}
+			// }
+			svg {
+				@extend %svg-xs;
+				@extend %vertical-align-middle;
+			}
+			> a {
+				padding-right: 44px;
+				margin-right: 12px;
+				@extend %position-relative;
+				&:hover {
+					@extend %primary-color;
+				}
+				&:after {
+					@extend %content;
+					@extend %position-absolute;
+					top: 50%;
+					@extend %right;
+					width: 32px;
+					height: 1px;    
+					background: #a4a4a4;
+				}
+			}
+		}
+		a {
+			@extend %color-muted;
+			// @extend %text-decoration-none;
+		}
+
+		/** logo for footer v2 */
+		.logo {
+				@extend %margin-bottom-xs;
+			svg {
+				width: $logo-v2-width;
+				height: $logo-v2-width;
+				g {
+					fill: #cbd2ed;
+				}
+				path {
+					&#r {
+						fill: #b3c5df;
+					}
+				}
+
+				/** change svg logo color when hover */
+				&:hover {
+					g {
+						fill: #3974f5;
+					}
+					path {
+						&#r {
+							fill: #0049e6;
+						}
+					}
+				}
+			}
+		}
+	}
+}

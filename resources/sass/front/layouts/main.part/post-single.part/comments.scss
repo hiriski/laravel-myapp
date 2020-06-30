@@ -1,0 +1,12 @@
+
+/**
+ * Comments
+ */
+
+#cmt {
+	@extend %padding-bottom-xl;
+	.inner {
+		@extend %post-width;
+		@extend %margin-x-auto;
+	}
+}

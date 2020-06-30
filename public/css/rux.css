@@ -642,6 +642,7 @@ header nav ul.r a span {
 
 .post ._io_ ._t,
 .post ._ps_,
+#cmt .inner,
 #rp ._q,
 #_bsp .inner,
 .posts,
@@ -718,6 +719,7 @@ main {
 }
 
 #xfR2 ._f2,
+#cmt,
 #rp,
 #_bsp {
   padding-bottom: 3rem;
@@ -982,6 +984,7 @@ header > .a {
 
 .post ._io_ ._t,
 .post ._ps_,
+#cmt .inner,
 #rp ._q,
 #_bsp .inner {
   width: 720px;
@@ -990,6 +993,7 @@ header > .a {
 @media (max-width: 720px) {
   .post ._io_ ._t,
   .post ._ps_,
+  #cmt .inner,
   #rp ._q,
   #_bsp .inner {
     width: 100% !important;
@@ -1951,6 +1955,10 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 #rp .i .c_ ._m_ a svg {
   height: 11px;
 }
+
+/**
+ * Comments
+ */
 
 .post {
   /* Post content */

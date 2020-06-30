@@ -81,6 +81,7 @@
 				{{-- @include('front.components.post-author') --}}
 				@endif
 				@include('front.layouts.main_part.related-posts')
+				@include('front.layouts.main_part.comments')
 				{{-- @include('front.components.newsletter') --}}
 			@endempty
 		@endisset
@@ -104,4 +105,7 @@
 	</script>
 	<script src="{{ asset('js/blurry-load.min.js') }}"></script>
 	<script src="{{ asset('js/prism.js') }}"></script>
+
+	{{-- Disquss comment count --}}
+	<script id="dsq-count-scr" src="//riskiwebid.disqus.com/count.js" async></script>
 @endpush
