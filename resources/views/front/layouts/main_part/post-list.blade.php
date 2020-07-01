@@ -8,7 +8,7 @@
 				<div class="_ha">
 					<div class="_hb">
 						<span class="dot"></span>
-						<h2>Coretan</h2>
+						<h2>Blog</h2>
 					</div>
 				</div>
 			</div>
@@ -36,7 +36,7 @@
 									src="{{ getBlogImage($item->image_xs) }}"
 									data-large="{{ getBlogImage($item->image_md) }}" alt="{{ $item->title }}">
 								@else
-								<img src="{{ asset('images/md.jpg') }}" alt="No image">
+									<img src="{{ asset('images/md.jpg') }}" alt="No image">
 								@endif
 								</a>
 							</div>
@@ -49,7 +49,8 @@
 								<div class="_ci">
 									{{-- Post Title --}}
 									<div class="_t_">
-										<a href="{{ route('blog.show', $item->slug) }}"><h2>{{ $item->title }}</h2></a>
+										<a href="{{ route('blog.show', $item->slug) }}"
+											title="{{ $item->title }}"><h2>{{ $item->title }}</h2></a>
 									</div>
 						
 									<div class="summary">

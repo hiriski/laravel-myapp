@@ -13,7 +13,9 @@
 					@if(!empty($post->image))
 						<img class="blurry-load"
 							src="{{ getBlogImage($post->image_xs) }}"
-							data-large="{{ getBlogImage($post->image) }}" alt="{{ $post->title }}">
+							data-large="{{ getBlogImage($post->image) }}"
+							alt="{{ $post->title }}"
+							title="{{ $post->title }}">
 					@endif
 					</div>
 				</div>
@@ -27,7 +29,9 @@
 						</div>
 
 						<div class="name">
-							<span></span><a href="{{ route('index') }}"><span>{{ $post->user->profile->first_name }}</span></a>
+							<a href="{{ route('index') }}" title="{{ $post->user->name }}">
+								<span>{{ $post->user->profile->first_name }}</span>
+							</a>
 						</div>
 
 						<time>
@@ -49,7 +53,7 @@
 	
 				{{-- Post Title --}}
 				<div class="_t">
-					<a href="{{ route('blog.show', $post->slug) }}">
+					<a href="{{ route('blog.show', $post->slug) }}" title="{{ $post->title }}">
 					<h1>{{ $post->title }}</h1>
 					</a>
 				</div>
