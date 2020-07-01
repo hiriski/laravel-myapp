@@ -42,7 +42,11 @@
 										<a href="">{{ $item->category->name }}</a>
 									</div>
 									<a href="{{ route('work.show', $item->slug) }}">
-										<svg viewBox="0 0 12.866 10.993"><defs></defs><path class="a" d="M16.866,8.81H6.632l3.841-3.841L9.5,4,4,9.5l5.5,5.5.969-.969L6.632,10.184H16.866Z" transform="translate(16.866 14.993) rotate(180)"/></svg>
+										<svg viewBox="0 0 25.995 11.574">
+										<defs>
+										</defs>
+										<path id="ic_arrow_back_24px" class="cls-1" d="M29.995,9.064H6.771L10.814,5.02,9.787,4,4,9.787l5.787,5.787,1.02-1.02L6.771,10.51H29.995Z" transform="translate(29.995 15.574) rotate(180)"/>
+										</svg>
 									</a>
 								</div>
 							</div>
