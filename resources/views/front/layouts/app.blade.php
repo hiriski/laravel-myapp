@@ -43,8 +43,10 @@
 			@yield('content')
 		</main>
 		@include('front.layouts.footer')
-		<div class="___g--dark___" data-show="false"></div>
 	</div>
 	@stack('script')
+
+	<script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>

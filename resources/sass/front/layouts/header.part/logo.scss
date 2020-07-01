@@ -3,5 +3,33 @@
  * Logo header
  */
 #logo {
-	@extend %display-none;
+	// @extend %display-none;
+	$dot-logo-size: 36px;
+	$logo-size: 22px;
+
+	@extend %line-height-0;
+
+	.a {
+		@extend %rounded;
+		width: $dot-logo-size;
+		height: $dot-logo-size;
+		@extend %position-relative;
+		@extend %display-inline-block;
+		background-color: rgba($primary-color, 0.08);
+		@extend %transition;
+		@include box-shadow(0, 0, 0, 0, transparent);
+		&:hover {
+			background-color: rgba($primary-color, 0.2);
+			@include box-shadow(0, 0, 0, 10px, rgba($primary-color, 0.08));
+		}
+	}
+
+	svg {
+		height: $logo-size;
+		width: $logo-size;
+		@extend %position-absolute;
+		top: 7px;
+		left: 7px;
+	}
+	
 }

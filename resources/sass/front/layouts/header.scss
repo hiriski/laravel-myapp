@@ -3,21 +3,48 @@
  * Header
  */
 header {
-	padding-top: 4.5rem;
+	padding-top: 3rem;
 	@extend %position-fixed;
 	@extend %full-width;
 	@extend %z-index-2;
+	@extend %transition-cubic-bezier;
 
 	/* Header inner */
 	> .a {
-		@extend %width-default;
-		@extend %margin-x-auto;
+		// @extend %width-default;
+		// @extend %margin-x-auto;
+		padding: 0 3rem;
 		.b {
 			@extend %padding-x-sm;
+			@extend %display-flex;
+			@extend %align-items-center;
+			@extend %position-relative;
+		}
+	}
+
+	&.rux {
+		padding-top: 2rem;
+		nav {
+			ul:not(.right) {
+				margin-left: -100%;
+				&.show {
+					margin-left: unset;
+				}
+			}
+		}
+		#logo {
+			svg {
+				height: auto;
+				width: 16px;
+				top: 11px;
+				left: 10px;
+				@extend %fill-primary;
+			}
 		}
 	}
 
 	/* logo and navigation */
 	@import 'header.part/logo';
 	@import 'header.part/nav';
+
 }

@@ -19,7 +19,7 @@ const mix = require('laravel-mix');
 mix.sass('resources/sass/front/rux.scss', 'public/css');
 
 /** Front Js */
-// mix.js('resources/js/app.js', 'public/js');
+mix.js('resources/js/app.js', 'public/js');
 
 /** Admin Js */
 // mix.js('resources/js/admin.js', 'public/js/admin.js');

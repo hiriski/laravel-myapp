@@ -90,6 +90,7 @@
 						<span>Nothing to see here..</span>
 					</div>
 				@endempty
+
 			</div>
 		</div>
 	</div>

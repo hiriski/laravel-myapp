@@ -28,9 +28,11 @@
 					@include('front.layouts.featured-post')
 				@endempty
 
-				@empty(!$posts)
-					@include('front.layouts.main_part.post-list')
-				@endempty
+				@isset($posts)
+					@empty(!$posts)
+						@include('front.layouts.main_part.post-list')
+					@endempty
+				@endisset
 
 		</div>
 	</div>
@@ -38,5 +40,4 @@
 
 @push('script')
 	<script src="{{ asset('js/blurry-load.min.js') }}"></script>
-	<script src="{{ asset('js/typed.min.js') }}"></script>
 @endpush

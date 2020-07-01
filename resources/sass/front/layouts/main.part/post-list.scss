@@ -5,6 +5,14 @@
  * blog index, works/portfolio
  */
 
+
+/* posts index page */
+[data-page=blog-index] {
+	.posts {
+		padding-top: 160px;
+	}
+}
+
 .posts {
 
 	$post-thumbnail-height: 190px;
@@ -142,7 +150,7 @@
 				}
 			}
 			svg {
-				height: 10px;
+				height: 14px;
 				@extend %fill-gray;
 				@extend %margin-left-xs;
 				@extend %vertical-align-middle;

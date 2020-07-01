@@ -93,8 +93,6 @@
 
 
 
-
-
 @push('script')
 	<script src="{{ asset('js/lazyload.min.js') }}"></script>
 	<script>

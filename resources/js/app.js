@@ -1,11 +1,12 @@
-import './front/components/overlay';
-import './front/components/nav';
-import './front/pages/home';
-import './front/pages/blog-index';
-import './front/pages/about';
-import './front/pages/blog';
-import './front/pages/template-page';
-import './front/pages/contact';
+import './front/header';
+import './front/components/blog-pager';
+// import './front/components/nav';
+// import './front/pages/home';
+// import './front/pages/blog-index';
+// import './front/pages/about';
+// import './front/pages/blog';
+// import './front/pages/template-page';
+// import './front/pages/contact';
 
 
 
@@ -68,11 +69,11 @@ const windowResized = (currentWidth, callback) => {
 
 }
 
-window.addEventListener('resize', () => {
+// window.addEventListener('resize', () => {
 
-	/** Sedangkan variable ini akan berubah nilainya ketika lebar window di ubah */
-  let currentWindowWidth = window.outerWidth;
+// 	/** Sedangkan variable ini akan berubah nilainya ketika lebar window di ubah */
+// 	let currentWindowWidth = window.outerWidth;
 
-  windowResized(currentWindowWidth, (mgs) => console.warn(mgs));
+// 	windowResized(currentWindowWidth, (mgs) => console.warn(mgs));
 
-});
+// });

@@ -294,10 +294,13 @@ pre[class*=language] .line-number,
 .posts .h h2,
 .posts .h .dot,
 #hero .s li,
-header nav li {
+header nav li,
+header #logo .a {
   display: inline-block;
 }
 
+#pgr ._x li > *,
+#pgr ._x ul,
 .post ._io_ ._m .__c,
 .post ._io_ ._m ._ma,
 .post ._io_ ._m,
@@ -309,14 +312,14 @@ header nav li {
 .posts .p,
 #hero .b,
 #hero .a,
-header nav {
+header nav,
+header > .a .b {
   display: flex;
 }
 
 #hero .s ._st span,
 #hero .s a .username,
-header nav ul.r a:before,
-header #logo {
+header nav ul.r a:before {
   display: none;
 }
 
@@ -349,6 +352,7 @@ a,
 .posts .foot a:hover,
 header nav a:hover,
 .btn-white,
+#pgr ._x li a:hover,
 #xfR2 .c_ > p > a:hover,
 #_nRx9 ._s,
 .post ._ps_ a,
@@ -356,6 +360,7 @@ header nav a:hover,
   color: #0575ff;
 }
 
+#pgr ._x li a,
 #xfR2 .c_ a,
 #xfR2 .c_ > p,
 #_nRx9 ._s .r p,
@@ -389,6 +394,7 @@ header nav a:hover,
   color: #a3a3a3;
 }
 
+#pgr ._x li.disabled > *,
 #_bsp .q > * a p,
 header nav a,
 #_nRx9 ._s input[type=text]::placeholder {
@@ -403,14 +409,21 @@ header nav a,
  * Colors
  */
 
+#pgr ._x li a:hover svg,
 #rp .i .c_ ._m_ a svg:hover,
 #_bsp .q > *:hover svg,
 .posts .foot a:hover svg,
 #hero .s a:hover svg,
-header nav ul.r a:hover svg {
+header nav ul.r a:hover svg,
+header.rux #logo svg {
   fill: #0575ff;
 }
 
+#pgr ._x li svg {
+  fill: #5e5e5e;
+}
+
+#pgr ._x li.disabled svg,
 #rp .i .c_ ._m_ a svg,
 #_bsp .q > * svg,
 .posts .foot a svg,
@@ -480,6 +493,7 @@ header nav a:before,
   justify-content: flex-end;
 }
 
+#pgr ._x ul,
 #rp .i .c_ ._m_,
 #_bsp .y,
 .posts .foot,
@@ -491,11 +505,14 @@ header nav {
 
 /** Align Items */
 
+#pgr ._x li > *,
+#pgr ._x ul,
 .post ._io_ ._m .__c,
 .post ._io_ ._m ._ma,
 #rp .i .c_ ._m_,
 .posts .foot,
-#hero .b {
+#hero .b,
+header > .a .b {
   align-items: center;
 }
 
@@ -542,6 +559,7 @@ pre[class*=language] .line-number {
  * Margins
  */
 
+#pgr ._x ul,
 .post ._io_ ._xo > ._thumb,
 .post ._ps_ .block p:last-child,
 #_bsp .q > * a *,
@@ -602,6 +620,11 @@ header nav ul {
   margin-top: 1.25rem;
 }
 
+#pgr ._x li:last-child svg {
+  margin-left: 1.25rem;
+}
+
+#pgr ._x li:first-child svg,
 .post ._io_ ._m .avatar,
 header nav ul.r a span {
   margin-right: 1.25rem;
@@ -640,14 +663,14 @@ header nav ul.r a span {
 
 /* Margin auto */
 
+#pgr ._x,
 .post ._io_ ._t,
 .post ._ps_,
 #cmt .inner,
 #rp ._q,
 #_bsp .inner,
 .posts,
-#hero .inner,
-header > .a {
+#hero .inner {
   margin: 0 auto;
 }
 
@@ -655,6 +678,7 @@ header > .a {
  * Paddings 
  */
 
+#pgr ._x ul,
 #hero .s ul,
 header nav ul.r a,
 header nav ul {
@@ -704,11 +728,21 @@ header > .a .b {
   padding-right: 1.25rem;
 }
 
+#pgr ._x nav,
 .post {
   padding-bottom: 1.25rem;
 }
 
 /* Padding Large */
+
+#pgr ._x nav,
+#pgr {
+  padding-top: 2rem;
+}
+
+#pgr ._x {
+  padding: 0 2rem;
+}
 
 /* Padding extra large */
 
@@ -723,6 +757,10 @@ main {
 #rp,
 #_bsp {
   padding-bottom: 3rem;
+}
+
+header nav {
+  padding-left: 3rem;
 }
 
 header nav a {
@@ -778,7 +816,8 @@ pre[class*=language][data-line-numbers=false],
 .post ._io_ ._m img,
 .posts .h .dot,
 #hero .img,
-header nav a:before {
+header nav a:before,
+header #logo .a {
   border-radius: 50%;
 }
 
@@ -824,6 +863,11 @@ pre[class*=language],
 .btn-secondary,
 .btn-primary {
   font-size: 15px;
+}
+
+#rp ._q > ._cn_ ._g h3,
+#rp ._q > ._cn_ ._g h4 {
+  font-size: 20px;
 }
 
 /** font weight */
@@ -878,7 +922,8 @@ header nav a {
 
 .post ._io_ ._xo > ._thumb,
 .posts .thumb,
-#hero .waves {
+#hero .waves,
+header #logo {
   line-height: 0;
 }
 
@@ -918,7 +963,9 @@ pre[class*=language],
 .posts .thumb,
 #hero .inner,
 #hero,
-header nav a {
+header nav a,
+header #logo .a,
+header > .a .b {
   position: relative;
 }
 
@@ -929,7 +976,8 @@ header nav a {
 pre[class*=language] span.code-filename,
 .posts .category,
 #hero .waves,
-header nav a:before {
+header nav a:before,
+header #logo svg {
   position: absolute;
 }
 
@@ -946,6 +994,7 @@ img,
 #_bsp .q > * a,
 #hero .waves,
 #hero,
+header nav,
 header,
 #hero .a {
   width: 100%;
@@ -958,24 +1007,24 @@ header,
 
 /** width */
 
-#hero .inner,
-header > .a {
+#hero .inner {
   width: 1024px;
 }
 
 @media (max-width: 1024px) {
-  #hero .inner,
-  header > .a {
+  #hero .inner {
     width: 100% !important;
   }
 }
 
+#pgr ._x,
 #_nRx9,
 .posts {
   width: 900px;
 }
 
 @media (max-width: 900px) {
+  #pgr ._x,
   #_nRx9,
   .posts {
     width: 100% !important;
@@ -1035,8 +1084,14 @@ pre[class*=language] {
 #rp .i .c_ ._xo,
 #rp .i .c_,
 .posts .i ._ci,
-.posts .i .c {
+.posts .i .c,
+header nav ul,
+header #logo .a {
   transition: all 0.3s ease;
+}
+
+header {
+  transition: all 0.45s cubic-bezier(0.23, 0.1, 0, 1.02);
 }
 
 /**
@@ -1057,6 +1112,7 @@ header nav ul.r a svg {
  * List style 
  */
 
+#pgr ._x ul,
 .post ._ps_ ul,
 header nav ul {
   list-style: none;
@@ -1305,7 +1361,7 @@ header nav a:hover:before {
  */
 
 header {
-  padding-top: 4.5rem;
+  padding-top: 3rem;
   /* Header inner */
   /* logo and navigation */
   /**
@@ -1314,6 +1370,52 @@ header {
   /**
    * Nav header
    */
+}
+
+header > .a {
+  padding: 0 3rem;
+}
+
+header.rux {
+  padding-top: 2rem;
+}
+
+header.rux nav ul:not(.right) {
+  margin-left: -100%;
+}
+
+header.rux nav ul:not(.right).show {
+  margin-left: unset;
+}
+
+header.rux #logo svg {
+  height: auto;
+  width: 16px;
+  top: 11px;
+  left: 10px;
+}
+
+header #logo .a {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(5, 117, 255, 0.08);
+  box-shadow: 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0 0 transparent;
+}
+
+header #logo .a:hover {
+  background-color: rgba(5, 117, 255, 0.2);
+  box-shadow: 0 0 0 10px rgba(5, 117, 255, 0.08);
+  -moz-box-shadow: 0 0 0 10px rgba(5, 117, 255, 0.08);
+  -webkit-box-shadow: 0 0 0 10px rgba(5, 117, 255, 0.08);
+}
+
+header #logo svg {
+  height: 22px;
+  width: 22px;
+  top: 7px;
+  left: 7px;
 }
 
 header nav ul {
@@ -1400,6 +1502,12 @@ header nav a:before {
  * blog index, works/portfolio
  */
 
+/* posts index page */
+
+[data-page=blog-index] .posts {
+  padding-top: 160px;
+}
+
 .posts {
   /* head title */
   /** items */
@@ -1470,7 +1578,7 @@ header nav a:before {
 }
 
 .posts .foot a svg {
-  height: 10px;
+  height: 14px;
 }
 
 .posts .category {
@@ -1599,7 +1707,7 @@ pre[class*=language][data-color*=dark] span.code-filename {
 }
 
 pre[class*=language][data-color*=light] span.code-filename {
-  background: #dadcf9;
+  background: #f1f1f1;
   color: #525288;
 }
 
@@ -1867,7 +1975,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 }
 
 #_bsp .i:first-of-type > .q > * {
-  padding-left: 56px;
+  padding-left: 58px;
 }
 
 #_bsp .i:first-of-type > .q svg {
@@ -1875,7 +1983,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 }
 
 #_bsp .i:last-of-type .q > * {
-  padding-right: 56px;
+  padding-right: 58px;
 }
 
 #_bsp .i:last-of-type .q svg {
@@ -1910,11 +2018,6 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 
 #rp ._q > ._cn_ {
   /** Main heading */
-}
-
-#rp ._q > ._cn_ ._g h3,
-#rp ._q > ._cn_ ._g h4 {
-  font-size: 22px;
 }
 
 #rp .i {
@@ -1953,7 +2056,7 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 }
 
 #rp .i .c_ ._m_ a svg {
-  height: 11px;
+  height: 12px;
 }
 
 /**
@@ -2196,6 +2299,18 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 /**
  * Box shadow
  */
+
+/** 
+ * Blog pager
+ */
+
+#pgr ._x li.disabled > * {
+  cursor: no-drop;
+}
+
+#pgr ._x li svg {
+  height: 12px;
+}
 
 /**
  * Import all theme

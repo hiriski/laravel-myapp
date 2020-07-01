@@ -19,7 +19,7 @@
             ._g {
                 @extend %text-align-center;
                 h3, h4 {
-                    font-size: 22px;
+                    @extend %font-lg;
                     @extend %color-muted;
                     @extend %margin-bottom-sm;
                 }
@@ -65,7 +65,8 @@
                     a {
 						@extend %default-color;
 						&:hover {
-							@extend %primary-color;
+                            @extend %primary-color;
+                            // @extend %text-decoration-underline;
 						}
                     }
                     h4 {
@@ -81,7 +82,7 @@
                 @extend %align-items-center;
                 a svg {
 					@extend %fill-gray;
-					height: 11px;
+					height: 12px;
 					&:hover {
 						@extend %fill-primary;
 					}

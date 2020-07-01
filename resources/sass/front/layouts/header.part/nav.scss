@@ -4,13 +4,16 @@
  */
 
 nav {
+	@extend %full-width;
 	@extend %display-flex;
 	@extend %font-weight-500;
 	@extend %justify-content-space-between;
+	@extend %padding-left-xl;
 	ul {
 		@extend %no-padding;
 		@extend %no-margin;
 		@extend %list-style-none;
+		@extend %transition;
 		
 		/* ul right */
 		&.r {
