@@ -5,6 +5,7 @@
 
 #cmt {
 	@extend %padding-bottom-xl;
+	@extend %padding-top-lg;
 	.inner {
 		@extend %post-width;
 		@extend %margin-x-auto;

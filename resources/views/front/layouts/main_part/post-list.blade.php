@@ -2,8 +2,7 @@
 	<div class="inner">
 		<div class="_c_">
 
-			{{-- Main Heading with Icon --}}
-			{{-- this is template for make main heading --}}
+			{{-- Head title --}}
 			<div class="h">
 				<div class="_ha">
 					<div class="_hb">
@@ -44,8 +43,6 @@
 							
 							{{-- Post Content --}}
 							<div class="c">
-								
-								{{-- Content inner --}}
 								<div class="_ci">
 									{{-- Post Title --}}
 									<div class="_t_">

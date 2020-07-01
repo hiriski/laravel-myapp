@@ -285,7 +285,8 @@ input[type=radio] {
  * Import All Extends
  */
 
-pre[class*=language] .line-number span {
+pre[class*=language] .line-number span,
+.works .p {
   display: block;
 }
 
@@ -293,6 +294,9 @@ pre[class*=language] .line-number span {
 pre[class*=language] .line-number,
 .posts .h h2,
 .posts .h .dot,
+.works .i ._ci > a,
+.works .h h2,
+.works .h .dot,
 #hero .s li,
 header nav li,
 header #logo .a {
@@ -310,6 +314,8 @@ header #logo .a {
 #_bsp .y,
 .posts .foot,
 .posts .p,
+.works .i ._ci > a,
+.works .i ._ci,
 #hero .b,
 #hero .a,
 header nav,
@@ -328,6 +334,7 @@ header nav ul.r a:before {
  */
 
 .posts .i ._ci ._t_ a,
+.works .i ._ci ._t_ a,
 .post ._io_ ._t > *,
 .post ._io_ ._m .__c,
 .post ._io_ ._m .name a,
@@ -396,6 +403,7 @@ header nav a:hover,
 
 #pgr ._x li.disabled > *,
 #_bsp .q > * a p,
+.works .i ._ci ._t_ + a,
 header nav a,
 #_nRx9 ._s input[type=text]::placeholder {
   color: #a3a3a3;
@@ -409,10 +417,15 @@ header nav a,
  * Colors
  */
 
+.works .i ._ci > a:hover svg {
+  fill: #ffffff;
+}
+
 #pgr ._x li a:hover svg,
 #rp .i .c_ ._m_ a svg:hover,
 #_bsp .q > *:hover svg,
 .posts .foot a:hover svg,
+.works .i ._ci > a svg,
 #hero .s a:hover svg,
 header nav ul.r a:hover svg,
 header.rux #logo svg {
@@ -443,6 +456,7 @@ header nav ul.r a svg {
 #_bsp .q > *,
 #_bsp,
 .posts .i ._ci,
+.works .i ._ci,
 #hero,
 .btn-white,
 .card {
@@ -456,7 +470,8 @@ pre[class*=language][data-color*=light] {
   background-color: #fbfbfb;
 }
 
-.post ._io_ ._m .__c:hover {
+.post ._io_ ._m .__c:hover,
+.works .i ._ci > a {
   background-color: #e8eef6;
 }
 
@@ -464,6 +479,8 @@ pre[class*=language][data-color*=light] {
 .post ._ps_ a:hover,
 .posts .category,
 .posts .h .dot,
+.works .i ._ci > a:hover,
+.works .h .dot,
 header nav a:before,
 .btn-primary {
   background-color: #0575ff;
@@ -479,7 +496,8 @@ header nav a:before,
 
 /** Justify Content */
 
-.post ._io_ ._m {
+.post ._io_ ._m,
+.works .i ._ci > a {
   justify-content: center;
 }
 
@@ -497,6 +515,7 @@ header nav a:before,
 #rp .i .c_ ._m_,
 #_bsp .y,
 .posts .foot,
+.works .i ._ci,
 header nav {
   justify-content: space-between;
 }
@@ -511,6 +530,8 @@ header nav {
 .post ._io_ ._m ._ma,
 #rp .i .c_ ._m_,
 .posts .foot,
+.works .i ._ci > a,
+.works .i ._ci,
 #hero .b,
 header > .a .b {
   align-items: center;
@@ -590,7 +611,8 @@ header nav ul {
   margin-top: 0.85rem;
 }
 
-.posts .i .c {
+.posts .i .c,
+.works .i .c {
   margin: 0 0.85rem;
 }
 
@@ -670,6 +692,7 @@ header nav ul.r a span {
 #rp ._q,
 #_bsp .inner,
 .posts,
+.works,
 #hero .inner {
   margin: 0 auto;
 }
@@ -702,12 +725,15 @@ header nav ul {
 }
 
 .posts .inner,
+.works .p,
+.works .inner,
 #hero .a,
 header > .a .b {
   padding: 0 0.85rem;
 }
 
-.posts .h h2 {
+.posts .h h2,
+.works .h h2 {
   padding-left: 0.85rem;
 }
 
@@ -736,12 +762,17 @@ header > .a .b {
 /* Padding Large */
 
 #pgr ._x nav,
-#pgr {
+#pgr,
+#cmt {
   padding-top: 2rem;
 }
 
 #pgr ._x {
   padding: 0 2rem;
+}
+
+.works .p {
+  padding-bottom: 2rem;
 }
 
 /* Padding extra large */
@@ -755,7 +786,8 @@ main {
 #xfR2 ._f2,
 #cmt,
 #rp,
-#_bsp {
+#_bsp,
+.works {
   padding-bottom: 3rem;
 }
 
@@ -809,12 +841,16 @@ pre[class*=language][data-line-numbers=false],
 #rp .i .c_ ._xo,
 #rp .i ._img_,
 .posts .i ._ci,
-.posts .thumb {
+.posts .thumb,
+.works .i ._ci,
+.works .thumb {
   border-radius: 0.45rem;
 }
 
 .post ._io_ ._m img,
 .posts .h .dot,
+.works .i ._ci > a,
+.works .h .dot,
 #hero .img,
 header nav a:before,
 header #logo .a {
@@ -857,6 +893,7 @@ header #logo .a {
 pre[class*=language] span.code-filename,
 pre[class*=language],
 .posts .foot,
+.works .i ._ci ._t_ + a,
 #hero .s ._st span,
 .btn-dark,
 .btn-white,
@@ -887,7 +924,8 @@ header nav {
 .post ._io_ ._t,
 #rp ._q > ._cn_ ._g,
 .posts .quote,
-.posts .h {
+.posts .h,
+.works .h {
   text-align: center;
 }
 
@@ -922,13 +960,15 @@ header nav a {
 
 .post ._io_ ._xo > ._thumb,
 .posts .thumb,
+.works .thumb,
 #hero .waves,
 header #logo {
   line-height: 0;
 }
 
 #xfR2 .c_ > p,
-.posts .h h2 {
+.posts .h h2,
+.works .h h2 {
   line-height: 1;
 }
 
@@ -942,6 +982,8 @@ header #logo {
 .posts .i ._ci ._t_,
 .posts .summary,
 .posts .thumb,
+.works .i ._ci ._t_,
+.works .thumb,
 #hero .waves,
 #hero .img {
   overflow: hidden;
@@ -961,6 +1003,8 @@ header #logo {
 #_bsp .q > *,
 pre[class*=language],
 .posts .thumb,
+.works .i ._ci,
+.works .thumb,
 #hero .inner,
 #hero,
 header nav a,
@@ -1019,14 +1063,16 @@ header,
 
 #pgr ._x,
 #_nRx9,
-.posts {
+.posts,
+.works {
   width: 900px;
 }
 
 @media (max-width: 900px) {
   #pgr ._x,
   #_nRx9,
-  .posts {
+  .posts,
+  .works {
     width: 100% !important;
   }
 }
@@ -1062,7 +1108,8 @@ header,
 .shadow-soft,
 #rp .i .c_ ._xo,
 #rp .i ._img_,
-pre[class*=language] {
+pre[class*=language],
+.works .i ._ci {
   box-shadow: 0 12px 32px 0 rgba(10, 10, 10, 0.04);
   -moz-box-shadow: 0 12px 32px 0 rgba(10, 10, 10, 0.04);
   -webkit-box-shadow: 0 12px 32px 0 rgba(10, 10, 10, 0.04);
@@ -1071,7 +1118,8 @@ pre[class*=language] {
 .shadow,
 .post ._io_ ._xo > .__ img,
 .posts .i ._ci,
-.posts .thumb {
+.posts .thumb,
+.works .thumb {
   box-shadow: 0 12px 32px 0 rgba(10, 10, 10, 0.07);
   -moz-box-shadow: 0 12px 32px 0 rgba(10, 10, 10, 0.07);
   -webkit-box-shadow: 0 12px 32px 0 rgba(10, 10, 10, 0.07);
@@ -1085,6 +1133,9 @@ pre[class*=language] {
 #rp .i .c_,
 .posts .i ._ci,
 .posts .i .c,
+.works .i ._ci > a,
+.works .i ._ci,
+.works .i .c,
 header nav ul,
 header #logo .a {
   transition: all 0.3s ease;
@@ -1496,6 +1547,88 @@ header nav a:before {
 /**
  * Main
  */
+
+/**
+ * Works list
+ */
+
+/** On works index page */
+
+[data-page=work-index] .works {
+  padding-top: 160px;
+}
+
+.works {
+  /* head title */
+  /** items */
+}
+
+.works .h .dot {
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 0 6px rgba(5, 117, 255, 0.25);
+  -moz-box-shadow: 0 0 0 6px rgba(5, 117, 255, 0.25);
+  -webkit-box-shadow: 0 0 0 6px rgba(5, 117, 255, 0.25);
+  margin-top: -6px;
+}
+
+.works .h h2 {
+  font-size: 24px;
+}
+
+.works .p {
+  -moz-column-count: 2;
+  column-count: 2;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+
+.works .i {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  width: 100%;
+  /** content of post include post title summary not post meta*/
+  /** post content inner */
+}
+
+.works {
+  /* Post image (thumbnails) */
+}
+
+.works .i .c {
+  margin-bottom: 24px;
+}
+
+.works .i ._ci {
+  padding: 18px 24px 14px 24px;
+  margin-top: -42px;
+  /** post title */
+}
+
+.works .i ._ci ._t_ {
+  text-overflow: ellipsis;
+  height: 26px;
+}
+
+.works .i ._ci h2 {
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.works .i ._ci > a {
+  height: 38px;
+  width: 38px;
+}
+
+.works .i ._ci > a svg {
+  height: 12px;
+}
+
+.works .i ._ci ._x {
+  width: 80%;
+}
 
 /**
  * Post List

@@ -21,9 +21,9 @@
 		<div class="r">
 
 				@empty(!$works)
-					@include('front.layouts.works')
+					@include('front.layouts.main_part.works')
 				@endempty
-				
+
 				@empty(!$featured_posts)
 					@include('front.layouts.featured-post')
 				@endempty

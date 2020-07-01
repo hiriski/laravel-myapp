@@ -1,0 +1,146 @@
+
+/**
+ * Works list
+ */
+
+
+/** On works index page */
+[data-page=work-index] {
+	.works {
+		padding-top: 160px;
+	}
+}
+
+
+.works {
+
+	@extend %padding-bottom-xl;
+	@extend %lite-width;
+	@extend %margin-x-auto;
+
+	.inner {
+		@extend %padding-x-sm;
+	}
+
+	/* head title */
+	.h {
+		@extend %text-align-center;
+		.dot {
+			@extend %display-inline-block;
+			$dot-size: 8px;
+			width: $dot-size;
+			height: $dot-size;
+			@extend %rounded;
+			@extend %background-color-primary;
+			@include box-shadow(0, 0, 0, 6px, rgba($primary-color, 0.25));
+			margin-top: -6px;
+		}
+		h2 {
+			@extend %display-inline-block;
+			font-size: 24px;
+			@extend %line-height-1;
+			@extend %padding-left-sm;
+		}
+	}
+
+	.p {
+		@extend %display-block;
+		@extend %padding-x-sm;
+		-moz-column-count: 2;
+		column-count: 2;
+		-moz-column-gap: 20px;
+		column-gap: 20px;
+		@extend %padding-bottom-lg;
+	}
+
+	/** items */
+	.i {
+		break-inside: avoid;
+		page-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+		width: 100%;
+		// ._ia {
+		// 	padding: 0 12px;
+		// }
+
+		@at-root {
+			.works {
+				/* Post image (thumbnails) */
+				.thumb {
+					@extend %position-relative;
+					@extend %box-shadow-default;
+					@extend %border-radius;
+					@extend %overflow-hidden;
+					@extend %line-height-0;
+				}
+			}
+		}
+
+
+		/** content of post include post title summary not post meta*/
+		.c {
+			// @include translate(0, -45px);
+			@extend %transition;
+			@extend %margin-x-sm;
+			margin-bottom: 24px;
+		}
+
+		/** post content inner */
+		._ci {
+			padding: 18px 24px 14px 24px;
+			margin-top: -42px;
+			@extend %transition;
+			@extend %display-flex;
+			@extend %border-radius;
+			@extend %box-shadow-soft;
+			@extend %position-relative;
+			@extend %align-items-center;
+			@extend %background-color-white;
+			@extend %justify-content-space-between;
+
+			/** post title */
+			._t_ {
+				@extend %overflow-hidden;
+				text-overflow: ellipsis;
+				height: 26px;
+				a {
+					@extend %color-default;
+				}
+				+ a {
+					@extend %color-gray;
+					@extend %font-sm;
+				}
+			}
+			h2 {
+				font-size: 19px;
+				line-height: 1.4;
+			}
+			
+			> a {
+				@extend %display-inline-block;
+				@extend %rounded;
+				height: 38px;
+				width: 38px;
+				@extend %background-color-blue-light;
+				@extend %display-flex;
+				@extend %justify-content-center;
+				@extend %align-items-center;
+				@extend %transition;
+				svg {
+					@extend %fill-primary;
+					height: 12px;
+				}
+				&:hover {
+					@extend %background-color-primary;
+					svg {
+						@extend %fill-white;
+					}
+				}
+			}
+
+			._x {
+				width: 80%;
+			}
+		}
+	}
+}

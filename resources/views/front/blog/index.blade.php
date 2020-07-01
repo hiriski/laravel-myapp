@@ -25,7 +25,4 @@
 		});
 	</script>
 	<script src="{{ asset('js/blurry-load.min.js') }}"></script>
-
-	{{-- Disquss comment count --}}
-	<script id="dsq-count-scr" src="//riskiwebid.disqus.com/count.js" async></script>
 @endpush
