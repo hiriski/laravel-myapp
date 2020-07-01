@@ -1,0 +1,65 @@
+
+/** 
+ * Blog pager
+ */
+#pgr {
+	@extend %padding-top-lg;
+	._x {
+		@extend %lite-width;
+		@extend %margin-x-auto;
+		@extend %padding-x-lg;
+		nav {
+			@extend %padding-top-lg;
+			@extend %padding-bottom-md;
+		}
+		ul {
+			@extend %no-margin;
+			@extend %no-padding;
+			@extend %display-flex;
+			@extend %list-style-none;
+			@extend %align-items-center;
+			@extend %justify-content-space-between;
+		}
+		li {
+			> * {
+				@extend %display-flex;
+				@extend %align-items-center;
+			}
+
+			a {
+				@extend %color-muted;
+				&:hover {
+					@extend %primary-color;
+					svg {
+						@extend %fill-primary;
+					}
+				}
+			}
+
+			&.disabled {
+				svg {
+					@extend %fill-gray;
+				}
+				> * {
+					@extend %color-gray;
+					cursor: no-drop;
+				}
+			}
+			&:first-child {
+				svg {
+					@extend %margin-right-md;
+				}
+			}
+			&:last-child {
+				svg {
+					@extend %margin-left-md;
+				}
+			}
+
+			svg {
+				height: 12px;
+				@extend %fill-muted;
+			}
+		}
+	}
+}

@@ -64,7 +64,6 @@
 											<time>{{ \Carbon\Carbon::parse($item->created_at)->isoFormat('MMMM Do, YYYY') }}</time>
 										</div>
 										<a href="{{ route('blog.show', $item->slug) }}">
-											<span>Read more</span>
 											<svg viewBox="0 0 25.995 11.574">
 											<defs>
 											</defs>
@@ -99,18 +98,15 @@
 </div>
 
 
-{{-- Jika ini di load oleh index dan jika jumlah postnya lebih dari 6 --}}
-@if(Route::currentRouteName() === "index")
-	<div class="__l_m">
-		<a href="{{ route('blog.index') }}?page=2"  class="anhoi-btn" data-size="lg"><span>See more</span> <i class="material-icons">loop</i></a>
-	</div>
-@endif
-
 {{-- Blog Pager --}}
 @if(Route::currentRouteName() === "blog.index")
-	<div id="__pg__">
-		<div class="__">
+	<div id="pgr">
+		<div class="_x">
 			{{ $posts->links() }}
 		</div>
+	</div>
+@else
+	<div class="__l_m">
+		<a href="{{ route('blog.index') }}?page=2"><span>See more</span> <i class="material-icons">loop</i></a>
 	</div>
 @endif
