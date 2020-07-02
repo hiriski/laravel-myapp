@@ -1,0 +1,23 @@
+
+/**
+ * Category blog waves
+ */
+
+#waves {
+	&.category {
+		@extend %position-fixed;
+		@extend %top-left;
+		@extend %full-width;
+		svg {
+			width: 120%;
+		}
+	}
+
+	/** Dinamic fill waves */
+	&[data-waves=Laravel] {
+		svg {
+			fill: $laravel;
+		}
+	}
+
+}

@@ -90,9 +90,6 @@
 </div>
 @endsection
 
-
-
-
 @push('script')
 	<script src="{{ asset('js/lazyload.min.js') }}"></script>
 	<script>
@@ -103,7 +100,4 @@
 	</script>
 	<script src="{{ asset('js/blurry-load.min.js') }}"></script>
 	<script src="{{ asset('js/prism.js') }}"></script>
-
-	{{-- Disquss comment count --}}
-	<script id="dsq-count-scr" src="//riskiwebid.disqus.com/count.js" async></script>
 @endpush

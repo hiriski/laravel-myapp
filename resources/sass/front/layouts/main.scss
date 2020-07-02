@@ -4,7 +4,6 @@
  */
 
 main {
-	@extend %padding-top-xl;
 	#r {
 		// @extend %default-width;
 		// @extend %margin-x-auto;
@@ -17,5 +16,6 @@ main {
 
 @import 'main.part/works';
 @import 'main.part/post-list';
+@import 'main.part/category-blog';
 @import 'main.part/post-single';
 @import 'main.part/newsletter';

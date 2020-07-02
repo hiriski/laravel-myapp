@@ -16,12 +16,12 @@
 		@extend %z-index-1;
 	}
 	.a {
+		// @extend %padding-x-sm;
 		@extend %full;
 		@extend %display-flex;
-		@extend %padding-x-sm;
-		@extend %align-items-flex-end;
+		@extend %align-items-center;
 		@extend %justify-content-flex-start;
-		padding-bottom: 70px;
+		// padding-bottom: 70px;
 	}
 	.b {
 		@extend %display-flex;

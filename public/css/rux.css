@@ -302,6 +302,7 @@ header #logo .a {
   display: inline-block;
 }
 
+#cbh .x,
 #pgr ._x li > *,
 #pgr ._x ul,
 .post ._io_ ._m .__c,
@@ -366,6 +367,7 @@ header nav a:hover,
   color: #0575ff;
 }
 
+#cbh .t h1,
 #pgr ._x li a,
 #xfR2 .c_ a,
 #xfR2 .c_ > p,
@@ -490,6 +492,7 @@ header nav a:before,
 
 /** Justify Content */
 
+#cbh .x,
 .post ._io_ ._m {
   justify-content: center;
 }
@@ -517,6 +520,7 @@ header nav {
 
 /** Align Items */
 
+#cbh .x,
 #pgr ._x li > *,
 #pgr ._x ul,
 .post ._io_ ._m .__c,
@@ -525,12 +529,9 @@ header nav {
 .posts .foot,
 .works .i ._ci,
 #hero .b,
+#hero .a,
 header > .a .b {
   align-items: center;
-}
-
-#hero .a {
-  align-items: flex-end;
 }
 
 /** Align Content */
@@ -572,6 +573,7 @@ pre[class*=language] .line-number {
  * Margins
  */
 
+#cbh .t h1,
 #pgr ._x ul,
 .post ._io_ ._xo > ._thumb,
 .post ._ps_ .block p:last-child,
@@ -638,6 +640,7 @@ header nav ul {
   margin-left: 1.25rem;
 }
 
+#cbh .blade_svg,
 #pgr ._x li:first-child svg,
 .post ._io_ ._m .avatar,
 header nav ul.r a span {
@@ -677,6 +680,7 @@ header nav ul.r a span {
 
 /* Margin auto */
 
+#cbh,
 #pgr ._x,
 .post ._io_ ._t,
 .post ._ps_,
@@ -716,11 +720,11 @@ header nav ul {
   padding: 0.5rem;
 }
 
+#cbh .inner,
 .posts .inner,
 .works .i .c,
 .works .p,
 .works .inner,
-#hero .a,
 header > .a .b {
   padding: 0 0.85rem;
 }
@@ -764,6 +768,7 @@ header > .a .b {
   padding: 0 2rem;
 }
 
+#cbh,
 .works .p {
   padding-bottom: 2rem;
 }
@@ -771,8 +776,7 @@ header > .a .b {
 /* Padding extra large */
 
 #xfR2 ._f2,
-#rp,
-main {
+#rp {
   padding-top: 3rem;
 }
 
@@ -894,6 +898,7 @@ pre[class*=language],
   font-size: 15px;
 }
 
+#cbh .t h1,
 #rp ._q > ._cn_ ._g h3,
 #rp ._q > ._cn_ ._g h4 {
   font-size: 20px;
@@ -950,6 +955,7 @@ header nav a {
  * Line height
  */
 
+#cbh .blade_svg,
 .post ._io_ ._xo > ._thumb,
 .posts .thumb,
 .works .i ._ci > a,
@@ -988,6 +994,7 @@ header #logo {
 
 /** Position */
 
+#cbh,
 #xfR2 .c_ > p > a,
 .post ._io_ ._m .name,
 .post ._ps_ a[class*=__],
@@ -1019,6 +1026,7 @@ header #logo svg {
   position: absolute;
 }
 
+#waves.category,
 pre[class*=language] .line-number,
 header {
   position: fixed;
@@ -1029,6 +1037,7 @@ header {
 /** Width */
 
 img,
+#waves.category,
 #_bsp .q > * a,
 .works .i .c,
 #hero .waves,
@@ -1056,6 +1065,7 @@ header,
   }
 }
 
+#cbh,
 #pgr ._x,
 #_nRx9,
 .posts,
@@ -1064,6 +1074,7 @@ header,
 }
 
 @media (max-width: 900px) {
+  #cbh,
   #pgr ._x,
   #_nRx9,
   .posts,
@@ -1183,6 +1194,7 @@ header {
 
 /** SVG Size */
 
+#cbh .blade_svg svg,
 .post ._io_ ._m .__c .ic svg,
 #xfR2 .c_ > p svg,
 .posts .foot .d_ svg,
@@ -1200,9 +1212,14 @@ header {
   height: 18px;
 }
 
+#cbh .blade_svg svg {
+  height: 26px;
+}
+
 /** Absolute or fixed positions */
 
-pre[class*=language] .line-number {
+pre[class*=language] .line-number,
+#waves.category {
   top: 0;
 }
 
@@ -1210,7 +1227,8 @@ pre[class*=language] .line-number {
   bottom: 0;
 }
 
-#hero .waves {
+#hero .waves,
+#waves.category {
   left: 0;
 }
 
@@ -1405,7 +1423,7 @@ header nav a:hover:before {
  */
 
 header {
-  padding-top: 3rem;
+  padding-top: 2rem;
   /* Header inner */
   /* logo and navigation */
   /**
@@ -1417,7 +1435,7 @@ header {
 }
 
 header > .a {
-  padding: 0 3rem;
+  padding: 0 2rem;
 }
 
 header.rux {
@@ -1500,10 +1518,6 @@ header nav a:before {
   /**
    * Hero waves
    */
-}
-
-#hero .a {
-  padding-bottom: 70px;
 }
 
 #hero ._a img {
@@ -1596,7 +1610,7 @@ header nav a:before {
 }
 
 .works .i ._ci {
-  padding: 18px 24px 14px 24px;
+  padding: 16px 24px 12px 24px;
   /** post title */
 }
 
@@ -1761,6 +1775,14 @@ header nav a:before {
 
 .posts .category[data-category*=Node] {
   background-color: #00be59;
+}
+
+/**
+ * Category blog show
+ */
+
+[data-page=blog-category-show] main {
+  padding-top: 160px;
 }
 
 /**
@@ -2429,6 +2451,26 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 
 #pgr ._x li svg {
   height: 12px;
+}
+
+/**
+ * Category blog title
+ */
+
+/**
+ * Category blog waves
+ */
+
+#waves {
+  /** Dinamic fill waves */
+}
+
+#waves.category svg {
+  width: 120%;
+}
+
+#waves[data-waves=Laravel] svg {
+  fill: #F05340;
 }
 
 /**

@@ -37,11 +37,11 @@
 								<div class="_ci">
 									<div class="_x">
 										<div class="_t_">
-											<a href="{{ route('work.show', $item->slug) }}"><h2>{{ $item->name }}</h2></a>
+											<a href="{{ route('work.show', $item->link) }}"><h2>{{ $item->name }}</h2></a>
 										</div>
 										<a href="">{{ $item->category->name }}</a>
 									</div>
-									<a href="{{ route('work.show', $item->slug) }}">
+									<a href="{{ route('work.show', $item->link) }}">
 										<svg viewBox="0 0 25.995 11.574">
 										<defs>
 										</defs>

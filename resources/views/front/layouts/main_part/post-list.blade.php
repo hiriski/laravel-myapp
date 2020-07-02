@@ -3,14 +3,16 @@
 		<div class="_c_">
 
 			{{-- Head title --}}
-			<div class="h">
-				<div class="_ha">
-					<div class="_hb">
-						<span class="dot"></span>
-						<h2>Blog</h2>
+			@if((Route::currentRouteName() === "index") || (Route::currentRouteName() === "blog.index"))
+				<div class="h">
+					<div class="_ha">
+						<div class="_hb">
+							<span class="dot"></span>
+							<h2>Blog</h2>
+						</div>
 					</div>
 				</div>
-			</div>
+			@endif
 
 			{{-- Show quote only homepage and blog index --}}
 			@if((Route::currentRouteName() === "index") || (Route::currentRouteName() === "blog.index"))
@@ -71,7 +73,8 @@
 
 									{{-- Category --}}
 									<a class='category'
-										data-category="{{ $item->category->name }}" href="">
+										data-category="{{ $item->category->name }}"
+										href="{{ route('blog.category.show', $item->category->slug) }}">
 										{{ $item-> category-> name }}
 									</a>
 

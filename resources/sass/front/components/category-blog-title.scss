@@ -1,0 +1,35 @@
+
+/**
+ * Category blog title
+ */
+
+#cbh {
+	@extend %lite-width;
+	@extend %margin-x-auto;
+	@extend %padding-bottom-lg;
+	@extend %position-relative;
+	.inner {
+		@extend %padding-x-sm;
+	}
+	.x {
+		@extend %display-flex;
+		@extend %justify-content-center;
+		@extend %align-items-center;
+	}
+	
+	.blade_svg {
+		@extend %margin-right-md;
+		@extend %line-height-0;
+		svg {
+			@extend %svg-xl;
+		}
+	}
+	.t {
+		h1 {
+			@extend %font-lg;
+			@extend %no-margin;
+			@extend %color-muted;
+		}
+	}
+
+}

@@ -3,7 +3,7 @@
  * Header
  */
 header {
-	padding-top: 3rem;
+	padding-top: 2rem;
 	@extend %position-fixed;
 	@extend %full-width;
 	@extend %z-index-2;
@@ -13,7 +13,7 @@ header {
 	> .a {
 		// @extend %width-default;
 		// @extend %margin-x-auto;
-		padding: 0 3rem;
+		padding: 0 2rem;
 		.b {
 			@extend %padding-x-sm;
 			@extend %display-flex;
