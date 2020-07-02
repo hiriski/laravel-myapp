@@ -1,0 +1,227 @@
+
+/**
+ * Contact
+ */
+
+@import 'contact.part/waves';
+
+/** Hide header */
+[data-page^=contact-] {
+	header {
+		@extend %display-none;
+	}
+}
+
+
+#_CxT {
+	width: 520px;
+	@extend %margin-x-auto;
+	@extend %position-relative;
+	padding-top: 4rem;
+
+	/* back button and title */
+	.top {
+		@extend %display-flex;
+		@extend %align-items-center;
+	}
+
+	/** Back */
+	#back {
+		@extend %margin-bottom-md;
+		@extend %padding-right-md;
+		&:hover {
+			svg {
+				@extend %fill-primary;
+			}
+		}
+		svg {
+			@extend %fill-gray;
+			height: 12px;
+		}
+	}
+
+	._h_ {
+		h1 {
+			font-size: 26px;
+			@extend %color-muted;
+		}
+	}
+	._f {
+		@extend %position-relative;
+		@extend %margin-bottom-sm;
+		&.tp {
+			label {
+				@extend %color-gray;
+				@extend %position-absolute;
+				top: 5px;
+				left: 18px;
+				font-size: 15px;
+			}
+			select {
+				@extend %background-color-blue-light;
+				@extend %border-white;
+				@extend %background-color-white;
+				@extend %border-thin-radius;
+				@extend %full-width;
+				padding: 30px 15px 8px 15px;
+				@extend %font-weight-500; // default browser 400
+
+				/** remove default arrow icon */
+				-webkit-appearance: none;
+				-ms-expand: none;
+
+				&:focus,
+				&:active {
+					@extend %border-primary;
+				}
+				&[data-has-change=true] {
+					@extend %border-white;
+				}
+			}
+		}
+		input {
+			@extend %line-height-1;
+		}
+		input,
+		textarea {
+			@extend %font-weight-500; // default browser 400
+			@extend %border-transparent;
+			@extend %border-thin-radius;
+			@extend %box-shadow-soft;
+			&:focus,
+			&:active {
+				@extend %border-primary;
+			}
+			&[class*=invalid] {
+				border: 2px solid rgb(253, 55, 55);
+			}
+		}
+		label {
+			@extend %display-flex;
+			@extend %position-absolute;
+			@extend %transition;
+			@extend %color-gray;
+			left: 1rem;
+			top: 14px;
+			span {
+				@extend %margin-left-sm;
+			}
+			i, svg {
+				font-size: 20px;
+			}
+		}
+		&[data-has-value=true] {
+			input,
+			textarea {
+				padding: 30px 15px 8px 15px;
+				@extend %border-white;
+				@extend %background-color-blue-light;
+				&[class*=invalid] {
+					@extend %border-primary;
+				}
+			}
+
+			/** jika keadaan data-has-value tapi juga validatenya false */
+			&[data-validate=false] {
+				input,
+				textarea {
+					&[class*=invalid] {
+						border-bottom: 2px solid rgb(253, 55, 55);
+						border: {
+							top: 0;
+							left: 0;
+							right: 0;
+						}
+					}
+				}
+			}
+
+			[class*=feedback] {
+				&[class*=invalid] {
+					@extend %display-none;
+				}
+			}
+			label {
+				@extend %primary-color;
+				font-size: 12px;
+				top: 10px;
+				i, svg {
+					font-size: 16px;
+				}
+			}
+		}
+		&[data-input-email=wrong] {
+			label {
+				color: red;
+			}
+			input {
+				border-color: red !important;
+			}
+		}
+		.spinner-validate {
+			@extend %position-absolute;
+			top: 19px;
+			right: 19px;
+			&[data-has-validate=true] {
+				i {
+					color: green;
+				}
+			}
+			&[data-has-validate=false] {
+				i {
+					color: red;
+				}
+			}
+			i {
+				@extend %primary-color;
+				font-size: 20px;
+			}
+		}
+
+		&[data-validate=false] {
+			input, textarea, select {
+				border-bottom: 2px solid red;
+			}
+		}
+
+		[class*=feedback] {
+			@extend %font-sm;
+			@extend %transition;
+			&[class*=invalid] {
+				color: red;
+			}
+		}
+		select,
+		input,
+		textarea {
+			@extend %box-shadow-soft;
+			@extend %full-width;
+			@extend %transition;
+		}
+		textarea {
+			height:195px;
+		}
+
+
+		/* Submit button */
+		button {
+			@extend %align-items-center;
+			@extend %display-flex;
+			@extend %color-primary;
+			@extend %transition;
+			@extend %border-transparent;
+			@extend %background-color-transparent;
+			svg {
+				@extend %svg-xl;
+				@extend %transition;
+				@extend %margin-left-sm;
+			}
+			&:hover, &:focus {
+				svg {
+					@extend %margin-left-md;
+					@include translate(-5px, -8px);
+				}
+			}
+		}
+	}
+}

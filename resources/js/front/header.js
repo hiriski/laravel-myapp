@@ -39,7 +39,7 @@ class Header {
 	init() {
 
 		let logo = this.element.querySelector('#logo');
-		let firstUl = this.element.querySelector('ul:first-child');
+		let firstUl = this.element.querySelector('ul:not(.l)');
 		let link = this.element.querySelector('a');
 
 		document.addEventListener('scroll', () => {

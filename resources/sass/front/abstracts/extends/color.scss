@@ -19,6 +19,14 @@
 	@extend %color-white;
 }
 
+%color-light {
+	color: $light;
+}
+// alias
+%light {
+	@extend %color-light;
+}
+
 %color-black {
 	color: $black;
 }

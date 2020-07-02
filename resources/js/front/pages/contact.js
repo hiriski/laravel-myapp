@@ -1,4 +1,37 @@
+
+/** 
+ * Contact Page
+ */
+
+class Contact {
+	constructor() {
+		this.polaEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		if(document.body.getAttribute('data-page') === 'contact-index') {
+			this.validate();
+		}
+	}
+
+	/**
+	 * Validation user email
+	 * @param {String} email
+	 * @return {Boolean} 
+	 */
+	validate(email) {
+		return this.polaEmail.test(email);
+	}
+
+
+}
+
+
+
+
+
+
 import { isContact } from '../routes_function';
+
+
+
 
 if(isContact()) {
   
@@ -62,12 +95,12 @@ if(isContact()) {
     let inputElems = document.querySelectorAll("form .fi");
 
 		/** waves svg */
-		let waves = document.querySelector('._wR');
-		let contactElem = document.getElementById('_CxT');
-		setTimeout(() => {
-			waves.setAttribute('data-show', 'true');
-			contactElem.setAttribute('data-has-waves', 'true');
-		}, 1000);
+		// let waves = document.querySelector('.waves');
+		// let contactElem = document.getElementById('_CxT');
+		// setTimeout(() => {
+		// 	waves.classList += " rux";
+		// 	contactElem.setAttribute('data-has-waves', 'true');
+		// }, 1000);
 
 
     inputElems.forEach(input => {

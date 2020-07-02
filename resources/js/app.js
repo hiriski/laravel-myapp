@@ -1,12 +1,12 @@
 import './front/header';
 import './front/components/blog-pager';
+import './front/pages/contact';
 // import './front/components/nav';
 // import './front/pages/home';
 // import './front/pages/blog-index';
 // import './front/pages/about';
 // import './front/pages/blog';
 // import './front/pages/template-page';
-// import './front/pages/contact';
 
 
 
@@ -41,39 +41,3 @@ const scrollProgress = () => {
 }
 
 window.addEventListener("scroll", scrollProgress);
-
-
-
-/** Ketika window di rezize melebihi batas, misal ukuran tablet kemudian di rezie ke ukuran mobile maka window akan reload secara otomatis 
-
-untuk sementara ide nya saya buat ketika window di resize lebih dari 100 atau kurang dari 100 (pixel) maka window akan reload otomatis
-*/
-
-/** Define variable yang isinya lebar layar (window width) (nilai variable ini akan fix meskipun dipanggil di dalam event listener resize) */
-let windowFixCurrentOuterWidth = window.outerWidth;
-
-const windowResized = (currentWidth, callback) => {
-
-	/** kedua variable ini berisi nilai lebar window dikurang / ditambah 100 */
-	let greaterHundred 		 = windowFixCurrentOuterWidth + 100;
-	let smallerHundred		 = windowFixCurrentOuterWidth - 100;
-
-	if ((currentWidth >= greaterHundred) || (currentWidth <= smallerHundred)) {
-		setTimeout(()=> {
-			window.location.reload();
-		}, 500);
-	}
-	
-	/** panggil callback */
-	callback("window resized");
-
-}
-
-// window.addEventListener('resize', () => {
-
-// 	/** Sedangkan variable ini akan berubah nilainya ketika lebar window di ubah */
-// 	let currentWindowWidth = window.outerWidth;
-
-// 	windowResized(currentWindowWidth, (mgs) => console.warn(mgs));
-
-// });

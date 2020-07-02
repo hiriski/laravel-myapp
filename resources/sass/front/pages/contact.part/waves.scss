@@ -1,0 +1,61 @@
+[data-page=contact-index] {
+
+	.waves {
+		@extend %position-fixed;
+		@extend %top-left;
+		@extend %full-width;
+		svg {
+			@extend %fill-white;
+			width: 115%;
+		}
+	}
+	
+	/** When message success to send */
+	#_c-s_ {
+		@extend %transition;
+		@extend %full-width;
+		@extend %position-absolute;
+		top: -100vh;
+		@extend %z-index-1;
+		@extend %left;
+		transition: background-color .2s ease;
+		&.show {
+			@extend %full-height;
+			@extend %top-left;
+			@extend %background-color-white;
+		}
+		.ms {
+			@extend %justify-content-center;
+			@extend %align-items-center;
+			@extend %text-align-center;
+			@extend %display-flex;
+			@extend %height-full-percen;
+			._c_ {
+				h3 {
+					font-size: 26px;
+					@extend %color-muted;
+					@extend %margin-bottom-sm;
+				}
+				p {
+					@extend %primary-color;
+				}
+				a {
+					@extend %text-decoration-none;
+					@extend %border-thin-primary;
+					@extend %border-thin-radius;
+					@extend %primary-color;
+					@extend %margin-top-sm;
+					@extend %display-inline-block;
+					padding: .5rem 1rem;
+					i {
+						font-size: 20px;
+					}
+					&:hover {
+						@extend %background-color-primary;
+						@extend %color-light;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+
+/**
+ * Input
+ */
+input,
+textarea {
+    padding: 14px 15px;
+    outline: none;
+    @extend %border-thin-radius;
+}
+
+select {
+	outline: none;
+}

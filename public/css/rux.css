@@ -290,6 +290,7 @@ pre[class*=language] .line-number span,
   display: block;
 }
 
+[data-page=contact-index] #_c-s_ .ms ._c_ a,
 [class$=btn],
 pre[class*=language] .line-number,
 .posts .h h2,
@@ -302,6 +303,10 @@ header #logo .a {
   display: inline-block;
 }
 
+#_CxT ._f button,
+#_CxT ._f label,
+#_CxT .top,
+[data-page=contact-index] #_c-s_ .ms,
 #cbh .x,
 #pgr ._x li > *,
 #pgr ._x ul,
@@ -322,9 +327,11 @@ header > .a .b {
   display: flex;
 }
 
+#_CxT ._f[data-has-value=true] [class*=feedback][class*=invalid],
+[data-page^=contact-] header,
 #hero .s ._st span,
 #hero .s a .username,
-header nav ul.r a:before {
+header nav ul.l a:before {
   display: none;
 }
 
@@ -351,13 +358,22 @@ header nav ul.r a:before {
   color: #ffffff;
 }
 
+[data-page=contact-index] #_c-s_ .ms ._c_ a:hover {
+  color: #fbfbfb;
+}
+
 a,
+#_CxT ._f button,
 .post ._io_ ._m .name a:hover span,
 #_bsp .q > *:hover h5,
 #_bsp .q > *:hover h6,
 .posts .foot a:hover,
 header nav a:hover,
 .btn-white,
+#_CxT ._f .spinner-validate i,
+#_CxT ._f[data-has-value=true] label,
+[data-page=contact-index] #_c-s_ .ms ._c_ a,
+[data-page=contact-index] #_c-s_ .ms ._c_ p,
 #pgr ._x li a:hover,
 #xfR2 .c_ > p > a:hover,
 #_nRx9 ._s,
@@ -367,6 +383,8 @@ header nav a:hover,
   color: #0575ff;
 }
 
+#_CxT ._h_ h1,
+[data-page=contact-index] #_c-s_ .ms ._c_ h3,
 #cbh .t h1,
 #pgr ._x li a,
 #xfR2 .c_ a,
@@ -402,6 +420,8 @@ header nav a:hover,
   color: #a3a3a3;
 }
 
+#_CxT ._f label,
+#_CxT ._f.tp label,
 #pgr ._x li.disabled > *,
 #_bsp .q > * a p,
 .works .i ._ci ._t_ + a,
@@ -418,13 +438,18 @@ header nav a,
  * Colors
  */
 
+[data-page=contact-index] .waves svg {
+  fill: #ffffff;
+}
+
+#_CxT #back:hover svg,
 #pgr ._x li a:hover svg,
 #rp .i .c_ ._m_ a svg:hover,
 #_bsp .q > *:hover svg,
 .posts .foot a:hover svg,
 .works .i ._ci > a:hover svg,
 #hero .s a:hover svg,
-header nav ul.r a:hover svg,
+header nav ul.l a:hover svg,
 header.rux #logo svg {
   fill: #0575ff;
 }
@@ -433,6 +458,7 @@ header.rux #logo svg {
   fill: #5e5e5e;
 }
 
+#_CxT #back svg,
 #pgr ._x li.disabled svg,
 #rp .i .c_ ._m_ a svg,
 #_bsp .q > * svg,
@@ -440,7 +466,7 @@ header.rux #logo svg {
 .posts .foot .d_ svg,
 .works .i ._ci > a svg,
 #hero .s svg,
-header nav ul.r a svg {
+header nav ul.l a svg {
   fill: #a3a3a3;
 }
 
@@ -448,6 +474,8 @@ header nav ul.r a svg {
  * Background
  */
 
+#_CxT ._f.tp select,
+[data-page=contact-index] #_c-s_.show,
 #_nRx9 ._s,
 .post,
 #rp .i .c_ ._xo,
@@ -468,10 +496,14 @@ pre[class*=language][data-color*=light] {
   background-color: #fbfbfb;
 }
 
+#_CxT ._f[data-has-value=true] input,
+#_CxT ._f[data-has-value=true] textarea,
+#_CxT ._f.tp select,
 .post ._io_ ._m .__c:hover {
   background-color: #e8eef6;
 }
 
+[data-page=contact-index] #_c-s_ .ms ._c_ a:hover,
 #_nRx9 ._s input + button,
 .post ._ps_ a:hover,
 .posts .category,
@@ -490,8 +522,13 @@ header nav a:before,
   background-color: #444;
 }
 
+#_CxT ._f button {
+  background-color: transparent;
+}
+
 /** Justify Content */
 
+[data-page=contact-index] #_c-s_ .ms,
 #cbh .x,
 .post ._io_ ._m {
   justify-content: center;
@@ -520,6 +557,9 @@ header nav {
 
 /** Align Items */
 
+#_CxT ._f button,
+#_CxT .top,
+[data-page=contact-index] #_c-s_ .ms,
 #cbh .x,
 #pgr ._x li > *,
 #pgr ._x ul,
@@ -602,6 +642,7 @@ header nav ul {
 
 /* Margin small */
 
+[data-page=contact-index] #_c-s_ .ms ._c_ a,
 #hero .s {
   margin-top: 0.85rem;
 }
@@ -610,6 +651,8 @@ header nav ul {
   margin: 0 0.85rem;
 }
 
+#_CxT ._f,
+[data-page=contact-index] #_c-s_ .ms ._c_ h3,
 .post ._ps_ ul li,
 .post ._ps_ ol li,
 .post ._ps_ .block p,
@@ -626,8 +669,14 @@ header nav ul {
   margin-bottom: 0.85rem;
 }
 
-.post ._io_ ._m .__c .ic {
+.post ._io_ ._m .__c .ic,
+header nav ul.l a span {
   margin-right: 0.85rem;
+}
+
+#_CxT ._f button svg,
+#_CxT ._f label span {
+  margin-left: 0.85rem;
 }
 
 /* Margin middle */
@@ -636,17 +685,19 @@ header nav ul {
   margin-top: 1.25rem;
 }
 
+#_CxT ._f button:hover svg,
+#_CxT ._f button:focus svg,
 #pgr ._x li:last-child svg {
   margin-left: 1.25rem;
 }
 
 #cbh .blade_svg,
 #pgr ._x li:first-child svg,
-.post ._io_ ._m .avatar,
-header nav ul.r a span {
+.post ._io_ ._m .avatar {
   margin-right: 1.25rem;
 }
 
+#_CxT #back,
 .post ._io_ ._xo > .__,
 .posts .summary {
   margin-bottom: 1.25rem;
@@ -680,6 +731,7 @@ header nav ul.r a span {
 
 /* Margin auto */
 
+#_CxT,
 #cbh,
 #pgr ._x,
 .post ._io_ ._t,
@@ -699,7 +751,7 @@ header nav ul.r a span {
 
 #pgr ._x ul,
 #hero .s ul,
-header nav ul.r a,
+header nav ul.l a,
 header nav ul {
   padding: 0;
 }
@@ -745,6 +797,7 @@ header > .a .b {
   padding-left: 1.25rem;
 }
 
+#_CxT #back,
 #_nRx9 ._s input + button,
 #_bsp .i:first-of-type > .q > *,
 #hero .s li {
@@ -788,10 +841,6 @@ header > .a .b {
   padding-bottom: 3rem;
 }
 
-header nav {
-  padding-left: 3rem;
-}
-
 header nav a {
   padding-right: 3rem;
 }
@@ -800,6 +849,7 @@ header nav a {
  * Border
  */
 
+[data-page=contact-index] #_c-s_ .ms ._c_ a,
 #_bsp .q > *:hover {
   border: 1px solid #0575ff;
 }
@@ -808,17 +858,41 @@ header nav a {
   border: 1px transparent;
 }
 
+#_CxT ._f button,
+#_CxT ._f input,
+#_CxT ._f textarea,
 #_nRx9 ._s input + button,
 #_nRx9 ._s input[type=text] {
   border: 2px transparent;
 }
 
+#_CxT ._f[data-has-value=true] input,
+#_CxT ._f[data-has-value=true] textarea,
+#_CxT ._f.tp select[data-has-change=true],
+#_CxT ._f.tp select,
 .post ._io_ ._m .avatar {
-  border: 2px #ffffff;
+  border: 2px solid #ffffff;
+}
+
+#_CxT ._f[data-has-value=true] input[class*=invalid],
+#_CxT ._f[data-has-value=true] textarea[class*=invalid],
+#_CxT ._f input:focus,
+#_CxT ._f input:active,
+#_CxT ._f textarea:focus,
+#_CxT ._f textarea:active,
+#_CxT ._f.tp select:focus,
+#_CxT ._f.tp select:active {
+  border: 2px solid #0575ff;
 }
 
 /* Border Radius */
 
+#_CxT ._f input,
+#_CxT ._f textarea,
+#_CxT ._f.tp select,
+[data-page=contact-index] #_c-s_ .ms ._c_ a,
+input,
+textarea,
 [class$=btn],
 #_nRx9 ._s input + button,
 #_nRx9 ._s,
@@ -883,6 +957,7 @@ header #logo .a {
   font-size: 13px;
 }
 
+#_CxT ._f [class*=feedback],
 #xfR2 .c_ > p,
 #rp .i .c_ ._m_ .d_,
 #_bsp .q > * a p,
@@ -907,6 +982,9 @@ pre[class*=language],
 /** font weight */
 
 body,
+#_CxT ._f input,
+#_CxT ._f textarea,
+#_CxT ._f.tp select,
 header nav {
   font-weight: 500;
 }
@@ -917,6 +995,7 @@ header nav {
 
 /** Text align */
 
+[data-page=contact-index] #_c-s_ .ms,
 #xfR2 ._f2 > div,
 .post ._io_ ._t,
 #rp ._q > ._cn_ ._g,
@@ -942,6 +1021,7 @@ body {
 /** Text decoration */
 
 a,
+[data-page=contact-index] #_c-s_ .ms ._c_ a,
 .post ._io_ ._t > *,
 .post ._io_ ._m .__c,
 .post ._ps_ a[class*=__]:after,
@@ -965,6 +1045,7 @@ header #logo {
   line-height: 0;
 }
 
+#_CxT ._f input,
 #xfR2 .c_ > p,
 .posts .h h2,
 .works .h h2 {
@@ -994,6 +1075,8 @@ header #logo {
 
 /** Position */
 
+#_CxT ._f,
+#_CxT,
 #cbh,
 #xfR2 .c_ > p > a,
 .post ._io_ ._m .name,
@@ -1013,6 +1096,10 @@ header > .a .b {
   position: relative;
 }
 
+#_CxT ._f .spinner-validate,
+#_CxT ._f label,
+#_CxT ._f.tp label,
+[data-page=contact-index] #_c-s_,
 #xfR2 .c_ > p > a:after,
 .post ._io_ ._m .name:after,
 .post ._ps_ ul li:before,
@@ -1026,6 +1113,7 @@ header #logo svg {
   position: absolute;
 }
 
+[data-page=contact-index] .waves,
 #waves.category,
 pre[class*=language] .line-number,
 header {
@@ -1037,6 +1125,12 @@ header {
 /** Width */
 
 img,
+#_CxT ._f select,
+#_CxT ._f input,
+#_CxT ._f textarea,
+#_CxT ._f.tp select,
+[data-page=contact-index] #_c-s_,
+[data-page=contact-index] .waves,
 #waves.category,
 #_bsp .q > * a,
 .works .i .c,
@@ -1048,6 +1142,11 @@ header,
   width: 100%;
 }
 
+[data-page=contact-index] #_c-s_ .ms {
+  height: 100%;
+}
+
+[data-page=contact-index] #_c-s_.show,
 #hero .c,
 #hero .a {
   height: 100vh;
@@ -1111,6 +1210,9 @@ header,
  * Box shadow
  */
 
+#_CxT ._f select,
+#_CxT ._f input,
+#_CxT ._f textarea,
 .shadow-soft,
 #rp .i .c_ ._xo,
 #rp .i ._img_,
@@ -1134,6 +1236,14 @@ pre[class*=language],
 /**
  * Transitions */
 
+#_CxT ._f button svg,
+#_CxT ._f button,
+#_CxT ._f select,
+#_CxT ._f input,
+#_CxT ._f textarea,
+#_CxT ._f [class*=feedback],
+#_CxT ._f label,
+[data-page=contact-index] #_c-s_,
 #xfR2,
 #rp .i .c_ ._xo,
 #rp .i .c_,
@@ -1158,7 +1268,7 @@ header {
 .post ._ps_ a[class*=__]:after,
 .posts .foot a svg,
 .posts .foot .d_ svg,
-header nav ul.r a svg {
+header nav ul.l a svg {
   vertical-align: middle;
 }
 
@@ -1176,6 +1286,7 @@ header nav ul {
  * z-index 
  */
 
+[data-page=contact-index] #_c-s_,
 pre[class*=language] .line-number,
 .works .i .c,
 #hero .inner {
@@ -1194,6 +1305,7 @@ header {
 
 /** SVG Size */
 
+#_CxT ._f button svg,
 #cbh .blade_svg svg,
 .post ._io_ ._m .__c .ic svg,
 #xfR2 .c_ > p svg,
@@ -1212,6 +1324,7 @@ header {
   height: 18px;
 }
 
+#_CxT ._f button svg,
 #cbh .blade_svg svg {
   height: 26px;
 }
@@ -1219,6 +1332,8 @@ header {
 /** Absolute or fixed positions */
 
 pre[class*=language] .line-number,
+[data-page=contact-index] #_c-s_.show,
+[data-page=contact-index] .waves,
 #waves.category {
   top: 0;
 }
@@ -1227,7 +1342,10 @@ pre[class*=language] .line-number,
   bottom: 0;
 }
 
+[data-page=contact-index] #_c-s_,
 #hero .waves,
+[data-page=contact-index] #_c-s_.show,
+[data-page=contact-index] .waves,
 #waves.category {
   left: 0;
 }
@@ -1442,12 +1560,12 @@ header.rux {
   padding-top: 2rem;
 }
 
-header.rux nav ul:not(.right) {
-  margin-left: -100%;
+header.rux nav ul:not(.left) {
+  margin-right: -100%;
 }
 
-header.rux nav ul:not(.right).show {
-  margin-left: unset;
+header.rux nav ul:not(.left).show {
+  margin-right: unset;
 }
 
 header.rux #logo svg {
@@ -1481,11 +1599,11 @@ header #logo svg {
 }
 
 header nav ul {
-  /* ul right */
+  /* ul left */
 }
 
-header nav ul.r a svg {
-  height: 12px;
+header nav ul.l a svg {
+  height: 11px;
   width: auto;
 }
 
@@ -2433,6 +2551,20 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
   letter-spacing: 1px;
 }
 
+/**
+ * Input
+ */
+
+input,
+textarea {
+  padding: 14px 15px;
+  outline: none;
+}
+
+select {
+  outline: none;
+}
+
 /** 
  * Card Components
  */
@@ -2471,6 +2603,159 @@ pre[class*=language][data-color*=light][class$=-markup] .token.punctuation {
 
 #waves[data-waves=Laravel] svg {
   fill: #F05340;
+}
+
+/**
+ * Import all pages
+ */
+
+/**
+ * Contact
+ */
+
+[data-page=contact-index] {
+  /** When message success to send */
+}
+
+[data-page=contact-index] .waves svg {
+  width: 115%;
+}
+
+[data-page=contact-index] #_c-s_ {
+  top: -100vh;
+  transition: background-color 0.2s ease;
+}
+
+[data-page=contact-index] #_c-s_ .ms ._c_ h3 {
+  font-size: 26px;
+}
+
+[data-page=contact-index] #_c-s_ .ms ._c_ a {
+  padding: 0.5rem 1rem;
+}
+
+[data-page=contact-index] #_c-s_ .ms ._c_ a i {
+  font-size: 20px;
+}
+
+/** Hide header */
+
+#_CxT {
+  width: 520px;
+  padding-top: 4rem;
+  /* back button and title */
+  /** Back */
+}
+
+#_CxT #back svg {
+  height: 12px;
+}
+
+#_CxT ._h_ h1 {
+  font-size: 26px;
+}
+
+#_CxT ._f {
+  /* Submit button */
+}
+
+#_CxT ._f.tp label {
+  top: 5px;
+  left: 18px;
+  font-size: 15px;
+}
+
+#_CxT ._f.tp select {
+  padding: 30px 15px 8px 15px;
+  /** remove default arrow icon */
+  -webkit-appearance: none;
+  -ms-expand: none;
+}
+
+#_CxT ._f input[class*=invalid],
+#_CxT ._f textarea[class*=invalid] {
+  border: 2px solid #fd3737;
+}
+
+#_CxT ._f label {
+  left: 1rem;
+  top: 14px;
+}
+
+#_CxT ._f label i,
+#_CxT ._f label svg {
+  font-size: 20px;
+}
+
+#_CxT ._f[data-has-value=true] {
+  /** jika keadaan data-has-value tapi juga validatenya false */
+}
+
+#_CxT ._f[data-has-value=true] input,
+#_CxT ._f[data-has-value=true] textarea {
+  padding: 30px 15px 8px 15px;
+}
+
+#_CxT ._f[data-has-value=true][data-validate=false] input[class*=invalid],
+#_CxT ._f[data-has-value=true][data-validate=false] textarea[class*=invalid] {
+  border-bottom: 2px solid #fd3737;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+#_CxT ._f[data-has-value=true] label {
+  font-size: 12px;
+  top: 10px;
+}
+
+#_CxT ._f[data-has-value=true] label i,
+#_CxT ._f[data-has-value=true] label svg {
+  font-size: 16px;
+}
+
+#_CxT ._f[data-input-email=wrong] label {
+  color: red;
+}
+
+#_CxT ._f[data-input-email=wrong] input {
+  border-color: red !important;
+}
+
+#_CxT ._f .spinner-validate {
+  top: 19px;
+  right: 19px;
+}
+
+#_CxT ._f .spinner-validate[data-has-validate=true] i {
+  color: green;
+}
+
+#_CxT ._f .spinner-validate[data-has-validate=false] i {
+  color: red;
+}
+
+#_CxT ._f .spinner-validate i {
+  font-size: 20px;
+}
+
+#_CxT ._f[data-validate=false] input,
+#_CxT ._f[data-validate=false] textarea,
+#_CxT ._f[data-validate=false] select {
+  border-bottom: 2px solid red;
+}
+
+#_CxT ._f [class*=feedback][class*=invalid] {
+  color: red;
+}
+
+#_CxT ._f textarea {
+  height: 195px;
+}
+
+#_CxT ._f button:hover svg,
+#_CxT ._f button:focus svg {
+  transform: translate(-5px, -8px);
 }
 
 /**

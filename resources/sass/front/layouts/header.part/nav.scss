@@ -8,26 +8,25 @@ nav {
 	@extend %display-flex;
 	@extend %font-weight-500;
 	@extend %justify-content-space-between;
-	@extend %padding-left-xl;
 	ul {
 		@extend %no-padding;
 		@extend %no-margin;
 		@extend %list-style-none;
 		@extend %transition;
 		
-		/* ul right */
-		&.r {
+		/* ul left */
+		&.l {
 			a {
 				@extend %no-padding;
 				&:before {
 					@extend %display-none;
 				}
 				span {
-					@extend %margin-right-md;
+					@extend %margin-right-sm;
 				}
 				svg {
 					@extend %fill-gray;
-					height: 12px;
+					height: 11px;
 					width: auto;
 					@extend %vertical-align-middle;
 				}

@@ -16,28 +16,31 @@ class BlogPager {
 			this.element = document.querySelector('ul.pagination');
 		}
 
-		// Arrow svg
-		this.arrowBack 		= options.arrowBack;
-		this.arrowForward 	= options.arrowForward;
-
-		// Nagigation text
-		this.prevText 		= options.prevText;
-		this.nextText 		= options.nextText;
-
-		this.prev = this.element.querySelector('li:first-child'); // prev li element
-		this.next = this.element.querySelector('li:last-child');  // next li element
-
-		this.nextLink = null;
-		this.prevLink = null;
-
-		if(!this.prev.classList.contains('disabled')) {
-			this.prevLink = this.prev.querySelector('a').href;
+		/* if pagination element not found (not in the blog index page/blog list) */
+		if(this.element) {
+			// Arrow svg
+			this.arrowBack 		= options.arrowBack;
+			this.arrowForward 	= options.arrowForward;
+	
+			// Nagigation text
+			this.prevText 		= options.prevText;
+			this.nextText 		= options.nextText;
+	
+			this.prev = this.element.querySelector('li:first-child'); // prev li element
+			this.next = this.element.querySelector('li:last-child');  // next li element
+	
+			this.nextLink = null;
+			this.prevLink = null;
+	
+			if(!this.prev.classList.contains('disabled')) {
+				this.prevLink = this.prev.querySelector('a').href;
+			}
+			if(!this.next.classList.contains('disabled')) {
+				this.nextLink = this.next.querySelector('a').href;
+			}
+	
+			this.init();
 		}
-		if(!this.next.classList.contains('disabled')) {
-			this.nextLink = this.next.querySelector('a').href;
-		}
-
-		this.init();
 
 	}
 
