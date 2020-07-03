@@ -6,8 +6,9 @@
 	@extend %transition;
 	@extend %background-color-default;
 
+	padding-top: 6.5rem;
+
 	._f2 {
-		@extend %padding-top-xl;
 		@extend %padding-bottom-xl;
 		> div {
 			@extend %text-align-center;
@@ -19,14 +20,6 @@
 			@extend %color-muted;
 			@extend %line-height-1;
 			@extend %margin-bottom-xs;
-			// .laravel {
-			// 	@extend %line-height-1;
-			// 	@extend %vertical-align-middle;
-			// 	svg {
-			// 		width: $icon-size;
-			// 		height: $icon-size;
-			// 	}
-			// }
 			svg {
 				@extend %svg-xs;
 				@extend %vertical-align-middle;

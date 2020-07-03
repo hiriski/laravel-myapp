@@ -66,3 +66,11 @@
 %gray {
 	@extend %color-gray;
 }
+
+%color-disabled {
+	color: $disabled;
+}
+// alias
+%disabled {
+	@extend %color-disabled;
+}

@@ -19,6 +19,7 @@
 
 	@extend %lite-width;
 	@extend %margin-x-auto;
+	@extend %padding-bottom-xl;
 
 	.inner {
 		@extend %padding-x-sm;
@@ -140,20 +141,23 @@
 				margin-right: 5px;
 			}
 		}
+
+		/** Read it */
 		a {
 			@extend %color-muted;
 			@extend %text-decoration-none;
+			@extend %overflow-hidden;
+			svg {
+				height: 11px;
+				@extend %fill-gray;
+				@extend %margin-left-xs;
+				@extend %vertical-align-middle;
+			}
 			&:hover {
 				@extend %color-primary;
 				svg {
 					@extend %fill-primary;
 				}
-			}
-			svg {
-				height: 14px;
-				@extend %fill-gray;
-				@extend %margin-left-xs;
-				@extend %vertical-align-middle;
 			}
 		}
 	}
@@ -184,6 +188,7 @@
 		}
 		&[data-category*='Javascript'] {
 			background-color: $javascript;
+			@extend %default-color;
 		}
 		&[data-category*='Pyhton'] {
 			background-color: $python;
@@ -210,5 +215,4 @@
 			background-color: rgb(0, 190, 89);
 		}
 	}
-
 }

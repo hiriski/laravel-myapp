@@ -24,10 +24,6 @@
 	@yield('about-json-ld')
 
 	<script> var currentRouteName = "{{ Route::currentRouteName() }}"; </script>
-
-	{{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
-	<link rel="stylesheet" href="{{ asset('fonts/hk-grotesk/style.css') }}">
-	<link rel="stylesheet" href="{{ asset('fonts/material-icons/material-icons.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/rux.css') }}">
 </head>
 

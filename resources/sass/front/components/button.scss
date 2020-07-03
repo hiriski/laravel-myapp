@@ -3,6 +3,10 @@
  * Button
  */
 
+button {
+	outline: none;
+}
+
 [class$=btn] {
 	@extend %border-thin-radius;
 	@extend %border-thin-transparent;

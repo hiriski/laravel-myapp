@@ -43,3 +43,39 @@ a {
 pre, code {
 	font-family: $pre-format-font !important;
 }
+
+::-webkit-input-placeholder { /* Edge */
+    color: $muted;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $muted;
+}
+
+::placeholder {
+    color: $muted;
+}
+
+
+
+/** Scroll bar */
+$scrollBarSize : 8px;
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: $scrollBarSize;
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $primary-color;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}

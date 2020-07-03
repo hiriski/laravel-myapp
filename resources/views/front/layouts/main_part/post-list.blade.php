@@ -15,7 +15,7 @@
 			@endif
 
 			{{-- Show quote only homepage and blog index --}}
-			@if((Route::currentRouteName() === "index") || (Route::currentRouteName() === "blog.index"))
+			@if(Route::currentRouteName() === "index")
 				<div class="quote">
 					<blockquote>"Aku belajar dan membaca agar umur orang lain berguna bagiku, dan aku menulis agar orang lain mengambil manfaat atas umurku"
 					<cite>Ust. Felix Siauw</cite>
@@ -63,11 +63,8 @@
 											<time>{{ \Carbon\Carbon::parse($item->created_at)->isoFormat('MMMM Do, YYYY') }}</time>
 										</div>
 										<a href="{{ route('blog.show', $item->slug) }}">
-											<svg viewBox="0 0 25.995 11.574">
-											<defs>
-											</defs>
-											<path id="ic_arrow_back_24px" class="cls-1" d="M29.995,9.064H6.771L10.814,5.02,9.787,4,4,9.787l5.787,5.787,1.02-1.02L6.771,10.51H29.995Z" transform="translate(29.995 15.574) rotate(180)"/>
-											</svg>
+											<span>Read it</span>
+											<svg viewBox="0 0 25.995 11.574"><defs></defs><path d="M29.995,9.064H6.771L10.814,5.02,9.787,4,4,9.787l5.787,5.787,1.02-1.02L6.771,10.51H29.995Z" transform="translate(29.995 15.574) rotate(180)"/></svg>
 										</a>
 									</div>
 
@@ -100,14 +97,17 @@
 
 
 {{-- Blog Pager --}}
-@if(Route::currentRouteName() === "blog.index")
-	<div id="pgr">
+<div id="pgr">
+	@if(Route::currentRouteName() === "blog.index")
 		<div class="_x">
 			{{ $posts->links() }}
 		</div>
-	</div>
-@else
-	<div class="__l_m">
-		<a href="{{ route('blog.index') }}?page=2"><span>See more</span> <i class="material-icons">loop</i></a>
-	</div>
-@endif
+	@else
+		<div class="s">
+			<a href="{{ route('blog.index') }}?page=2">
+				<span>Show more</span>
+				<svg viewBox="0 0 25.995 11.574"><defs></defs><path d="M29.995,9.064H6.771L10.814,5.02,9.787,4,4,9.787l5.787,5.787,1.02-1.02L6.771,10.51H29.995Z" transform="translate(29.995 15.574) rotate(180)"/></svg>
+			</a>
+		</div>
+	@endif
+</div>

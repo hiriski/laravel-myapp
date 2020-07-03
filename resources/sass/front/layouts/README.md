@@ -1,2 +1,2 @@
 # layouts
-All layout style like a footer, header, etc.
+All layout style such as footer, header, etc.

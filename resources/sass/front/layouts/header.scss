@@ -9,10 +9,13 @@ header {
 	@extend %z-index-2;
 	@extend %transition-cubic-bezier;
 
+	/* Hide header in contact page */
+	[data-page^=contact-] & {
+		@extend %display-none;
+	}
+
 	/* Header inner */
 	> .a {
-		// @extend %width-default;
-		// @extend %margin-x-auto;
 		padding: 0 2rem;
 		.b {
 			@extend %padding-x-sm;

@@ -28,22 +28,22 @@
 			@extend %margin-bottom-sm;
 		}
 		h2 {
-			font-size: 36px;
+			font-size: 34px;
 		}
 		h3 {
-			font-size: 32px;
-		}
-		h4 {
 			font-size: 30px;
 		}
+		h4 {
+			font-size: 26px;
+		}
 		h5 {
-			font-size: 27px;
+			font-size: 24px;
 		}
 		h6 {
-			font-size: 22px;
+			font-size: 20px;
 		}
 		h1, h2, h3, h4, h5, h6 {
-			line-height: 1.55;
+			line-height: 1.5;
 			@extend %primary-font;
         }
         
@@ -249,18 +249,13 @@
             @extend %text-align-center;
             @extend %post-width;
             @extend %margin-x-auto;
-            > * {
+            h1 {
                 @extend %default-color;
                 @extend %text-decoration-none;
-                &:hover {
-                    color: $primary-color;
-                }
-                h1 {
-                    font-size: 40px;
-                    line-height: 1.35;
-                    margin-left: -4rem;
-                    margin-right: -4rem;
-                }
+                font-size: 40px;
+                line-height: 1.35;
+                margin-left: -4rem;
+                margin-right: -4rem;
             }
 		}
 

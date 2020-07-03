@@ -53,9 +53,7 @@
 	
 				{{-- Post Title --}}
 				<div class="_t">
-					<a href="{{ route('blog.show', $post->slug) }}" title="{{ $post->title }}">
 					<h1>{{ $post->title }}</h1>
-					</a>
 				</div>
 	
 				{{-- Main for content --}}

@@ -4,6 +4,32 @@
  */
 #pgr {
 	@extend %padding-top-lg;
+	@extend %display-flex;
+	@extend %justify-content-center;
+
+	/* Show more button homepage */
+	.s a {
+		@extend %display-flex;
+		@extend %align-items-center;
+		@extend %color-muted;
+		&:hover {
+			@extend %primary-color;
+			svg {
+				@extend %fill-primary;
+				@extend %margin-left-md;
+			}
+		}
+		span {
+			@extend %font-lg;
+		}
+		svg {
+			@extend %margin-left-sm;
+			@extend %transition;
+			@extend %fill-muted;
+			height: 14px;
+		}
+	}
+
 	._x {
 		@extend %lite-width;
 		@extend %margin-x-auto;
@@ -38,10 +64,10 @@
 
 			&.disabled {
 				svg {
-					@extend %fill-gray;
+					@extend %fill-disabled;
 				}
 				> * {
-					@extend %color-gray;
+					@extend %color-disabled;
 					cursor: no-drop;
 				}
 			}

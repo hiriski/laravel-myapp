@@ -19,5 +19,11 @@
 			fill: $laravel;
 		}
 	}
+	&[data-waves=Javascript],
+	&[data-waves*=ES] {
+		svg {
+			fill: $javascript;
+		}
+	}
 
 }
